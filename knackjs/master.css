@@ -1,0 +1,5478 @@
+/* Show the hamburger menu on all screen sizes */  
+.kn-mobile-controls {
+  display: block !important;
+}
+.kn-content .kn-navigation-bar {
+  display: none !important;
+}
+#kn-mobile-menu.is-visible {
+  left: inherit;
+}
+.kn-dropdown-menu .kn-dropdown-icon {
+  display: none !important;
+}
+.kn-dropdown-menu ul {
+  display: block !important;
+  pointer-events: all !important;
+  box-shadow: none !important;
+  position: relative !important;
+}
+
+/* END Show the hamburger menu on all screen sizes */ 
+
+.intrinsic-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+ 
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+  padding-bottom: 200%;
+}
+ 
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+  padding-bottom: 200%;
+}
+ 
+.intrinsic-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#knack-dist_5 > div.kn-info-bar > div > span > a {
+  font-weight: bold;
+}
+
+/* Main Menu Tab Colours
+
+#app-menu-list > li:nth-child(5) > a {
+  	background-color: #FFA100;
+}
+
+#app-menu-list > li:nth-child(5) > a:hover {
+  	background-color: #D18400;
+} */
+
+/* AutoTrader Consumer Valuation Sentence */
+#view_421 > section > div > div:nth-child(2) > div > div > div.field_1423 > div {
+  	font-size: 18px;
+}
+
+#view_368 > section > div > div:nth-child(2) > div > div > div.field_1423 > div {
+  	font-size: 18px;
+}
+
+/* Change 'Sign Up' Button Colour on Digital Home */
+
+#need-account > a {
+  	background-color: #052645;
+    color: #FFFFFF;
+}
+
+#need-account > span {
+  	font-weight: bold;
+}
+
+/* Part-Ex Reg No CSS to look like Reg */
+
+#view_481 > section > div > div > div:nth-child(1) > div > div > div > span > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_488 > section > div > div > div:nth-child(1) > div > div > div > span > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_493 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div > div > span > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_495 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div > div > span > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_497 > section > div > div > div:nth-child(2) > div > div.field_257 > div > span > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_498 > section > div > div > div:nth-child(2) > div > div.field_257 > div > span > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_823 > section > div > div > div > div > div > div > span > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_824 > section > div > div > div > div > div > div > span > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_480 > section > div > div:nth-child(1) > div > div > div > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_480 .kn-detail-label {background-color: transparent;}
+
+#view_360 > section > div > div > div > div > div.field_257 > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3862 > section > div > div:nth-child(1) > div > div > div > div > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3561 .kn-detail-label {background-color: transparent;}
+
+#view_3861 .kn-detail-label {background-color: transparent;}
+
+#view_3862 .kn-detail-label {background-color: transparent;}
+
+
+/* R&D Online Appraisals Sentence stand out */
+
+#view_814 > div.kn-list-content.columns.is-multiline {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #6E6F71;
+  	text-align: center;
+  	box-shadow:         3px 3px 3px 3px #ccc;
+}
+
+#view_815 > div.kn-list-content.columns.is-multiline {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #6E6F71;
+  	text-align: center;
+  	box-shadow:         3px 3px 3px 3px #ccc;
+}
+
+#view_816 > div.kn-list-content.columns.is-multiline {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #6E6F71;
+  	text-align: center;
+  	box-shadow:         3px 3px 3px 3px #ccc;
+}
+
+#view_817 > div.kn-list-content.columns.is-multiline {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #6E6F71;
+  	text-align: center;
+  	box-shadow:         3px 3px 3px 3px #ccc;
+}
+
+/*** TRADE APPRAISAL VEHICLE IMAGERY HEADER ***/
+
+#view_3865 > section > div > div > div:nth-child(1) > div > div:nth-child(2) {
+  font-size: 10px;
+}
+
+/******* USED STOCK MANAGEMENT ******/
+/* Last Updated View */
+
+#view_1254 > div.kn-list-content.columns.is-multiline .kn-detail-label {background-color: transparent;}
+
+/* Sales Channel Page */
+
+#view_2142 .kn-detail-label {background-color: transparent;}
+
+
+/****** Used Stock Management Filters *******/
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(14) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(15) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(16) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+
+/* Used Stock Management Tool Reg No. */
+
+#view_897 > section > div > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div.field_2694 > div > span > h2 > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_898 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.field_257 > div > span > h2 > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_901 > section > div > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div.field_2694 > div > span > h2 > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_1263 > section > div > div > div > div > div.field_2694 > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_1346 > section > div > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div.field_2694 > div > span > h2 > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_2142 > section > div > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div.field_2694 > div > span > h2 > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+/* Used Vehicle Check In Reg No */
+
+#view_2298 > section > div > div.kn-details-group.column-1.columns > div > div > div.field_4941 > div > span > h2 > strong > span {
+ 	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_2277 > section > div > div > div > div > div.field_4941 > div > span > h2 > span {
+ 	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_2283 > section > div > div > div:nth-child(1) > div > div.field_4941 > div > span > h2 > span {
+  	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_2270 > section > div > div.kn-details-group.column-1.columns > div > div > div.field_4941 > div > span > h2 > span {
+  	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_2332 > section > div > div > div:nth-child(1) > div > div.field_4941 > div > span > h2 > span {
+  	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_2446 > section > div > div:nth-child(1) > div > div > div.field_4941 > div > span > span {
+  	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_2478 > section > div > div > div:nth-child(1) > div > div.field_4941 > div > span > span {
+  	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_2480 > section > div > div.kn-details-group.column-1.columns > div > div > div.field_4941 > div > span > h2 > strong > span {
+  	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3088 > section > div > div > div:nth-child(1) > div > div.field_4941 > div > span > span {
+  	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+/* Used Vehicle Deal File Reg No. */
+
+/********** Stock Search Button to DS Imagery Page ***********/
+#view_3271 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3271 > div > a:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Change Button Colour to Orange & add Hover Animation */
+
+#view_1171 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1171 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1171 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1171 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1171 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1171 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_630 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_630 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_909 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_909 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_909 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_909 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_909 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_909 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1368 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1368 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1368 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1368 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1368 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1368 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1368 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1368 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1496 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1496 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1496 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1496 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1551 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1551 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1554 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1554 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1554 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1554 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1556 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1556 > div > a:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1544 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1544 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1544 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1544 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1544 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1544 > div > a.kn-link.kn-link-6.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1651 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1651 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1651 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1651 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1651 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3149 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3149 > div > a:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3071 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3071 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3071 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Cancelled or Transferred Orders Filter Buttons */
+
+#view_1674 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1674 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1674 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Appraisals Dashboard Filter Buttons & Hiding Column Summaries */
+
+#kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+
+#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2507-1 > div.kn-report-rendered > table > tbody > tr.kn-table_summary.even > td:nth-child(3) {
+  	visibility: hidden;
+}
+
+#kn-report-view_2507-1 > div.kn-report-rendered > table > tbody > tr.kn-table_summary.even > td:nth-child(5) {
+  	visibility: hidden;
+}
+
+#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/*************************************************** USED VEHICLE REPORTING ****************************************************/
+/*USED DIVISIONAL OVERVIEW BUTTON */
+
+#view_3184 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3184 > div > a:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3193 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3193 > div > a:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3194 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3194 > div > a:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* DEALER BY DEALER BUTTON FROM DIVISIONAL OVERVIEW PAGE */
+
+#view_3228 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3228 > div > a:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* MENU TABS */
+#view_3171 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3171 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3171 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3171 > div > a.kn-link.kn-link-1.kn-link-page.is-primary.kn-button {
+  	background-color: #D18400 !important;
+  	color: #FFFFFF !important;
+  	font-weight: bold !important;
+}
+
+#view_3171 > div > a.kn-link.kn-link-2.kn-link-page.is-primary.kn-button {
+  	background-color: #D18400 !important;
+  	color: #FFFFFF !important;
+  	font-weight: bold !important;
+}
+
+#view_3171 > div > a.kn-link.kn-link-3.kn-link-page.is-primary.kn-button {
+  	background-color: #D18400 !important;
+  	color: #FFFFFF !important;
+  	font-weight: bold !important;
+}
+
+/* Retail Stock vs Retail Stock Prep Clocked On Pivot */
+
+#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Retail Stock NOT Advertised Chart */
+
+#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Trade Check In Usage Filter Button */
+
+#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Used Vehicle Check In - Retail Vehicle Filter Buttons */
+
+#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Used Vehicle Check In - Trade Vehicle Filter Buttons */
+
+#view_2312 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2312 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2312 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2312 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Used Retail Stock "On Sale" Filter Buttons */
+
+#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/********** Used Vehicle Preparation Filter Button Colours *************/
+/* Days Until Retail Vehicles Have Been Through Workshop */
+
+#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3186 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3186 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+ 	font-weight: bold;
+}
+
+#view_3186 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Used Vehicle Process Reporting */
+
+#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Retail Vehicles In Stock Over 7 Days NOT gone in to Workshop */
+
+#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Total Retail Stock with Recon > £0 Prepped by Day 3, Day 5 & Day 10 */
+#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/*** PART EXCHANGE PROCESS REPORTING ***/
+
+#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Retail Stock NOT Advertised Table */
+
+#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+
+/************************* Stock Search CSS Script Start ******************************8/
+
+/* #view_603 > div > div.kn-list-content.columns.is-multiline {
+  	border-radius: 40px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: darkgrey;
+    padding: 5px;
+} */
+
+/* #view_639 > div > div.kn-list-content.columns.is-multiline {
+  	border-radius: 40px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #1E2336;
+    padding: 5px;
+} */
+
+/* Border around Gallery - LIVE Stock */
+#view_622 > section > div > div:nth-child(6) {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: lightgrey;
+    padding: 5px;
+}
+
+/* Border around Gallery - Dialog Stock 
+#view_641 > section > div > div:nth-child(5) {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #1E2336;
+    padding: 5px;
+} */
+
+#\35 section {
+	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: darkgrey;
+    padding: 5px;
+}
+
+/* Panel each Stock Container */
+
+#view_603 > div > div > div.kn-list-item-container.kn-list-container.column.is-one-third >section.columns {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: lightgrey;
+    padding: 10px;
+  	margin-bottom: 5px;
+}
+
+#view_639 > div > div > div.kn-list-item-container.kn-list-container.column.is-one-third >section.columns {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #1E2336;
+    padding: 10px;
+  	margin-bottom: 5px;
+}
+
+/* Attempt to panel each gallery image rather than entire gallery */ 
+/* #view_641 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail-body > div
+  	border-radius: 40px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #1E2336;
+    padding: 5px;
+} */
+
+/* Stock Search CSS Script End */
+
+
+/* Re-size Options box on Order Tracking 'In Progress' Detail View */
+
+#view_1542 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(2) > div > div > div.kn-detail.field_4004 {
+   box-sizing: border-box;
+   max-height: 110px;
+}
+
+#view_1549 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div {
+   box-sizing: border-box;
+   max-height: 110px;
+}
+
+#view_1547 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div {
+   box-sizing: border-box;
+   max-height: 110px;
+}
+
+/* Re-size Options box on Order Tracking 'In Progress' Detail View */
+
+#view_1657 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(2) > div > div > div.kn-detail.field_4004 {
+   box-sizing: border-box;
+   max-height: 110px;
+}
+
+#view_1654 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div {
+   box-sizing: border-box;
+   max-height: 110px;
+}
+
+#view_1655 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div {
+   box-sizing: border-box;
+   max-height: 110px;
+}
+/* D9V8 Page */ 
+#view_1666 > section > div > div > div:nth-child(1) > div > div:nth-child(8) > div {
+   box-sizing: border-box;
+   max-height: 110px;
+}
+
+/* Hide Unnecessary Scroll on VIN & RDC Status */
+#view_1666 > section > div > div:nth-child(3) > div:nth-child(1) {
+  	overflow: hidden;
+}
+
+
+/* #view_1643 > div {
+  position: relative; 
+  padding-top:75%;
+}
+
+#view_1643 > div > p > iframe {
+   border: 0;
+   height: 82%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+} */
+
+/*Change colour of font of Knack Reord ID on Order Tracking page */
+#view_1526 > section > div > div:nth-child(1) > div > div > div.field_3409 {
+   color: #FFFFFF;
+}
+
+#view_1526 > section > div > div:nth-child(4) > div > div > div > div > p > iframe {
+   overflow: visible;
+}
+
+/* Dealer Configuration - Bold 'Used Car Preparation Costs' Title */
+#kn-input-section-1548944508357 > div > h3 {
+  font-weight: bold;
+  font-size: 1.75em;
+}
+
+/* Wrap Table Headers
+This removes white spaces from all table headers*/
+.kn-table th {white-space: inherit;}
+
+/* CSS (in conjunction with JS) to improve Mobile Page Menu Layout 
+
+#kn-login #kn-mobile-menu {
+display: block !important;
+}
+
+#kn-mobile-menu {
+background-color: #f1f1f1;
+width:290px;
+transition: 0.6s;
+z-index:100;
+margin-top:80px;
+-webkit-box-shadow: 11px 13px 72px -29px rgba(0,0,0,0.64);
+-moz-box-shadow: 11px 13px 72px -29px rgba(0,0,0,0.64);
+box-shadow: 11px 13px 72px -29px rgba(0,0,0,0.64);
+left: -300px!important; 
+}
+#kn-mobile-menu .is-visible {
+left: -300px!important; 
+}
+#app-menu-list-mobile {
+margin: .75em;
+list-style: noe;
+font-size: 16px; 
+}
+@media screen and (max-width: 20000000000px) {
+.kn-mobile-controls {
+display: block;
+}
+} 
+@media screen and (min-width: 769px) {
+#kn-mobile-menu.is-visible {
+left: 0 !important;
+}
+} 
+@media screen and (min-width: 1px) {
+.kn-dropdown-icon .fa-caret-down:before {
+display: contents !important;
+}
+} 
+#app-menu-list {
+display: none;
+} 
+#knack-body #kn-app-header {
+height: 80px;
+position: fixed;
+z-index: 2000;
+}
+.kn-info-bar {
+display: noe !important;
+} 
+#kn-app-header img {
+width: 116px;
+margin-left: 15px;
+} 
+#kn-app-header .kn-container {
+margin-left: 10px !important;
+z-index: 10000000;
+} 
+.kn-dropdown-menu ul {
+position: relative !important;
+align-items: stretch;
+background-color: #c7d5db00;
+}
+.kn-dropdown-menu ul .is-active {
+color: #c7d5db00;
+} 
+
+.kn-menu-list li ul {
+border-left: 0px solid #dbdbdb !important; 
+margin: 0px !important; 
+padding-left: 0px !important; 
+padding-top 10px !important;
+transition: 0.8s !important; 
+padding-left: 25px;
+font-size: 16px;
+border-bottom: 1px solid #e4e4e4;
+-webkit-transition: width 2s; /* Safari 
+transition: width 2s;
+display: none;
+} 
+.kn-menu-list li ul .is-active {
+color: #c7d5db00;
+} 
+.kn-dropdown-menu li {
+background-color: #c7d5db00;
+-webkit-transition: width 2s; /* Safari 
+transition: width 2s;
+padding-left: 25px;
+font-size: 16px;
+
+} 
+.kn-dropdown-menu li .is-active {
+color: #c7d5db00;
+} 
+.kn-dropdown-menu ul {
+box-shadow: 0 0 0px 0px rgba(0,0,0,.1)!important;
+-webkit-transition: width 2s; /* Safari 
+transition: width 2s;
+padding-left: 25px;
+font-size: 16px;
+color: #c7d5db00;
+background-color: #eae8e838;
+border-radius: 0.6em;
+display:none;
+} 
+#app-menu-list-mobile li.is-active {
+background-color: #efefef00; 
+-moz-transition: all .4s linear;
+-webkit-transition: all .4s linear;
+transition: all .4s linear;
+} 
+#kn-mobile-menu .is-active a {
+color: grey; 
+} 
+#knack-body {
+transition: margin-left 0.9s;
+padding-top:100px;
+} 
+
+.kn-dropdown-menu-list ul {
+-moz-transition: all .4s linear;
+-webkit-transition: all .4s linear;
+transition: all .4s linear;
+} 
+
+.kn-mobile-nav-toggle {
+-moz-transition: all .4s linear;
+-webkit-transition: all .4s linear;
+transition: all .4s linear;
+margin-top: 10px;
+}
+.kn-mobile-nav-toggle.down {
+-moz-transform:rotate(180deg);
+-webkit-transform:rotate(180deg);
+transform:rotate(180deg);
+color:white;
+} 
+.kn-dropdown-icon {
+-moz-transition: all .4s linear;
+-webkit-transition: all .4s linear;
+transition: all .4s linear;
+} 
+
+.kn-dropdown-icon.down {
+-moz-transform:rotate(180deg);
+-webkit-transform:rotate(180deg);
+transform:rotate(180deg);
+color:white;
+} 
+
+
+#app-menu-list-mobile ul {
+list-style: none;
+transition: 0.9s;
+display: none;
+background-color: #efefef00; 
+-moz-transition: all .4s linear;
+-webkit-transition: all .4s linear;
+transition: all .4s linear;
+}
+#kn-dropdown-menu-list ul {
+margin-left: 20px !important;
+-moz-transition: all .4s linear;
+-webkit-transition: all .4s linear;
+transition: all .4s linear;
+margin-left: 15px !important;
+} 
+
+#kn-dropdown-menu-list a {
+opacity: 0;
+visibility: hidden;
+}
+#kn-dropdown-menu-list a :target {
+opacity: 1;
+visibility: visible;
+
+}
+*/
+
+/*************************** Quick Edit Used Vehicle Advert **************************/
+
+#view_3281 > section > div > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div.field_2694 > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+/* Transparent Labels on Quick Edit Advert Page */
+
+#view_3281 .kn-detail-label {background-color: transparent;}
+
+/***** Auto Pricing Section *******/
+/* Disable Auto Pricing Link to Button */
+
+#view_3870 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  background-color: #ff1414;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_3870 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  background-color: #b10000;
+  padding: 8px;
+  display: inline-block;
+}
+
+
+/* Sales Channel Page CSS */
+
+#view_2142 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#view_2214 > section > div > div:nth-child(2) {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#view_2217 {
+  font-size: 18px;
+}
+
+#view_2246 > section {
+  font-size: 18px;
+}
+
+/* Used Vehicle Check In Page Tab CSS */
+
+#view_2200 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2200 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2200 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2200 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2200 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2200 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2200 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2200 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2311 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2311> div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2311 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2311> div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2311 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2311> div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2311 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2311> div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2262 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2262> div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2262 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2262> div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2262 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2262> div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2262 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2262> div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+/* Trade Transfers In/Out Tabs CSS */
+
+#view_2583 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2583> div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2583 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2583> div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_3156 .kn-detail-label {background-color: transparent;}
+
+#view_2480 .kn-detail-label {background-color: transparent;}
+
+#view_2298 .kn-detail-label {background-color: transparent;}
+
+/****** Retail Check In Details ********/
+
+#view_2511 .kn-detail-label {background-color: transparent;}
+
+#view_2511 > section > div > div:nth-child(1) > div > div > div.field_4941 > div > span > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+/****** Silent Salesman Print ********/
+
+#view_3907 > section > div > div > div > div > div.field_2725 > div > span > span {
+  	font-size: 150px;
+  	font-weight: bold;
+  	padding-top: 80px;
+  	padding-left: 50px;
+  	text-align: center;
+    writing-mode: vertical-rl;
+}
+
+#view_3907 > section > div:nth-child(2) > div > div > div > div > div > h3 {
+  	font-size: 150px;
+  	font-weight: bold;
+  	padding-top: 200px;
+  	padding-left: 50px;
+  	text-align: center;
+    writing-mode: vertical-rl;
+}
+
+#view_3907 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.field_6307_thumb_181 > div > span > span > img {
+  	padding-left: 40px;
+  	padding-top: 20px;    
+}
+
+
+/************************** Used Vehicle Dealer Imagery for Adverts *********************************/
+
+#view_3559 .kn-detail-label {background-color: transparent;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************************************ USED VEHICLE DEAL FILE ************************************************************************/
+
+/********* USED DEAL FILES PAGE *********/
+
+/* Deal File Table Fitlers */
+
+#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/************ USED VEHICLE ADMIN - DEAL FILE CHECKLIST Table Filters ***********/
+
+#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/************************************** SHOWROOM ORDER **************************************************/
+
+#view_2527 {font-size: 11px;}
+
+#view_2527 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(1) {font-weight: bold;}
+
+#view_2527 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(1) > div > div:nth-child(1) > div {font-size: 8px;}
+
+ 
+/*#view_2529 table {border-collapse: collapse;}*/
+#view_2529 td:empty {display: none;}
+#view_2529 tr {line-height: 10px;}
+#view_2529 > section > div > div.kn-details-group.column-3.columns {font-size: 11px}
+#view_2529 > section > div > div:nth-child(4) > div > div {font-size: 12px}
+
+/*#view_2529 > section > div > div:nth-child(4) > div > div > div > div > span > table > tbody > tr:nth-child(2) {
+  	line-height: 5px;
+}*/
+
+/* Detail Label Transparent Backgrounds */
+
+#view_2527 .kn-detail-label {background-color: transparent;}
+
+#view_2529 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div.kn-detail-label {background-color: transparent;}
+
+#view_2529 .kn-detail-label {background-color: transparent;}
+
+#view_2529 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div {font-size: 11px;}
+
+
+
+#view_2534 .kn-detail-label {background-color: transparent;}
+
+/* #view_2530 td:empty {display: none;}
+#view_2530 table {
+  	border-collapse: collapse;
+  	border: 1px solid black;
+}*/
+#view_2530 tr {line-height: 10px;}
+
+
+#view_2530 {font-size: 12px;}
+#view_2530 tr {line-height: 10px;}
+
+#view_2532 {font-size: 11px;}
+
+#view_2534 {font-size: 11px;}
+
+/* Enquiry Max Views */
+
+#view_3572 .kn-detail-label {background-color: transparent;}
+
+#view_3572 > section > div > div.kn-details-group.column-3.columns {font-size: 11px;}
+
+#view_3572 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div {font-size: 11px;}
+
+#view_3573 > div {font-size: 10px;}
+
+#view_3573 {font-size: 12px;}
+#view_3573 tr {line-height: 10px;}
+
+/* Pull Signature Form Side by Side to Finance Details
+#view_2531, #view_2534 {width: 50%; float: left;} */
+
+/* Spec Padding Test 
+#view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div.kn-detail.field_5406, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div.kn-detail.field_5407, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div.kn-detail.field_5378, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div.kn-detail.field_5379, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div.kn-detail.field_5381, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div.kn-detail.field_5410 {max-height: 16px; overflow: hidden;}
+
+#view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_5388, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_5411, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_5386, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_5385, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_5412, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_5413, #view_2529 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_5414 {max-height: 16px; overflow: hidden;}
+*/
+
+
+/********** Link to View Agreed to Terms & Conditions *********/
+
+#view_2767 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_2767 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+#view_2767 .kn-detail-label {background-color: transparent;}
+
+/* Order Ts & Cs Date Agreed Details */
+
+#view_2775 .kn-detail-label {background-color: transparent;}
+
+/************************************ END OF SHOWROOM ORDER CSS ************************************/
+
+
+/************************************ USED VEHICLE INVOICE ****************************************/
+
+#view_2552 {font-size: 11px;}
+
+#view_2550 {font-size: 11px; font-weight: bold;}
+#view_2550 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div > h3 {font-size: 11px; font-weight: bold;}
+#view_2550 > section > div > div > div:nth-child(3) > div > div:nth-child(1) > div > h3 {font-size: 11px; font-weight: bold;}
+
+#view_2553 {font-size: 12px;}
+#view_2553 tr {line-height: 10px;}
+
+#view_2561 .kn-detail-label {background-color: transparent;}
+#view_2561 {font-size: 11px;}
+
+#view_2562 tr {line-height: 10px; font-size: 12px}
+
+#view_2554 .kn-detail-label {background-color: transparent;}
+#view_2554 {font-size: 11px;}
+#view_2554 > section > div > div:nth-child(3) > div > div > div > div > h3 {font-size: 11px;}
+
+#view_2555 .kn-detail-label {background-color: transparent;}
+#view_2555 > section > div > div:nth-child(1) {font-size: 11px;}
+#view_2555 tr {line-height: 10px;}
+#view_2555 > section > div > div:nth-child(2) {font-size: 12px;}
+
+/*** Float Views Side by Side ***
+#view_2554, #view_2555 {width: 50%; float: left;} */
+
+#view_2582, #view_2557, #view_2779, #view_2781, #view_2582, #view_2787, #view_2788 {float: right; width: 100%;}
+
+/********** Link to Agree to Terms & Conditions *********/
+
+#view_2779 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_2779 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/********** Link to View Agreed to Terms & Conditions *********/
+
+#view_2781 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_2781 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+#view_2781 .kn-detail-label {background-color: transparent;}
+
+#view_2786 .kn-detail-label {background-color: transparent;}
+
+/* Hide Back Link
+#kn-scene_996 > div.kn-view.kn-back-link {display: none;} */
+
+/* #kn-input-field_5496 > div > label {position: absolute;} */
+
+/************* USED VEHICLE HANDOVER CHECKLIST **************/
+
+#view_2570 .kn-detail-label {background-color: transparent;}
+
+#view_2569 .kn-detail-label {background-color: transparent;}
+
+/*#kn-input-field_5496 > div {float: right;}*/
+
+/*************************** USED DIGITAL DEAL FILE PAGE & HANDOVER DOCUMENTS PAGE LAYOUT ***************************/
+
+/***** Handover Documents Button Format on Used Vehicle Deal File Page ******/
+
+#view_2564 .control {
+  text-align: center;
+}
+
+#view_2564 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2564 > div > a:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Vehicle Spec Details on Deal File Page */
+#view_2521 .kn-detail-label {background-color: transparent;}
+
+/* Used Vehicle Deal File Reg No. */
+
+#view_2521 > section > div > div:nth-child(1) > div > div > div.field_4941 > div > span > span {
+  	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+/* Vehicle Spec Details on Handover Documents Page */
+#view_3332 .kn-detail-label {background-color: transparent;}
+
+/* Used Vehicle Deal File - Handover Documents Page Reg No. */
+
+#view_3332 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-1.columns > div > div > div.field_4941 > div > span > h2 > span {
+  	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+/**** Retrieve/Update Order Form FORM ****/
+#view_2520 h3 {
+  text-align: center;
+}
+
+#view_2520 > form > div {
+  	text-align: center;
+}
+
+#view_2520 > form > div > button {
+	background-color: #8D8E8E !important;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2520 > form > div > button:hover {
+	background-color: #463F3A;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2520 {
+   border: 4px solid #CCCCCC;
+   padding: 10px;
+}
+
+/**** Retrieve/Update Invoice FORM ****/
+
+#view_2548 h3 {
+  text-align: center;
+}
+
+#view_2548 > form > div {
+  text-align: center;
+}
+
+#view_2548 > form > div > button {
+	background-color: #8D8E8E !important;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2548 > form > div > button:hover {
+	background-color: #463F3A;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2548 {
+   border: 4px solid #CCCCCC;
+   padding: 10px;
+}
+
+/* Border & Height Setting for Order & Invoice Sign or Update Views */
+#view_2526, #view_2549, #view_2580, #view_2581 {
+  border: 4px solid #CCCCCC;
+  text-align: center;
+  padding: 10px;
+  padding-left: 25px;
+  height: 90px;
+}
+
+/* Set Heading Colour & Text Alignment for Order & Invoice Sign or Update Views */
+#view_2526 h3, #view_2549 h3, #view_2580 h3, #view_2581 h3 {
+  color: #19365e;
+  text-align: center;
+  padding-right: 10px;
+}
+
+/* Border & Height Setting of each view - When you add a new view, add the New View Number below - ALWAYS LEAVE VIEW_2769 AT END OF VIEW LIST, INSERT NEW VIEWS BEFORE THIS (TO GET AROUND BUG WITH LAST VIEW IN LIST) */
+#view_2584, #view_2585, #view_2586, #view_2587, #view_2588, #view_2760, #view_2789, #view_2790, #view_2816, #view_2818, #view_2821, #view_2823, #view_2851, #view_2852, #view_2886, #view_2888, #view_2909, #view_2910, #view_2912, #view_2914, #view_2920, #view_2922, #view_2933, #view_2935, #view_2936, #view_2939, #view_2944, #view_2946, #view_2948, #view_2950, #view_2960, #view_2961, #view_3109, #view_3107, #view_3333, #view_3335, #view_3336, #view_3344, #view_3346, #view_3349, #view_3350, #view_3354, #view_3355, #view_3359, #view_3374, #view_3376, #view_3419, #view_3423, #view_3469, #view_3471, #view_3489, #view_3490, #view_2769 .kn-details-group {
+  border: 1px solid #CCCCCC;
+  text-align: center;
+  padding: 10px;
+  padding-left: 25px;
+  height: 90px;
+}
+
+
+/* Set Heading Colour & Text Align for Each View When you add a new view, add the New View Number below - ALWAYS LEAVE VIEW_2769 AT END OF VIEW LIST, INSERT NEW VIEWS BEFORE THIS (TO GET AROUND BUG WITH LAST VIEW IN LIST) */
+#view_2584 h3, #view_2585 h3, #view_2586 h3, #view_2587 h3, #view_2588 h3, #view_2760 h3, #view_2789 h3, #view_2790 h3, #view_2816 h3, #view_2818 h3, #view_2821 h3, #view_2823 h3, #view_2851 h3, #view_2852 h3, #view_2886 h3, #view_2888 h3, #view_2909 h3, #view_2910 h3, #view_2912 h3, #view_2914 h3, #view_2920 h3, #view_2922 h3, #view_2933 h3, #view_2935 h3, #view_2936 h3, #view_2939 h3, #view_2944 h3, #view_2946 h3, #view_2948 h3, #view_2950 h3, #view_2960 h3, #view_2961 h3, #view_3107 h3, #view_3109 h3, #view_3333 h3, #view_3335 h3, #view_3336 h3, #view_3344 h3, #view_3346 h3, #view_3349 h3, #view_3350 h3, #view_3354 h3, #view_3355 h3, #view_3359 h3, #view_3374 h3, #view_3376 h3, #view_3419 h3, #view_3423 h3, #view_3469 h3, #view_3471 h3, #view_3489 h3, #view_3490 h3, #view_2769 h3 {
+  color: #19365e;
+  text-align: center;
+  padding-right: 10px;
+}
+
+/***** Blue for Completed Actions *****/
+
+#kn-scene_990 .kn-detail-body a.kn-link-page .completed {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .completed {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/***** Orange for Incomplete Actions *****/
+
+#kn-scene_990 .kn-detail-body a.kn-link-page .active {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .active {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/***** Grey for Miscellaneous - No Files *****/
+
+#kn-scene_990 .kn-detail-body a.kn-link-page .miscellaneous {
+  color: #FFFFFF;
+  background-color: #8D8E8E;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .miscellaneous {
+  color: #FFFFFF;
+  background-color: #463F3A;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/***** Green for Miscellaneous - Files Exist *****/
+
+#kn-scene_990 .kn-detail-body a.kn-link-page .highlight {
+  color: #FFFFFF;
+  background-color: #00CC66;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .highlight {
+  color: #FFFFFF;
+  background-color: #32936F;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+#kn-scene_997 .kn-detail-body a.kn-link-page .completed {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_997 .kn-detail-body a:hover.kn-link-page .completed {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+#kn-scene_997 .kn-detail-body a.kn-link-page .active {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_997 .kn-detail-body a:hover.kn-link-page .active {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+#view_2585 > section > div > div > div > div > div.field_5054 > div > span > span > a {
+  	text-decoration: none !important;
+}
+
+
+/* HPI Check Page - Re-do HPI Check once Finance Settled */
+
+#view_2919 > form > div > button {
+	background-color: #FFA100 !important;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2919 > form > div > button:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3090 .kn-detail-label {background-color: transparent;}
+
+#view_3091 .kn-detail-label {background-color: transparent;}
+
+#view_3092 .kn-detail-label {background-color: transparent;}
+
+#view_3093 .kn-detail-label {background-color: transparent;}
+
+#view_3094 .kn-detail-label {background-color: transparent;}
+
+#view_3095 .kn-detail-label {background-color: transparent;}
+
+#view_3096 .kn-detail-label {background-color: transparent;}
+
+#view_3097 .kn-detail-label {background-color: transparent;}
+
+#view_3098 .kn-detail-label {background-color: transparent;}
+
+#view_3099 .kn-detail-label {background-color: transparent;}
+
+#view_3100 .kn-detail-label {background-color: transparent;}
+
+#view_3128 .kn-detail-label {background-color: transparent;}
+
+#view_3297 .kn-detail-label {background-color: transparent;}
+
+
+/* Vehicle - Part Ex Valuation Link */
+
+#view_2585 > section > div > div > div > div > div.field_5054 > div > span > span > a {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#view_2585 > section > div > div > div > div > div.field_5054 > div > span > span > a:hover {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/* Vehicle - No Part Ex Text */
+
+#view_2586 > section > div > div > div > div > div > div > h5 {
+  text-align: center;
+  color: #6E0E0A;
+  font-style: bold;
+  padding: 8px;
+}
+
+/********** CUSTOMER PART EXCHANGE DETAILS PAGE *************/
+
+#view_2791 .kn-detail-label {background-color: transparent;}
+
+/* REG No. Plate CSS */
+#view_2791 > section > div > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_2791 > section > div > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_2791 > section > div > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(1) > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+/* Start New Appraisal Button when Appraisal NOT Complete */
+
+#view_2806 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2806> div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+/* Re-Check for Completed Customer Part Exchange Appraisal */
+
+#view_2807 > form > div > button {
+	background-color: #FFA100 !important;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2807 > form > div > button:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/********* FCA DEMANDS & NEEDS PAGE *********/
+
+#view_2819 > form > div > button {
+	background-color: #FFA100 !important;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2819 > form > div > button:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+
+/********* PROFIT & LOSS PAGE *******/
+
+#view_2824 > form > div > button {
+	background-color: #FFA100 !important;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2824 > form > div > button:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/******** RECEIPT OF DEPOSIT PAGE *******/
+
+#view_2867 > form > div > button {
+	background-color: #FFA100 !important;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2867 > form > div > button:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/******** HANDOVER APPOINTMENT PAGE *******/
+
+#view_2906 .kn-detail-label {background-color: transparent;}
+
+#view_2905 .kn-detail-label {background-color: transparent;}
+
+/* Resize Text on Details for Customer View */
+
+#view_2905 > section > div > div:nth-child(5) > div > div > div > div > h3 {font-size: 14px;}
+
+/* Add Handover Appointment Button Colour */
+
+#view_2901 > form > div > button {
+	background-color: #FFA100 !important;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2901 > form > div > button:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Update Handover Appointment Button Colour */
+
+#view_2925 > form > div > button {
+	background-color: #FFA100 !important;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2925 > form > div > button:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/********* CUSTOMER HANDOVER DIARY *********/
+
+#view_2884 > div.kn-records-nav > div.level > div.level-left > div.kn-filters-nav > a {
+	background-color: #FFA100 !important;
+  	color: #FFFFFF;
+  	font-weight: bold;
+    font-size: 14px;
+}
+
+#view_2884 > div.kn-records-nav > div.level > div.level-left > div.kn-filters-nav > a:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+    font-size: 14px;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/********* CUSTOMER PART EXCHANGE PURCHASE INVOICE ********/
+
+#view_3464 {font-size: 12px;}
+
+#view_3464 .kn-detail-label {background-color: transparent;}
+
+#view_3465 .kn-detail-label {background-color: transparent;}
+
+#view_3463 > form > ul:nth-child(1) {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6F71;
+  padding-bottom: 10px;
+}
+
+#view_3463 > form > ul:nth-child(4) {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6F71;
+  padding-bottom: 10px;
+}
+
+#view_3465 > section > div > div.kn-details-group.column-1.columns {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #6E6F71;
+  padding-top: 20px;
+}
+
+/* Completed Part Ex Purchase Details */
+
+#view_3466 .kn-detail-label {background-color: transparent;}
+
+#view_3466 > section > div > div:nth-child(1) > div > div > div > div > h3 {
+  font-size: 16px;
+}
+
+#view_3466 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div > h3 {
+  font-size: 16px;
+}
+
+#view_3466 > section > div > div:nth-child(2) {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6F71;
+  padding-bottom: 10px;
+}
+
+#view_3466 > section > div > div:nth-child(5) {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6F71;
+  padding-bottom: 10px;
+}
+
+/********* SERVICE SCHEDULE PAGE *********/
+
+#view_2913 .kn-detail-label {background-color: transparent;}
+
+#view_2918 .kn-detail-label {background-color: transparent;}
+
+/********* CUSTOMER SATISFACTION SURVEY PAGE *********/
+
+#view_2941 .kn-detail-label {background-color: transparent;}
+
+#view_2942 .kn-detail-label {background-color: transparent;}
+
+/********* First select box rating car buying experience *********/
+
+#view_2940-field_5976 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_2940-field_5976 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_2940-field_5976 > option {
+  background:#eee;
+  color:#000;
+}
+
+/********* second select box recomend to family or friends*********/
+
+#view_2940-field_5655 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_2940-field_5655 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_2940-field_5655 > option {
+  background:#eee;
+  color:#000;
+}
+
+
+/********* CUSTOMER PORTAL VIEWS *********/
+
+/* Account Settings Page */
+
+#view_2926 .kn-detail-label {background-color: transparent;}
+
+#view_2927 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2927 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+
+
+/********** REG NO. LOOKALIKE CSS FOR DEAL FILE PAGES **************/
+
+#view_3493 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3494 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3495 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3496 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3497 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3498 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3499 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3500 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3501 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3502 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3503 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3504 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3505 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3506 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3507 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_3508 > section > div > div > div > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+/**** Deal File Admin Audit ****/
+
+#view_3614 > section > div > div > div > div > div.field_4941 > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+/******* CSS to make File Uploads Stand out when Files Exist *******/
+/* Manual Order */
+#kn-input-field_5957 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Manual Invoice */
+#kn-input-field_6223 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* V5 Doc */
+#kn-input-field_5988 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Demands & Needs */
+#kn-input-field_5588 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Profit & Loss */
+#kn-input-field_5589 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* P/X Finance Settlement */
+#kn-input-field_6115 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Deposit Receipt */
+#kn-input-field_5590 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Balance Receipt */
+#kn-input-field_6012 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Stock Vehicle Finance Settlement */
+#kn-input-field_5959 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* FCA Finance */
+#kn-input-field_5626 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* FCA Insurance */
+#kn-input-field_5628 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Finance Quote and Acceptance */
+#kn-input-field_5643 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Warranty and Assistance */
+#kn-input-field_5662 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* GAP / FSI / CRI */
+#kn-input-field_6096 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Supaguard */
+#kn-input-field_6112 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Service Plan Confirmation */
+#kn-input-field_5667 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Vehicle Purchase Invoice */
+#kn-input-field_5685 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Tax Confirmation */
+#kn-input-field_5990 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Test Drive */
+#kn-input-field_5996 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Misc 1 */
+#kn-input-field_5960 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Misc 2 */
+#kn-input-field_5962 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Misc 3 */
+#kn-input-field_5964 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Credit Note 1 */
+#kn-input-field_6248 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Credit Note 2 */
+#kn-input-field_6250 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Credit Note 3 */
+#kn-input-field_6251 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Conformity */
+#kn-input-field_6014 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* DVLA New Keeper Dec */
+#kn-input-field_6026 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Trade Cofnirmation of Sale */
+#kn-input-field_6109 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Manual Handover Checklist */
+#kn-input-field_6003 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Manual CSI Survey */
+#kn-input-field_6006 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Part Ex V5 Document */
+#kn-input-field_6239 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+
+/*************** Help / Tutorial Button CSS for Used Deal File ***************/
+
+#view_3633 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3633 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3576 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3576 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3578 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3578 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3580 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3580 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3582 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3582 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3584 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3584 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3593 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3593 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3595 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3595 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3598 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3598 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3600 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3600 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3602 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3602 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3604 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3604 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3606 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3606 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3608 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3608 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3610 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3610 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3621 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3621 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3623 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3623 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3625 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3625 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3627 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3627 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3629 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3629 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3631 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3631 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3643 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3643 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3645 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3645 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************************************************Pete/Hynek iFrame Work****************************************************************/
+#knack-iframe {
+    height: calc(100vh - 73px);
+    overflow-y: scroll;
+}
+@media only screen and (min-width: 768px) {
+    #knack-iframe {
+        height: calc(100vh - 237px);
+        overflow-y: scroll;
+    }
+}
+.rad-header-closed #knack-iframe {
+    height: calc(100vh - 65px);
+}
+@media only screen and (min-width: 768px) {
+  .rad-header-closed #knack-iframe {
+      height: calc(100vh - 54px);
+  }
+}
+.kn-content:not(:last-child):not(:empty).view_2163,
+#view_2163 {
+    margin-bottom: 0;
+}
+#view_2163 > .columns,
+#view_2163 > .columns > .kn-details-column > .kn-details-group {
+    margin: 0;
+}
+
+#view_2163 .column.kn-details-column .kn-details-group-column,
+#view_2163 .column:only-child {
+    padding: 0;
+}
+.view_2163 .kn-scenes.kn-section {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.view_2163 .kn-content .column.kn-details-group-column {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+.rad-toggle-header {
+    cursor: pointer;
+    color: #052645;
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline-block;
+}
+@keyframes highlight-button-animation {
+    from {
+        opacity: 0;
+        transform: scale(0.1) rotate(30deg);
+        transform-origin: center bottom;
+    }
+
+    50% {
+        transform: rotate(-10deg);
+        opacity: 1;
+    }
+
+    65% {
+        transform: scale(0.75) rotate(0deg);
+    }
+
+    70% {
+        transform: scale(1.25);
+    }
+
+    75% {
+        transform: scale(0.75);
+    }
+
+    80% {
+        transform: scale(1.25);
+    }
+
+    85% {
+        transform: scale(0.75);
+    }
+
+    90% {
+        transform: scale(1.25);
+    }
+
+    95% {
+        transform: scale(0.75);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.highlight-button-animation {
+    animation-name: highlight-button-animation;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+}
+@media (print), (prefers-reduced-motion: reduce) {
+    .animated {
+        animation-duration: 1ms !important;
+        transition-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+
+
+
+/************ OLD DASHBOARD STUFF **********/
+
+/* ---Robins & Day Dashboard--- */
+
+#view_632 #\35 aba5688bee0f74ec9b3305a > section {
+    transition: 0.3s;
+ 	width: 350px;
+  	/*height: 200px;*/
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #6E6F71;
+    padding: 5px;
+ 	/*margin-left: 20px;*/
+ 	margin-right: 10px;
+ 	/*margin-top: 10px;*/
+  	margin-bottom: 10px;
+    background-color: #ffffff;
+  	box-shadow:         3px 3px 5px 6px #ccc;
+}
+/*#\35 aba5688bee0f74ec9b3305a > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div > div > span > a > span > img {
+  	margin-top: 45px;
+}*/
+
+#view_632 #\35 aba56013240a44b5ae580a8 > section {
+    transition: 0.3s;
+ 	width: 350px;
+  	/*height: 200px;*/
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #6E6F71;
+    padding: 5px;
+ 	/*margin-left: 20px;*/
+ 	margin-right: 10px;
+ 	/*margin-top: 10px;*/
+  	margin-bottom: 10px;
+    background-color: #ffffff;
+  	box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+/*#\35 aba56013240a44b5ae580a8 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div > div > span > a > span > img {
+  	margin-top: 45px;
+}*/
+
+#view_632 #\35 aba569eeda21d29a4a66603 > section {
+    transition: 0.3s;
+ 	width: 350px;
+  	/*height: 200px;*/
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #6E6F71;
+    padding: 5px;
+ 	/*margin-left: 20px;*/
+ 	margin-right: 10px;
+ 	/*margin-top: 10px;*/
+  	margin-bottom: 10px;
+    background-color: #ffffff;
+  	box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+/*#\35 aba569eeda21d29a4a66603 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div > div > span > a > span > img {
+  	margin-top: 45px;
+}*/
+
+#view_632 #\35 aba5695512730299745c767 > section {
+    transition: 0.3s;
+ 	width: 350px;
+  	/*height: 200px;*/
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #6E6F71;
+    padding: 5px;
+ 	/*margin-left: 20px;*/
+ 	margin-right: 10px;
+ 	/*margin-top: 10px;*/
+  	margin-bottom: 10px;
+    background-color: #ffffff;
+  	box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+/*#\35 aba5695512730299745c767 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div > div > span > a > span > img {
+  	margin-top: 45px;
+}*/
+
+#view_632 #\35 aba567d6970b629a147c975 > section {
+    transition: 0.3s;
+ 	width: 350px;
+  	/*height: 200px;*/
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #6E6F71;
+    padding: 5px;
+ 	/*margin-left: 20px;*/
+ 	margin-right: 210x;
+ 	/*margin-top: 10px;*/
+  	margin-bottom: 10px;
+    background-color: #ffffff;
+  	box-shadow:         3px 3px 5px 6px #ccc;
+} 
+
+/*#\35 aba567d6970b629a147c975 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div > div > span > a > span > img {
+  	margin-top: 45px;
+}*/
+
+#view_632 #\35 aec1049d95a8f2ff5b643ef > section {
+    transition: 0.3s;
+ 	width: 350px;
+  	/*height: 200px;*/
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #6E6F71;
+    padding: 5px;
+ 	/*margin-left: 20px;*/
+ 	margin-right: 10px;
+ 	/*margin-top: 10px;*/
+  	margin-bottom: 10px;
+    background-color: #ffffff;
+  	box-shadow:         3px 3px 5px 6px #ccc;
+} 
+
+/*#\35 5aec1049d95a8f2ff5b643ef > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div > div > span > a > span > img {
+  	margin-top: 45px;
+}*/
+
+#view_632 #\35 aec65de77dc0d2fd227e6a2 > section {
+    transition: 0.3s;
+ 	width: 350px;
+  	/*height: 200px;*/
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #6E6F71;
+    padding: 5px;
+ 	/*margin-left: 20px;*/
+ 	margin-right: 10px;
+ 	/*margin-top: 10px;*/
+  	margin-bottom: 10px;
+    background-color: #ffffff;
+  	box-shadow:         3px 3px 5px 6px #ccc;
+} 
+
+/*#\35 5aec65de77dc0d2fd227e6a2 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div > div > span > a > span > img {
+  	margin-top: 45px;
+}*/
+
+/* Robins & Day Dashboard Label Background */
+#view_632 .kn-detail-label  {
+  background-color: #FFFFFF;
+}
+
+#view_776 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_776 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_776 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_776 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_776 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_776 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_776 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_776 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_776 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_776 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Department Overview Panels */
+
+/* NEW LIST VIEW */
+
+#\35 abcc5ca0cb9db13bea59581 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #001846;
+    padding: 5px;
+    background-color: #ffffff;
+  	margin-right: 20px;
+  	margin-bottom: 5px;
+}
+
+#\35 abcc5ca0cb9db13bea59581 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #C60023;
+    padding: 5px;
+    background-color: #ffffff;
+  	margin-right: 20px;
+  	margin-bottom: 5px;
+} 
+
+#\35 abcc5ca0cb9db13bea59581 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #000000;
+    padding: 5px;
+    background-color: #ffffff;
+  	margin-right: 20px;
+  	margin-bottom: 5px;
+}
+
+/* Change Button Colour */
+#view_755 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_755 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_768 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_768 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_789 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_789 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* USED LIST VIEW */
+
+#\35 abcc5cbd644d629638dd926 > section > div > div:nth-child(1) > div:nth-child(1) {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #001846;
+    padding: 5px;
+    background-color: #ffffff;
+  	margin-right: 20px;
+  	margin-bottom: 5px;
+}
+
+#\35 abcc5cbd644d629638dd926 > section > div > div:nth-child(1) > div:nth-child(2) {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #C60023;
+    padding: 5px;
+    background-color: #ffffff;
+  	margin-right: 20px;
+  	margin-bottom: 5px;
+}
+
+/* Change Button Colour */
+#view_757 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_757 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_769 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_769 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_788 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_788 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+
+/* FLEET LIST VIEW */
+
+#\35 abcc5ace8e29329a4a42fe8 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #001846;
+    padding: 5px;
+    background-color: #ffffff;
+  	margin-right: 20px;
+  	margin-bottom: 5px;
+}
+
+#\35 abcc5ace8e29329a4a42fe8 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #C60023;
+    padding: 5px;
+    background-color: #ffffff;
+  	margin-right: 20px;
+  	margin-bottom: 5px;
+}
+
+#\35 abcc5ace8e29329a4a42fe8 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #000000;
+    padding: 5px;
+    background-color: #ffffff;
+  	margin-right: 20px;
+  	margin-bottom: 5px;
+}
+
+/* Change Button Colour */
+#view_758 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_758 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_770 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_770 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* SERVICE LIST VIEW */
+
+/* Change Button Colour */
+#view_764 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_764 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_790 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_790 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* PARTS LIST VIEW */
+
+/* Change Button Colour */
+#view_765 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_765 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_791 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_791 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* MARKETING LIST VIEW */
+
+/* Change Button Colour */
+#view_766 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_766 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_792 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_792 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* HR LIST VIEW */
+
+/* Change Button Colour */
+#view_767 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_767 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_793 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_793 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* DEALERSHIP OVERVIEW */
+/* Change Button Colour */
+#view_777 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_777 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* REGIONAL OVERVIEWS */
+/* Change Button Colour Region 1 */
+#view_809 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_809 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Change Button Colour Region 2 */
+#view_810 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_810 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Change Button Colour Region 3 */
+#view_811 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_811 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Change Button Colour Region 4 */
+#view_812 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_812 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/*Camera app shared CSS*/
+/**POP UP MESSAGE FOR ISO USER TO ALLOW MOTION SENSOR**/
+
+#cameraModal {
+    background-color: #f5f5f5;
+  display:none;
+    padding: 30px 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  position: absolute;
+  max-width: 60%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  }
+
+#cameraModal_header {
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 16.5px;
+  color: #000;
+  text-decoration: none;
+  padding: 0px;
+  }
+
+#cameraModal_txt {
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  padding: 0px;
+  }
+
+ #cameraAccept {
+  background-color: #4CAF50;
+    color: #fafafa;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    border: 2px solid #000;
+  }
+
+#cameraVid_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  max-width: 100%;
+}
+
+#cameraGrid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-gap: 6px;
+  padding: auto;
+  align-items: center;
+ 
+}
+
+
+#cameraText {
+  font-family: sans-serif;
+  font-style: normal;
+  font-size: 16.5px;
+  color: #fafafa;
+  text-decoration: none;
+  padding: 0px;
+}
+
+#cameraCompare {
+  max-width: 100%;
+  height: auto;
+}
+
+#cameraFrontpic {
+  max-width: 100%;
+  height: auto;
+}
+
+/**Line canvas**/
+#cameraLine {
+  max-width:80%;
+  height: 5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  top: 90%;
+  font-size:0px;
+  /*left: calc(50vw - 100vmax);*/
+  /*transform: rotate(360deg);*/
+  
+  /*transform-origin: centre point*/
+  z-index:10;
+  opacity:0.5
+}
+
+/**Mobile first. Any mobile with viewport width of 640px or less apply the following to canvas**/
+#cameraOverlayCanvas {
+  position: absolute;
+  max-width: 70%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#cameraGui_controls {
+  position: fixed;
+  background-color: #111;
+  z-index: 2;
+  bottom: 0;
+}
+
+#cameraVideo_overlay {
+  position: fixed;
+  display: none;
+  max-width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: #111;
+}
+
+.cameraButton {
+  outline: none;
+  position: absolute;
+  color: white;
+  display: block;
+  opacity: 1;
+  background: transparent;
+  border: solid 2px #fff;
+  padding: 0;
+  text-shadow: 0px 0px 4px black;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+/* IF IN PORTRAIT DISPLAY ROTATE BUTTON*/
+#cameraRotate {
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/rotate.png?token=AK2DHPREJLK3ZLJTCTNMYBK72D6DM");
+  border-radius: 50%;
+}
+
+#takePhoto {
+  left: calc(50% - 40px);
+  top: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/camera-4-48.png?token=AK2DHPVVI5HQNDZZOLWI7BK72D6FI");
+  border-radius: 50%;
+}
+
+#takePhoto:active {
+  background-color: #fafafa;
+}
+
+#cameraExit {
+  left: calc(50% - 32px);
+  top: calc(82% - 32px);
+  width: 60px;
+  height: 60px;
+  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/icons8-exit-26%20(1).png?token=AK2DHPSPOOZCHQCHYZMSWGK72D6HG");
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#cameraExit:active {
+  background-color: #fafafa;
+}
+
+#cameraRetake {
+  left: calc(50% - 32px);
+  top: calc(82% - 32px);
+  width: 60px;
+  height: 60px;
+  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/x-mark-24.png?token=AK2DHPVRBQHB5GZNXLAD2G272D6JK");
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+#cameraRetake:active {
+  background-color: #fafafa;
+}
+
+#cameraConfirm {
+  width: 60px;
+  height: 60px;
+  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/check-mark-3-24.png?token=AK2DHPSEWMKVYBUU4SV3V6K72D6LQ");
+  border-radius: 50%;
+  background-color: rgba(60, 179, 113, 0.5);
+  left: calc(50% - 32px);
+  top: calc(18% - 32px);
+}
+
+#cameraConfirm:active {
+  background-color: #fafafa;
+}
+
+@media screen and (orientation: portrait) {
+
+  /* portrait-specific styles */
+  /* video_container (video) doesn't respect height...
+       so we will fill it in completely in portrait mode
+    */
+  #cameraVideo_overlay {
+    width: 100%;
+    height: 80%;
+  }
+
+  #cameraGui_controls {
+    width: 100%;
+    height: 20%;
+    left: 0;
+  }
+
+  #cameraConfirm {
+    left: calc(20% - 32px);
+    top: calc(50% - 32px);
+  }
+
+  #cameraRetake {
+    left: calc(80% - 32px);
+    top: calc(50% - 32px);
+  }
+
+  #cameraExit {
+    left: calc(20% - 32px);
+    top: calc(50% - 32px);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #cameraVid_container {
+    width: 80%;
+    height: 100%;
+  }
+
+  #cameraVid_container.left {
+    left: 20%;
+  }
+
+  /* we default to right */
+  #cameraGui_controls {
+    width: 20%;
+    height: 100%;
+    right: 0;
+  }
+
+  /* for the lefties */
+  #cameraGui_controls.left {
+    left: 0;
+  }
+
+  #cameraRetake {
+    left: calc(50% - 32px);
+    top: calc(18% - 32px);
+  }
+
+  #cameraConfirm {
+    left: calc(50% - 32px);
+    top: calc(82% - 32px);
+  }
+  
+
+  #cameraExit {
+    left: calc(50% - 32px);
+    top: calc(82% - 32px);
+  }
+}
+
+
+@media only screen and (min-width: 667px) and (max-width: 897px) and (orientation: landscape){
+#cameraText {
+  font-size: 20px;
+}
+  
+}
+
+@media only screen and (min-width: 898px) and (orientation: landscape){
+     #cameraGrid {
+  grid-template-columns: 45% 45%;
+}
+
+
+#cameraText {
+  font-size: 20px;
+}
+}
+/*Camera app CSS END*/
+
+#kn-scene_1261 {
+  margin: 6px;
+}
