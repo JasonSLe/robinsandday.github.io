@@ -813,6 +813,9 @@ function eraseCookie(name) {
         }
       }
     } catch (e) {
+	alert(updatingRecordId);
+	   alert(dataF);
+	alert(e);
       return {
         'status': 'fail'
       };
