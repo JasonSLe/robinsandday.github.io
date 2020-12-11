@@ -246,13 +246,3 @@ $(document).on('knack-record-update.view_2767', function(event, view, data) {
   
 });
 
-//****************** Refresh Pre Delivery Check Page once submitted ****************//
-
-$(document).on('knack-record-create.view_3552', function(event, view, data) {
-  
-  setTimeout(function () { location.hash = location.hash + "#"; }, 2000);
-
-  Knack.showSpinner();
-  
-});
-
