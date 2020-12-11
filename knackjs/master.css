@@ -5322,7 +5322,7 @@ visibility: visible;
   top: calc(50% - 40px);
   width: 80px;
   height: 80px;
-  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/rotate.png?token=AK2DHPREJLK3ZLJTCTNMYBK72D6DM");
+  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/rotate.png");
   border-radius: 50%;
 }
 
@@ -5331,7 +5331,7 @@ visibility: visible;
   top: calc(50% - 40px);
   width: 80px;
   height: 80px;
-  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/camera-4-48.png?token=AK2DHPVVI5HQNDZZOLWI7BK72D6FI");
+  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/camera-4-48.png");
   border-radius: 50%;
 }
 
@@ -5344,7 +5344,7 @@ visibility: visible;
   top: calc(82% - 32px);
   width: 60px;
   height: 60px;
-  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/icons8-exit-26%20(1).png?token=AK2DHPSPOOZCHQCHYZMSWGK72D6HG");
+  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/icons8-exit-26%20(1).png");
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -5358,7 +5358,7 @@ visibility: visible;
   top: calc(82% - 32px);
   width: 60px;
   height: 60px;
-  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/x-mark-24.png?token=AK2DHPVRBQHB5GZNXLAD2G272D6JK");
+  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/x-mark-24.png");
   border-radius: 50%;
   background-color: rgba(255, 0, 0, 0.5);
 }
@@ -5370,7 +5370,7 @@ visibility: visible;
 #cameraConfirm {
   width: 60px;
   height: 60px;
-  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/check-mark-3-24.png?token=AK2DHPSEWMKVYBUU4SV3V6K72D6LQ");
+  background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/check-mark-3-24.png");
   border-radius: 50%;
   background-color: rgba(60, 179, 113, 0.5);
   left: calc(50% - 32px);
