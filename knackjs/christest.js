@@ -435,6 +435,7 @@ takePhotoButton.onclick = takePhoto;
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
     moreViewsImage.src =  $('#cameraFrontpic').attr('src');
+    $('#cameraImgFront34').src =  $('#cameraFrontpic').attr('src');
 
     Knack.showSpinner();
 
@@ -443,11 +444,13 @@ takePhotoButton.onclick = takePhoto;
 
     //STOP TRACK WHEN USER SAVES IMAGE
     video.srcObject.getVideoTracks().forEach(track => track.stop());
-	  
+    
+    /*
 	setTimeout(function() {
           window.location = backUrl;
         }, 100);
-
+*/
+    prepareFileView()
   };
 
 
@@ -494,10 +497,12 @@ takePhotoButton.onclick = takePhoto;
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
 
   exitButton.onclick = function() {
-    //REDIRECT USER BACK TO HOME PAGE
+    /*//REDIRECT USER BACK TO HOME PAGE
     setTimeout(function() {
       window.location = backUrl;
     }, 100);
+    */
+    prepareFileView()
 
     //EXIT FULL SCREEN MODE
     if (document.exitFullscreen) {
@@ -514,6 +519,14 @@ takePhotoButton.onclick = takePhoto;
     video.srcObject.getVideoTracks().forEach(track => track.stop());
 
   }  
+}
+
+function prepareFileView(){
+  $('#cameraPictureGallery').show();
+  $('#cameraLine').hide();
+  $('#cameraVid_container').hide();
+  $('#cameraGrid').hide();
+  $('#cameraGui_controls').hide();
 }
 
 $(document).on('knack-view-render.view_56', function(event, view, data) {
