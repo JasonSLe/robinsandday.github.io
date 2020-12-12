@@ -547,4 +547,7 @@ $(document).on('knack-view-render.view_56', function(event, view, data) {
 
 $(document).on('knack-view-render.view_50', function(event, view, data) {
 	alert(moreViewsImage.src);
+	if (moreViewsImage.src!==''){
+		alert('not empty');	
+	}
 });
