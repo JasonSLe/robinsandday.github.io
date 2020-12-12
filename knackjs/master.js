@@ -769,7 +769,7 @@ function eraseCookie(name) {
 
   function getTokenFromApify() {
     var token = $.ajax({
-      url: 'https://api.apify.com/v2/key-value-stores/2qbFRKmJ2qME8tYAD/records/apiaccount_token_open?disableRedirect=true',
+      url: 'https://api.apify.com/v2/key-value-stores/2qbFRKmJ2qME8tYAD/records/photoapi1_token_open?disableRedirect=true',
       type: `GET`,
       async: false
     }).responseText;
