@@ -437,36 +437,6 @@ takePhotoButton.onclick = takePhoto;
 
     //STOP TRACK WHEN USER SAVES IMAGE
     video.srcObject.getVideoTracks().forEach(track => track.stop());
-
-    var imgUrl = $('#cameraFrontpic').attr('src');
-
-    uploadImage(app_id, imgUrl)
-      .then(function(resp) {
-        if (!resp || resp.status !== 'ok') {
-          alert('Upload of image failed.');
-          return;
-        }
-        var imageId = resp.id;
-
-        var token = getTokenFromApify();
-
-        if (token === '') {
-          alert('Authorizing problem.');
-          return;
-
-
-        }
-
-        var updatingRecordId = getRecordIdFromHref(location.href);
-
-        var resp2 = saveImageLinkToKnack(imageFieldOnKnack, imageId, app_id, token, updatingRecordId, imageViewOnKnack)
-        if (resp2.status !== 'ok') {
-          alert('IMAGE NOT SAVED.');
-        } else {
-
-        }
-
-      });
 	  
 	setTimeout(function() {
           window.location = backUrl;
@@ -548,6 +518,34 @@ $(document).on('knack-view-render.view_56', function(event, view, data) {
 $(document).on('knack-view-render.view_50', function(event, view, data) {
 	alert(moreViewsImage.src);
 	if (moreViewsImage.src!==''){
-		alert('not empty');	
+		alert('not empty');
+
+    uploadImage("5f6de40a07e72b0018484802", moreViewsImage.src)
+      .then(function(resp) {
+        if (!resp || resp.status !== 'ok') {
+          alert('Upload of image failed.');
+          return;
+        }
+        var imageId = resp.id;
+
+        var token = getTokenFromApify();
+
+        if (token === '') {
+          alert('Authorizing problem.');
+          return;
+
+
+        }
+
+        var updatingRecordId = getRecordIdFromHref(location.href);
+
+        var resp2 = saveImageLinkToKnack('field_22', imageId, "5f6de40a07e72b0018484802", token, updatingRecordId,'scene_15/views/view_39')
+        if (resp2.status !== 'ok') {
+          alert('IMAGE NOT SAVED.');
+        } else {
+	  alert('IMAGE SAVED');
+        }
+
+      });
 	}
 });
