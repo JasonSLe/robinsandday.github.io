@@ -526,10 +526,10 @@ function prepareFileView(){
   $('#cameraGrid').hide();
   $('#cameraGui_controls').hide();
 
-  if ($('#cameraImgFront34').src && $('#cameraImgFront34').src!==''){
+  if ($('#cameraImgFront34').attr('src') && $('#cameraImgFront34').attr('src')!==''){
     alert('not empty');
 
-    uploadImage("5f6de40a07e72b0018484802", $('#cameraImgFront34').src)
+    uploadImage("5f6de40a07e72b0018484802", $('#cameraImgFront34').attr('src'))
       .then(function(resp) {
         if (!resp || resp.status !== 'ok') {
           alert('Upload of image failed.');
