@@ -388,10 +388,11 @@ takePhotoButton.onclick = takePhoto;
 		c.height = video.videoHeight;
 	    	var ctx = c.getContext('2d');
 	    	ctx.drawImage(video, 0, 0);
+	    ctx.canvas.toBlob((blob) => {
 		img.style.visibility = 'visible';
-	    var dataURL = c.toDataURL('image/webp');
-        img.src = dataURL; //c.toDataURL('image/webp');
-        imageBeforeResize.src = dataURL; //c.toDataURL('image/webp');
+        	imageBeforeResize.src = URL.createObjectURL(blob); //c.toDataURL('image/webp');
+	      	img.src = URL.createObjectURL(blob);
+	  }, 'image/jpeg', 1);
     } else {
      	alert('unsuported system'); 
 	    alert(navigator.userAgent);
