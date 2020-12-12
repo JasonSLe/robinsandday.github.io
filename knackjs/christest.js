@@ -386,13 +386,10 @@ takePhotoButton.onclick = takePhoto;
       	var c = document.getElementById('cameraAppleCanvas');
  		c.width = video.videoWidth;
 		c.height = video.videoHeight;
-	    	var glContextAttributes = { preserveDrawingBuffer: true };
-	    	var gl = c.getContext("experimental-webgl", glContextAttributes);
-		//c.getContext('2d')
-	    	gl.drawImage(video, 0, 0);
-		// Other browsers will fall back to image/png
+	    	var ctx = c.getContext('2d');
+	    	ctx.drawImage(video, 0, 0);
 		img.style.visibility = 'visible';
-	    var dataURL = c.toDataURL();
+	    var dataURL = c.toDataURL('image/webp');
         img.src = dataURL; //c.toDataURL('image/webp');
         imageBeforeResize.src = dataURL; //c.toDataURL('image/webp');
     } else {
