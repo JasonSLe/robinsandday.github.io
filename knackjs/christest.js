@@ -144,7 +144,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   var modal = document.querySelector('#cameraModal');
   var acceptButton = document.querySelector('#cameraAccept');
 
-  //img.style.visibility = 'hidden';
+  img.style.visibility = 'hidden';
 
 //************************************* OPERATING SYSTEM DETECTION *****************************************   
 var OperatingSystem = {
