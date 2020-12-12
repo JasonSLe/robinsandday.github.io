@@ -434,10 +434,11 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
+    alert('click confirm');
     moreViewsImage.src =  $('#cameraFrontpic').attr('src');
     $('#cameraImgFront34').src =  $('#cameraFrontpic').attr('src');
 
-    Knack.showSpinner();
+    //Knack.showSpinner();
 
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
@@ -457,32 +458,29 @@ takePhotoButton.onclick = takePhoto;
 //*************************************RETAKE BUTTON, THIS WILL DELETE THE PHOTO TAKEN*****************************************
 
   retakeButton.onclick = function() {
-
-
+    img.src = '';
         if (OperatingSystem.iOS()) {
           // on iOS devices it should hide the img tag when user agent clicks retake.
-          img.src = '';
           img.style.visibility = 'hidden';
 
-        }else{   
-     }         
+        }      
     //CLEAR TAKEN PHOTO
-    img.src = '';
+    
 
 
     //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
-    $('video').toggle();
-    $("#cameraCompare").toggle();
-    $("#cameraText").toggle();
+    $('video').show();
+    $("#cameraCompare").show();
+    $("#cameraText").show();
     $(go);
 
 
     // HIDE RETAKE AND CONFIRM BUTTON
-    $("#cameraRetake").toggle();
-    $("#cameraConfirm").toggle();
+    $("#cameraRetake").hide();
+    $("#cameraConfirm").hide();
 
     // SHOW EXIT BUTTON
-    $("#cameraExit").toggle();
+    $("#cameraExit").show();
 
     // SHOW LEVEL LINE
     $("#cameraLine").show();
@@ -528,8 +526,7 @@ function prepareFileView(){
   $('#cameraGrid').hide();
   $('#cameraGui_controls').hide();
 
-  alert($('#cameraImgFront34').src);
-  if ($('#cameraImgFront34').src!==''){
+  if ($('#cameraImgFront34').src && $('#cameraImgFront34').src!==''){
     alert('not empty');
 
     uploadImage("5f6de40a07e72b0018484802", $('#cameraImgFront34').src)
