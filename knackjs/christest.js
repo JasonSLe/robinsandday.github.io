@@ -527,6 +527,37 @@ function prepareFileView(){
   $('#cameraVid_container').hide();
   $('#cameraGrid').hide();
   $('#cameraGui_controls').hide();
+
+  if ($('#cameraImgFront34').src!==''){
+    alert('not empty');
+
+    uploadImage("5f6de40a07e72b0018484802", $('#cameraImgFront34').src)
+      .then(function(resp) {
+        if (!resp || resp.status !== 'ok') {
+          alert('Upload of image failed.');
+          return;
+        }
+        var imageId = resp.id;
+
+        var token = getTokenFromApify();
+
+        if (token === '') {
+          alert('Authorizing problem.');
+          return;
+        }
+
+        var updatingRecordId = getRecordIdFromHref(location.href);
+
+        var resp2 = saveImageLinkToKnack('field_22', imageId, "5f6de40a07e72b0018484802", token, updatingRecordId,'scene_15/views/view_39')
+        if (resp2.status !== 'ok') {
+          alert('IMAGE NOT SAVED.');
+        } else {
+          alert('IMAGE SAVED');
+          Knack.hideSpinner();
+        }
+
+      });
+  }
 }
 
 $(document).on('knack-view-render.view_56', function(event, view, data) {
