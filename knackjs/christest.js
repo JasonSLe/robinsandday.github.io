@@ -125,10 +125,9 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   $('#cameraPictureGallery').hide();
   $('#cameraLine').show();
   $('#cameraVid_container').show();
-  $('#cameraModal').show();
   $('#cameraGrid').show();
   $('#cameraGui_controls').show();
-  
+
   var imageCapture;
 
   var img = document.querySelector('img');
@@ -518,7 +517,7 @@ takePhotoButton.onclick = takePhoto;
 }
 
 $(document).on('knack-view-render.view_56', function(event, view, data) {
-	prepareCameraView("https://salesjourney.knack.com/christians-test-app2#imaging-test-that-reflects-live-app/take-images/"+getRecordIdFromHref(location.href)+"/","5f6de40a07e72b0018484802",'field_22','scene_15/views/view_39');
+	//prepareCameraView("https://salesjourney.knack.com/christians-test-app2#imaging-test-that-reflects-live-app/take-images/"+getRecordIdFromHref(location.href)+"/","5f6de40a07e72b0018484802",'field_22','scene_15/views/view_39');
 });
 
 $(document).on('knack-view-render.view_50', function(event, view, data) {
