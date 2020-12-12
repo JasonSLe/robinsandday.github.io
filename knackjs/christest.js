@@ -445,12 +445,12 @@ takePhotoButton.onclick = takePhoto;
     //STOP TRACK WHEN USER SAVES IMAGE
     video.srcObject.getVideoTracks().forEach(track => track.stop());
     
-    
+    /*
 	setTimeout(function() {
           window.location = backUrl;
         }, 100);
-
-    //prepareFileView()
+*/
+    prepareFileView()
   };
 
 
@@ -495,11 +495,11 @@ takePhotoButton.onclick = takePhoto;
 
   exitButton.onclick = function() {
     //REDIRECT USER BACK TO HOME PAGE
-    setTimeout(function() {
+    /*setTimeout(function() {
       window.location = backUrl;
     }, 100);
-    
-    //prepareFileView()
+    */
+    prepareFileView()
 
     //EXIT FULL SCREEN MODE
     if (document.exitFullscreen) {
@@ -559,11 +559,11 @@ function prepareFileView(){
 
 $(document).on('knack-view-render.view_56', function(event, view, data) {
   $('[class="kn-view kn-back-link"]').hide();
-  prepareCameraView("https://salesjourney.knack.com/christians-test-app2#imaging-test-that-reflects-live-app/take-images/"+getRecordIdFromHref(location.href)+"/","5f6de40a07e72b0018484802",'field_22','scene_15/views/view_39');
-  /*var cameraTakeFront34 = document.getElementById('cameraTakeFront34');
+  //prepareCameraView("https://salesjourney.knack.com/christians-test-app2#imaging-test-that-reflects-live-app/take-images/"+getRecordIdFromHref(location.href)+"/","5f6de40a07e72b0018484802",'field_22','scene_15/views/view_39');
+  var cameraTakeFront34 = document.getElementById('cameraTakeFront34');
   cameraTakeFront34.onclick = function() {
       prepareCameraView("https://salesjourney.knack.com/christians-test-app2#imaging-test-that-reflects-live-app/take-images/"+getRecordIdFromHref(location.href)+"/","5f6de40a07e72b0018484802",'field_22','scene_15/views/view_39');
-  }*/
+  }
 });
 
 $(document).on('knack-view-render.view_50', function(event, view, data) {
