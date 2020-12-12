@@ -1,8 +1,6 @@
 // Camera app share functions
 //************************************* SAVE THE PICTURE YOU'VE JUST TAKEN WITH THE CAMERA TO KNACK*****************************************
 
-var moreViewsImage = new Image(768, 576)
-
   //this function just parses recordId from URL //maybe needs to be altered acording the use
   function getRecordIdFromHref(ur) {
     var ur = ur.substr(0, ur.length - 1);
@@ -428,7 +426,6 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
-    moreViewsImage.src =  $('#cameraFrontpic').attr('src');
 
     Knack.showSpinner();
 
@@ -545,6 +542,8 @@ $(document).on('knack-view-render.view_56', function(event, view, data) {
 	prepareCameraView("https://salesjourney.knack.com/christians-test-app2#imaging-test-that-reflects-live-app/take-images/"+getRecordIdFromHref(location.href)+"/","5f6de40a07e72b0018484802",'field_22','scene_15/views/view_39');
 });
 
+/*
 $(document).on('knack-view-render.view_50', function(event, view, data) {
-	alert(moreViewsImage.src);
+	
 });
+*/
