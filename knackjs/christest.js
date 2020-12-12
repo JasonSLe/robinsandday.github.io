@@ -143,7 +143,15 @@ var OperatingSystem = {
     },
 
     iOS: function() {
-       return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	if(navigator.vendor.match(/google/i)) {
+		return false;
+        	//browserName = 'chrome/blink';
+    	}
+    	else if(navigator.vendor.match(/apple/i)) {
+		return true;
+        	//browserName = 'safari/webkit';
+    	}
+       //return navigator.userAgent.match(/iPhone|iPad|iPod/i);
     }
 };
 
