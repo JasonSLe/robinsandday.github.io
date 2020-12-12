@@ -528,6 +528,7 @@ function prepareFileView(){
   $('#cameraGrid').hide();
   $('#cameraGui_controls').hide();
 
+  alert($('#cameraImgFront34').src);
   if ($('#cameraImgFront34').src!==''){
     alert('not empty');
 
