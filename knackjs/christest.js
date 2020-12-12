@@ -446,12 +446,12 @@ takePhotoButton.onclick = takePhoto;
     //STOP TRACK WHEN USER SAVES IMAGE
     video.srcObject.getVideoTracks().forEach(track => track.stop());
     
-    /*
+    
 	setTimeout(function() {
           window.location = backUrl;
         }, 100);
-*/
-    prepareFileView()
+
+    //prepareFileView()
   };
 
 
@@ -495,12 +495,12 @@ takePhotoButton.onclick = takePhoto;
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
 
   exitButton.onclick = function() {
-    /*//REDIRECT USER BACK TO HOME PAGE
+    //REDIRECT USER BACK TO HOME PAGE
     setTimeout(function() {
       window.location = backUrl;
     }, 100);
-    */
-    prepareFileView()
+    
+    //prepareFileView()
 
     //EXIT FULL SCREEN MODE
     if (document.exitFullscreen) {
