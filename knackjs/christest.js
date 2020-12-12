@@ -130,8 +130,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 
   var imageCapture;
 
-  var img = document.querySelector('img');
-  var frontpic = document.querySelector("#cameraFrontpic");
+  var img = document.querySelector("#cameraFrontpic");
   var video = document.querySelector('video');
   var takePhotoButton = document.querySelector('button#takePhoto');
   var confirmButton = document.querySelector('#cameraConfirm');
