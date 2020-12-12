@@ -273,7 +273,8 @@ imageBeforeResize.onload = () => {
 if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermission === 'function' ){
     console.log("permision needed");
     $('#cameraModal').show(); // show dialog asking user to enable motion sensor
-    $("#takePhoto").attr("disabled", true);//De-activate takephoto button until user agnet agreed
+    //$("#takePhoto").attr("disabled", true);//De-activate takephoto button until user agnet agreed
+   $("#takePhoto").hide();
 
   acceptButton.onclick = function(){
   DeviceOrientationEvent.requestPermission()
@@ -281,7 +282,8 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
   if (response == 'granted') {
     window.addEventListener("deviceorientation", handleOrientation, true);
     $('#cameraModal').hide();
-    $("#takePhoto").removeAttr('disabled');
+    //$("#takePhoto").removeAttr('disabled');
+	  $("#takePhoto").show();
   }
 })
 .catch(console.error)
@@ -405,7 +407,8 @@ takePhotoButton.onclick = takePhoto;
     $("#cameraLine").hide();
 
     // DISABLE TAKEPHOTO BUTTON
-    $("#takePhoto").attr("disabled", true);
+    //$("#takePhoto").attr("disabled", true);
+	  $("#takePhoto").hide();
   }
 
 
@@ -491,7 +494,8 @@ takePhotoButton.onclick = takePhoto;
     $("#cameraLine").show();
 
     // ACTIVATE TAKEPHOTO BUTTON
-    $("#takePhoto").removeAttr('disabled');
+    //$("#takePhoto").removeAttr('disabled');
+	  $("#takePhoto").show();
 
   }
 
