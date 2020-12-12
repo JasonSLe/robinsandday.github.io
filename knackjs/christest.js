@@ -226,9 +226,7 @@ imageBeforeResize.onload = () => {
     ctx.drawImage(imageBeforeResize, sx + sw * (1-percentOfPicture69)/2, imageBeforeResize.height * (1-percentOfPicture69)/2, sw * percentOfPicture69, imageBeforeResize.height * percentOfPicture69, 0, 0, 768, 576);
   }
   */
-if (typeof ctx.filter === "undefined") {
- alert("Sorry, the browser doesn't support Context2D filters.")
-}
+alert(imageBeforeResize.width);
   if ((imageBeforeResize.width/imageBeforeResize.height)===(4/3)){
     var percentOfPicture = 0.6;
     ctx.drawImage(imageBeforeResize, imageBeforeResize.width * (1-percentOfPicture)/2, imageBeforeResize.height * (1-percentOfPicture)/2, imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0);
