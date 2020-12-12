@@ -544,6 +544,7 @@ $(document).on('knack-view-render.view_50', function(event, view, data) {
           alert('IMAGE NOT SAVED.');
         } else {
 	  alert('IMAGE SAVED');
+	  Knack.hideSpinner();
         }
 
       });
