@@ -128,7 +128,6 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   $('#cameraGrid').show();
   $('#cameraGui_controls').show();
   $("#cameraConfirm").attr("disabled", false);
-  $("#cameraFrontpic").hide();
   $("#cameraExit").show();
 
   var imageCapture;
@@ -144,6 +143,8 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   var line = document.getElementById('cameraLine');
   var modal = document.querySelector('#cameraModal');
   var acceptButton = document.querySelector('#cameraAccept');
+
+  img.style.visibility = 'hidden';
 
 //************************************* OPERATING SYSTEM DETECTION *****************************************   
 var OperatingSystem = {
@@ -401,7 +402,7 @@ takePhotoButton.onclick = takePhoto;
 	    	var ctx = c.getContext('2d');
 	    	ctx.drawImage(video, 0, 0);
 	    ctx.canvas.toBlob((blob) => {
-          $("#cameraFrontpic").show();
+          img.style.visibility = 'visible';
         	imageBeforeResize.src = URL.createObjectURL(blob); //c.toDataURL('image/webp');
 	      	img.src = URL.createObjectURL(blob);
 	  }, 'image/jpeg', 1);
