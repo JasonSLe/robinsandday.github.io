@@ -134,7 +134,6 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   var line = document.getElementById('cameraLine');
   var modal = document.querySelector('#cameraModal');
   var acceptButton = document.querySelector('#cameraAccept');
-  var c;
 
 //************************************* OPERATING SYSTEM DETECTION *****************************************   
 var OperatingSystem = {
@@ -384,7 +383,7 @@ takePhotoButton.onclick = takePhoto;
         console.log('takePhoto() error: ', error);
       });
     } else if (OperatingSystem.iOS()) {
-      	c = document.createElement('canvas');
+      	var c = document.createElement('canvas');
  		c.width = video.videoWidth;
 		c.height = video.videoHeight;
 		c.getContext('2d').drawImage(video, 0, 0);
