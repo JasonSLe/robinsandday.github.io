@@ -488,6 +488,10 @@ takePhotoButton.onclick = takePhoto;
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
 
   exitButton.onclick = function() {
+    //REDIRECT USER BACK TO HOME PAGE
+    setTimeout(function() {
+      window.location = backUrl;
+    }, 100);
 
     //EXIT FULL SCREEN MODE
     if (document.exitFullscreen) {
@@ -502,11 +506,6 @@ takePhotoButton.onclick = takePhoto;
 
     //STOP TRACK WHEN USER EXIT THE APP
     video.srcObject.getVideoTracks().forEach(track => track.stop());
-	 
-    //REDIRECT USER BACK TO HOME PAGE
-    setTimeout(function() {
-      window.location = backUrl;
-    }, 100);
 
   }  
 }
