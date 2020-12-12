@@ -386,7 +386,7 @@ takePhotoButton.onclick = takePhoto;
       	var c = document.getElementById('cameraAppleCanvas');
  		c.width = video.videoWidth;
 		c.height = video.videoHeight;
-		c.getContext('2d').drawImage(video, 0, 0);
+		c.getContext('2d',{'preserveDrawingBuffer':true}).drawImage(video, 0, 0);
 		// Other browsers will fall back to image/png
 		img.style.visibility = 'visible';
         img.src = c.toDataURL('image/webp');
