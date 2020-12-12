@@ -127,6 +127,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   $('#cameraVid_container').show();
   $('#cameraGrid').show();
   $('#cameraGui_controls').show();
+  $("#cameraConfirm").attr("disabled", false);
 
   var imageCapture;
 
