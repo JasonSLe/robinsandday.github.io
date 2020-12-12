@@ -386,6 +386,7 @@ takePhotoButton.onclick = takePhoto;
         imageBeforeResize.src = c.toDataURL('image/webp');
     } else {
      	alert('unsuported system'); 
+	    alert(navigator.userAgent);
     }
 
     //HIDE VIDEO & OVERLAY ELEMENT
