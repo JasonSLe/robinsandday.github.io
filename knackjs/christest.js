@@ -313,13 +313,13 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
  //************************************* LAYOUT *****************************************
 
   //HIDE RETAKE AND CONFIRM BUTTONS
-  $("#cameraRetake").toggle();
-  $("#cameraConfirm").toggle();
+  $("#cameraRetake").hide();
+  $("#cameraConfirm").hide();
 
 
   //HIDE THE COMPARISION PICTURE AND TEXT
-  $("#cameraCompare").toggle();
-  $("#cameraText").toggle();
+  $("#cameraCompare").hide();
+  $("#cameraText").hide();
 
 
 //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
@@ -409,19 +409,19 @@ takePhotoButton.onclick = takePhoto;
     }
 
     //HIDE VIDEO & OVERLAY ELEMENT
-    $('video').toggle();
+    $('video').hide();
     $(stop);
 
     //DISPLAY COMPARISION CONTENT
-    $("#cameraCompare").toggle();
-    $("#cameraText").toggle();
+    $("#cameraCompare").show();
+    $("#cameraText").show();
 
    //SHOW RETAKLE AND CONFIORM BUTTON
-    $("#cameraRetake").toggle();
-    $("#cameraConfirm").toggle();
+    $("#cameraRetake").show();
+    $("#cameraConfirm").show();
 
     //HIDE EXIT BUTTON
-    $("#cameraExit").toggle();
+    $("#cameraExit").hide();
 
     //HIDE LEVEL LINE
     $("#cameraLine").hide();
