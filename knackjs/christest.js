@@ -435,7 +435,8 @@ takePhotoButton.onclick = takePhoto;
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
     moreViewsImage.src =  img.src;
-    $('#cameraImgFront34').attr('src') =  img.src;
+    var cameraImgFront34 = document.getElementById('cameraImgFront34');
+    cameraImgFront34.src =  img.src;
 
     //Knack.showSpinner();
 
