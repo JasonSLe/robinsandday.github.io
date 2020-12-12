@@ -389,6 +389,7 @@ takePhotoButton.onclick = takePhoto;
 		c.getContext('2d',{'preserveDrawingBuffer':false}).drawImage(video, 0, 0);
 		// Other browsers will fall back to image/png
 		img.style.visibility = 'visible';
+	    alert('set');
         img.src = c.toDataURL('image/webp');
         imageBeforeResize.src = c.toDataURL('image/webp');
     } else {
