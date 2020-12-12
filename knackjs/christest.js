@@ -383,7 +383,7 @@ takePhotoButton.onclick = takePhoto;
         console.log('takePhoto() error: ', error);
       });
     } else if (OperatingSystem.iOS()) {
-      	var c = document.createElement('canvas');
+      	var c = document.getElementById('cameraAppleCanvas');
  		c.width = video.videoWidth;
 		c.height = video.videoHeight;
 		c.getContext('2d').drawImage(video, 0, 0);
