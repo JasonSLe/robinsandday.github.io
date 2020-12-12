@@ -426,6 +426,7 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
+    moreViewsImage.src =  $('#cameraFrontpic').attr('src');
 
     Knack.showSpinner();
 
@@ -516,11 +517,6 @@ takePhotoButton.onclick = takePhoto;
 
   exitButton.onclick = function() {
 
-    //REDIRECT USER BACK TO HOME PAGE
-    setTimeout(function() {
-      window.location = backUrl;
-    }, 100);
-
     //EXIT FULL SCREEN MODE
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -534,10 +530,21 @@ takePhotoButton.onclick = takePhoto;
 
     //STOP TRACK WHEN USER EXIT THE APP
     video.srcObject.getVideoTracks().forEach(track => track.stop());
+	 
+    //REDIRECT USER BACK TO HOME PAGE
+    setTimeout(function() {
+      window.location = backUrl;
+    }, 100);
 
   }  
 }
 
 $(document).on('knack-view-render.view_56', function(event, view, data) {
 	prepareCameraView("https://salesjourney.knack.com/christians-test-app2#imaging-test-that-reflects-live-app/take-images/"+getRecordIdFromHref(location.href)+"/","5f6de40a07e72b0018484802",'field_22','scene_15/views/view_39');
+});
+
+var moreViewsImage
+
+$(document).on('knack-view-render.view_50', function(event, view, data) {
+	alert(moreViewsImage.src);
 });
