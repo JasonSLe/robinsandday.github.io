@@ -390,8 +390,9 @@ takePhotoButton.onclick = takePhoto;
 		// Other browsers will fall back to image/png
 		img.style.visibility = 'visible';
 	    alert('set');
-        img.src = c.toDataURL('image/webp');
-        imageBeforeResize.src = c.toDataURL('image/webp');
+	    var dataURL = c.toDataURL();
+        img.src = dataURL; //c.toDataURL('image/webp');
+        imageBeforeResize.src = dataURL; //c.toDataURL('image/webp');
     } else {
      	alert('unsuported system'); 
 	    alert(navigator.userAgent);
