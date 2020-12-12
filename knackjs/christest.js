@@ -128,6 +128,8 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   $('#cameraGrid').show();
   $('#cameraGui_controls').show();
   $("#cameraConfirm").attr("disabled", false);
+  $("#cameraFrontpic").hide();
+  $("#cameraExit").show();
 
   var imageCapture;
 
