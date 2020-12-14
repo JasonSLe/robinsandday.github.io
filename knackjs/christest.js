@@ -279,7 +279,7 @@ imageBeforeResize.onload = () => {
   var gamma    = event.gamma;
   console.log(beta);
 
-  if(beta <=1 && beta >= -1)
+  if(alpha <=1 && alpha >= -1)
   {
     line.style.backgroundColor = 'green';
   }
@@ -287,7 +287,7 @@ imageBeforeResize.onload = () => {
   {
     line.style.backgroundColor = 'red';
   }
-  line.style.transform = 'rotate(' + beta.toString() + 'deg)';
+  line.style.transform = 'rotate(' + alpha.toString() + 'deg)';
 }
 
    // when page loads checks if the device requires user to to enable motion sensors, If they do then display the dialog
