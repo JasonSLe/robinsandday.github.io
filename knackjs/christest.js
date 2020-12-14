@@ -80,6 +80,7 @@ var moreViewsImage = new Image(768, 576)
 
 
   function saveImageLinkToKnack(fieldName, imageId, app_id, token, updatingRecordId, knackSceneView) {
+    alert('saveLink')
     var dataF = '{"' + fieldName + '": "' + imageId + '"}'
     alert(dataF);
 
@@ -587,6 +588,7 @@ function uploadImages(infoText){
   
           $('#'+infoText).text('Image uploaded, saving data to Knack');
           alert('before save link')
+          alert(imagesToUpload.images[i].field);
           var resp2 = saveImageLinkToKnack(imagesToUpload.images[i].field, imageId, imagesToUpload.app, token, updatingRecordId,imagesToUpload.images[i].scene)
           if (resp2.status !== 'ok') {
             alert('IMAGE NOT SAVED.');
