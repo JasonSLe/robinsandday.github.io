@@ -129,6 +129,7 @@ function prepareCameraView(imgToSaveName){
   $('#cameraGui_controls').show();
   $("#cameraConfirm").attr("disabled", false);
   $("#cameraExit").show();
+  $('video').show();
 
   var imageCapture;
 
@@ -440,6 +441,8 @@ takePhotoButton.onclick = takePhoto;
     var imgToSave = document.getElementById(imgToSaveName);
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-cameraImageUploadad',false)
+    alert(imgToSave.src);
+    alert(imgToSaveName);
 
     //Knack.showSpinner();
 
@@ -539,8 +542,6 @@ function prepareFileView(){
   $('#cameraVid_container').hide();
   $('#cameraGrid').hide();
   $('#cameraGui_controls').hide();
-
-  alert($('#cameraUploadBackground').attr('checked'));
 
   if ($('#cameraUploadBackground').attr('checked')){
     uploadImages('cameraUploadInfo')
