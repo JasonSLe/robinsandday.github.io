@@ -38,7 +38,6 @@ var moreViewsImage = new Image(768, 576)
         data: form,
         async: false
       }).then(function(rData){
-        alert('image uploaded');
         alert(rData);
         try {
           var rDataP = JSON.parse(rData);
@@ -53,7 +52,6 @@ var moreViewsImage = new Image(768, 576)
               $('#'+infoText).text('Take photos now');
               $('#'+passData.name).attr('data-cameraImageUploaded', 'YES');
               //alert('IMAGE SAVED');
-              Knack.hideSpinner();
             }
           }
           return {
