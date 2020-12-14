@@ -608,6 +608,13 @@ function uploadImages(infoText){
 
 $(document).on('knack-view-render.view_56', function(event, view, data) {
   $('[class="kn-view kn-back-link"]').hide();
+  document.getElementById('cameraUploadBackground').onchange = function(){
+    if (this.checked){
+      $('#cameraUploadOnce').hide();
+    } else {
+      $('#cameraUploadOnce').show();
+    }
+  }
   var cameraTakeFront34 = document.getElementById('cameraTakeFront34');
   cameraTakeFront34.onclick = function() {
       prepareCameraView('cameraImgFront34');
