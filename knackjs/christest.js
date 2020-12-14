@@ -88,7 +88,14 @@ var moreViewsImage = new Image(768, 576)
       'Authorization': token
     };
 
-
+    alert({
+      url: 'https://api.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
+      type: `PUT`,
+      headers: headersForSecureView,
+      contentType: 'application/json',
+      data: dataF,
+      async: false
+    })
 
     var rData2 = $.ajax({
       url: 'https://api.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
@@ -548,7 +555,9 @@ function prepareFileView(){
 
 function uploadImages(infoText){
   var token = getTokenFromApify('apiaccount');
+  alert(token);
   var updatingRecordId = getRecordIdFromHref(location.href);
+  alert(updatingRecordId)
 
   var imagesToUpload = {
     app : "5f6de40a07e72b0018484802",
@@ -570,8 +579,6 @@ function uploadImages(infoText){
 
   for (var i =0;i<imagesToUpload.images.length;i++){
     //checking if the image is set to some photo
-    alert($('#'+imagesToUpload.images[i].name).attr('src'));
-    alert($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad'));
     if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
       //checking if the image was already uploaded
       if (!$('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')) continue;
