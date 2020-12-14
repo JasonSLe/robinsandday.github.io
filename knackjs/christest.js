@@ -574,7 +574,7 @@ function uploadImages(infoText){
     alert($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad'));
     if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
       //checking if the image was already uploaded
-      if ($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')) continue;
+      if (!$('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')) continue;
       $('#'+infoText).text('Uploading image');
       uploadImage(imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'))
         .then(function(resp) {
