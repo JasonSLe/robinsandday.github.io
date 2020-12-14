@@ -561,7 +561,7 @@ function uploadImages(infoText){
       {
         name:'cameraImgRear34',
         scene: 'scene_15/views/view_39',
-        field : 'field_23'
+        field : 'field_147'
       },
     ]
   }
