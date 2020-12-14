@@ -271,14 +271,14 @@ imageBeforeResize.onload = () => {
 
 
 //**************************** SPIRIT LEVEL *****************************************
-var b = 0;
+var b = '';
  function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
   var beta     = event.beta;
   var gamma    = event.gamma;
   console.log(beta);
-  b = beta
+  b = 'rotate(' + (-beta).toString() + 'deg)'
 
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
