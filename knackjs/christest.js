@@ -28,7 +28,7 @@ var moreViewsImage = new Image(768, 576)
       .then(function(blob) {
         form.append('files', blob, "fileimage.jpg");
 
-
+/*
         var rData = $.ajax({
           url: url,
           type: 'POST',
@@ -61,6 +61,38 @@ var moreViewsImage = new Image(768, 576)
             'passData' : passData
           };
         }
+        */
+
+       $.ajax({
+        url: url,
+        type: 'POST',
+        headers: headers,
+        processData: false,
+        contentType: false,
+        mimeType: 'multipart/form-data',
+        data: form,
+        async: false
+      }).then(function(rData){
+        try {
+          var rDataP = JSON.parse(rData);
+          if (rDataP.id) {
+            return {
+              'status': 'ok',
+              'id': rDataP.id,
+              'passData' : passData
+            }
+          }
+          return {
+            'status': 'fail',
+            'passData' : passData
+          };
+        } catch (e) {
+          return {
+            'status': 'fail',
+            'passData' : passData
+          };
+        }
+      })
 
       });
 
