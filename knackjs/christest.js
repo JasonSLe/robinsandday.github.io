@@ -239,6 +239,7 @@ imageBeforeResize.onload = () => {
    //save the resized image to the shown img
    ctx.canvas.toBlob((blob) => {
       img.src = URL.createObjectURL(blob);
+      img.style.visibility = 'visible';
   }, 'image/jpeg', 1);
   Knack.hideSpinner();
 }
@@ -403,9 +404,8 @@ takePhotoButton.onclick = takePhoto;
 	    	var ctx = c.getContext('2d');
 	    	ctx.drawImage(video, 0, 0);
 	    ctx.canvas.toBlob((blob) => {
-          img.style.visibility = 'visible';
         	imageBeforeResize.src = URL.createObjectURL(blob); //c.toDataURL('image/webp');
-	      	img.src = URL.createObjectURL(blob);
+	      	//img.src = URL.createObjectURL(blob);
 	  }, 'image/jpeg', 1);
     } else {
      	alert('unsuported system'); 
@@ -440,6 +440,7 @@ takePhotoButton.onclick = takePhoto;
   confirmButton.onclick = function() {
     var imgToSave = document.getElementById(imgToSaveName);
     imgToSave.src =  img.src;
+    imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
 
     //Knack.showSpinner();
@@ -577,7 +578,7 @@ function uploadImages(infoText){
         continue;
       };
       $('#'+infoText).text('Uploading image');
-      uploadImage(imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i])
+      uploadImage(imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('data-fullImageSrc'), imagesToUpload.images[i])
         .then(function(resp) {
           if (!resp || resp.status !== 'ok') {
             alert('Upload of image failed.');
