@@ -583,7 +583,7 @@ function uploadImages(infoText){
       };
       $('#'+infoText).text('Uploading image');
       alert('beforeUpload');
-      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i], infoText).then(function(resp){
+      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('data-fullImageSrc'), imagesToUpload.images[i], infoText).then(function(resp){
         alert('now');
       });
       alert('aaa');
