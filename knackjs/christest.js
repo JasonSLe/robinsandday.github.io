@@ -546,9 +546,7 @@ function prepareFileView(){
 
 function uploadImages(infoText){
   var token = getTokenFromApify('apiaccount');
-  alert(token);
   var updatingRecordId = getRecordIdFromHref(location.href);
-  alert(updatingRecordId)
 
   var imagesToUpload = {
     app : "5f6de40a07e72b0018484802",
@@ -588,6 +586,7 @@ function uploadImages(infoText){
           }
   
           $('#'+infoText).text('Image uploaded, saving data to Knack');
+          alert('before save link')
           var resp2 = saveImageLinkToKnack(imagesToUpload.images[i].field, imageId, imagesToUpload.app, token, updatingRecordId,imagesToUpload.images[i].scene)
           if (resp2.status !== 'ok') {
             alert('IMAGE NOT SAVED.');
