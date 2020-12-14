@@ -199,7 +199,6 @@ const constraints = {
 
     })
     .catch(error => ChromeSamples.log('Argh!', error.name || error));
-    video.srcObject.getVideoTracks().forEach(track => track.start());
 
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
