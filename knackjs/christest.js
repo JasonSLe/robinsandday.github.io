@@ -9,7 +9,7 @@ var moreViewsImage = new Image(768, 576)
     return ur.substr(ur.lastIndexOf('/') + 1)
   }
 
-  function uploadImage(app_id, imgUrl) {
+  function uploadImage(app_id, imgUrl, passData = null) {
     var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
 
     var form = new FormData();
@@ -47,15 +47,18 @@ var moreViewsImage = new Image(768, 576)
           if (rDataP.id) {
             return {
               'status': 'ok',
-              'id': rDataP.id
+              'id': rDataP.id,
+              passData : passData
             }
           }
           return {
-            'status': 'fail'
+            'status': 'fail',
+            passData : passData
           };
         } catch (e) {
           return {
-            'status': 'fail'
+            'status': 'fail',
+            passData : passData
           };
         }
 
@@ -573,7 +576,7 @@ function uploadImages(infoText){
       //checking if the image was already uploaded
       if (!$('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')) continue;
       $('#'+infoText).text('Uploading image');
-      uploadImage(imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'))
+      uploadImage(imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i])
         .then(function(resp) {
           if (!resp || resp.status !== 'ok') {
             alert('Upload of image failed.');
@@ -588,13 +591,13 @@ function uploadImages(infoText){
   
           $('#'+infoText).text('Image uploaded, saving data to Knack');
           alert('before save link')
-          alert(imagesToUpload.images[i].field);
-          var resp2 = saveImageLinkToKnack(imagesToUpload.images[i].field, imageId, imagesToUpload.app, token, updatingRecordId,imagesToUpload.images[i].scene)
+          alert(resp.passData.field);
+          var resp2 = saveImageLinkToKnack(resp.passData.field, imageId, imagesToUpload.app, token, updatingRecordId,resp.passData.scene)
           if (resp2.status !== 'ok') {
             alert('IMAGE NOT SAVED.');
           } else {
             $('#'+infoText).text('Take photos now');
-            $('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad',true);
+            $('#'+resp.passData.name).attr('data-cameraImageUploadad',true);
             alert('IMAGE SAVED');
             Knack.hideSpinner();
           }
