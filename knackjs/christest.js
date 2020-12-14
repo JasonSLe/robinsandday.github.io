@@ -572,8 +572,8 @@ function uploadImages(infoText){
     //checking if the image is set to some photo
     if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
       //checking if the image was already uploaded
-      alert(imagesToUpload.images[i].name +'*'+ $('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad'))
-      if ($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')===true){
+      alert(imagesToUpload.images[i].name +'#'+ $('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad'))
+      if ($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')==='true'){
         alert('already uploaded');
         continue;
       };
