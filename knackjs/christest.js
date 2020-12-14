@@ -582,11 +582,11 @@ function uploadImages(infoText){
         continue;
       };
       $('#'+infoText).text('Uploading image');
-      alert('beforeUpload');
+      //alert('beforeUpload');
       uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('data-fullImageSrc'), imagesToUpload.images[i], infoText).then(function(resp){
-        alert('now');
+        //alert('now');
       });
-      alert('aaa');
+      //alert('aaa');
     }
   }
 }
