@@ -443,6 +443,7 @@ takePhotoButton.onclick = takePhoto;
     imgToSave.setAttribute('data-cameraImageUploadad',false)
     alert(imgToSave.src);
     alert(imgToSaveName);
+    $("#"+imgToSaveName).attr("src",img.src);
 
     //Knack.showSpinner();
 
@@ -573,6 +574,7 @@ function uploadImages(infoText){
   for (var i =0;i<imagesToUpload.images.length;i++){
     //checking if the image is set to some photo
     alert($('#'+imagesToUpload.images[i].name).attr('src'));
+    alert($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad'));
     if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
       //checking if the image was already uploaded
       if ($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')) continue;
