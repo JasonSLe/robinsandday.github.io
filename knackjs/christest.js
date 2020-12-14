@@ -437,10 +437,10 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
-    alert(imgToSaveName);
     var imgToSave = document.getElementById(imgToSaveName);
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-cameraImageUploadad',false)
+    alert(imgToSave.src);
 
     //Knack.showSpinner();
 
