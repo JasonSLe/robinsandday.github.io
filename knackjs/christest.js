@@ -573,7 +573,7 @@ function uploadImages(infoText){
     if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
       //checking if the image was already uploaded
       if ($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploaded')==='YES'){
-        alert('already uploaded');
+        //alert('already uploaded');
         continue;
       };
       $('#'+infoText).text('Uploading image');
