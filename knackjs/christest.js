@@ -38,6 +38,7 @@ var moreViewsImage = new Image(768, 576)
         data: form,
         async: false
       }).then(function(rData){
+        alert('image uploaded');
         try {
           var rDataP = JSON.parse(rData);
           if (rDataP.id) {
