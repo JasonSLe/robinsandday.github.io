@@ -573,7 +573,7 @@ function uploadImages(infoText){
     if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
       //checking if the image was already uploaded
       alert(imagesToUpload.images[i].name +'*'+ $('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad'))
-      if (!$('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')){
+      if ($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')===true){
         alert('already uploaded');
         continue;
       };
@@ -597,7 +597,9 @@ function uploadImages(infoText){
             alert('IMAGE NOT SAVED.');
           } else {
             $('#'+infoText).text('Take photos now');
+            alert(resp.passData.name)
             $('#'+resp.passData.name).attr('data-cameraImageUploadad', true);
+            alert($('#'+resp.passData.name).attr('data-cameraImageUploadad'))
             //alert('IMAGE SAVED');
             Knack.hideSpinner();
           }
