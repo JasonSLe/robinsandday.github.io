@@ -615,7 +615,7 @@ $(document).on('knack-view-render.view_56', function(event, view, data) {
       $('#cameraUploadOnce').show();
     }
   }
-  document.getElementById('cameraUploadBackground').onclick = function(){
+  document.getElementById('cameraUploadOnce').onclick = function(){
     uploadImages('cameraUploadInfo');
   }
   var cameraTakeFront34 = document.getElementById('cameraTakeFront34');
