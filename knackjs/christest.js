@@ -540,6 +540,8 @@ function prepareFileView(){
   $('#cameraGrid').hide();
   $('#cameraGui_controls').hide();
 
+  alert($('#cameraUploadBackground').attr('checked'));
+
   if ($('#cameraUploadBackground').attr('checked')){
     uploadImages('cameraUploadInfo')
   }
