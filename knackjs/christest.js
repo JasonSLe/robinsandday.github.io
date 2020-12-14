@@ -63,9 +63,9 @@ var moreViewsImage = new Image(768, 576)
 
   }
 
-  function getTokenFromApify() {
+  function getTokenFromApify(tokenName) {
     var token = $.ajax({
-      url: 'https://api.apify.com/v2/key-value-stores/2qbFRKmJ2qME8tYAD/records/apiaccount_token_open?disableRedirect=true',
+      url: 'https://api.apify.com/v2/key-value-stores/2qbFRKmJ2qME8tYAD/records/'+tokenName+'_token_open?disableRedirect=true',
       type: `GET`,
       async: false
     }).responseText;
@@ -117,7 +117,7 @@ var moreViewsImage = new Image(768, 576)
   }
 
 
-function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
+function prepareCameraView(imgToSaveName){
 // ***************************************************************************************************************************
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
 // *****************************************************************************************************************************
@@ -438,9 +438,9 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
-    moreViewsImage.src =  img.src;
-    var cameraImgFront34 = document.getElementById('cameraImgFront34');
-    cameraImgFront34.src =  img.src;
+    var imgToSave = document.getElementById(imgToSaveName);
+    imgToSave.src =  img.src;
+    imgToSave.setAttribute('data-cameraImageUploadad',false)
 
     //Knack.showSpinner();
 
@@ -530,79 +530,77 @@ function prepareFileView(){
   $('#cameraGrid').hide();
   $('#cameraGui_controls').hide();
 
-  if ($('#cameraImgFront34').attr('src') && $('#cameraImgFront34').attr('src')!==''){
-    alert('not empty');
+  if ($('#cameraUploadBackground').attr('checked')){
+    uploadImages('cameraUploadInfo')
+  }
+}
 
-    uploadImage("5f6de40a07e72b0018484802", $('#cameraImgFront34').attr('src'))
-      .then(function(resp) {
-        if (!resp || resp.status !== 'ok') {
-          alert('Upload of image failed.');
-          return;
-        }
-        var imageId = resp.id;
+function uploadImages(infoText){
+  var token = getTokenFromApify('apiaccount');
+  var updatingRecordId = getRecordIdFromHref(location.href);
 
-        var token = getTokenFromApify();
+  var imagesToUpload = {
+    app : "5f6de40a07e72b0018484802",
+    images : [
+      {
+        name:'cameraImgFront34',
+        scene: 'scene_15/views/view_39',
+        field : 'field_22'
+      },
+      {
+        name:'cameraImgRear34',
+        scene: 'scene_15/views/view_39',
+        field : 'field_23'
+      },
+    ]
+  }
 
-        if (token === '') {
-          alert('Authorizing problem.');
-          return;
-        }
+  $('#'+infoText).text('Checking if some image needs upload');
 
-        var updatingRecordId = getRecordIdFromHref(location.href);
-
-        var resp2 = saveImageLinkToKnack('field_22', imageId, "5f6de40a07e72b0018484802", token, updatingRecordId,'scene_15/views/view_39')
-        if (resp2.status !== 'ok') {
-          alert('IMAGE NOT SAVED.');
-        } else {
-          alert('IMAGE SAVED');
-          Knack.hideSpinner();
-        }
-
-      });
+  for (var i =0;i<imagesToUpload.images.length;i++){
+    //checking if the image is set to some photo
+    if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
+      //checking if the image was already uploaded
+      if ($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')) continue;
+      $('#'+infoText).text('Uploading image');
+      uploadImage(imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'))
+        .then(function(resp) {
+          if (!resp || resp.status !== 'ok') {
+            alert('Upload of image failed.');
+            return;
+          }
+          var imageId = resp.id;
+  
+          if (token === '') {
+            alert('Authorizing problem.');
+            return;
+          }
+  
+          $('#'+infoText).text('Image uploaded, saving data to Knack');
+          var resp2 = saveImageLinkToKnack(imagesToUpload.images[i].field, imageId, imagesToUpload.app, token, updatingRecordId,imagesToUpload.images[i].scene)
+          if (resp2.status !== 'ok') {
+            alert('IMAGE NOT SAVED.');
+          } else {
+            $('#'+infoText).text('Take photos now');
+            $('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad',true);
+            alert('IMAGE SAVED');
+            Knack.hideSpinner();
+          }
+  
+        });
+    }
   }
 }
 
 $(document).on('knack-view-render.view_56', function(event, view, data) {
   $('[class="kn-view kn-back-link"]').hide();
-  //prepareCameraView("https://salesjourney.knack.com/christians-test-app2#imaging-test-that-reflects-live-app/take-images/"+getRecordIdFromHref(location.href)+"/","5f6de40a07e72b0018484802",'field_22','scene_15/views/view_39');
   var cameraTakeFront34 = document.getElementById('cameraTakeFront34');
   cameraTakeFront34.onclick = function() {
-      prepareCameraView("https://salesjourney.knack.com/christians-test-app2#imaging-test-that-reflects-live-app/take-images/"+getRecordIdFromHref(location.href)+"/","5f6de40a07e72b0018484802",'field_22','scene_15/views/view_39');
+      prepareCameraView('cameraTakeFront34');
+  }
+  var cameraTakeRear34 = document.getElementById('cameraTakeRear34');
+  cameraTakeRear34.onclick = function() {
+      prepareCameraView('cameraTakeRear34');
   }
 });
 
-$(document).on('knack-view-render.view_50', function(event, view, data) {
-	alert(moreViewsImage.src);
-	if (moreViewsImage.src!==''){
-		alert('not empty');
-
-    uploadImage("5f6de40a07e72b0018484802", moreViewsImage.src)
-      .then(function(resp) {
-        if (!resp || resp.status !== 'ok') {
-          alert('Upload of image failed.');
-          return;
-        }
-        var imageId = resp.id;
-
-        var token = getTokenFromApify();
-
-        if (token === '') {
-          alert('Authorizing problem.');
-          return;
-
-
-        }
-
-        var updatingRecordId = getRecordIdFromHref(location.href);
-
-        var resp2 = saveImageLinkToKnack('field_22', imageId, "5f6de40a07e72b0018484802", token, updatingRecordId,'scene_15/views/view_39')
-        if (resp2.status !== 'ok') {
-          alert('IMAGE NOT SAVED.');
-        } else {
-	  alert('IMAGE SAVED');
-	  Knack.hideSpinner();
-        }
-
-      });
-	}
-});
