@@ -272,7 +272,6 @@ imageBeforeResize.onload = () => {
 
 //**************************** SPIRIT LEVEL *****************************************
 
- var gam = 0;
  function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
@@ -280,9 +279,7 @@ imageBeforeResize.onload = () => {
   var gamma    = event.gamma;
   console.log(beta);
 
-  gam = gamma
-
-  if(beta <=1 && beta >= -1)
+  if(beta <=1 && beta >= -1 && gamma <= -80)
   {
     line.style.backgroundColor = 'green';
   }
@@ -384,8 +381,6 @@ $(window).on("orientationchange",function(){
 takePhotoButton.onclick = takePhoto;
 
   function takePhoto() {
-
-    alert(gam);
 
     Knack.showSpinner();
 
