@@ -609,8 +609,8 @@ $(document).on('knack-view-render.view_56', function(event, view, data) {
       prepareCameraView('cameraImgFront34');
   }
   var cameraTakeRear34 = document.getElementById('cameraTakeRear34');
-  cameraTakeRear34.onclick = function() {
+  /*cameraTakeRear34.onclick = function() {
       prepareCameraView('cameraImgRear34');
-  }
+  }*/
 });
 
