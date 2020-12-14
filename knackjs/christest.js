@@ -584,6 +584,9 @@ function uploadImages(infoText){
       uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('data-fullImageSrc'), imagesToUpload.images[i], infoText).then(function(resp){
         //alert('now');
       });
+      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[1], infoText).then(function(resp){
+        //alert('now');
+      });
       //alert('aaa');
     }
   }
