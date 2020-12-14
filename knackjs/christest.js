@@ -9,7 +9,7 @@ var moreViewsImage = new Image(768, 576)
     return ur.substr(ur.lastIndexOf('/') + 1)
   }
 
-  function uploadImage(token, updatingRecordId , app_id, imgUrl, imageObject, infoText) {
+  async function uploadImage(token, updatingRecordId , app_id, imgUrl, imageObject, infoText) {
     var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
 
     var form = new FormData();
