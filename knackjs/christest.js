@@ -578,7 +578,7 @@ function uploadImages(infoText){
         continue;
       };
       $('#'+infoText).text('Uploading image');
-      uploadImage(imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('data-fullImageSrc'), imagesToUpload.images[i])
+      uploadImage(imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i])
         .then(function(resp) {
           if (!resp || resp.status !== 'ok') {
             alert('Upload of image failed.');
