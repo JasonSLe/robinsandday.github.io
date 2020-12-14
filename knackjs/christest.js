@@ -441,9 +441,6 @@ takePhotoButton.onclick = takePhoto;
     var imgToSave = document.getElementById(imgToSaveName);
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-cameraImageUploadad',false)
-    alert(imgToSave.src);
-    alert(imgToSaveName);
-    $("#"+imgToSaveName).attr("src",img.src);
 
     //Knack.showSpinner();
 
@@ -612,11 +609,11 @@ $(document).on('knack-view-render.view_56', function(event, view, data) {
   $('[class="kn-view kn-back-link"]').hide();
   var cameraTakeFront34 = document.getElementById('cameraTakeFront34');
   cameraTakeFront34.onclick = function() {
-      prepareCameraView('cameraTakeFront34');
+      prepareCameraView('cameraImgFront34');
   }
   var cameraTakeRear34 = document.getElementById('cameraTakeRear34');
   cameraTakeRear34.onclick = function() {
-      prepareCameraView('cameraTakeRear34');
+      prepareCameraView('cameraImgRear34');
   }
 });
 
