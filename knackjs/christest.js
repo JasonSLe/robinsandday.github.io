@@ -9,7 +9,7 @@ var moreViewsImage = new Image(768, 576)
     return ur.substr(ur.lastIndexOf('/') + 1)
   }
 
-  function uploadImage(app_id, imgUrl, passData = null) {
+  function uploadImage(token, updatingRecordId , app_id, imgUrl, passData = null) {
     var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
 
     var form = new FormData();
@@ -28,41 +28,6 @@ var moreViewsImage = new Image(768, 576)
       .then(function(blob) {
         form.append('files', blob, "fileimage.jpg");
 
-/*
-        var rData = $.ajax({
-          url: url,
-          type: 'POST',
-          headers: headers,
-          processData: false,
-          contentType: false,
-          mimeType: 'multipart/form-data',
-          data: form,
-          async: false
-        }).responseText;
-
-
-
-        try {
-          var rDataP = JSON.parse(rData);
-          if (rDataP.id) {
-            return {
-              'status': 'ok',
-              'id': rDataP.id,
-              'passData' : passData
-            }
-          }
-          return {
-            'status': 'fail',
-            'passData' : passData
-          };
-        } catch (e) {
-          return {
-            'status': 'fail',
-            'passData' : passData
-          };
-        }
-        */
-
        $.ajax({
         url: url,
         type: 'POST',
@@ -76,10 +41,17 @@ var moreViewsImage = new Image(768, 576)
         try {
           var rDataP = JSON.parse(rData);
           if (rDataP.id) {
-            return {
-              'status': 'ok',
-              'id': rDataP.id,
-              'passData' : passData
+            var imageId = rDataP.id;
+    
+            $('#'+infoText).text('Image uploaded, saving data to Knack');
+            var resp2 = saveImageLinkToKnack(passData.field, imageId, imagesToUpload.app, token, updatingRecordId,passData.scene)
+            if (resp2.status !== 'ok') {
+              alert('IMAGE NOT SAVED.');
+            } else {
+              $('#'+infoText).text('Take photos now');
+              $('#'+passData.name).attr('data-cameraImageUploaded', 'YES');
+              //alert('IMAGE SAVED');
+              Knack.hideSpinner();
             }
           }
           return {
@@ -581,6 +553,10 @@ function prepareFileView(){
 
 function uploadImages(infoText){
   var token = getTokenFromApify('apiaccount');
+  if (token === '') {
+    alert('Authorizing problem.');
+    return;
+  }
   var updatingRecordId = getRecordIdFromHref(location.href);
 
   var imagesToUpload = {
@@ -610,31 +586,7 @@ function uploadImages(infoText){
         continue;
       };
       $('#'+infoText).text('Uploading image');
-      uploadImage(imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i])
-        .then(function(resp) {
-          if (!resp || resp.status !== 'ok') {
-            alert('Upload of image failed.');
-            return;
-          }
-          var imageId = resp.id;
-  
-          if (token === '') {
-            alert('Authorizing problem.');
-            return;
-          }
-  
-          $('#'+infoText).text('Image uploaded, saving data to Knack');
-          var resp2 = saveImageLinkToKnack(resp.passData.field, imageId, imagesToUpload.app, token, updatingRecordId,resp.passData.scene)
-          if (resp2.status !== 'ok') {
-            alert('IMAGE NOT SAVED.');
-          } else {
-            $('#'+infoText).text('Take photos now');
-            $('#'+resp.passData.name).attr('data-cameraImageUploaded', 'YES');
-            //alert('IMAGE SAVED');
-            Knack.hideSpinner();
-          }
-  
-        });
+      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i]);
     }
   }
 }
