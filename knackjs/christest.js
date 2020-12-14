@@ -9,7 +9,7 @@ var moreViewsImage = new Image(768, 576)
     return ur.substr(ur.lastIndexOf('/') + 1)
   }
 
-  function uploadImage(token, updatingRecordId , app_id, imgUrl, passData = null) {
+  function uploadImage(token, updatingRecordId , app_id, imgUrl, passData, infoText) {
     var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
 
     var form = new FormData();
@@ -39,6 +39,7 @@ var moreViewsImage = new Image(768, 576)
         async: false
       }).then(function(rData){
         alert('image uploaded');
+        alert(rData);
         try {
           var rDataP = JSON.parse(rData);
           if (rDataP.id) {
@@ -587,7 +588,7 @@ function uploadImages(infoText){
         continue;
       };
       $('#'+infoText).text('Uploading image');
-      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i]);
+      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i], infoText);
     }
   }
 }
