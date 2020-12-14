@@ -83,9 +83,7 @@ var moreViewsImage = new Image(768, 576)
 
 
   function saveImageLinkToKnack(fieldName, imageId, app_id, token, updatingRecordId, knackSceneView) {
-    alert('saveLink')
     var dataF = '{"' + fieldName + '": "' + imageId + '"}'
-    alert(dataF);
 
     var headersForSecureView = {
       'X-Knack-Application-ID': app_id,
@@ -574,7 +572,10 @@ function uploadImages(infoText){
     //checking if the image is set to some photo
     if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
       //checking if the image was already uploaded
-      if (!$('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')) continue;
+      if (!$('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploadad')){
+        alert('already uploaded');
+        continue;
+      };
       $('#'+infoText).text('Uploading image');
       uploadImage(imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i])
         .then(function(resp) {
@@ -595,7 +596,7 @@ function uploadImages(infoText){
             alert('IMAGE NOT SAVED.');
           } else {
             $('#'+infoText).text('Take photos now');
-            $('#'+resp.passData.name).attr('data-cameraImageUploadad',true);
+            $('#'+resp.passData.name).attr('data-cameraImageUploadad', true);
             //alert('IMAGE SAVED');
             Knack.hideSpinner();
           }
