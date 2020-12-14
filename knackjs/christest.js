@@ -48,8 +48,10 @@ var moreViewsImage = new Image(768, 576)
             } else {
               $('#'+infoText).text('Take photos now');
               $('#'+imageObject.name).attr('data-cameraImageUploaded', 'YES');
-              //alert('IMAGE SAVED');
-              return 'true';
+              alert('IMAGE SAVED');
+              return {
+                'status': 'ok'
+              };
             }
           }
           return {
