@@ -580,6 +580,7 @@ function uploadImages(infoText){
         continue;
       };
       $('#'+infoText).text('Uploading image');
+      alert('beforeUpload');
       uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i], infoText).then(function(resp){
         alert('now');
       });
