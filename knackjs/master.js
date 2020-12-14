@@ -732,7 +732,7 @@ function eraseCookie(name) {
       .then(function(blob) {
         form.append('files', blob, "fileimage.jpg");
 
-      
+
         var rData = $.ajax({
           url: url,
           type: 'POST',
@@ -744,7 +744,7 @@ function eraseCookie(name) {
           async: false
         }).responseText;
 
-     
+
 
         try {
           var rDataP = JSON.parse(rData);
@@ -764,7 +764,7 @@ function eraseCookie(name) {
         }
 
       });
-   
+
   }
 
   function getTokenFromApify() {
@@ -780,8 +780,8 @@ function eraseCookie(name) {
 
     return token;
   }
-  
-  
+
+
 
   function saveImageLinkToKnack(fieldName, imageId, app_id, token, updatingRecordId, knackSceneView) {
     var dataF = '{"' + fieldName + '": "' + imageId + '"}'
@@ -792,8 +792,8 @@ function eraseCookie(name) {
       'Authorization': token
     };
 
-    
-    
+
+
     var rData2 = $.ajax({
       url: 'https://api.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
       type: `PUT`,
@@ -802,7 +802,7 @@ function eraseCookie(name) {
       data: dataF,
       async: false
     }).responseText;
-    
+
     Knack.showSpinner();
 
     try {
@@ -813,24 +813,21 @@ function eraseCookie(name) {
         }
       }
     } catch (e) {
-	alert(updatingRecordId);
-	   alert(dataF);
-	alert(e);
       return {
         'status': 'fail'
       };
-      
+
     }
   }
- 
+
 
 function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // ***************************************************************************************************************************
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
 // *****************************************************************************************************************************
- 
+
   var imageCapture;
-  
+
   var img = document.querySelector('img');
   var frontpic = document.querySelector("#cameraFrontpic");
   var video = document.querySelector('video');
@@ -843,8 +840,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   var line = document.getElementById('cameraLine');
   var modal = document.querySelector('#cameraModal');
   var acceptButton = document.querySelector('#cameraAccept');
-  var c;
-    
+
 //************************************* OPERATING SYSTEM DETECTION *****************************************   
 var OperatingSystem = {
    Android: function() {
@@ -852,11 +848,19 @@ var OperatingSystem = {
     },
 
     iOS: function() {
-       return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	if(navigator.vendor.match(/google/i)) {
+		return false;
+        	//browserName = 'chrome/blink';
+    	}
+    	else if(navigator.vendor.match(/apple/i)) {
+		return true;
+        	//browserName = 'safari/webkit';
+    	}
+       //return navigator.userAgent.match(/iPhone|iPad|iPod/i);
     }
 };
 
-  
+
 //************************************* GO INTO FULLSCREEN (ONLY ANDRIOD DEVICE WORK) *****************************************
 
      if (document.documentElement.requestFullscreen) {
@@ -870,14 +874,14 @@ var OperatingSystem = {
      }
 
 //************************************* OPEN THE CAMERA BY ASKING USER PERMISSION(APPLE DEVICE) AND APPLY VIDEO STREAM SETTINGS*****************************************
-  
+
 const constraints = {
  width: { min: 1440, ideal: 1280, max: 3984 },
  height: { min: 1080, ideal: 720, max: 2988 },
  aspectRatio: 4/3,
  frameRate:{max: 30}
   };
-   
+
   navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
@@ -887,34 +891,34 @@ const constraints = {
       track.applyConstraints(constraints);
 
       imageCapture = new ImageCapture(track);
-    
+
     })
     .catch(error => ChromeSamples.log('Argh!', error.name || error));
-  
-  
-  
+
+
+
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
 
  const canvas = document.getElementById('cameraOverlayCanvas');  
  const ctx = canvas.getContext('2d');
  let interval = 0;
  const effect = $('#cameraOverlayCanvas');
-  
+
  const image = new Image('naturalWidth', 'naturalHeight');
  image.onload = drawImageActualSize;
  //image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebg.png?token=AK2DHPRJXE5E2DFU5EXYCXS7Y6ROW';
  image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebg_with_guide.png?token=AK2DHPXYOXJWES4XWCG2HUK72D522';
-  
+
    //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
-  
+
 imageBeforeResize.onload = () => {
    const elem = document.createElement('canvas');
    elem.width = 768;
    elem.height = 576;
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
-  
+
   if ((imageBeforeResize.width/imageBeforeResize.height)===(4/3)){
     var percentOfPicture = 0.6;
     ctx.drawImage(imageBeforeResize, imageBeforeResize.width * (1-percentOfPicture)/2, imageBeforeResize.height * (1-percentOfPicture)/2, imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
@@ -939,6 +943,7 @@ imageBeforeResize.onload = () => {
  }
 
  var go = () => {
+   effect.show();
    if(!interval) { // if `interval` is equal to 0     
     interval = setInterval(function () {
        effect.fadeIn(1500, function () {
@@ -949,22 +954,23 @@ imageBeforeResize.onload = () => {
  }
 
  var stop = () => {
+   effect.hide();
    if(interval) {
      clearInterval(interval);
      interval = 0; 
    }
  }
- 
+
 
 //**************************** SPIRIT LEVEL *****************************************
-  
+
  function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
   var beta     = event.beta;
   var gamma    = event.gamma;
   console.log(beta);
-  
+
   if(beta <=1 && beta >= -1)
   {
     line.style.backgroundColor = 'green';
@@ -980,36 +986,38 @@ imageBeforeResize.onload = () => {
 if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermission === 'function' ){
     console.log("permision needed");
     $('#cameraModal').show(); // show dialog asking user to enable motion sensor
-    $("#takePhoto").attr("disabled", true);//De-activate takephoto button until user agnet agreed
-    
+    //$("#takePhoto").attr("disabled", true);//De-activate takephoto button until user agnet agreed
+   $("#takePhoto").hide();
+
   acceptButton.onclick = function(){
-    DeviceOrientationEvent.requestPermission()
-    .then(response => {
-      if (response == 'granted') {
-        window.addEventListener("deviceorientation", handleOrientation, true);
-        $('#cameraModal').hide();
-        $("#takePhoto").removeAttr('disabled');
-      }
-    })
-    .catch(console.error)
+  DeviceOrientationEvent.requestPermission()
+.then(response => {
+  if (response == 'granted') {
+    window.addEventListener("deviceorientation", handleOrientation, true);
+    $('#cameraModal').hide();
+    //$("#takePhoto").removeAttr('disabled');
+	  $("#takePhoto").show();
+  }
+})
+.catch(console.error)
   }
 } else {
   // non iOS 13+
   window.addEventListener("deviceorientation", handleOrientation, true);
 }
-  
+
  //************************************* LAYOUT *****************************************
 
   //HIDE RETAKE AND CONFIRM BUTTONS
   $("#cameraRetake").toggle();
   $("#cameraConfirm").toggle();
-  
-  
+
+
   //HIDE THE COMPARISION PICTURE AND TEXT
   $("#cameraCompare").toggle();
   $("#cameraText").toggle();
-  
-  
+
+
 //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
 
 
@@ -1047,7 +1055,7 @@ $(window).on("orientationchange",function(){
     $("#cameraLine").hide();
     $("#takePhoto").hide();
     $("#cameraRotate").show();
-   
+
 
   }
   else if(window.orientation == 90 || window.orientation == 270) // Landscape
@@ -1061,15 +1069,15 @@ $(window).on("orientationchange",function(){
 
 
 //************************************* TAKE A PICTURE AND CROP*****************************************
-  
+
 takePhotoButton.onclick = takePhoto;
-      
+
   function takePhoto() {
-  
+
     Knack.showSpinner();
-    
+
     if (OperatingSystem.Android()) {
-    
+
       imageCapture.takePhoto().then(function(blob) {
         console.log('Photo taken:', blob);
         //so I use the blob to the shown image but also for the imageBeforeResize, which when is loaded updates the shown image with smaller image
@@ -1081,18 +1089,21 @@ takePhotoButton.onclick = takePhoto;
         console.log('takePhoto() error: ', error);
       });
     } else if (OperatingSystem.iOS()) {
-      	c = document.createElement('canvas');
+      	var c = document.createElement('canvas');
  		c.width = video.videoWidth;
 		c.height = video.videoHeight;
-		c.getContext('2d').drawImage(video, 0, 0);
-		// Other browsers will fall back to image/png
+	    	var ctx = c.getContext('2d');
+	    	ctx.drawImage(video, 0, 0);
+	    ctx.canvas.toBlob((blob) => {
 		img.style.visibility = 'visible';
-        img.src = c.toDataURL('image/webp');
-        imageBeforeResize.src = c.toDataURL('image/webp');
+        	imageBeforeResize.src = URL.createObjectURL(blob); //c.toDataURL('image/webp');
+	      	img.src = URL.createObjectURL(blob);
+	  }, 'image/jpeg', 1);
     } else {
      	alert('unsuported system'); 
+	    alert(navigator.userAgent);
     }
-    
+
     //HIDE VIDEO & OVERLAY ELEMENT
     $('video').toggle();
     $(stop);
@@ -1107,23 +1118,24 @@ takePhotoButton.onclick = takePhoto;
 
     //HIDE EXIT BUTTON
     $("#cameraExit").toggle();
-    
+
     //HIDE LEVEL LINE
     $("#cameraLine").hide();
 
     // DISABLE TAKEPHOTO BUTTON
-    $("#takePhoto").attr("disabled", true);
+    //$("#takePhoto").attr("disabled", true);
+	  $("#takePhoto").hide();
   }
- 
-  
+
+
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
-     
+
     Knack.showSpinner();
-        
+
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
-      
+
     //STOP TRACK WHEN USER SAVES IMAGE
     video.srcObject.getVideoTracks().forEach(track => track.stop());
 
@@ -1142,44 +1154,44 @@ takePhotoButton.onclick = takePhoto;
         if (token === '') {
           alert('Authorizing problem.');
           return;
-          
-          
+
+
         }
-      
+
         var updatingRecordId = getRecordIdFromHref(location.href);
 
         var resp2 = saveImageLinkToKnack(imageFieldOnKnack, imageId, app_id, token, updatingRecordId, imageViewOnKnack)
         if (resp2.status !== 'ok') {
           alert('IMAGE NOT SAVED.');
         } else {
-         
+
         }
 
         setTimeout(function() {
           window.location = backUrl;
         }, 100);
-		
+
       });
-    
+
   };
-    
-  
+
+
 //*************************************RETAKE BUTTON, THIS WILL DELETE THE PHOTO TAKEN*****************************************
 
   retakeButton.onclick = function() {
-     
+
 
         if (OperatingSystem.iOS()) {
           // on iOS devices it should hide the img tag when user agent clicks retake.
           img.src = '';
           img.style.visibility = 'hidden';
-        
+
         }else{   
      }         
     //CLEAR TAKEN PHOTO
     img.src = '';
-    
-     
+
+
     //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
     $('video').toggle();
     $("#cameraCompare").toggle();
@@ -1190,23 +1202,24 @@ takePhotoButton.onclick = takePhoto;
     // HIDE RETAKE AND CONFIRM BUTTON
     $("#cameraRetake").toggle();
     $("#cameraConfirm").toggle();
-    
+
     // SHOW EXIT BUTTON
     $("#cameraExit").toggle();
-    
+
     // SHOW LEVEL LINE
     $("#cameraLine").show();
-    
+
     // ACTIVATE TAKEPHOTO BUTTON
-    $("#takePhoto").removeAttr('disabled');
-          
+    //$("#takePhoto").removeAttr('disabled');
+	  $("#takePhoto").show();
+
   }
 
 
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
 
   exitButton.onclick = function() {
-     
+
     //REDIRECT USER BACK TO HOME PAGE
     setTimeout(function() {
       window.location = backUrl;
