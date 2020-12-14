@@ -278,7 +278,7 @@ var b = '';
   var beta     = event.beta;
   var gamma    = event.gamma;
   console.log(beta);
-  b = 'rotate(' + (-beta).toString() + 'deg)'
+  b = beta+'#rotate(' + (-beta).toString() + 'deg)'
 
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
