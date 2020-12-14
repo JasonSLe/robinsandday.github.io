@@ -99,8 +99,6 @@ var moreViewsImage = new Image(768, 576)
       async: false
     }).responseText;
 
-    Knack.showSpinner();
-
     try {
       var rData2P = JSON.parse(rData2);
       if (rData2P.record) {
