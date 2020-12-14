@@ -81,21 +81,12 @@ var moreViewsImage = new Image(768, 576)
 
   function saveImageLinkToKnack(fieldName, imageId, app_id, token, updatingRecordId, knackSceneView) {
     var dataF = '{"' + fieldName + '": "' + imageId + '"}'
-    //alert(dataF);
+    alert(dataF);
 
     var headersForSecureView = {
       'X-Knack-Application-ID': app_id,
       'Authorization': token
     };
-
-    alert({
-      url: 'https://api.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
-      type: `PUT`,
-      headers: headersForSecureView,
-      contentType: 'application/json',
-      data: dataF,
-      async: false
-    })
 
     var rData2 = $.ajax({
       url: 'https://api.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
