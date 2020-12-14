@@ -279,7 +279,10 @@ imageBeforeResize.onload = () => {
   var gamma    = event.gamma;
   console.log(beta);
 
-  if(beta <=1 && beta >= -1 && gamma <=1 && gamma>=-1)
+  if (gamma===0) alert(gamma);
+  if (gamma===80) alert(gamma);
+
+  if(beta <=1 && beta >= -1)
   {
     line.style.backgroundColor = 'green';
   }
