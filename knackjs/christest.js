@@ -590,15 +590,13 @@ function uploadImages(infoText){
           }
   
           $('#'+infoText).text('Image uploaded, saving data to Knack');
-          alert('before save link')
-          alert(resp.passData.field);
           var resp2 = saveImageLinkToKnack(resp.passData.field, imageId, imagesToUpload.app, token, updatingRecordId,resp.passData.scene)
           if (resp2.status !== 'ok') {
             alert('IMAGE NOT SAVED.');
           } else {
             $('#'+infoText).text('Take photos now');
             $('#'+resp.passData.name).attr('data-cameraImageUploadad',true);
-            alert('IMAGE SAVED');
+            //alert('IMAGE SAVED');
             Knack.hideSpinner();
           }
   
