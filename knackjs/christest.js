@@ -19,9 +19,7 @@ var moreViewsImage = new Image(768, 576)
       'X-Knack-REST-API-Key': `knack`,
     };
 
-    var blob = {};
-
-    return fetch(imgUrl)
+    fetch(imgUrl)
       .then(function(response) {
         return response.blob();
       })
@@ -51,6 +49,7 @@ var moreViewsImage = new Image(768, 576)
               $('#'+infoText).text('Take photos now');
               $('#'+imageObject.name).attr('data-cameraImageUploaded', 'YES');
               //alert('IMAGE SAVED');
+              return 'true';
             }
           }
           return {
@@ -583,7 +582,10 @@ function uploadImages(infoText){
         continue;
       };
       $('#'+infoText).text('Uploading image');
-      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('data-fullImageSrc'), imagesToUpload.images[i], infoText);
+      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('data-fullImageSrc'), imagesToUpload.images[i], infoText).then(function(resp){
+        alert('now');
+      });
+      alert('aaa');
     }
   }
 }
