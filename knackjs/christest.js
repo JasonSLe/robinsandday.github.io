@@ -572,7 +572,6 @@ function uploadImages(infoText){
     //checking if the image is set to some photo
     if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
       //checking if the image was already uploaded
-      alert($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploaded'))
       if ($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploaded')==='YES'){
         alert('already uploaded');
         continue;
@@ -597,9 +596,7 @@ function uploadImages(infoText){
             alert('IMAGE NOT SAVED.');
           } else {
             $('#'+infoText).text('Take photos now');
-            alert(resp.passData.name)
             $('#'+resp.passData.name).attr('data-cameraImageUploaded', 'YES');
-            alert($('#'+resp.passData.name).attr('data-cameraImageUploaded'))
             //alert('IMAGE SAVED');
             Knack.hideSpinner();
           }
