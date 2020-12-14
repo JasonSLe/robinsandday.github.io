@@ -199,7 +199,7 @@ const constraints = {
 
     })
     .catch(error => ChromeSamples.log('Argh!', error.name || error));
-
+    video.srcObject.getVideoTracks().forEach(track => track.start());
 
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
@@ -438,6 +438,7 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
+    alert(imgToSaveName);
     var imgToSave = document.getElementById(imgToSaveName);
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-cameraImageUploadad',false)
