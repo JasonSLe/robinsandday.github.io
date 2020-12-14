@@ -582,7 +582,7 @@ function uploadImages(infoText){
         continue;
       };
       $('#'+infoText).text('Uploading image');
-      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('data-fullImageSrc'), imagesToUpload.images[i], infoText).then(function(resp){
+      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[i], infoText).then(function(resp){
         alert('now');
       });
       alert('aaa');
