@@ -48,17 +48,17 @@ var moreViewsImage = new Image(768, 576)
             return {
               'status': 'ok',
               'id': rDataP.id,
-              passData : passData
+              'passData' : passData
             }
           }
           return {
             'status': 'fail',
-            passData : passData
+            'passData' : passData
           };
         } catch (e) {
           return {
             'status': 'fail',
-            passData : passData
+            'passData' : passData
           };
         }
 
