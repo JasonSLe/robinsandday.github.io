@@ -271,14 +271,12 @@ imageBeforeResize.onload = () => {
 
 
 //**************************** SPIRIT LEVEL *****************************************
-var b = '';
  function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
   var beta     = event.beta;
   var gamma    = event.gamma;
   console.log(beta);
-  b = beta+'#rotate(' + (-beta).toString() + 'deg)'
 
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
@@ -382,7 +380,6 @@ $(window).on("orientationchange",function(){
 takePhotoButton.onclick = takePhoto;
 
   function takePhoto() {
-    alert(b);
     Knack.showSpinner();
 
     if (OperatingSystem.Android()) {
