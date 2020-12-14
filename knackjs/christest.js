@@ -9,7 +9,7 @@ var moreViewsImage = new Image(768, 576)
     return ur.substr(ur.lastIndexOf('/') + 1)
   }
 
-  function uploadImage(token, updatingRecordId , app_id, imgUrl, passData, infoText) {
+  function uploadImage(token, updatingRecordId , app_id, imgUrl, imageObject, infoText) {
     var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
 
     var form = new FormData();
@@ -38,30 +38,27 @@ var moreViewsImage = new Image(768, 576)
         data: form,
         async: false
       }).then(function(rData){
-        alert(rData);
         try {
           var rDataP = JSON.parse(rData);
           if (rDataP.id) {
             var imageId = rDataP.id;
     
             $('#'+infoText).text('Image uploaded, saving data to Knack');
-            var resp2 = saveImageLinkToKnack(passData.field, imageId, imagesToUpload.app, token, updatingRecordId,passData.scene)
+            var resp2 = saveImageLinkToKnack(imageObject.field, imageId, app_id, token, updatingRecordId, imageObject.scene)
             if (resp2.status !== 'ok') {
               alert('IMAGE NOT SAVED.');
             } else {
               $('#'+infoText).text('Take photos now');
-              $('#'+passData.name).attr('data-cameraImageUploaded', 'YES');
+              $('#'+imageObject.name).attr('data-cameraImageUploaded', 'YES');
               //alert('IMAGE SAVED');
             }
           }
           return {
-            'status': 'fail',
-            'passData' : passData
+            'status': 'fail'
           };
         } catch (e) {
           return {
-            'status': 'fail',
-            'passData' : passData
+            'status': 'fail'
           };
         }
       })
