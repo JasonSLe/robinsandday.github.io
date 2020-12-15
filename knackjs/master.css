@@ -2881,6 +2881,30 @@ visibility: visible;
   	text-align: center;
 }
 
+/******** Button to Email ZIP Folder of Customer Documents *********/
+
+#view_3895 .control {
+  text-align: center;
+}
+
+#view_3895 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3895 > div > a:hover {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
 /**** Retrieve/Update Order Form FORM ****/
 #view_2520 h3 {
   text-align: center;
