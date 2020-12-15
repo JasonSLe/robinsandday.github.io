@@ -1167,6 +1167,17 @@ takePhotoButton.onclick = takePhoto;
 
         }
 
+        //EXIT FULL SCREEN MODE
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          document.mozCancelFullScreen();
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen();
+        }
+
         setTimeout(function() {
           window.location = backUrl;
         }, 100);
