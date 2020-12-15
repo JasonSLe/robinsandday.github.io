@@ -309,6 +309,7 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
 .catch(console.error)
   }
 } else {
+  console.log('handle orientation is');
   // non iOS 13+
   window.addEventListener("deviceorientation", handleOrientation, true);
 }
