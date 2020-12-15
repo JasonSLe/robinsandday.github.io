@@ -456,15 +456,15 @@ $(document).on('knack-scene-render.scene_960', function(event, scene) {
 });
 
 // Disable Stock Number & VSB Location Fields on ORDER Retrieval if NOT Blank
-$(document).on('knack-view-render.view_2520', function(event, view) {
+//$(document).on('knack-view-render.view_2520', function(event, view) {
 
- if ($('#view_2520 #field_5388').val() != "") {
+ //if ($('#view_2520 #field_5388').val() != "") {
 
-      $('#view_2520 #field_5388').attr('disabled', 'disabled'); // disable Stock Number input field
+   //   $('#view_2520 #field_5388').attr('disabled', 'disabled'); // disable Stock Number input field
 
-    }; // end if
+   // }; // end if
 
-});
+//});
 
 $(document).on('knack-view-render.view_2520', function(event, view) {
 
@@ -477,15 +477,15 @@ $(document).on('knack-view-render.view_2520', function(event, view) {
 });
 
 // Disable Stock Number & VSB Location Fields on INVOICE Retrieval if NOT Blank
-$(document).on('knack-view-render.view_2548', function(event, view) {
+//$(document).on('knack-view-render.view_2548', function(event, view) {
 
- if ($('#view_2548 #field_5388').val() != "") {
+ //if ($('#view_2548 #field_5388').val() != "") {
 
-      $('#view_2548 #field_5388').attr('disabled', 'disabled'); // disable Stock Number input field
+   //   $('#view_2548 #field_5388').attr('disabled', 'disabled'); // disable Stock Number input field
 
-    }; // end if
+    //}; // end if
 
-});
+//});
 
 $(document).on('knack-view-render.view_2548', function(event, view) {
 

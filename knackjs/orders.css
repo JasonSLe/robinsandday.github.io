@@ -1042,6 +1042,27 @@ This removes white spaces from all table headers*/
   border-color: #FFFFFF;
 }
 
+/******* Email Customer Documents Link to Button CSS ********/
+
+#view_3546 .control {
+  text-align: center;
+}
+
+#view_3546 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_3546 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
 
 
 /* Part-Ex Reg No CSS to look like Reg */
