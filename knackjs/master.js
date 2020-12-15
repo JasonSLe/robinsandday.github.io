@@ -1133,6 +1133,10 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
+    if (!isOnline){
+      alert('You are offline, please go online before confirming the photo.');
+      return;
+    }
 
     Knack.showSpinner();
 
