@@ -1067,6 +1067,9 @@ $(window).on("orientationchange",function(){
   }
 });
 
+var isOnline = true;
+window.addEventListener('online', () => isOnline = true);
+window.addEventListener('offline', () => isOnline = false);
 
 //************************************* TAKE A PICTURE AND CROP*****************************************
 
