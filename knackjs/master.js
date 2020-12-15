@@ -984,31 +984,40 @@ imageBeforeResize.onload = () => {
     line.style.backgroundColor = 'red';
   }
   line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
+  permissionForOrientation = 'none'
 }
 
-   // when page loads checks if the device requires user to to enable motion sensors, If they do then display the dialog
+var permissionForOrientation = 'none';
+// when page loads checks if the device requires user to to enable motion sensors, If they do then display the dialog
+// but here it just gives to the property permissionForOrientation the info about need, the dialog is shown after 1 second if no orientation events are coming
 if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermission === 'function' ){
+  permissionForOrientation = 'need';
     console.log("permision needed");
-    $('#cameraModal').show(); // show dialog asking user to enable motion sensor
-    //$("#takePhoto").attr("disabled", true);//De-activate takephoto button until user agnet agreed
-   $("#takePhoto").hide();
+    //This function after 1 second checks if the events are coming or not
+    setTimeout(function() {
+      if (permissionForOrientation==='need'){
+        $('#cameraModal').show(); // show dialog asking user to enable motion sensor
+        //$("#takePhoto").attr("disabled", true);//De-activate takephoto button until user agnet agreed
+      $("#takePhoto").hide();
 
-  acceptButton.onclick = function(){
-  DeviceOrientationEvent.requestPermission()
-.then(response => {
-  if (response == 'granted') {
-    window.addEventListener("deviceorientation", handleOrientation, true);
-    $('#cameraModal').hide();
-    //$("#takePhoto").removeAttr('disabled');
-	  $("#takePhoto").show();
-  }
-})
-.catch(console.error)
-  }
-} else {
-  // non iOS 13+
-  window.addEventListener("deviceorientation", handleOrientation, true);
+      acceptButton.onclick = function(){
+      DeviceOrientationEvent.requestPermission()
+    .then(response => {
+      if (response == 'granted') {
+        window.addEventListener("deviceorientation", handleOrientation, true);
+        $('#cameraModal').hide();
+        //$("#takePhoto").removeAttr('disabled');
+        $("#takePhoto").show();
+      }
+    })
+    .catch(console.error)
+      }
+      }
+    }, 1000);
 }
+
+window.addEventListener("deviceorientation", handleOrientation, true);
+
 
  //************************************* LAYOUT *****************************************
 
