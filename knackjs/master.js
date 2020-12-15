@@ -971,6 +971,8 @@ imageBeforeResize.onload = () => {
   var gamma    = event.gamma;
   console.log(beta);
 
+  if (isLandscape && beta) $("#cameraLine").show();
+
   if(beta <=1 && beta >= -1)
   {
     line.style.backgroundColor = 'green';
@@ -1020,7 +1022,7 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
 
 //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
 
-
+  var isLandscape = false;
   //DETECT WHICH ORIENTATION THE USEER IS IN
 
   if(window.innerHeight > window.innerWidth){
@@ -1030,6 +1032,7 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
        $("#takePhoto").hide();
        $("#cameraRotate").show();
        $("#cameraOverlayCanvas").hide();
+       isLandscape = false;
        //$(stop);
   }
 
@@ -1037,11 +1040,12 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
 if(window.innerWidth > window.innerHeight){
 
   // if landscape
-    $("#cameraLine").show();
+    //$("#cameraLine").show();
   	$("#takePhoto").show();
   	$("#cameraRotate").hide();
     $("#cameraOverlayCanvas").hide();
     $(go);
+    isLandscape = true;
 }
 
 
@@ -1055,15 +1059,16 @@ $(window).on("orientationchange",function(){
     $("#cameraLine").hide();
     $("#takePhoto").hide();
     $("#cameraRotate").show();
-
+    isLandscape = false;
 
   }
   else if(window.orientation == 90 || window.orientation == 270) // Landscape
   {
     $("#takePhoto").show();
-    $("#cameraLine").show();
+    //$("#cameraLine").show();
     $("#cameraRotate").hide();
     $(go);
+    isLandscape = true;
   }
 });
 
@@ -1225,7 +1230,7 @@ takePhotoButton.onclick = takePhoto;
     $("#cameraExit").toggle();
 
     // SHOW LEVEL LINE
-    $("#cameraLine").show();
+    //$("#cameraLine").show();
 
     // ACTIVATE TAKEPHOTO BUTTON
     //$("#takePhoto").removeAttr('disabled');
