@@ -123,7 +123,7 @@ function prepareCameraView(imgToSaveName){
 // *****************************************************************************************************************************
 
   $('#cameraPictureGallery').hide();
-  //$('#cameraLine').show();
+  $('#cameraLine').hide();
   $('#cameraVid_container').show();
   $('#cameraGrid').show();
   $('#cameraGui_controls').show();
