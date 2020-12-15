@@ -121,7 +121,7 @@ function prepareCameraView(imgToSaveName){
 // ***************************************************************************************************************************
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
 // *****************************************************************************************************************************
-alert('here')
+
   $('#cameraPictureGallery').hide();
   $('#cameraLine').hide();
   $('#cameraVid_container').show();
@@ -276,6 +276,7 @@ imageBeforeResize.onload = () => {
   var beta     = event.beta;
   var gamma    = event.gamma;
   console.log(beta);
+  alert('ori')
   if (isLandscape) $("#cameraLine").show();
 
   if(beta <=1 && beta >= -1 && gamma <= -80)
@@ -332,7 +333,7 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
 
 
   //DETECT WHICH ORIENTATION THE USEER IS IN
-  var isLandscape = true;
+  var isLandscape = false;
   if(window.innerHeight > window.innerWidth){
 
     // if portrait
