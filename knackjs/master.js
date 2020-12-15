@@ -884,21 +884,21 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
       setTimeout(function() {
         if (permissionForOrientation==='need'){
           $('#cameraModal').show(); // show dialog asking user to enable motion sensor
-          //$("#takePhoto").attr("disabled", true);//De-activate takephoto button until user agnet agreed
-        $("#takePhoto").hide();
+          //De-activate takephoto button until user agnet agreed
+          $("#takePhoto").hide();
 
-        acceptButton.onclick = function(){
-        DeviceOrientationEvent.requestPermission()
-      .then(response => {
-        if (response == 'granted') {
-          window.addEventListener("deviceorientation", handleOrientation, true);
-          $('#cameraModal').hide();
-          //$("#takePhoto").removeAttr('disabled');
-          if (isLandscape) $("#takePhoto").show();
-        }
-      })
-      .catch(console.error)
-        }
+          acceptButton.onclick = function(){
+            DeviceOrientationEvent.requestPermission()
+            .then(response => {
+              if (response == 'granted') {
+                window.addEventListener("deviceorientation", handleOrientation, true);
+                $('#cameraModal').hide();
+                //$("#takePhoto").removeAttr('disabled');
+                if (isLandscape) $("#takePhoto").show();
+              }
+            })
+            .catch(console.error)
+          }
         }
       }, 1000);
   }
