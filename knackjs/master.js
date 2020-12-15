@@ -810,7 +810,6 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   goToFullscreen();
 
   //************************************* OPEN THE CAMERA BY ASKING USER PERMISSION(APPLE DEVICE) AND APPLY VIDEO STREAM SETTINGS*****************************************
-
   const constraints = {
     width: { min: 1440, ideal: 1280, max: 3984 },
     height: { min: 1080, ideal: 720, max: 2988 },
@@ -829,7 +828,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
        imageCapture = new ImageCapture(track);
  
      })
-     .catch(error => ChromeSamples.log('Argh!', error.name || error));
+     .catch(error => console.log('Argh!', error.name || error));
   
   //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
 
@@ -1144,7 +1143,6 @@ takePhotoButton.onclick = function () {
 
 
 //*************************************RETAKE BUTTON, THIS WILL DELETE THE PHOTO TAKEN*****************************************
-
   retakeButton.onclick = function() {
     if (OperatingSystem.iOS()) {
       // on iOS devices it should hide the img tag when user agent clicks retake.
@@ -1172,12 +1170,9 @@ takePhotoButton.onclick = function () {
 
     // ACTIVATE TAKEPHOTO BUTTON
 	  $("#takePhoto").show();
-
   }
 
-
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
-
   exitButton.onclick = function() {
 
     //REDIRECT USER BACK TO HOME PAGE
@@ -1194,6 +1189,7 @@ takePhotoButton.onclick = function () {
 }
 
 //end of shared camera app code
+
 
 $(document).on('knack-view-render.view_3900', function(event, view, data) {
   $('[class="kn-view kn-back-link"]').hide();
