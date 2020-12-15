@@ -269,7 +269,6 @@ imageBeforeResize.onload = () => {
    }
  }
 
-
 //**************************** SPIRIT LEVEL *****************************************
  function handleOrientation(event) {
   var absolute = event.absolute;
@@ -277,6 +276,7 @@ imageBeforeResize.onload = () => {
   var beta     = event.beta;
   var gamma    = event.gamma;
   console.log(beta);
+  line.style.display = 'initial';
 
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
@@ -290,8 +290,6 @@ imageBeforeResize.onload = () => {
 }
 
    // when page loads checks if the device requires user to to enable motion sensors, If they do then display the dialog
-   console.log('before orient');
-   console.log(window.DeviceMotionEvent)
 if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermission === 'function' ){
     console.log("permision needed");
     $('#cameraModal').show(); // show dialog asking user to enable motion sensor
@@ -311,7 +309,6 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
 .catch(console.error)
   }
 } else {
-  console.log('handle orientation is');
   // non iOS 13+
   window.addEventListener("deviceorientation", handleOrientation, true);
 }

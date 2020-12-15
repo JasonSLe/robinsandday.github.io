@@ -94,6 +94,7 @@
   position: fixed;
   top: 90%;
   font-size:0px;
+  display: none;
   /*left: calc(50vw - 100vmax);*/
   /*transform: rotate(360deg);*/
   
