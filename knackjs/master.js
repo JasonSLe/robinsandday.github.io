@@ -827,7 +827,6 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // *****************************************************************************************************************************
 
   $('#cameraLine').hide();
-  lineVisible = false;
 
   var imageCapture;
 
@@ -1045,7 +1044,6 @@ window.addEventListener("deviceorientation", handleOrientation, true);
        $("#cameraRotate").show();
        $("#cameraOverlayCanvas").hide();
        isLandscape = false;
-       lineVisible = false;
        //$(stop);
   }
 
@@ -1059,7 +1057,6 @@ if(window.innerWidth > window.innerHeight){
     $("#cameraOverlayCanvas").hide();
     $(go);
     isLandscape = true;
-    lineVisible = true;
 }
 
 
@@ -1074,7 +1071,7 @@ $(window).on("orientationchange",function(){
     $("#takePhoto").hide();
     $("#cameraRotate").show();
     isLandscape = false;
-    lineVisible = false;
+
   }
   else if(window.orientation == 90 || window.orientation == 270) // Landscape
   {
@@ -1083,7 +1080,6 @@ $(window).on("orientationchange",function(){
     $("#cameraRotate").hide();
     $(go);
     isLandscape = true;
-    lineVisible = true;
   }
 });
 
