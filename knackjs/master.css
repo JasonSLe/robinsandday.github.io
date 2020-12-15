@@ -241,6 +241,7 @@
 
 #view_3908 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
+  font-weight: bold;
   background-color: #FFA100;
   padding: 8px;
   display: inline-block;
@@ -248,6 +249,7 @@
 
 #view_3908 > section > div > div > div > div > div > div > span > a:hover {
   color: #FFFFFF;
+  font-weight: bold;
   background-color: #D18400;
   padding: 8px;
   display: inline-block;
