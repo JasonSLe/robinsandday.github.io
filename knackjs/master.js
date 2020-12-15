@@ -1076,6 +1076,28 @@ takePhotoButton.onclick = takePhoto;
 
     Knack.showSpinner();
 
+    //HIDE VIDEO & OVERLAY ELEMENT
+    $('video').hide();
+    $(stop);
+
+    //DISPLAY COMPARISION CONTENT
+    $("#cameraCompare").show();
+    $("#cameraText").show();
+
+   //SHOW RETAKLE AND CONFIORM BUTTON
+    $("#cameraRetake").show();
+    $("#cameraConfirm").show();
+
+    //HIDE EXIT BUTTON
+    $("#cameraExit").hide();
+
+    //HIDE LEVEL LINE
+    $("#cameraLine").hide();
+
+    // DISABLE TAKEPHOTO BUTTON
+    //$("#takePhoto").attr("disabled", true);
+	  $("#takePhoto").hide();
+
     if (OperatingSystem.Android()) {
 
       imageCapture.takePhoto().then(function(blob) {
@@ -1103,28 +1125,6 @@ takePhotoButton.onclick = takePhoto;
      	alert('unsuported system'); 
 	    alert(navigator.userAgent);
     }
-
-    //HIDE VIDEO & OVERLAY ELEMENT
-    $('video').toggle();
-    $(stop);
-
-    //DISPLAY COMPARISION CONTENT
-    $("#cameraCompare").toggle();
-    $("#cameraText").toggle();
-
-   //SHOW RETAKLE AND CONFIORM BUTTON
-    $("#cameraRetake").toggle();
-    $("#cameraConfirm").toggle();
-
-    //HIDE EXIT BUTTON
-    $("#cameraExit").toggle();
-
-    //HIDE LEVEL LINE
-    $("#cameraLine").hide();
-
-    // DISABLE TAKEPHOTO BUTTON
-    //$("#takePhoto").attr("disabled", true);
-	  $("#takePhoto").hide();
   }
 
 
