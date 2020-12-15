@@ -288,10 +288,14 @@ imageBeforeResize.onload = () => {
     line.style.backgroundColor = 'red';
   }
   line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
+  permissionForOrientation = 'none'
 }
 
+var permissionForOrientation = 'none';
    // when page loads checks if the device requires user to to enable motion sensors, If they do then display the dialog
 if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermission === 'function' ){
+  permissionForOrientation = 'need';
+  /*
     console.log("permision needed");
     $('#cameraModal').show(); // show dialog asking user to enable motion sensor
     //$("#takePhoto").attr("disabled", true);//De-activate takephoto button until user agnet agreed
@@ -309,10 +313,32 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
 })
 .catch(console.error)
   }
+  */
 } else {
   // non iOS 13+
   window.addEventListener("deviceorientation", handleOrientation, true);
 }
+
+setTimeout(function() {
+  if (permissionForOrientation==='need'){
+    $('#cameraModal').show(); // show dialog asking user to enable motion sensor
+    //$("#takePhoto").attr("disabled", true);//De-activate takephoto button until user agnet agreed
+   $("#takePhoto").hide();
+
+  acceptButton.onclick = function(){
+  DeviceOrientationEvent.requestPermission()
+.then(response => {
+  if (response == 'granted') {
+    window.addEventListener("deviceorientation", handleOrientation, true);
+    $('#cameraModal').hide();
+    //$("#takePhoto").removeAttr('disabled');
+	  $("#takePhoto").show();
+  }
+})
+.catch(console.error)
+  }
+  }
+}, 300);
 
  //************************************* LAYOUT *****************************************
 
