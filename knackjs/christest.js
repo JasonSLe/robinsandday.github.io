@@ -277,8 +277,7 @@ imageBeforeResize.onload = () => {
   var gamma    = event.gamma;
   console.log('ho',beta, alpha, gamma);
 
-
-  if (isLandscape) $("#cameraLine").show();
+  if (isLandscape && beta) $("#cameraLine").show();
 
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
