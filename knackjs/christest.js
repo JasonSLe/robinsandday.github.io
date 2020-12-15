@@ -314,6 +314,7 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
 .catch(console.error)
   }
   */
+ window.addEventListener("deviceorientation", handleOrientation, true);
 } else {
   // non iOS 13+
   window.addEventListener("deviceorientation", handleOrientation, true);
@@ -339,7 +340,7 @@ setTimeout(function() {
 .catch(console.error)
   }
   }
-}, 2000);
+}, 500);
 
  //************************************* LAYOUT *****************************************
 
