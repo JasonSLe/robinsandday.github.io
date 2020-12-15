@@ -1084,7 +1084,7 @@ takePhotoButton.onclick = takePhoto;
         //theoretically the blob can be given only to the imageBeforeResize, and it should then update them shown image but this approach shows the image sooner ...
         img.classList.remove('hidden');
         img.src = URL.createObjectURL(blob);
-        imageBeforeResize.src = URL.createObjectURL(blob);
+        imageBeforeResize.src = img.src;
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
       });
@@ -1096,8 +1096,8 @@ takePhotoButton.onclick = takePhoto;
 	    	ctx.drawImage(video, 0, 0);
 	    ctx.canvas.toBlob((blob) => {
 		img.style.visibility = 'visible';
-        	imageBeforeResize.src = URL.createObjectURL(blob); //c.toDataURL('image/webp');
-	      	img.src = URL.createObjectURL(blob);
+          img.src = URL.createObjectURL(blob);
+          imageBeforeResize.src = img.src; //c.toDataURL('image/webp');
 	  }, 'image/jpeg', 1);
     } else {
      	alert('unsuported system'); 
