@@ -1063,7 +1063,6 @@ takePhotoButton.onclick = function () {
     //HIDE LEVEL LINE
     $("#cameraLine").hide();
     lineVisible = false;
-    alert(lineVisible);
 
     // DISABLE TAKEPHOTO BUTTON
 	  $("#takePhoto").hide();
