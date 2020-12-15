@@ -827,6 +827,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // *****************************************************************************************************************************
 
   $('#cameraLine').hide();
+  lineVisible = false;
 
   var imageCapture;
 
@@ -965,7 +966,7 @@ imageBeforeResize.onload = () => {
 
 
 //**************************** SPIRIT LEVEL *****************************************
-
+ var lineVisible = true;
  function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
@@ -973,7 +974,7 @@ imageBeforeResize.onload = () => {
   var gamma    = event.gamma;
   console.log(beta);
 
-  if (isLandscape && beta) $("#cameraLine").show();
+  if (isLandscape && beta && lineVisible) $("#cameraLine").show();
 
   if(beta <=1 && beta >= -1)
   {
@@ -1044,6 +1045,7 @@ window.addEventListener("deviceorientation", handleOrientation, true);
        $("#cameraRotate").show();
        $("#cameraOverlayCanvas").hide();
        isLandscape = false;
+       lineVisible = false;
        //$(stop);
   }
 
@@ -1057,6 +1059,7 @@ if(window.innerWidth > window.innerHeight){
     $("#cameraOverlayCanvas").hide();
     $(go);
     isLandscape = true;
+    lineVisible = true;
 }
 
 
@@ -1071,7 +1074,7 @@ $(window).on("orientationchange",function(){
     $("#takePhoto").hide();
     $("#cameraRotate").show();
     isLandscape = false;
-
+    lineVisible = false;
   }
   else if(window.orientation == 90 || window.orientation == 270) // Landscape
   {
@@ -1080,6 +1083,7 @@ $(window).on("orientationchange",function(){
     $("#cameraRotate").hide();
     $(go);
     isLandscape = true;
+    lineVisible = true;
   }
 });
 
@@ -1112,6 +1116,7 @@ takePhotoButton.onclick = takePhoto;
 
     //HIDE LEVEL LINE
     $("#cameraLine").hide();
+    lineVisible = false;
 
     // DISABLE TAKEPHOTO BUTTON
     //$("#takePhoto").attr("disabled", true);
@@ -1242,6 +1247,7 @@ takePhotoButton.onclick = takePhoto;
 
     // SHOW LEVEL LINE
     //$("#cameraLine").show();
+    lineVisible = true;
 
     // ACTIVATE TAKEPHOTO BUTTON
     //$("#takePhoto").removeAttr('disabled');
