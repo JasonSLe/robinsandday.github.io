@@ -237,6 +237,22 @@
   	box-shadow:         3px 3px 3px 3px #ccc;
 }
 
+/* Front 3/4 Photo Button for Retail Appraisal */
+
+#view_3908 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_3908 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
 /*** TRADE APPRAISAL VEHICLE IMAGERY HEADER ***/
 
 #view_3865 > section > div > div > div:nth-child(1) > div > div:nth-child(2) {
