@@ -1008,7 +1008,7 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
         window.addEventListener("deviceorientation", handleOrientation, true);
         $('#cameraModal').hide();
         //$("#takePhoto").removeAttr('disabled');
-        $("#takePhoto").show();
+        if (isLandscape) $("#takePhoto").show();
       }
     })
     .catch(console.error)
