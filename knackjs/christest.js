@@ -290,6 +290,8 @@ imageBeforeResize.onload = () => {
 }
 
    // when page loads checks if the device requires user to to enable motion sensors, If they do then display the dialog
+   console.log('before orient');
+   console.log(window.DeviceMotionEvent)
 if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermission === 'function' ){
     console.log("permision needed");
     $('#cameraModal').show(); // show dialog asking user to enable motion sensor
