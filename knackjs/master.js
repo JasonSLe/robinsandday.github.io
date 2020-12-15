@@ -826,6 +826,8 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
 // *****************************************************************************************************************************
 
+  $('#cameraLine').hide();
+
   var imageCapture;
 
   var img = document.querySelector('img');
