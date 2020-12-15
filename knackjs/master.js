@@ -1157,8 +1157,8 @@ takePhotoButton.onclick = function () {
 
     //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
     $('video').show();
-    $("#cameraCompare").show();
-    $("#cameraText").show();
+    $("#cameraCompare").hide();
+    $("#cameraText").hide();
     $(go);
 
     // HIDE RETAKE AND CONFIRM BUTTON
