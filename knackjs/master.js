@@ -1107,7 +1107,8 @@ takePhotoButton.onclick = function () {
     Knack.showSpinner();
 
     // DISABLE SAVE BUTTON
-    $("#cameraConfirm").attr("disabled", true);
+    //$("#cameraConfirm").attr("disabled", true);
+    $("#cameraConfirm").hide();
 
     //STOP TRACK WHEN USER SAVES IMAGE
     video.srcObject.getVideoTracks().forEach(track => track.stop());
