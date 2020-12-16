@@ -869,7 +869,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   if(window.innerWidth > window.innerHeight){ // if landscape
       $("#takePhoto").show();
       $("#cameraRotate").hide();
-      $("#cameraOverlayCanvas").hide();
+      $("#cameraOverlayCanvas").show();
       $(go);
       isLandscape = true;
   }
