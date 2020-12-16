@@ -974,6 +974,9 @@ imageBeforeResize.onload = () => {
    elem.height = 576;
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
+  if (location.href.includes('salesjourney.knack')){
+    alert('sales');
+  }
 
   if ((imageBeforeResize.width/imageBeforeResize.height)===(4/3)){
     var percentOfPicture = 0.6;
@@ -986,7 +989,7 @@ imageBeforeResize.onload = () => {
     ctx.drawImage(imageBeforeResize, sx + sw * (1-percentOfPicture69)/2, imageBeforeResize.height * (1-percentOfPicture69)/2, sw * percentOfPicture69, imageBeforeResize.height * percentOfPicture69, 0, 0, 768, 576);
   }
   if (location.href.includes('salesjourney.knack')){
-    alert('sales');
+    alert('sales2');
   }
    //save the resized image to the shown img
    ctx.canvas.toBlob((blob) => {
