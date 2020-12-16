@@ -787,6 +787,7 @@ function eraseCookie(name) {
         return {'status': 'ok'}
       }
     } catch (e) {
+      alert(rData2)
       return {'status': 'fail'};
     }
   }
