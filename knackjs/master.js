@@ -985,9 +985,6 @@ imageBeforeResize.onload = () => {
     var sw = imageBeforeResize.width - (((imageBeforeResize.width-((4/3)*imageBeforeResize.height))/imageBeforeResize.width) * imageBeforeResize.width);
     ctx.drawImage(imageBeforeResize, sx + sw * (1-percentOfPicture69)/2, imageBeforeResize.height * (1-percentOfPicture69)/2, sw * percentOfPicture69, imageBeforeResize.height * percentOfPicture69, 0, 0, 768, 576);
   }
-  if (location.href.includes('salesjourney.knack')){
-    alert('sales2');
-  }
    //save the resized image to the shown img
    ctx.canvas.toBlob((blob) => {
       img.src = URL.createObjectURL(blob);
@@ -1084,7 +1081,9 @@ takePhotoButton.onclick = function () {
         }
         img.classList.remove('hidden');
         img.src = URL.createObjectURL(blob);
-        imageBeforeResize.src = img.src;
+        if (!location.href.includes('salesjourney.knack')){
+          imageBeforeResize.src = img.src;
+        }
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
       });
