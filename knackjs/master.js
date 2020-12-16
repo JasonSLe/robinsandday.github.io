@@ -1080,6 +1080,7 @@ takePhotoButton.onclick = function () {
     // DISABLE TAKEPHOTO BUTTON
     $("#takePhoto").hide();
 
+    if (!location.href.includes('salesjourney.knack')){
     if (OperatingSystem.Android()) {
       imageCapture.takePhoto().then(function(blob) {
         //console.log('Photo taken:', blob);
@@ -1106,9 +1107,7 @@ takePhotoButton.onclick = function () {
      	alert('unsuported system'); 
 	    alert(navigator.userAgent);
     }
-    if (location.href.includes('salesjourney.knack')){
-      alert('salesX');
-    }
+  }
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
