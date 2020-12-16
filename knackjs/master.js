@@ -796,13 +796,13 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // *****************************************************************************************************************************
   var go = () => {
     effect.show();
-    if(!interval) { // if `interval` is equal to 0     
-    interval = setInterval(function () {
-        effect.fadeIn(1500, function () {
-          effect.fadeOut(1500);
-        });
-      }, 3000);
-  }
+    if(interval===0) { // if `interval` is equal to 0     
+      interval = setInterval(function () {
+          effect.fadeIn(1500, function () {
+            effect.fadeOut(1500);
+          });
+        }, 3000);
+    }
   }
 
   var stop = () => {
@@ -854,7 +854,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 
   const canvas = document.getElementById('cameraOverlayCanvas');  
   const ctx = canvas.getContext('2d');
-  let interval = 0;
+  var interval = 0;
   const effect = $('#cameraOverlayCanvas');
 
   const image = new Image('naturalWidth', 'naturalHeight');
