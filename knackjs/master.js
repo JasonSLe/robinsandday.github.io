@@ -969,10 +969,6 @@ function exitFullscreen(){
 }
 
 imageBeforeResize.onload = () => {
-  if (location.href.includes('salesjourney.knack')){
-    alert('not resize');
-    return;
-  }
    const elem = document.createElement('canvas');
    elem.width = 768;
    elem.height = 576;
@@ -1083,6 +1079,9 @@ takePhotoButton.onclick = function () {
         //console.log('Photo taken:', blob);
         //so I use the blob to the shown image but also for the imageBeforeResize, which when is loaded updates the shown image with smaller image
         //theoretically the blob can be given only to the imageBeforeResize, and it should then update them shown image but this approach shows the image sooner ...
+        if (location.href.includes('salesjourney.knack')){
+          alert('phto taken');
+        }
         img.classList.remove('hidden');
         img.src = URL.createObjectURL(blob);
         imageBeforeResize.src = img.src;
