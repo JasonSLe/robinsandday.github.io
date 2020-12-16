@@ -1011,7 +1011,7 @@ imageBeforeResize.onload = () => {
 
   if (isLandscape && beta && lineVisible) $("#cameraLine").show();
 
-  if(beta <=1 && beta >= -1)
+  if(beta <=1 && beta >= -1 && gamma <= -80)
   {
     line.style.backgroundColor = 'green';
   }
