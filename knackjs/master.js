@@ -745,6 +745,7 @@ function eraseCookie(name) {
             return {'status': 'ok', 'id': rDataP.id}
           }
           alert('uploadFail_1:'+rData);
+          alert(imgUrl);
           return {'status': 'fail'};
         } catch (e) {
           alert('uploadFail_2:'+e.toString());
