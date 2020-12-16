@@ -1080,7 +1080,7 @@ takePhotoButton.onclick = function () {
         if (!location.href.includes('salesjourney.knack')){
           img.src = URL.createObjectURL(blob);
           imageBeforeResize.src = img.src; 
-        } else { alert('aabb')}
+        } else { alert('aabc')}
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
       });
