@@ -1080,7 +1080,7 @@ takePhotoButton.onclick = function () {
           img.classList.remove('hidden');
           img.src = URL.createObjectURL(blob);
           imageBeforeResize.src = img.src; 
-        }
+        } else { alert('aabb')}
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
       });
