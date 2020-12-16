@@ -744,8 +744,10 @@ function eraseCookie(name) {
           if (rDataP.id) {
             return {'status': 'ok', 'id': rDataP.id}
           }
+          alert('uploadFail_1:'+rData);
           return {'status': 'fail'};
         } catch (e) {
+          alert('uploadFail_2:'+e.toString());
           return {'status': 'fail'};
         }
       });
