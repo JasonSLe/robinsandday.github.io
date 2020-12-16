@@ -970,6 +970,7 @@ function exitFullscreen(){
 
 imageBeforeResize.onload = () => {
   if (location.href.includes('salesjourney.knack')){
+    alert('not resize');
     return;
   }
    const elem = document.createElement('canvas');
