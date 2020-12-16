@@ -1009,7 +1009,11 @@ imageBeforeResize.onload = () => {
   var gamma    = event.gamma;
   console.log(beta);
 
-  if (isLandscape && beta && lineVisible) $("#cameraLine").show();
+  if (isLandscape && beta && lineVisible) {
+    $("#cameraLine").show();
+  } else {
+    $("#cameraLine").hide();
+  }
 
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
@@ -1148,11 +1152,13 @@ takePhotoButton.onclick = function () {
   retakeButton.onclick = function() {
     if (OperatingSystem.iOS()) {
       // on iOS devices it should hide the img tag when user agent clicks retake.
-      img.src = '';
       img.style.visibility = 'hidden';
     }
     //CLEAR TAKEN PHOTO
     img.src = '';
+
+    // SHOW LEVEL LINE
+    lineVisible = true;
 
     //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
     $('video').show();
@@ -1166,9 +1172,6 @@ takePhotoButton.onclick = function () {
 
     // SHOW EXIT BUTTON
     $("#cameraExit").show();
-
-    // SHOW LEVEL LINE
-    lineVisible = true;
 
     // ACTIVATE TAKEPHOTO BUTTON
 	  $("#takePhoto").show();
