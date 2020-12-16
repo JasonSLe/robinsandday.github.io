@@ -713,7 +713,7 @@ function eraseCookie(name) {
     return ur.substr(ur.lastIndexOf('/') + 1)
   }
 
-  function uploadImage(app_id, imgUrl) {
+  async function uploadImage(app_id, imgUrl) {
     var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
     var headers = {
       'X-Knack-Application-ID': app_id,
@@ -1109,6 +1109,7 @@ takePhotoButton.onclick = function () {
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
     $("#cameraConfirm").hide();
+    $("#cameraRetake").hide();
 
     //STOP TRACK WHEN USER SAVES IMAGE
     video.srcObject.getVideoTracks().forEach(track => track.stop());
