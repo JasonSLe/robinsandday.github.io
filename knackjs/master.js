@@ -975,6 +975,10 @@ imageBeforeResize.onload = () => {
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
 
+  if (location.href.includes('salesjourney.knack')){
+    alert('sales');
+  }
+
   if ((imageBeforeResize.width/imageBeforeResize.height)===(4/3)){
     var percentOfPicture = 0.6;
     ctx.drawImage(imageBeforeResize, imageBeforeResize.width * (1-percentOfPicture)/2, imageBeforeResize.height * (1-percentOfPicture)/2, imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
@@ -1073,7 +1077,7 @@ takePhotoButton.onclick = function () {
 
     if (OperatingSystem.Android()) {
       imageCapture.takePhoto().then(function(blob) {
-        console.log('Photo taken:', blob);
+        //console.log('Photo taken:', blob);
         //so I use the blob to the shown image but also for the imageBeforeResize, which when is loaded updates the shown image with smaller image
         //theoretically the blob can be given only to the imageBeforeResize, and it should then update them shown image but this approach shows the image sooner ...
         img.classList.remove('hidden');
