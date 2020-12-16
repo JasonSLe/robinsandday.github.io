@@ -1120,7 +1120,6 @@ takePhotoButton.onclick = function () {
     var imgUrl = $('#cameraFrontpic').attr('src');
 
     setTimeout(function(){
-      
       uploadImage(app_id, imgUrl)
       .then(function(resp) {
         if (!resp || resp.status !== 'ok') {
