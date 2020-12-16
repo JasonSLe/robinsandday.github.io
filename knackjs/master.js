@@ -969,6 +969,9 @@ function exitFullscreen(){
 }
 
 imageBeforeResize.onload = () => {
+  if (location.href.includes('salesjourney.knack')){
+    alert('sales0');
+  }
    const elem = document.createElement('canvas');
    elem.width = 768;
    elem.height = 576;
@@ -1075,7 +1078,11 @@ takePhotoButton.onclick = function () {
     lineVisible = false;
 
     // DISABLE TAKEPHOTO BUTTON
-	  $("#takePhoto").hide();
+    $("#takePhoto").hide();
+    
+    if (location.href.includes('salesjourney.knack')){
+      alert('salesX');
+    }
 
     if (OperatingSystem.Android()) {
       imageCapture.takePhoto().then(function(blob) {
