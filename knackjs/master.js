@@ -970,16 +970,13 @@ function exitFullscreen(){
 
 imageBeforeResize.onload = () => {
   if (location.href.includes('salesjourney.knack')){
-    alert('sales0');
+    return;
   }
    const elem = document.createElement('canvas');
    elem.width = 768;
    elem.height = 576;
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
-  if (location.href.includes('salesjourney.knack')){
-    alert('sales');
-  }
 
   if ((imageBeforeResize.width/imageBeforeResize.height)===(4/3)){
     var percentOfPicture = 0.6;
@@ -1080,7 +1077,6 @@ takePhotoButton.onclick = function () {
     // DISABLE TAKEPHOTO BUTTON
     $("#takePhoto").hide();
 
-    if (!location.href.includes('salesjourney.knack')){
     if (OperatingSystem.Android()) {
       imageCapture.takePhoto().then(function(blob) {
         //console.log('Photo taken:', blob);
@@ -1107,7 +1103,6 @@ takePhotoButton.onclick = function () {
      	alert('unsuported system'); 
 	    alert(navigator.userAgent);
     }
-  }
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
