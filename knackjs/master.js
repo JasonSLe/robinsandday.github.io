@@ -1106,8 +1106,8 @@ takePhotoButton.onclick = function () {
       alert('You are offline, please go online before confirming the photo.');
       return;
     }
-    Knack.showSpinner();
-
+    await Knack.showSpinner();
+    
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
     $("#cameraConfirm").hide();
