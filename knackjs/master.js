@@ -794,6 +794,24 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // ***************************************************************************************************************************
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
 // *****************************************************************************************************************************
+  var go = () => {
+    effect.show();
+    if(!interval) { // if `interval` is equal to 0     
+    interval = setInterval(function () {
+        effect.fadeIn(1500, function () {
+          effect.fadeOut(1500);
+        });
+      }, 3000);
+  }
+  }
+
+  var stop = () => {
+    effect.hide();
+    if(interval) {
+      clearInterval(interval);
+      interval = 0; 
+    }
+  }
 
   //Hide the spirit line in the begining
   $('#cameraLine').hide();
@@ -977,25 +995,6 @@ imageBeforeResize.onload = () => {
    canvas.width = this.naturalWidth;
    canvas.height = this.naturalHeight;
    ctx.drawImage(this, 0, 0);
- }
-
- var go = () => {
-   effect.show();
-   if(!interval) { // if `interval` is equal to 0     
-    interval = setInterval(function () {
-       effect.fadeIn(1500, function () {
-         effect.fadeOut(1500);
-       });
-     }, 3000);
- }
- }
-
- var stop = () => {
-   effect.hide();
-   if(interval) {
-     clearInterval(interval);
-     interval = 0; 
-   }
  }
 
 
