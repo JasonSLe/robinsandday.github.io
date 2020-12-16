@@ -1,5 +1,9 @@
 /**POP UP MESSAGE FOR ISO USER TO ALLOW MOTION SENSOR**/
 
+body {
+  overscroll-behavior-y: contain;
+}
+
 #cameraModal {
     background-color: #f5f5f5;
   display:none;
