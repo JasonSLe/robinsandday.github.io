@@ -1107,7 +1107,9 @@ takePhotoButton.onclick = function () {
       return;
     }
     
-    Knack.showSpinner();
+    setTimeout(function(){
+      Knack.showSpinner();
+    }, 100);
 
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
