@@ -713,7 +713,7 @@ function eraseCookie(name) {
     return ur.substr(ur.lastIndexOf('/') + 1)
   }
 
-  function uploadImage(app_id, imgUrl) {
+  async function uploadImage(app_id, imgUrl) {
     var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
     var headers = {
       'X-Knack-Application-ID': app_id,
