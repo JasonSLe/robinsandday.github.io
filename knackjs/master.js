@@ -1078,9 +1078,7 @@ takePhotoButton.onclick = function () {
         //theoretically the blob can be given only to the imageBeforeResize, and it should then update them shown image but this approach shows the image sooner ...
         img.classList.remove('hidden');
         img.src = URL.createObjectURL(blob);
-        //if (!location.href.includes('salesjourney.knack')){
-          imageBeforeResize.src = img.src; 
-        //} else { alert(img.src)}
+        imageBeforeResize.src = img.src; 
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
       });
