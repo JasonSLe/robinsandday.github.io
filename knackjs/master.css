@@ -1,3 +1,8 @@
+
+body {
+	overscroll-behavior-y: contain;
+  }
+  
 /* Show the hamburger menu on all screen sizes */  
 .kn-mobile-controls {
   display: block !important;
