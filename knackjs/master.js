@@ -862,14 +862,13 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
        $("#cameraLine").hide();
        $("#takePhoto").hide();
        $("#cameraRotate").show();
-       $("#cameraOverlayCanvas").hide();
+       $(stop);
        isLandscape = false;
   }
 
   if(window.innerWidth > window.innerHeight){ // if landscape
       $("#takePhoto").show();
       $("#cameraRotate").hide();
-      $("#cameraOverlayCanvas").show();
       $(go);
       isLandscape = true;
   }
