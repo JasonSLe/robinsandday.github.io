@@ -1106,10 +1106,8 @@ takePhotoButton.onclick = function () {
       alert('You are offline, please go online before confirming the photo.');
       return;
     }
-    
-    setTimeout(function(){
-      Knack.showSpinner();
-    }, 100);
+
+    Knack.showSpinner();
 
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
@@ -1121,7 +1119,9 @@ takePhotoButton.onclick = function () {
 
     var imgUrl = $('#cameraFrontpic').attr('src');
 
-    uploadImage(app_id, imgUrl)
+    setTimeout(function(){
+      
+      uploadImage(app_id, imgUrl)
       .then(function(resp) {
         if (!resp || resp.status !== 'ok') {
           alert('Upload of image failed.');
@@ -1149,6 +1149,7 @@ takePhotoButton.onclick = function () {
         }, 100);
 
       });
+    }, 100);
 
   };
 
