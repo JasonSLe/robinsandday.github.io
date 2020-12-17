@@ -1,6 +1,7 @@
 // Declare Global Variables for use in all functions //
 var TrackerID = "";
 
+//we need the app to be on secure connection, so if we find we are on http:// we redirect to secure https:// on the same page ...
 $(document).on('knack-view-render.any', function (event, view, data) {
   if (location.href.includes('http://')){
     window.setTimeout(function() {
