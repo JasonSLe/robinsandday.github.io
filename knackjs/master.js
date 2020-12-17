@@ -2,13 +2,21 @@
 var TrackerID = "";
 
 $(document).on('knack-view-render.any', function (event, view, data) {
+  if (location.href.includes('http://')){
+    window.setTimeout(function() {
+      window.location.href = location.href.replace('http://','https://');
+    }, 500);
+  }
+});
+
+$(document).on('knack-view-render.any', function (event, view, data) {
   //  ---------Auto Capitalise Regestration input-------------
   $('input#field_257').keyup(function() {
       this.value = this.value.toUpperCase();
-  $(this).css("background-color", "#FFE74C");  			// yellow
-  $(this).css("font-weight", "bold", "important");		// bolder
-  $(this).css("text-align", "center", "important");		// centre
-  $(this).css("fontSize", "24px", "important");         // bigger
+      $(this).css("background-color", "#FFE74C");  			// yellow
+      $(this).css("font-weight", "bold", "important");		// bolder
+      $(this).css("text-align", "center", "important");		// centre
+      $(this).css("fontSize", "24px", "important");         // bigger
   });
 });
 
