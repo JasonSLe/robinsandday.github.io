@@ -285,10 +285,12 @@ imageBeforeResize.onload = () => {
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
     line.style.backgroundColor = 'green';
+    $("#takePhoto").removeAttr('disabled');
   }
   else
   {
     line.style.backgroundColor = 'red';
+    $("#takePhoto").attr("disabled", true)
   }
   line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
   permissionForOrientation = 'none'

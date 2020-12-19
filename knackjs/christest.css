@@ -175,7 +175,13 @@ body {
 }
 
 #takePhoto:active {
-  background-color: #fafafa;
+  /*background-color: #fafafa;*/
+  background-color: #4cc417;
+}
+
+#takePhoto:disabled {
+  /*background-color: #fafafa;*/
+  background-color: #ff0000;
 }
 
 #cameraExit {
