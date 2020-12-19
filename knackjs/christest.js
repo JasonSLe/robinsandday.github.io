@@ -307,8 +307,8 @@ imageBeforeResize.onload = () => {
   }
   if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10){
     $("#takePhoto").removeAttr('disabled');
+    if (!OperatingSystem.iOS()) window.navigator.vibrate(50);
     $('#dev').text('vibr');
-    window.navigator.vibrate(50);
   } else {
     $("#takePhoto").attr("disabled", true)
   }
