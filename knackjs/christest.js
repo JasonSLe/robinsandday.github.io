@@ -189,13 +189,15 @@ const constraints = {
  zoom:2.0
   };
 
-  navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}
+  navigator.mediaDevices.getUserMedia({video: {pan: true, facingMode: {exact: "environment"}}
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
 
       const track = mediaStream.getVideoTracks()[0];
 
       track.applyConstraints(constraints);
+
+      alert()
 
       imageCapture = new ImageCapture(track);
 
