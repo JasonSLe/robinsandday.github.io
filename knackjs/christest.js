@@ -292,7 +292,7 @@ imageBeforeResize.onload = () => {
     if (gamma<=-80) return 0;
     if (gamma>85) return 0;
     if (gamma<0) return 90+gamma;
-    if (gamma>0) return 90-gamma;
+    if (gamma>0) return -(90-gamma);
   }
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
   
