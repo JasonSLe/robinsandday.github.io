@@ -288,7 +288,7 @@ imageBeforeResize.onload = () => {
   if (isLandscape && gamma) circle.style.display = 'inline';
 
   circle.style.top = 'calc(50% - 20px)';
-
+  
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
     line.style.backgroundColor = 'green';
