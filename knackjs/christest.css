@@ -175,6 +175,10 @@ body {
 }
 
 #takePhoto:active {
+  background-color: #fafafa;
+}
+
+#takePhoto:enabled {
   /*background-color: #fafafa;*/
   background-color: #4cc417;
 }
