@@ -195,7 +195,7 @@ const constraints = {
 
       const track = mediaStream.getVideoTracks()[0];
 
-      track.applyConstraints(constraints);
+      await track.applyConstraints(constraints);
 
       alert(JSON.stringify(track.getConstraints()))
 
