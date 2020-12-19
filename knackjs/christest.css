@@ -213,7 +213,7 @@ body {
 
 #cameraZoom {
   left: calc(50% - 32px);
-  top: calc(82% - 32px);
+  top: calc(18% - 32px);
   width: 60px;
   height: 60px;
   /*background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/x-mark-24.png");*/
