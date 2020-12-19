@@ -211,6 +211,16 @@ body {
   background-color: #fafafa;
 }
 
+#cameraZoom {
+  left: calc(50% - 32px);
+  top: calc(82% - 32px);
+  width: 60px;
+  height: 60px;
+  /*background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/x-mark-24.png");*/
+  border-radius: 50%;
+  background-color: rgba(4, 0, 255, 0.5);
+}
+
 #cameraRetake {
   left: calc(50% - 32px);
   top: calc(82% - 32px);
