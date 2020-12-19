@@ -198,7 +198,7 @@ const constraints = {
 
       track.applyConstraints(constraints);
 
-      $('#dev').text(JSON.stringify(track.getConstraints()));
+      $('#dev').text(JSON.stringify(track.getCapabilities()));
 
       imageCapture = new ImageCapture(track);
 
