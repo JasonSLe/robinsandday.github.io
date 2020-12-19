@@ -310,7 +310,7 @@ var canTakePhoto = false;
     $("#takePhoto").removeAttr('disabled');
     if (!OperatingSystem.iOS() && !canTakePhoto) window.navigator.vibrate(10);
     canTakePhoto = true;
-    $('#dev').text('vibr');
+    $('#dev').text('vibr2');
   } else {
     $("#takePhoto").attr("disabled", true);
     if (!OperatingSystem.iOS() && canTakePhoto) window.navigator.vibrate(10);
