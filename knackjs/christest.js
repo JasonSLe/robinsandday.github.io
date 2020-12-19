@@ -435,13 +435,17 @@ $(window).on("orientationchange",function(){
 
 
 //************************************* TAKE A PICTURE AND CROP*****************************************
-var sndCameraTakePhoto = new Audio("https://www.soundjay.com/mechanical/camera-shutter-click-01.wav");
+//var sndCameraTakePhoto = new Audio("https://www.soundjay.com/mechanical/camera-shutter-click-01.wav");
+var sndCameraTakePhoto = document.createElement('audio');  
+sndCameraTakePhoto.type = "audio/mpeg";     
+sndCameraTakePhoto.src = "https://www.soundjay.com/mechanical/camera-shutter-click-01.wav";                 
+sndCameraTakePhoto.load(); 
 takePhotoButton.onclick = takePhoto;
 
   function takePhoto() {
     Knack.showSpinner();
     sndCameraTakePhoto.play();
-    sndCameraTakePhoto.currentTime=0;
+    //sndCameraTakePhoto.currentTime=0;
 
     if (OperatingSystem.Android()) {
 
