@@ -288,6 +288,7 @@ imageBeforeResize.onload = () => {
   if (isLandscape && gamma) circle.style.display = 'inline';
 
   circle.style.top = 'calc(50% - 20px)';
+  $('#dev').text(gamma)
   
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
