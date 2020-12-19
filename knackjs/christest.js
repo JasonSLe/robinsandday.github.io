@@ -197,7 +197,7 @@ const constraints = {
 
       track.applyConstraints(constraints);
 
-      alert(track.getConstraints())
+      alert(JSON.stringify(track.getConstraints()))
 
       imageCapture = new ImageCapture(track);
 
