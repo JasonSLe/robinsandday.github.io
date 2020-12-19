@@ -300,11 +300,14 @@ imageBeforeResize.onload = () => {
   if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10)
   {
     line.style.backgroundColor = 'green';
-    $("#takePhoto").removeAttr('disabled');
   }
   else
   {
     line.style.backgroundColor = 'red';
+  }
+  if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10){
+    $("#takePhoto").removeAttr('disabled');
+  } else {
     $("#takePhoto").attr("disabled", true)
   }
   line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
