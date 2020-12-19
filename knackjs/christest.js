@@ -142,7 +142,7 @@ function prepareCameraView(imgToSaveName){
   var rotateButton = document.querySelector('#cameraRotate');
   var grid = document.querySelector('#cameraGrid');
   var line = document.getElementById('cameraLine');
-  var circle = document.createElement('span');
+  var circle = document.getElementById('cameraSpiritCircle');
   var modal = document.querySelector('#cameraModal');
   var acceptButton = document.querySelector('#cameraAccept');
 
@@ -273,13 +273,8 @@ imageBeforeResize.onload = () => {
    }
  }
 
-//**************************** SPIRIT LEVEL *****************************************
- circle.classList.add("dot");
- circle.setAttribute("style", "z-index: 1;background-color: #FFFF00;left: calc(50% - 40px);top: calc(50% - 20px);width: 80px;height: 80px;border-radius: 50%;");
  circle.style.visibility = 'visible';
-
- console.log(circle.style);
-
+//**************************** SPIRIT LEVEL *****************************************
  function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
