@@ -297,7 +297,7 @@ imageBeforeResize.onload = () => {
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
   
   
-  if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10)
+  if(beta <=1 && beta >= -1)
   {
     line.style.backgroundColor = 'green';
   }
@@ -435,11 +435,12 @@ $(window).on("orientationchange",function(){
 
 
 //************************************* TAKE A PICTURE AND CROP*****************************************
-
+var sndCameraTakePhoto = new Audio("https://www.soundjay.com/mechanical/camera-shutter-click-01.wav");
 takePhotoButton.onclick = takePhoto;
 
   function takePhoto() {
     Knack.showSpinner();
+    sndCameraTakePhoto.play();
 
     if (OperatingSystem.Android()) {
 
