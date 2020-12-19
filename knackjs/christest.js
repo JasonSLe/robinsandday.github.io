@@ -441,6 +441,7 @@ takePhotoButton.onclick = takePhoto;
   function takePhoto() {
     Knack.showSpinner();
     sndCameraTakePhoto.play();
+    sndCameraTakePhoto.currentTime=0;
 
     if (OperatingSystem.Android()) {
 
