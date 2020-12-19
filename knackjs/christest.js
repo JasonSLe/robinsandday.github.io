@@ -378,6 +378,7 @@ setTimeout(function() {
 
   //WE ARE STARTING WITH HIDDEN LINE
   $("#cameraLine").hide();
+  $("#cameraSpiritCircle").hide();
 
 
 //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
@@ -485,6 +486,7 @@ takePhotoButton.onclick = takePhoto;
 
     //HIDE LEVEL LINE
     $("#cameraLine").hide();
+    $("#cameraSpiritCircle").hide();
 
     // DISABLE TAKEPHOTO BUTTON
     //$("#takePhoto").attr("disabled", true);
