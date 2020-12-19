@@ -188,7 +188,7 @@ const constraints = {
  frameRate:{max: 30}
   };
 
-  navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}
+  navigator.mediaDevices.getUserMedia({video: {zoom: 1, facingMode: {exact: "environment"}}
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
 
