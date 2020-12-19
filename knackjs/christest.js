@@ -289,7 +289,7 @@ imageBeforeResize.onload = () => {
   $('#dev').text(gamma)
 
   function getGammaDev(gamma){
-    if (gamma<=-80) return 0;
+    if (gamma<=-85) return 0;
     if (gamma>85) return 0;
     if (gamma<0) return 90+gamma;
     if (gamma>0) return -(90-gamma);
@@ -297,7 +297,7 @@ imageBeforeResize.onload = () => {
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
   
   
-  if(beta <=1 && beta >= -1)
+  if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10)
   {
     line.style.backgroundColor = 'green';
     $("#takePhoto").removeAttr('disabled');
