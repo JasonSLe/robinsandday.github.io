@@ -197,7 +197,7 @@ const constraints = {
 
       track.applyConstraints(constraints);
 
-      alert('l')
+      alert(track.getConstraints())
 
       imageCapture = new ImageCapture(track);
 
