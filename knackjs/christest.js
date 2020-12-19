@@ -185,10 +185,11 @@ const constraints = {
  width: { min: 1440, ideal: 1280, max: 3984 },
  height: { min: 1080, ideal: 720, max: 2988 },
  aspectRatio: 4/3,
- frameRate:{max: 30}
+ frameRate:{max: 30},
+ zoom:2.0
   };
 
-  navigator.mediaDevices.getUserMedia({video: {zoom: 2, facingMode: {exact: "environment"}}
+  navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
 
