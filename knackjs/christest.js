@@ -437,7 +437,7 @@ $(window).on("orientationchange",function(){
 //************************************* TAKE A PICTURE AND CROP*****************************************
 //var sndCameraTakePhoto = new Audio("https://www.soundjay.com/mechanical/camera-shutter-click-01.wav");
 var sndCameraTakePhoto = document.createElement('audio');  
-sndCameraTakePhoto.type = "audio/mpeg";     
+sndCameraTakePhoto.type = "audio/wav";     
 sndCameraTakePhoto.src = "https://www.soundjay.com/mechanical/camera-shutter-click-01.wav";                 
 sndCameraTakePhoto.load(); 
 takePhotoButton.onclick = takePhoto;
