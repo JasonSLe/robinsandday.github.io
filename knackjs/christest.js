@@ -275,7 +275,7 @@ imageBeforeResize.onload = () => {
 
 //**************************** SPIRIT LEVEL *****************************************
  circle.classList.add("dot");
- circle.setAttribute("style", "left: calc(50% - 40px);top: calc(50% - 20px);width: 80px;height: 80px;border-radius: 50%;");
+ circle.setAttribute("style", "background-color: #FFFF00;left: calc(50% - 40px);top: calc(50% - 20px);width: 80px;height: 80px;border-radius: 50%;");
  circle.style.visibility = 'visible';
 
  function handleOrientation(event) {
