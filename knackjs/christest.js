@@ -273,7 +273,7 @@ imageBeforeResize.onload = () => {
    }
  }
 
- circle.style.visibility = 'visible';
+ circle.display = 'inline';
 //**************************** SPIRIT LEVEL *****************************************
  function handleOrientation(event) {
   var absolute = event.absolute;
