@@ -273,7 +273,7 @@ imageBeforeResize.onload = () => {
    }
  }
 
- //circle.style.display = 'inline';
+ circle.style.display = 'none';
 //**************************** SPIRIT LEVEL *****************************************
  function handleOrientation(event) {
   var absolute = event.absolute;
@@ -283,6 +283,7 @@ imageBeforeResize.onload = () => {
   console.log('ho',beta, alpha, gamma);
 
   if (isLandscape && beta) $("#cameraLine").show();
+  if (isLandscape && gamma) circle.style.display = 'inline';
 
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
