@@ -130,6 +130,7 @@ function prepareCameraView(imgToSaveName){
   $("#cameraConfirm").attr("disabled", false);
   $("#cameraExit").show();
   $('video').show();
+  $('#cameraZoom').hide();
 
   var imageCapture;
 
