@@ -172,6 +172,7 @@ body {
   height: 80px;
   border-radius: 50%;  
   background-color: #ffff00;
+  z-index: 2;
 }
 
 #takePhoto {
