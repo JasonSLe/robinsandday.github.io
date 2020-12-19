@@ -190,7 +190,7 @@ const constraints = {
     advanced: [{zoom:2.0}]
   };
 
-  navigator.mediaDevices.getUserMedia({video: {pan: true, facingMode: {exact: "environment"}}
+  navigator.mediaDevices.getUserMedia({video: {pan: true, zoom: true, facingMode: {exact: "environment"}}
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
 
@@ -198,7 +198,7 @@ const constraints = {
 
       track.applyConstraints(constraints);
 
-      //alert(JSON.stringify(track.getConstraints()))
+      $('#dev').text(JSON.stringify(track.getConstraints()));
 
       imageCapture = new ImageCapture(track);
 
@@ -308,12 +308,12 @@ var canTakePhoto = false;
   }
   if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10){
     $("#takePhoto").removeAttr('disabled');
-    $('#dev').text('enabl5x'+canTakePhoto);
+    //$('#dev').text('enabl5x'+canTakePhoto);
     if (!OperatingSystem.iOS() && !canTakePhoto) window.navigator.vibrate(50);
     canTakePhoto = true;
   } else {
     $("#takePhoto").attr("disabled", true);
-    $('#dev').text('disabl5x'+canTakePhoto);
+    //$('#dev').text('disabl5x'+canTakePhoto);
     if (!OperatingSystem.iOS() && canTakePhoto) window.navigator.vibrate(50);
     canTakePhoto = false;
   }
