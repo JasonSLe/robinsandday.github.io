@@ -308,6 +308,7 @@ imageBeforeResize.onload = () => {
   if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10){
     $("#takePhoto").removeAttr('disabled');
     window.navigator.vibrate(200);
+    $('#dev').text('vibr')
   } else {
     $("#takePhoto").attr("disabled", true)
   }
@@ -445,7 +446,6 @@ takePhotoButton.onclick = takePhoto;
 
   function takePhoto() {
     Knack.showSpinner();
-    $('#dev').text('play')
     sndCameraTakePhoto.play();
     //sndCameraTakePhoto.currentTime=0;
 
