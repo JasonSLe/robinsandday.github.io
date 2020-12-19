@@ -286,9 +286,16 @@ imageBeforeResize.onload = () => {
 
   if (isLandscape && beta) $("#cameraLine").show();
   if (isLandscape && gamma) circle.style.display = 'inline';
-
-  circle.style.top = 'calc(50% - 20px)';
   $('#dev').text(gamma)
+
+  function getGammaDev(gamma){
+    if (gamma<=-80) return 0;
+    if (gamma>85) return 0;
+    if (gamma<0) return 0-Math.abs(gamma);
+    if (gamma>0) return 80-gamma;
+  }
+  circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
+  
   
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
