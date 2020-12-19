@@ -290,8 +290,8 @@ var canTakePhoto = false;
   //$('#dev').text(gamma)
 
   function getGammaDev(gamma){
-    if (gamma<=-85) return 0;
-    if (gamma>85) return 0;
+    //if (gamma<=-85) return 0;
+    //if (gamma>85) return 0;
     if (gamma<0) return 90+gamma;
     if (gamma>0) return -(90-gamma);
   }
@@ -308,12 +308,12 @@ var canTakePhoto = false;
   }
   if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10){
     $("#takePhoto").removeAttr('disabled');
-    $('#dev').text('enabl5'+canTakePhoto);
+    $('#dev').text('enabl5x'+canTakePhoto);
     if (!OperatingSystem.iOS() && !canTakePhoto) window.navigator.vibrate(50);
     canTakePhoto = true;
   } else {
     $("#takePhoto").attr("disabled", true);
-    $('#dev').text('disabl5'+canTakePhoto);
+    $('#dev').text('disabl5x'+canTakePhoto);
     if (!OperatingSystem.iOS() && canTakePhoto) window.navigator.vibrate(50);
     canTakePhoto = false;
   }
