@@ -286,7 +286,7 @@ imageBeforeResize.onload = () => {
 
   if (isLandscape && beta) $("#cameraLine").show();
   if (isLandscape && gamma) circle.style.display = 'inline';
-  $('#dev').text(gamma)
+  //$('#dev').text(gamma)
 
   function getGammaDev(gamma){
     if (gamma<=-85) return 0;
@@ -437,13 +437,14 @@ $(window).on("orientationchange",function(){
 //************************************* TAKE A PICTURE AND CROP*****************************************
 //var sndCameraTakePhoto = new Audio("https://www.soundjay.com/mechanical/camera-shutter-click-01.wav");
 var sndCameraTakePhoto = document.createElement('audio');  
-sndCameraTakePhoto.type = "audio/wav";     
-sndCameraTakePhoto.src = "https://www.soundjay.com/mechanical/camera-shutter-click-01.wav";                 
+sndCameraTakePhoto.type = "audio/mpeg";     
+sndCameraTakePhoto.src = "https://www.soundjay.com/mechanical/camera-shutter-click-01.mp3";                 
 sndCameraTakePhoto.load(); 
 takePhotoButton.onclick = takePhoto;
 
   function takePhoto() {
     Knack.showSpinner();
+    $('#dev').text('play')
     sndCameraTakePhoto.play();
     //sndCameraTakePhoto.currentTime=0;
 
