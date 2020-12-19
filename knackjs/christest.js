@@ -308,12 +308,13 @@ var canTakePhoto = false;
   }
   if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10){
     $("#takePhoto").removeAttr('disabled');
-    if (!OperatingSystem.iOS() && !canTakePhoto) window.navigator.vibrate(10);
+    $('#dev').text('enabl'+canTakePhoto);
+    if (!OperatingSystem.iOS() && !canTakePhoto) window.navigator.vibrate(20);
     canTakePhoto = true;
-    $('#dev').text('vibr2');
   } else {
     $("#takePhoto").attr("disabled", true);
-    if (!OperatingSystem.iOS() && canTakePhoto) window.navigator.vibrate(10);
+    $('#dev').text('disabl'+canTakePhoto);
+    if (!OperatingSystem.iOS() && canTakePhoto) window.navigator.vibrate(20);
     canTakePhoto = false;
   }
   line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
