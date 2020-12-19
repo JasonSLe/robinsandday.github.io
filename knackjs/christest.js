@@ -282,6 +282,8 @@ imageBeforeResize.onload = () => {
   var gamma    = event.gamma;
   console.log('ho',beta, alpha, gamma);
 
+  if (beta===null && gamma===null) return;
+
   if (isLandscape && beta) $("#cameraLine").show();
   if (isLandscape && gamma) circle.style.display = 'inline';
 
