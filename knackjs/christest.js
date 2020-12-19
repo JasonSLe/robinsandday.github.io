@@ -275,6 +275,7 @@ imageBeforeResize.onload = () => {
 
  circle.style.display = 'none';
 //**************************** SPIRIT LEVEL *****************************************
+var canTakePhoto = false;
  function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
@@ -307,10 +308,13 @@ imageBeforeResize.onload = () => {
   }
   if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10){
     $("#takePhoto").removeAttr('disabled');
-    if (!OperatingSystem.iOS()) window.navigator.vibrate(50);
+    if (!OperatingSystem.iOS() && !canTakePhoto) window.navigator.vibrate(10);
+    canTakePhoto = true;
     $('#dev').text('vibr');
   } else {
-    $("#takePhoto").attr("disabled", true)
+    $("#takePhoto").attr("disabled", true);
+    if (!OperatingSystem.iOS() && canTakePhoto) window.navigator.vibrate(10);
+    canTakePhoto = false;
   }
   line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
   permissionForOrientation = 'none'
