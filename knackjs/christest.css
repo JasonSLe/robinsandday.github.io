@@ -167,7 +167,7 @@ body {
 
 #cameraSpiritCircle {
   left: calc(50% - 40px);
-  top: calc(50% - 20px);
+  top: calc(50% - 40px);
   width: 80px;
   height: 80px;
   border-radius: 50%;  
