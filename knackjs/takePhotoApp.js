@@ -512,13 +512,11 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
-    alert('conf');
     var imgToSave = document.getElementById(imgToSaveName);
-    alert(imgToSave);
+    alert(imgToSave.src);
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
-    alert(imgToSave.src);
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
 
@@ -536,11 +534,6 @@ takePhotoButton.onclick = takePhoto;
           document.msExitFullscreen();
         }
     
-    /*
-	setTimeout(function() {
-          window.location = backUrl;
-        }, 100);
-*/
     prepareFileView()
   };
 
