@@ -685,17 +685,5 @@ function uploadImages(infoText){
 
 document.addEventListener('DOMContentLoaded', function() {
   prepareFileView();
-  //defineActions();
 }, false);
-
-function defineActions(){
-
-
-  var cameraTakeFront34 = document.getElementById('cameraTakeFront34');
-  cameraTakeFront34.onclick = function() {
-      prepareCameraView('cameraImgFront34');
-  }
-  var cameraTakeRear34 = document.getElementById('cameraTakeRear34');
-
-};
 
