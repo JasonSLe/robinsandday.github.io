@@ -1,8 +1,6 @@
 // Camera app share functions
 //************************************* SAVE THE PICTURE YOU'VE JUST TAKEN WITH THE CAMERA TO KNACK*****************************************
 
-alert('aaaa')
-
 var moreViewsImage = new Image(768, 576)
 
   //this function just parses recordId from URL //maybe needs to be altered acording the use
@@ -669,8 +667,7 @@ function uploadImages(infoText){
   }
 }
 
-$(document).on('knack-view-render.view_56', function(event, view, data) {
-  $('[class="kn-view kn-back-link"]').hide();
+
   document.getElementById('cameraUploadBackground').onchange = function(){
     if (this.checked){
       $('#cameraUploadOnce').hide();
@@ -689,5 +686,5 @@ $(document).on('knack-view-render.view_56', function(event, view, data) {
   /*cameraTakeRear34.onclick = function() {
       prepareCameraView('cameraImgRear34');
   }*/
-});
+
 
