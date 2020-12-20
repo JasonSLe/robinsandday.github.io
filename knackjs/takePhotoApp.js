@@ -123,7 +123,6 @@ function prepareCameraView(imgToSaveName){
   $('#cameraPictureGallery').hide();
   $('#cameraLine').hide();
   $('#cameraVid_container').show();
-  $('#cameraGrid').show();
   $('#cameraGui_controls').show();
   $("#cameraConfirm").attr("disabled", false);
   $("#cameraExit").show();
@@ -487,6 +486,7 @@ takePhotoButton.onclick = takePhoto;
     $(stop);
 
     //DISPLAY COMPARISION CONTENT
+    $('#cameraGrid').show();
     $("#cameraCompare").show();
     $("#cameraText").show();
 
