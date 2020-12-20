@@ -483,7 +483,6 @@ takePhotoButton.onclick = takePhoto;
      	alert('unsuported system'); 
 	    alert(navigator.userAgent);
     }
-    alert('here')
     //HIDE VIDEO & OVERLAY ELEMENT
     $('video').hide();
     $(stop);
@@ -555,7 +554,6 @@ takePhotoButton.onclick = takePhoto;
 
         }      
     
-    alert('aaaabb')
     //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
     $('video').show();
     $("#cameraCompare").show();
