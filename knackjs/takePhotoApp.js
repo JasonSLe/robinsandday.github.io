@@ -513,7 +513,6 @@ takePhotoButton.onclick = takePhoto;
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
     var imgToSave = document.getElementById(imgToSaveName);
-    alert(imgToSave.src);
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
@@ -610,17 +609,6 @@ function prepareFileView(){
   $('#cameraVid_container').hide();
   $('#cameraGrid').hide();
   $('#cameraGui_controls').hide();
-
-  for (let i =1;i<10;i++){
-    $('#cameraImg'+i).attr('src','https://robinsandday.github.io/guideImages/2008_'+i+'.jpg');
-  }
-
-  for (let i = 1;i<10;i++){
-    let tmpImg = document.getElementById('cameraImg'+i);
-    tmpImg.onclick = function() {
-        prepareCameraView('cameraImg'+i);
-    }
-  }
 
   if ($('#cameraUploadBackground').attr('checked')){
     uploadImages('cameraUploadInfo')
