@@ -10,20 +10,11 @@
             style.type = 'text/css';
             style.href = 'https://robinsandday.github.io/knackjs/takePhotoApp.css?'+nowS;
             document.getElementsByTagName( 'head' )[0].appendChild( style );
-            /*
-            var script = document.createElement('script');
-            script.src = "https://robinsandday.github.io/knackjs/takePhotoApp.js?"+nowS;
-            document.getElementsByTagName( 'head' )[0].appendChild( script );  
-            */
-            function load_js()
-            {
-                var head = document.getElementsByTagName('head')[0];
-                var script = document.createElement('script');
-                script.src= 'https://robinsandday.github.io/knackjs/takePhotoApp.js?'+nowS;
-                head.appendChild(script);
-                alert('done')
-            }
-            load_js();
+            
+            LazyLoad.js(['https://robinsandday.github.io/knackjs/takePhotoApp.js?'+nowS], function () {
+                console.log('Loaded external files!');
+            });
+            
         </script>
         <!--<script type="text/javascript" src="https://robinsandday.github.io/knackjs/takePhotoApp.js?aaabbca"></script>-->
     </head>
