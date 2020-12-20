@@ -1,0 +1,49 @@
+<html lang="en">
+    <head>
+        <title>Car images take app</title>
+        <link rel="stylesheet" type="text/css" href="https://robinsandday.github.io/knackjs/christest.css?1608468589662">
+        <script src="https://robinsandday.github.io/knackjs/christest.js?1608468589662" class="lazyload" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="content"><p id="cameraPictureGallery">
+            Front 3/4
+            <img id="cameraImgFront34" width="120" height="90">
+            <button id="cameraTakeFront34" type="button">Take Front 3/4</button>
+            <br>
+            Rear 3/4
+            <img id="cameraImgRear34" width="120" height="90">
+            <button id="cameraTakeRear34" type="button">Take Rear 3/4</button>
+            <br>
+            <span id="cameraUploadInfo">Take the images</span><br>
+            <input type="checkbox" id="cameraUploadBackground" checked="true">Upload images on background <button id="cameraUploadOnce" type="button" style="display: none;">Upload</button>
+        </p>
+        <p id="cameraLine" style="display: none;">
+            -
+        </p>
+        <p id="cameraVid_container" style="display: none;">
+            <canvas id="cameraOverlayCanvas"></canvas>
+            <video autoplay="" playsinline="" class="hidden"></video>
+        </p>
+        <p id="cameraModal" style="display: none;">
+            <a id="cameraModal_header">Please enable Device Motion on your device</a>
+            <br>
+            <a id="cameraModal_txt">This app requires you to enable the Device Motion event on your device.</a>
+            <button id="cameraAccept" name="confirm request" type="button" class="cameraButton">Enable</button>
+        </p>
+        <p id="cameraGrid" style="display: none;">
+            <img id="cameraFrontpic">
+            <img id="cameraCompare" src="https://raw.githubusercontent.com/christiankasongo/Picture_Overlay/master/car.png">
+            <a id="cameraText">Does your photo match the guide?</a>
+        </p>
+        <p id="cameraGui_controls" style="display: none;">
+            <button id="cameraSpiritCircle" type="button" class="cameraButton"></button>
+            <button id="cameraZoom" type="button" class="cameraButton">2x</button>
+            <button id="takePhoto" class="cameraButton"></button>
+            <button id="cameraExit" name="exit photo" type="button" class="cameraButton"></button>
+            <button id="cameraRotate" name="rotate camera" type="button" class="cameraButton"></button>
+            <button id="cameraRetake" name="retake photo" type="button" class="cameraButton"></button>
+            <button id="cameraConfirm" name="confirm photo" type="button" class="cameraButton"></button>
+            <span id="dev" class="cameraButton">DEV INFO</span>
+        </p></div>
+    </body>
+</html>
