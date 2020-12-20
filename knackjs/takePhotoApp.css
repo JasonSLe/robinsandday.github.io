@@ -7,6 +7,8 @@ body {
 .photoGrid{
   width: 25%;
   margin:3%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
 
 #cameraModal {
