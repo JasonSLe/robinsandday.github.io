@@ -2,6 +2,7 @@
 
 body {
   overscroll-behavior-y: contain;
+  margin: 6px;
 }
 
 #cameraModal {
@@ -45,8 +46,6 @@ body {
     text-transform: uppercase;
     border: 2px solid #000;
   }
-
-
 
 
 #cameraVid_container {
@@ -339,7 +338,4 @@ body {
   font-size: 20px;
 }
 }
-
-#kn-scene_24 {
-  margin: 6px;
-}
+  

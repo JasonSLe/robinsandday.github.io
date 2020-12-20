@@ -1,8 +1,6 @@
 // Camera app share functions
 //************************************* SAVE THE PICTURE YOU'VE JUST TAKEN WITH THE CAMERA TO KNACK*****************************************
 
-var moreViewsImage = new Image(768, 576)
-
   //this function just parses recordId from URL //maybe needs to be altered acording the use
   function getRecordIdFromHref(ur) {
     var ur = ur.substr(0, ur.length - 1);
