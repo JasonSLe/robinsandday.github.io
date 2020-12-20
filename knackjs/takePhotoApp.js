@@ -555,7 +555,7 @@ takePhotoButton.onclick = takePhoto;
 
         }      
     
-
+    alert('aaaabb')
     //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
     $('video').show();
     $("#cameraCompare").show();
