@@ -663,7 +663,6 @@ function uploadImages(infoText){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  alert("Ready!");
   defineActions();
 }, false);
 
