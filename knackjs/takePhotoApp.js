@@ -309,12 +309,12 @@ var canTakePhoto = false;
   if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10){
     $("#takePhoto").removeAttr('disabled');
     //$('#dev').text('enabl5x'+canTakePhoto);
-    if (!OperatingSystem.iOS() && !canTakePhoto) window.navigator.vibrate(50);
+    if (!OperatingSystem.iOS() && !canTakePhoto && CameraView && takingPhoto) window.navigator.vibrate(50);
     canTakePhoto = true;
   } else {
     $("#takePhoto").attr("disabled", true);
     //$('#dev').text('disabl5x'+canTakePhoto);
-    if (!OperatingSystem.iOS() && canTakePhoto) window.navigator.vibrate(50);
+    if (!OperatingSystem.iOS() && canTakePhoto && CameraView && takingPhoto) window.navigator.vibrate(50);
     canTakePhoto = false;
   }
   line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
