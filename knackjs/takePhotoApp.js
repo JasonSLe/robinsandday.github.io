@@ -610,6 +610,10 @@ function prepareFileView(){
   $('#cameraGrid').hide();
   $('#cameraGui_controls').hide();
 
+  for (let i =1;i<10;i++){
+    $('#cameraImg'+i).attr('src','https://robinsandday.github.io/guideImages/2008_'+i+'.jpg');
+  }
+
   if ($('#cameraUploadBackground').attr('checked')){
     uploadImages('cameraUploadInfo')
   }
@@ -663,7 +667,8 @@ function uploadImages(infoText){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  defineActions();
+  prepareFileView();
+  //defineActions();
 }, false);
 
 function defineActions(){
@@ -683,8 +688,6 @@ function defineActions(){
       prepareCameraView('cameraImgFront34');
   }
   var cameraTakeRear34 = document.getElementById('cameraTakeRear34');
-  /*cameraTakeRear34.onclick = function() {
-      prepareCameraView('cameraImgRear34');
-  }*/
+
 };
 
