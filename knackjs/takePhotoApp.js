@@ -119,6 +119,7 @@ function prepareCameraView(imgToSaveName){
 // ***************************************************************************************************************************
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
 // *****************************************************************************************************************************
+  CameraView = true;
 
   $('#cameraPictureGallery').hide();
   $('#cameraLine').hide();
@@ -283,8 +284,8 @@ var canTakePhoto = false;
 
   if (beta===null && gamma===null) return;
 
-  if (isLandscape && beta) $("#cameraLine").show();
-  if (isLandscape && gamma) circle.style.display = 'inline';
+  if (isLandscape && beta && CameraView) $("#cameraLine").show();
+  if (isLandscape && gamma && CameraView) circle.style.display = 'inline';
   //$('#dev').text(gamma)
 
   function getGammaDev(gamma){
@@ -605,7 +606,10 @@ takePhotoButton.onclick = takePhoto;
   }  
 }
 
+var CameraView = false;
+
 function prepareFileView(){
+  CameraView = false;
   $('#cameraPictureGallery').show();
   $('#cameraLine').hide();
   $('#cameraVid_container').hide();
