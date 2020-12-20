@@ -1,6 +1,8 @@
 // Camera app share functions
 //************************************* SAVE THE PICTURE YOU'VE JUST TAKEN WITH THE CAMERA TO KNACK*****************************************
 
+alert('aaaa')
+
 var moreViewsImage = new Image(768, 576)
 
   //this function just parses recordId from URL //maybe needs to be altered acording the use
@@ -205,6 +207,7 @@ const constraints = {
 
     })
     .catch(error => ChromeSamples.log('Argh!', error.name || error));
+
 
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
