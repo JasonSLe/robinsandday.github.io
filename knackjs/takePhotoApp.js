@@ -483,7 +483,7 @@ takePhotoButton.onclick = takePhoto;
      	alert('unsuported system'); 
 	    alert(navigator.userAgent);
     }
-
+    alert('here')
     //HIDE VIDEO & OVERLAY ELEMENT
     $('video').hide();
     $(stop);
