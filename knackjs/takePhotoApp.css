@@ -7,6 +7,7 @@ body {
 .photoGrid{
   width: 25%;
   margin:3%;
+  border:rgba(60, 179, 113, 0.5);
 }
 
 #cameraModal {
