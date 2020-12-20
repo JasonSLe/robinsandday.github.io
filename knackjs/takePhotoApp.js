@@ -187,7 +187,7 @@ const constraints = {
     height: { min: 1080, ideal: 720, max: 2988 },
     aspectRatio: 4/3,
     frameRate:{max: 30},
-    advanced: [{zoom:2.0}]
+    //advanced: [{zoom:2.0}]
   };
 
   navigator.mediaDevices.getUserMedia({video: {pan: true, zoom: true, facingMode: {exact: "environment"}}
