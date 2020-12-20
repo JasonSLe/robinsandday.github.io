@@ -122,7 +122,6 @@ body {
   position: fixed;
   background-color: #111;
   z-index: 2;
-  bottom: 0;
   top: 0;
 }
 
