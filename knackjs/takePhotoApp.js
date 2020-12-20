@@ -244,7 +244,6 @@ imageBeforeResize.onload = () => {
       img.src = URL.createObjectURL(blob);
       img.style.visibility = 'visible';
   }, 'image/jpeg', 1);
-  Knack.hideSpinner();
 }
 
  function drawImageActualSize() {
@@ -446,10 +445,10 @@ var sndCameraTakePhoto = document.createElement('audio');
 sndCameraTakePhoto.type = "audio/mpeg";     
 sndCameraTakePhoto.src = "https://www.soundjay.com/mechanical/camera-shutter-click-01.mp3";                 
 sndCameraTakePhoto.load(); 
+
 takePhotoButton.onclick = takePhoto;
 
   function takePhoto() {
-    Knack.showSpinner();
     sndCameraTakePhoto.play();
     //sndCameraTakePhoto.currentTime=0;
 
@@ -513,8 +512,6 @@ takePhotoButton.onclick = takePhoto;
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
-
-    //Knack.showSpinner();
 
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
@@ -671,6 +668,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 function defineActions(){
+
   document.getElementById('cameraUploadBackground').onchange = function(){
     if (this.checked){
       $('#cameraUploadOnce').hide();
