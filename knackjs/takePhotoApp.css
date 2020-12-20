@@ -4,6 +4,11 @@ body {
   overscroll-behavior-y: contain;
 }
 
+.photoGrid{
+  width:160px;
+  height:120px;
+}
+
 #cameraModal {
     background-color: #f5f5f5;
   display:none;
@@ -62,7 +67,6 @@ body {
   grid-gap: 6px;
   padding: auto;
   align-items: center;
- 
 }
 
 
