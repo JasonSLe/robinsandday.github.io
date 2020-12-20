@@ -512,6 +512,7 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
+    alert('conf');
     var imgToSave = document.getElementById(imgToSaveName);
     alert(imgToSave);
     imgToSave.src =  img.src;
