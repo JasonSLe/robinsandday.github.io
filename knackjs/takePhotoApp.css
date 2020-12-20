@@ -6,9 +6,9 @@ body {
 
 .photoGrid{
   width: 25%;
-  margin:3%;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
+  margin:2%;
+  filter: opacity(50%);
+  -webkit-filter: opacity(50%);
 }
 
 #cameraModal {
