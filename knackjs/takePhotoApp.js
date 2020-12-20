@@ -196,7 +196,7 @@ const constraints = {
 
       track.applyConstraints(constraints);
 
-      $('#dev').text(JSON.stringify(track.getCapabilities()));
+      //$('#dev').text(JSON.stringify(track.getCapabilities()));
 
       imageCapture = new ImageCapture(track);
 
@@ -395,6 +395,7 @@ setTimeout(function() {
 
     // if portrait
        $("#cameraLine").hide();
+       $("#cameraSpiritCircle").hide();
        $("#takePhoto").hide();
        $("#cameraRotate").show();
        $("#cameraOverlayCanvas").hide();
@@ -423,6 +424,7 @@ $(window).on("orientationchange",function(){
   {
     $(stop);
     $("#cameraLine").hide();
+    $("#cameraSpiritCircle").hide();
     $("#takePhoto").hide();
     $("#cameraRotate").show();
     isLandscape = false;
