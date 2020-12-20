@@ -13,6 +13,7 @@
 
             var script = document.createElement('script');
             script.src = "https://robinsandday.github.io/knackjs/takePhotoApp.js?"+nowS;
+            script.onload = afterLoad;
             document.getElementsByTagName( 'head' )[0].appendChild( script );
         </script>
     </head>

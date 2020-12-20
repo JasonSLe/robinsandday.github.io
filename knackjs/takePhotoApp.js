@@ -697,6 +697,11 @@ function uploadImages(infoText){
   }
 }
 
+function afterLoad(){
+  prepareFileViewOnce();
+  prepareFileView();
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   prepareFileViewOnce();
   prepareFileView();
