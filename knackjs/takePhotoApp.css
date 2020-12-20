@@ -5,9 +5,8 @@ body {
 }
 
 .photoGrid{
-  width:160px;
-  height:120px;
-  margin:20px;
+  width: 25%;
+  margin:3%;
 }
 
 #cameraModal {
