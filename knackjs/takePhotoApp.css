@@ -2,12 +2,6 @@
 
 body {
   overscroll-behavior-y: contain;
-  margin: 6px;
-}
-
-* {
-  margin:0;
-  padding:0;
 }
 
 #cameraModal {
