@@ -513,10 +513,11 @@ takePhotoButton.onclick = takePhoto;
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
     var imgToSave = document.getElementById(imgToSaveName);
+    alert(imgToSave);
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
-
+    alert(imgToSave.src);
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
 
@@ -620,6 +621,13 @@ function prepareFileView(){
     $('#cameraImg'+i).attr('src','https://robinsandday.github.io/guideImages/2008_'+i+'.jpg');
   }
 
+  for (let i = 1;i<10;i++){
+    let tmpImg = document.getElementById('cameraImg'+i);
+    tmpImg.onclick = function() {
+        prepareCameraView('cameraImg'+i);
+    }
+  }
+
   if ($('#cameraUploadBackground').attr('checked')){
     uploadImages('cameraUploadInfo')
   }
@@ -632,6 +640,12 @@ function prepareFileView(){
   }
   document.getElementById('cameraUploadOnce').onclick = function(){
     uploadImages('cameraUploadInfo');
+  }
+}
+
+function prepareFileViewOnce(){
+  for (let i =1;i<10;i++){
+    $('#cameraImg'+i).attr('src','https://robinsandday.github.io/guideImages/2008_'+i+'.jpg');
   }
 
   for (let i = 1;i<10;i++){
@@ -690,6 +704,7 @@ function uploadImages(infoText){
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  prepareFileViewOnce();
   prepareFileView();
 }, false);
 
