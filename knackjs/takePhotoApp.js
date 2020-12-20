@@ -617,6 +617,23 @@ function prepareFileView(){
   if ($('#cameraUploadBackground').attr('checked')){
     uploadImages('cameraUploadInfo')
   }
+  document.getElementById('cameraUploadBackground').onchange = function(){
+    if (this.checked){
+      $('#cameraUploadOnce').hide();
+    } else {
+      $('#cameraUploadOnce').show();
+    }
+  }
+  document.getElementById('cameraUploadOnce').onclick = function(){
+    uploadImages('cameraUploadInfo');
+  }
+
+  for (let i = 1;i<10;i++){
+    let tmpImg = document.getElementById('cameraImg'+i);
+    tmpImg.onclick = function() {
+        prepareCameraView('cameraImg'+i);
+    }
+  }
 }
 
 function uploadImages(infoText){
@@ -673,16 +690,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function defineActions(){
 
-  document.getElementById('cameraUploadBackground').onchange = function(){
-    if (this.checked){
-      $('#cameraUploadOnce').hide();
-    } else {
-      $('#cameraUploadOnce').show();
-    }
-  }
-  document.getElementById('cameraUploadOnce').onclick = function(){
-    uploadImages('cameraUploadInfo');
-  }
+
   var cameraTakeFront34 = document.getElementById('cameraTakeFront34');
   cameraTakeFront34.onclick = function() {
       prepareCameraView('cameraImgFront34');
