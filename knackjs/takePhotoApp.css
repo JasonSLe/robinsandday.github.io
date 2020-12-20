@@ -11,6 +11,11 @@ body {
   -webkit-filter: opacity(50%);
 }
 
+.photoGridTaken{
+  width: 25%;
+  margin:2%;
+}
+
 #cameraModal {
     background-color: #f5f5f5;
   display:none;

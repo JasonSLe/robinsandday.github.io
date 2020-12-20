@@ -516,6 +516,8 @@ takePhotoButton.onclick = takePhoto;
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
+    imgToSave.classList.remove('photoGrid');
+    imgToSave.classList.add('photoGridTaken');
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
 
