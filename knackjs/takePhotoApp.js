@@ -547,22 +547,21 @@ takePhotoButton.onclick = takePhoto;
 //*************************************RETAKE BUTTON, THIS WILL DELETE THE PHOTO TAKEN*****************************************
 
   retakeButton.onclick = function() {
+    //CLEAR TAKEN PHOTO
     img.src = '';
         if (OperatingSystem.iOS()) {
           // on iOS devices it should hide the img tag when user agent clicks retake.
           img.style.visibility = 'hidden';
 
         }      
-    //CLEAR TAKEN PHOTO
     
-
 
     //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
     $('video').show();
     $("#cameraCompare").show();
     $("#cameraText").show();
     $(go);
-
+    takingPhoto = true;
 
     // HIDE RETAKE AND CONFIRM BUTTON
     $("#cameraRetake").hide();
