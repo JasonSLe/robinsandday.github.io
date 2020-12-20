@@ -10,8 +10,11 @@
             style.type = 'text/css';
             style.href = 'https://robinsandday.github.io/knackjs/takePhotoApp.css?'+nowS;
             document.getElementsByTagName( 'head' )[0].appendChild( style );
+
+            var script = document.createElement('script');
+            script.src = "https://robinsandday.github.io/knackjs/takePhotoApp.js?"+nowS;
+            document.getElementsByTagName( 'head' )[0].appendChild( script );
         </script>
-        <script src="https://robinsandday.github.io/knackjs/takePhotoApp.js?1608468589669" class="lazyload" charset="utf-8"></script>
     </head>
     <body>
         <div id="cameraPictureGallery">
