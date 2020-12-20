@@ -11,10 +11,13 @@
             style.href = 'https://robinsandday.github.io/knackjs/takePhotoApp.css?'+nowS;
             document.getElementsByTagName( 'head' )[0].appendChild( style );
 
+            $.getScript("https://robinsandday.github.io/knackjs/takePhotoApp.js?"+nowS)
+            /*
             var script = document.createElement('script');
             script.src = "https://robinsandday.github.io/knackjs/takePhotoApp.js?"+nowS;
             script.onload = afterLoad;
             document.getElementsByTagName( 'head' )[0].appendChild( script );
+            */
         </script>
     </head>
     <body>
