@@ -1011,6 +1011,7 @@ imageBeforeResize.onload = () => {
 
 //**************************** SPIRIT LEVEL *****************************************
  var lineVisible = true;
+ var canTakePhoto = false;
  function handleOrientation(event) {
   var absolute = event.absolute;
   var alpha    = event.alpha;
@@ -1027,10 +1028,14 @@ imageBeforeResize.onload = () => {
   if(beta <=1 && beta >= -1 && gamma <= -80)
   {
     line.style.backgroundColor = 'green';
+    if (!OperatingSystem.iOS() && !canTakePhoto && lineVisible) window.navigator.vibrate(50);
+    canTakePhoto = true;
   }
   else
   {
     line.style.backgroundColor = 'red';
+    if (!OperatingSystem.iOS() && canTakePhoto && lineVisible) window.navigator.vibrate(50);
+    canTakePhoto = false;
   }
   line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
   permissionForOrientation = 'none'
