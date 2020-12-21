@@ -448,7 +448,7 @@ $(window).on("orientationchange",function(){
 //var sndCameraTakePhoto = new Audio("https://www.soundjay.com/mechanical/camera-shutter-click-01.wav");
 var sndCameraTakePhoto = document.createElement('audio');  
 sndCameraTakePhoto.type = "audio/mpeg";     
-sndCameraTakePhoto.src = "https://www.soundjay.com/mechanical/camera-shutter-click-01.mp3";                 
+sndCameraTakePhoto.src = "https://github.com/robinsandday/Camera_App-for-Image-Overlay/raw/main/camera-shutter-click.mp3";                 
 sndCameraTakePhoto.load(); 
 
 takePhotoButton.onclick = takePhoto;
