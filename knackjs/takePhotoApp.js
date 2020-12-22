@@ -210,7 +210,7 @@ const constraints = {
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
 
 const canvasBox = document.getElementById('cameraBoxCanvas');  
-const ctxBox = canvas.getContext('2d');
+const ctxBox = canvasBox.getContext('2d');
 ctxBox.beginPath();
 ctxBox.lineWidth = "6";
 ctxBox.strokeStyle = "red";
