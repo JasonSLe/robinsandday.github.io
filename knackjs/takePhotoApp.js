@@ -208,14 +208,17 @@ const constraints = {
 
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
-
 const canvasBox = document.getElementById('cameraBoxCanvas');  
 const ctxBox = canvasBox.getContext('2d');
-ctxBox.beginPath();
-ctxBox.lineWidth = "6";
-ctxBox.strokeStyle = "red";
-ctxBox.rect(0, 0, 768, 576);
-ctxBox.stroke();
+video.onresize = function(){
+  canvasBox.width = video.width;
+  canvasBox.height = vide.height;
+  ctxBox.beginPath();
+  ctxBox.lineWidth = "6";
+  ctxBox.strokeStyle = "red";
+  ctxBox.rect(0, 0, 768, 576);
+  ctxBox.stroke();
+}
 
  const canvas = document.getElementById('cameraOverlayCanvas');  
  const ctx = canvas.getContext('2d');
