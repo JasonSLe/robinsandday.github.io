@@ -214,7 +214,7 @@ const ctxBox = canvasBox.getContext('2d');
 ctxBox.beginPath();
 ctxBox.lineWidth = "6";
 ctxBox.strokeStyle = "red";
-ctxBox.rect(5, 5, 290, 140);
+ctxBox.rect(0, 0, 290, 140);
 ctxBox.stroke();
 
  const canvas = document.getElementById('cameraOverlayCanvas');  
