@@ -4,15 +4,6 @@ body {
   overscroll-behavior-y: contain;
 }
 
-#box {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  border: 3px solid blue;
-}
-
 .photoGrid{
   width: 25%;
   margin:2%;
@@ -126,6 +117,17 @@ body {
 
 /**Mobile first. Any mobile with viewport width of 640px or less apply the following to canvas**/
 #cameraOverlayCanvas {
+  position: absolute;
+  max-width: 70%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#cameraBoxCanvas {
   position: absolute;
   max-width: 70%;
   top: 50%;

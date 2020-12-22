@@ -209,6 +209,14 @@ const constraints = {
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
 
+const canvasBox = document.getElementById('cameraBoxCanvas');  
+const ctxBox = canvas.getContext('2d');
+ctxBox.beginPath();
+ctxBox.lineWidth = "6";
+ctxBox.strokeStyle = "red";
+ctxBox.rect(5, 5, 290, 140);
+ctxBox.stroke();
+
  const canvas = document.getElementById('cameraOverlayCanvas');  
  const ctx = canvas.getContext('2d');
  let interval = 0;
@@ -256,7 +264,6 @@ imageBeforeResize.onload = () => {
  }
 
  var go = () => {
-   $('#box').show();
    effect.show();
    if(!interval) { // if `interval` is equal to 0     
     interval = setInterval(function () {
@@ -268,7 +275,6 @@ imageBeforeResize.onload = () => {
  }
 
  var stop = () => {
-  $('#box').hide();
    effect.hide();
    if(interval) {
      clearInterval(interval);
