@@ -256,6 +256,7 @@ imageBeforeResize.onload = () => {
  }
 
  var go = () => {
+   $('#box').show();
    effect.show();
    if(!interval) { // if `interval` is equal to 0     
     interval = setInterval(function () {
@@ -267,6 +268,7 @@ imageBeforeResize.onload = () => {
  }
 
  var stop = () => {
+  $('#box').hide();
    effect.hide();
    if(interval) {
      clearInterval(interval);
