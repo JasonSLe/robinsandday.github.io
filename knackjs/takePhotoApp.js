@@ -219,6 +219,7 @@ function drawPhotoRect(){
 const canvasBox = document.getElementById('cameraBoxCanvas');  
 const ctxBox = canvasBox.getContext('2d');
 video.onresize = drawPhotoRect;
+canvasBox.onresize = drawPhotoRect;
 drawPhotoRect();
 
  const canvas = document.getElementById('cameraOverlayCanvas');  
