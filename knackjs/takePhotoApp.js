@@ -210,6 +210,7 @@ const constraints = {
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
 
 function drawPhotoRect(){
+  alert('resize');
   ctxBox.beginPath();
   ctxBox.lineWidth = "6";
   ctxBox.strokeStyle = "red";
