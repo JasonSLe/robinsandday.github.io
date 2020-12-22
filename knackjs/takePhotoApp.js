@@ -208,12 +208,8 @@ const constraints = {
 
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
+
 function drawPhotoRect(){
-  let tmpC = document.getElementById('cameraVid_container')
-  canvasBox.width = tmpC.clientWidth;
-  canvasBox.height = tmpC.clientHeight;
-  canvasBox.top = tmpC.clientTop;
-  canvasBox.left = tmpC.clientLeft;
   ctxBox.beginPath();
   ctxBox.lineWidth = "6";
   ctxBox.strokeStyle = "red";
