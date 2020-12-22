@@ -208,9 +208,7 @@ const constraints = {
 
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
-const canvasBox = document.getElementById('cameraBoxCanvas');  
-const ctxBox = canvasBox.getContext('2d');
-video.onresize = function(){
+function drawPhotoRect(){
   canvasBox.width = video.width;
   canvasBox.height = vide.height;
   ctxBox.beginPath();
@@ -219,6 +217,10 @@ video.onresize = function(){
   ctxBox.rect(0, 0, 768, 576);
   ctxBox.stroke();
 }
+const canvasBox = document.getElementById('cameraBoxCanvas');  
+const ctxBox = canvasBox.getContext('2d');
+video.onresize = drawPhotoRect;
+drawPhotoRect();
 
  const canvas = document.getElementById('cameraOverlayCanvas');  
  const ctx = canvas.getContext('2d');
