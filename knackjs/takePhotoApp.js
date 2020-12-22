@@ -213,6 +213,11 @@ const constraints = {
  const ctx = canvas.getContext('2d');
  let interval = 0;
  const effect = $('#cameraOverlayCanvas');
+ ctx.beginPath();
+  ctx.lineWidth = "6";
+  ctx.strokeStyle = "red";
+  ctx.rect(5, 5, 290, 140);
+  ctx.stroke();
 
  const image = new Image('naturalWidth', 'naturalHeight');
  image.onload = drawImageActualSize;
