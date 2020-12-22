@@ -209,10 +209,10 @@ const constraints = {
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
 function drawPhotoRect(){
-  canvasBox.width = video.width;
-  canvasBox.height = video.height;
-  canvasBox.top = video.top;
-  canvasBox.left = video.left;
+  canvasBox.width = $('#cameraVid_container').clientWidth;
+  canvasBox.height = $('#cameraVid_container').clientHeight;
+  canvasBox.top = $('#cameraVid_container').clientTop;
+  canvasBox.left = $('#cameraVid_container').clientLeft;
   ctxBox.beginPath();
   ctxBox.lineWidth = "6";
   ctxBox.strokeStyle = "red";
