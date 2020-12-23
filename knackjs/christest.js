@@ -224,7 +224,7 @@ const constraints = {
  const ctx2 = canvas2.getContext('2d');
  const image2 = new Image('naturalWidth', 'naturalHeight');
  image2.onload = drawImageActualSize2;
- image2.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv12.png';
+ image2.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv11.png';
 
    //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
