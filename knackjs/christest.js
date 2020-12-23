@@ -199,7 +199,7 @@ const constraints = {
 
       track.applyConstraints(constraints);
 
-      $('#dev').text(JSON.stringify(track.getCapabilities()));
+      /*$('#dev').text(JSON.stringify(track.getCapabilities()));*/
 
       imageCapture = new ImageCapture(track);
 
@@ -527,7 +527,7 @@ takePhotoButton.onclick = takePhoto;
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
-
+alert('aaaa')
     //Knack.showSpinner();
 
     // DISABLE SAVE BUTTON
