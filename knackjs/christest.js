@@ -220,6 +220,12 @@ const constraints = {
  //image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebg.png?token=AK2DHPRJXE5E2DFU5EXYCXS7Y6ROW';
  image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv3.png';
 
+ const canvas2 = document.getElementById('cameraOverlayCanvas2');  
+ const ctx2 = canvas2.getContext('2d');
+ const image2 = new Image('naturalWidth', 'naturalHeight');
+ image2.onload = drawImageActualSize;
+ image2.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv10.png';
+
    //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
 
