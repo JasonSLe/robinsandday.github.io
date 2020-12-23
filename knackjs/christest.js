@@ -526,8 +526,12 @@ takePhotoButton.onclick = takePhoto;
     alert('aaaa')
     var imgToSave = document.getElementById(imgToSaveName);
     alert(imgToSaveName);
+    alert(imgToSave);
+    alert(img.src);
     imgToSave.src =  img.src;
+    alert('2')
     imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
+    alert('3')
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
     //Knack.showSpinner();
 
