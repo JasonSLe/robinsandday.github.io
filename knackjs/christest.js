@@ -523,11 +523,12 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
+    alert('aaaa')
     var imgToSave = document.getElementById(imgToSaveName);
+    alert(imgToSaveName);
     imgToSave.src =  img.src;
     imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
-alert('aaaa')
     //Knack.showSpinner();
 
     // DISABLE SAVE BUTTON
