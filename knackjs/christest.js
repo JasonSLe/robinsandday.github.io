@@ -223,7 +223,7 @@ const constraints = {
  const canvas2 = document.getElementById('cameraOverlayCanvas2');  
  const ctx2 = canvas2.getContext('2d');
  const image2 = new Image('naturalWidth', 'naturalHeight');
- image2.onload = drawImageActualSize;
+ image2.onload = drawImageActualSize2;
  image2.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv10.png';
 
    //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
@@ -261,6 +261,12 @@ imageBeforeResize.onload = () => {
    canvas.height = this.naturalHeight;
    ctx.drawImage(this, 0, 0);
  }
+
+ function drawImageActualSize2() {
+  canvas2.width = this.naturalWidth;
+  canvas2.height = this.naturalHeight;
+  ctx2.drawImage(this, 0, 0);
+}
 
  var go = () => {
    effect.show();
