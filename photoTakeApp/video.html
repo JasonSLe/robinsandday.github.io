@@ -63,7 +63,7 @@
     }
         
     function startCapture() {
-        const constraints = { video: true, audio: false };
+        const constraints = { video: {facingMode: {exact: "environment"}}, audio: false };
         navigator.mediaDevices.getUserMedia(constraints)
         .then((stream) => {
             cameraStream = stream;
