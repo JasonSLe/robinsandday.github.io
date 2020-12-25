@@ -44,6 +44,7 @@
 
     function processFrame() {
         let cameraPreview = document.getElementById("cameraPreview");
+        alert('aaa')
         
         processingPreview
             .getContext('2d')
@@ -66,10 +67,10 @@
         const constraints = { video: {facingMode: {exact: "environment"}}, audio: false };
         navigator.mediaDevices.getUserMedia(constraints)
         .then((stream) => {
-            cameraStream = stream;
+            //cameraStream = stream;
             
-            let processingPreview = document.getElementById("processingPreview");
-            processingStream = processingPreview.captureStream(FPS);
+            //let processingPreview = document.getElementById("processingPreview");
+            //processingStream = processingPreview.captureStream(FPS);
             /*
             mediaRecorder = new MediaRecorder(processingStream);
             mediaChunks = []
