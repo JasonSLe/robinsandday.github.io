@@ -42,9 +42,10 @@
     let mediaChunks = null;
     let processingPreviewIntervalId = null;
 
+    var processingPreview = document.getElementById("processingPreview");
+
     function processFrame() {
         let cameraPreview = document.getElementById("cameraPreview");
-        alert('aaa')
         
         processingPreview
             .getContext('2d')
@@ -69,7 +70,6 @@
         .then((stream) => {
             //cameraStream = stream;
             
-            //let processingPreview = document.getElementById("processingPreview");
             //processingStream = processingPreview.captureStream(FPS);
             /*
             mediaRecorder = new MediaRecorder(processingStream);
