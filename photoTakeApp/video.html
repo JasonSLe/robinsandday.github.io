@@ -68,9 +68,9 @@
         const constraints = { video: {facingMode: {exact: "environment"}}, audio: false };
         navigator.mediaDevices.getUserMedia(constraints)
         .then((stream) => {
-            //cameraStream = stream;
+            cameraStream = stream;
             
-            //processingStream = processingPreview.captureStream(FPS);
+            processingStream = processingPreview.captureStream(FPS);
             /*
             mediaRecorder = new MediaRecorder(processingStream);
             mediaChunks = []
@@ -107,13 +107,13 @@
                 track.stop();
             });
         }
-        
+        /*
         if(mediaRecorder != null) {
             if(mediaRecorder.state == "recording") {
                 mediaRecorder.stop();
             }
         }
-        
+        */
         if(processingPreviewIntervalId != null) {
             clearInterval(processingPreviewIntervalId);
             processingPreviewIntervalId = null;
