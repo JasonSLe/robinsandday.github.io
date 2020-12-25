@@ -70,7 +70,7 @@
             
             let processingPreview = document.getElementById("processingPreview");
             processingStream = processingPreview.captureStream(FPS);
-            
+            /*
             mediaRecorder = new MediaRecorder(processingStream);
             mediaChunks = []
             
@@ -82,7 +82,7 @@
             };
             
             mediaRecorder.start();
-            
+            */
             let cameraPreview = document.getElementById("cameraPreview");
             cameraPreview.srcObject = stream;
         
