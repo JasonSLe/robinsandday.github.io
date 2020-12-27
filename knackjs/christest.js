@@ -310,8 +310,8 @@ var canTakePhoto = false;
   }
   function getBetaDev(beta){
     if (beta > -90 && beta < 90) return 2*beta;
-    if (beta > 90) return 180 - 2*beta;
-    if (beta < -90) return -(180 + 2*beta);
+    if (beta > 90) return 2*(180 - beta);
+    if (beta < -90) return -2*(180 + beta);
   }
   $('#dev').text(beta+'#'+getBetaDev(beta));
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
