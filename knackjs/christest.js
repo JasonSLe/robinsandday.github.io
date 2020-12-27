@@ -311,9 +311,9 @@ var canTakePhoto = false;
   function getBetaDev(beta){
     return beta;
   }
-  $('#dev').text('calc(50% - '+(40+getBetaDev(beta))+'px);')
+  $('#dev').text('calc(50% - '+(40+getBetaDev(beta))+'px)');
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
-  circle.style.left = 'calc(50% - '+(40+getBetaDev(beta))+'px);'
+  circle.style.left = 'calc(50% - '+(40+getBetaDev(beta))+'px)';
   
   if(beta <=1 && beta >= -1)
   {
