@@ -309,9 +309,10 @@ var canTakePhoto = false;
     if (gamma>0) return -(90-gamma);
   }
   function getBetaDev(beta){
-    return beta;
+    if (beta > -90 && beta < 90) return 2*beta;
+    
   }
-  $('#dev').text('calc(50% - '+(40+getBetaDev(beta))+'px)');
+  $('#dev').text(beta);
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
   circle.style.left = 'calc(50% - '+(40+getBetaDev(beta))+'px)';
   
