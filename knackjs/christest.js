@@ -301,7 +301,7 @@ var canTakePhoto = false;
 
   if (isLandscape && beta) $("#cameraLine").show();
   if (isLandscape && gamma) circle.style.display = 'inline';
-  //$('#dev').text(gamma)
+  $('#dev').text(beta)
 
   function getGammaDev(gamma){
     //if (gamma<=-85) return 0;
