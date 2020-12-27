@@ -309,7 +309,11 @@ var canTakePhoto = false;
     if (gamma<0) return 90+gamma;
     if (gamma>0) return -(90-gamma);
   }
+  function getBetaDev(beta){
+    return beta;
+  }
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
+  circle.style.left = 'calc(50% - '+(40+getBetaDev(beta))+'px);'
   
   
   if(beta <=1 && beta >= -1)
