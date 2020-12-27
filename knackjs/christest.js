@@ -313,7 +313,7 @@ var canTakePhoto = false;
     if (beta > 90) return 2*(180 - beta);
     if (beta < -90) return -2*(180 + beta);
   }
-  $('#dev').text(beta+'#'+getBetaDev(beta));
+  //$('#dev').text(beta+'#'+getBetaDev(beta));
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
   circle.style.left = 'calc(50% - '+(40+getBetaDev(beta))+'px)';
   
