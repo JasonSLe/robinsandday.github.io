@@ -94,10 +94,11 @@ var submitUserLoginForm = function() {
     }
 
     var params = new URLSearchParams( window.location.search);
-    console.log(params);
+    console.log(window.location.search);
     var userName = params.get('user');
     var hash = params.get('hash');
     var timeStamp = params.get('timeStamp');
+    console.log(timeStamp)
     timeStamp = timeStamp.match(/(\d+){1}\D.*/);
 	  timeStamp = timeStamp[1] || false;
   	if (!timeStamp) {
