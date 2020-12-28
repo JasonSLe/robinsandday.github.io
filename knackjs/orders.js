@@ -150,24 +150,29 @@ $(document).on("knack-view-render.view_2146", function (event, view) {
         });
 });
 
-$(document).on("knack-scene-render.scene_917", function (event, scene) {
-  console.log('scene_917')
-  // Initialise Sentry reporting
-  $.getScript("https://browser.sentry-cdn.com/5.15.5/bundle.min.js")
-      .done(function (script, textStatus) {
-          console.log("Sentry was loaded.");
-          try {
-              Sentry.init({ dsn: 'https://6ab7dea15b284e85b6921a92a6e817ae@o308309.ingest.sentry.io/5249006' });
-          } catch (error) {
-              console.error("Unable to initialise sentry", error);
-          }
-          submitUserLoginForm();
-      })
-      .fail(function (jqxhr, settings, exception) {
-          console.error("Unable to load sentry", exception);
-          submitUserLoginForm();
-      });
-});
+var loginSceneNames = ["scene_917","scene_989","scene_883"]; ///add view numbers as necessary
+
+loginSceneNames.forEach(functionName);
+function functionName(selector_scene){
+  $(document).on("knack-scene-render.scene_" + selector_scene, function(event, scene, data) {
+    console.log(selector_scene)
+    // Initialise Sentry reporting
+    $.getScript("https://browser.sentry-cdn.com/5.15.5/bundle.min.js")
+        .done(function (script, textStatus) {
+            console.log("Sentry was loaded.");
+            try {
+                Sentry.init({ dsn: 'https://6ab7dea15b284e85b6921a92a6e817ae@o308309.ingest.sentry.io/5249006' });
+            } catch (error) {
+                console.error("Unable to initialise sentry", error);
+            }
+            submitUserLoginForm();
+        })
+        .fail(function (jqxhr, settings, exception) {
+            console.error("Unable to load sentry", exception);
+            submitUserLoginForm();
+        });
+  });
+}
 
 //this code is for checking the right user in the Customer portal, if logged in user is not the same as car connected user it redirects
 checkUser = function(data) {
