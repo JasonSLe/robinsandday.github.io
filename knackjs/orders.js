@@ -93,7 +93,7 @@ var submitUserLoginForm = function() {
         return;
     }
 
-    var params = new URLSearchParams(url.substr(46));
+    var params = new URLSearchParams( window.location.search);
     console.log(params);
     var userName = params.get('user');
     var hash = params.get('hash');
