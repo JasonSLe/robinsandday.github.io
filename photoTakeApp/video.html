@@ -71,7 +71,7 @@
             cameraStream = stream;
             
             processingStream = processingPreview.captureStream(FPS);
-            /*
+            
             mediaRecorder = new MediaRecorder(processingStream);
             mediaChunks = []
             
@@ -83,7 +83,7 @@
             };
             
             mediaRecorder.start();
-            */
+            
             let cameraPreview = document.getElementById("cameraPreview");
             cameraPreview.srcObject = stream;
         
@@ -107,13 +107,13 @@
                 track.stop();
             });
         }
-        /*
+        
         if(mediaRecorder != null) {
             if(mediaRecorder.state == "recording") {
                 mediaRecorder.stop();
             }
         }
-        */
+        
         if(processingPreviewIntervalId != null) {
             clearInterval(processingPreviewIntervalId);
             processingPreviewIntervalId = null;
