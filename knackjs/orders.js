@@ -99,7 +99,7 @@ var submitUserLoginForm = function() {
     var hash = params.get('hash');
     var timeStamp = params.get('timeStamp');
     //timeStamp = timeStamp.match(/(\d+){1}\D.*/);
-    console.log(timeStamp)
+    console.log('ttt'+timeStamp)
 	  //timeStamp = timeStamp[1] || false;
   	if (!timeStamp) {
       console.log({
