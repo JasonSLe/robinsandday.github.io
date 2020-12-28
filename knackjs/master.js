@@ -175,6 +175,14 @@ $(document).on('knack-view-render.view_2163', function(event, view, data) {
     $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+$(document).on('knack-view-render.view_1269', function(event, view, data) {
+  //getting the username = email from the field
+  var userName = Knack.getUserAttributes().email;
+  var timeStamp = Math.floor((new Date()).getTime() / 30000);
+  var hash = 'H' + hashCode('U' + userName + timeStamp)
+  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-digital-deal-file/" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 
 // ************************************************************************************************************************************************
 // ************Pete's Code to add menu toggle option on all pages aded 27/06/19**************************************************************
