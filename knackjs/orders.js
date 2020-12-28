@@ -154,7 +154,7 @@ var loginSceneNames = ["scene_917","scene_989","scene_883"]; ///add view numbers
 
 loginSceneNames.forEach(functionName);
 function functionName(selector_scene){
-  $(document).on("knack-scene-render.scene_" + selector_scene, function(event, scene, data) {
+  $(document).on("knack-scene-render." + selector_scene, function(event, scene, data) {
     console.log(selector_scene)
     // Initialise Sentry reporting
     $.getScript("https://browser.sentry-cdn.com/5.15.5/bundle.min.js")
