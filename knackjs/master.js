@@ -246,7 +246,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     toggleButton.addEventListener('click', toggleHeaderVisibility);
 
     // Always hide the header when rendering scene 860 - New Vehicle Order Tracking
-    if (scene.key == 'scene_860' && headerElement.style.display !== 'none') {
+    if ((scene.key == 'scene_860' || scene.key == 'scene_1269' || scene.key == 'scene_1271' || scene.key == 'scene_1273') && headerElement.style.display !== 'none') {
         if (window.matchMedia('(min-width: 768px)').matches !== false) {
             toggleHeaderVisibility();
         }
