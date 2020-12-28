@@ -98,8 +98,8 @@ var submitUserLoginForm = function() {
     var userName = params.get('user');
     var hash = params.get('hash');
     var timeStamp = params.get('timeStamp');
-    console.log(timeStamp)
     timeStamp = timeStamp.match(/(\d+){1}\D.*/);
+    console.log(timeStamp)
 	  timeStamp = timeStamp[1] || false;
   	if (!timeStamp) {
       console.log({
