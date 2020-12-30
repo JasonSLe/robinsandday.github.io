@@ -123,7 +123,7 @@ var submitUserLoginForm = function() {
       console.log({
         url, userName, hash, timeStamp
       });      
-        alert('OLD TIME STAMP');
+        //alert('OLD TIME STAMP');
         return;
     }
     //type userName from url, my secret password and click login
