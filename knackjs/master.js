@@ -1254,3 +1254,19 @@ $(document).on('knack-view-render.view_3910', function(event, view, data) {
   $('[class="kn-view kn-back-link"]').hide();
 	prepareCameraView(location.origin+"/digital#new-appraisal/retail-appraisal-aesthetic-condition/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_532','scene_1262/views/view_3911');
 });
+
+
+// refresh background replaced image at used vehicle check in - disposal selection page
+
+//****************** Show Alert & Refresh Digital Deal File Page 12 seconds after Invoice Retrieval ****************//
+
+$(document).on('knack-record-update.view_3926', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
+  
+  alert("Please wait while we process the image. Click 'OK' & this page will refresh in a few moments...");
+
+  Knack.showSpinner();
+  
+});
+
