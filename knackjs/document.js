@@ -274,7 +274,7 @@ takePhotoButton.onclick = takePhoto;
     rotateCanvas.height = img.width;
     rotateCanvas.width = img.height;
     let rotateCtx = rotateCanvas.getContext("2d"); 
-    rotateCtx.rotate(90);
+    rotateCtx.rotate(1.5707963267948966);
     rotateCtx.drawImage(img, -img.width / 2, -img.height / 2);
     rotateCtx.canvas.toBlob((blob) => {
         imgToSave.src = URL.createObjectURL(blob);
