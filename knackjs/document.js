@@ -268,11 +268,20 @@ takePhotoButton.onclick = takePhoto;
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
     var imgToSave = document.getElementById(imgToSaveName);
-    imgToSave.src =  img.src;
-    imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
+    
+    let rotateCanvas = document.createElement("canvas");
+    rotateCanvas.height = img.width;
+    rotateCanvas.width = img.height;
+    let rotateCtx = rotateCanvas.getContext("2d"); 
+    rotateCtx.rotate(90);
+    rotateCtx.drawImage(img, -img.width / 2, -img.height / 2);
+    rotateCtx.canvas.toBlob((blob) => {
+        imgToSave.src = URL.createObjectURL(blob);
+    }, 'image/jpeg', 1);
+    
+    //imgToSave.src =  img.src;
+    //imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
-    imgToSave.classList.remove('photoGrid');
-    imgToSave.classList.add('photoGridTaken');
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
 
