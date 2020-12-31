@@ -34,9 +34,11 @@ body {
   }
   
   #cameraGrid {
-    position: relative;
-    padding: auto;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    max-width: 100%;
   }
   
   
@@ -206,6 +208,15 @@ body {
     #cameraVid_container.left {
       left: 20%;
     }
+
+    #cameraGrid {
+        width: 80%;
+        height: 100%;
+      }
+    
+      #cameraGrid.left {
+        left: 20%;
+      }
   
     /* we default to right */
     #cameraGui_controls {
