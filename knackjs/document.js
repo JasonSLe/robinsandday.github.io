@@ -270,6 +270,7 @@ takePhotoButton.onclick = takePhoto;
     var imgToSave = document.getElementById(imgToSaveName);
 
     alert(img.width);
+    alert(video.videoHeight);
     let rotateCanvas = document.createElement("canvas");
     rotateCanvas.height = img.width;
     rotateCanvas.width = img.height;
