@@ -252,7 +252,8 @@ takePhotoButton.onclick = takePhoto;
 	    ctx.drawImage(video, 0, 0);
 	    ctx.canvas.toBlob((blob) => {
 	      	img.src = URL.createObjectURL(blob);
-	    }, 'image/jpeg', 1);
+        }, 'image/jpeg', 1);
+        alert('taken');
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
       });
