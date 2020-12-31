@@ -144,7 +144,7 @@ function prepareLayout(cameraView, takingPhoto){
             $("#takePhoto").hide();
         }
     } else {
-        $('#cameraPictureGallery').show();
+        $('#cameraDocGallery').show();
         $('#cameraTakePhotoDiv').hide();
         $('#cameraVid_container').hide();
         $('#cameraGrid').hide();
