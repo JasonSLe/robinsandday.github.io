@@ -238,13 +238,21 @@ takePhotoButton.onclick = takePhoto;
 
     if (OperatingSystem.Android()) {
       imageCapture.takePhoto().then(function(blob) {
+          /*
         console.log('Photo taken:', blob);
         //so I use the blob to the shown image but also for the imageBeforeResize, which when is loaded updates the shown image with smaller image
         //theoretically the blob can be given only to the imageBeforeResize, and it should then update them shown image but this approach shows the image sooner ...
         img.classList.remove('hidden');
         img.style.visibility = 'visible';
-        img.src = URL.createObjectURL(blob);
-        imageBeforeResize.src = URL.createObjectURL(blob);
+        img.src = URL.createObjectURL(blob);*/
+        var c = document.createElement('canvas');
+ 		c.width = video.videoWidth;
+		c.height = video.videoHeight;
+	    var ctx = c.getContext('2d');
+	    ctx.drawImage(video, 0, 0);
+	    ctx.canvas.toBlob((blob) => {
+	      	img.src = URL.createObjectURL(blob);
+	    }, 'image/jpeg', 1);
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
       });
@@ -252,12 +260,11 @@ takePhotoButton.onclick = takePhoto;
       	var c = document.createElement('canvas');
  		c.width = video.videoWidth;
 		c.height = video.videoHeight;
-	    	var ctx = c.getContext('2d');
-	    	ctx.drawImage(video, 0, 0);
+	    var ctx = c.getContext('2d');
+	    ctx.drawImage(video, 0, 0);
 	    ctx.canvas.toBlob((blob) => {
-        	imageBeforeResize.src = URL.createObjectURL(blob); //c.toDataURL('image/webp');
-	      	//img.src = URL.createObjectURL(blob);
-	  }, 'image/jpeg', 1);
+	      	img.src = URL.createObjectURL(blob);
+	    }, 'image/jpeg', 1);
     } else {
      	alert('unsuported system'); 
 	    alert(navigator.userAgent);
