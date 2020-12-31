@@ -271,9 +271,11 @@ takePhotoButton.onclick = takePhoto;
 
     alert('confimrS');
     let rotateCanvas = document.createElement("canvas");
-    rotateCanvas.height = img.naturalWidth;
-    rotateCanvas.width = img.naturalHeight;
+    rotateCanvas.height = img.width;
+    rotateCanvas.width = img.height;
     let rotateCtx = rotateCanvas.getContext("2d"); 
+    rotateCtx.clearRect(0,0,rotateCanvas.width,rotateCanvas.height);
+    rotateCtx.translate(img.height/2,img.width/2);
     rotateCtx.rotate(1.5707963267948966);
     rotateCtx.drawImage(img, -img.width / 2, -img.height / 2);
     rotateCtx.canvas.toBlob((blob) => {
