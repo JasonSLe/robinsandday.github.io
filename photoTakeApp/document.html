@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <title>Documents scan app</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            var nowS = Date.now().toString();
+
+            var style = document.createElement( 'link' );
+            style.rel = 'stylesheet';
+            style.type = 'text/css';
+            style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
+            document.getElementsByTagName( 'head' )[0].appendChild( style )
+        </script>
+        <script type="text/javascript" id='JS' src="https://robinsandday.github.io/knackjs/document.js?"></script>
+        <script>document.getElementById('JS').src = 'https://robinsandday.github.io/knackjs/document.js?'+nowS</script>
+    </head>
+    <body>
+        <div id="cameraDocGallery">
+            <button id="cameraCancelAll" name="cancel all" type="button">Cancel</button>
+            <span>Take document image</span>
+            <div><img id="cameraImg1" class="photoGrid"><img id="cameraImg2" class="photoGrid"><img id="cameraImg3" class="photoGrid"></div>
+            <div><img id="cameraImg4" class="photoGrid"><img id="cameraImg5" class="photoGrid"><img id="cameraImg6" class="photoGrid"></div>
+            <div><img id="cameraImg7" class="photoGrid"><img id="cameraImg8" class="photoGrid"><img id="cameraImg9" class="photoGrid"></div>   
+            <span id="cameraUploadInfo"></span><br>
+            <button id="cameraUploadOnce" type="button">Upload document</button>
+        </div>
+        <div id="cameraTakePhotoDiv">
+            <p id="cameraVid_container" style="display: none;">
+                <video autoplay="" playsinline="" class="hidden"></video>
+            </p>
+            <p id="cameraGrid" style="display: none;">
+                <img id="cameraFrontpic">
+                <img id="cameraCompare" src="https://raw.githubusercontent.com/christiankasongo/Picture_Overlay/master/car.png">
+                <a id="cameraText">Does your photo match the guide?</a>
+            </p>
+            <p id="cameraGui_controls" style="display: none;">
+                <button id="takePhoto" class="cameraButton"></button>
+                <button id="cameraExit" name="exit photo" type="button" class="cameraButton"></button>
+                <button id="cameraRetake" name="retake photo" type="button" class="cameraButton"></button>
+                <button id="cameraConfirm" name="confirm photo" type="button" class="cameraButton"></button>
+                <!--<span id="dev" class="cameraButton">DEV INFO</span>-->
+            </p>
+        </div>
+    </body>
+</html>
