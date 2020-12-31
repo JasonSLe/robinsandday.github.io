@@ -361,16 +361,7 @@ function prepareFileView(){
 }
 
 function prepareFileViewOnce(){
-  for (let i =1;i<10;i++){
-    $('#cameraImg'+i).attr('src','https://robinsandday.github.io/guideImages/2008_'+i+'.jpg');
-  }
 
-  for (let i = 1;i<10;i++){
-    let tmpImg = document.getElementById('cameraImg'+i);
-    tmpImg.onclick = function() {
-        prepareCameraView('cameraImg'+i);
-    }
-  }
 }
 
 function uploadImages(infoText){
