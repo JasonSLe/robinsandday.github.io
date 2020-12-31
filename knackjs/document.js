@@ -120,7 +120,6 @@ function prepareLayout(cameraView, takingPhoto){
             $('video').show();
             $("#cameraRetake").hide();
             $("#cameraConfirm").hide();
-            $("#cameraCompare").hide();
             $("#cameraText").hide();
             $("#takePhoto").show();
         } else {
@@ -129,7 +128,6 @@ function prepareLayout(cameraView, takingPhoto){
 
             //DISPLAY COMPARISION CONTENT
             $('#cameraGrid').show();
-            $("#cameraCompare").show();
             $("#cameraText").show();
 
             //SHOW RETAKLE AND CONFIORM BUTTON

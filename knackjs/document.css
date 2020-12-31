@@ -35,9 +35,6 @@ body {
   
   #cameraGrid {
     position: relative;
-    display: grid;
-    grid-template-columns: 40% 40%;
-    grid-gap: 6px;
     padding: auto;
     align-items: center;
   }
@@ -50,11 +47,6 @@ body {
     color: #fafafa;
     text-decoration: none;
     padding: 0px;
-  }
-  
-  #cameraCompare {
-    max-width: 100%;
-    height: auto;
   }
   
   #cameraFrontpic {
