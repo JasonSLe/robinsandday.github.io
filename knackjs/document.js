@@ -269,14 +269,14 @@ takePhotoButton.onclick = takePhoto;
   confirmButton.onclick = function() {
     var imgToSave = document.getElementById(imgToSaveName);
 
-    alert('confimrS');
+    alert(img.width);
     let rotateCanvas = document.createElement("canvas");
     rotateCanvas.height = img.width;
     rotateCanvas.width = img.height;
     let rotateCtx = rotateCanvas.getContext("2d"); 
     rotateCtx.clearRect(0,0,rotateCanvas.width,rotateCanvas.height);
     rotateCtx.translate(img.height/2,img.width/2);
-    rotateCtx.rotate(1.5707963267948966);
+    rotateCtx.rotate(270*Math.PI/180);
     rotateCtx.drawImage(img, -img.width / 2, -img.height / 2);
     rotateCtx.canvas.toBlob((blob) => {
         imgToSave.src = URL.createObjectURL(blob);
