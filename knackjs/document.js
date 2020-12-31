@@ -268,7 +268,8 @@ takePhotoButton.onclick = takePhoto;
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
     var imgToSave = document.getElementById(imgToSaveName);
-    
+
+    alert('confimrS');
     let rotateCanvas = document.createElement("canvas");
     rotateCanvas.height = img.width;
     rotateCanvas.width = img.height;
@@ -278,7 +279,7 @@ takePhotoButton.onclick = takePhoto;
     rotateCtx.canvas.toBlob((blob) => {
         imgToSave.src = URL.createObjectURL(blob);
     }, 'image/jpeg', 1);
-    
+    alert('confimrA');
     //imgToSave.src =  img.src;
     //imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
