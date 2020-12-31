@@ -348,6 +348,7 @@ var photosTaken = 0;
 function prepareFileView(){
   cameraView = false;
   prepareLayout(cameraView, takingPhoto);
+  if (photosTaken === 0) {$('#cameraUploadOnce').hide()} else {$('#cameraUploadOnce').show()}
 }
 
 function prepareFileViewOnce(){
