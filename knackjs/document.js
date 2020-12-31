@@ -356,16 +356,9 @@ function prepareFileViewOnce(){
         prepareCameraView('cameraImg'+(photosTaken+1));
     }
 
-    document.getElementById('cameraUploadBackground').onchange = function(){
-        if (this.checked){
-          $('#cameraUploadOnce').hide();
-        } else {
-          $('#cameraUploadOnce').show();
-        }
-      }
-      document.getElementById('cameraUploadOnce').onclick = function(){
+    document.getElementById('cameraUploadOnce').onclick = function(){
         uploadImages('cameraUploadInfo');
-      }
+    }
 }
 
 function uploadImages(infoText){
