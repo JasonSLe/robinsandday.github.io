@@ -271,8 +271,8 @@ takePhotoButton.onclick = takePhoto;
 
     alert('confimrS');
     let rotateCanvas = document.createElement("canvas");
-    rotateCanvas.height = img.width;
-    rotateCanvas.width = img.height;
+    rotateCanvas.height = img.naturalWidth;
+    rotateCanvas.width = img.naturalHeight;
     let rotateCtx = rotateCanvas.getContext("2d"); 
     rotateCtx.rotate(1.5707963267948966);
     rotateCtx.drawImage(img, -img.width / 2, -img.height / 2);
