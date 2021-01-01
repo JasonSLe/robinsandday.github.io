@@ -209,7 +209,7 @@ const constraints = {
     //advanced: [{zoom:2.0}]
   };
 
-  navigator.mediaDevices.getUserMedia({video: {pan: true, zoom: true, facingMode: {exact: "environment"}}
+  navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
 
@@ -237,18 +237,20 @@ takePhotoButton.onclick = takePhoto;
     //sndCameraTakePhoto.currentTime=0;
 
     if (OperatingSystem.Android()) {
+        /*
         var c = document.createElement('canvas');
         c.width = video.videoWidth;
        c.height = video.videoHeight;
-       alert(video.videoWidt);
+       alert(video.videoWidth);
        var ctx = c.getContext('2d');
        ctx.drawImage(video, 0, 0);
        alert('sfterDraw');
        ctx.canvas.toBlob((blob) => {
             alert(blob);
-             img.src = URL.createObjectURL(blob);
+            img.src = URL.createObjectURL(blob);
        }, 'image/jpeg', 1);
-       /*
+       */
+       
       imageCapture.takePhoto().then(function(blob) {
         //so I use the blob to the shown image but also for the imageBeforeResize, which when is loaded updates the shown image with smaller image
         //theoretically the blob can be given only to the imageBeforeResize, and it should then update them shown image but this approach shows the image sooner ...
@@ -257,7 +259,7 @@ takePhotoButton.onclick = takePhoto;
         img.src = URL.createObjectURL(blob);
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
-      });*/
+      });
     } else if (OperatingSystem.iOS()) {
       	var c = document.createElement('canvas');
  		c.width = video.videoWidth;
