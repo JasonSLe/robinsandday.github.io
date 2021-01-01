@@ -120,6 +120,7 @@ function prepareLayout(cameraView, takingPhoto){
             $("#cameraExit").show();
             $("#cameraRetake").hide();
             $("#cameraConfirm").hide();
+            $('#cameraGrid').hide();
             $("#cameraText").hide();
             $("#takePhoto").show();
         } else {
