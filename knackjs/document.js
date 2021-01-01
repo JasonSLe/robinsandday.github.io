@@ -291,7 +291,7 @@ takePhotoButton.onclick = takePhoto;
     let rotateCtx = rotateCanvas.getContext("2d"); 
     //rotateCtx.clearRect(0,0,rotateCanvas.width,rotateCanvas.height);
     //rotateCtx.translate(img.height/2,img.width/2);
-    rotateCtx.translate(0, iw);
+    rotateCtx.translate(0, img.naturalWidth);
     rotateCtx.rotate(-90*Math.PI/180);
     rotateCtx.drawImage(img, 0, 0);
     rotateCtx.canvas.toBlob((blob) => {
