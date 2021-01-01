@@ -358,6 +358,10 @@ function prepareFileView(){
 function prepareFileViewOnce(){
     let cameraTakePhoto = document.getElementById('cameraTakePhoto');
     cameraTakePhoto.onclick = function() {
+        var newImg = document.createElement('img');
+        newImg.id = 'cameraImg'+(photosTaken+1);
+        newImg.class="photoGrid";
+        document.getElementById("cameraTakenPhotos").appendChild(newImg);
         prepareCameraView('cameraImg'+(photosTaken+1));
     }
 
