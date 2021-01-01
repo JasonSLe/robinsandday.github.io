@@ -212,6 +212,40 @@ body {
       top: calc(82% - 32px);
     }
   }
+
+  @media screen and (orientation: portrait) {
+
+    /* portrait-specific styles */
+    /* video_container (video) doesn't respect height...
+         so we will fill it in completely in portrait mode
+      */
+    #cameraVideo_overlay {
+      width: 100%;
+      height: 80%;
+    }
+  
+    #cameraGui_controls {
+      top: 0;
+      width: 100%;
+      height: 20%;
+      left: 0;
+    }
+  
+    #cameraConfirm {
+      left: calc(20% - 32px);
+      top: calc(50% - 32px);
+    }
+  
+    #cameraRetake {
+      left: calc(80% - 32px);
+      top: calc(50% - 32px);
+    }
+  
+    #cameraExit {
+      left: calc(20% - 32px);
+      top: calc(50% - 32px);
+    }
+  }
   
   
   @media only screen and (min-width: 667px) and (max-width: 897px) and (orientation: landscape){
