@@ -11,6 +11,10 @@
             style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
             document.getElementsByTagName( 'head' )[0].appendChild( style )
 
+            function afterScriptLoad(){
+                afterLoad();
+            }
+
             function loadScript(src, callback)
                 {
                 var script,
@@ -27,7 +31,7 @@
                 scriptTag = document.getElementsByTagName('script')[0];
                 scriptTag.parentNode.insertBefore(script, sriptTag);
                 }
-            loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,afterLoad);
+            loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,afterScriptLoad);
         </script>
     </head>
     <body>
