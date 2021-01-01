@@ -193,8 +193,10 @@ body {
   }
 
   video {
-    object-fit: fill;
-}
+    width:100%;
+    height:auto;
+    max-height:100%
+  }
   
   @media screen and (orientation: landscape) {
     #cameraVid_container {
