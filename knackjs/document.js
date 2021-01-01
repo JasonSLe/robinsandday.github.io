@@ -233,7 +233,6 @@ sndCameraTakePhoto.load();
 
 takePhotoButton.onclick = takePhoto;
   function takePhoto() {
-    alert($('cameraVid_container').width);
     sndCameraTakePhoto.play();
     //sndCameraTakePhoto.currentTime=0;
 
