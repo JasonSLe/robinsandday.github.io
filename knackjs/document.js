@@ -237,21 +237,7 @@ takePhotoButton.onclick = takePhoto;
     sndCameraTakePhoto.play();
     //sndCameraTakePhoto.currentTime=0;
 
-    if (OperatingSystem.Android()) {
-        /*
-        var c = document.createElement('canvas');
-        c.width = video.videoWidth;
-       c.height = video.videoHeight;
-       alert(video.videoWidth);
-       var ctx = c.getContext('2d');
-       ctx.drawImage(video, 0, 0);
-       alert('sfterDraw');
-       ctx.canvas.toBlob((blob) => {
-            alert(blob);
-            img.src = URL.createObjectURL(blob);
-       }, 'image/jpeg', 1);
-       */
-       
+    if (OperatingSystem.Android()) {     
       imageCapture.takePhoto().then(function(blob) {
         //so I use the blob to the shown image but also for the imageBeforeResize, which when is loaded updates the shown image with smaller image
         //theoretically the blob can be given only to the imageBeforeResize, and it should then update them shown image but this approach shows the image sooner ...
@@ -283,22 +269,16 @@ takePhotoButton.onclick = takePhoto;
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
     var imgToSave = document.getElementById(imgToSaveName);
-
-    alert(img.naturalHeight);
-    alert(video.videoHeight);
     let rotateCanvas = document.createElement("canvas");
     rotateCanvas.height = img.naturalWidth;
     rotateCanvas.width = img.naturalHeight;
     let rotateCtx = rotateCanvas.getContext("2d"); 
-    //rotateCtx.clearRect(0,0,rotateCanvas.width,rotateCanvas.height);
-    //rotateCtx.translate(img.height/2,img.width/2);
     rotateCtx.translate(0, img.naturalWidth);
     rotateCtx.rotate(-90*Math.PI/180);
     rotateCtx.drawImage(img, 0, 0);
     rotateCtx.canvas.toBlob((blob) => {
         imgToSave.src = URL.createObjectURL(blob);
     }, 'image/jpeg', 1);
-    alert('confimrA');
     //imgToSave.src =  img.src;
     //imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
