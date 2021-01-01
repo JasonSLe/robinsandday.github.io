@@ -111,9 +111,9 @@
 function prepareLayout(cameraView, takingPhoto){
     if (cameraView){
         $('#cameraTakePhotoDiv').show();
+        $('#cameraDocGallery').hide();
         if (takingPhoto){
             $('#videoElement').show();
-            $('#cameraDocGallery').hide();
             $('#cameraVid_container').show();
             $('#cameraGui_controls').show();
             $("#cameraConfirm").attr("disabled", false);
