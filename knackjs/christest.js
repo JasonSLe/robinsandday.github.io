@@ -269,7 +269,8 @@ imageBeforeResize.onload = () => {
 }
 
  var go = () => {
-   effect.show();
+   //effect.show();
+   effect.hide();
    if(!interval) { // if `interval` is equal to 0     
     interval = setInterval(function () {
        effect.fadeIn(1500, function () {
