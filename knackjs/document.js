@@ -371,13 +371,14 @@ function prepareFileViewOnce(){
 }
 
 function uploadImages(infoText){
-  alert('gen1')
+  alert('gen2')
   var jsPDF = window.jspdf.jsPDF;
   var doc = new jsPDF("p", "mm", "a4");
 
   var pdfWidth = doc.internal.pageSize.getWidth();
   var pdfHeight = doc.internal.pageSize.getHeight();
-
+  alert(pdfWidth);
+  alert($('#cameraImg1').attr('src'));
   doc.addImage($('#cameraImg1').attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight)
   doc.output("dataurlnewwindow");
 
