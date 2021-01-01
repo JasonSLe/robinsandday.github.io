@@ -233,9 +233,6 @@ sndCameraTakePhoto.load();
 
 takePhotoButton.onclick = takePhoto;
   function takePhoto() {
-    sndCameraTakePhoto.play();
-    //sndCameraTakePhoto.currentTime=0;
-
     if (OperatingSystem.Android()) {     
       imageCapture.takePhoto().then(function(blob) {
         //so I use the blob to the shown image but also for the imageBeforeResize, which when is loaded updates the shown image with smaller image
@@ -259,6 +256,9 @@ takePhotoButton.onclick = takePhoto;
      	alert('unsuported system'); 
 	    alert(navigator.userAgent);
     }
+    
+    sndCameraTakePhoto.play();
+    //sndCameraTakePhoto.currentTime=0;
 
     takingPhoto = false;
     prepareLayout(cameraView, takingPhoto);
