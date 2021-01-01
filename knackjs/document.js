@@ -372,7 +372,7 @@ function prepareFileViewOnce(){
 }
 
 function uploadImages(infoText){
-  alert('gen9')
+  alert('gen10')
   var jsPDF = window.jspdf.jsPDF;
   var doc = new jsPDF("p", "mm", "a4");
 
@@ -384,7 +384,7 @@ function uploadImages(infoText){
     alert(i)
     doc.addPage("a4","portrait");
     alert($('#cameraImg'+i).attr('src'))
-    doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', pdfHeight*(i-1), 0, pdfWidth, pdfHeight);
+    doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', -pdfHeight*(i-1), 0, pdfWidth, pdfHeight);
   }
   doc.save("HTML-Document.pdf");
 
