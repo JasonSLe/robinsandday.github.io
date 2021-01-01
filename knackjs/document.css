@@ -32,6 +32,7 @@ body {
     left: 0;
     background: #000;
     max-width: 100%;
+    margin: auto;
   }
   
   
@@ -246,20 +247,6 @@ body {
       top: calc(50% - 32px);
     }
   }
-  
-  
-  @media only screen and (min-width: 667px) and (max-width: 897px) and (orientation: landscape){
-  #cameraText {
-    font-size: 20px;
-  }
-    
-  }
-  
-  @media only screen and (min-width: 898px) and (orientation: landscape){
-       #cameraGrid {
-    grid-template-columns: 45% 45%;
-  }
-  
   
   #cameraText {
     font-size: 20px;
