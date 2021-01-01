@@ -326,7 +326,7 @@ var canTakePhoto = false;
   {
     line.style.backgroundColor = 'red';
   }
-  if(Math.abs(getBetaDev(beta) < 4) && Math.abs(getGammaDev(gamma)) < 2){
+  if(Math.abs(getBetaDev(beta) < 6) && Math.abs(getGammaDev(gamma)) < 3){
     $("#takePhoto").removeAttr('disabled');
     //$('#dev').text('enabl5x'+canTakePhoto);
     if (!OperatingSystem.iOS() && !canTakePhoto) window.navigator.vibrate(50);
