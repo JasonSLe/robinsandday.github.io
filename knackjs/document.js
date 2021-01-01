@@ -275,6 +275,7 @@ takePhotoButton.onclick = takePhoto;
     //var imgToSave = document.getElementById(imgToSaveName);
     let outputCanvas = document.createElement("canvas");
     let outputCtx = outputCanvas.getContext("2d"); 
+    alert(img.naturalWidth+'/'+img.naturalHeight);
     if (img.naturalWidth>img.naturalHeight){
       outputCanvas.height = img.naturalWidth;
       outputCanvas.width = img.naturalHeight;
