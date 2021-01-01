@@ -284,7 +284,6 @@ takePhotoButton.onclick = takePhoto;
         imgToSave.src = URL.createObjectURL(blob);
     }, 'image/jpeg', 1);*/
     imgToSave.src = rotateCtx.canvas.toDataURL("image/jpeg", 1.0);
-    alert(imgToSave.src);
     //imgToSave.src =  img.src;
     //imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
@@ -373,15 +372,15 @@ function prepareFileViewOnce(){
 }
 
 function uploadImages(infoText){
-  alert('gen4')
+  alert('gen5')
   var jsPDF = window.jspdf.jsPDF;
   var doc = new jsPDF("p", "mm", "a4");
 
   var pdfWidth = doc.internal.pageSize.getWidth();
   var pdfHeight = doc.internal.pageSize.getHeight();
-  alert($('#cameraImg1').attr('src'));
   doc.addImage($('#cameraImg1').attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight)
-  doc.output("dataurlnewwindow");
+  //doc.output("dataurlnewwindow");
+  doc.save("HTML-Document.pdf");
 
   return;
   var token = getTokenFromApify('apiaccount');
