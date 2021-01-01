@@ -381,7 +381,9 @@ function uploadImages(infoText){
   doc.addImage($('#cameraImg1').attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight)
   //doc.output("dataurlnewwindow");
   for (let i = 2; i <= photosTaken; i++) { 
-    doc.addPage(pdfWidth, pdfHeight );
+    alert(i)
+    doc.addPage(pdfWidth, pdfHeight);
+    alert($('#cameraImg'+i).attr('src'))
     doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight);
   }
   doc.save("HTML-Document.pdf");
