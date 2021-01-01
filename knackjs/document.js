@@ -360,7 +360,7 @@ function prepareFileViewOnce(){
     cameraTakePhoto.onclick = function() {
         var newImg = document.createElement('img');
         newImg.id = 'cameraImg'+(photosTaken+1);
-        newImg.class="photoGrid";
+        newImg.classList.add("photoGrid");
         document.getElementById("cameraTakenPhotos").appendChild(newImg);
         prepareCameraView('cameraImg'+(photosTaken+1));
     }
