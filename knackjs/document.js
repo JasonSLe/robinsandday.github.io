@@ -283,9 +283,8 @@ takePhotoButton.onclick = takePhoto;
     /*rotateCtx.canvas.toBlob((blob) => {
         imgToSave.src = URL.createObjectURL(blob);
     }, 'image/jpeg', 1);*/
-    rotateCtx.canvas.toDataURL((url) => {
-      imgToSave.src = url;
-    }, 'image/jpeg', 1);
+    imgToSave.src = rotateCtx.canvas.toDataURL("image/jpeg", 1.0);
+    alert(imgToSave.src);
     //imgToSave.src =  img.src;
     //imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
