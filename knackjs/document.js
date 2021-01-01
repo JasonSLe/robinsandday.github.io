@@ -250,7 +250,9 @@ takePhotoButton.onclick = takePhoto;
 	    var ctx = c.getContext('2d');
 	    ctx.drawImage(video, 0, 0);
 	    ctx.canvas.toBlob((blob) => {
-	      	img.src = URL.createObjectURL(blob);
+        img.classList.remove('hidden');
+        img.style.visibility = 'visible';
+	      img.src = URL.createObjectURL(blob);
 	    }, 'image/jpeg', 1);
     } else {
      	alert('unsuported system'); 
