@@ -273,19 +273,20 @@ takePhotoButton.onclick = takePhoto;
     document.getElementById("cameraTakenPhotos").appendChild(imgToSave);
     photosTaken += 1;
     //var imgToSave = document.getElementById(imgToSaveName);
-    let rotateCanvas = document.createElement("canvas");
-    rotateCanvas.height = img.naturalWidth;
-    rotateCanvas.width = img.naturalHeight;
-    let rotateCtx = rotateCanvas.getContext("2d"); 
-    rotateCtx.translate(0, img.naturalWidth);
-    rotateCtx.rotate(-90*Math.PI/180);
-    rotateCtx.drawImage(img, 0, 0);
-    /*rotateCtx.canvas.toBlob((blob) => {
-        imgToSave.src = URL.createObjectURL(blob);
-    }, 'image/jpeg', 1);*/
-    imgToSave.src = rotateCtx.canvas.toDataURL("image/jpeg", 1.0);
-    //imgToSave.src =  img.src;
-    //imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
+    let outputCanvas = document.createElement("canvas");
+    let outputCtx = outputCanvas.getContext("2d"); 
+    if (img.naturalWidth>img.naturalHeight){
+      outputCanvas.height = img.naturalWidth;
+      outputCanvas.width = img.naturalHeight;
+      outputCtx.translate(0, img.naturalWidth);
+      outputCtx.rotate(-90*Math.PI/180);
+      outputCtx.drawImage(img, 0, 0);
+    } else {
+      outputCanvas.height = img.naturalHeight;
+      outputCanvas.width = img.naturalWidth;
+      outputCtx.drawImage(img, 0, 0);
+    }
+    imgToSave.src = outputCtx.canvas.toDataURL("image/jpeg", 1.0);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
