@@ -223,10 +223,11 @@ body {
     #cameraVid_container {
       width: auto;
       height: 80%;
+      top: 20%
     }
   
     #cameraGui_controls {
-      top: 80%;
+      top: 0;
       width: 100%;
       height: 20%;
       left: 0;
@@ -235,9 +236,6 @@ body {
     #cameraGrid {
       width: 100%;
       height: 80%;
-    }
-  
-    #cameraGrid.left {
       top: 20%;
     }
   
