@@ -223,6 +223,7 @@ body {
     #cameraVid_container {
       width: auto;
       height: 80%;
+      top: 20%;
     }
   
     #cameraGui_controls {
