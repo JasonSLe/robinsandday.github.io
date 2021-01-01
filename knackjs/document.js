@@ -374,7 +374,7 @@ function prepareFileViewOnce(){
 }
 
 function uploadImages(infoText){
-  alert('gen3')
+  alert('gen4')
   var jsPDF = window.jspdf.jsPDF;
   var doc = new jsPDF("p", "mm", "a4");
 
