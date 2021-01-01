@@ -112,19 +112,19 @@ function prepareLayout(cameraView, takingPhoto){
     if (cameraView){
         $('#cameraTakePhotoDiv').show();
         if (takingPhoto){
+            $('#videoElement').show();
             $('#cameraDocGallery').hide();
             $('#cameraVid_container').show();
             $('#cameraGui_controls').show();
             $("#cameraConfirm").attr("disabled", false);
             $("#cameraExit").show();
-            $('video').show();
             $("#cameraRetake").hide();
             $("#cameraConfirm").hide();
             $("#cameraText").hide();
             $("#takePhoto").show();
         } else {
             //HIDE VIDEO & OVERLAY ELEMENT
-            $('video').hide();
+            $('#videoElement').hide();
 
             //DISPLAY COMPARISION CONTENT
             $('#cameraGrid').show();
