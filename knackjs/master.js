@@ -747,10 +747,10 @@ function eraseCookie(name) {
   }
 
   async function uploadImage(app_id, imgUrl) {
-    var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
+    var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/image/upload';
     var headers = {
       'X-Knack-Application-ID': app_id,
-      'X-Knack-REST-API-Key': `knack`,
+      'X-Knack-REST-API-Key': 'knack',
     };
     var form = new FormData();
 
@@ -790,7 +790,7 @@ function eraseCookie(name) {
   function getTokenFromApify() {
     var token = $.ajax({
       url: 'https://api.apify.com/v2/key-value-stores/2qbFRKmJ2qME8tYAD/records/photoapi1_token_open?disableRedirect=true',
-      type: `GET`,
+      type: 'GET',
       async: false
     }).responseText;
     if (!token) return '';
@@ -807,7 +807,7 @@ function eraseCookie(name) {
 
     var rData2 = $.ajax({
       url: 'https://api.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
-      type: `PUT`,
+      type: 'PUT',
       headers: headersForSecureView,
       contentType: 'application/json',
       data: dataF,
@@ -831,7 +831,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // *****************************************************************************************************************************
   var go = () => {
     effect.show();
-    if(interval===0) { // if `interval` is equal to 0     
+    if(interval===0) { // if interval is equal to 0     
       interval = setInterval(function () {
           effect.fadeIn(1500, function () {
             effect.fadeOut(1500);
