@@ -378,6 +378,7 @@ function uploadImages(infoText){
   doc.text(35, 25, 'Paranyan loves jsPDF')
   doc.addImage(imgData, 'JPEG', 15, 40, 180, 160)
   doc.output("dataurlnewwindow");
+  doc.save('test.pdf');
 
   return;
   var token = getTokenFromApify('apiaccount');
