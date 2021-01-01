@@ -221,7 +221,7 @@ body {
          so we will fill it in completely in portrait mode
       */
     #cameraVid_container {
-      width: 100%;
+      width: auto;
       height: 80%;
     }
   
