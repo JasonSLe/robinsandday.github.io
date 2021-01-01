@@ -382,7 +382,7 @@ function uploadImages(infoText){
   //doc.output("dataurlnewwindow");
   for (let i = 2; i <= photosTaken; i++) { 
     alert(i)
-    doc.addPage(pdfWidth, pdfHeight);
+    doc.addPage("a4","portrait");
     alert($('#cameraImg'+i).attr('src'))
     doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', pdfHeight*(i-1), 0, pdfWidth, pdfHeight);
   }
