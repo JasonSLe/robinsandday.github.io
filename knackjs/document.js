@@ -267,7 +267,12 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
-    var imgToSave = document.getElementById(imgToSaveName);
+    var imgToSave = document.createElement('img');
+    imgToSave.id = 'imgToSaveName';
+    imgToSave.classList.add("photoGrid");
+    document.getElementById("cameraTakenPhotos").appendChild(imgToSave);
+    photosTaken += 1;
+    //var imgToSave = document.getElementById(imgToSaveName);
     let rotateCanvas = document.createElement("canvas");
     rotateCanvas.height = img.naturalWidth;
     rotateCanvas.width = img.naturalHeight;
@@ -278,7 +283,6 @@ takePhotoButton.onclick = takePhoto;
     rotateCtx.canvas.toBlob((blob) => {
         imgToSave.src = URL.createObjectURL(blob);
     }, 'image/jpeg', 1);
-    photosTaken += 1;
     //imgToSave.src =  img.src;
     //imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
@@ -358,10 +362,6 @@ function prepareFileView(){
 function prepareFileViewOnce(){
     let cameraTakePhoto = document.getElementById('cameraTakePhoto');
     cameraTakePhoto.onclick = function() {
-        var newImg = document.createElement('img');
-        newImg.id = 'cameraImg'+(photosTaken+1);
-        newImg.classList.add("photoGrid");
-        document.getElementById("cameraTakenPhotos").appendChild(newImg);
         prepareCameraView('cameraImg'+(photosTaken+1));
     }
 
