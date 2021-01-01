@@ -244,9 +244,9 @@ takePhotoButton.onclick = takePhoto;
         console.log('takePhoto() error: ', error);
       });
     } else if (OperatingSystem.iOS()) {
-      	var c = document.createElement('canvas');
- 		c.width = video.videoWidth;
-		c.height = video.videoHeight;
+      var c = document.createElement('canvas');
+ 		  c.width = video.videoWidth;
+		  c.height = video.videoHeight;
 	    var ctx = c.getContext('2d');
 	    ctx.drawImage(video, 0, 0);
 	    ctx.canvas.toBlob((blob) => {
