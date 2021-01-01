@@ -431,10 +431,7 @@ function uploadImages(infoText){
   }
 }
 
-alert('bbbb');
-
 function afterLoad(){
-  alert('aaa')
   prepareFileViewOnce();
   prepareFileView();
 }
