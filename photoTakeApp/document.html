@@ -10,9 +10,25 @@
             style.type = 'text/css';
             style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
             document.getElementsByTagName( 'head' )[0].appendChild( style )
+
+            function loadScript(src, callback)
+                {
+                var script,
+                    scriptTag;
+                script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = src;
+                script.onload = script.onreadystatechange = function() {
+                    if (!this.readyState || this.readyState == 'complete' )
+                    {
+                    callback();
+                    }
+                };
+                scriptTag = document.getElementsByTagName('script')[0];
+                scriptTag.parentNode.insertBefore(script, sriptTag);
+                }
+            loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,afterLoad);
         </script>
-        <script type="text/javascript" id='JS' src="https://robinsandday.github.io/knackjs/document.js?ff"></script>
-        <script>document.getElementById('JS').src = 'https://robinsandday.github.io/knackjs/document.js?'+nowS</script>
     </head>
     <body>
         <div id="cameraDocGallery">
