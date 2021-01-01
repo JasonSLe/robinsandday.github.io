@@ -280,8 +280,11 @@ takePhotoButton.onclick = takePhoto;
     rotateCtx.translate(0, img.naturalWidth);
     rotateCtx.rotate(-90*Math.PI/180);
     rotateCtx.drawImage(img, 0, 0);
-    rotateCtx.canvas.toBlob((blob) => {
+    /*rotateCtx.canvas.toBlob((blob) => {
         imgToSave.src = URL.createObjectURL(blob);
+    }, 'image/jpeg', 1);*/
+    rotateCtx.canvas.toDataURL((url) => {
+      imgToSave.src = url;
     }, 'image/jpeg', 1);
     //imgToSave.src =  img.src;
     //imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
