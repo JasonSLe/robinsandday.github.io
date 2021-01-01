@@ -219,7 +219,7 @@ body {
     /* video_container (video) doesn't respect height...
          so we will fill it in completely in portrait mode
       */
-    #cameraVideo_overlay {
+    #cameraVid_container {
       width: 100%;
       height: 80%;
     }
