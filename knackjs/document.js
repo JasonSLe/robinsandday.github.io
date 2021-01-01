@@ -268,7 +268,7 @@ takePhotoButton.onclick = takePhoto;
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
     var imgToSave = document.createElement('img');
-    imgToSave.id = 'imgToSaveName';
+    imgToSave.id = imgToSaveName;
     imgToSave.classList.add("photoGrid");
     document.getElementById("cameraTakenPhotos").appendChild(imgToSave);
     photosTaken += 1;
