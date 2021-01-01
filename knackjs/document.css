@@ -157,40 +157,6 @@ body {
   #cameraConfirm:active {
     background-color: #fafafa;
   }
-  
-  @media screen and (orientation: portrait) {
-  
-    /* portrait-specific styles */
-    /* video_container (video) doesn't respect height...
-         so we will fill it in completely in portrait mode
-      */
-    #cameraVid_container {
-      width: 100%;
-      height: 80%;
-    }
-  
-    #cameraGui_controls {
-      top: 0;
-      width: 100%;
-      height: 20%;
-      left: 0;
-    }
-  
-    #cameraConfirm {
-      left: calc(20% - 32px);
-      top: calc(50% - 32px);
-    }
-  
-    #cameraRetake {
-      left: calc(80% - 32px);
-      top: calc(50% - 32px);
-    }
-  
-    #cameraExit {
-      left: calc(20% - 32px);
-      top: calc(50% - 32px);
-    }
-  }
 
   video {
     width:100%;
