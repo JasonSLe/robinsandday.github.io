@@ -19,7 +19,7 @@
     form.append('files', fileBlob, fileName);
 
     try {
-      $.ajax({
+      var rData = $.ajax({
         url: url,
         type: 'POST',
         headers: headers,
@@ -28,22 +28,22 @@
         mimeType: 'multipart/form-data',
         data: form,
         async: false
-      }).then(function(rData){
-          try {
-            var rDataP = JSON.parse(rData);
-            alert(rData)
-            $('#dev').text(rData);
-            return {
-              'status': 'ok',
-              'data' : rDataP
-            };
-          } catch (e) {
-            alert(e);
-            return {
-              'status': 'fail'
-            };
-          }
-        })
+      });
+      try {
+        alert(rData)
+        var rDataP = JSON.parse(rData);
+            
+        $('#dev').text(rData);
+        return {
+          'status': 'ok',
+          'data' : rDataP
+        };
+      } catch (e) {
+        alert(e);
+        return {
+          'status': 'fail'
+        };
+      }
     } catch (ex){
       alert(ex);
     }
