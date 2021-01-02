@@ -30,6 +30,7 @@
         try {
           var rDataP = JSON.parse(rData);
           alert(rData)
+          $('#dev').text(rData);
           return {
             'status': 'ok',
             'data' : rDataP
