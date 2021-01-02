@@ -267,26 +267,10 @@ takePhotoButton.onclick = takePhoto;
   }
 
   $('#version').text('7');
+
   function removeMe(){
-    try {
-      $("#dialog-confirm").dialog({
-      autoOpen  : false,
-      modal     : true,
-      title     : "Delete image",
-      buttons   : {
-                'Delete' : function() {
-                  this.remove();
-                  $( this ).dialog( "close" );
-                },
-                'Cancel' : function() {
-                    $(this).dialog('close');
-                }
-                  }
-    });
-    $("#dialog-confirm").dialog("open");  
-    } catch (e){
-      alert(e);
-    }
+    document.getElementById("myModal").style.display = "block"
+    this.remove();
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
