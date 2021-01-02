@@ -270,7 +270,6 @@ takePhotoButton.onclick = takePhoto;
     var imageToRemove = this;
     document.getElementById("modalText").textContent = "Delete image?";
     document.getElementById("modalYes").onclick = function() {
-      alert(imageToRemove);
       imageToRemove.remove();
       document.getElementById("modalDialog").style.display = "none";
     }
@@ -371,7 +370,7 @@ var photosTaken = 0;
 function prepareFileView(){
   cameraView = false;
   prepareLayout(cameraView, takingPhoto);
-  if (photosTaken === 0) {$('#cameraUploadOnce').hide()} else {$('#cameraUploadOnce').show()}
+  if ($('img[id*="cameraImg"]').length === 0) {$('#cameraUploadOnce').hide()} else {$('#cameraUploadOnce').show()}
 }
 
 function prepareFileViewOnce(){
