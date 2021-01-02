@@ -737,7 +737,7 @@ function eraseCookie(name) {
 
 $(document).on('knack-view-render.view_3919', function(event, view, record) {
   console.log('aaa')
-  console.log(view);
+  //console.log(view);
   console.log(record);
 });  
 
