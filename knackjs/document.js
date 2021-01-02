@@ -266,6 +266,11 @@ takePhotoButton.onclick = takePhoto;
     prepareLayout(cameraView, takingPhoto);
   }
 
+  function removeMe(element){
+    alert('remo')
+    alert(this);
+    element.remove();
+  }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
@@ -273,11 +278,7 @@ takePhotoButton.onclick = takePhoto;
     imgToSave.id = imgToSaveName;
     imgToSave.classList.add("photoGrid");
     document.getElementById("cameraTakenPhotos").appendChild(imgToSave);
-    imgToSave.onclick = function(this){
-      console.log('remo')
-      console.log(this);
-      this.remove();
-    }
+    imgToSave.onclick = removeMe(this);
     photosTaken += 1;
     //var imgToSave = document.getElementById(imgToSaveName);
     let outputCanvas = document.createElement("canvas");
