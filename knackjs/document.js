@@ -266,24 +266,23 @@ takePhotoButton.onclick = takePhoto;
     prepareLayout(cameraView, takingPhoto);
   }
 
+  $("#dialog-confirm").dialog({
+    autoOpen  : false,
+    modal     : true,
+    title     : "Delete image",
+    buttons   : {
+              'Delete' : function() {
+                this.remove();
+                $( this ).dialog( "close" );
+              },
+              'Cancel' : function() {
+                  $(this).dialog('close');
+              }
+                }
+});
+
   function removeMe(){
-    alert('remo5')
-    $("#dialog-confirm" ).show();
-      $("#dialog-confirm" ).dialog({
-        resizable: false,
-        height: "auto",
-        width: 300,
-        modal: true,
-        buttons: {
-          "Delete image": function() {
-            this.remove();
-            $( this ).dialog( "close" );
-          },
-          Cancel: function() {
-            $( this ).dialog( "close" );
-          }
-        }
-      });  
+    alert('remo6') 
       $("#dialog-confirm").dialog("open");  
   }
 
