@@ -381,7 +381,6 @@ function prepareFileViewOnce(){
 
     let cancelAll = document.getElementById('cameraCancelAll');
     cancelAll.onclick = function(){
-      alert(returnData.returnUrl);
       setTimeout(function() {
         window.location = returnData.returnUrl.replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href));
       }, 100);
