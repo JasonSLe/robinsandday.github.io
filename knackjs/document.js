@@ -457,8 +457,10 @@ function uploadImages(infoText){
     var blobPDF = doc.output('blob');
 
     var ret = uploadFileOnly(returnData.app_id, blobPDF,'created.pdf');
-    if (ret.status==='ok'){
-      alert(returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+ret.data.responseText.id);
+    if (ret.status==='ok' && ret.data){
+      alert(ret.data.responseText);
+      let respText = JSON.parse(ret.data.responseText);
+      alert(returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+respText.id);
       setTimeout(function() {
         window.location = returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+ret.data.responseText.id;
       }, 100);
