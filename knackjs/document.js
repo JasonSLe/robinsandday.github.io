@@ -444,7 +444,7 @@ function uploadImages(infoText){
 
   var pdfWidth = doc.internal.pageSize.getWidth();
   var pdfHeight = doc.internal.pageSize.getHeight();
-  //doc.output("dataurlnewwindow");
+
   let isFirstPage = true;
   for (let i = 1; i <= photosTaken; i++) { 
     if ($('#cameraImg'+i).length!==0){
@@ -455,7 +455,7 @@ function uploadImages(infoText){
   //doc.save("HTML-Document.pdf");
   try {
     var blobPDF = doc.output('blob');
-    //doc.save("HTML-Document.pdf");
+
     var ret = uploadFileOnly(returnData.app_id, blobPDF,'created.pdf');
     alert(ret.responseText.id);
     if (ret.status==='ok'){
