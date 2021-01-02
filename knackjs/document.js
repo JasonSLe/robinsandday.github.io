@@ -457,8 +457,11 @@ function uploadImages(infoText){
     var blobPDF = doc.output('blob');
 
     var ret = uploadFileOnly(returnData.app_id, blobPDF,'created.pdf');
-    alert(ret.data.responseText.id);
-    if (ret.data.status==='ok'){
+    alert(ret);
+    alert(JSON.stringify(ret));
+    alert(ret.data);
+    alert(JSON.stringify(ret.data));
+    if (ret.status==='ok'){
       setTimeout(function() {
         window.location = returnData.returnUrl+'#pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+ret.data.responseText.id;
       }, 100);
