@@ -267,9 +267,8 @@ takePhotoButton.onclick = takePhoto;
   }
 
   function removeMe(){
-    alert('remo')
-    alert(this);
-    element.remove();
+    alert('remo2')
+    this.remove();
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
