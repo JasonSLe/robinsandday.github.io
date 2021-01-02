@@ -268,8 +268,11 @@ takePhotoButton.onclick = takePhoto;
 
   function removeMe(){
     document.getElementById("modalText").textContent = "Delete image?";
+    document.getElementById("modalYes").onclick = function() {
+      this.remove();
+      modal.style.display = "none";
+    }
     document.getElementById("modalDialog").style.display = "block"
-    this.remove();
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
@@ -388,6 +391,9 @@ function prepareFileViewOnce(){
     }
 
     document.getElementById("modalClose").onclick = function() {
+      modal.style.display = "none";
+    }
+    document.getElementById("modalCancel").onclick = function() {
       modal.style.display = "none";
     }
 }
