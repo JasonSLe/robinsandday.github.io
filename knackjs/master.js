@@ -735,10 +735,21 @@ function eraseCookie(name) {
     createCookie(name, "", -1);
 }
 
-$(document).on('knack-view-render.view_3919', function(event, view, data) {
-  console.log('aac')
-  console.log(data);
-});  
+var scanDocsViewNames = ["view_3919"]; ///add view numbers as necessary
+
+scanDocsViewNames.forEach(scanDocsLinkFunction);
+
+function scanDocsLinkFunction(selector_view){
+  $(document).on("knack-view-render." + selector_view, function(event, view, data) {
+    console.log(getRecordIdFromHref(location.href))
+    if ($('div[class="content"] a[href*="RECORDID"]').length>0){
+      console.log($('div[class="content"] a[href*="RECORDID"]').attr('href'));
+      let replacedRecordId = $('div[class="content"] a[href*="RECORDID"]').attr('href').replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href))
+      console.log(replacedRecordId);
+      $('div[class="content"] a[href*="RECORDID"]').attr('href',replacedRecordId);
+    }
+  });
+}  
 
 //Camera app code
 
