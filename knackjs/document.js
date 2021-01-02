@@ -393,11 +393,13 @@ function uploadImages(infoText){
 
   var pdfWidth = doc.internal.pageSize.getWidth();
   var pdfHeight = doc.internal.pageSize.getHeight();
-  doc.addImage($('#cameraImg1').attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight)
   //doc.output("dataurlnewwindow");
-  for (let i = 2; i <= photosTaken; i++) { 
-    doc.addPage("a4","portrait");
-    doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight);
+  let isFirstPage = true;
+  for (let i = 1; i <= photosTaken; i++) { 
+    if ($('#cameraImg'+i).length!==0){
+      if (!isFirstPage) { doc.addPage("a4","portrait"); } else { isFirstPage=false }
+      doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight);
+    }
   }
   doc.save("HTML-Document.pdf");
 
