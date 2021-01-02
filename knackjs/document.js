@@ -274,7 +274,8 @@ takePhotoButton.onclick = takePhoto;
     imgToSave.classList.add("photoGrid");
     document.getElementById("cameraTakenPhotos").appendChild(imgToSave);
     imgToSave.onclick = function(this){
-      alert(this);
+      console.log('remo')
+      console.log(this);
       this.remove();
     }
     photosTaken += 1;
