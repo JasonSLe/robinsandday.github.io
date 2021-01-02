@@ -266,8 +266,13 @@ takePhotoButton.onclick = takePhoto;
     prepareLayout(cameraView, takingPhoto);
   }
 
+  document.getElementById("modalClose").onclick = function() {
+    modal.style.display = "none";
+  }
+
   function removeMe(){
-    document.getElementById("myModal").style.display = "block"
+    document.getElementById("modalText").textContent = "Delete image?";
+    document.getElementById("modalDialog").style.display = "block"
     this.remove();
   }
 
