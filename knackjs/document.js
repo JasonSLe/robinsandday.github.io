@@ -7,7 +7,7 @@
     return ur.substr(ur.lastIndexOf('/') + 1)
   }
 
-  async function uploadFileOnly(app_id, fileBlob, fileName) {
+  function uploadFileOnly(app_id, fileBlob, fileName) {
     var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/image/upload';
     var form = new FormData();
     var headers = {
@@ -458,7 +458,7 @@ function uploadImages(infoText){
       return;
     };
     alert('goingForUpload');
-    let ret = await uploadFileOnly(returnData.app_id,blobPDF,'created.pdf');
+    let ret = uploadFileOnly(returnData.app_id,blobPDF,'created.pdf');
     alert(ret);
   } catch(e){
     alert(e);
