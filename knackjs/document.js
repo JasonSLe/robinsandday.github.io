@@ -29,10 +29,10 @@
         async: false
       });
       try {
-        alert(rData)
-        var rDataP = JSON.parse(rData);
+        alert(JSON.stringify(rData));
+        if (typeof rData === 'string'){ rData = JSON.parse(rData);};
             
-        $('#dev').text(rData);
+        $('#dev').text(JSON.stringify(rData));
         return {
           'status': 'ok',
           'data' : rDataP
