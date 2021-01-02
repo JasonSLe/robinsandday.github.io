@@ -273,6 +273,10 @@ takePhotoButton.onclick = takePhoto;
     imgToSave.id = imgToSaveName;
     imgToSave.classList.add("photoGrid");
     document.getElementById("cameraTakenPhotos").appendChild(imgToSave);
+    imgToSave.onclick = function(this){
+      alert(this);
+      this.remove();
+    }
     photosTaken += 1;
     //var imgToSave = document.getElementById(imgToSaveName);
     let outputCanvas = document.createElement("canvas");
