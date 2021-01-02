@@ -736,6 +736,7 @@ function scanDocsLinkFunction(selector_view){
 $(document).on("knack-scene-render.any", function(event, scene, data) {
   if (window.location.href.includes('pdfAssetId')){
     alert('new Asset id')
+    alert(window.location.href);
     let pdfAssetField = window.location.href.substr(window.location.href.indexOf('pdfAssetField=')+14,100);
     pdfAssetField = pdfAssetField.substr(0,pdfAssetField.indexOf('&'));
     alert(pdfAssetField);

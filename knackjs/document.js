@@ -460,7 +460,7 @@ function uploadImages(infoText){
     if (ret.status==='ok' && ret.data){
       let respText = JSON.parse(ret.data.responseText);
       setTimeout(function() {
-        window.location = returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+ret.data.responseText.id;
+        window.location = returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+respText.id;
       }, 100);
     } else {
       alert('File upload was not succesfull.')
