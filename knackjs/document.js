@@ -13,7 +13,7 @@
     var form = new FormData();
     var headers = {
       'X-Knack-Application-ID': app_id,
-      'X-Knack-REST-API-Key': `knack`,
+      'X-Knack-REST-API-Key': 'knack',
     };
 
     form.append('files', fileBlob, fileName);
