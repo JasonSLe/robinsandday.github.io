@@ -27,10 +27,10 @@ $(document).on('knack-view-render.any', function (event, view, data) {
   //  ---------Auto Capitalise Regestration input-------------
   $('input#field_4941').keyup(function() {
       this.value = this.value.toUpperCase();
-  $(this).css("background-color", "#FFE74C");  			// yellow
-  $(this).css("font-weight", "bold", "important");		// bolder
-  $(this).css("text-align", "center", "important");		// centre
-  $(this).css("fontSize", "24px", "important");         // bigger
+      $(this).css("background-color", "#FFE74C");  			// yellow
+      $(this).css("font-weight", "bold", "important");		// bolder
+      $(this).css("text-align", "center", "important");		// centre
+      $(this).css("fontSize", "24px", "important");         // bigger
   });
 });
 
@@ -40,10 +40,10 @@ $(document).on('knack-view-render.any', function (event, view, data) {
   //  ---------Auto Capitalise Regestration input-------------
   $('input#field_5554').keyup(function() {
       this.value = this.value.toUpperCase();
-  $(this).css("background-color", "#FFE74C");  			// yellow
-  $(this).css("font-weight", "bold", "important");		// bolder
-  $(this).css("text-align", "center", "important");		// centre
-  $(this).css("fontSize", "24px", "important");         // bigger
+      $(this).css("background-color", "#FFE74C");  			// yellow
+      $(this).css("font-weight", "bold", "important");		// bolder
+      $(this).css("text-align", "center", "important");		// centre
+      $(this).css("fontSize", "24px", "important");         // bigger
   });
 });
 
@@ -612,26 +612,13 @@ step: '15'		// Dropdown Interval every 15 mins
 
 }
 
-$(document).on('knack-scene-render.any', function(event, scene) {
-  
 //CUSTOMER HANDOVER DIARY Add Filter Button
 
 $(document).on('knack-view-render.view_2884', function(event, view, record) {
   $('.kn-add-filter').text('Click to Filter by Sales Advisor, Dealer, New or Used etc.')
 });  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 
-	
+$(document).on('knack-scene-render.any', function(event, scene) {	
 // GOOGLE ANALYTICS
 
 // set variables to be used as the page URL and Title - 
