@@ -29,6 +29,7 @@
     }).then(function(rData){
         try {
           var rDataP = JSON.parse(rData);
+          alert(rDataP)
           return {
             'status': 'ok',
             'data' : rDataP
