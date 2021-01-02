@@ -454,7 +454,7 @@ function uploadImages(infoText){
   doc.save("HTML-Document.pdf");
   alert('pdfCreated');
   try {
-    var blobPDF =  new Blob([ doc.output() ], { type : 'application/pdf'});
+    var blobPDF = doc.output('blob');
     //doc.save("HTML-Document.pdf");
 
     var token = getTokenFromApify(returnData.token);
