@@ -266,7 +266,7 @@ takePhotoButton.onclick = takePhoto;
     prepareLayout(cameraView, takingPhoto);
   }
 
-  function removeMe(element){
+  function removeMe(){
     alert('remo')
     alert(this);
     element.remove();
@@ -277,8 +277,8 @@ takePhotoButton.onclick = takePhoto;
     var imgToSave = document.createElement('img');
     imgToSave.id = imgToSaveName;
     imgToSave.classList.add("photoGrid");
+    imgToSave.onclick = removeMe;
     document.getElementById("cameraTakenPhotos").appendChild(imgToSave);
-    imgToSave.onclick = removeMe(this);
     photosTaken += 1;
     //var imgToSave = document.getElementById(imgToSaveName);
     let outputCanvas = document.createElement("canvas");
