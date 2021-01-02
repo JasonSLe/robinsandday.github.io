@@ -735,11 +735,9 @@ function eraseCookie(name) {
     createCookie(name, "", -1);
 }
 
-$(document).on('knack-view-render.view_3919', function(event, view, record) {
-  console.log('aab')
-  console.log(view);
-  console.log(record);
-  console.log(event);
+$(document).on('knack-view-render.view_3919', function(event, view, data) {
+  console.log('aac')
+  console.log(data);
 });  
 
 //Camera app code
