@@ -7,6 +7,41 @@
     return ur.substr(ur.lastIndexOf('/') + 1)
   }
 
+  async function uploadFileOnly(app_id, fileBlob, fileName) {
+    var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/image/upload';
+    var form = new FormData();
+    var headers = {
+      'X-Knack-Application-ID': app_id,
+      'X-Knack-REST-API-Key': `knack`,
+    };
+
+    form.append('files', fileBlob, fileName);
+
+    $.ajax({
+      url: url,
+      type: 'POST',
+      headers: headers,
+      processData: false,
+      contentType: false,
+      mimeType: 'multipart/form-data',
+      data: form,
+      async: false
+    }).then(function(rData){
+        try {
+          var rDataP = JSON.parse(rData);
+          return {
+            'status': 'ok',
+            'data' : rDataP
+          };
+        } catch (e) {
+          return {
+            'status': 'fail'
+          };
+        }
+      })
+
+  }
+
   async function uploadImage(token, updatingRecordId , app_id, imgUrl, imageObject, infoText) {
     var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
     var form = new FormData();
@@ -412,52 +447,20 @@ function uploadImages(infoText){
       doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight);
     }
   }
-  doc.save("HTML-Document.pdf");
+  try {
+    var blobPDF =  new Blob([ doc.output() ], { type : 'application/pdf'});
+    //doc.save("HTML-Document.pdf");
 
-  return;
-  var token = getTokenFromApify('apiaccount');
-  if (token === '') {
-    alert('Authorizing problem.');
-    return;
-  }
-  var updatingRecordId = getRecordIdFromHref(location.href);
+    var token = getTokenFromApify(returnData.token);
+    if (token === '') {
+      alert('Authorizing problem.');
+      return;
+    };
 
-  var imagesToUpload = {
-    app : "5f6de40a07e72b0018484802",
-    images : [
-      {
-        name:'cameraImgFront34',
-        scene: 'scene_15/views/view_39',
-        field : 'field_22'
-      },
-      {
-        name:'cameraImgRear34',
-        scene: 'scene_15/views/view_39',
-        field : 'field_147'
-      },
-    ]
-  }
-
-  $('#'+infoText).text('Checking if some image needs upload');
-
-  for (var i =0;i<imagesToUpload.images.length;i++){
-    //checking if the image is set to some photo
-    if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
-      //checking if the image was already uploaded
-      if ($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploaded')==='YES'){
-        //alert('already uploaded');
-        continue;
-      };
-      $('#'+infoText).text('Uploading image');
-      //alert('beforeUpload');
-      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('data-fullImageSrc'), imagesToUpload.images[i], infoText).then(function(resp){
-        //alert('now');
-      });
-      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[1], infoText).then(function(resp){
-        //alert('now');
-      });
-      //alert('aaa');
-    }
+    let ret = uploadFileOnly(returnData.app_id,blobPDF,'created.pdf');
+    alert(ret);
+  } catch(e){
+    alert(e);
   }
 }
 
@@ -469,6 +472,7 @@ function afterLoad(){
     'field':params.get('field'),
     'token':params.get('token'),
     'app_id':params.get('app_id'),
+    'updatingRecordId':params.get('updatingRecordId'),
     'returnUrl':params.get('returnUrl')
   }
   prepareFileViewOnce();
