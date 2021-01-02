@@ -370,6 +370,7 @@ function prepareFileViewOnce(){
     }
 
     let cancelAll = document.getElementById('cameraCancelAll');
+    alert('cancel')
     cancelAll.onclick = function(){
       setTimeout(function() {
         window.location = returnData.returnUrl.replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href));
