@@ -450,7 +450,3 @@ function afterLoad(){
   prepareFileView();
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    afterLoad();
-}, false);
-
