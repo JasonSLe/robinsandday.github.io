@@ -457,10 +457,10 @@ function uploadImages(infoText){
     var blobPDF = doc.output('blob');
 
     var ret = uploadFileOnly(returnData.app_id, blobPDF,'created.pdf');
-    alert(ret.responseText.id);
-    if (ret.status==='ok'){
+    alert(ret.data.responseText.id);
+    if (ret.data.status==='ok'){
       setTimeout(function() {
-        window.location = returnData.returnUrl+'#pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+ret.responseText.id;
+        window.location = returnData.returnUrl+'#pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+ret.data.responseText.id;
       }, 100);
     } else {
       alert('File upload was not succesfull.')
