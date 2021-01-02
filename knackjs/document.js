@@ -457,7 +457,7 @@ function uploadImages(infoText){
       return;
     };
 
-    let ret = uploadFileOnly(returnData.app_id,blobPDF,'created.pdf');
+    let ret = await uploadFileOnly(returnData.app_id,blobPDF,'created.pdf');
     alert(ret);
   } catch(e){
     alert(e);
