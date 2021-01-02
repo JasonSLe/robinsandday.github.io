@@ -450,8 +450,8 @@ function uploadImages(infoText){
       doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight);
     }
   }
-  doc.save("HTML-Document.pdf");
-  alert('pdfCreated2');
+  //doc.save("HTML-Document.pdf");
+  alert('pdfCreated3');
   try {
     var blobPDF = doc.output('blob');
     //doc.save("HTML-Document.pdf");
