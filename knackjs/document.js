@@ -267,8 +267,24 @@ takePhotoButton.onclick = takePhoto;
   }
 
   function removeMe(){
-    alert('remo2')
-    this.remove();
+    alert('remo3')
+    $( function() {
+      $("#dialog-confirm" ).dialog({
+        resizable: false,
+        height: "auto",
+        width: 300,
+        modal: true,
+        buttons: {
+          "Delete image": function() {
+            this.remove();
+            $( this ).dialog( "close" );
+          },
+          Cancel: function() {
+            $( this ).dialog( "close" );
+          }
+        }
+      });
+    } );    
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
