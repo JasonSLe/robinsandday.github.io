@@ -369,6 +369,13 @@ function prepareFileViewOnce(){
         prepareCameraView('cameraImg'+(photosTaken+1));
     }
 
+    let cancelAll = document.getElementById('cameraCancelAll');
+    cancelAll.onclick = function(){
+      setTimeout(function() {
+        window.location = returnData.returnUrl.replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href));
+      }, 100);
+    }
+
     document.getElementById('cameraUploadOnce').onclick = function(){
         uploadImages('cameraUploadInfo');
     }
