@@ -452,7 +452,7 @@ function uploadImages(infoText){
     }
   }
   doc.save("HTML-Document.pdf");
-  alert('pdfCreated');
+  alert('pdfCreated1');
   try {
     var blobPDF = doc.output('blob');
     //doc.save("HTML-Document.pdf");
