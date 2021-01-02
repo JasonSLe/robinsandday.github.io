@@ -447,6 +447,7 @@ function uploadImages(infoText){
       doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight);
     }
   }
+  alert('pdfCreated');
   try {
     var blobPDF =  new Blob([ doc.output() ], { type : 'application/pdf'});
     //doc.save("HTML-Document.pdf");
@@ -456,7 +457,7 @@ function uploadImages(infoText){
       alert('Authorizing problem.');
       return;
     };
-
+    alert('goingForUpload');
     let ret = await uploadFileOnly(returnData.app_id,blobPDF,'created.pdf');
     alert(ret);
   } catch(e){
