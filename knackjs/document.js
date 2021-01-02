@@ -267,7 +267,7 @@ takePhotoButton.onclick = takePhoto;
   }
 
   function removeMe(){
-    alert('remo4')
+    alert('remo5')
     $("#dialog-confirm" ).show();
       $("#dialog-confirm" ).dialog({
         resizable: false,
