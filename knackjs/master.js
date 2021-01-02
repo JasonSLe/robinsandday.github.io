@@ -735,6 +735,10 @@ function eraseCookie(name) {
     createCookie(name, "", -1);
 }
 
+$(document).on('knack-view-render.view_3919', function(event, view, record) {
+  console.log(view);
+});  
+
 //Camera app code
 
 // Camera app share functions
