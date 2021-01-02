@@ -29,7 +29,7 @@
     }).then(function(rData){
         try {
           var rDataP = JSON.parse(rData);
-          alert(rDataP)
+          alert(rData)
           return {
             'status': 'ok',
             'data' : rDataP
@@ -459,7 +459,7 @@ function uploadImages(infoText){
       return;
     };
     alert('goingForUpload');
-    let ret = uploadFileOnly(returnData.app_id,blobPDF,'created.pdf');
+    var ret = uploadFileOnly(returnData.app_id,blobPDF,'created.pdf');
     alert(ret);
   } catch(e){
     alert(e);
