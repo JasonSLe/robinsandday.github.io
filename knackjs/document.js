@@ -29,22 +29,21 @@
         async: false
       });
       try {
-        alert(JSON.stringify(rData));
         if (typeof rData === 'string'){ rData = JSON.parse(rData);};
-            
         $('#dev').text(JSON.stringify(rData));
         return {
           'status': 'ok',
           'data' : rData
         };
       } catch (e) {
-        alert(e);
         return {
           'status': 'fail'
         };
       }
     } catch (ex){
-      alert(ex);
+      return {
+        'status': 'fail'
+      };
     }
   }
 
@@ -423,7 +422,7 @@ function prepareFileViewOnce(){
     let cancelAll = document.getElementById('cameraCancelAll');
     cancelAll.onclick = function(){
       setTimeout(function() {
-        window.location = returnData.returnUrl.replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href));
+        window.location = returnData.returnUrl;
       }, 100);
     }
 
@@ -454,14 +453,16 @@ function uploadImages(infoText){
     }
   }
   //doc.save("HTML-Document.pdf");
-  alert('pdfCreated4');
   try {
     var blobPDF = doc.output('blob');
     //doc.save("HTML-Document.pdf");
-
-    alert('goingForUpload');
     var ret = uploadFileOnly(returnData.app_id, blobPDF,'created.pdf');
-    alert(ret);
+    alert(ret.responseText.id);
+    if (ret.status==='ok'){
+      setTimeout(function() {
+        window.location = returnData.returnUrl+'#pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+ret.responseText.id;
+      }, 100);
+    }
   } catch(e){
     alert(e);
   }
@@ -471,12 +472,9 @@ var returnData = {};
 function afterLoad(){
   var params = new URLSearchParams( window.location.search);
   returnData = {
-    'view':params.get('view'),
-    'field':params.get('field'),
-    'token':params.get('token'),
     'app_id':params.get('app_id'),
-    'updatingRecordId':params.get('updatingRecordId'),
-    'returnUrl':params.get('returnUrl')
+    'returnUrl':params.get('returnUrl'),
+    'pdfAssetField':params.get('pdfAssetField')
   }
   prepareFileViewOnce();
   prepareFileView();
