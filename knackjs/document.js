@@ -266,24 +266,23 @@ takePhotoButton.onclick = takePhoto;
     prepareLayout(cameraView, takingPhoto);
   }
 
-  $("#dialog-confirm").dialog({
-    autoOpen  : false,
-    modal     : true,
-    title     : "Delete image",
-    buttons   : {
-              'Delete' : function() {
-                this.remove();
-                $( this ).dialog( "close" );
-              },
-              'Cancel' : function() {
-                  $(this).dialog('close');
-              }
-                }
-});
-
   function removeMe(){
     alert('remo6') 
-      $("#dialog-confirm").dialog("open");  
+    $("#dialog-confirm").dialog({
+      autoOpen  : false,
+      modal     : true,
+      title     : "Delete image",
+      buttons   : {
+                'Delete' : function() {
+                  this.remove();
+                  $( this ).dialog( "close" );
+                },
+                'Cancel' : function() {
+                    $(this).dialog('close');
+                }
+                  }
+    });
+    $("#dialog-confirm").dialog("open");  
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
