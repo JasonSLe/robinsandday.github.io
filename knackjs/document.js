@@ -17,6 +17,7 @@
 
     form.append('files', fileBlob, fileName);
 
+    try {
     $.ajax({
       url: url,
       type: 'POST',
@@ -42,6 +43,9 @@
           };
         }
       })
+    } catch (ex){
+      alert(ex);
+    }
 
   }
 
