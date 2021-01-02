@@ -9,6 +9,7 @@
 
   function uploadFileOnly(app_id, fileBlob, fileName) {
     var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/image/upload';
+    alert(url);
     var form = new FormData();
     var headers = {
       'X-Knack-Application-ID': app_id,
@@ -18,35 +19,35 @@
     form.append('files', fileBlob, fileName);
 
     try {
-    $.ajax({
-      url: url,
-      type: 'POST',
-      headers: headers,
-      processData: false,
-      contentType: false,
-      mimeType: 'multipart/form-data',
-      data: form,
-      async: false
-    }).then(function(rData){
-        try {
-          var rDataP = JSON.parse(rData);
-          alert(rData)
-          $('#dev').text(rData);
-          return {
-            'status': 'ok',
-            'data' : rDataP
-          };
-        } catch (e) {
-          alert(e);
-          return {
-            'status': 'fail'
-          };
-        }
-      })
+      $.ajax({
+        url: url,
+        type: 'POST',
+        headers: headers,
+        processData: false,
+        contentType: false,
+        mimeType: 'multipart/form-data',
+        data: form,
+        async: false
+      }).then(function(rData){
+          try {
+            var rDataP = JSON.parse(rData);
+            alert(rData)
+            $('#dev').text(rData);
+            return {
+              'status': 'ok',
+              'data' : rDataP
+            };
+          } catch (e) {
+            alert(e);
+            return {
+              'status': 'fail'
+            };
+          }
+        })
     } catch (ex){
       alert(ex);
     }
-
+    alert('end')
   }
 
   async function uploadImage(token, updatingRecordId , app_id, imgUrl, imageObject, infoText) {
@@ -460,11 +461,6 @@ function uploadImages(infoText){
     var blobPDF = doc.output('blob');
     //doc.save("HTML-Document.pdf");
 
-    var token = getTokenFromApify(returnData.token);
-    if (token === '') {
-      alert('Authorizing problem.');
-      return;
-    };
     alert('goingForUpload');
     var ret = uploadFileOnly(returnData.app_id, blobPDF,'created.pdf');
     alert(ret);
