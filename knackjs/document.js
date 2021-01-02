@@ -463,7 +463,7 @@ function uploadImages(infoText){
     alert(JSON.stringify(ret.data));
     if (ret.status==='ok'){
       setTimeout(function() {
-        window.location = returnData.returnUrl+'#pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+ret.data.responseText.id;
+        window.location = returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+ret.data.responseText.id;
       }, 100);
     } else {
       alert('File upload was not succesfull.')
