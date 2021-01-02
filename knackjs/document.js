@@ -462,6 +462,8 @@ function uploadImages(infoText){
       setTimeout(function() {
         window.location = returnData.returnUrl+'#pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+ret.responseText.id;
       }, 100);
+    } else {
+      alert('File upload was not succesfull.')
     }
   } catch(e){
     alert(e);
