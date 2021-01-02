@@ -8,7 +8,6 @@
   }
 
   function uploadFileOnly(app_id, fileBlob, fileName) {
-    alert(app_id);
     var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/image/upload';
     var form = new FormData();
     var headers = {
@@ -37,6 +36,7 @@
             'data' : rDataP
           };
         } catch (e) {
+          alert(e);
           return {
             'status': 'fail'
           };
@@ -462,7 +462,7 @@ function uploadImages(infoText){
       return;
     };
     alert('goingForUpload');
-    var ret = uploadFileOnly(returnData.app_id,blobPDF,'created.pdf');
+    var ret = uploadFileOnly(returnData.app_id, blobPDF,'created.pdf');
     alert(ret);
   } catch(e){
     alert(e);
