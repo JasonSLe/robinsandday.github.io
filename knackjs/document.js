@@ -267,10 +267,12 @@ takePhotoButton.onclick = takePhoto;
   }
 
   function removeMe(){
+    var imageToRemove = this;
     document.getElementById("modalText").textContent = "Delete image?";
     document.getElementById("modalYes").onclick = function() {
-      this.remove();
-      modal.style.display = "none";
+      alert(imageToRemove);
+      imageToRemove.remove();
+      document.getElementById("modalDialog").style.display = "none";
     }
     document.getElementById("modalDialog").style.display = "block"
   }
@@ -391,10 +393,10 @@ function prepareFileViewOnce(){
     }
 
     document.getElementById("modalClose").onclick = function() {
-      modal.style.display = "none";
+      document.getElementById("modalDialog").style.display = "none";
     }
     document.getElementById("modalCancel").onclick = function() {
-      modal.style.display = "none";
+      document.getElementById("modalDialog").style.display = "none";
     }
 }
 
