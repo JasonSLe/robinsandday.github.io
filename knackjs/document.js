@@ -266,10 +266,6 @@ takePhotoButton.onclick = takePhoto;
     prepareLayout(cameraView, takingPhoto);
   }
 
-  document.getElementById("modalClose").onclick = function() {
-    modal.style.display = "none";
-  }
-
   function removeMe(){
     document.getElementById("modalText").textContent = "Delete image?";
     document.getElementById("modalDialog").style.display = "block"
@@ -389,6 +385,10 @@ function prepareFileViewOnce(){
 
     document.getElementById('cameraUploadOnce').onclick = function(){
         uploadImages('cameraUploadInfo');
+    }
+
+    document.getElementById("modalClose").onclick = function() {
+      modal.style.display = "none";
     }
 }
 
