@@ -733,7 +733,7 @@ function scanDocsLinkFunction(selector_view){
   });
 }  
 
-$(document).on("knack-view-render." + selector_view, function(event, view, data) {
+$(document).on("knack-view-render.any", function(event, view, data) {
   if (window.location.href.includes('pdfAssetId')){
     let pdfAssetField = window.location.href.substr(window.location.href.indexOf('pdfAssetField=')+14,100);
     pdfAssetField = pdfAssetField.substr(0,pdfAssetField.indexOf('&'));
