@@ -8,7 +8,7 @@
   }
 
   function uploadFileOnly(app_id, fileBlob, fileName) {
-    var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/image/upload';
+    var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/files/upload';
     var form = new FormData();
     var headers = {
       'X-Knack-Application-ID': app_id,
@@ -35,7 +35,7 @@
         $('#dev').text(JSON.stringify(rData));
         return {
           'status': 'ok',
-          'data' : rDataP
+          'data' : rData
         };
       } catch (e) {
         alert(e);
