@@ -266,9 +266,10 @@ takePhotoButton.onclick = takePhoto;
     prepareLayout(cameraView, takingPhoto);
   }
 
+  $('#version').text('7');
   function removeMe(){
-    alert('remo6') 
-    $("#dialog-confirm").dialog({
+    try {
+      $("#dialog-confirm").dialog({
       autoOpen  : false,
       modal     : true,
       title     : "Delete image",
@@ -283,6 +284,9 @@ takePhotoButton.onclick = takePhoto;
                   }
     });
     $("#dialog-confirm").dialog("open");  
+    } catch (e){
+      alert(e);
+    }
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
