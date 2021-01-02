@@ -441,18 +441,16 @@ function uploadImages(infoText){
 
   var pdfWidth = doc.internal.pageSize.getWidth();
   var pdfHeight = doc.internal.pageSize.getHeight();
-  alert($('#cameraImg1').attr('src'));
-  doc.addImage($('#cameraImg1').attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight);
   //doc.output("dataurlnewwindow");
-  let isFirstPage = false;
-  for (let i = 2; i <= photosTaken; i++) { 
+  let isFirstPage = true;
+  for (let i = 1; i <= photosTaken; i++) { 
     if ($('#cameraImg'+i).length!==0){
       if (!isFirstPage) { doc.addPage("a4","portrait"); } else { isFirstPage=false }
       doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight);
     }
   }
   doc.save("HTML-Document.pdf");
-  alert('pdfCreated1');
+  alert('pdfCreated2');
   try {
     var blobPDF = doc.output('blob');
     //doc.save("HTML-Document.pdf");
