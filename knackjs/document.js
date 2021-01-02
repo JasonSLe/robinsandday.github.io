@@ -283,7 +283,8 @@ takePhotoButton.onclick = takePhoto;
             $( this ).dialog( "close" );
           }
         }
-      });    
+      });  
+      $("#dialog-confirm").dialog("open");  
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
