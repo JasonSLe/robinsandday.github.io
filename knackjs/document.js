@@ -46,7 +46,6 @@
     } catch (ex){
       alert(ex);
     }
-    alert('end')
   }
 
   async function uploadImage(token, updatingRecordId , app_id, imgUrl, imageObject, infoText) {
