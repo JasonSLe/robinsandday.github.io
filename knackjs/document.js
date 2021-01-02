@@ -441,7 +441,8 @@ function uploadImages(infoText){
 
   var pdfWidth = doc.internal.pageSize.getWidth();
   var pdfHeight = doc.internal.pageSize.getHeight();
-  //doc.output("dataurlnewwindow");
+  doc.addImage($('#cameraImg1').attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight);
+  doc.output("dataurlnewwindow");
   let isFirstPage = true;
   for (let i = 1; i <= photosTaken; i++) { 
     if ($('#cameraImg'+i).length!==0){
