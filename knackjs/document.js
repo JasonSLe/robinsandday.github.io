@@ -438,13 +438,12 @@ function uploadImages(infoText){
 var returnData = {};
 function afterLoad(){
   var params = new URLSearchParams( window.location.search);
-  alert(encodeURIComponent(document.referrer));
   returnData = {
     'view':params.get('view'),
     'field':params.get('field'),
     'token':params.get('token'),
     'app_id':params.get('app_id'),
-    'returnUrl':encodeURIComponent(document.referrer)
+    'returnUrl':params.get('returnUrl')
   }
   prepareFileViewOnce();
   prepareFileView();
