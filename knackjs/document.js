@@ -266,8 +266,6 @@ takePhotoButton.onclick = takePhoto;
     prepareLayout(cameraView, takingPhoto);
   }
 
-  $('#version').text('7');
-
   function removeMe(){
     document.getElementById("myModal").style.display = "block"
     this.remove();
