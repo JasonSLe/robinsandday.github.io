@@ -8,6 +8,7 @@
   }
 
   function uploadFileOnly(app_id, fileBlob, fileName) {
+    alert(app_id);
     var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/image/upload';
     var form = new FormData();
     var headers = {
