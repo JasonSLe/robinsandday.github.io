@@ -268,7 +268,7 @@ takePhotoButton.onclick = takePhoto;
 
   function removeMe(){
     alert('remo3')
-    $( function() {
+    $("#dialog-confirm" ).show();
       $("#dialog-confirm" ).dialog({
         resizable: false,
         height: "auto",
@@ -283,8 +283,7 @@ takePhotoButton.onclick = takePhoto;
             $( this ).dialog( "close" );
           }
         }
-      });
-    } );    
+      });    
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
