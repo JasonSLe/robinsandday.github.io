@@ -259,6 +259,24 @@ body {
   display: inline-block;
 }
 
+/* Front 3/4 Photo Button for Used Vehicle Check In */
+
+#view_3898 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_3898 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
 /*** TRADE APPRAISAL VEHICLE IMAGERY HEADER ***/
 
 #view_3865 > section > div > div > div:nth-child(1) > div > div:nth-child(2) {
