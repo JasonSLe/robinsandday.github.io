@@ -299,6 +299,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     
   //control of Internet Explorer and redirect
   var ua = window.navigator.userAgent;
+  console.log('ua',ua);
   var isIE = /MSIE|Trident/.test(ua);
 
   if ( isIE ) {
