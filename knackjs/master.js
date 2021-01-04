@@ -221,7 +221,6 @@ var toggleHeaderVisibility = function() {
 }
 
 $(document).on('knack-scene-render.any', function(event, scene) {
-    console.log(event, scene);
     var userBar = document.querySelector('.kn-info-bar .kn-current_user');
     toggleButton = document.createElement('span');
     toggleButton.classList.add('rad-toggle-header');
