@@ -742,6 +742,7 @@ function scanDocsLinkFunction(selector_view){
     }
     */
     window.onmessage = function(e){
+      console.log(e);
         if (e.data == 'scanDocument') {
             alert('It works!');
         }
