@@ -741,11 +741,11 @@ function scanDocsLinkFunction(selector_view){
       $('div[class="content"] a[href*="RECORDID"]').attr('href',replacedRecordId);
     }
     */
-    window.document.addEventListener('scanDocumentEvent', handleEvent, false)
-    function handleEvent(e) {
-      console.log(e.detail) // outputs: {foo: 'bar'}
-      alert(e.detail)
-    }
+    window.onmessage = function(e){
+        if (e.data == 'scanDocument') {
+            alert('It works!');
+        }
+    };
     if ($('button[id="scanDocument"]').length>0){
       document.getElementById('scanDocument').onclick = function(){
         let replacedRecordId = $('button[id="scanDocument"]').attr('data-href').replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href))

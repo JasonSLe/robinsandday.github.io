@@ -421,9 +421,7 @@ function prepareFileViewOnce(){
 
     let cancelAll = document.getElementById('cameraCancelAll');
     cancelAll.onclick = function(){
-      var data = { status: 'cancel' }
-      var event = new CustomEvent('scanDocumentEvent', { detail: data })
-      window.parent.document.dispatchEvent(event)
+      window.top.postMessage('scanDocument', '*')
       /*
       setTimeout(function() {
         window.location = returnData.returnUrl;
