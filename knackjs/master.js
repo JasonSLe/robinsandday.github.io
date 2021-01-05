@@ -1268,13 +1268,13 @@ $(document).on('knack-view-render.view_3910', function(event, view, data) {
 
 //****************** Show Alert & Refresh Digital Deal File Page 12 seconds after Invoice Retrieval ****************//
 
-$(document).on('knack-record-update.view_3926', function(event, view, data) {
-  
-  setTimeout(function () { Knack.views["view_3927"].model.fetch(); }, 12000);
+$(document).on('knack-form-submit.view_3926', function(event, view, record){
+Knack.views["view_3927"].model.fetch();
+});
   
   alert("Please wait while we process the image. Click 'OK' & this page will refresh in a few moments...");
 
   Knack.showSpinner();
   
 });
-
+ 
