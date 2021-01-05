@@ -743,7 +743,7 @@ function scanDocsLinkFunction(selector_view){
     }
     */
     if ($('button[id="scanDocument"]').length>0){
-      alert('scanDocFound'):
+      alert('scanDocFound')
       document.getElementById('scanDocument').onclick = function(){
         let replacedRecordId = $('button[id="scanDocument"]').attr('data-href').replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href))
         console.log('replaceScan href', replacedRecordId);
