@@ -723,11 +723,17 @@ function eraseCookie(name) {
 
 function createScanIframe(href){
   var scanIframe = document.createElement('iframe');
+  scanIframe.id = 'scanIframe';
   scanIframe.frameBorder = 0;
   scanIframe.width = "100%";
   scanIframe.src = href;
   $('.kn-content').hide();
   document.body.appendChild(scanIframe);
+}
+
+function hideScanIframe(){
+  $('#scanIfram').hide();
+  $('.kn-content').show();
 }
 
 var scanDocsSceneNames = ["scene_1133"]; ///add view numbers as necessary
@@ -743,7 +749,10 @@ function scanDocsLinkFunction(selector_view){
     */
     window.onmessage = function(e){
         if (e.origin === 'https://robinsandday.github.io' && e.data.includes('scanDocument')) {
-            alert('It works!');
+            let message = JSON.parse(e.data);
+            id (message.status ==='cancel'){
+              hideScanIframe();
+            }
         }
     };
     if ($('button[id="scanDocument"]').length>0){
