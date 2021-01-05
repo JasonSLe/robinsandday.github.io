@@ -721,14 +721,33 @@ function eraseCookie(name) {
     createCookie(name, "", -1);
 }
 
+function createScanIframe(href){
+  var scanIframe = document.createElement('iframe');
+  scanIframe.frameBorder = 0;
+  scanIframe.width = "100%";
+  scanIframe.height = "800";
+  scanIframe.src = href;
+  $('.kn-content').hide();
+  document.body.appendChild(scanIframe);
+}
+
 var scanDocsSceneNames = ["scene_1133"]; ///add view numbers as necessary
 scanDocsSceneNames.forEach(scanDocsLinkFunction);
 function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
+    /*
     if ($('div[class="content"] a[href*="RECORDID"]').length>0){
       let replacedRecordId = $('div[class="content"] a[href*="RECORDID"]').attr('href').replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href))
       console.log('replaceScan href', replacedRecordId);
       $('div[class="content"] a[href*="RECORDID"]').attr('href',replacedRecordId);
+    }
+    */
+    if ($('button[id="scanDocument"]').length>0){
+      document.getElementById('scanDocument').onclick = function(){
+        let replacedRecordId = $('button[id="scanDocument"]').attr('data-href').replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href))
+        console.log('replaceScan href', replacedRecordId);
+        createScanIframe(replacedRecordId)
+      }
     }
   });
 }  
