@@ -207,6 +207,7 @@ const constraints = {
     })
     .catch(error =>{
       if (error.includes('Permission denied')){
+        alert('in permision denied')
         navigator.permissions.query({name: 'camera'})
         .then((permissionObj) => {
           alert(permissionObj.state);
