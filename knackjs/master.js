@@ -738,7 +738,7 @@ function createScanIframe(href){
 }
 
 function hideScanIframe(){
-  $('#scanIfram').hide();
+  $('#scanIframe').hide();
   $('.kn-content').show();
 }
 
