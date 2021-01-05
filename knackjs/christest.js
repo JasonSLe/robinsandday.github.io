@@ -205,7 +205,13 @@ const constraints = {
       imageCapture = new ImageCapture(track);
 
     })
-    .catch(error => alert(error));
+    .catch(error =>{
+      if (error.includes('Permission denied')){
+        alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
+      } else {
+        alert('Error starting camera. Please report this error to admin.'+ error)
+      }
+    });
 
 
 
