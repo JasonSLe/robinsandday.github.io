@@ -750,6 +750,7 @@ function scanDocsLinkFunction(selector_view){
     window.onmessage = function(e){
         if (e.origin === 'https://robinsandday.github.io' && e.data.includes('scanDocument')) {
             let message = JSON.parse(e.data);
+            console.log(message);
             id (message.status ==='cancel'){
               hideScanIframe();
             }
