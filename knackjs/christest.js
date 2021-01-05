@@ -430,6 +430,7 @@ setTimeout(function() {
        $("#cameraRotate").show();
        $("#cameraOverlayCanvas").hide();
        isLandscape = false;
+       $("#cameraPortraitMessage").show();
        //$(stop);
   }
 
@@ -442,6 +443,7 @@ if(window.innerWidth > window.innerHeight){
   	$("#cameraRotate").hide();
     $("#cameraOverlayCanvas").hide();
     $(go);
+    $("#cameraPortraitMessage").hide();
     isLandscape = true;
 }
 
@@ -457,7 +459,7 @@ $(window).on("orientationchange",function(){
     $("#takePhoto").hide();
     $("#cameraRotate").show();
     isLandscape = false;
-
+    $("#cameraPortraitMessage").show();
   }
   else if(window.orientation == 90 || window.orientation == 270) // Landscape
   {
@@ -466,6 +468,7 @@ $(window).on("orientationchange",function(){
     $("#cameraRotate").hide();
     $(go);
     isLandscape = true;
+    $("#cameraPortraitMessage").hide();
   }
 });
 
@@ -632,7 +635,7 @@ takePhotoButton.onclick = takePhoto;
     video.srcObject.getVideoTracks().forEach(track => track.stop());
 
   }  
-
+  
   $("#cameraOfflineMessage").show();
 
   setTimeout(function(){
