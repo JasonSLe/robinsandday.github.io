@@ -686,6 +686,27 @@ function uploadImages(infoText){
   }
 }
 
+
+function preloadImages(array) {
+  if (!preloadImages.list) {
+      preloadImages.list = [];
+  }
+  var list = preloadImages.list;
+  for (var i = 0; i < array.length; i++) {
+      var img = new Image();
+      img.onload = function() {
+          var index = list.indexOf(this);
+          if (index !== -1) {
+              // remove image from the array once it's loaded
+              // for memory consumption reasons
+              list.splice(index, 1);
+          }
+      }
+      list.push(img);
+      img.src = array[i];
+  }
+}
+
 $(document).on('knack-view-render.view_56', function(event, view, data) {
   $('[class="kn-view kn-back-link"]').hide();
   document.getElementById('cameraUploadBackground').onchange = function(){
@@ -706,5 +727,8 @@ $(document).on('knack-view-render.view_56', function(event, view, data) {
   /*cameraTakeRear34.onclick = function() {
       prepareCameraView('cameraImgRear34');
   }*/
+
+
+  preloadImages(["https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/check-mark-3-24.png", "https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/x-mark-24.png"]);
 });
 
