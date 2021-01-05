@@ -625,6 +625,13 @@ takePhotoButton.onclick = takePhoto;
     video.srcObject.getVideoTracks().forEach(track => track.stop());
 
   }  
+
+  $("#cameraOfflineMessage").show();
+
+  setTimeout(function(){
+    $("#cameraOfflineMessage").hide();
+  }, 3000);
+  
 }
 
 function prepareFileView(){
