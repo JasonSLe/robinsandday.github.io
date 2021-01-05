@@ -1266,15 +1266,10 @@ $(document).on('knack-view-render.view_3910', function(event, view, data) {
 
 // refresh background replaced image at used vehicle check in - disposal selection page
 
-//****************** Show Alert & Refresh Digital Deal File Page 12 seconds after Invoice Retrieval ****************//
-
-$(document).on('knack-record-update.view_3926', function(event, view, data) {
-  
-  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
-  
-  alert("Please wait while we process the image. Click 'OK' & this page will refresh in a few moments...");
-
-  Knack.showSpinner();
-  
+$(document).on('knack-scene-render.scene_909', function(event, scene) {
+ recursivecall();
 });
 
+function recursivecall(){
+ setTimeout(function () { if($("#view_3927").is(":visible")==true){ Knack.views["view_3927"].model.fetch();recursivecall();} }, 100000);
+}

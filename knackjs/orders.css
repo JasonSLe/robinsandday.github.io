@@ -1220,6 +1220,22 @@ This removes white spaces from all table headers*/
   text-decoration-color: #388cf5;
   color: #388cf5;
 }
+
+/* Sales Advisor View of P&L */
+#view_3569 > section > div > div > div:nth-child(1) > div > div:nth-child(2) > div > span > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+#view_3569 > section > div > div > div:nth-child(3) > div > div:nth-child(2) > div > span > span > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
 /* Manual Order Form */
 #kn-input-field_6363 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
