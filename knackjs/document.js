@@ -463,9 +463,13 @@ function uploadImages(infoText){
     var ret = uploadFileOnly(returnData.app_id, blobPDF,'created.pdf');
     if (ret.status==='ok' && ret.data){
       let respText = JSON.parse(ret.data.responseText);
+      let message = {'event':'scanDocument','status':'ok','pdfAssetField':returnData.pdfAssetField,'pdfAssetId':respText.id}
+      window.parent.postMessage(JSON.stringify(message), '*')
+      /*
       setTimeout(function() {
         window.location = returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+respText.id;
       }, 100);
+      */
     } else {
       alert('File upload was not succesfull.')
       alert(ret);

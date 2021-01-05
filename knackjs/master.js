@@ -758,6 +758,12 @@ function scanDocsLinkFunction(selector_view){
             if (message.status ==='cancel'){
               hideScanIframe();
             }
+            if (message.status === 'ok'){
+              hideScanIframe();
+              $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
+              $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').attr('style',"background-color: rgba(255, 204, 153, 0);")
+              $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html('created.pdf')
+            }
         }
     };
     if ($('button[id="scanDocument"]').length>0){
@@ -770,6 +776,7 @@ function scanDocsLinkFunction(selector_view){
   });
 }  
 
+/*
 $(document).on("knack-scene-render.any", function(event, scene, data) {
   if (window.location.href.includes('pdfAssetId')){
     let pdfAssetField = window.location.href.substr(window.location.href.indexOf('pdfAssetField=')+14,100);
@@ -780,6 +787,7 @@ $(document).on("knack-scene-render.any", function(event, scene, data) {
     $('div[id="kn-input-'+pdfAssetField+'"] div[class="kn-asset-current"]').html('created.pdf')
   }
 });
+*/
 
 //Camera app code
 
