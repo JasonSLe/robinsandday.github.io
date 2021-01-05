@@ -742,7 +742,7 @@ function scanDocsLinkFunction(selector_view){
     }
     */
     window.onmessage = function(e){
-        if (e.data.includes('scanDocument')) {
+        if (e.origin === 'https://robinsandday.github.io' && e.data.includes('scanDocument')) {
             alert('It works!');
         }
     };
