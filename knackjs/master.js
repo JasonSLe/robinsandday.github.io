@@ -721,12 +721,13 @@ function eraseCookie(name) {
     createCookie(name, "", -1);
 }
 
-var scanDocsViewNames = ["view_3919"]; ///add view numbers as necessary
-scanDocsViewNames.forEach(scanDocsLinkFunction);
+var scanDocsSceneNames = ["scene_1133"]; ///add view numbers as necessary
+scanDocsSceneNames.forEach(scanDocsLinkFunction);
 function scanDocsLinkFunction(selector_view){
-  $(document).on("knack-view-render." + selector_view, function(event, view, data) {
+  $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
     if ($('div[class="content"] a[href*="RECORDID"]').length>0){
       let replacedRecordId = $('div[class="content"] a[href*="RECORDID"]').attr('href').replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href))
+      console.log('replaceScan href', replacedRecordId);
       $('div[class="content"] a[href*="RECORDID"]').attr('href',replacedRecordId);
     }
   });
