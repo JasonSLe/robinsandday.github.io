@@ -374,7 +374,7 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
 
 setTimeout(function() {
   if (permissionForOrientation==='need'){
-    alert('need perm3')
+    //alert('need perm3')
     $('#cameraModal').show(); // show dialog asking user to enable motion sensor
     //$("#takePhoto").attr("disabled", true);//De-activate takephoto button until user agnet agreed
    $("#takePhoto").hide();
