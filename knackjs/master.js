@@ -725,7 +725,7 @@ function createScanIframe(href){
   if ($('#scanIframe').length===0){
     var scanIframe = document.createElement('iframe');
     scanIframe.id = 'scanIframe';
-    //scanIframe.frameBorder = 0;
+    scanIframe.frameBorder = 0;
     scanIframe.width = "100%";
     scanIframe.height = window.innerHeight;
     scanIframe.src = href;
