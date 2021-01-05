@@ -722,13 +722,17 @@ function eraseCookie(name) {
 }
 
 function createScanIframe(href){
-  var scanIframe = document.createElement('iframe');
-  scanIframe.id = 'scanIframe';
-  scanIframe.frameBorder = 0;
-  scanIframe.width = "100%";
-  scanIframe.src = href;
+  if ($('#scanIframe').length===0){
+    var scanIframe = document.createElement('iframe');
+    scanIframe.id = 'scanIframe';
+    scanIframe.frameBorder = 0;
+    scanIframe.width = "100%";
+    scanIframe.src = href;
+    document.body.appendChild(scanIframe);
+  } else {
+    $('#scanIframe').show();
+  }
   $('.kn-content').hide();
-  document.body.appendChild(scanIframe);
 }
 
 function hideScanIframe(){
