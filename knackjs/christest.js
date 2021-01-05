@@ -207,6 +207,13 @@ const constraints = {
     })
     .catch(error =>{
       if (error.includes('Permission denied')){
+        navigator.permissions.query({name: 'camera'})
+        .then((permissionObj) => {
+          alert(permissionObj.state);
+        })
+        .catch((error) => {
+          alert('Got error :', error);
+        })
         alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
       } else {
         alert('Error starting camera. Please report this error to admin.'+ error)
