@@ -729,6 +729,7 @@ function createScanIframe(href){
     scanIframe.width = "100%";
     scanIframe.height = window.innerHeight - 20;
     scanIframe.src = href;
+    scanIframe.setAttribute('allow', 'camera;microphone');
     document.body.appendChild(scanIframe);
   } else {
     var scanIframe = document.getElementById('scanIframe');
