@@ -727,7 +727,7 @@ function createScanIframe(href){
     scanIframe.id = 'scanIframe';
     scanIframe.frameBorder = 0;
     scanIframe.width = "100%";
-    scanIframe.height = window.innerHeight;
+    scanIframe.height = window.innerHeight - 20;
     scanIframe.src = href;
     document.body.appendChild(scanIframe);
   } else {
