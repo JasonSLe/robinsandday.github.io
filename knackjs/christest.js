@@ -193,6 +193,7 @@ const constraints = {
 
   navigator.mediaDevices.getUserMedia({video: {pan: true, zoom: true, facingMode: {exact: "environment"}}
  }).then(mediaStream => {
+   alert('in')
       document.querySelector('video').srcObject = mediaStream;
 
       const track = mediaStream.getVideoTracks()[0];
@@ -204,7 +205,7 @@ const constraints = {
       imageCapture = new ImageCapture(track);
 
     })
-    .catch(error => ChromeSamples.log('Argh!', error.name || error));
+    .catch(error => alert(error));
 
 
 
