@@ -1270,7 +1270,7 @@ $(document).on('knack-view-render.view_3910', function(event, view, data) {
 
 $(document).on('knack-record-update.view_3926', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
+  setTimeout(function () { Knack.views["view_3927"].model.fetch(); }, 12000);
   
   alert("Please wait while we process the image. Click 'OK' & this page will refresh in a few moments...");
 
