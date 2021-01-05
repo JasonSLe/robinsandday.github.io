@@ -730,6 +730,8 @@ function createScanIframe(href){
     scanIframe.src = href;
     document.body.appendChild(scanIframe);
   } else {
+    var scanIframe = document.getElementById('scanIframe');
+    scanIframe.src = href;
     $('#scanIframe').show();
   }
   $('.kn-content').hide();
