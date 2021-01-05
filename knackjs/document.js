@@ -421,9 +421,14 @@ function prepareFileViewOnce(){
 
     let cancelAll = document.getElementById('cameraCancelAll');
     cancelAll.onclick = function(){
+      var data = { status: 'cancel' }
+      var event = new CustomEvent('scanDocumentEvent', { detail: data })
+      window.parent.document.dispatchEvent(event)
+      /*
       setTimeout(function() {
         window.location = returnData.returnUrl;
       }, 100);
+      */
     }
 
     document.getElementById('cameraUploadOnce').onclick = function(){
