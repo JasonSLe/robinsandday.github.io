@@ -437,7 +437,7 @@ function prepareFileViewOnce(){
         document.getElementById("cameraUploadOnce").style.display = "none";
         $('#infoText').text('File conversion and upload started.');
         $('#infoDialog').show();
-        uploadImages('cameraUploadInfo');
+        //uploadImages('cameraUploadInfo');
     }
 
     document.getElementById("modalClose").onclick = function() {
