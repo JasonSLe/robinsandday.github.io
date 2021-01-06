@@ -757,7 +757,6 @@ function scanDocsLinkFunction(selector_view){
     }
     */
     function resizeScanIframe(event){
-      alert('addd')
       var scanIframe = document.getElementById('scanIframe');
       scanIframe.height = window.innerHeight - 20;
     }
@@ -783,7 +782,6 @@ function scanDocsLinkFunction(selector_view){
         console.log('replaceScan href', replacedRecordId);
         createScanIframe(replacedRecordId)
       }
-      alert('aaadEv')
       window.addEventListener("deviceorientation", resizeScanIframe, true);
     }
   });
