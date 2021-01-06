@@ -777,6 +777,10 @@ function scanDocsLinkFunction(selector_view){
         console.log('replaceScan href', replacedRecordId);
         createScanIframe(replacedRecordId)
       }
+      window.addEventListener(orientationEvent, function() {
+        var scanIframe = document.getElementById('scanIframe');
+        scanIframe.height = window.innerHeight - 20;
+      });
     }
   });
 }  
