@@ -379,10 +379,12 @@ takePhotoButton.onclick = takePhoto;
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
-  confirmButton.onclick = function() {
+  confirmButton.onclick = onclickConfimrButton;
+
+  function onclickConfimrButton(){
     $('#kn-loading-spinner').show();
     confirmImage();
-  };
+  }
 
   async function confirmImage(){
     var imgToSave = document.createElement('img');
