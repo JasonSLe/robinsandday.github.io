@@ -650,6 +650,7 @@ function prepareFileView(){
   $('#cameraVid_container').hide();
   $('#cameraGrid').hide();
   $('#cameraGui_controls').hide();
+  $("#cameraPortraitMessage").hide();
 
   if ($('#cameraUploadBackground').attr('checked')){
     uploadImages('cameraUploadInfo')
