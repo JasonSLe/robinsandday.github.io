@@ -85,12 +85,13 @@
             }, 100);
             */
         } catch (e) {
-          alert(e);
           alert('File upload was not succesfull.')
+          alert(e);
         }
       })
     } catch (ex){
       alert('File upload was not succesfull.')
+      alert(ex);
     }
   }
 
