@@ -7,7 +7,7 @@
     return ur.substr(ur.lastIndexOf('/') + 1)
   }
 
-  function uploadFileOnly(app_id, fileBlob, fileName) {
+  function uploadFileOnlyOLD(app_id, fileBlob, fileName) {
     var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
     var headers = {
@@ -42,6 +42,48 @@
           'status': 'fail'
         };
       }
+    } catch (ex){
+      return {
+        'status': 'fail'
+      };
+    }
+  }
+
+  function uploadFileOnly(app_id, fileBlob, fileName) {
+    var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/file/upload';
+    var form = new FormData();
+    var headers = {
+      'X-Knack-Application-ID': app_id,
+      'X-Knack-REST-API-Key': 'knack',
+    };
+
+    form.append('files', fileBlob, fileName);
+
+    try {
+      $('#infoText').text('File upload started.');
+      var rData = $.ajax({
+        url: url,
+        type: 'POST',
+        headers: headers,
+        processData: false,
+        contentType: false,
+        mimeType: 'multipart/form-data',
+        data: form
+      }).then(rData => {
+        $('#infoText').text('File upload finished.');
+        try {
+          if (typeof rData === 'string'){ rData = JSON.parse(rData);};
+          $('#dev').text(JSON.stringify(rData));
+          return {
+            'status': 'ok',
+            'data' : rData
+          };
+        } catch (e) {
+          return {
+            'status': 'fail'
+          };
+        }
+      })
     } catch (ex){
       return {
         'status': 'fail'
