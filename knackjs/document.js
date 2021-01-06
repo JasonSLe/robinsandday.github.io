@@ -18,6 +18,7 @@
     form.append('files', fileBlob, fileName);
 
     try {
+      $('#infoText').text('File upload started.');
       var rData = $.ajax({
         url: url,
         type: 'POST',
@@ -28,6 +29,7 @@
         data: form,
         async: false
       });
+      $('#infoText').text('File upload finished.');
       try {
         if (typeof rData === 'string'){ rData = JSON.parse(rData);};
         $('#dev').text(JSON.stringify(rData));
@@ -431,6 +433,9 @@ function prepareFileViewOnce(){
     }
 
     document.getElementById('cameraUploadOnce').onclick = function(){
+        $('#cameraUploadOnce').hide();
+        $('#infoText').text('File conversion and upload started.');
+        $('#infoDialog').show();
         uploadImages('cameraUploadInfo');
     }
 
@@ -443,6 +448,7 @@ function prepareFileViewOnce(){
 }
 
 function uploadImages(infoText){
+  $('#infoText').text('PDF creationg started.');
   var jsPDF = window.jspdf.jsPDF;
   var doc = new jsPDF("p", "mm", "a4");
 
@@ -460,8 +466,11 @@ function uploadImages(infoText){
   try {
     var blobPDF = doc.output('blob');
 
+    $('#infoText').text('PDF created, starting upload.');
+
     var ret = uploadFileOnly(returnData.app_id, blobPDF,'created.pdf');
     if (ret.status==='ok' && ret.data){
+      $('#infoText').text('Upload succesfull, returning to app.');
       let respText = JSON.parse(ret.data.responseText);
       let message = {'event':'scanDocument','status':'ok','pdfAssetField':returnData.pdfAssetField,'pdfAssetId':respText.id}
       window.parent.postMessage(JSON.stringify(message), '*')
