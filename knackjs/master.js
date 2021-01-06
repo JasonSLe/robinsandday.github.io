@@ -751,13 +751,6 @@ var scanDocsSceneNames = ["scene_1133"]; ///add view numbers as necessary
 scanDocsSceneNames.forEach(scanDocsLinkFunction);
 function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
-    /*
-    if ($('div[class="content"] a[href*="RECORDID"]').length>0){
-      let replacedRecordId = $('div[class="content"] a[href*="RECORDID"]').attr('href').replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href))
-      console.log('replaceScan href', replacedRecordId);
-      $('div[class="content"] a[href*="RECORDID"]').attr('href',replacedRecordId);
-    }
-    */
     function resizeScanIframe(event){
       var scanIframe = document.getElementById('scanIframe');
       scanIframe.height = window.innerWidth - 50;
@@ -788,19 +781,6 @@ function scanDocsLinkFunction(selector_view){
     }
   });
 }  
-
-/*
-$(document).on("knack-scene-render.any", function(event, scene, data) {
-  if (window.location.href.includes('pdfAssetId')){
-    let pdfAssetField = window.location.href.substr(window.location.href.indexOf('pdfAssetField=')+14,100);
-    pdfAssetField = pdfAssetField.substr(0,pdfAssetField.indexOf('&'));
-    let pdfAssetId = window.location.href.substr(window.location.href.indexOf('pdfAssetId=')+11,100);
-    $('input[name="'+pdfAssetField+'"]').val(pdfAssetId);
-    $('div[id="kn-input-'+pdfAssetField+'"] div[class="kn-asset-current"]').attr('style',"background-color: rgba(255, 204, 153, 0);")
-    $('div[id="kn-input-'+pdfAssetField+'"] div[class="kn-asset-current"]').html('created.pdf')
-  }
-});
-*/
 
 //************************************* GO INTO FULLSCREEN (ONLY ANDRIOD DEVICE WORK) *****************************************
 function goToFullscreen(){
