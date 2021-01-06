@@ -62,6 +62,17 @@
     try {
       $('#infoText').text('File upload started.');
       var rData = $.ajax({
+        xhr: function() {
+          var xhr = new window.XMLHttpRequest();
+          xhr.upload.addEventListener("progress", function(evt) {
+              if (evt.lengthComputable) {
+                  var percentComplete = (evt.loaded / evt.total) * 100;
+                  //Do something with upload progress here
+                  $('#infoText').text('File upload progress. ' + percentComplete);
+              }
+         }, false);
+         return xhr;
+        },
         url: url,
         type: 'POST',
         headers: headers,
