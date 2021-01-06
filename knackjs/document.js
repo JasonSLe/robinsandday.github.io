@@ -74,20 +74,24 @@
         try {
           if (typeof rData === 'string'){ rData = JSON.parse(rData);};
           $('#dev').text(JSON.stringify(rData));
-          return {
-            'status': 'ok',
-            'data' : rData
-          };
+
+          $('#infoText').text('Upload succesfull, returning to app.');
+          let respText = JSON.parse(rData.responseText);
+          let message = {'event':'scanDocument','status':'ok','pdfAssetField':returnData.pdfAssetField,'pdfAssetId':respText.id}
+          window.parent.postMessage(JSON.stringify(message), '*')
+            /*
+            setTimeout(function() {
+              window.location = returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+respText.id;
+            }, 100);
+            */
         } catch (e) {
-          return {
-            'status': 'fail'
-          };
+          alert('File upload was not succesfull.')
+          alert(ret);
         }
       })
     } catch (ex){
-      return {
-        'status': 'fail'
-      };
+      alert('File upload was not succesfull.')
+      alert(ret);
     }
   }
 
@@ -513,21 +517,7 @@ async function uploadImages(infoText){
 
     $('#infoText').text('PDF created, starting upload.');
 
-    var ret = await uploadFileOnly(returnData.app_id, blobPDF,'ScannedDocument.pdf');
-    if (ret.status==='ok' && ret.data){
-      $('#infoText').text('Upload succesfull, returning to app.');
-      let respText = JSON.parse(ret.data.responseText);
-      let message = {'event':'scanDocument','status':'ok','pdfAssetField':returnData.pdfAssetField,'pdfAssetId':respText.id}
-      window.parent.postMessage(JSON.stringify(message), '*')
-      /*
-      setTimeout(function() {
-        window.location = returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+respText.id;
-      }, 100);
-      */
-    } else {
-      alert('File upload was not succesfull.')
-      alert(ret);
-    }
+    uploadFileOnly(returnData.app_id, blobPDF,'ScannedDocument.pdf');
   } catch(e){
     alert(e);
   }
