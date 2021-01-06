@@ -938,10 +938,18 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
  
        track.applyConstraints(constraints);
  
-       imageCapture = new ImageCapture(track);
+      if (OperatingSystem.Android()) {
+        imageCapture = new ImageCapture(track);
+      }
  
      })
-     .catch(error => console.log('Argh!', error.name || error));
+     .catch(error =>{
+      if (error.toString().includes('Permission denied')){
+        alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
+      } else {
+        alert('Error starting camera. Please report this error to admin.'+ error)
+      }
+    });
   
   //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
 
