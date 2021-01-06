@@ -68,7 +68,7 @@
               if (evt.lengthComputable) {
                   var percentComplete = (evt.loaded / evt.total) * 100;
                   //Do something with upload progress here
-                  $('#infoText').text('File upload progress. ' + percentComplete);
+                  $('#infoText').text('File upload progress: ' + parseInt(percentComplete)+'%');
               }
          }, false);
          return xhr;
