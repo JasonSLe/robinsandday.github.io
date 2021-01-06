@@ -722,18 +722,19 @@ function eraseCookie(name) {
 }
 
 function createScanIframe(href){
+  let nowS = Date.now().toString();
   if ($('#scanIframe').length===0){
     var scanIframe = document.createElement('iframe');
     scanIframe.id = 'scanIframe';
     scanIframe.frameBorder = 0;
     scanIframe.width = "100%";
     scanIframe.height = window.innerHeight - 20;
-    scanIframe.src = href;
+    scanIframe.src = href+'&'+nowS;
     scanIframe.setAttribute('allow', 'camera;microphone');
     document.body.appendChild(scanIframe);
   } else {
     var scanIframe = document.getElementById('scanIframe');
-    scanIframe.src = href;
+    scanIframe.src = href+'&'+nowS;
     $('#scanIframe').show();
   }
   $('.kn-content').hide();
