@@ -762,7 +762,7 @@ function scanDocsLinkFunction(selector_view){
     }
     window.onmessage = function(e){
         if (e.origin === 'https://robinsandday.github.io' && e.data.includes('scanDocument')) {
-            window.removeEventListener("deviceorientation", resizeScanIframe);
+            window.removeEventListener("orientationchange", resizeScanIframe);
             let message = JSON.parse(e.data);
             console.log(message);
             if (message.status ==='cancel'){
@@ -782,7 +782,7 @@ function scanDocsLinkFunction(selector_view){
         console.log('replaceScan href', replacedRecordId);
         createScanIframe(replacedRecordId)
       }
-      window.addEventListener("deviceorientation", resizeScanIframe, true);
+      window.addEventListener("orientationchange", resizeScanIframe, true);
     }
   });
 }  
