@@ -432,9 +432,8 @@ function prepareFileViewOnce(){
       */
     }
 
-    alert('aaaa');
-
     document.getElementById('cameraUploadOnce').onclick = function(){
+        alert('bbb');
         $('#cameraUploadOnce').hide();
         $('#infoText').text('File conversion and upload started.');
         $('#infoDialog').show();
