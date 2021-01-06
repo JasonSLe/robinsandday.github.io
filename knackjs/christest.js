@@ -473,6 +473,7 @@ $(window).on("orientationchange",function(){
   }
 });
 
+Knack.showSpinner();
 
 //************************************* TAKE A PICTURE AND CROP*****************************************
 //var sndCameraTakePhoto = new Audio("https://www.soundjay.com/mechanical/camera-shutter-click-01.wav");
