@@ -133,7 +133,7 @@ var OperatingSystem = {
 
 
 //************************************* GO INTO FULLSCREEN (ONLY ANDRIOD DEVICE WORK) *****************************************
-
+/*
      if (document.documentElement.requestFullscreen) {
        document.documentElement.requestFullscreen();
      } else if (document.documentElement.mozRequestFullScreen) {
@@ -143,7 +143,7 @@ var OperatingSystem = {
      } else if (document.documentElement.msRequestFullscreen) {
        document.documentElement.msRequestFullscreen();
      }
-
+*/
 //************************************* OPEN THE CAMERA BY ASKING USER PERMISSION(APPLE DEVICE) AND APPLY VIDEO STREAM SETTINGS*****************************************
 
 const constraints = {
@@ -249,6 +249,7 @@ takePhotoButton.onclick = takePhoto;
     video.srcObject.getVideoTracks().forEach(track => track.stop());
 
     //EXIT FULL SCREEN MODE
+    /*
     if (document.exitFullscreen) {
       document.exitFullscreen();
     } else if (document.webkitExitFullscreen) {
@@ -258,7 +259,7 @@ takePhotoButton.onclick = takePhoto;
     } else if (document.msExitFullscreen) {
       document.msExitFullscreen();
     }
-    
+    */
     prepareFileView()
   }
 
@@ -281,6 +282,7 @@ takePhotoButton.onclick = takePhoto;
 
   exitButton.onclick = function() {
     //EXIT FULL SCREEN MODE
+    /*
     if (document.exitFullscreen) {
       document.exitFullscreen();
     } else if (document.webkitExitFullscreen) {
@@ -290,7 +292,7 @@ takePhotoButton.onclick = takePhoto;
     } else if (document.msExitFullscreen) {
       document.msExitFullscreen();
     }
-
+*/
     //STOP TRACK WHEN USER EXIT THE APP
     video.srcObject.getVideoTracks().forEach(track => track.stop());
 

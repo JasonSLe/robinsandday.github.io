@@ -747,7 +747,8 @@ function hideScanIframe(){
   $('.kn-content').show();
 }
 
-var scanDocsSceneNames = ["scene_1133"]; ///add view numbers as necessary
+//THIS IS ARRAY OF scenes with document scan
+var scanDocsSceneNames = ["scene_1133"];
 scanDocsSceneNames.forEach(scanDocsLinkFunction);
 function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
@@ -773,9 +774,10 @@ function scanDocsLinkFunction(selector_view){
     };
     if ($('button[id="scanDocument"]').length>0){
       document.getElementById('scanDocument').onclick = function(){
-        let replacedRecordId = $('button[id="scanDocument"]').attr('data-href').replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href))
+        /*let replacedRecordId = $('button[id="scanDocument"]').attr('data-href').replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href))
         console.log('replaceScan href', replacedRecordId);
-        createScanIframe(replacedRecordId)
+        createScanIframe(replacedRecordId)*/
+        createScanIframe($('button[id="scanDocument"]').attr('data-href'));
       }
       window.addEventListener("orientationchange", resizeScanIframe, true);
     }
