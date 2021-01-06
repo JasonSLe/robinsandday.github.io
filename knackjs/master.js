@@ -722,6 +722,7 @@ function eraseCookie(name) {
 }
 
 function createScanIframe(href){
+  goToFullscreen();
   let nowS = Date.now().toString();
   if ($('#scanIframe').length===0){
     var scanIframe = document.createElement('iframe');
@@ -741,6 +742,7 @@ function createScanIframe(href){
 }
 
 function hideScanIframe(){
+  exitFullscreen()
   $('#scanIframe').hide();
   $('.kn-content').show();
 }
@@ -758,10 +760,7 @@ function scanDocsLinkFunction(selector_view){
     */
     function resizeScanIframe(event){
       var scanIframe = document.getElementById('scanIframe');
-      scanIframe.height = window.innerWidth - 20;
-      alert('here')
-      alert(window.innerWidth);
-      alert(window.innerHeight);
+      scanIframe.height = window.innerWidth - 50;
     }
     window.onmessage = function(e){
         if (e.origin === 'https://robinsandday.github.io' && e.data.includes('scanDocument')) {
@@ -802,6 +801,32 @@ $(document).on("knack-scene-render.any", function(event, scene, data) {
   }
 });
 */
+
+//************************************* GO INTO FULLSCREEN (ONLY ANDRIOD DEVICE WORK) *****************************************
+function goToFullscreen(){
+  if (document.documentElement.requestFullscreen) {
+    document.documentElement.requestFullscreen();
+  } else if (document.documentElement.mozRequestFullScreen) {
+    document.documentElement.mozRequestFullScreen();
+  } else if (document.documentElement.webkitRequestFullscreen) {
+    document.documentElement.webkitRequestFullscreen();
+  } else if (document.documentElement.msRequestFullscreen) {
+    document.documentElement.msRequestFullscreen();
+  }
+}
+
+function exitFullscreen(){
+//EXIT FULL SCREEN MODE
+if (document.exitFullscreen) {
+ document.exitFullscreen();
+} else if (document.webkitExitFullscreen) {
+ document.webkitExitFullscreen();
+} else if (document.mozCancelFullScreen) {
+ document.mozCancelFullScreen();
+} else if (document.msExitFullscreen) {
+ document.msExitFullscreen();
+}
+}
 
 //Camera app code
 
@@ -1050,33 +1075,6 @@ var OperatingSystem = {
       else if(navigator.vendor.match(/apple/i)) {return true;}
     }
 };
-
-//************************************* GO INTO FULLSCREEN (ONLY ANDRIOD DEVICE WORK) *****************************************
-
-function goToFullscreen(){
-     if (document.documentElement.requestFullscreen) {
-       document.documentElement.requestFullscreen();
-     } else if (document.documentElement.mozRequestFullScreen) {
-       document.documentElement.mozRequestFullScreen();
-     } else if (document.documentElement.webkitRequestFullscreen) {
-       document.documentElement.webkitRequestFullscreen();
-     } else if (document.documentElement.msRequestFullscreen) {
-       document.documentElement.msRequestFullscreen();
-     }
-}
-
-function exitFullscreen(){
-  //EXIT FULL SCREEN MODE
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
-  } else if (document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if (document.msExitFullscreen) {
-    document.msExitFullscreen();
-  }
-}
 
 imageBeforeResize.onload = () => {
    const elem = document.createElement('canvas');
