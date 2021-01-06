@@ -433,7 +433,6 @@ function prepareFileViewOnce(){
     }
 
     document.getElementById('cameraUploadOnce').onclick = function(){
-        alert('bbb');
         $('#cameraUploadOnce').hide();
         $('#infoText').text('File conversion and upload started.');
         $('#infoDialog').show();
@@ -448,7 +447,7 @@ function prepareFileViewOnce(){
     }
 }
 
-function uploadImages(infoText){
+async function uploadImages(infoText){
   $('#infoText').text('PDF creationg started.');
   var jsPDF = window.jspdf.jsPDF;
   var doc = new jsPDF("p", "mm", "a4");
