@@ -49,7 +49,7 @@
     }
   }
 
-  function uploadFileOnly(app_id, fileBlob, fileName) {
+  async function uploadFileOnly(app_id, fileBlob, fileName) {
     var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
     var headers = {
@@ -513,7 +513,7 @@ async function uploadImages(infoText){
 
     $('#infoText').text('PDF created, starting upload.');
 
-    var ret = uploadFileOnly(returnData.app_id, blobPDF,'ScannedDocument.pdf');
+    var ret = await uploadFileOnly(returnData.app_id, blobPDF,'ScannedDocument.pdf');
     if (ret.status==='ok' && ret.data){
       $('#infoText').text('Upload succesfull, returning to app.');
       let respText = JSON.parse(ret.data.responseText);
