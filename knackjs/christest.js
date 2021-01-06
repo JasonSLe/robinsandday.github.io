@@ -193,7 +193,6 @@ const constraints = {
 
   navigator.mediaDevices.getUserMedia({video: {pan: true, zoom: true, facingMode: {exact: "environment"}}
  }).then(mediaStream => {
-   alert('in')
       document.querySelector('video').srcObject = mediaStream;
 
       const track = mediaStream.getVideoTracks()[0];
@@ -202,7 +201,9 @@ const constraints = {
 
       /*$('#dev').text(JSON.stringify(track.getCapabilities()));*/
 
-      imageCapture = new ImageCapture(track);
+      if (OperatingSystem.Android()) {
+        imageCapture = new ImageCapture(track);
+      }
 
     })
     .catch(error =>{
