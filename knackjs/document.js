@@ -432,13 +432,15 @@ function prepareFileViewOnce(){
       */
     }
 
-    document.getElementById('cameraUploadOnce').onclick = function(){
-        $('#cameraUploadOnce').hide();
-        document.getElementById("cameraUploadOnce").style.display = "none";
-        $('#infoText').text('File conversion and upload started.');
-        $('#infoDialog').show();
-        //uploadImages('cameraUploadInfo');
+    function cameraUpload(){
+      $('#cameraUploadOnce').hide();
+      document.getElementById("cameraUploadOnce").style.display = "none";
+      $('#infoText').text('File conversion and upload started.');
+      $('#infoDialog').show();
+      //uploadImages('cameraUploadInfo');
     }
+
+    document.getElementById('cameraUploadOnce').onclick = cameraUpload;
 
     document.getElementById("modalClose").onclick = function() {
       document.getElementById("modalDialog").style.display = "none";
