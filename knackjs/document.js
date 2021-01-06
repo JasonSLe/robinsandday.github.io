@@ -77,8 +77,7 @@
 
           $('#infoText').text('Upload succesfull, returning to app.');
 
-          let respText = JSON.parse(rData.responseText);
-          let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':respText.id}
+          let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':rData.id}
           window.parent.postMessage(JSON.stringify(message), '*')
             /*
             setTimeout(function() {
@@ -86,6 +85,7 @@
             }, 100);
             */
         } catch (e) {
+          alert(e);
           alert('File upload was not succesfull.')
         }
       })
