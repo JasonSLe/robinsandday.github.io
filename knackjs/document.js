@@ -381,6 +381,7 @@ takePhotoButton.onclick = takePhoto;
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
     $('#kn-loading-spinner').show();
+    alert('sss')
     confirmImage();
   };
 
