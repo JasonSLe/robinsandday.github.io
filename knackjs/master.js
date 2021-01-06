@@ -756,8 +756,14 @@ function scanDocsLinkFunction(selector_view){
       $('div[class="content"] a[href*="RECORDID"]').attr('href',replacedRecordId);
     }
     */
+    function resizeScanIframe(){
+      alert('addd')
+      var scanIframe = document.getElementById('scanIframe');
+      scanIframe.height = window.innerHeight - 20;
+    }
     window.onmessage = function(e){
         if (e.origin === 'https://robinsandday.github.io' && e.data.includes('scanDocument')) {
+            window.removeEventListener(orientationEvent, resizeScanIframe);
             let message = JSON.parse(e.data);
             console.log(message);
             if (message.status ==='cancel'){
@@ -777,10 +783,7 @@ function scanDocsLinkFunction(selector_view){
         console.log('replaceScan href', replacedRecordId);
         createScanIframe(replacedRecordId)
       }
-      window.addEventListener(orientationEvent, function() {
-        var scanIframe = document.getElementById('scanIframe');
-        scanIframe.height = window.innerHeight - 20;
-      });
+      window.addEventListener(orientationEvent, resizeScanIframe);
     }
   });
 }  
