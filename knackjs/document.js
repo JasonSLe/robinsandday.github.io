@@ -468,7 +468,7 @@ function uploadImages(infoText){
 
     $('#infoText').text('PDF created, starting upload.');
 
-    var ret = uploadFileOnly(returnData.app_id, blobPDF,'created.pdf');
+    var ret = uploadFileOnly(returnData.app_id, blobPDF,'ScannedDocument.pdf');
     if (ret.status==='ok' && ret.data){
       $('#infoText').text('Upload succesfull, returning to app.');
       let respText = JSON.parse(ret.data.responseText);
