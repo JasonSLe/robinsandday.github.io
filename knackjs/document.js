@@ -49,7 +49,7 @@
     }
   }
 
-  async function uploadFileOnly(app_id, fileBlob, fileName) {
+  async function uploadFileOnly(app_id, fileBlob, fileName, pdfAssetField ) {
     var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
     var headers = {
@@ -76,9 +76,11 @@
           $('#dev').text(JSON.stringify(rData));
 
           $('#infoText').text('Upload succesfull, returning to app.');
+
           let respText = JSON.parse(rData.responseText);
-          let message = {'event':'scanDocument','status':'ok','pdfAssetField':returnData.pdfAssetField,'pdfAssetId':respText.id}
+          let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':respText.id}
           window.parent.postMessage(JSON.stringify(message), '*')
+          alert('aaaaa');
             /*
             setTimeout(function() {
               window.location = returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+respText.id;
@@ -86,12 +88,10 @@
             */
         } catch (e) {
           alert('File upload was not succesfull.')
-          alert(ret);
         }
       })
     } catch (ex){
       alert('File upload was not succesfull.')
-      alert(ret);
     }
   }
 
@@ -517,7 +517,7 @@ async function uploadImages(infoText){
 
     $('#infoText').text('PDF created, starting upload.');
 
-    uploadFileOnly(returnData.app_id, blobPDF,'ScannedDocument.pdf');
+    uploadFileOnly(returnData.app_id, blobPDF,'ScannedDocument.pdf', returnData.pdfAssetField);
   } catch(e){
     alert(e);
   }
