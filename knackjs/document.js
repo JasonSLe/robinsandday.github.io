@@ -449,6 +449,7 @@ function prepareFileViewOnce(){
 
 async function uploadImages(infoText){
   $('#infoText').text('PDF creationg started.');
+  alert('aaaa')
   var jsPDF = window.jspdf.jsPDF;
   var doc = new jsPDF("p", "mm", "a4");
 
