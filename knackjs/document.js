@@ -87,6 +87,7 @@
           $('#dev').text(JSON.stringify(rData));
 
           $('#infoText').text('Upload succesfull, returning to app.');
+          $('#kn-loading-spinner').show();
 
           let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':rData.id}
           window.parent.postMessage(JSON.stringify(message), '*')
@@ -248,6 +249,7 @@ function prepareLayout(cameraView, takingPhoto){
         $('#cameraGrid').hide();
         $('#cameraGui_controls').hide();
     }
+    $('#kn-loading-spinner').hide();
 }
 
 function prepareCameraView(imgToSaveName){
@@ -332,6 +334,7 @@ sndCameraTakePhoto.load();
 
 takePhotoButton.onclick = takePhoto;
   function takePhoto() {
+    $('#kn-loading-spinner').show();
     if (OperatingSystem.Android()) {     
       imageCapture.takePhoto().then(function(blob) {
         //so I use the blob to the shown image but also for the imageBeforeResize, which when is loaded updates the shown image with smaller image
@@ -377,6 +380,11 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
+    $('#kn-loading-spinner').show();
+    confirmImage();
+  };
+
+  async function confirmImage(){
     var imgToSave = document.createElement('img');
     imgToSave.id = imgToSaveName;
     imgToSave.classList.add("photoGrid");
@@ -417,7 +425,7 @@ takePhotoButton.onclick = takePhoto;
         }
     
     prepareFileView()
-  };
+  }
 
 
 //*************************************RETAKE BUTTON, THIS WILL DELETE THE PHOTO TAKEN*****************************************
@@ -470,6 +478,8 @@ function prepareFileView(){
   cameraView = false;
   prepareLayout(cameraView, takingPhoto);
   if ($('img[id*="cameraImg"]').length === 0) {$('#cameraUploadOnce').hide()} else {$('#cameraUploadOnce').show()}
+
+  $('#kn-loading-spinner').hide();
 }
 
 function prepareFileViewOnce(){
@@ -490,6 +500,7 @@ function prepareFileViewOnce(){
     }
 
     function cameraUpload(){
+      $('#kn-loading-spinner').show();
       $('#cameraUploadOnce').hide();
       document.getElementById("cameraUploadOnce").style.display = "none";
       $('#infoText').text('File conversion and upload started.');
