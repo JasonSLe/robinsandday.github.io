@@ -61,7 +61,7 @@
 
     try {
       $('#infoText').text('File upload started.');
-      var rData = $.ajax({
+      $.ajax({
         xhr: function() {
           var xhr = new window.XMLHttpRequest();
           xhr.upload.addEventListener("progress", function(evt) {
