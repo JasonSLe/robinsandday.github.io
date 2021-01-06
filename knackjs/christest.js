@@ -640,7 +640,7 @@ takePhotoButton.onclick = takePhoto;
   $("#cameraOfflineMessage").show(400);
 
   setTimeout(function(){
-    $("#cameraOfflineMessage").hide();
+    $("#cameraOfflineMessage").hide(400);
   }, 3000);
   
 }
