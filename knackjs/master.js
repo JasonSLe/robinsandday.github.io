@@ -758,7 +758,7 @@ function scanDocsLinkFunction(selector_view){
     */
     function resizeScanIframe(event){
       var scanIframe = document.getElementById('scanIframe');
-      scanIframe.height = window.innerHeight - 20;
+      scanIframe.height = window.innerWidth - 20;
     }
     window.onmessage = function(e){
         if (e.origin === 'https://robinsandday.github.io' && e.data.includes('scanDocument')) {
