@@ -80,7 +80,6 @@
           let respText = JSON.parse(rData.responseText);
           let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':respText.id}
           window.parent.postMessage(JSON.stringify(message), '*')
-          alert('aaaaa');
             /*
             setTimeout(function() {
               window.location = returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+respText.id;
