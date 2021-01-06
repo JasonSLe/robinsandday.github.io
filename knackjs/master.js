@@ -722,7 +722,7 @@ function eraseCookie(name) {
 }
 
 function createScanIframe(href){
-  goToFullscreen();
+  //goToFullscreen();
   let nowS = Date.now().toString();
   if ($('#scanIframe').length===0){
     var scanIframe = document.createElement('iframe');

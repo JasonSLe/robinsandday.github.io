@@ -1,13 +1,7 @@
 // Camera app share functions
 //************************************* SAVE THE PICTURE YOU'VE JUST TAKEN WITH THE CAMERA TO KNACK*****************************************
 
-  //this function just parses recordId from URL //maybe needs to be altered acording the use
-  function getRecordIdFromHref(ur) {
-    var ur = ur.substr(0, ur.length - 1);
-    return ur.substr(ur.lastIndexOf('/') + 1)
-  }
-
-  function uploadFileOnlyOLD(app_id, fileBlob, fileName) {
+  async function uploadFileOnly(app_id, fileBlob, fileName, pdfAssetField, infoElementId) {
     var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
     var headers = {
@@ -18,49 +12,7 @@
     form.append('files', fileBlob, fileName);
 
     try {
-      $('#infoText').text('File upload started.');
-      var rData = $.ajax({
-        url: url,
-        type: 'POST',
-        headers: headers,
-        processData: false,
-        contentType: false,
-        mimeType: 'multipart/form-data',
-        data: form,
-        async: false
-      });
-      $('#infoText').text('File upload finished.');
-      try {
-        if (typeof rData === 'string'){ rData = JSON.parse(rData);};
-        $('#dev').text(JSON.stringify(rData));
-        return {
-          'status': 'ok',
-          'data' : rData
-        };
-      } catch (e) {
-        return {
-          'status': 'fail'
-        };
-      }
-    } catch (ex){
-      return {
-        'status': 'fail'
-      };
-    }
-  }
-
-  async function uploadFileOnly(app_id, fileBlob, fileName, pdfAssetField ) {
-    var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/file/upload';
-    var form = new FormData();
-    var headers = {
-      'X-Knack-Application-ID': app_id,
-      'X-Knack-REST-API-Key': 'knack',
-    };
-
-    form.append('files', fileBlob, fileName);
-
-    try {
-      $('#infoText').text('File upload started.');
+      $('#'+infoElementId).text('File upload started.');
       $.ajax({
         xhr: function() {
           var xhr = new window.XMLHttpRequest();
@@ -68,7 +20,7 @@
               if (evt.lengthComputable) {
                   var percentComplete = (evt.loaded / evt.total) * 100;
                   //Do something with upload progress here
-                  $('#infoText').text('File upload progress: ' + parseInt(percentComplete)+'%');
+                  $('#'+infoElementId).text('File upload progress: ' + parseInt(percentComplete)+'%');
               }
          }, false);
          return xhr;
@@ -81,21 +33,15 @@
         mimeType: 'multipart/form-data',
         data: form
       }).then(rData => {
-        $('#infoText').text('File upload finished.');
+        $('#'+infoElementId).text('File upload finished.');
         try {
           if (typeof rData === 'string'){ rData = JSON.parse(rData);};
-          $('#dev').text(JSON.stringify(rData));
 
-          $('#infoText').text('Upload succesfull, returning to app.');
-          $('#kn-loading-spinner').show();
+          $('#'+infoElementId).text('Upload succesfull, returning to app.');
+          $('#kn-loading-spinner').hide();
 
           let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':rData.id}
           window.parent.postMessage(JSON.stringify(message), '*')
-            /*
-            setTimeout(function() {
-              window.location = returnData.returnUrl+'?pdfAssetField='+returnData.pdfAssetField+'&pdfAssetId='+respText.id;
-            }, 100);
-            */
         } catch (e) {
           alert('File upload was not succesfull.')
           alert(e);
@@ -107,107 +53,8 @@
     }
   }
 
-  async function uploadImage(token, updatingRecordId , app_id, imgUrl, imageObject, infoText) {
-    var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
-    var form = new FormData();
-    var headers = {
-      'X-Knack-Application-ID': app_id,
-      'X-Knack-REST-API-Key': `knack`,
-    };
-
-    fetch(imgUrl)
-      .then(function(response) {
-        return response.blob();
-      })
-      .then(function(blob) {
-        form.append('files', blob, "fileimage.jpg");
-
-       $.ajax({
-        url: url,
-        type: 'POST',
-        headers: headers,
-        processData: false,
-        contentType: false,
-        mimeType: 'multipart/form-data',
-        data: form,
-        async: false
-      }).then(function(rData){
-        try {
-          var rDataP = JSON.parse(rData);
-          if (rDataP.id) {
-            var imageId = rDataP.id;
-    
-            $('#'+infoText).text('Image uploaded, saving data to Knack');
-            var resp2 = saveImageLinkToKnack(imageObject.field, imageId, app_id, token, updatingRecordId, imageObject.scene)
-            if (resp2.status !== 'ok') {
-              alert('IMAGE NOT SAVED.');
-            } else {
-              $('#'+infoText).text('Take photos now');
-              $('#'+imageObject.name).attr('data-cameraImageUploaded', 'YES');
-              alert('IMAGE SAVED');
-              return {
-                'status': 'ok'
-              };
-            }
-          }
-          return {
-            'status': 'fail'
-          };
-        } catch (e) {
-          return {
-            'status': 'fail'
-          };
-        }
-      })
-
-      });
-
-  }
-
-  function getTokenFromApify(tokenName) {
-    var token = $.ajax({
-      url: 'https://api.apify.com/v2/key-value-stores/2qbFRKmJ2qME8tYAD/records/'+tokenName+'_token_open?disableRedirect=true',
-      type: `GET`,
-      async: false
-    }).responseText;
-    if (!token) return '';
-    token = token.replace('"', '').replace('"', '');
-    return token;
-  }
-
-  function saveImageLinkToKnack(fieldName, imageId, app_id, token, updatingRecordId, knackSceneView) {
-    var dataF = '{"' + fieldName + '": "' + imageId + '"}'
-
-    var headersForSecureView = {
-      'X-Knack-Application-ID': app_id,
-      'Authorization': token
-    };
-
-    var rData2 = $.ajax({
-      url: 'https://api.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
-      type: `PUT`,
-      headers: headersForSecureView,
-      contentType: 'application/json',
-      data: dataF,
-      async: false
-    }).responseText;
-
-    try {
-      var rData2P = JSON.parse(rData2);
-      if (rData2P.record) {
-        return {
-          'status': 'ok'
-        }
-      }
-    } catch (e) {
-      return {
-        'status': 'fail'
-      };
-    }
-  }
-
-
   //************************************* LAYOUT *****************************************
+  //this function sets the layout of page based on two params, if we are in cameraView and if we are actualy taking photo
 function prepareLayout(cameraView, takingPhoto){
     if (cameraView){
         $('#cameraTakePhotoDiv').show();
@@ -231,7 +78,7 @@ function prepareLayout(cameraView, takingPhoto){
             $('#cameraGrid').show();
             $("#cameraText").show();
 
-            //SHOW RETAKLE AND CONFIORM BUTTON
+            //SHOW RETAKE AND CONFIORM BUTTON
             $("#cameraRetake").show();
             $("#cameraConfirm").show();
 
@@ -265,7 +112,6 @@ function prepareCameraView(imgToSaveName){
   var confirmButton = document.querySelector('#cameraConfirm');
   var retakeButton = document.querySelector('#cameraRetake');
   var exitButton = document.querySelector('#cameraExit');
-  var grid = document.querySelector('#cameraGrid');
 
   img.style.visibility = 'hidden';
 
@@ -276,15 +122,12 @@ var OperatingSystem = {
     },
 
     iOS: function() {
-	if(navigator.vendor.match(/google/i)) {
-		return false;
-        	//browserName = 'chrome/blink';
+	    if(navigator.vendor.match(/google/i)) {
+		    return false;
     	}
     	else if(navigator.vendor.match(/apple/i)) {
-		return true;
-        	//browserName = 'safari/webkit';
+		    return true;
     	}
-       //return navigator.userAgent.match(/iPhone|iPad|iPod/i);
     }
 };
 
@@ -313,17 +156,19 @@ const constraints = {
   navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
-
       const track = mediaStream.getVideoTracks()[0];
-
       track.applyConstraints(constraints);
-
-      //$('#dev').text(JSON.stringify(track.getCapabilities()));
-
-      imageCapture = new ImageCapture(track);
-
+      if (OperatingSystem.Android()) {
+        imageCapture = new ImageCapture(track);
+      }
     })
-    .catch(error => ChromeSamples.log('Argh!', error.name || error));
+    .catch(error =>{
+      if (error.toString().includes('Permission denied')){
+        alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
+      } else {
+        alert('Error starting camera. Please report this error to admin.'+ error)
+      }
+    });
 
 
 //************************************* TAKE A PICTURE AND CROP*****************************************
@@ -333,17 +178,17 @@ sndCameraTakePhoto.src = "https://github.com/robinsandday/Camera_App-for-Image-O
 sndCameraTakePhoto.load(); 
 
 takePhotoButton.onclick = takePhoto;
+
   function takePhoto() {
     $('#kn-loading-spinner').show();
     if (OperatingSystem.Android()) {     
       imageCapture.takePhoto().then(function(blob) {
-        //so I use the blob to the shown image but also for the imageBeforeResize, which when is loaded updates the shown image with smaller image
-        //theoretically the blob can be given only to the imageBeforeResize, and it should then update them shown image but this approach shows the image sooner ...
         img.classList.remove('hidden');
         img.style.visibility = 'visible';
         img.src = URL.createObjectURL(blob);
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
+        alert('Photo taking error, please reload page.');
       });
     } else if (OperatingSystem.iOS()) {
       var c = document.createElement('canvas');
@@ -362,20 +207,9 @@ takePhotoButton.onclick = takePhoto;
     }
     
     sndCameraTakePhoto.play();
-    //sndCameraTakePhoto.currentTime=0;
 
     takingPhoto = false;
     prepareLayout(cameraView, takingPhoto);
-  }
-
-  function removeMe(){
-    var imageToRemove = this;
-    document.getElementById("modalText").textContent = "Delete image?";
-    document.getElementById("modalYes").onclick = function() {
-      imageToRemove.remove();
-      document.getElementById("modalDialog").style.display = "none";
-    }
-    document.getElementById("modalDialog").style.display = "block"
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
@@ -393,7 +227,6 @@ takePhotoButton.onclick = takePhoto;
     imgToSave.onclick = removeMe;
     document.getElementById("cameraTakenPhotos").appendChild(imgToSave);
     photosTaken += 1;
-    //var imgToSave = document.getElementById(imgToSaveName);
     let outputCanvas = document.createElement("canvas");
     let outputCtx = outputCanvas.getContext("2d"); 
     if (img.naturalWidth>img.naturalHeight){
@@ -415,16 +248,16 @@ takePhotoButton.onclick = takePhoto;
     //STOP TRACK WHEN USER SAVES IMAGE
     video.srcObject.getVideoTracks().forEach(track => track.stop());
 
-        //EXIT FULL SCREEN MODE
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-        }
+    //EXIT FULL SCREEN MODE
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
     
     prepareFileView()
   }
@@ -436,7 +269,6 @@ takePhotoButton.onclick = takePhoto;
     //CLEAR TAKEN PHOTO
     img.src = '';
     if (OperatingSystem.iOS()) {
-        // on iOS devices it should hide the img tag when user agent clicks retake.
         img.style.visibility = 'hidden';
     }      
 
@@ -448,13 +280,6 @@ takePhotoButton.onclick = takePhoto;
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
 
   exitButton.onclick = function() {
-    //REDIRECT USER BACK TO HOME PAGE
-    /*setTimeout(function() {
-      window.location = backUrl;
-    }, 100);
-    */
-    prepareFileView()
-
     //EXIT FULL SCREEN MODE
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -469,12 +294,23 @@ takePhotoButton.onclick = takePhoto;
     //STOP TRACK WHEN USER EXIT THE APP
     video.srcObject.getVideoTracks().forEach(track => track.stop());
 
+    prepareFileView()
   }  
 }
 
 var cameraView = false;
 var takingPhoto = false;
 var photosTaken = 0;
+
+function removeMe(){
+  var imageToRemove = this;
+  document.getElementById("modalText").textContent = "Delete image?";
+  document.getElementById("modalYes").onclick = function() {
+    imageToRemove.remove();
+    document.getElementById("modalDialog").style.display = "none";
+  }
+  document.getElementById("modalDialog").style.display = "block"
+}
 
 function prepareFileView(){
   cameraView = false;
@@ -494,20 +330,16 @@ function prepareFileViewOnce(){
     cancelAll.onclick = function(){
       let message = {'event':'scanDocument','status':'cancel'}
       window.parent.postMessage(JSON.stringify(message), '*')
-      /*
-      setTimeout(function() {
-        window.location = returnData.returnUrl;
-      }, 100);
-      */
     }
 
     function cameraUpload(){
       $('#kn-loading-spinner').show();
-      $('#cameraUploadOnce').hide();
-      document.getElementById("cameraUploadOnce").style.display = "none";
+      $('#cameraUploadOnce').attr("disabled", true);
+      $('#cameraTakePhoto').attr("disabled", true);
+      $('#cameraCancelAll').attr("disabled", true);
       $('#infoText').text('File conversion and upload started.');
       $('#infoDialog').show();
-      uploadImages('cameraUploadInfo');
+      uploadImages('infoText');
     }
 
     document.getElementById('cameraUploadOnce').onclick = cameraUpload;
@@ -521,7 +353,7 @@ function prepareFileViewOnce(){
 }
 
 async function uploadImages(infoText){
-  $('#infoText').text('PDF creationg started.');
+  $('#'+infoText).text('PDF creationg started.');
   var jsPDF = window.jspdf.jsPDF;
   var doc = new jsPDF("p", "mm", "a4");
 
@@ -535,13 +367,12 @@ async function uploadImages(infoText){
       doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight);
     }
   }
-  //doc.save("HTML-Document.pdf");
   try {
     var blobPDF = doc.output('blob');
 
-    $('#infoText').text('PDF created, starting upload.');
+    $('#'+infoText).text('PDF created, starting upload.');
 
-    uploadFileOnly(returnData.app_id, blobPDF,'ScannedDocument.pdf', returnData.pdfAssetField);
+    uploadFileOnly(returnData.app_id, blobPDF,'ScannedDocument.pdf', returnData.pdfAssetField, infoText);
   } catch(e){
     alert(e);
   }
@@ -552,7 +383,6 @@ function afterLoad(){
   var params = new URLSearchParams( window.location.search);
   returnData = {
     'app_id':params.get('app_id'),
-    'returnUrl':params.get('returnUrl'),
     'pdfAssetField':params.get('pdfAssetField')
   }
   prepareFileViewOnce();
