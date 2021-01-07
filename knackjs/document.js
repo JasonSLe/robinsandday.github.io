@@ -366,7 +366,7 @@ async function uploadImages(infoText){
     alert($('#cameraUploadFileName').attr('value'));
     var pdfName = $('#cameraUploadFileName').attr('value');
     if (pdfName===''){pdfName='ScannedDocument.pdf'};
-    if (right(pdfName,3).toLowerCase()!=='.pdf'){pdfName = pdfName+'.pdf'}
+    if (right(pdfName,4).toLowerCase()!=='.pdf'){pdfName = pdfName+'.pdf'}
 
     $('#'+infoText).text('PDF creationg started.');
     var jsPDF = window.jspdf.jsPDF;
@@ -379,7 +379,7 @@ async function uploadImages(infoText){
     for (let i = 1; i <= photosTaken; i++) { 
       if ($('#cameraImg'+i).length!==0){
         if (!isFirstPage) { doc.addPage("a4","portrait"); } else { isFirstPage=false }
-        doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight,undefined,'MEDIUM');
+        doc.addImage($('#cameraImg'+i).attr('src'), 'PNG', 0, 0, pdfWidth, pdfHeight,undefined,'MEDIUM');
       }
     }
   } catch (e){
