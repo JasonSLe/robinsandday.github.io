@@ -294,7 +294,9 @@ takePhotoButton.onclick = takePhoto;
     }
 */
     //STOP TRACK WHEN USER EXIT THE APP
-    video.srcObject.getVideoTracks().forEach(track => track.stop());
+    try {
+      video.srcObject.getVideoTracks().forEach(track => track.stop());
+    } catch (e) {}
 
     prepareFileView()
   }  
