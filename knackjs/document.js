@@ -40,7 +40,7 @@
           $('#'+infoElementId).text('Upload succesfull, returning to app.');
           $('#kn-loading-spinner').hide();
 
-          let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':rData.id}
+          let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':rData.id, 'fileName':fileName}
           window.parent.postMessage(JSON.stringify(message), '*')
         } catch (e) {
           alert('File upload was not succesfull.')
@@ -363,7 +363,6 @@ function right(str, chr){
 async function uploadImages(infoText){
   alert('inUpload')
   try {
-    alert($('#cameraUploadFileName').attr('value'));
     var pdfName = $('#cameraUploadFileName').attr('value');
     if (pdfName===''){pdfName='ScannedDocument.pdf'};
     if (right(pdfName,4).toLowerCase()!=='.pdf'){pdfName = pdfName+'.pdf'}
