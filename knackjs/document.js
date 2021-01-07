@@ -209,7 +209,7 @@ takePhotoButton.onclick = takePhoto;
     sndCameraTakePhoto.play();
     
     try {
-      new PinchZoom.default(document.getElementById('cameraGrid'), {});
+      new PinchZoom.default(document.getElementById('cameraTakePhotoDiv'), {});
     } catch (e) { alert(e)};
 
     takingPhoto = false;
