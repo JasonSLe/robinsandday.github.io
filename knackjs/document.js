@@ -361,23 +361,28 @@ function right(str, chr){
 }
 
 async function uploadImages(infoText){
-  let pdfName = $('#cameraUploadFileName').attr('value');
-  if (pdfName===''){pdfName='ScannedDocument.pdf'};
-  if (right(pdfName,3).toLowerCase()!=='.pdf'){pdfName = pdfName+'.pdf'}
+  alert('inUpload')
+  try {
+    let pdfName = $('#cameraUploadFileName').attr('value');
+    if (pdfName===''){pdfName='ScannedDocument.pdf'};
+    if (right(pdfName,3).toLowerCase()!=='.pdf'){pdfName = pdfName+'.pdf'}
 
-  $('#'+infoText).text('PDF creationg started.');
-  var jsPDF = window.jspdf.jsPDF;
-  var doc = new jsPDF("p", "mm", "a4", true);
+    $('#'+infoText).text('PDF creationg started.');
+    var jsPDF = window.jspdf.jsPDF;
+    var doc = new jsPDF("p", "mm", "a4", true);
 
-  var pdfWidth = doc.internal.pageSize.getWidth();
-  var pdfHeight = doc.internal.pageSize.getHeight();
+    var pdfWidth = doc.internal.pageSize.getWidth();
+    var pdfHeight = doc.internal.pageSize.getHeight();
 
-  let isFirstPage = true;
-  for (let i = 1; i <= photosTaken; i++) { 
-    if ($('#cameraImg'+i).length!==0){
-      if (!isFirstPage) { doc.addPage("a4","portrait"); } else { isFirstPage=false }
-      doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight,undefined,'MEDIUM');
+    let isFirstPage = true;
+    for (let i = 1; i <= photosTaken; i++) { 
+      if ($('#cameraImg'+i).length!==0){
+        if (!isFirstPage) { doc.addPage("a4","portrait"); } else { isFirstPage=false }
+        doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight,undefined,'MEDIUM');
+      }
     }
+  } catch (e){
+    alert(e)
   }
   try {
     var blobPDF = doc.output('blob');
