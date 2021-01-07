@@ -207,11 +207,6 @@ takePhotoButton.onclick = takePhoto;
     }
     
     sndCameraTakePhoto.play();
-    
-    try {
-      var zoomEl = document.getElementById('cameraFrontpic');
-      new PinchZoom.default(zoomEl, {'draggableUnzoomed':false,'setOffsetsOnce':true,'lockDragAxis':true});
-    } catch (e) { alert(e)};
 
     takingPhoto = false;
     prepareLayout(cameraView, takingPhoto);
