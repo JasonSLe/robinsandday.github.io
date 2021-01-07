@@ -357,7 +357,7 @@ function prepareFileViewOnce(){
 }
 
 function right(str, chr){
-	return str.slice(myString.length-chr,myString.length);
+	return str.slice(str.length-chr,str.length);
 }
 
 async function uploadImages(infoText){
