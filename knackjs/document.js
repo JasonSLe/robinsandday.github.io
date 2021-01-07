@@ -242,7 +242,7 @@ takePhotoButton.onclick = takePhoto;
       outputCanvas.width = img.naturalWidth;
       outputCtx.drawImage(img, 0, 0);
     }
-    imgToSave.src = outputCtx.canvas.toDataURL("image/png", 1.0);
+    imgToSave.src = outputCtx.canvas.toDataURL("image/jpeg", 0.8);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
@@ -363,7 +363,6 @@ function right(str, chr){
 }
 
 async function uploadImages(infoText){
-  alert('inUpload')
   try {
     var pdfName = $('#cameraUploadFileName').attr('value');
     if (pdfName===''){pdfName='ScannedDocument.pdf'};
@@ -380,7 +379,7 @@ async function uploadImages(infoText){
     for (let i = 1; i <= photosTaken; i++) { 
       if ($('#cameraImg'+i).length!==0){
         if (!isFirstPage) { doc.addPage("a4","portrait"); } else { isFirstPage=false }
-        doc.addImage($('#cameraImg'+i).attr('src'), 'PNG', 0, 0, pdfWidth, pdfHeight,undefined,'MEDIUM');
+        doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight,undefined,'MEDIUM');
       }
     }
   } catch (e){
