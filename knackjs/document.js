@@ -230,15 +230,17 @@ takePhotoButton.onclick = takePhoto;
     let outputCanvas = document.createElement("canvas");
     let outputCtx = outputCanvas.getContext("2d"); 
     if (img.naturalWidth>img.naturalHeight){
-      outputCanvas.height = img.naturalWidth;
-      outputCanvas.width = img.naturalHeight;
-      outputCtx.translate(0, img.naturalWidth);
+      let scale = 1190 / img.naturalWidth //for pdf size
+      outputCanvas.height = img.naturalWidth * scale;
+      outputCanvas.width = img.naturalHeight * scale;
+      outputCtx.translate(0, img.naturalWidth * scale);
       outputCtx.rotate(-90*Math.PI/180);
-      outputCtx.drawImage(img, 0, 0);
+      outputCtx.drawImage(img, 0, 0, img.naturalWidth * scale, img.naturalHeight * scale);
     } else {
-      outputCanvas.height = img.naturalHeight;
-      outputCanvas.width = img.naturalWidth;
-      outputCtx.drawImage(img, 0, 0);
+      let scale = 1190 / img.naturalWidth //for pdf size
+      outputCanvas.height = img.naturalHeight * scale;
+      outputCanvas.width = img.naturalWidth * scale;
+      outputCtx.drawImage(img, 0, 0, img.naturalWidth * scale, img.naturalHeight * scale);
     }
     imgToSave.src = outputCtx.canvas.toDataURL("image/jpeg", 0.8);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
@@ -378,7 +380,7 @@ async function uploadImages(infoText){
     for (let i = 1; i <= photosTaken; i++) { 
       if ($('#cameraImg'+i).length!==0){
         if (!isFirstPage) { doc.addPage("a4","portrait"); } else { isFirstPage=false }
-        doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight,undefined,'MEDIUM');
+        doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight,undefined,'SLOW');
       }
     }
   } catch (e){
