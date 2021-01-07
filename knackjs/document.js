@@ -317,7 +317,7 @@ function removeMe(){
 function prepareFileView(){
   cameraView = false;
   prepareLayout(cameraView, takingPhoto);
-  if ($('img[id*="cameraImg"]').length === 0) {$('#cameraUploadOnce').hide()} else {$('#cameraUploadOnce').show()}
+  if ($('img[id*="cameraImg"]').length === 0) {$('#cameraUploadDiv').hide()} else {$('#cameraUploadDiv').show()}
 
   $('#kn-loading-spinner').hide();
 }
