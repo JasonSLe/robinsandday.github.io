@@ -373,6 +373,7 @@ async function uploadImages(infoText){
     var doc = new jsPDF("p", "mm", "a4", true);
 
     var pdfWidth = doc.internal.pageSize.getWidth();
+    alert(pdfWidth);
     var pdfHeight = doc.internal.pageSize.getHeight();
 
     let isFirstPage = true;
