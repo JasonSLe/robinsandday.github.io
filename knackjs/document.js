@@ -242,7 +242,7 @@ takePhotoButton.onclick = takePhoto;
       outputCanvas.width = img.naturalWidth;
       outputCtx.drawImage(img, 0, 0);
     }
-    imgToSave.src = outputCtx.canvas.toDataURL("image/jpeg", 1.0);
+    imgToSave.src = outputCtx.canvas.toDataURL("image/png", 1.0);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
