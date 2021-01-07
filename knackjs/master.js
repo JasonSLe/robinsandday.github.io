@@ -769,6 +769,8 @@ function scanDocsLinkFunction(selector_view){
               $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
               $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').attr('style',"background-color: rgba(255, 204, 153, 0);")
               $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html('ScannedDocument.pdf')
+              $('#'+message.pdfAssetField+'_upload').hide();
+              $('.kn-file-upload').html('File uploaded successfully.');
             }
         }
     };
