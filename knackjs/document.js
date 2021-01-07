@@ -363,7 +363,8 @@ function right(str, chr){
 async function uploadImages(infoText){
   alert('inUpload')
   try {
-    let pdfName = $('#cameraUploadFileName').attr('value');
+    alert($('#cameraUploadFileName').attr('value'));
+    var pdfName = $('#cameraUploadFileName').attr('value');
     if (pdfName===''){pdfName='ScannedDocument.pdf'};
     if (right(pdfName,3).toLowerCase()!=='.pdf'){pdfName = pdfName+'.pdf'}
 
