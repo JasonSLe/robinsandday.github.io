@@ -729,7 +729,7 @@ function createScanIframe(href){
     scanIframe.id = 'scanIframe';
     scanIframe.frameBorder = 0;
     scanIframe.width = "100%";
-    scanIframe.height = (window.innerHeight<document.body.clientHeight?window.innerHeight:document.body.clientHeight) - 50;
+    scanIframe.height = (window.innerHeight<document.body.clientHeight?window.innerHeight:document.body.clientHeight) - 30;
     scanIframe.src = href+'&'+nowS;
     scanIframe.setAttribute('allow', 'camera;microphone');
     document.body.appendChild(scanIframe);
@@ -754,7 +754,7 @@ function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
     function resizeScanIframe(event){
       var scanIframe = document.getElementById('scanIframe');
-      scanIframe.height = (window.innerWidth<document.body.clientWidth?window.innerWidth:document.body.clientWidth) - 50;
+      scanIframe.height = (window.innerWidth<document.body.clientWidth?window.innerWidth:document.body.clientWidth) - 30;
     }
     window.onmessage = function(e){
         if (e.origin === 'https://robinsandday.github.io' && e.data.includes('scanDocument')) {
