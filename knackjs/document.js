@@ -376,7 +376,7 @@ async function uploadImages(infoText){
   for (let i = 1; i <= photosTaken; i++) { 
     if ($('#cameraImg'+i).length!==0){
       if (!isFirstPage) { doc.addPage("a4","portrait"); } else { isFirstPage=false }
-      doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight,'','MEDIUM');
+      doc.addImage($('#cameraImg'+i).attr('src'), 'JPEG', 0, 0, pdfWidth, pdfHeight,undefined,'MEDIUM');
     }
   }
   try {
