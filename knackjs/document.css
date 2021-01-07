@@ -227,11 +227,11 @@ body {
     #cameraVid_container {
       width: auto;
       height: 80%;
-      top: 20%
+      top: 0%
     }
   
     #cameraGui_controls {
-      top: 0;
+      top: 80%;
       width: 100%;
       height: 20%;
       left: 0;
