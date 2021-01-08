@@ -55,11 +55,9 @@ grid-template-areas:
 "Upload button"
 }
 
-.zoomHolder
-{
+.zoomHolder{
    width:100%;
    height:auto;
-   position:relative;
    overflow:hidden
 }
 
