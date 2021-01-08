@@ -754,6 +754,8 @@ function embedScanApp(href){
     afterLoad($('button[id="scanDocument"]').attr('data-app_id'));
   }
 
+  function emptyCallback() { }
+
   function loadScript(src, id,  callback){
     var script, scriptTag;
     script = document.createElement('script');
@@ -770,7 +772,7 @@ function embedScanApp(href){
     loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS', afterScriptLoad);
   }
   if ($('#jsPDF').length===0){
-    loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF')
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', emptyCallbac)
   }
 }
 
