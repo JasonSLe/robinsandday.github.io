@@ -747,6 +747,7 @@ function embedScanApp(href){
   var nowS = Date.now().toString();
 
   var style = document.createElement('link');
+  style.id = "scanAppCss";
   style.rel = 'stylesheet';
   style.type = 'text/css';
   style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
@@ -756,10 +757,11 @@ function embedScanApp(href){
     afterLoad();
   }
 
-  function loadScript(src, callback){
+  function loadScript(src, id,  callback){
     var script, scriptTag;
     script = document.createElement('script');
     script.type = 'text/javascript';
+    script.id = "scanAppCss";
     script.src = src;
     script.onload = script.onreadystatechange = function() {
       if (!this.readyState || this.readyState == 'complete' ){ callback(); }
@@ -767,7 +769,7 @@ function embedScanApp(href){
     scriptTag = document.getElementsByTagName('script')[0];
     scriptTag.parentNode.insertBefore(script, scriptTag);
   }
-  loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,afterScriptLoad);
+  loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS',afterScriptLoad);
 }
 
 function showScanApp(href){
