@@ -750,20 +750,20 @@ function embedScanApp(href){
     document.getElementsByTagName( 'head' )[0].appendChild( style )
   }
 
-  function loadScript(src, id/*,  callback*/){
+  function loadScript(src, id,  callback){
     var script, scriptTag;
     script = document.createElement('script');
     script.type = 'text/javascript';
     script.id = id;
     script.src = src;
-    /*script.onload = script.onreadystatechange = function() {
+    script.onload = script.onreadystatechange = function() {
       if (!this.readyState || this.readyState == 'complete' ){ callback(); }
-    };*/
+    };
     scriptTag = document.getElementsByTagName('script')[0];
     scriptTag.parentNode.insertBefore(script, scriptTag);
   }
   if ($('#scanAppJS').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS');
+    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS',afterScriptLoad($('button[id="scanDocument"]').attr('data-app_id')));
   }
   if ($('#jsPDF').length===0){
     loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF')
@@ -774,10 +774,9 @@ function afterScriptLoad(app_id){
   afterLoad(app_id);
 }
 
-function showScanApp(app_id){
+function showScanApp(){
   if ($('#scanApp').length===0){
     embedScanApp();
-    afterScriptLoad(app_id);
   }
   $('#scanApp').show();
   $('.kn-content').hide();
@@ -822,7 +821,7 @@ function scanDocsLinkFunction(selector_view){
     };
     if ($('button[id="scanDocument"]').length>0){
       document.getElementById('scanDocument').onclick = function(){
-        showScanApp($('button[id="scanDocument"]').attr('data-app_id'),$('button[id="scanDocument"]').attr('data-pdfassetfield'));
+        showScanApp();
       }
     }
   });
