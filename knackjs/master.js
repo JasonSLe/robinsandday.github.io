@@ -804,7 +804,7 @@ function scanDocsLinkFunction(selector_view){
       document.getElementById('scanDocument').onclick = function(){
         embedScanApp($('button[id="scanDocument"]').attr('data-href'));
       }
-      window.addEventListener("orientationchange", resizeScanIframe, true);
+      //window.addEventListener("orientationchange", resizeScanIframe, true);
     }
   });
 }  
