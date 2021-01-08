@@ -736,12 +736,7 @@ function embedScanApp(href){
     scanApp = document.createElement('div');
     scanApp.innerHTML = scanAppHTML;
     scanApp.id = 'scanApp';
-    console.log(scanAppHTML);
-    console.log(scanApp);
     document.body.appendChild(scanApp);
-  } else {
-    console.log('exist');
-    console.log(scanApp)
   }
 
   var nowS = Date.now().toString();
