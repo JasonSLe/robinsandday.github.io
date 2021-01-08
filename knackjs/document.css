@@ -55,8 +55,13 @@ grid-template-areas:
 "Upload button"
 }
 
-
-/**POP UP MESSAGE FOR ISO USER TO ALLOW MOTION SENSOR**/
+.zoomHolder
+{
+   width:100%;
+   height:auto;
+   position:relative;
+   overflow:hidden
+}
 
 body {
     overscroll-behavior-y: contain;
