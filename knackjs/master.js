@@ -774,9 +774,11 @@ function embedScanApp(href){
   }
 }
 
-function showScanApp(href){
+function showScanApp(app_id, pdfAssetField){
   if ($('#scanApp').length===0){
     embedScanApp();
+    returnData.app_id = app_id;
+    returnData.pdfAssetField = pdfAssetField;
   }
   $('#scanApp').show();
   $('.kn-content').hide();
@@ -787,24 +789,21 @@ function hideScanApp(){
   $('.kn-content').show();
 }
 
+function fillDataToKnack(message){
+  alert('fill')
+  hideScanApp();
+  $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
+  $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').attr('style',"background-color: rgba(255, 204, 153, 0);")
+  $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fieldName)
+  $('#'+message.pdfAssetField+'_upload').hide();
+  $('.kn-file-upload').html('File uploaded successfully.');
+}
+
 //THIS IS ARRAY OF scenes with document scan
 var scanDocsSceneNames = ["scene_1133"];
 scanDocsSceneNames.forEach(scanDocsLinkFunction);
 function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
-    function fillDataToKnack(message){
-      alert('fill')
-      hideScanApp();
-      $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
-      $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').attr('style',"background-color: rgba(255, 204, 153, 0);")
-      $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fieldName)
-      $('#'+message.pdfAssetField+'_upload').hide();
-      $('.kn-file-upload').html('File uploaded successfully.');
-    }
-    function resizeScanIframe(event){
-      var scanIframe = document.getElementById('scanIframe');
-      scanIframe.height = (window.innerWidth<document.body.clientWidth?window.innerWidth:document.body.clientWidth) - 30;
-    }
     window.onmessage = function(e){
         if (e.data.includes('scanDocument')) {
             window.removeEventListener("orientationchange", resizeScanIframe);
@@ -825,9 +824,8 @@ function scanDocsLinkFunction(selector_view){
     };
     if ($('button[id="scanDocument"]').length>0){
       document.getElementById('scanDocument').onclick = function(){
-        showScanApp($('button[id="scanDocument"]').attr('data-href'));
+        showScanApp($('button[id="scanDocument"]').attr('data-app_id'),$('button[id="scanDocument"]').attr('data-pdfAssetField'));
       }
-      //window.addEventListener("orientationchange", resizeScanIframe, true);
     }
   });
 }  

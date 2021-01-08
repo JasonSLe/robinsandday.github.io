@@ -404,11 +404,6 @@ async function uploadImages(infoText){
 
 var returnData = {};
 function afterLoad(){
-  var params = new URLSearchParams( window.location.search);
-  returnData = {
-    'app_id':params.get('app_id'),
-    'pdfAssetField':params.get('pdfAssetField')
-  }
   prepareFileViewOnce();
   prepareFileView();
 }
