@@ -777,8 +777,8 @@ function embedScanApp(href){
 function showScanApp(app_id, pdfAssetField){
   if ($('#scanApp').length===0){
     embedScanApp();
-    returnData.app_id = app_id;
-    returnData.pdfAssetField = pdfAssetField;
+    $('#scanApp').attr('data-app_id', app_id);
+    $('#scanApp').attr('data-pdfAssetField', pdfAssetField);
   }
   $('#scanApp').show();
   $('.kn-content').hide();
