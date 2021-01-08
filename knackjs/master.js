@@ -724,15 +724,21 @@ function eraseCookie(name) {
 var scanAppHTML = '';
 
 function embedScanApp(){
-  if (scanAppHTML===''){
-    scanAppHTML === $.ajax({
-        type: "GET",
-        url: 'https://robinsandday.github.io/photoTakeApp/documentPart.html',
-        cache: false,
-        async: false
-    }).responseText;
-    
+  let scanApp = document.getElementById('scanApp');
+  if (!scanApp){
+    if (scanAppHTML===''){
+      scanAppHTML === $.ajax({
+          type: "GET",
+          url: 'https://robinsandday.github.io/photoTakeApp/documentPart.html',
+          cache: false,
+          async: false
+      }).responseText;
+    }
+    scanApp = document.createElement('div');
+    scanApp.html = scanAppHTML;
+    document.body.appendChild(scanApp);
   }
+
   $('.kn-content').hide();
 }
 
