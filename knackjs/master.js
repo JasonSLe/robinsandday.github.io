@@ -791,7 +791,7 @@ function embedScanApp(href){
     loadScript('https://robinsandday.github.io/knackjs/jquery-1.11.3.min.js','jQuery', emptyCallback)
   }
   if ($('#jsHammer').length===0){
-    loadScript('https://hammerjs.github.io/dist/hammer.min.js','jsHammer', emptyCallback)
+    loadScript('https://robinsandday.github.io/knackjs/hammer.min.js','jsHammer', emptyCallback)
   }
   if ($('#tweenMax').length===0){
     loadScript("https://robinsandday.github.io/knackjs/TweenMax.min.js",'tweenMax', emptyCallback);
