@@ -750,23 +750,23 @@ function embedScanApp(href){
     document.getElementsByTagName( 'head' )[0].appendChild( style )
   }
 
-  function loadScript(src, id,  callback){
+  function loadScript(src, id/*,  callback*/){
     var script, scriptTag;
     script = document.createElement('script');
     script.type = 'text/javascript';
     script.id = "scanAppCss";
     script.src = src;
-    script.onload = script.onreadystatechange = function() {
+    /*script.onload = script.onreadystatechange = function() {
       if (!this.readyState || this.readyState == 'complete' ){ callback(); }
-    };
+    };*/
     scriptTag = document.getElementsByTagName('script')[0];
     scriptTag.parentNode.insertBefore(script, scriptTag);
   }
   if ($('#scanAppJS').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS',undefined);
+    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS');
   }
   if ($('#jsPDF').length===0){
-    loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', undefined)
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF')
   }
 }
 
