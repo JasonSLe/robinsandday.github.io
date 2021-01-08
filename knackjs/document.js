@@ -33,7 +33,6 @@
         mimeType: 'multipart/form-data',
         data: form
       }).then(rData => {
-        alert(rData);
         $('#'+infoElementId).text('File upload finished.');
         try {
           if (typeof rData === 'string'){ rData = JSON.parse(rData);};

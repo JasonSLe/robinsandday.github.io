@@ -738,7 +738,6 @@ function embedScanApp(href){
     scanApp.id = 'scanApp';
     document.body.appendChild(scanApp);
   } else {
-    alert('realod')
     scanApp.innerHTML = scanAppHTML;
   }
 
@@ -793,7 +792,6 @@ function hideScanApp(){
 }
 
 function fillDataToKnack(message){
-  alert('fill')
   hideScanApp();
   $('input[name="'+$('button[id="scanDocument"]').attr('data-pdfassetfield')+'"]').val(message.pdfAssetId);
   $('div[id="kn-input-'+$('button[id="scanDocument"]').attr('data-pdfassetfield')+'"] div[class="kn-asset-current"]').html(message.fileName);
