@@ -771,8 +771,7 @@ function embedScanApp(href){
 }
 
 function showScanApp(href){
-  let scanApp = document.getElementById('scanApp');
-  if (!scanApp){
+  if ($('#scanApp').length===0){
     embedScanApp();
   }
   $('#scanApp').show();
