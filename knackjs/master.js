@@ -1338,3 +1338,13 @@ $(document).on('knack-scene-render.scene_909', function(event, scene) {
 function recursivecall(){
  setTimeout(function () { if($("#view_3927").is(":visible")==true){ Knack.views["view_3927"].model.fetch();recursivecall();} }, 100000);
 }
+
+// ----------  refresh Parts Hub table table every 10 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_1274', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_3934").is(":visible")==true){ Knack.views["view_3934"].model.fetch();recursivecall();} }, 10000);
+}
