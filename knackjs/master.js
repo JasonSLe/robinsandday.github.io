@@ -804,24 +804,6 @@ var scanDocsSceneNames = ["scene_1133"];
 scanDocsSceneNames.forEach(scanDocsLinkFunction);
 function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
-    window.onmessage = function(e){
-        if (e.data.includes('scanDocument')) {
-            window.removeEventListener("orientationchange", resizeScanIframe);
-            let message = JSON.parse(e.data);
-            console.log(message);
-            if (message.status ==='cancel'){
-              hideScanIframe();
-            }
-            if (message.status === 'ok'){
-              hideScanIframe();
-              $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
-              $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').attr('style',"background-color: rgba(255, 204, 153, 0);")
-              $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fieldName)
-              $('#'+message.pdfAssetField+'_upload').hide();
-              $('.kn-file-upload').html('File uploaded successfully.');
-            }
-        }
-    };
     if ($('button[id="scanDocument"]').length>0){
       document.getElementById('scanDocument').onclick = function(){
         showScanApp();
