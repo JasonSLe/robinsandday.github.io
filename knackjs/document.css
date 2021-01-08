@@ -1,7 +1,6 @@
 /**Scanner App***/
 
-
-button {
+#scanApp.button {
   background-color: #EEEEEE;
   font-weight: bold;
   padding: 1rem 2.5rem;
@@ -18,7 +17,7 @@ button {
   cursor: pointer;
 }
 
-button:hover{
+#scanApp.button:hover{
   background-color: #CDCDCD;
 }
 
@@ -27,7 +26,7 @@ color: red;
 font-size:12px;
 }
 
-h1{
+#scanApp.h1{
   font-family: sans-serif;
   font-weight: bold;
   font-size:20px;
@@ -36,7 +35,7 @@ h1{
   text-align: center;
 }
 
-p{
+#scanApp.p{
   font-family: sans-serif;
   padding: 10px;
   margin: auto;
