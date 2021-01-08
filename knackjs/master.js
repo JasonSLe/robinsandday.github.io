@@ -754,7 +754,7 @@ function embedScanApp(href){
     var script, scriptTag;
     script = document.createElement('script');
     script.type = 'text/javascript';
-    script.id = "scanAppCss";
+    script.id = id;
     script.src = src;
     /*script.onload = script.onreadystatechange = function() {
       if (!this.readyState || this.readyState == 'complete' ){ callback(); }
