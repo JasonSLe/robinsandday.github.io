@@ -324,7 +324,10 @@ var canTakePhoto = false;
     if (beta > 90) return 2*(180 - beta);
     if (beta < -90) return -2*(180 + beta);
   }
-  $('#dev').text('beta:'+beta+'#'+getBetaDev(beta)+'$gamma:'+gamma+'#'+getGammaDev(gamma));
+  function toOneDecimal(val){
+    return Math.round(10*val)/10
+  }
+  $('#dev').text('beta:'+toOneDecimal(beta)+'#'+toOneDecimal(getBetaDev(beta))+'<br />gamma:'+toOneDecimal(gamma)+'#'+toOneDecimal(getGammaDev(gamma)));
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
   circle.style.left = 'calc(50% - '+(40+getBetaDev(beta))+'px)';
   
