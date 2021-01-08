@@ -41,10 +41,15 @@ p{
 }
 
 #cameraDocGallery{
-max-width:70%;
-margin: 0 auto;
+max-width:90%;
+margin: auto;
 display: grid;
 grid-gap: 1rem;
+grid-template-columns:repeat(1f, 1fr);
+grid-template-areas:
+"Cancel button . Scan button"
+"Scanned documents"
+"Upload button"
 }
 
 
