@@ -745,32 +745,28 @@ function embedScanApp(){
 
   var nowS = Date.now().toString();
 
-  var style = document.createElement( 'link' );
+  var style = document.createElement('link');
   style.rel = 'stylesheet';
   style.type = 'text/css';
   style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
   document.getElementsByTagName( 'head' )[0].appendChild( style )
 
-            function afterScriptLoad(){
-                afterLoad();
-            }
+  function afterScriptLoad(){
+    afterLoad();
+  }
 
-            function loadScript(src, callback)
-                {
-                var script, scriptTag;
-                script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.src = src;
-                script.onload = script.onreadystatechange = function() {
-                    if (!this.readyState || this.readyState == 'complete' )
-                    {
-                    callback();
-                    }
-                };
-                scriptTag = document.getElementsByTagName('script')[0];
-                scriptTag.parentNode.insertBefore(script, scriptTag);
-                }
-            loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,afterScriptLoad);
+  function loadScript(src, callback){
+    var script, scriptTag;
+    script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = src;
+    script.onload = script.onreadystatechange = function() {
+      if (!this.readyState || this.readyState == 'complete' ){callback();}
+    };
+    scriptTag = document.getElementsByTagName('script')[0];
+    scriptTag.parentNode.insertBefore(script, scriptTag);
+  }
+  loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,afterScriptLoad);
 
   $('.kn-content').hide();
 }
