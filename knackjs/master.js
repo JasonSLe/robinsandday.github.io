@@ -721,6 +721,21 @@ function eraseCookie(name) {
     createCookie(name, "", -1);
 }
 
+var scanAppHTML = '';
+
+function embedScanApp(){
+  if (scanAppHTML===''){
+    scanAppHTML === $.ajax({
+        type: "GET",
+        url: 'https://robinsandday.github.io/photoTakeApp/documentPart.html',
+        cache: false,
+        async: false
+    }).responseText;
+    
+  }
+  $('.kn-content').hide();
+}
+
 function createScanIframe(href){
   //goToFullscreen();
   let nowS = Date.now().toString();
