@@ -797,7 +797,7 @@ function embedScanApp(href){
     loadScript("https://robinsandday.github.io/knackjs/TweenMax.min.js",'tweenMax', emptyCallback);
   }
   if ($('#pinchZoomer').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/jquery.pinchzoomer.min.js",'pinchZoomer', emptyCallback);
+    loadScript("https://robinsandday.github.io/knackjs/jquery.pinchzoomer.js",'pinchZoomer', emptyCallback);
   }
 }
 
