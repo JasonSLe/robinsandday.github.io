@@ -1,6 +1,7 @@
 <html lang="en">
     <head>
-        <title>Documents scan app</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Document Scanner</title>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/polyfills.umd.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js"></script>
@@ -36,17 +37,19 @@
         </script>
     </head>
     <body>
+    <h1>Document Scanner</h1>
+    <p> You are able to combine multiple pages into one document. After scanning your first page, click on "Scan Page(s)" button and repeat until you have all the files you need.</p>
         <div id="kn-loading-spinner" style="display: none;"></div>
         <div id="cameraDocGallery">
-            <button id="cameraCancelAll" name="cancel all" type="button">Cancel</button>
-            <span>Take document image</span>
-            <button id="cameraTakePhoto" name="take photo" type="button">Take photo</button>
+            <button id="cameraCancelAll" name="cancel all" type="button"><i class="fa fa-close"></i> Cancel</button>
+           <!-- <span>Take document image</span> -->
+            <button id="cameraTakePhoto" name="take photo" type="button"><i class="fa fa-print" aria-hidden="true"></i> Scan Page(s)</button>
             <div id="cameraTakenPhotos"></div>
             <span id="cameraUploadInfo"></span><br>
             <div id="cameraUploadDiv" style="display: none;">
-                Document file name: <input type="text" id="cameraUploadFileName" value="scanedDocument.pdf"/>
-                <button id="cameraUploadOnce" type="button">Upload document</button>
-                <p>Upload the document after you photographed all pages.</p>
+                Document file name: <input type="text" id="cameraUploadFileName" value="ScannedDocument.pdf"/>
+                <button id="cameraUploadOnce" type="button"><i class="fa fa-upload" aria-hidden="true"></i> Create single PDF from Scanned Page(s)</button>
+                <!-- <p>Upload the document after you photographed all pages.</p> -->
             </div>
         </div>
         <div id="cameraTakePhotoDiv">
