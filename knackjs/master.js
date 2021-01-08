@@ -740,7 +740,6 @@ function embedScanApp(href){
     console.log(scanApp);
     document.body.appendChild(scanApp);
   } else {
-    $('#scanApp').show();
     console.log('exist');
     console.log(scanApp)
   }
@@ -769,7 +768,14 @@ function embedScanApp(href){
     scriptTag.parentNode.insertBefore(script, scriptTag);
   }
   loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,afterScriptLoad);
+}
 
+function showScanApp(href){
+  let scanApp = document.getElementById('scanApp');
+  if (!scanApp){
+    embedScanApp();
+  }
+  $('#scanApp').show();
   $('.kn-content').hide();
 }
 
