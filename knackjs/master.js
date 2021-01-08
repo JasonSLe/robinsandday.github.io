@@ -761,7 +761,7 @@ function embedScanApp(){
     script.type = 'text/javascript';
     script.src = src;
     script.onload = script.onreadystatechange = function() {
-      if (!this.readyState || this.readyState == 'complete' ){callback();}
+      if (!this.readyState || this.readyState == 'complete' ){ callback(); }
     };
     scriptTag = document.getElementsByTagName('script')[0];
     scriptTag.parentNode.insertBefore(script, scriptTag);
