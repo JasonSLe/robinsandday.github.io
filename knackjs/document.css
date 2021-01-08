@@ -1,3 +1,34 @@
+/**Christian***/
+button {
+background-color: #EEEEEE;
+font-weight: bold;
+padding: 1rem 2.5rem;
+display: inline-block;
+border-radius: 10px;
+font-size: 12px;
+margin: 2rem;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+border: none;
+outline:none;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+text-transform: uppercase;
+cursor: pointer;
+}
+
+button:hover{
+  background-color: #CDCDCD;
+}
+
+.fa{
+color: red;
+font-size:12px;
+}
+
+
+
+
+
 /**POP UP MESSAGE FOR ISO USER TO ALLOW MOTION SENSOR**/
 
 body {
