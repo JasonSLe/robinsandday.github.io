@@ -28,16 +28,20 @@ font-size:12px;
 }
 
 h1{
+  font-family: sans-serif;
   font-weight: bold;
   font-size:20px;
   padding:8px;
+  margin: auto;
+  text-align: center;
 }
 
 p{
+  font-family: sans-serif;
   padding: 10px;
-    margin: auto;
-    width: 70%;
-    height: auto
+  margin: auto;
+  width: 70%;
+  height: auto
 }
 
 #cameraDocGallery{
