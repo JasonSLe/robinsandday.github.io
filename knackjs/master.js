@@ -807,7 +807,7 @@ function scanDocsLinkFunction(selector_view){
       scanIframe.height = (window.innerWidth<document.body.clientWidth?window.innerWidth:document.body.clientWidth) - 30;
     }
     window.onmessage = function(e){
-        if (e.origin === 'https://robinsandday.github.io' && e.data.includes('scanDocument')) {
+        if (/*e.origin === 'https://robinsandday.github.io' && */e.data.includes('scanDocument')) {
             window.removeEventListener("orientationchange", resizeScanIframe);
             let message = JSON.parse(e.data);
             console.log(message);
