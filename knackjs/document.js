@@ -59,43 +59,43 @@
 function prepareLayout(cameraView, takingPhoto){
     if (cameraView){
         $('#cameraTakePhotoDiv').show();
-        $('#cameraDocGallery').hide();
+        $('#scanDocGallery').hide();
         if (takingPhoto){
             $('#videoElement').show();
-            $('#cameraVid_container').show();
-            $('#cameraGui_controls').show();
-            $("#cameraConfirm").attr("disabled", false);
-            $("#cameraExit").show();
-            $("#cameraRetake").hide();
-            $("#cameraConfirm").hide();
-            $('#cameraGrid').hide();
-            $("#cameraText").hide();
-            $("#takePhoto").show();
+            $('#scanCameraVid_container').show();
+            $('#scanCameraGui_controls').show();
+            $("#scanCameraConfirm").attr("disabled", false);
+            $("#scanCameraExit").show();
+            $("#scanCameraRetake").hide();
+            $("#scanCameraConfirm").hide();
+            $('#scanCameraGrid').hide();
+            $("#scanCameraText").hide();
+            $("#scanTakePhoto").show();
         } else {
             //HIDE VIDEO & OVERLAY ELEMENT
             $('#videoElement').hide();
 
             //DISPLAY COMPARISION CONTENT
-            $('#cameraGrid').show();
-            $("#cameraText").show();
+            $('#scanCameraGrid').show();
+            $("#scanCameraText").show();
 
             //SHOW RETAKE AND CONFIORM BUTTON
-            $("#cameraRetake").show();
-            $("#cameraConfirm").show();
+            $("#scanCameraRetake").show();
+            $("#scanCameraConfirm").show();
 
             //HIDE EXIT BUTTON
-            $("#cameraExit").hide();
+            $("#scanCameraExit").hide();
 
             // DISABLE TAKEPHOTO BUTTON
             //$("#takePhoto").attr("disabled", true);
-            $("#takePhoto").hide();
+            $("#scanTakePhoto").hide();
         }
     } else {
-        $('#cameraDocGallery').show();
+        $('#scanDocGallery').show();
         $('#cameraTakePhotoDiv').hide();
-        $('#cameraVid_container').hide();
-        $('#cameraGrid').hide();
-        $('#cameraGui_controls').hide();
+        $('#scanCameraVid_container').hide();
+        $('#scanCameraGrid').hide();
+        $('#scanCameraGui_controls').hide();
     }
     $('#kn-loading-spinner').hide();
 }
@@ -107,12 +107,12 @@ function prepareCameraView(imgToSaveName){
 
   var imageCapture;
 
-  var img = document.querySelector("#cameraFrontpic");
+  var img = document.querySelector("#scanCameraFrontpic");
   var video = document.querySelector('video');
-  var takePhotoButton = document.querySelector('button#takePhoto');
-  var confirmButton = document.querySelector('#cameraConfirm');
-  var retakeButton = document.querySelector('#cameraRetake');
-  var exitButton = document.querySelector('#cameraExit');
+  var takePhotoButton = document.querySelector('button#scanTakePhoto');
+  var confirmButton = document.querySelector('#scanCameraConfirm');
+  var retakeButton = document.querySelector('#scanCameraRetake');
+  var exitButton = document.querySelector('#scanCameraExit');
 
   img.style.visibility = 'hidden';
 
@@ -224,7 +224,7 @@ takePhotoButton.onclick = takePhoto;
   async function confirmImage(){
     var imgToSave = document.createElement('img');
     imgToSave.id = imgToSaveName;
-    imgToSave.classList.add("photoGrid");
+    imgToSave.classList.add("scanPhotoGrid");
     imgToSave.onclick = removeMe;
     document.getElementById("cameraTakenPhotos").appendChild(imgToSave);
     photosTaken += 1;
@@ -246,7 +246,7 @@ takePhotoButton.onclick = takePhoto;
     imgToSave.src = outputCtx.canvas.toDataURL("image/jpeg", 0.8);
     imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
     // DISABLE SAVE BUTTON
-    $("#cameraConfirm").attr("disabled", true);
+    $("#scanCameraConfirm").attr("disabled", true);
 
     //STOP TRACK WHEN USER SAVES IMAGE
     video.srcObject.getVideoTracks().forEach(track => track.stop());

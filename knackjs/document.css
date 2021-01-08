@@ -43,7 +43,7 @@ font-size:12px;
   height: auto
 }
 
-#cameraDocGallery{
+#scanDocGallery{
 max-width:90%;
 margin: auto;
 display: grid;
@@ -62,21 +62,12 @@ body {
     overscroll-behavior-y: contain;
   }
   
-  .photoGrid{
+  .scanPhotoGrid{
     width: 25%;
     margin:2%;
   }
-
-   #cameraAccept {
-    background-color: #4CAF50;
-      color: #fafafa;
-      padding: 2px 8px;
-      text-transform: uppercase;
-      border: 2px solid #000;
-    }
   
-  
-  #cameraVid_container {
+  #scanCameraVid_container {
     position: fixed;
     top: 0;
     left: 0;
@@ -84,7 +75,7 @@ body {
     max-width: 100%;
   }
   
-  #cameraGrid {
+  #scanCameraGrid {
     position: fixed;
     top: 0;
     left: 0;
@@ -94,7 +85,7 @@ body {
   }
   
   
-  #cameraText {
+  #scanCameraText {
     font-family: sans-serif;
     font-style: normal;
     font-size: 16.5px;
@@ -103,40 +94,19 @@ body {
     padding: 0px;
   }
   
-  #cameraFrontpic {
+  #scanCameraFrontpic {
     width: auto;
     max-height: 90%;
   }
   
-  #cameraBoxCanvas {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-  
-  #cameraGui_controls {
+  #scanCameraGui_controls {
     position: fixed;
     background-color: #111;
     z-index: 2;
     top: 0;
   }
   
-  #cameraVideo_overlay {
-    position: fixed;
-    display: none;
-    max-width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    background-color: #111;
-  }
-  
-  .cameraButton {
+  .scanCameraButton {
     outline: none;
     position: absolute;
     color: white;
@@ -152,7 +122,7 @@ body {
     z-index: 2;
   }
   
-  #takePhoto {
+  #scanTakePhoto {
     left: calc(50% - 40px);
     top: calc(50% - 40px);
     width: 80px;
@@ -161,21 +131,21 @@ body {
     border-radius: 50%;
   }
   
-  #takePhoto:active {
+  #scanTakePhoto:active {
     background-color: #fafafa;
   }
   
-  #takePhoto:enabled {
+  #scanTakePhoto:enabled {
     /*background-color: #fafafa;*/
     background-color: #4cc417;
   }
   
-  #takePhoto:disabled {
+  #scanTakePhoto:disabled {
     /*background-color: #fafafa;*/
     background-color: #ff0000;
   }
   
-  #cameraExit {
+  #scanCameraExit {
     left: calc(50% - 32px);
     top: calc(82% - 32px);
     width: 60px;
@@ -185,11 +155,11 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
   }
   
-  #cameraExit:active {
+  #scanCameraExit:active {
     background-color: #fafafa;
   }
   
-  #cameraRetake {
+  #scanCameraRetake {
     left: calc(50% - 32px);
     top: calc(82% - 32px);
     width: 60px;
@@ -199,11 +169,11 @@ body {
     background-color: rgba(255, 0, 0, 0.5);
   }
   
-  #cameraRetake:active {
+  #scanCameraRetake:active {
     background-color: #fafafa;
   }
   
-  #cameraConfirm {
+  #scanCameraConfirm {
     width: 60px;
     height: 60px;
     background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/check-mark-3-24.png");
@@ -213,37 +183,37 @@ body {
     top: calc(18% - 32px);
   }
   
-  #cameraConfirm:active {
+  #scanCameraConfirm:active {
     background-color: #fafafa;
   }
 
-  video {
+  #videoElement {
     width:100%;
     height:auto;
     max-height:100%
   }
   
   @media screen and (orientation: landscape) {
-    #cameraVid_container {
+    #scanCameraVid_container {
       width: 80%;
       height: 100%;
     }
   
-    #cameraVid_container.left {
+    #scanCameraVid_container.left {
       left: 20%;
     }
 
-    #cameraGrid {
+    #scanCameraGrid {
         width: 80%;
         height: 100%;
       }
     
-      #cameraGrid.left {
+      #scanCameraGrid.left {
         left: 20%;
       }
   
     /* we default to right */
-    #cameraGui_controls {
+    #scanCameraGui_controls {
       width: 20%;
       height: 100%;
       right: 0;
@@ -251,22 +221,22 @@ body {
     }
   
     /* for the lefties */
-    #cameraGui_controls.left {
+    #scanCameraGui_controls.left {
       left: 0;
     }
   
-    #cameraRetake {
+    #scanCameraRetake {
       left: calc(50% - 32px);
       top: calc(18% - 32px);
     }
   
-    #cameraConfirm {
+    #scanCameraConfirm {
       left: calc(50% - 32px);
       top: calc(82% - 32px);
     }
     
   
-    #cameraExit {
+    #scanCameraExit {
       left: calc(50% - 32px);
       top: calc(82% - 32px);
     }
@@ -282,80 +252,43 @@ body {
     /* video_container (video) doesn't respect height...
          so we will fill it in completely in portrait mode
       */
-    #cameraVid_container {
+    #scanCameraVid_container {
       width: auto;
       height: 80%;
       top: 0%
     }
   
-    #cameraGui_controls {
+    #scanCameraGui_controls {
       top: 80%;
       width: 100%;
       height: 20%;
       left: 0;
     }
 
-    #cameraGrid {
+    #scanCameraGrid {
       width: 100%;
       height: 80%;
       top: 0;
     }
   
-    #cameraConfirm {
+    #scanCameraConfirm {
       left: calc(20% - 32px);
       top: calc(50% - 32px);
     }
   
-    #cameraRetake {
+    #scanCameraRetake {
       left: calc(80% - 32px);
       top: calc(50% - 32px);
     }
   
-    #cameraExit {
+    #scanCameraExit {
       left: calc(20% - 32px);
       top: calc(50% - 32px);
     }
   }
   
-  #cameraText {
+  #scanCameraText {
     font-size: 20px;
   }
-  
-  /* The Modal (background) */
-#modalDialog {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-#modalContent {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 60%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-#modalClose {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-#modalClose:hover,
-#modalClose:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
     
   

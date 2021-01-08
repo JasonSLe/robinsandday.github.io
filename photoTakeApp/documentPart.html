@@ -1,7 +1,7 @@
     <h1>Document Scanner</h1>
     <p> You are able to combine multiple pages into one document. After scanning your first page, click on "Scan Page(s)" button and repeat until you have all the files you need.</p>
         <div id="kn-loading-spinner" style="display: none;"></div>
-        <div id="cameraDocGallery">
+        <div id="scanDocGallery">
             <button id="cameraCancelAll" name="cancel all" type="button"><i class="fa fa-close"></i> Cancel</button>
            <!-- <span>Take document image</span> -->
             <button id="cameraTakePhoto" name="take photo" type="button"><i class="fa fa-print" aria-hidden="true"></i> Scan Page(s)</button>
@@ -14,19 +14,18 @@
             </div>
         </div>
         <div id="cameraTakePhotoDiv">
-            <div id="cameraVid_container" style="display: none;">
+            <div id="scanCameraVid_container" style="display: none;">
                 <video id="videoElement" autoplay="" playsinline="" class="hidden"></video>
             </div>
-            <div id="cameraGrid" style="display: none;">
-                <img id="cameraFrontpic"><br />
-                <a id="cameraText">Is the document readable?</a>
+            <div id="scanCameraGrid" style="display: none;">
+                <img id="scanCameraFrontpic"><br />
+                <a id="scanCameraText">Is the document readable?</a>
             </div>
-            <div id="cameraGui_controls" style="display: none;">
-                <button id="takePhoto" class="cameraButton"></button>
-                <button id="cameraExit" name="exit photo" type="button" class="cameraButton"></button>
-                <button id="cameraRetake" name="retake photo" type="button" class="cameraButton"></button>
-                <button id="cameraConfirm" name="confirm photo" type="button" class="cameraButton"></button>
-                <!--<span id="dev" class="cameraButton">DEV INFO</span>-->
+            <div id="scanCameraGui_controls" style="display: none;">
+                <button id="scanTakePhoto" class="scanCameraButton"></button>
+                <button id="scanCameraExit" name="exit photo" type="button" class="scanCameraButton"></button>
+                <button id="scanCameraRetake" name="retake photo" type="button" class="scanCameraButton"></button>
+                <button id="scanCameraConfirm" name="confirm photo" type="button" class="scanCameraButton"></button>
             </div>
         </div>
         <div id="infoDialog" style="display: none;">
