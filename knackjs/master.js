@@ -750,15 +750,16 @@ function embedScanApp(href){
     document.getElementsByTagName( 'head' )[0].appendChild( style )
   }
 
+  function afterScriptLoad(app_id){
+    afterLoad(app_id);
+  }
+
   function loadScript(src, id,  callback){
     var script, scriptTag;
     script = document.createElement('script');
     script.type = 'text/javascript';
     script.id = id;
     script.src = src;
-    function afterScriptLoad(app_id){
-      afterLoad(app_id);
-    }
     script.onload = script.onreadystatechange = function() {
       if (!this.readyState || this.readyState == 'complete' ){ callback(); }
     };
