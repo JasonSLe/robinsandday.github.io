@@ -739,6 +739,7 @@ function embedScanApp(){
     console.log(scanApp);
     document.body.appendChild(scanApp);
   } else {
+    $('#scanApp').show();
     console.log('exist');
     console.log(scanApp)
   }
@@ -771,32 +772,6 @@ function embedScanApp(){
   $('.kn-content').hide();
 }
 
-function createScanIframe(href){
-  //goToFullscreen();
-  let nowS = Date.now().toString();
-  if ($('#scanIframe').length===0){
-    var scanIframe = document.createElement('iframe');
-    scanIframe.id = 'scanIframe';
-    scanIframe.frameBorder = 0;
-    scanIframe.width = "100%";
-    scanIframe.height = (window.innerHeight<document.body.clientHeight?window.innerHeight:document.body.clientHeight) - 30;
-    scanIframe.src = href+'&'+nowS;
-    scanIframe.setAttribute('allow', 'camera;microphone');
-    document.body.appendChild(scanIframe);
-  } else {
-    var scanIframe = document.getElementById('scanIframe');
-    scanIframe.src = href+'&'+nowS;
-    $('#scanIframe').show();
-  }
-  $('.kn-content').hide();
-}
-
-function hideScanIframe(){
-  exitFullscreen()
-  $('#scanIframe').hide();
-  $('.kn-content').show();
-}
-
 //THIS IS ARRAY OF scenes with document scan
 var scanDocsSceneNames = ["scene_1133"];
 scanDocsSceneNames.forEach(scanDocsLinkFunction);
@@ -807,7 +782,7 @@ function scanDocsLinkFunction(selector_view){
       scanIframe.height = (window.innerWidth<document.body.clientWidth?window.innerWidth:document.body.clientWidth) - 30;
     }
     window.onmessage = function(e){
-        if (/*e.origin === 'https://robinsandday.github.io' && */e.data.includes('scanDocument')) {
+        if (e.data.includes('scanDocument')) {
             window.removeEventListener("orientationchange", resizeScanIframe);
             let message = JSON.parse(e.data);
             console.log(message);

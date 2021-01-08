@@ -326,6 +326,11 @@ function prepareFileView(){
   $('#kn-loading-spinner').hide();
 }
 
+function hideScanApp(){
+  $('#scanApp').hide();
+  $('.kn-content').show();
+}
+
 function prepareFileViewOnce(){
     let cameraTakePhoto = document.getElementById('cameraTakePhoto');
     cameraTakePhoto.onclick = function() {
@@ -334,8 +339,7 @@ function prepareFileViewOnce(){
 
     let cancelAll = document.getElementById('cameraCancelAll');
     cancelAll.onclick = function(){
-      let message = {'event':'scanDocument','status':'cancel'}
-      window.parent.postMessage(JSON.stringify(message), '*')
+      hideScanApp();
     }
 
     function cameraUpload(){
