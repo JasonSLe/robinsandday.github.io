@@ -56,8 +56,6 @@ grid-template-areas:
 }
 
 .zoomHolder{
-   width:100%;
-   height:auto;
    overflow:hidden
 }
 
