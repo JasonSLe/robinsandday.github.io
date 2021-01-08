@@ -78,10 +78,6 @@ function prepareLayout(cameraView, takingPhoto){
             //DISPLAY COMPARISION CONTENT
             $('#scanCameraGrid').show();
             $("#scanCameraText").show();
-            try {
-              $('#scanCameraFrontpic').pinchzoomer();
-            } catch (e) {alert (e);};
-            
 
             //SHOW RETAKE AND CONFIORM BUTTON
             $("#scanCameraRetake").show();
