@@ -787,6 +787,13 @@ var scanDocsSceneNames = ["scene_1133"];
 scanDocsSceneNames.forEach(scanDocsLinkFunction);
 function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
+    function fillDataToKnack(message){
+      $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
+      $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').attr('style',"background-color: rgba(255, 204, 153, 0);")
+      $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fieldName)
+      $('#'+message.pdfAssetField+'_upload').hide();
+      $('.kn-file-upload').html('File uploaded successfully.');
+    }
     function resizeScanIframe(event){
       var scanIframe = document.getElementById('scanIframe');
       scanIframe.height = (window.innerWidth<document.body.clientWidth?window.innerWidth:document.body.clientWidth) - 30;

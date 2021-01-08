@@ -41,7 +41,8 @@
           $('#kn-loading-spinner').hide();
 
           let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':rData.id, 'fileName':fileName}
-          window.parent.postMessage(JSON.stringify(message), '*')
+          window.parent.postMessage(JSON.stringify(message), '*');
+          fillDataToKnack(message);
         } catch (e) {
           alert('File upload was not succesfull.')
           alert(e);
