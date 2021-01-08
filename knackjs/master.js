@@ -722,7 +722,6 @@ function eraseCookie(name) {
 }
 
 var scanAppHTML = '';
-
 function embedScanApp(){
   let scanApp = document.getElementById('scanApp');
   if (!scanApp){
