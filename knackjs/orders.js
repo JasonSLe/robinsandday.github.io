@@ -101,14 +101,6 @@ var submitUserLoginForm = function() {
     //timeStamp = timeStamp.match(/(\d+){1}\D.*/);
     //console.log('ttt'+timeStamp)
     //timeStamp = timeStamp[1] || false;
-    timeStamp = parseInt(timeStamp);
-  	if (!timeStamp) {
-      console.log({
-        url, userName, hash, timeStamp
-      });      
-      alert('Invalid timestamp');
-      return;
-    }
     var myHash = 'H' + hashCode('U' + userName + timeStamp);
     if (myHash !== hash) {
       console.log({
