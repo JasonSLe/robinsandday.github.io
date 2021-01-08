@@ -750,10 +750,6 @@ function embedScanApp(href){
     document.getElementsByTagName( 'head' )[0].appendChild( style )
   }
 
-  function afterScriptLoad(){
-    afterLoad();
-  }
-
   function loadScript(src, id,  callback){
     var script, scriptTag;
     script = document.createElement('script');
@@ -767,18 +763,21 @@ function embedScanApp(href){
     scriptTag.parentNode.insertBefore(script, scriptTag);
   }
   if ($('#scanAppJS').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS',afterScriptLoad);
+    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS',undefined);
   }
   if ($('#jsPDF').length===0){
     loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', undefined)
   }
 }
 
-function showScanApp(app_id, pdfAssetField){
+function afterScriptLoad(app_id){
+  afterLoad(app_id);
+}
+
+function showScanApp(app_id){
   if ($('#scanApp').length===0){
     embedScanApp();
-    $('#scanApp').attr('data-app_id', app_id);
-    $('#scanApp').attr('data-pdfAssetField', pdfAssetField);
+    afterScriptLoad(app_id);
   }
   $('#scanApp').show();
   $('.kn-content').hide();
@@ -792,10 +791,9 @@ function hideScanApp(){
 function fillDataToKnack(message){
   alert('fill')
   hideScanApp();
-  $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
-  $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').attr('style',"background-color: rgba(255, 204, 153, 0);")
-  $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fieldName)
-  $('#'+message.pdfAssetField+'_upload').hide();
+  $('input[name="'+$('button[id="scanDocument"]').attr('data-pdfassetfield')+'"]').val(message.pdfAssetId);
+  $('div[id="kn-input-'+$('button[id="scanDocument"]').attr('data-pdfassetfield')+'"] div[class="kn-asset-current"]').html(message.fileName);
+  $('#'+$('button[id="scanDocument"]').attr('data-pdfassetfield')+'_upload').hide();
   $('.kn-file-upload').html('File uploaded successfully.');
 }
 

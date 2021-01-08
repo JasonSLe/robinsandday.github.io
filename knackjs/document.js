@@ -403,7 +403,8 @@ async function uploadImages(infoText){
 }
 
 var returnData = {};
-function afterLoad(){
+function afterLoad(app_id){
+  returnData.app_id = app_id
   prepareFileViewOnce();
   prepareFileView();
 }
