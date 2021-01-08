@@ -324,7 +324,7 @@ var canTakePhoto = false;
     if (beta > 90) return 2*(180 - beta);
     if (beta < -90) return -2*(180 + beta);
   }
-  //$('#dev').text(beta+'#'+getBetaDev(beta));
+  $('#dev').text('beta:'+beta+'#'+getBetaDev(beta)+'$gamma:'+gamma+'#'+getGammaDev(gamma));
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
   circle.style.left = 'calc(50% - '+(40+getBetaDev(beta))+'px)';
   
@@ -338,12 +338,10 @@ var canTakePhoto = false;
   }
   if(Math.abs(getBetaDev(beta) < 4) && Math.abs(getGammaDev(gamma)) < 3){
     $("#takePhoto").removeAttr('disabled');
-    //$('#dev').text('enabl5x'+canTakePhoto);
     if (!OperatingSystem.iOS() && !canTakePhoto) window.navigator.vibrate(50);
     canTakePhoto = true;
   } else {
-    $("#takePhoto").attr("disabled", true);
-    //$('#dev').text('disabl5x'+canTakePhoto);
+    //$("#takePhoto").attr("disabled", true);
     if (!OperatingSystem.iOS() && canTakePhoto) window.navigator.vibrate(50);
     canTakePhoto = false;
   }
