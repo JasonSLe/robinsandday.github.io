@@ -1,81 +1,195 @@
-<html lang="en">
-    <head>
-        <title>Documents scan app</title>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/polyfills.umd.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js"></script>
-        <script>
-            var nowS = Date.now().toString();
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://raw.githubusercontent.com/robinsandday/robinsandday.github.io/main/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document Scanner</title>
 
-            var style = document.createElement( 'link' );
-            style.rel = 'stylesheet';
-            style.type = 'text/css';
-            style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
-            document.getElementsByTagName( 'head' )[0].appendChild( style )
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/polyfills.umd.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js"></script>
 
-            function afterScriptLoad(){
-                afterLoad();
-            }
+            <script>
+                var nowS = Date.now().toString();
 
-            function loadScript(src, callback)
-                {
-                var script, scriptTag;
-                script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.src = src;
-                script.onload = script.onreadystatechange = function() {
-                    if (!this.readyState || this.readyState == 'complete' )
-                    {
-                    callback();
-                    }
-                };
-                scriptTag = document.getElementsByTagName('script')[0];
-                scriptTag.parentNode.insertBefore(script, scriptTag);
+                var style = document.createElement( 'link' );
+                style.rel = 'stylesheet';
+                style.type = 'text/css';
+                style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
+                document.getElementsByTagName( 'head' )[0].appendChild( style )
+
+                function afterScriptLoad(){
+                    afterLoad();
                 }
-            loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,afterScriptLoad);
-        </script>
-    </head>
-    <body>
-        <div id="kn-loading-spinner" style="display: none;"></div>
-        <div id="cameraDocGallery">
-            <button id="cameraCancelAll" name="cancel all" type="button">Cancel</button>
-            <span>Take document image</span>
-            <button id="cameraTakePhoto" name="take photo" type="button">Take photo</button>
-            <div id="cameraTakenPhotos"></div>
-            <span id="cameraUploadInfo"></span><br>
-            <div id="cameraUploadDiv" style="display: none;">
-                Document file name: <input type="text" id="cameraUploadFileName" value="scanedDocument.pdf"/>
-                <button id="cameraUploadOnce" type="button">Upload document</button>
-                <p>Upload the document after you photographed all pages.</p>
-            </div>
-        </div>
-        <div id="cameraTakePhotoDiv">
-            <div id="cameraVid_container" style="display: none;">
-                <video id="videoElement" autoplay="" playsinline="" class="hidden"></video>
-            </div>
-            <div id="cameraGrid" style="display: none;">
-                <img id="cameraFrontpic"><br />
-                <a id="cameraText">Is the document readable?</a>
-            </div>
-            <div id="cameraGui_controls" style="display: none;">
-                <button id="takePhoto" class="cameraButton"></button>
-                <button id="cameraExit" name="exit photo" type="button" class="cameraButton"></button>
-                <button id="cameraRetake" name="retake photo" type="button" class="cameraButton"></button>
-                <button id="cameraConfirm" name="confirm photo" type="button" class="cameraButton"></button>
-                <!--<span id="dev" class="cameraButton">DEV INFO</span>-->
-            </div>
-        </div>
-        <div id="infoDialog" style="display: none;">
-            <p id="infoText">NICNIC</p>
-        </div>
-        <div id="modalDialog" style="display: none;">
-            <!-- Modal content -->
-            <div id="modalContent">
-              <span id="modalClose">&times;</span>
-              <p id="modalText"></p>
-              <button id="modalYes">Yes</button><button id="modalCancel">Cancel</button>
-            </div>
-        </div>
-        <span id="dev"></span>
-    </body>
+
+                function loadScript(src, callback)
+                    {
+                    var script, scriptTag;
+                    script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = src;
+                    script.onload = script.onreadystatechange = function() {
+                        if (!this.readyState || this.readyState == 'complete' )
+                        {
+                        callback();
+                        }
+                    };
+                    scriptTag = document.getElementsByTagName('script')[0];
+                    scriptTag.parentNode.insertBefore(script, scriptTag);
+                    }
+                loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,afterScriptLoad);
+            </script>
+
+
+    <style>
+/* MOBILE AND GLOBAL STYLES */
+/* applies to screens smaller than 500px (first breakpoint) */
+/* and above unless overwritten below */
+*,
+*::before,
+*::after {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Gill Sans", sans-serif;
+  font-size: 10px;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+button {
+background-color: #EEEEEE;
+font-weight: bold;
+padding: 1rem 2.5rem;
+display: inline-block;
+border-radius: 10px;
+font-size: 12px;
+margin: 2rem;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+border: none;
+outline:none;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+text-transform: uppercase;
+cursor: pointer;
+}
+
+button:hover{
+  background-color: #CDCDCD;
+}
+
+.fa{
+color: red;
+font-size:12px;
+}
+
+h1{
+  font-weight: bold;
+  font-size:20px;
+  padding:8px;
+}
+
+#cameraDocGallery{
+  margin:auto;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  width:100%;
+  height:auto;
+  flex-wrap: wrap;
+}
+p{
+  padding: 10px;
+    margin: auto;
+    width: 70%;
+    height: auto
+}
+
+footer {
+  position: fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  padding: 1rem 0 0.1rem 0;
+  text-align: center;
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+.footer .copyright {
+  color: #bbb;
+  font-size: 1rem;
+  margin: 0 0 2rem 0;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+
+  p{
+    font-size:20px;
+  }
+  h1{
+    font-size:30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+}
+
+    </style>
+
+  </head>
+  <body>
+    <h1>Document Scanner</h1>
+    <p> You are able to combine multiple pages into one document, After scanning you first document click on "Scan Page(s)" button and repeat till you have all the files you need.</p>
+    <div id="kn-loading-spinner" style="display: none;"></div>
+
+       <div id="cameraDocGallery">
+           <button id="cameraCancelAll" name="cancel all" type="button"><i class="fa fa-close"></i> Cancel</button>
+           <!-- <span>Take document image</span> -->
+           <button id="cameraTakePhoto" name="take photo" type="button"><i class="fa fa-print" aria-hidden="true"></i> Scan Page(s)</button>
+           <div id="cameraTakenPhotos"></div>
+           <span id="cameraUploadInfo"></span><br>
+           <button id="cameraUploadOnce" type="button"><i class="fa fa-upload" aria-hidden="true"></i> Create single PDF from Scanned Page(s)</button>
+       </div>
+       <div id="cameraTakePhotoDiv">
+           <div id="cameraVid_container" style="display: none;">
+               <video id="videoElement" autoplay="" playsinline="" class="hidden"></video>
+           </div>
+           <div id="cameraGrid" style="display: none;">
+               <img id="cameraFrontpic"><br />
+               <a id="cameraText">Is the document readable?</a>
+           </div>
+           <div id="cameraGui_controls" style="display: none;">
+               <button id="takePhoto" class="cameraButton"></button>
+               <button id="cameraExit" name="exit photo" type="button" class="cameraButton"></button>
+               <button id="cameraRetake" name="retake photo" type="button" class="cameraButton"></button>
+               <button id="cameraConfirm" name="confirm photo" type="button" class="cameraButton"></button>
+               <!--<span id="dev" class="cameraButton">DEV INFO</span>-->
+           </div>
+       </div>
+       <div id="infoDialog" style="display: none;">
+           <p id="infoText">NICNIC</p>
+       </div>
+       <div id="modalDialog" style="display: none;">
+           <!-- Modal content -->
+           <div id="modalContent">
+             <span id="modalClose">&times;</span>
+             <p id="modalText"></p>
+             <button id="modalYes">Yes</button><button id="modalCancel">Cancel</button>
+           </div>
+       </div>
+       <span id="dev"></span>
+
+       <footer class="footer">
+   <div class="copyright">
+     &copy; Robins & Day. All rights reserved.
+   </div>
+ </footer>
+  </body>
 </html>
