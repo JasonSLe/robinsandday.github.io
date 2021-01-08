@@ -5547,9 +5547,7 @@ visibility: visible;
 
 /**SCANNER BUTTON WITH ICON**/
 
-#view_3929 > div > p{
-padding-left:10px;
-}
+
 #scanDocument {
 background-color: #EEEEEE;
 font-weight: bold;
