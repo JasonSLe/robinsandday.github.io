@@ -782,12 +782,19 @@ function showScanApp(href){
   $('.kn-content').hide();
 }
 
+function hideScanApp(){
+  $('#scanApp').hide();
+  $('.kn-content').show();
+}
+
 //THIS IS ARRAY OF scenes with document scan
 var scanDocsSceneNames = ["scene_1133"];
 scanDocsSceneNames.forEach(scanDocsLinkFunction);
 function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
     function fillDataToKnack(message){
+      alert('fill')
+      hideScanApp();
       $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
       $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').attr('style',"background-color: rgba(255, 204, 153, 0);")
       $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fieldName)
