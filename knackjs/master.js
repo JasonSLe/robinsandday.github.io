@@ -738,6 +738,7 @@ function embedScanApp(href){
     scanApp.id = 'scanApp';
     document.body.appendChild(scanApp);
   } else {
+    alert('realod')
     scanApp.innerHTML = scanAppHTML;
   }
 
