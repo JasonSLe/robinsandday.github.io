@@ -737,6 +737,8 @@ function embedScanApp(href){
     scanApp.innerHTML = scanAppHTML;
     scanApp.id = 'scanApp';
     document.body.appendChild(scanApp);
+  } else {
+    scanApp.innerHTML = scanAppHTML;
   }
 
   var nowS = Date.now().toString();
@@ -777,9 +779,7 @@ function embedScanApp(href){
 }
 
 function showScanApp(){
-  if ($('#scanApp').length===0){
-    embedScanApp();
-  }
+  embedScanApp();
   $('#scanApp').show();
   $('.kn-content').hide();
 }
