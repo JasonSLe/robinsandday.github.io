@@ -40,6 +40,14 @@ p{
     height: auto
 }
 
+#cameraDocGallery{
+max-width:70%;
+margin: 0 auto;
+display: grid;
+grid-gap: 1rem;
+}
+
+
 /**POP UP MESSAGE FOR ISO USER TO ALLOW MOTION SENSOR**/
 
 body {
