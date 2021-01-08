@@ -767,9 +767,17 @@ function embedScanApp(href){
 
   function emptyCallback() { }
 
+  var pinchZoomerDep = [{'id':'empty'},{'id':'jQuery','url':'https://robinsandday.github.io/knackjs/jquery-1.11.3.min.js'},
+    {'id':'jsHammer','url':'https://robinsandday.github.io/knackjs/hammer.min.js'},
+    {'id':'tweenMax','url':'https://robinsandday.github.io/knackjs/TweenMax.min.js'},
+    {'id':'pinchZoomer','url':'https://robinsandday.github.io/knackjs/jquery.pinchzoomer.js'}];
+
   function loadPinchZoomer(){
-    if ($('#pinchZoomer').length===0){
-      loadScript("https://robinsandday.github.io/knackjs/jquery.pinchzoomer.js",'pinchZoomer', emptyCallback);
+    pinchZoomerDep.shift();
+    if (pinchZoomerDep.length!==0){
+      if ($('#'+pinchZoomerDep[0].id).length===0){
+        loadScript(pinchZoomerDep[0].url,pinchZoomerDep[0].id, loadPinchZoomer);
+      }
     }
   }
 
@@ -793,15 +801,7 @@ function embedScanApp(href){
   if ($('#jsPDF').length===0){
     loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', emptyCallback)
   }
-  if ($('#jQuery').length===0){
-    loadScript('https://robinsandday.github.io/knackjs/jquery-1.11.3.min.js','jQuery', emptyCallback)
-  }
-  if ($('#jsHammer').length===0){
-    loadScript('https://robinsandday.github.io/knackjs/hammer.min.js','jsHammer', emptyCallback)
-  }
-  if ($('#tweenMax').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/TweenMax.min.js",'tweenMax', loadPinchZoomer);
-  }
+  loadPinchZoomer();
 }
 
 function showScanApp(){
