@@ -727,7 +727,7 @@ function embedScanApp(){
   let scanApp = document.getElementById('scanApp');
   if (!scanApp){
     if (scanAppHTML===''){
-      scanAppHTML === $.ajax({
+      scanAppHTML = $.ajax({
           type: "GET",
           url: 'https://robinsandday.github.io/photoTakeApp/documentPart.html',
           cache: false,
