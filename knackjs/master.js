@@ -722,7 +722,7 @@ function eraseCookie(name) {
 }
 
 var scanAppHTML = '';
-function embedScanApp(){
+function embedScanApp(href){
   let scanApp = document.getElementById('scanApp');
   if (!scanApp){
     if (scanAppHTML===''){
@@ -802,10 +802,7 @@ function scanDocsLinkFunction(selector_view){
     };
     if ($('button[id="scanDocument"]').length>0){
       document.getElementById('scanDocument').onclick = function(){
-        /*let replacedRecordId = $('button[id="scanDocument"]').attr('data-href').replace(new RegExp('RECORDID','g'),getRecordIdFromHref(location.href))
-        console.log('replaceScan href', replacedRecordId);
-        createScanIframe(replacedRecordId)*/
-        createScanIframe($('button[id="scanDocument"]').attr('data-href'));
+        embedScanApp($('button[id="scanDocument"]').attr('data-href'));
       }
       window.addEventListener("orientationchange", resizeScanIframe, true);
     }
