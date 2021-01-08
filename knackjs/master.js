@@ -791,7 +791,7 @@ function embedScanApp(href){
       if (!this.readyState || this.readyState == 'complete' ){ callback(); }
     };
     scriptTag = document.getElementsByTagName('script')[0];
-    scriptTag.parentNode.insertAfter(script, scriptTag);
+    scriptTag.parentNode.insertBefore(script, scriptTag);
   }
   if ($('#scanAppJS').length===0){
     loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS', afterScriptLoad);
