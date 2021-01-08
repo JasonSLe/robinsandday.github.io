@@ -767,6 +767,12 @@ function embedScanApp(href){
 
   function emptyCallback() { }
 
+  function loadPinchZoomer(){
+    if ($('#pinchZoomer').length===0){
+      loadScript("https://robinsandday.github.io/knackjs/jquery.pinchzoomer.js",'pinchZoomer', emptyCallback);
+    }
+  }
+
   function loadScript(src, id,  callback){
     var script, scriptTag;
     script = document.createElement('script');
@@ -794,10 +800,7 @@ function embedScanApp(href){
     loadScript('https://robinsandday.github.io/knackjs/hammer.min.js','jsHammer', emptyCallback)
   }
   if ($('#tweenMax').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/TweenMax.min.js",'tweenMax', emptyCallback);
-  }
-  if ($('#pinchZoomer').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/jquery.pinchzoomer.js",'pinchZoomer', emptyCallback);
+    loadScript("https://robinsandday.github.io/knackjs/TweenMax.min.js",'tweenMax', loadPinchZoomer);
   }
 }
 
