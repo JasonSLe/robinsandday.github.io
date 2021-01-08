@@ -752,6 +752,15 @@ function embedScanApp(href){
     document.getElementsByTagName( 'head' )[0].appendChild( style )
   }
 
+  if ($('#pinchZoomerCss').length===0){
+    var style = document.createElement('link');
+    style.id = "pinchZoomerCss";
+    style.rel = 'stylesheet';
+    style.type = 'text/css';
+    style.href = 'https://robinsandday.github.io/knackjs/pinchzoomer.min.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( style )
+  }
+
   function afterScriptLoad(){
     afterLoad($('button[id="scanDocument"]').attr('data-app_id'));
   }
@@ -777,6 +786,15 @@ function embedScanApp(href){
   }
   if ($('#jsPDF').length===0){
     loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', emptyCallback)
+  }
+  if ($('#jsHammer').length===0){
+    loadScript('https://hammerjs.github.io/dist/hammer.min.js','jsHammer', emptyCallback)
+  }
+  if ($('#tweenMax').length===0){
+    loadScript("https://robinsandday.github.io/knackjs/TweenMax.min.js",'tweenMax', emptyCallback);
+  }
+  if ($('#pinchZoomer').length===0){
+    loadScript("https://robinsandday.github.io/knackjs/jquery.pinchzoomer.min.js",'pinchZoomer', emptyCallback);
   }
 }
 
