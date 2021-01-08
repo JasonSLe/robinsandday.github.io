@@ -824,7 +824,7 @@ function scanDocsLinkFunction(selector_view){
     };
     if ($('button[id="scanDocument"]').length>0){
       document.getElementById('scanDocument').onclick = function(){
-        showScanApp($('button[id="scanDocument"]').attr('data-app_id'),$('button[id="scanDocument"]').attr('data-pdfAssetField'));
+        showScanApp($('button[id="scanDocument"]').attr('data-app_id'),$('button[id="scanDocument"]').attr('data-pdfassetfield'));
       }
     }
   });
