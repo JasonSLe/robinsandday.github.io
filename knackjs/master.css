@@ -5570,7 +5570,7 @@ text-transform: uppercase;
 #scanDocument:hover{
   background-color: #CDCDCD;
 }
-#view_3929 .fa{
+#view_3943 > div > p .fa{
 color: red;
 font-size:12px;
 }
