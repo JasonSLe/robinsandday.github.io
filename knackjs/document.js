@@ -54,6 +54,18 @@
     }
   }
 
+  //************************************* OPERATING SYSTEM DETECTION *****************************************   
+var OperatingSystem = {
+  Android: function() {
+      return navigator.userAgent.match(/Android/i);
+   },
+
+   iOS: function() {
+     if(navigator.vendor.match(/google/i)) { return false;}
+     else if(navigator.vendor.match(/apple/i)) {return true;}
+   }
+};
+
   //************************************* LAYOUT *****************************************
   //this function sets the layout of page based on two params, if we are in cameraView and if we are actualy taking photo
 function prepareLayout(cameraView, takingPhoto){
