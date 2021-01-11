@@ -21,7 +21,7 @@
   background-color: #CDCDCD;
 }
 
-.fa{
+.scanAppFA{
 color: red;
 font-size:12px;
 }
@@ -35,7 +35,7 @@ font-size:12px;
   text-align: center;
 }
 
-#scanApp.p{
+.scanAppP{
   font-family: sans-serif;
   padding: 10px;
   margin: auto;
