@@ -838,6 +838,18 @@ function scanDocsLinkFunction(selector_view){
   });
 }  
 
+//************************************* OPERATING SYSTEM DETECTION *****************************************   
+var OperatingSystem = {
+  Android: function() {
+      return navigator.userAgent.match(/Android/i);
+   },
+
+   iOS: function() {
+     if(navigator.vendor.match(/google/i)) { return false;}
+     else if(navigator.vendor.match(/apple/i)) {return true;}
+   }
+};
+
 //************************************* GO INTO FULLSCREEN (ONLY ANDRIOD DEVICE WORK) *****************************************
 function goToFullscreen(){
   if (document.documentElement.requestFullscreen) {
@@ -1098,19 +1110,6 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   var isOnline = true;
   window.addEventListener('online', () => isOnline = true);
   window.addEventListener('offline', () => isOnline = false);
-
-
-//************************************* OPERATING SYSTEM DETECTION *****************************************   
-var OperatingSystem = {
-   Android: function() {
-       return navigator.userAgent.match(/Android/i);
-    },
-
-    iOS: function() {
-	    if(navigator.vendor.match(/google/i)) { return false;}
-      else if(navigator.vendor.match(/apple/i)) {return true;}
-    }
-};
 
 imageBeforeResize.onload = () => {
    const elem = document.createElement('canvas');
