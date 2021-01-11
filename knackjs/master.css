@@ -5545,7 +5545,7 @@ visibility: visible;
   margin: 6px;
 }
 
-/**SCANNER BUTTON WITH ICON**/
+/**SCAN V5 DOCUMENT: RICH TEXT**/
   
 #view_3929 > div > p {
     margin: -30px;
@@ -5570,7 +5570,12 @@ text-transform: uppercase;
 #scanDocument:hover{
   background-color: #CDCDCD;
 }
-#view_3929 .fa{
+#view_3943 > div > p .fa{
 color: red;
 font-size:12px;
+}
+
+/**SCAN NEW KEEPER DECLARATION DOCUMENT: RICH TEXT**/
+#view_3943 > div > p {
+    margin: -30px;
 }
