@@ -801,7 +801,9 @@ function embedScanApp(href){
   if ($('#jsPDF').length===0){
     loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', emptyCallback)
   }
-  loadPinchZoomer();
+  if (OperatingSystem.Android()) {
+    loadPinchZoomer();
+  }
 }
 
 function showScanApp(){

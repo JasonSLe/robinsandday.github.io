@@ -78,6 +78,9 @@ function prepareLayout(cameraView, takingPhoto){
             //DISPLAY COMPARISION CONTENT
             $('#scanCameraGrid').show();
             $("#scanCameraText").show();
+            if (OperatingSystem.Android()) {
+              $('#scanCameraFrontpic').pinchzoomer();
+            }
 
             //SHOW RETAKE AND CONFIORM BUTTON
             $("#scanCameraRetake").show();
