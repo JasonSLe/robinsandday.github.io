@@ -5545,12 +5545,8 @@ visibility: visible;
   margin: 6px;
 }
 
-/**SCAN V5 DOCUMENT: RICH TEXT**/
-  
-#view_3929 > div > p {
-    margin: -30px;
-}
 
+/**SCAN BUTTON STYLING**/
 #scanDocument {
 background-color: #EEEEEE;
 font-weight: bold;
@@ -5570,7 +5566,14 @@ text-transform: uppercase;
 #scanDocument:hover{
   background-color: #CDCDCD;
 }
-#view_3943 > div > p .fa{
+
+/**SCAN V5 DOCUMENT: RICH TEXT**/
+  
+#view_3929 > div > p {
+    margin: -30px;
+}
+
+#view_3929 > div > p .fa{
 color: red;
 font-size:12px;
 }
@@ -5579,3 +5582,9 @@ font-size:12px;
 #view_3943 > div > p {
     margin: -30px;
 }
+
+#view_3943 > div > p .fa{
+color: red;
+font-size:12px;
+}
+
