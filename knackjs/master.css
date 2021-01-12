@@ -5550,7 +5550,7 @@ visibility: visible;
 #scanDocument {
 background-color: #EEEEEE;
 font-weight: bold;
-padding: 14px 14px;
+padding: 12px 10px;
 display: inline-block;
 border-radius: 10px;
 font-size: 12px;
@@ -5569,7 +5569,7 @@ text-transform: uppercase;
 
 #scanDocument > .fa{
 color: red;
-font-size:16px;
+font-size:15px;
 }
 
 /**SCAN V5 DOCUMENT: RICH TEXT**/
