@@ -417,8 +417,9 @@ async function uploadImages(infoText){
 }
 
 var returnData = {};
-function afterLoad(app_id){
-  returnData.app_id = app_id
+function afterLoad(app_id, pdfAssetField){
+  returnData.app_id = app_id;
+  returnData.pdfAssetField = pdfAssetField;
   prepareFileViewOnce();
   prepareFileView();
 }
