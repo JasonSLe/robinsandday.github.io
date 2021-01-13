@@ -806,8 +806,8 @@ function embedScanApp(href){
   //}
 }
 
-function showScanApp(){
-  alert(this);
+function showScanApp(button){
+  alert(button);
   embedScanApp();
   $('#scanApp').show();
   $('.kn-content').hide();
