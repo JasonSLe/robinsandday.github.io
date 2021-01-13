@@ -795,7 +795,9 @@ function embedScanApp(button){
   }
   if ($('#scanAppJS').length===0){
     loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS', afterScriptLoad);
-  } 
+  } else {
+    afterScriptLoad();
+  }
   if ($('#jsPDF').length===0){
     loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', emptyCallback)
   }
@@ -807,7 +809,6 @@ function embedScanApp(button){
 function showScanApp(button){
   alert(button.getAttribute('data-pdfassetfield'))
   embedScanApp(button);
-  afterLoad(button.getAttribute('data-app_id'), button.getAttribute('data-pdfassetfield'));
   $('#scanApp').show();
   $('.kn-content').hide();
 }
