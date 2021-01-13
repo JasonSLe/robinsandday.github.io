@@ -203,9 +203,9 @@ takePhotoButton.onclick = takePhoto;
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
-  confirmButton.onclick = onclickConfimrButton;
+  confirmButton.onclick = onclickConfirmButton;
 
-  function onclickConfimrButton(){
+  function onclickConfirmButton(){
     $('#kn-loading-spinner').show();
 
     // DISABLE SAVE BUTTON
