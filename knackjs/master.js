@@ -807,6 +807,7 @@ function embedScanApp(href){
 }
 
 function showScanApp(){
+  alert(this);
   embedScanApp();
   $('#scanApp').show();
   $('.kn-content').hide();
@@ -834,7 +835,7 @@ function scanDocsLinkFunction(selector_view){
     if ($('button[id="scanDocument"]').length>0){
       for (let i = 0;i<$('button[id="scanDocument"]').length;i++){
         $('button[id="scanDocument"]').eq(i).on("click",function(){
-          showScanApp();
+          showScanApp(this);
         });
       }
     }
