@@ -819,9 +819,9 @@ function hideScanApp(){
 
 function fillDataToKnack(message){
   hideScanApp();
-  $('input[name="'+$('button[id="scanDocument"]').attr('data-pdfassetfield')+'"]').val(message.pdfAssetId);
-  $('div[id="kn-input-'+$('button[id="scanDocument"]').attr('data-pdfassetfield')+'"] div[class="kn-asset-current"]').html(message.fileName);
-  $('#'+$('button[id="scanDocument"]').attr('data-pdfassetfield')+'_upload').hide();
+  $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
+  $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fileName);
+  $('#'+message.pdfAssetField+'_upload').hide();
   $('.kn-file-upload').html('File uploaded successfully.');
 }
 

@@ -41,7 +41,7 @@
           $('#kn-loading-spinner').hide();
 
           let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':rData.id, 'fileName':fileName}
-          window.parent.postMessage(JSON.stringify(message), '*');
+          //window.parent.postMessage(JSON.stringify(message), '*');
           fillDataToKnack(message);
         } catch (e) {
           alert('File upload was not succesfull.')
@@ -340,11 +340,6 @@ function prepareFileView(){
   if ($('img[id*="cameraImg"]').length === 0) {$('#cameraUploadDiv').hide()} else {$('#cameraUploadDiv').show()}
 
   $('#kn-loading-spinner').hide();
-}
-
-function hideScanApp(){
-  $('#scanApp').hide();
-  $('.kn-content').show();
 }
 
 function prepareFileViewOnce(){
