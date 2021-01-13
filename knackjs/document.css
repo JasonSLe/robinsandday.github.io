@@ -82,8 +82,6 @@ body {
   }
 
   #zoomHolder {
-   width:100%;
-   height:auto;
    position:relative;
    overflow:hidden
 }
