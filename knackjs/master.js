@@ -833,7 +833,7 @@ function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
     if ($('button[id="scanDocument"]').length>0){
       for (let i = 0;i<$('button[id="scanDocument"]').length;i++){
-        $('button[id="scanDocument"]').eq(0).on("click",function(){
+        $('button[id="scanDocument"]').eq(i).on("click",function(){
           showScanApp();
         });
       }
