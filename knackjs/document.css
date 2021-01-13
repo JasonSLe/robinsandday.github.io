@@ -81,7 +81,7 @@ body {
     text-align:center;
   }
 
-  #zoomHolder {
+#zoomHolder {
    position:relative;
    overflow:hidden;
    width:100%;
