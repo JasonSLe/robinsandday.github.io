@@ -5578,7 +5578,9 @@ font-size:15px;
     margin: -30px;
 }
 
-
+#view_3956, #view_3957, #view_3958, #view_3959, #view_3960, #view_3962, #view_3963 > div > p{
+margin: -30px;	
+}
 
 
 
