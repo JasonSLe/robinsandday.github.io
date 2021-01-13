@@ -91,7 +91,7 @@ function prepareLayout(cameraView, takingPhoto){
             $('#scanCameraGrid').show();
             $("#scanCameraText").show();
             //if (OperatingSystem.Android()) {
-              $('#scanCameraFrontpic').pinchzoomer({'adjustHolderSize':false});
+            //  $('#scanCameraFrontpic').pinchzoomer({'adjustHolderSize':false});
             //}
 
             //SHOW RETAKE AND CONFIORM BUTTON
