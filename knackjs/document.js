@@ -83,6 +83,7 @@ function prepareLayout(cameraView, takingPhoto){
             $('#scanCameraGrid').hide();
             $("#scanCameraText").hide();
             $("#scanTakePhoto").show();
+            $('meta[name="viewport"]').attr('content',"width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=1");
         } else {
             //HIDE VIDEO & OVERLAY ELEMENT
             $('#videoElement').hide();
@@ -93,6 +94,7 @@ function prepareLayout(cameraView, takingPhoto){
             //if (OperatingSystem.Android()) {
               //$('#scanCameraFrontpic').pinchzoomer({maxZoom:3, appendControls:false}, false);
             //}
+            $('meta[name="viewport"]').attr('content',"width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=5, minimum-scale=1, user-scalable=yes")
 
             //SHOW RETAKE AND CONFIORM BUTTON
             $("#scanCameraRetake").show();
@@ -106,6 +108,7 @@ function prepareLayout(cameraView, takingPhoto){
             $("#scanTakePhoto").hide();
         }
     } else {
+        $('meta[name="viewport"]').attr('content',"width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=1");
         $('#scanDocGallery').show();
         $('#cameraTakePhotoDiv').hide();
         $('#scanCameraVid_container').hide();
