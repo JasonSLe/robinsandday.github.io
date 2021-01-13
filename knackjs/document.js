@@ -1,6 +1,7 @@
-// Camera app share functions
-//************************************* SAVE THE PICTURE YOU'VE JUST TAKEN WITH THE CAMERA TO KNACK*****************************************
+// Scan App functions
 
+  //Uploads given fileBlob to given app_id file store
+  //and then calls the fillDataToKnack of master.js to fill coresponding data
   async function uploadFileOnly(app_id, fileBlob, fileName, pdfAssetField, infoElementId) {
     var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
@@ -14,6 +15,7 @@
     try {
       $('#'+infoElementId).text('File upload started.');
       $.ajax({
+        //this takes care about the progress reporting on infoElementId
         xhr: function() {
           var xhr = new window.XMLHttpRequest();
           xhr.upload.addEventListener("progress", function(evt) {
@@ -36,12 +38,12 @@
         $('#'+infoElementId).text('File upload finished.');
         try {
           if (typeof rData === 'string'){ rData = JSON.parse(rData);};
-
           $('#'+infoElementId).text('Upload succesfull, returning to app.');
           $('#kn-loading-spinner').hide();
 
           let message = {'event':'scanDocument','status':'ok','pdfAssetField':pdfAssetField,'pdfAssetId':rData.id, 'fileName':fileName}
-          //window.parent.postMessage(JSON.stringify(message), '*');
+
+          //function from master.js to fill return data to Knack
           fillDataToKnack(message);
         } catch (e) {
           alert('File upload was not succesfull.')
@@ -83,6 +85,7 @@ function prepareLayout(cameraView, takingPhoto){
             $('#scanCameraGrid').hide();
             $("#scanCameraText").hide();
             $("#scanTakePhoto").show();
+            //disables zooming
             $('meta[name="viewport"]').attr('content',"width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=1");
         } else {
             //HIDE VIDEO & OVERLAY ELEMENT
@@ -91,10 +94,6 @@ function prepareLayout(cameraView, takingPhoto){
             //DISPLAY COMPARISION CONTENT
             $('#scanCameraGrid').show();
             $("#scanCameraText").show();
-            //if (OperatingSystem.Android()) {
-              //$('#scanCameraFrontpic').pinchzoomer({maxZoom:3, appendControls:false}, false);
-            //}
-            $('meta[name="viewport"]').attr('content',"width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=5, minimum-scale=1, user-scalable=yes")
 
             //SHOW RETAKE AND CONFIORM BUTTON
             $("#scanCameraRetake").show();
@@ -104,20 +103,23 @@ function prepareLayout(cameraView, takingPhoto){
             $("#scanCameraExit").hide();
 
             // DISABLE TAKEPHOTO BUTTON
-            //$("#takePhoto").attr("disabled", true);
             $("#scanTakePhoto").hide();
+            //enables zooming
+            $('meta[name="viewport"]').attr('content',"width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=5, minimum-scale=1, user-scalable=yes")
         }
     } else {
-        $('meta[name="viewport"]').attr('content',"width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=1");
         $('#scanDocGallery').show();
         $('#cameraTakePhotoDiv').hide();
         $('#scanCameraVid_container').hide();
         $('#scanCameraGrid').hide();
         $('#scanCameraGui_controls').hide();
+        //disables zooming
+        $('meta[name="viewport"]').attr('content',"width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=1");
     }
     $('#kn-loading-spinner').hide();
 }
 
+//prepares everything for opening the camera and taking the photo
 function prepareCameraView(imgToSaveName){
   cameraView = true;
   takingPhoto = true;
@@ -134,38 +136,7 @@ function prepareCameraView(imgToSaveName){
 
   img.style.visibility = 'hidden';
 
-//************************************* OPERATING SYSTEM DETECTION *****************************************   
-var OperatingSystem = {
-   Android: function() {
-       return navigator.userAgent.match(/Android/i);
-    },
-
-    iOS: function() {
-	    if(navigator.vendor.match(/google/i)) {
-		    return false;
-    	}
-    	else if(navigator.vendor.match(/apple/i)) {
-		    return true;
-    	}
-    }
-};
-
-
-//************************************* GO INTO FULLSCREEN (ONLY ANDRIOD DEVICE WORK) *****************************************
-/*
-     if (document.documentElement.requestFullscreen) {
-       document.documentElement.requestFullscreen();
-     } else if (document.documentElement.mozRequestFullScreen) {
-       document.documentElement.mozRequestFullScreen();
-     } else if (document.documentElement.webkitRequestFullscreen) {
-       document.documentElement.webkitRequestFullscreen();
-     } else if (document.documentElement.msRequestFullscreen) {
-       document.documentElement.msRequestFullscreen();
-     }
-*/
-//************************************* OPEN THE CAMERA BY ASKING USER PERMISSION(APPLE DEVICE) AND APPLY VIDEO STREAM SETTINGS*****************************************
-
-const constraints = {
+  const constraints = {
     width: { min: 1440, max: 3984 },
     height: { min: 1080, max: 2988 },
     aspectRatio: 4/3,
@@ -236,16 +207,24 @@ takePhotoButton.onclick = takePhoto;
 
   function onclickConfimrButton(){
     $('#kn-loading-spinner').show();
+
+    // DISABLE SAVE BUTTON
+    $("#scanCameraConfirm").attr("disabled", true);
+
     confirmImage();
   }
 
   async function confirmImage(){
+    //create new image element for saved image
     var imgToSave = document.createElement('img');
     imgToSave.id = imgToSaveName;
     imgToSave.classList.add("scanPhotoGrid");
-    imgToSave.onclick = removeMe;
+    imgToSave.onclick = removeThisImage;
     document.getElementById("cameraTakenPhotos").appendChild(imgToSave);
+
     photosTaken += 1;
+
+    //resize or if needed rotate the taken image
     let outputCanvas = document.createElement("canvas");
     let outputCtx = outputCanvas.getContext("2d"); 
     if (img.naturalWidth>img.naturalHeight){
@@ -262,31 +241,17 @@ takePhotoButton.onclick = takePhoto;
       outputCtx.drawImage(img, 0, 0, img.naturalWidth * scale, img.naturalHeight * scale);
     }
     imgToSave.src = outputCtx.canvas.toDataURL("image/jpeg", 0.8);
-    imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
-    // DISABLE SAVE BUTTON
-    $("#scanCameraConfirm").attr("disabled", true);
 
     //STOP TRACK WHEN USER SAVES IMAGE
-    video.srcObject.getVideoTracks().forEach(track => track.stop());
+    try {
+      video.srcObject.getVideoTracks().forEach(track => track.stop());
+    } catch (e) {}
 
-    //EXIT FULL SCREEN MODE
-    /*
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen();
-    }
-    */
     prepareFileView()
   }
 
 
 //*************************************RETAKE BUTTON, THIS WILL DELETE THE PHOTO TAKEN*****************************************
-
   retakeButton.onclick = function() {
     //CLEAR TAKEN PHOTO
     img.src = '';
@@ -302,18 +267,6 @@ takePhotoButton.onclick = takePhoto;
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
 
   exitButton.onclick = function() {
-    //EXIT FULL SCREEN MODE
-    /*
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen();
-    }
-*/
     //STOP TRACK WHEN USER EXIT THE APP
     try {
       video.srcObject.getVideoTracks().forEach(track => track.stop());
@@ -327,7 +280,8 @@ var cameraView = false;
 var takingPhoto = false;
 var photosTaken = 0;
 
-function removeMe(){
+//this function is on click on each of taken images
+function removeThisImage(){
   var imageToRemove = this;
   document.getElementById("modalText").textContent = "Delete image?";
   document.getElementById("modalYes").onclick = function() {
@@ -337,6 +291,7 @@ function removeMe(){
   document.getElementById("modalDialog").style.display = "block"
 }
 
+//shows the file view layout of app
 function prepareFileView(){
   cameraView = false;
   prepareLayout(cameraView, takingPhoto);
@@ -345,6 +300,7 @@ function prepareFileView(){
   $('#kn-loading-spinner').hide();
 }
 
+//basic preparation of the app when it is called first time
 function prepareFileViewOnce(){
   photosTaken = 0;
   if ($('img[id*="cameraImg"]').length > 0){
@@ -370,7 +326,7 @@ function prepareFileViewOnce(){
       $('#cameraCancelAll').attr("disabled", true);
       $('#infoText').text('File conversion and upload started.');
       $('#infoDialog').show();
-      uploadImages('infoText');
+      createPDF('infoText');
     }
 
     document.getElementById('cameraUploadOnce').onclick = cameraUpload;
@@ -387,7 +343,8 @@ function right(str, chr){
 	return str.slice(str.length-chr,str.length);
 }
 
-async function uploadImages(infoText){
+//the output function, which takes all the taken images and converts them to PDF and calls the upload function
+async function createPDF(infoText){
   try {
     var pdfName = $('#cameraUploadFileName').attr('value');
     if (pdfName===''){pdfName='ScannedDocument.pdf'};
