@@ -99,8 +99,8 @@ body {
   }
   
   #scanCameraFrontpic {
-    width: auto;
-    max-height: 90%;
+    max-width: 80;
+    height: 80%;
   }
   
   #scanCameraGui_controls {
