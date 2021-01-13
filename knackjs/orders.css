@@ -1865,3 +1865,30 @@ This removes white spaces from all table headers*/
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
+
+/**SCAN BUTTON STYLING**/
+#scanDocument {
+background-color: #EEEEEE;
+font-weight: bold;
+padding: 12px 10px;
+display: inline-block;
+border-radius: 10px;
+font-size: 12px;
+margin: 4px;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+border: none;
+outline:none;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+text-transform: uppercase;
+}
+
+#scanDocument:hover{
+  background-color: #CDCDCD;
+}
+
+#scanDocument > .fa{
+color: red;
+font-size:15px;
+}
+

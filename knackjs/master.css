@@ -5554,7 +5554,7 @@ padding: 12px 10px;
 display: inline-block;
 border-radius: 10px;
 font-size: 12px;
-margin: 2rem;
+margin: 4px;
 -webkit-transition-duration: 0.4s; /* Safari */
 transition-duration: 0.4s;
 border: none;
@@ -5578,7 +5578,9 @@ font-size:15px;
     margin: -30px;
 }
 
-
+#view_3956, #view_3957, #view_3958, #view_3959, #view_3960, #view_3962, #view_3963 > div > p{
+margin: -30px;	
+}
 
 
 
