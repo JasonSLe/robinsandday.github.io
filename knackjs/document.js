@@ -343,6 +343,13 @@ function prepareFileView(){
 }
 
 function prepareFileViewOnce(){
+  photosTaken = 0;
+  if ($('img[id*="cameraImg"]').length > 0){
+    for (let i =0;i<$('img[id*="cameraImg"]').length;i++){
+      $('img[id*="cameraImg"]').eq(i).remove();
+    }
+  }
+
     let cameraTakePhoto = document.getElementById('cameraTakePhoto');
     cameraTakePhoto.onclick = function() {
         prepareCameraView('cameraImg'+(photosTaken+1));
