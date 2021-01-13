@@ -722,7 +722,7 @@ function eraseCookie(name) {
 }
 
 var scanAppHTML = '';
-function embedScanApp(button){
+function embedScanApp(){
   let scanApp = document.getElementById('scanApp');
   if (!scanApp){
     if (scanAppHTML===''){
@@ -762,8 +762,7 @@ function embedScanApp(button){
   }
 
   function afterScriptLoad(){
-    alert(button.getAttribute('data-pdfassetfield'))
-    afterLoad(button.getAttribute('data-app_id'), button.getAttribute('data-pdfassetfield'));
+    //afterLoad(button.getAttribute('data-app_id'), button.getAttribute('data-pdfassetfield'));
   }
 
   function emptyCallback() { }
@@ -808,7 +807,7 @@ function embedScanApp(button){
 }
 
 function showScanApp(button){
-  embedScanApp(button);
+  afterLoad(button.getAttribute('data-app_id'), button.getAttribute('data-pdfassetfield'));
   $('#scanApp').show();
   $('.kn-content').hide();
 }
@@ -832,6 +831,7 @@ var scanDocsSceneNames = ["scene_1133", "scene_1147", "scene_1135", "scene_1032"
 scanDocsSceneNames.forEach(scanDocsLinkFunction);
 function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
+    embedScanApp();
     if ($('button[id="scanDocument"]').length>0){
       for (let i = 0;i<$('button[id="scanDocument"]').length;i++){
         $('button[id="scanDocument"]').eq(i).on("click",function(){
