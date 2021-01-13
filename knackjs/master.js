@@ -736,6 +736,7 @@ function embedScanApp(){
     scanApp = document.createElement('div');
     scanApp.innerHTML = scanAppHTML;
     scanApp.id = 'scanApp';
+    scanApp.style="display: none;"
     document.body.appendChild(scanApp);
   } else {
     scanApp.innerHTML = scanAppHTML;
