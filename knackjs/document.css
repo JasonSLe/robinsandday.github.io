@@ -73,13 +73,12 @@ body {
   }
   
   #scanCameraGrid {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     background: #000;
     max-width: 100%;
     text-align:center;
-    overflow:hidden
   }
   
   
