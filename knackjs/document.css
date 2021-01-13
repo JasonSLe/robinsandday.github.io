@@ -21,9 +21,9 @@
   background-color: #CDCDCD;
 }
 
-.scanAppFA{
+#scanDocGallery > .fa{
 color: red;
-font-size:12px;
+font-size:15px;
 }
 
 .scanAppH1{
