@@ -87,6 +87,9 @@ hashCode = function(elem) {
 };
 
 var submitUserLoginForm = function() {
+  if ($('[id="email"]').length===0){ 
+    return;
+  }
     var url = window.location.toString();
     if (!url.indexOf('https://www.robinsandday.co.uk/digital-orders?') === 0) {
         alert("Invalid URL");
