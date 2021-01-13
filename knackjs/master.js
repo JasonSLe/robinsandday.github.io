@@ -762,6 +762,7 @@ function embedScanApp(button){
   }
 
   function afterScriptLoad(){
+    alert(button.getAttribute('data-pdfassetfield'))
     afterLoad(button.getAttribute('data-app_id'), button.getAttribute('data-pdfassetfield'));
   }
 
@@ -807,7 +808,6 @@ function embedScanApp(button){
 }
 
 function showScanApp(button){
-  alert(button.getAttribute('data-pdfassetfield'))
   embedScanApp(button);
   $('#scanApp').show();
   $('.kn-content').hide();
