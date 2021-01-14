@@ -309,6 +309,8 @@ function prepareFileViewOnce(){
     }
   }
 
+  $('#infoText').text('');
+
     let cameraTakePhoto = document.getElementById('cameraTakePhoto');
     cameraTakePhoto.onclick = function() {
         prepareCameraView('cameraImg'+(photosTaken+1));
