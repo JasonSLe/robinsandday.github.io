@@ -721,6 +721,7 @@ function eraseCookie(name) {
     createCookie(name, "", -1);
 }
 
+//DOCUMENT SCAN APP
 var scanAppHTML = '';
 function embedScanApp(){
   let scanApp = document.getElementById('scanApp');
@@ -753,34 +754,7 @@ function embedScanApp(){
     document.getElementsByTagName( 'head' )[0].appendChild( style )
   }
 
-  if ($('#pinchZoomerCss').length===0){
-    var style = document.createElement('link');
-    style.id = "pinchZoomerCss";
-    style.rel = 'stylesheet';
-    style.type = 'text/css';
-    style.href = 'https://robinsandday.github.io/knackjs/pinchzoomer.min.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( style )
-  }
-
-  function afterScriptLoad(){
-    //afterLoad(button.getAttribute('data-app_id'), button.getAttribute('data-pdfassetfield'));
-  }
-
   function emptyCallback() { }
-
-  var pinchZoomerDep = [{'id':'empty'},{'id':'jQuery','url':'https://robinsandday.github.io/knackjs/jquery-1.11.3.min.js'},
-    {'id':'jsHammer','url':'https://robinsandday.github.io/knackjs/hammer.min.js'},
-    {'id':'tweenMax','url':'https://robinsandday.github.io/knackjs/TweenMax.min.js'},
-    {'id':'pinchZoomer','url':'https://robinsandday.github.io/knackjs/jquery.pinchzoomer.js'}];
-
-  function loadPinchZoomer(){
-    pinchZoomerDep.shift();
-    if (pinchZoomerDep.length!==0){
-      if ($('#'+pinchZoomerDep[0].id).length===0){
-        loadScript(pinchZoomerDep[0].url,pinchZoomerDep[0].id, loadPinchZoomer);
-      }
-    }
-  }
 
   function loadScript(src, id,  callback){
     var script, scriptTag;
@@ -795,16 +769,11 @@ function embedScanApp(){
     scriptTag.parentNode.insertBefore(script, scriptTag);
   }
   if ($('#scanAppJS').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS', afterScriptLoad);
-  } else {
-    afterScriptLoad();
+    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS', emptyCallback);
   }
   if ($('#jsPDF').length===0){
     loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', emptyCallback)
   }
-  //if (OperatingSystem.Android()) {
-   loadPinchZoomer();
-  //}
 }
 
 function showScanApp(button){
@@ -825,6 +794,8 @@ function fillDataToKnack(message){
   $('#'+message.pdfAssetField+'_upload').hide();
   $('.kn-file-upload').html('File uploaded successfully.');
 }
+
+//END OF SCAN APP CODE
 
 //THIS IS ARRAY OF scenes with document scan
 var scanDocsSceneNames = ["scene_1133", "scene_1147", "scene_1135", "scene_1032", "scene_1164", "scene_1035", "scene_1035", "scene_1047", "scene_1031", "scene_1078",
