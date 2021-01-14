@@ -43,6 +43,10 @@ font-size:15px;
   height: auto
 }
 
+#cameraUploadDiv{
+  font-family: sans-serif;
+}
+
 #scanDocGallery{
 max-width:90%;
 margin: auto;
