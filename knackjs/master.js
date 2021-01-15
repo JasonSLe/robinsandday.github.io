@@ -792,7 +792,7 @@ function fillDataToKnack(message){
   $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
   $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fileName);
   $('#'+message.pdfAssetField+'_upload').hide();
-  $('.kn-file-upload').html('File uploaded successfully.');
+  $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-file-upload"]').html('File uploaded successfully.');
 }
 
 //END OF SCAN APP CODE

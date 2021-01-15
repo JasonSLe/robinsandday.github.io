@@ -113,6 +113,9 @@ function prepareLayout(cameraView, takingPhoto){
         $('#scanCameraVid_container').hide();
         $('#scanCameraGrid').hide();
         $('#scanCameraGui_controls').hide();
+        $('#cameraUploadOnce').removeAttr('disabled');
+        $('#cameraTakePhoto').removeAttr('disabled');
+        $('#cameraCancelAll').removeAttr('disabled');
         //disables zooming
         $('meta[name="viewport"]').attr('content',"width=device-width, initial-scale=1.0, target-densitydpi=160, maximum-scale=1");
     }
