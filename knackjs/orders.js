@@ -345,7 +345,8 @@ function fillDataToKnack(message){
 //END OF SCAN APP CODE
 
 //THIS IS ARRAY OF scenes with document scan
-var scanDocsSceneNames = [];
+var scanDocsSceneNames = ["scene_931","scene_959", "scene_952", "scene_984", "scene_957", "scene_967", "scene_972", "scene_973", "scene_979", "scene_976", "scene_981", "scene_980", 
+			 "scene_1066", "scene_978", "scene_979"];
 scanDocsSceneNames.forEach(scanDocsLinkFunction);
 function scanDocsLinkFunction(selector_view){
   $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
