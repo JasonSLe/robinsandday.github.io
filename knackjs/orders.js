@@ -148,7 +148,7 @@ $(document).on("knack-view-render.view_2146", function (event, view) {
         });
 });
 
-var loginSceneNames = ["scene_917","scene_989","scene_883"]; ///add view numbers as necessary
+var loginSceneNames = ["scene_917","scene_989","scene_883","scene_1074"]; ///add view numbers as necessary
 
 loginSceneNames.forEach(functionName);
 function functionName(selector_scene){
