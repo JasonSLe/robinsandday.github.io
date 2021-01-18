@@ -181,9 +181,6 @@ $(document).on('knack-view-render.view_3921', function(event, view, data) {
   var timeStamp = Math.floor((new Date()).getTime() / 30000);
   var hash = 'H' + hashCode('U' + userName + timeStamp)
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-digital-deal-file" frameborder="0" width="100%" id="knack-iframe"></iframe>');
-  window.setTimeout(function() {
-    window.location.href = 'https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-digital-deal-file';
-}, 100);
 });
 
 $(document).on('knack-view-render.view_3923', function(event, view, data) {
