@@ -159,7 +159,7 @@ function prepareCameraView(imgToSaveName){
       if (error.toString().includes('Permission denied')){
         alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
       } else {
-        alert('This application works only on mobile devices which have a camera. There was problem starting camera on this device. Please use another device. Admin error:'+ JSON.stringify(error));
+        alert('This application works only on mobile devices which have a camera. There was problem starting camera on this device. Please use another device. Admin error:'+ error.toString());
         hideScanApp();
       }
     });
