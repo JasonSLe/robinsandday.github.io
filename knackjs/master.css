@@ -2856,14 +2856,14 @@ visibility: visible;
 }
 
 #view_2564 > div > a {
-	background-color: #FFA100;
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_2564 > div > a:hover {
-	background-color: #D18400;
+	background-color: #32936F;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
