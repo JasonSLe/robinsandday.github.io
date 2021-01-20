@@ -2856,14 +2856,14 @@ visibility: visible;
 }
 
 #view_2564 > div > a {
-	background-color: #FFA100;
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_2564 > div > a:hover {
-	background-color: #D18400;
+	background-color: #32936F;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
@@ -5550,10 +5550,10 @@ visibility: visible;
 #scanDocument {
 background-color: #EEEEEE;
 font-weight: bold;
-padding: 12px 10px;
+padding: 8px 6px;
 display: inline-block;
 border-radius: 10px;
-font-size: 12px;
+font-size: 11px;
 margin: 1.5rem;
 -webkit-transition-duration: 0.4s; /* Safari */
 transition-duration: 0.4s;
@@ -5569,7 +5569,7 @@ text-transform: uppercase;
 
 #scanDocument > .fa{
 color: red;
-font-size:15px;
+font-size:12px;
 }
 
 /**SCAN V5 DOCUMENT: RICH TEXT**/
@@ -5579,10 +5579,14 @@ margin: -30px;
 padding-bottom: 20px;
 }
 
-#view_3956, #view_3957, #view_3958, #view_3959, #view_3960, #view_3962, #view_3963 > div > p{
+#view_3956, #view_3957, #view_3958, #view_3959, #view_3960, #view_3962, #view_3963, #view_3983, #view_3984, #view_3985 > div > p{
 margin: -30px;
 padding-bottom: 20px;
 }
 
+#view_3984, > div > p{
+margin: -13px;
+padding-bottom: 20px;
+}
 
 
