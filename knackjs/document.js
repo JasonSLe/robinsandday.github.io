@@ -309,7 +309,7 @@ function prepareFileViewOnce(){
   try { 
   photosTaken = 0;
   if ($('img[id*="cameraImg"]').length > 0){
-    for (let i =0;i<$('img[id*="cameraImg"]').length;i++){
+    for (let i = $('img[id*="cameraImg"]').length-1;i>=0;i--){
       $('img[id*="cameraImg"]').eq(i).remove();
     }
   }
