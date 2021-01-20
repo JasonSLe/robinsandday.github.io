@@ -306,6 +306,7 @@ function prepareFileView(){
 
 //basic preparation of the app when it is called first time
 function prepareFileViewOnce(){
+  try { 
   photosTaken = 0;
   if ($('img[id*="cameraImg"]').length > 0){
     for (let i =0;i<$('img[id*="cameraImg"]').length;i++){
@@ -314,6 +315,7 @@ function prepareFileViewOnce(){
   }
 
   $('#infoText').text('');
+  $('#cameraUploadFileName').attr('value','ScannedDocument.pdf');
 
     let cameraTakePhoto = document.getElementById('cameraTakePhoto');
     cameraTakePhoto.onclick = function() {
@@ -343,6 +345,7 @@ function prepareFileViewOnce(){
     document.getElementById("modalCancel").onclick = function() {
       document.getElementById("modalDialog").style.display = "none";
     }
+  } catch (e){ alert(e);}
 }
 
 function right(str, chr){
