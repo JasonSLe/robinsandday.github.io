@@ -624,7 +624,7 @@ step: '15'		// Dropdown Interval every 15 mins
 //CUSTOMER HANDOVER DIARY Add Filter Button
 
 $(document).on('knack-view-render.view_2884', function(event, view, record) {
-  $('.kn-add-filter').text('Click to Filter by Sales Advisor, Dealer, New or Used etc.')
+  $('.kn-add-filter').text('Click to Filter by Sales Advisor, Dealer, New or Used, Confirmed by Admin etc.')
 });  
 
 $(document).on('knack-scene-render.any', function(event, scene) {	
