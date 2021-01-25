@@ -296,97 +296,123 @@ body {
 /****** Used Stock Management Filters *******/
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(14) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(15) > a {
-	background-color: #FFA100;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(16) > a {
-	background-color: #FFA100;
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Auto Pricing Dashboard Filters */
+
+#view_4025 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4025 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4025 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4025 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
@@ -696,14 +722,14 @@ body {
 }
 
 #view_1368 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #FFA100;
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_1368 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #D18400;
+	background-color: #32936F;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
@@ -757,6 +783,24 @@ body {
 }
 
 #view_1368 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1368 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1368 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -5579,14 +5623,20 @@ margin: -30px;
 padding-bottom: 20px;
 }
 
-#view_3956, #view_3957, #view_3958, #view_3959, #view_3960, #view_3962, #view_3963, #view_3983, #view_3984, #view_3985 > div > p{
+#view_3956, #view_3957, #view_3958, #view_3959, #view_3960, #view_3962, #view_3963, #view_3983, #view_3984, #view_3985 > div > p {
 margin: -30px;
 padding-bottom: 20px;
 }
 
-#view_3984, > div > p{
+#view_3984, #view_4020 > div > p{
 margin: -13px;
 padding-bottom: 20px;
 }
+
+#view_4020 > div > p{
+margin: -30px;
+padding-bottom: 0px;
+}
+
 
 
