@@ -204,12 +204,21 @@ $(document).on('knack-view-render.view_3978', function(event, view, data) {
   var timeStamp = Math.floor((new Date()).getTime() / 30000);
   var hash = 'H' + hashCode('U' + userName + timeStamp)
   //$('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-vehicle-reporting" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
-  window.setTimeout(function() {
-    let url = 'https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-vehicle-reporting';
-    window.open(url, '_blank');
-    //window.location.href = 
-  }, 100);
+  let url = 'https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-vehicle-reporting';
+  window.open(url, '_blank');
 });
+
+function openTab(url) {
+  // Create link in memory
+  var a = window.document.createElement("a");
+  a.target = '_blank';
+  a.href = url;
+
+  // Dispatch fake click
+  var e = window.document.createEvent("MouseEvents");
+  e.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+  a.dispatchEvent(e);
+};
 
 
 // ************************************************************************************************************************************************
