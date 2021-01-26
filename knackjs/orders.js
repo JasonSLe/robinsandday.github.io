@@ -122,6 +122,7 @@ var submitUserLoginForm = function() {
         return;
     }
 
+    /*
     var token = params.get('token');
     token = atob(token);
     if (!token.includes('#')){
@@ -131,6 +132,7 @@ var submitUserLoginForm = function() {
     let userName2 = token.split('#')[0];
     let password = token.split('#')[1];
     console.log(userName2, password);
+    */
     //type userName from url, my secret password and click login
     //if auth successfully then it shows the app, otherwise login screen
     $('[id="email"]').val(userName);
