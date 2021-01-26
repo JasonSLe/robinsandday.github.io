@@ -3388,6 +3388,16 @@ visibility: visible;
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_4032 > section > div > div > div > div > div > div > span > h2 > span > span {
+    background-color: #FFE74C;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
 /******** RECEIPT OF DEPOSIT PAGE *******/
 
 #view_2867 > form > div > button {
