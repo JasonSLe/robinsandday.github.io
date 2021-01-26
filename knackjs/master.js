@@ -181,6 +181,7 @@ $(document).on('knack-view-render.view_3921', function(event, view, data) {
   var userName = Knack.getUserAttributes().email;
   var timeStamp = Math.floor((new Date()).getTime() / 30000);
   var hash = 'H' + hashCode('U' + userName + timeStamp)
+  $('div[class="field_6440"]').hide();
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-digital-deal-file" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
@@ -189,6 +190,7 @@ $(document).on('knack-view-render.view_3923', function(event, view, data) {
   var userName = Knack.getUserAttributes().email;
   var timeStamp = Math.floor((new Date()).getTime() / 30000);
   var hash = 'H' + hashCode('U' + userName + timeStamp)
+  $('div[class="field_6440"]').hide();
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-deal-file-admin" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
@@ -197,6 +199,7 @@ $(document).on('knack-view-render.view_3925', function(event, view, data) {
   var userName = Knack.getUserAttributes().email;
   var timeStamp = Math.floor((new Date()).getTime() / 30000);
   var hash = 'H' + hashCode('U' + userName + timeStamp)
+  $('div[class="field_6440"]').hide();
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-vehicle-sales-admin" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 $(document).on('knack-view-render.view_3978', function(event, view, data) {
@@ -204,6 +207,7 @@ $(document).on('knack-view-render.view_3978', function(event, view, data) {
   var userName = Knack.getUserAttributes().email;
   var timeStamp = Math.floor((new Date()).getTime() / 30000);
   var hash = 'H' + hashCode('U' + userName + timeStamp)
+  $('div[class="field_6440"]').hide();
   //$('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-vehicle-reporting" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
   let url = 'https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-vehicle-reporting';
   window.open(url, '_blank');
