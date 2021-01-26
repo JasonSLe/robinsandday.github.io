@@ -98,12 +98,11 @@ var submitUserLoginForm = function() {
 
     var params = new URLSearchParams( window.location.search);
     //console.log(window.location.search);
+    /*
     var userName = params.get('user');
     var hash = params.get('hash');
     var timeStamp = params.get('timeStamp');
-    //timeStamp = timeStamp.match(/(\d+){1}\D.*/);
-    //console.log('ttt'+timeStamp)
-    //timeStamp = timeStamp[1] || false;
+    
     var myHash = 'H' + hashCode('U' + userName + timeStamp);
     if (myHash !== hash) {
       console.log({
@@ -121,7 +120,7 @@ var submitUserLoginForm = function() {
         //alert('OLD TIME STAMP');
         return;
     }
-
+    */
     
     var token = params.get('token');
     token = atob(token);
