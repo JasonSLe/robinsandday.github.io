@@ -207,6 +207,8 @@ $(document).on('knack-view-render.view_3978', function(event, view, data) {
   var userName = Knack.getUserAttributes().email;
   var timeStamp = Math.floor((new Date()).getTime() / 30000);
   var hash = 'H' + hashCode('U' + userName + timeStamp)
+  console.log(Knack.getUserAttributes());
+  //var token = lzw_encode($('div[class="field_6440"]').attr('value'))
   $('div[class="field_6440"]').hide();
   //$('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-vehicle-reporting" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
   let url = 'https://www.robinsandday.co.uk/digital-orders?user=' + encodeURIComponent(userName) + '&hash=' + encodeURIComponent(hash) + '&timeStamp=' + encodeURIComponent(timeStamp) + '#new-vehicle-reporting';
@@ -1385,4 +1387,57 @@ $(document).on('knack-scene-render.scene_1274', function(event, scene) {
 
 function recursivecall(){
  setTimeout(function () { if($("#view_3934").is(":visible")==true){ Knack.views["view_3934"].model.fetch();recursivecall();} }, 10000);
+}
+
+// LZW-compress a string
+function lzw_encode(s) {
+  var dict = {};
+  var data = (s + "").split("");
+  var out = [];
+  var currChar;
+  var phrase = data[0];
+  var code = 256;
+  for (var i=1; i<data.length; i++) {
+      currChar=data[i];
+      if (dict[phrase + currChar] != null) {
+          phrase += currChar;
+      }
+      else {
+          out.push(phrase.length > 1 ? dict[phrase] : phrase.charCodeAt(0));
+          dict[phrase + currChar] = code;
+          code++;
+          phrase=currChar;
+      }
+  }
+  out.push(phrase.length > 1 ? dict[phrase] : phrase.charCodeAt(0));
+  for (var i=0; i<out.length; i++) {
+      out[i] = String.fromCharCode(out[i]);
+  }
+  return out.join("");
+}
+
+// Decompress an LZW-encoded string
+function lzw_decode(s) {
+  var dict = {};
+  var data = (s + "").split("");
+  var currChar = data[0];
+  var oldPhrase = currChar;
+  var out = [currChar];
+  var code = 256;
+  var phrase;
+  for (var i=1; i<data.length; i++) {
+      var currCode = data[i].charCodeAt(0);
+      if (currCode < 256) {
+          phrase = data[i];
+      }
+      else {
+         phrase = dict[currCode] ? dict[currCode] : (oldPhrase + currChar);
+      }
+      out.push(phrase);
+      currChar = phrase.charAt(0);
+      dict[code] = oldPhrase + currChar;
+      code++;
+      oldPhrase = phrase;
+  }
+  return out.join("");
 }
