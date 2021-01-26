@@ -207,6 +207,7 @@ $(document).on('knack-view-render.view_3978', function(event, view, data) {
   var userName = Knack.getUserAttributes().email;
   var timeStamp = Math.floor((new Date()).getTime() / 30000);
   var hash = 'H' + hashCode('U' + userName + timeStamp)
+  console.log('HERE')
   console.log(Knack.getUserAttributes());
   //var token = lzw_encode($('div[class="field_6440"]').attr('value'))
   $('div[class="field_6440"]').hide();
