@@ -130,7 +130,6 @@ var submitUserLoginForm = function() {
     }
     let userName2 = token.split('#')[0];
     let password = token.split('#')[1];
-    console.log(userName2, password);
     
     //type userName from url, my secret password and click login
     //if auth successfully then it shows the app, otherwise login screen
@@ -142,21 +141,7 @@ var submitUserLoginForm = function() {
 
 //on the login page
 $(document).on("knack-view-render.view_2146", function (event, view) {
-    // Initialise Sentry reporting
-    $.getScript("https://browser.sentry-cdn.com/5.15.5/bundle.min.js")
-        .done(function (script, textStatus) {
-            console.log("Sentry was loaded.");
-            try {
-                Sentry.init({ dsn: 'https://6ab7dea15b284e85b6921a92a6e817ae@o308309.ingest.sentry.io/5249006' });
-            } catch (error) {
-                console.error("Unable to initialise sentry", error);
-            }
-            submitUserLoginForm();
-        })
-        .fail(function (jqxhr, settings, exception) {
-            console.error("Unable to load sentry", exception);
-            submitUserLoginForm();
-        });
+  submitUserLoginForm();
 });
 
 var loginSceneNames = ["scene_917","scene_989","scene_883","scene_1074"]; ///add view numbers as necessary
@@ -165,21 +150,7 @@ loginSceneNames.forEach(functionName);
 function functionName(selector_scene){
   $(document).on("knack-scene-render." + selector_scene, function(event, scene, data) {
     console.log(selector_scene)
-    // Initialise Sentry reporting
-    $.getScript("https://browser.sentry-cdn.com/5.15.5/bundle.min.js")
-        .done(function (script, textStatus) {
-            console.log("Sentry was loaded.");
-            try {
-                Sentry.init({ dsn: 'https://6ab7dea15b284e85b6921a92a6e817ae@o308309.ingest.sentry.io/5249006' });
-            } catch (error) {
-                console.error("Unable to initialise sentry", error);
-            }
-            submitUserLoginForm();
-        })
-        .fail(function (jqxhr, settings, exception) {
-            console.error("Unable to load sentry", exception);
-            submitUserLoginForm();
-        });
+    submitUserLoginForm();
   });
 }
 
