@@ -1045,7 +1045,7 @@ This removes white spaces from all table headers*/
 /******* Links to Update Delivery and DEal File Contents Status *******/
 /**** Link from Deal File ****/
 
-#view_3618 .control {
+#view_3618 > section > div > div > div > div > div > div > span > a.control {
   text-align: center;
 }
 
@@ -1057,7 +1057,7 @@ This removes white spaces from all table headers*/
   display: inline-block;
 }
 
-#view_3618 > section > div > div > div > div > div > div > span > a {
+#view_3618 > section > div > div > div > div > div > div > span > a:hover {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #32936F;
@@ -1079,7 +1079,7 @@ This removes white spaces from all table headers*/
   display: inline-block;
 }
 
-#view_3623 > section > div > div > div > div > div > div > span > a {
+#view_3623 > section > div > div > div > div > div > div > span > a:hover {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #32936F;
