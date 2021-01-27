@@ -1042,12 +1042,8 @@ This removes white spaces from all table headers*/
   border-color: #FFFFFF;
 }
 
-/******* Links to Update Delivery and DEal File Contents Status *******/
+/******* Links to Update Delivery and Deal File Contents Status *******/
 /**** Link from Deal File ****/
-
-#view_3618 > section > div > div > div > div > div > div > span > a.control {
-  text-align: center;
-}
 
 #view_3618 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
@@ -1067,10 +1063,6 @@ This removes white spaces from all table headers*/
 
 /**** Link from Handover Docs ****/
 
-#view_3623 .control {
-  text-align: center;
-}
-
 #view_3623 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
   font-weight: bold;
@@ -1087,11 +1079,11 @@ This removes white spaces from all table headers*/
   display: inline-block;
 }
 
-/******* Email Customer Documents Link to Button CSS ********/
+/**** Delivery and Deal File Contents Page ****/
 
-#view_3546 .control {
-  text-align: center;
-}
+#view_3624 .kn-detail-label {background-color: transparent;}
+
+/******* Email Customer Documents Link to Button CSS ********/
 
 #view_3546 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
