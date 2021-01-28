@@ -1045,6 +1045,8 @@ This removes white spaces from all table headers*/
 /******* Links to Update Delivery and Deal File Contents Status *******/
 /**** Link from Deal File ****/
 
+#view_3618 .kn-detail-label {background-color: transparent;}
+
 #view_3618 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
   font-weight: bold;
@@ -1062,6 +1064,8 @@ This removes white spaces from all table headers*/
 }
 
 /**** Link from Handover Docs ****/
+
+#view_3618 .kn-detail-label {background-color: transparent;}
 
 #view_3623 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
