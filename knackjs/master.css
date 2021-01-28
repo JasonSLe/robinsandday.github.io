@@ -3401,10 +3401,10 @@ visibility: visible;
     text-align: center;
 }
 
-/*******P&L Results table*********/
-#view_4059 > section > div > div > div > div > div.kn-detail.field_6430 > div.kn-detail-label{background-color: transparent;}
+/*******DIGITAL P&l OVER VIEW PAGE *********/
+#view_4059 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4059 > section > div > div > div > div > div.kn-detail.field_6429 > div.kn-detail-label{background-color: transparent;}
+#view_4059 > section > div > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
 
 #view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-label{background-color: transparent;}
 
