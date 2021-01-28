@@ -3371,13 +3371,15 @@ visibility: visible;
 
 /********* PROFIT & LOSS PAGE *******/
 
-#view_2824 > form > div > button {
+#view_2824 > form > div > button, #view_3988 > form > div > button, #view_4012 > form > div > button, #view_4036 > form > div > button{
 	background-color: #FFA100 !important;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2824 > form > div > button:hover {
+
+
+#view_2824 > form > div > button, #view_3988 > form > div > button, #view_4012 > form > div > button, #view_4036 > form > div > button:hover {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
