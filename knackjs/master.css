@@ -3378,7 +3378,6 @@ visibility: visible;
 }
 
 
-
 #view_2824 > form > div > button:hover {
 	background-color: #D18400;
   	color: #FFFFFF;
@@ -3387,12 +3386,12 @@ visibility: visible;
   	transition-duration: .3s;
   	border-width: 2px;
   	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
+  	box-shadow: 3px 3px #ccc;
 }
 
 
 
-#view_4032 > section > div > div > div > div > div > div > span > h2 > span > span {
+#view_4058 > section > div > div > div > div > div > div > span > h2 > span > span {
     background-color: #FFE74C;
     border-radius: 10px;
     font-size: 30px;
@@ -3403,37 +3402,35 @@ visibility: visible;
 }
 
 /*******P&L Results table*********/
-#view_4033 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-label{background-color: transparent;}
+#view_4059 > section > div > div > div > div > div.kn-detail.field_6430 > div.kn-detail-label{background-color: transparent;}
 
-#view_4033 > section > div:nth-child(2) > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-label{background-color: transparent;}
+#view_4059 > section > div > div > div > div > div.kn-detail.field_6429 > div.kn-detail-label{background-color: transparent;}
 
-#view_4033 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-label{background-color: transparent;}
 
-#view_4033 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-label{background-color: transparent;}
 
-#view_4033 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4033 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4033 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4033 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4040 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4040 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4040 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4061 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4040 > section > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4061 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4040 > section > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4061 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4040 > section > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4061 > section > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div, #view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div,
-#view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
-
+#view_4061 > section > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
 
 
 /******** RECEIPT OF DEPOSIT PAGE *******/
