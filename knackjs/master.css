@@ -3399,10 +3399,6 @@ visibility: visible;
 }
 
 /*******P&L Results table*********/
-#view_4030 > section > div > div > div > div > div.kn-detail.field_6430 > div.kn-detail-label{background-color: transparent;}
-
-#view_4030 > section > div > div > div > div > div.kn-detail.field_6429 > div.kn-detail-label{background-color: transparent;}
-
 #view_4033 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-label{background-color: transparent;}
 
 #view_4033 > section > div:nth-child(2) > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-label{background-color: transparent;}
@@ -3425,11 +3421,12 @@ visibility: visible;
 
 #view_4040 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4040 > section > div.kn-details-column.column.is-horizontal.kn-details-group-column-empty > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4040 > section > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4040 > section > div.kn-details-column.column.is-horizontal.kn-details-group-column-empty > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4040 > section > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
 
-#view_4040 > section > div.kn-details-column.column.is-horizontal.kn-details-group-column-empty > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4040 > section > div:nth-child(2) > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+
 
 
 /******** RECEIPT OF DEPOSIT PAGE *******/
