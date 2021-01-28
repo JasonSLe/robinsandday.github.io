@@ -3371,7 +3371,7 @@ visibility: visible;
 
 /********* PROFIT & LOSS PAGE *******/
 
-#view_2824 > form > div > button, #view_3988 > form > div > button, #view_4012 > form > div > button, #view_4036 > form > div > button{
+#view_2824 > form > div > button{
 	background-color: #FFA100 !important;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -3390,16 +3390,7 @@ visibility: visible;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_3988 > form > div > button, #view_4012 > form > div > button, #view_4036 > form > div > button:hover{
-	background-color: #D18400;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
-  	border-width: 2px;
-  	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
-}
+
 
 #view_4032 > section > div > div > div > div > div > div > span > h2 > span > span {
     background-color: #FFE74C;
