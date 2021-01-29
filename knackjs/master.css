@@ -2893,6 +2893,52 @@ visibility: visible;
 
 /*************************** USED DIGITAL DEAL FILE PAGE & HANDOVER DOCUMENTS PAGE LAYOUT ***************************/
 
+/******* Links to Update Delivery and Deal File Contents Status *******/
+/**** Link from Deal File ****/
+
+#view_4069 .kn-detail-label {background-color: transparent;}
+
+#view_4069 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4069 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+}
+
+/**** Link from Handover Docs ****/
+
+#view_4082 .kn-detail-label {background-color: transparent;}
+
+#view_4082 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4082 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+}
+
+/**** Delivery and Deal File Contents Page ****/
+
+#view_4083 .kn-detail-label {background-color: transparent;}
+
+
 /***** Handover Documents Button Format on Used Vehicle Deal File Page ******/
 
 #view_2564 .control {
