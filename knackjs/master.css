@@ -2898,7 +2898,7 @@ visibility: visible;
 
 #view_4069 .kn-detail-label {background-color: transparent;}
 
-#view_4069 > section > div > div > div > div > div > div > span > a {
+#view_4069 > section > div > div:nth-child(1) > div > div > div > div > span > a {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00CC66;
@@ -2906,7 +2906,7 @@ visibility: visible;
   display: inline-block;
 }
 
-#view_4069 > section > div > div > div > div > div > div > span > a:hover {
+#view_4069 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #32936F;
@@ -2918,7 +2918,7 @@ visibility: visible;
 
 #view_4082 .kn-detail-label {background-color: transparent;}
 
-#view_4082 > section > div > div > div > div > div > div > span > a {
+#view_4082 > section > div > div:nth-child(1) > div > div > div > div > span > a {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00CC66;
@@ -2926,7 +2926,7 @@ visibility: visible;
   display: inline-block;
 }
 
-#view_4082 > section > div > div > div > div > div > div > span > a:hover {
+#view_4082 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #32936F;
