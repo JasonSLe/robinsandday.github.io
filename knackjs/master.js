@@ -269,8 +269,8 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     // Setup the onclick event for our toggle button to slideToggle the header open and closed, and add a class to the body tag so we can adjust the iframe height
     toggleButton.addEventListener('click', toggleHeaderVisibility);
 
-    // Always hide the header when rendering scene 860 - New Vehicle Order Tracking
-    if ((scene.key == 'scene_860' || scene.key == 'scene_1269' || scene.key == 'scene_1271' || scene.key == 'scene_1273') && headerElement.style.display !== 'none') {
+    // Always hide the header when rendering scene in IFRAME, add other scenes if necessary
+    if ((scene.key == 'scene_860' || scene.key == 'scene_1269' || scene.key == 'scene_1271' || scene.key == 'scene_1273' || scene.key == 'scene_1279') && headerElement.style.display !== 'none') {
         if (window.matchMedia('(min-width: 768px)').matches !== false) {
             toggleHeaderVisibility();
         }
