@@ -1042,11 +1042,52 @@ This removes white spaces from all table headers*/
   border-color: #FFFFFF;
 }
 
-/******* Email Customer Documents Link to Button CSS ********/
+/******* Links to Update Delivery and Deal File Contents Status *******/
+/**** Link from Deal File ****/
 
-#view_3546 .control {
-  text-align: center;
+#view_3618 .kn-detail-label {background-color: transparent;}
+
+#view_3618 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
 }
+
+#view_3618 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+}
+
+/**** Link from Handover Docs ****/
+
+#view_3623 .kn-detail-label {background-color: transparent;}
+
+#view_3623 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_3623 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+}
+
+/**** Delivery and Deal File Contents Page ****/
+
+#view_3624 .kn-detail-label {background-color: transparent;}
+
+/******* Email Customer Documents Link to Button CSS ********/
 
 #view_3546 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;

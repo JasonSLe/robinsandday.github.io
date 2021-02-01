@@ -2893,6 +2893,52 @@ visibility: visible;
 
 /*************************** USED DIGITAL DEAL FILE PAGE & HANDOVER DOCUMENTS PAGE LAYOUT ***************************/
 
+/******* Links to Update Delivery and Deal File Contents Status *******/
+/**** Link from Deal File ****/
+
+#view_4069 .kn-detail-label {background-color: transparent;}
+
+#view_4069 > section > div > div:nth-child(1) > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4069 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+}
+
+/**** Link from Handover Docs ****/
+
+#view_4082 .kn-detail-label {background-color: transparent;}
+
+#view_4082 > section > div > div:nth-child(1) > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4082 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+}
+
+/**** Delivery and Deal File Contents Page ****/
+
+#view_4083 .kn-detail-label {background-color: transparent;}
+
+
 /***** Handover Documents Button Format on Used Vehicle Deal File Page ******/
 
 #view_2564 .control {
@@ -3371,11 +3417,12 @@ visibility: visible;
 
 /********* PROFIT & LOSS PAGE *******/
 
-#view_2824 > form > div > button {
+#view_2824 > form > div > button{
 	background-color: #FFA100 !important;
   	color: #FFFFFF;
   	font-weight: bold;
 }
+
 
 #view_2824 > form > div > button:hover {
 	background-color: #D18400;
@@ -3385,10 +3432,12 @@ visibility: visible;
   	transition-duration: .3s;
   	border-width: 2px;
   	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
+  	box-shadow: 3px 3px #ccc;
 }
 
-#view_4032 > section > div > div > div > div > div > div > span > h2 > span > span {
+
+
+#view_4058 > section > div > div > div > div > div > div > span > h2 > span > span {
     background-color: #FFE74C;
     border-radius: 10px;
     font-size: 30px;
@@ -3397,6 +3446,41 @@ visibility: visible;
     padding-right: 20px;
     text-align: center;
 }
+
+/*******DIGITAL P&l OVER VIEW PAGE *********/
+#view_4059 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4059 > section > div > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-label{background-color: transparent;}
+
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-label{background-color: transparent;}
+
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4061 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4061 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4061 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4061 > section > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4061 > section > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+
 
 /******** RECEIPT OF DEPOSIT PAGE *******/
 
@@ -5628,7 +5712,7 @@ font-size:12px;
 
 /**SCAN V5 DOCUMENT: RICH TEXT**/
   
-#view_3929, #view_3952, #view_3948, #view_3949, #view_3951, #view_3947, #view_3946, #view_3945, #view_3943, #view_3950, #view_3953, #view_3954, #view_3955 > div > p {
+#view_3929, #view_3952, #view_3948, #view_3949, #view_3951, #view_3947, #view_3945, #view_3943, #view_3950, #view_3953, #view_3954, #view_3955 > div > p {
 margin: -30px;
 padding-bottom: 20px;
 }
