@@ -3480,6 +3480,10 @@ visibility: visible;
 #view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
 #view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
 #view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4089 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4089 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4089 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4089 > section > div:nth-child(2) > div > div > div > div:nth-child(1) > div{background-color: transparent;}
 
 
 /******** RECEIPT OF DEPOSIT PAGE *******/
