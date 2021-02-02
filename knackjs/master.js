@@ -1438,3 +1438,11 @@ function lzw_decode(s) {
   }
   return out.join("");
 }
+
+/***Profit and Loss, refresh after warranty cost has been entered by user***/
+$(document).on('knack-record-update.view_4086', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+  Knack.showSpinner();
+  
+});
