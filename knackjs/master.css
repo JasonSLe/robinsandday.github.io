@@ -3485,6 +3485,24 @@ visibility: visible;
 #view_4089 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
 #view_4089 > section > div:nth-child(2) > div > div > div > div:nth-child(1) > div{background-color: transparent;}
 
+/**Back to Overview page button**/
+
+#view_4106 > section > div > div > div > div > div > div > span > em > span > a{
+margin-bottom: 5px;
+font-size: 1.1em;
+line-height: 125%;
+height: auto;
+margin-right: .2em;
+padding: .4em .8em;
+text-decoration: none;
+background-color: #052645;
+color: white;
+border: none;
+outline: none;
+display: inline-block;
+border-radius: 6px;
+}
+
 
 /******** RECEIPT OF DEPOSIT PAGE *******/
 
