@@ -659,6 +659,7 @@ $("#knack-body").append("<script>\n\n(function(i,s,o,g,r,a,m){i['GoogleAnalytics
 //Hide Crumbtrail
 //HIDE THE LOGO AND logged in user in all pages
 $(document).on('knack-view-render.view_4131', function (event, view, data) {
+	$('[class="kn-container"]').hide();
 	$('[class="kn-info kn-container"]').hide();
 });
 
