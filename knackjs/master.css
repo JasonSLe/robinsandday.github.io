@@ -3097,7 +3097,7 @@ visibility: visible;
 }
 
 /* Border & Height Setting of each view - When you add a new view, add the New View Number below - ALWAYS LEAVE VIEW_2769 AT END OF VIEW LIST, INSERT NEW VIEWS BEFORE THIS (TO GET AROUND BUG WITH LAST VIEW IN LIST) */
-#view_2584, #view_2585, #view_2586, #view_2587, #view_2588, #view_2760, #view_2789, #view_2790, #view_2816, #view_2818, #view_2821, #view_2823, #view_2851, #view_2852, #view_2886, #view_2888, #view_2909, #view_2910, #view_2912, #view_2914, #view_2920, #view_2922, #view_2933, #view_2935, #view_2936, #view_2939, #view_2944, #view_2946, #view_2948, #view_2950, #view_2960, #view_2961, #view_3109, #view_3107, #view_3333, #view_3335, #view_3336, #view_3344, #view_3346, #view_3349, #view_3350, #view_3354, #view_3355, #view_3359, #view_3374, #view_3376, #view_3419, #view_3423, #view_3469, #view_3471, #view_3489, #view_3490, #view_2769 .kn-details-group {
+#view_2584, #view_2585, #view_2586, #view_2587, #view_2588, #view_2760, #view_2789, #view_2790, #view_2816, #view_2818, #view_2821, #view_2823, #view_2851, #view_2852, #view_2886, #view_2888, #view_2909, #view_2910, #view_2912, #view_2914, #view_2920, #view_2922, #view_2933, #view_2935, #view_2936, #view_2939, #view_2944, #view_2946, #view_2948, #view_2950, #view_2960, #view_2961, #view_3109, #view_3107, #view_3333, #view_3335, #view_3336, #view_3344, #view_3346, #view_3349, #view_3350, #view_3354, #view_3355, #view_3359, #view_3374, #view_3376, #view_3419, #view_3423, #view_3469, #view_3471, #view_3489, #view_3490, #view_4112, #view_4133, #view_4137, #view_4139, #view_4140, #view_4144, #view_4145, #view_4147, #view_4148, #view_4150, #view_2769 .kn-details-group {
   border: 1px solid #CCCCCC;
   text-align: center;
   padding: 10px;
@@ -3107,7 +3107,7 @@ visibility: visible;
 
 
 /* Set Heading Colour & Text Align for Each View When you add a new view, add the New View Number below - ALWAYS LEAVE VIEW_2769 AT END OF VIEW LIST, INSERT NEW VIEWS BEFORE THIS (TO GET AROUND BUG WITH LAST VIEW IN LIST) */
-#view_2584 h3, #view_2585 h3, #view_2586 h3, #view_2587 h3, #view_2588 h3, #view_2760 h3, #view_2789 h3, #view_2790 h3, #view_2816 h3, #view_2818 h3, #view_2821 h3, #view_2823 h3, #view_2851 h3, #view_2852 h3, #view_2886 h3, #view_2888 h3, #view_2909 h3, #view_2910 h3, #view_2912 h3, #view_2914 h3, #view_2920 h3, #view_2922 h3, #view_2933 h3, #view_2935 h3, #view_2936 h3, #view_2939 h3, #view_2944 h3, #view_2946 h3, #view_2948 h3, #view_2950 h3, #view_2960 h3, #view_2961 h3, #view_3107 h3, #view_3109 h3, #view_3333 h3, #view_3335 h3, #view_3336 h3, #view_3344 h3, #view_3346 h3, #view_3349 h3, #view_3350 h3, #view_3354 h3, #view_3355 h3, #view_3359 h3, #view_3374 h3, #view_3376 h3, #view_3419 h3, #view_3423 h3, #view_3469 h3, #view_3471 h3, #view_3489 h3, #view_3490 h3, #view_2769 h3 {
+#view_2584 h3, #view_2585 h3, #view_2586 h3, #view_2587 h3, #view_2588 h3, #view_2760 h3, #view_2789 h3, #view_2790 h3, #view_2816 h3, #view_2818 h3, #view_2821 h3, #view_2823 h3, #view_2851 h3, #view_2852 h3, #view_2886 h3, #view_2888 h3, #view_2909 h3, #view_2910 h3, #view_2912 h3, #view_2914 h3, #view_2920 h3, #view_2922 h3, #view_2933 h3, #view_2935 h3, #view_2936 h3, #view_2939 h3, #view_2944 h3, #view_2946 h3, #view_2948 h3, #view_2950 h3, #view_2960 h3, #view_2961 h3, #view_3107 h3, #view_3109 h3, #view_3333 h3, #view_3335 h3, #view_3336 h3, #view_3344 h3, #view_3346 h3, #view_3349 h3, #view_3350 h3, #view_3354 h3, #view_3355 h3, #view_3359 h3, #view_3374 h3, #view_3376 h3, #view_3419 h3, #view_3423 h3, #view_3469 h3, #view_3471 h3, #view_3489 h3, #view_3490 h3, #view_4112 h3, #view_4133 h3, #view_4137 h3, #view_4139 h3, #view_4140 h3, #view_4144 h3, #view_4145 h3, #view_4147 h3, #view_4148 h3, #view_4150 h3, #view_2769 h3 {
   color: #19365e;
   text-align: center;
   padding-right: 10px;
@@ -3146,6 +3146,28 @@ visibility: visible;
 }
 
 #kn-scene_990 .kn-detail-body a:hover.kn-link-page .active {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/***** Orange for Incomplete Actions on Remote Customer Signing View *****/
+
+#kn-scene_1304 .kn-detail-body a.kn-link-page .active {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_1304 .kn-detail-body a:hover.kn-link-page .active {
   color: #FFFFFF;
   background-color: #D18400;
   padding: 8px;
