@@ -4133,6 +4133,19 @@ border-radius: 6px;
   color: #388cf5;
 }
 
+/*************** REMOTE CUSTOMER AGREEMENT OF DOCUMENTS ******************/
+
+#view_4098 > section > div > div:nth-child(1) > div > div > div > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_4098 .kn-detail-label {background-color: transparent;}
 
 /*************** Help / Tutorial Button CSS for Used Deal File ***************/
 
