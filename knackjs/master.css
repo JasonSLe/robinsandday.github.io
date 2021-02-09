@@ -4147,6 +4147,18 @@ border-radius: 6px;
 
 #view_4098 .kn-detail-label {background-color: transparent;}
 
+#view_4131 > section > div > div:nth-child(1) > div > div > div > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+#view_4131 .kn-detail-label {background-color: transparent;}
+
 /*************** Help / Tutorial Button CSS for Used Deal File ***************/
 
 #view_3633 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
