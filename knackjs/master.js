@@ -667,6 +667,32 @@ $(document).on('knack-view-render.view_4131', function (event, view, data) {
 	$('[class="kn-info kn-container"]').hide();
 });
 
+//Prevent Clicking off Modal Pop Up Pages
+  $(document).on('knack-scene-render.scene_1307', function(event, scene) {
+    $('.kn-modal-bg').off('click');
+  });
+
+  $(document).on('knack-scene-render.scene_1310', function(event, scene) {
+    $('.kn-modal-bg').off('click');
+  });
+
+  $(document).on('knack-scene-render.scene_1311', function(event, scene) {
+    $('.kn-modal-bg').off('click');
+  });
+
+  $(document).on('knack-scene-render.scene_1312', function(event, scene) {
+    $('.kn-modal-bg').off('click');
+  });
+
+  $(document).on('knack-scene-render.scene_1313', function(event, scene) {
+    $('.kn-modal-bg').off('click');
+  });
+
+  $(document).on('knack-scene-render.scene_1314', function(event, scene) {
+    $('.kn-modal-bg').off('click');
+  });
+
+
 // ----------  hide blank Enquiry Max table on New Vehicle P/X appraisal    ----------
 
 //$(document).on('knack-view-render.view_3254', function (event, view, data) {
