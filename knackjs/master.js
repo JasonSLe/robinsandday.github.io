@@ -65,6 +65,11 @@ $(document).on('knack-scene-render.scene_370', function(event, scene) {
   $("input[name='keyword']").attr("placeholder", "Type Dealer Name,Reg etc.")
 });
 
+/* Prevent Modal Page from Closing when Clicking Off */
+  $(document).on('knack-scene-render.scene_1119', function(event, scene) {
+    $('.kn-modal-bg').off('click');
+  });
+
 
 // ********* Mike's grand iFrame experiment *********************************************************************************
 
