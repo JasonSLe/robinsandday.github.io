@@ -662,12 +662,37 @@ $("#knack-body").append("<script>\n\n(function(i,s,o,g,r,a,m){i['GoogleAnalytics
 
 // USED DEAL FILE SIGN YOUR DOCUMENTS
 //Hide Crumbtrail & Header
-$(document).on('knack-view-render.view_4131', function (event, view, data) {
+$(document).on('knack-scene-render.view_1304', function (event, view, data) {
 	$('[class="kn-container"]').hide();
 	$('[class="kn-info kn-container"]').hide();
 });
 
 $(document).on('knack-scene-render.scene_1307', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1310', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1311', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1312', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1313', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1314', function (event, view, data) {
 	$('[class="kn-container"]').hide();
 	$('[class="kn-info kn-container"]').hide();
 });
