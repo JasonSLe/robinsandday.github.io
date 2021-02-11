@@ -4200,6 +4200,45 @@ border-radius: 6px;
 
 #view_4131 .kn-detail-label {background-color: transparent;}
 
+/******** Remote Customer Satisfaction Survey *********/
+/********* First select box rating car buying experience *********/
+
+#view_4149-field_5976 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4149-field_5976 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4149-field_5976 > option {
+  background:#eee;
+  color:#000;
+}
+
+/********* second select box recomend to family or friends*********/
+
+#view_4149-field_5655 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4149-field_5655 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4149-field_5655 > option {
+  background:#eee;
+  color:#000;
+} 
+
 /*************** Help / Tutorial Button CSS for Used Deal File ***************/
 
 #view_3633 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
