@@ -667,7 +667,7 @@ $(document).on('knack-scene-render.view_1304', function (event, view, data) {
 	$('[class="kn-info kn-container"]').hide();
 });
 
-$(document).on('knack-scene-render.scene_1307', function (event, view, data) {
+$(document).on('knack-view-render.view_4157', function (event, view, data) {
 	$('[class="kn-container"]').hide();
 	$('[class="kn-info kn-container"]').hide();
 });
