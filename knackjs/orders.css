@@ -1006,7 +1006,7 @@ This removes white spaces from all table headers*/
   padding: 8px;
   width: 250px;
   display: inline-block;
-  border: solid #DD380D 10px;
+  border: 3px solid #DD380D;
 }
 
 #kn-scene_929 .kn-detail-body a:hover.kn-link-page .active-sales, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .active-sales {
