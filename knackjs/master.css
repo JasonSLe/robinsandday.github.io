@@ -3460,15 +3460,16 @@ visibility: visible;
 
 
 #view_4058 > section > div > div > div > div > div > div > span > h2 > span > span {
-    background-color: #FFE74C;
+    background-color: #fafafa;
     border-radius: 10px;
+    border: 2px solid #0a0a0a;
     font-size: 30px;
     font-weight: bold;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
 }
-
+ 
 /*******DIGITAL P&l OVER VIEW PAGE *********/
 #view_4059 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
 
