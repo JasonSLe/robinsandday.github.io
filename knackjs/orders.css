@@ -976,7 +976,7 @@ This removes white spaces from all table headers*/
   border-color: #FFFFFF;
 }
 
-/****** Orange for Completed Actions ******/
+/****** Orange for incomplete Actions ******/
 
 #kn-scene_929 .kn-detail-body a.kn-link-page .active, #kn-scene_961 .kn-detail-body a.kn-link-page .active {
   color: #FFFFFF;
@@ -997,6 +997,29 @@ This removes white spaces from all table headers*/
   border-width: 2px;
   border-color: #FFFFFF;
 }
+
+/****** Orange and red for sales advisor outstanding action ******/
+
+#kn-scene_929 .kn-detail-body a.kn-link-page .active-sales, #kn-scene_961 .kn-detail-body a.kn-link-page .active-sales {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_929 .kn-detail-body a:hover.kn-link-page .active-sales, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .active-sales {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
 
 /****** Grey for Miscellaneous - No Files ******/
 
