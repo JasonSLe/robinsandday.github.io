@@ -3157,6 +3157,75 @@ visibility: visible;
   border-color: #FFFFFF;
 }
 
+/***** Orange and pink for Admin outstanding action *****/
+
+#kn-scene_990 .kn-detail-body a.kn-link-page .admin-task {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .admin-task {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+
+/***** Orange and pink for Sales Advisor outstanding action *****/
+
+#kn-scene_990 .kn-detail-body a.kn-link-page .sale-task {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
+
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .sale-task {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+
+/***** Orange and pink/blue for Sales Advisor/Admin outstanding action *****/
+
+#kn-scene_990 .kn-detail-body a.kn-link-page .both-task {
+ color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
+}
+
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .both-task {
+color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+
 /***** Orange for Incomplete Actions on Remote Customer Signing View *****/
 
 #kn-scene_1304 .kn-detail-body a.kn-link-page .active {
