@@ -1084,8 +1084,8 @@ color: #FFFFFF;
   display: inline-block;
   transition-property: color;
   transition-duration: .3s;
-  border-width: 2px;
-  border-color: #FFFFFF;
+  border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
 }
 
 /******* Green for Miscellaneous - Files Exist ******/
