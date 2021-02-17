@@ -998,27 +998,25 @@ This removes white spaces from all table headers*/
   border-color: #FFFFFF;
 }
 
-/****** Orange and red for sales advisor outstanding action ******/
+/****** Orange and light blue for sales advisor outstanding action ******/
 
-#kn-scene_929 .kn-detail-body a.kn-link-page .active-sales, #kn-scene_961 .kn-detail-body a.kn-link-page .active-sales {
-  color: #FFFFFF;
-  background-color: #FFA100;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  border: 3px solid #DD380D;
-}
-
-#kn-scene_929 .kn-detail-body a:hover.kn-link-page .active-sales, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .active-sales {
+#kn-scene_929 .kn-detail-body a.kn-link-page .sale-task, #kn-scene_961 .kn-detail-body a.kn-link-page .sale-task {
   color: #FFFFFF;
   background-color: #D18400;
   padding: 8px;
   width: 250px;
   display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
+
+#kn-scene_929 .kn-detail-body a:hover.kn-link-page .sale-task, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .sale-task {
+color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
   transition-property: color;
   transition-duration: .3s;
-  border-width: 2px;
-  border-color: #FFFFFF;
 }
 
 
