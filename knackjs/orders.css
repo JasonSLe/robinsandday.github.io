@@ -1019,6 +1019,52 @@ color: #FFFFFF;
   transition-duration: .3s;
 }
 
+/****** Orange and pink for sales advisor outstanding action ******/
+
+#kn-scene_929 .kn-detail-body a.kn-link-page .admin-task, #kn-scene_961 .kn-detail-body a.kn-link-page .admin-task {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#kn-scene_929 .kn-detail-body a:hover.kn-link-page .admin-task, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .admin-task {
+color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+
+/****** Orange: pink and light blue for sales advisor and Admin outstanding action ******/
+
+#kn-scene_929 .kn-detail-body a.kn-link-page .both-task, #kn-scene_961 .kn-detail-body a.kn-link-page .both-task {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
+}
+
+#kn-scene_929 .kn-detail-body a:hover.kn-link-page .both-task, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .both-task {
+color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
 
 /****** Grey for Miscellaneous - No Files ******/
 
