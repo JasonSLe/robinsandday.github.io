@@ -1110,6 +1110,29 @@ color: #FFFFFF;
   border-color: #FFFFFF;
 }
 
+/****** Grey for Consignment - No Files ******/
+
+#kn-scene_929 .kn-detail-body a.kn-link-page .consignment, #kn-scene_961 .kn-detail-body a.kn-link-page .consignment {
+  color: #FFFFFF;
+  background-color: #8D8E8E;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_929 .kn-detail-body a:hover.kn-link-page .consignment, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .consignment {
+  color: #FFFFFF;
+  background-color: #463F3A;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+
 /******* Links to Update Delivery and Deal File Contents Status *******/
 /**** Link from Deal File ****/
 
