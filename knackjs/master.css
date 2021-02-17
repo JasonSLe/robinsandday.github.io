@@ -3135,27 +3135,7 @@ visibility: visible;
   border-color: #FFFFFF;
 }
 
-/***** Orange for Incomplete Actions *****/
 
-#kn-scene_990 .kn-detail-body a.kn-link-page .active {
-  color: #FFFFFF;
-  background-color: #FFA100;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-}
-
-#kn-scene_990 .kn-detail-body a:hover.kn-link-page .active {
-  color: #FFFFFF;
-  background-color: #D18400;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: .3s;
-  border-width: 2px;
-  border-color: #FFFFFF;
-}
 
 /***** Orange and pink for Admin outstanding action *****/
 
@@ -3256,6 +3236,8 @@ color: #FFFFFF;
   padding: 8px;
   width: 250px;
   display: inline-block;
+  border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
 }
 
 #kn-scene_990 .kn-detail-body a:hover.kn-link-page .miscellaneous {
@@ -3266,8 +3248,6 @@ color: #FFFFFF;
   display: inline-block;
   transition-property: color;
   transition-duration: .3s;
-  border-width: 2px;
-  border-color: #FFFFFF;
 }
 
 /***** Green for Miscellaneous - Files Exist *****/
@@ -3312,15 +3292,17 @@ color: #FFFFFF;
   border-color: #FFFFFF;
 }
 
-#kn-scene_997 .kn-detail-body a.kn-link-page .active {
+/***** Handover Orange and pink for Admin outstanding action  *****/
+#kn-scene_997 .kn-detail-body a.kn-link-page .admin-task {
   color: #FFFFFF;
   background-color: #FFA100;
   padding: 8px;
   width: 250px;
   display: inline-block;
+  border-left: 10px solid #DE3163;
 }
 
-#kn-scene_997 .kn-detail-body a:hover.kn-link-page .active {
+#kn-scene_997 .kn-detail-body a:hover.kn-link-page .admin-task {
   color: #FFFFFF;
   background-color: #D18400;
   padding: 8px;
@@ -3328,8 +3310,49 @@ color: #FFFFFF;
   display: inline-block;
   transition-property: color;
   transition-duration: .3s;
-  border-width: 2px;
-  border-color: #FFFFFF;
+}
+
+/***** Handover Orange and blue for Sale Advisor outstanding action  *****/
+#kn-scene_997 .kn-detail-body a.kn-link-page .sale-task {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
+
+#kn-scene_997 .kn-detail-body a:hover.kn-link-page .sale-task {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+/***** Handover Orange pink/blue for Admin/Sale Advisor outstanding action  *****/
+#kn-scene_997 .kn-detail-body a.kn-link-page .both-task {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
+}
+
+#kn-scene_997 .kn-detail-body a:hover.kn-link-page .both-task {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
 }
 
 #view_2585 > section > div > div > div > div > div.field_5054 > div > span > span > a {
