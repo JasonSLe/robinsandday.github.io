@@ -3022,6 +3022,10 @@ visibility: visible;
   text-align: center;
 }
 
+#kn-input-section-1575466918654 > div > p {
+  text-align: center;
+}
+
 #view_2520 > form > div {
   	text-align: center;
 }
@@ -3050,7 +3054,11 @@ visibility: visible;
 
 /**** Retrieve/Update Invoice FORM ****/
 
-#view_2548 h3 {
+#kn-input-section-1575466994787 > div > h3 {
+  text-align: center;
+}
+
+#kn-input-section-1575466994787 > div > p {
   text-align: center;
 }
 
