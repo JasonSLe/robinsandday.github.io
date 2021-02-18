@@ -3030,6 +3030,7 @@ visibility: visible;
 	background-color: #8D8E8E !important;
   	color: #FFFFFF;
   	font-weight: bold;
+	border-left: 10px solid #DE3163;
 }
 
 #view_2520 > form > div > button:hover {
@@ -3038,9 +3039,8 @@ visibility: visible;
   	font-weight: bold;
   	transition-property: color;
   	transition-duration: .3s;
-  	border-width: 2px;
   	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
+  	box-shadow: 3px 3px #ccc;
 }
 
 #view_2520 {
@@ -3062,6 +3062,7 @@ visibility: visible;
 	background-color: #8D8E8E !important;
   	color: #FFFFFF;
   	font-weight: bold;
+	border-left: 10px solid #DE3163;
 }
 
 #view_2548 > form > div > button:hover {
@@ -3070,9 +3071,8 @@ visibility: visible;
   	font-weight: bold;
   	transition-property: color;
   	transition-duration: .3s;
-  	border-width: 2px;
   	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
+  	box-shadow: 3px 3px #ccc;
 }
 
 #view_2548 {
