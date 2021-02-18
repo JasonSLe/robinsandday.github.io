@@ -596,6 +596,17 @@ This removes white spaces from all table headers*/
   	color: #FFFFFF;
   	font-weight: bold;
 }
+#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a{
+    background-color: #FFA100;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a{
+    background-color: #FFA100;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
 
 /* Deal File Search Filters on Admin Page */
 
@@ -674,6 +685,7 @@ This removes white spaces from all table headers*/
 	background-color: #8D8E8E !important;
   	color: #FFFFFF;
   	font-weight: bold;
+	border-left: 10px solid #DE3163;
 }
 
 #view_2854 > form > div > button:hover {
@@ -683,8 +695,6 @@ This removes white spaces from all table headers*/
   	transition-property: color;
   	transition-duration: .3s;
   	border-width: 2px;
-  	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
 }
 
 #view_2854 {
@@ -706,6 +716,7 @@ This removes white spaces from all table headers*/
 	background-color: #8D8E8E !important;
   	color: #FFFFFF;
   	font-weight: bold;
+	border-left: 10px solid #DE3163;
 }
 
 #view_2855 > form > div > button:hover {
@@ -715,8 +726,6 @@ This removes white spaces from all table headers*/
   	transition-property: color;
   	transition-duration: .3s;
   	border-width: 2px;
-  	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
 }
 
 #view_2855 {
