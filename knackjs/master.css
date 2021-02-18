@@ -3018,7 +3018,7 @@ visibility: visible;
 }
 
 /**** Retrieve/Update Order Form FORM ****/
-#view_2520 h3 {
+#view_2520 > form > ul:nth-child(1) > li:nth-child(2) {
   text-align: center;
 }
 
