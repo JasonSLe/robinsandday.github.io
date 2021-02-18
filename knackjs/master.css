@@ -3054,7 +3054,11 @@ visibility: visible;
 
 /**** Retrieve/Update Invoice FORM ****/
 
-#view_2548 > form > ul.kn-form-group.columns.kn-form-group-1 {
+#kn-input-section-1575466918654 > div > h3 {
+  text-align: center;
+}
+
+#kn-input-section-1575466918654 > div > p {
   text-align: center;
 }
 
