@@ -682,18 +682,22 @@ This removes white spaces from all table headers*/
 }
 
 #view_2854 > form > div > button {
-	background-color: #8D8E8E !important;
-  	color: #FFFFFF;
-  	font-weight: bold;
+	  padding: 8px;
+  width: 250px;
+  background-color: #8D8E8E;
+  color: #FFFFFF;
+  font-weight: bold;
 	border-left: 10px solid #DE3163;
 }
 
 #view_2854 > form > div > button:hover {
-	background-color: #463F3A;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
+  color:#FFFFFF;
+  background-color:#463F3A;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
 }
 
 #view_2854 {
