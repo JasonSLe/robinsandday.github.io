@@ -671,7 +671,7 @@ $(document).on('knack-form-submit.view_4099', function(event, view, data) {
 
     	Knack.showSpinner();
 
-    }, 2000); 
+    }, 10000); 
 
   
 
