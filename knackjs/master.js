@@ -661,6 +661,35 @@ $("#knack-body").append("<script>\n\n(function(i,s,o,g,r,a,m){i['GoogleAnalytics
 });
 
 // USED DEAL FILE SIGN YOUR DOCUMENTS
+
+// Code to wait following Form Submission while PIN is Checked in Integromat
+
+$(document).on('knack-form-submit.view_4099', function(event, view, data) { 
+
+
+	setTimeout(function(){ 
+
+    	Knack.showSpinner();
+
+    }, 2000); 
+
+  
+
+	commandURL = "https://hook.integromat.com/jidc5kuxt4ddjmhondkoyhjpgj6fm7o6?recordid=" + data.id ;
+
+
+ 	$.get(commandURL, function(data, status){
+
+
+      Knack.hideSpinner();
+
+      $(".kn-message.success").html("<b>" + data + "</b>");
+
+
+    });
+
+});
+
 //Hide Crumbtrail & Header
 $(document).on('knack-scene-render.scene_1300', function (event, view, data) {
 	$('[class="kn-container"]').hide();
