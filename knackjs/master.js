@@ -512,9 +512,14 @@ $input.siblings('.typed-chars').text($input.val().length + " out of 30 Character
 
 //******************* USED DEAL FILES TABLE *****************//
 
-/* Change Keyword Search Placeholder Text for used stock management */
+/* Change Keyword Search Placeholder Text for used deal files */
 $(document).on('knack-scene-render.scene_960', function(event, scene) {
-  $("input[name='keyword']").attr("placeholder", "Dealer, Reg, Stock No. etc.")
+  $("input[name='keyword']").attr("placeholder", "Dealer Address, Reg, Stock No.")
+});
+
+/* Change Keyword Search Placeholder Text for used deal files admin view */
+$(document).on('knack-scene-render.scene_1063', function(event, scene) {
+  $("input[name='keyword']").attr("placeholder", "Dealer Address, Reg, Stock No.")
 });
 
 // Disable Stock Number & VSB Location Fields on ORDER Retrieval if NOT Blank
