@@ -171,6 +171,10 @@ $(document).on('knack-view-render.view_2605', function(event, view, data) {
 
 //************************************* NEW VEHICLE DEAL FILE *****************************************
 
+/* Change Keyword Search Placeholder Text for used deal files */
+$(document).on('knack-scene-render.scene_917', function(event, scene) {
+  $("input[name='keyword']").attr("placeholder", "Dealer Address, Reg, Stock No.")
+});
 
 
 //HANDOVER APPOINTMENT PAGE
