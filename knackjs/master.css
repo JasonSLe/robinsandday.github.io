@@ -4291,7 +4291,23 @@ border-radius: 6px;
   color: #388cf5;
 }
 
-/*************** REMOTE CUSTOMER AGREEMENT OF DOCUMENTS ******************/
+/*************** SIGN ONLINE ACTIVATION AND DEALER VIEW **************/
+
+#view_4206 .kn-detail-label {background-color: transparent;}
+
+#view_4208 .kn-detail-label {background-color: transparent;}
+
+#view_4209 .kn-detail-label {background-color: transparent;}
+
+#view_4210 .kn-detail-label {background-color: transparent;}
+
+#view_4211 .kn-detail-label {background-color: transparent;}
+
+#view_4212 .kn-detail-label {background-color: transparent;}
+
+#view_4214 .kn-detail-label {background-color: transparent;}
+
+/*************** SIGN ONLINE REMOTE CUSTOMER AGREEMENT OF DOCUMENTS ******************/
 
 #view_4098 > section > div > div:nth-child(1) > div > div > div > div > span > span {
 	background-color: #FFE74C;
