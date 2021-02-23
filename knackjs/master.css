@@ -2916,6 +2916,7 @@ visibility: visible;
   background-color: #00CC66;
   padding: 8px;
   display: inline-block;
+  border-left: 10px solid #32a1ce;
 }
 
 #view_4069 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
@@ -2924,6 +2925,7 @@ visibility: visible;
   background-color: #32936F;
   padding: 8px;
   display: inline-block;
+  border-left: 10px solid #32a1ce;
 }
 
 /**** Link from Handover Docs ****/
@@ -2936,6 +2938,7 @@ visibility: visible;
   background-color: #00CC66;
   padding: 8px;
   display: inline-block;
+  border-left: 10px solid #32a1ce;
 }
 
 #view_4082 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
@@ -2944,6 +2947,7 @@ visibility: visible;
   background-color: #32936F;
   padding: 8px;
   display: inline-block;
+  border-left: 10px solid #32a1ce;
 }
 
 /**** Delivery and Deal File Contents Page ****/
