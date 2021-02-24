@@ -3587,6 +3587,8 @@ color: #FFFFFF;
 }
  
 /*******DIGITAL P&l OVER VIEW PAGE *********/
+#view_4059 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6555 > div.kn-detail-label{background-color: transparent;}
+#view_4059 > section > div > div > div:nth-child(2) > div > div.kn-detail.field_6564 > div.kn-detail-label{background-color: transparent;}
 #view_4059 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
 
 #view_4059 > section > div > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
