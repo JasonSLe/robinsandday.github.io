@@ -4295,6 +4295,14 @@ border-radius: 6px;
   color: #388cf5;
 }
 
+/* Pre Sale Pack Read Only Document */
+#kn-input-field_5588 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
 /*************** SIGN ONLINE ACTIVATION AND DEALER VIEW **************/
 
 #view_4193 > section > div > div:nth-child(1) > div > div > div > div > span > a {
