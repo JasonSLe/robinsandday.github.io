@@ -3837,6 +3837,11 @@ border-radius: 6px;
 
 #view_2942 .kn-detail-label {background-color: transparent;}
 
+/*About service plan rich text*/
+#view_4221{overflow: auto;}
+#view_4222{overflow: auto;}
+
+
 /********* First select box rating car buying experience *********/
 
 #view_2940-field_5976 > option:nth-child(2){
