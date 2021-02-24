@@ -3587,13 +3587,77 @@ color: #FFFFFF;
 }
  
 /*******DIGITAL P&l OVER VIEW PAGE *********/
-#view_4058.kn-detail-label {background-color: transparent;}
-#view_4059.kn-detail-label {background-color: transparent;}
-#view_4060.kn-detail-label {background-color: transparent;}
-#view_4061.kn-detail-label {background-color: transparent;}
-#view_4045.kn-detail-label {background-color: transparent;}
-#view_4120.kn-detail-label {background-color: transparent;}
-#view_4130.kn-detail-label {background-color: transparent;}
+#view_4059 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4059 > section > div > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4060 > section > div:nth-child(2) > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4061 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4061 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4061 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4061 > section > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+
+#view_4061 > section > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4045 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4089 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4089 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4089 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4089 > section > div:nth-child(2) > div > div > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4058 > section > div > div:nth-child(2) > div > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4060 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div:nth-child(3) > div{background-color: transparent;}
+#view_4115 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4115 > section > div > div > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+
+/**Summary part*/
+#view_4120 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.kn-detail.field_6393 > div.kn-detail-label{background-color: transparent;}
+#view_4120 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.kn-detail.field_6396 > div.kn-detail-label{background-color: transparent;}
+#view_4120 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.kn-detail.field_6431 > div.kn-detail-label{background-color: transparent;}
+#view_4120 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.kn-detail.field_6465 > div.kn-detail-label{background-color: transparent;}
+#view_4120 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.kn-detail.field_6504 > div.kn-detail-label{background-color: transparent;}
+#view_4120 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.kn-detail.field_6383 > div.kn-detail-label{background-color: transparent;}
+
+/**Misc Part**/
+#view_4130 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(1) > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(3) > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div:nth-child(2) > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(5) > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(5) > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(5) > div:nth-child(3) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div:nth-child(2) > div:nth-child(5) > div:nth-child(1) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div:nth-child(2) > div:nth-child(5) > div:nth-child(2) > div > div:nth-child(1) > div{background-color: transparent;}
+#view_4130 > section > div:nth-child(2) > div:nth-child(7) > div > div > div > div.kn-detail-label{background-color: transparent;}
+#view_4120 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.kn-detail.field_6529 > div.kn-detail-label{background-color: transparent;}
+#view_4120 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.kn-detail.field_6552 > div.kn-detail-label{background-color: transparent;}
+
 
 
 
