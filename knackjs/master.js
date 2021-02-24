@@ -696,6 +696,11 @@ $(document).on('knack-form-submit.view_4099', function(event, view, data) {
 });
 
 //Hide Crumbtrail & Header
+$(document).on('knack-scene-render.scene_1298', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
 $(document).on('knack-scene-render.scene_1300', function (event, view, data) {
 	$('[class="kn-container"]').hide();
 	$('[class="kn-info kn-container"]').hide();
