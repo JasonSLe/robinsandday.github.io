@@ -4379,7 +4379,7 @@ border-radius: 6px;
 }
 
 /* Pull Delivery Status Button and Sign Online Button Side by Side */
-#view_4082, #view_4193 {width: 50%; float: left;}
+/* #view_4082, #view_4193 {width: 50%; float: left;} */
 
 #view_4193 .kn-detail-label {background-color: transparent;}
 
