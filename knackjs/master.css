@@ -3772,7 +3772,16 @@ border-radius: 6px;
 
 #view_2942 .kn-detail-label {background-color: transparent;}
 
-/*About service plan rich text*/
+
+/********* SERVICE PLAN PAGE *********/
+
+/**Service table**/
+
+#view_4220 > div.kn-table-wrapper.is-constrained > table > thead > tr > th {background:#708090;}
+
+#view_4220 > div.kn-table-wrapper.is-constrained > table > thead > tr > th > span > a > span > p{color:white;}
+
+/*About service plan and video rich text*/
 #view_4221{overflow: auto;}
 #view_4222{overflow: auto;}
 
