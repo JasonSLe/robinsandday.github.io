@@ -3779,6 +3779,20 @@ border-radius: 6px;
 
 #view_4220 > div.kn-table-wrapper.is-constrained > table > thead > tr > th {background:#708090;}
 
+#view_4220 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(4) > td{
+background: slategrey;
+color: white;
+}
+#view_4220 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(1) > td{
+background: slategrey;
+color: white;
+}
+
+#view_4220 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(7) > td{
+background: slategrey;
+color: white;
+}
+
 /*About service plan and video rich text*/
 #view_4221{overflow: auto;}
 #view_4222{overflow: auto;}
