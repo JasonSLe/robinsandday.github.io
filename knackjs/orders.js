@@ -235,6 +235,18 @@ $(document).on('knack-record-update.view_2584', function(event, view, data) {
   
 });
 
+//****************** Show Alert & Refresh Digital Deal File Page 10 seconds after Re-Check for for P/X Valuation ****************//
+
+$(document).on('knack-record-update.view_2574', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 10000);
+  
+  alert("Please wait while we search for a Completed Digital Part Exchange Appraisal. Click 'OK' & this page will refresh in a few moments...");
+
+  Knack.showSpinner();
+  
+});
+
 // Disable Stock Number Field on INVOICE Retrieval if NOT Blank
 //$(document).on('knack-view-render.view_2855', function(event, view) {
 
