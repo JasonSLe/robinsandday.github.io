@@ -765,7 +765,7 @@ var addGroupExpandCollapse = function(view) {
     $('#' + view.key + " .kn-group-level-1 td").each(function() {
         if ($(this).text().length > 1) {
             var RowText = $(this).html();
-            $(this).html('<i class="fa fa-plus-square-o"></i>&nbsp;' + RowText);
+            $(this).html('<i class="fa fa-minus-square-o"></i>&nbsp;' + RowText);
         }
     });
 
