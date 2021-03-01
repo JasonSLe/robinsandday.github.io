@@ -770,7 +770,7 @@ var addGroupExpandCollapse = function(view) {
     });
 
     // This line causes groups to be collapsed by default.
-    $('#' + view.key + ' .kn-table-group').nextUntil('.kn-table-group').toggle();
+    //$('#' + view.key + ' .kn-table-group').nextUntil('.kn-table-group').toggle();
 
     $('#' + view.key + ' .kn-table-group').click(function() {
 
