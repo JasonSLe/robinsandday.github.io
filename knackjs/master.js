@@ -750,6 +750,40 @@ $(document).on('knack-scene-render.scene_1314', function (event, view, data) {
 
 //.............................................................................................
 
+// ----------  Service Plan table expand or collapse groupings ----------
+
+// Call the function when your table renders – do this for each table you’re applying this to
+$(document).on('knack-view-render.view_4220', function(event, view, data) {
+    addGroupExpandCollapse(view);
+})
+
+// The function itself – only needed once
+var addGroupExpandCollapse = function(view) {
+
+    $('#' + view.key + ' .kn-table-group').css("cursor", "pointer");
+
+    $('#' + view.key + " .kn-group-level-1 td").each(function() {
+        if ($(this).text().length > 1) {
+            var RowText = $(this).html();
+            $(this).html('<i class="fa fa-plus-square-o"></i>&nbsp;' + RowText);
+        }
+    });
+
+    // This line causes groups to be collapsed by default.
+    $('#' + view.key + ' .kn-table-group').nextUntil('.kn-table-group').toggle();
+
+    $('#' + view.key + ' .kn-table-group').click(function() {
+
+        $(this).nextUntil('.kn-table-group').toggle();
+
+        if ($(this).html().indexOf('fa-minus') !== -1) {
+            $(this).html($(this).html().replace('minus', 'plus'));
+        } else {
+            $(this).html($(this).html().replace('plus', 'minus'));
+        }
+    });
+
+}
 
 
 // ----------  refresh Prep Centre driver pickup table every 60 seconds but not the page itself  ----------
