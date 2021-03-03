@@ -3760,6 +3760,10 @@ border-radius: 6px;
   padding-bottom: 10px;
 }
 
+/********* TEST DRIVE CONFIRMATION *********/
+
+#view_4231 .kn-detail-label {background-color: transparent;}
+
 /********* SERVICE SCHEDULE PAGE *********/
 
 #view_2913 .kn-detail-label {background-color: transparent;}
