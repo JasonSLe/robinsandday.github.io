@@ -1315,6 +1315,31 @@ color: #FFFFFF;
   color:black;
 }
 
+
+/********* SERVICE PLAN PAGE *********/
+
+/**Service table**/
+
+
+#view_3668 > div.kn-table-wrapper.is-constrained > table > thead > tr > th {background:#708090;}
+
+#view_3668 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(4) > td{
+background: slategrey;
+}
+
+view_3668 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(1) > td{
+background: slategrey;
+}
+
+#view_3668 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(7) > td{
+background: slategrey;
+}
+
+/*About service plan and video rich text*/
+#view_3665{overflow: auto;}
+#view_3667{overflow: auto;}
+
+
 /*css for second select option*/
 
 #view_2765-field_6482 > option:nth-child(2){
