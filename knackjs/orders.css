@@ -1320,20 +1320,13 @@ color: #FFFFFF;
 
 /**Service table**/
 
+#view_3668 > div.kn-table-wrapper > table > thead > tr > th{background:#708090;}
 
-#view_3668 > div.kn-table-wrapper.is-constrained > table > thead > tr > th {background:#708090;}
+#view_3668 > div.kn-table-wrapper > table > tbody > tr:nth-child(1) > td{background:#708090;}
 
-#view_3668 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(4) > td{
-background: slategrey;
-}
+#view_3668 > div.kn-table-wrapper > table > tbody > tr:nth-child(4) > td{background:#708090;}
 
-view_3668 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(1) > td{
-background: slategrey;
-}
-
-#view_3668 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(7) > td{
-background: slategrey;
-}
+#view_3668 > div.kn-table-wrapper > table > tbody > tr:nth-child(7) > td{background:#708090;}
 
 /*About service plan and video rich text*/
 #view_3665{overflow: auto;}
