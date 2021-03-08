@@ -3788,6 +3788,10 @@ background: slategrey !important;
 color: white;
 } */
 
+#view_4220 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(1) > td{
+    background: cadetblue;
+    color: whitesmoke;
+}
 
 /*About service plan and video rich text*/
 #view_4221{overflow: auto;}
