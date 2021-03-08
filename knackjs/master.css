@@ -3787,12 +3787,13 @@ border-radius: 6px;
 background: slategrey;
 color: white;
 }
-#view_4220 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(1) > td{
+
+#view_4220 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(3) > td{
 background: slategrey;
 color: white;
 }
 
-#view_4220 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(7) > td{
+#view_4220 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(5) > td{
 background: slategrey;
 color: white;
 }
