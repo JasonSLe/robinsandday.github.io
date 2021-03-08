@@ -3783,10 +3783,7 @@ border-radius: 6px;
 
 #view_4220 > div.kn-table-wrapper.is-constrained > table > thead > tr > th {background:#708090;}
 
-/* #view_4220 > div.kn-table-wrapper.is-constrained > table > tbody > tr:nth-child(3){
-background: slategrey !important;
-color: white;
-} */
+#view_4220 > div.kn-table-wrapper.is-constrained > table{background: slategrey;}
 
 
 /*About service plan and video rich text*/
