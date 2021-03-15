@@ -772,7 +772,7 @@ $(document).on('knack-view-render.view_4220', function(event, view, data) {
 // The function itself – only needed once
 var addGroupExpandCollapse = function(view) {
 
-    $('#' + view.key + ' .kn-table-group').css("cursor", "pointer", "background");
+    $('#' + view.key + ' .kn-table-group').css("cursor", "pointer", "background", "#95c3d8");
 
     $('#' + view.key + " .kn-group-level-1 td").each(function() {
         if ($(this).text().length > 1) {
