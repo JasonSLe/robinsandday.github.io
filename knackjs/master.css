@@ -3784,6 +3784,7 @@ border-radius: 6px;
 #view_4220 > div.kn-table-wrapper.is-constrained > table > thead > tr > th {background:#708090;}
 
 /* #view_4220 > div.kn-table-wrapper.is-constrained > td {background:#95c3d8 !important;} */
+#view_4220 > .kn-group-level-1 td {background:#95c3d8;}
 
 /*About service plan and video rich text*/
 #view_4221{overflow: auto;}
