@@ -3788,8 +3788,7 @@ background-color:#0f2542;
 
 #view_4247 > section > div > div > div > div > div > div > span > a > span:hover{background-color:#0f2542;}
 
-#view_4247 > section > div > div > div > div > div > div > span > a{text-decoration: none;}
-
+#view_4247 > section > div > div > div > div > div > div > span > a > span > span:nth-child(2) > span{text-decoration: none;}
 
 /********* SERVICE PLAN PAGE *********/
 
