@@ -2027,7 +2027,7 @@ color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_3672 > div.field_4415_thumb_81 > siv.kn-detail-body {
+div.field_4415_thumb_81 > div.kn-detail-body {
 	overflow-x: hidden;
 }
 
