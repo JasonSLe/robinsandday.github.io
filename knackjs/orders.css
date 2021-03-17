@@ -2027,6 +2027,10 @@ color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_3672 > .field_4415_thumb_81 > .kn-detail-body {
+	overflow-x: hidden;
+}
+
 /**SCAN BUTTON STYLING**/
 #scanDocument {
 background-color: #EEEEEE;
