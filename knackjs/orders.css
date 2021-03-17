@@ -2053,3 +2053,7 @@ color: red;
 font-size:12px;
 }
 
+/**Hide Customer Vehicle tracker scrollbar**/
+#\36 0423a0bf6cb89001ec0d641 > section > div > div > div:nth-child(1) > div > div.field_4415_thumb_81 > div{
+ overflow: hidden;	
+}
