@@ -8,62 +8,67 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
   //2console.log(records.length);
   //alert('listener for records, # of records is: ' + records.length);
   //Go through all rows
+  
   $('tbody tr').each(function(){ 
       //Check if the row has field for the date - it should be by all when it is updated
-      if($(this).find('div[id="dodp"]').length){
-          //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-         var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/DETAIL_'+$(this).find('td').eq(0).text().match(new RegExp(/Dialog Order: \d*/))[0].replace('Dialog Order: ','')+'?disableRedirect=true';
-		  //AJAX Get for the URL - response is now just the date, so we will only print it to html page
-          $.ajax({url:url, success: function(data){
-              $(this).find('div[id="dodp"]').text(data);
-          },
-          error: function(jqXHR, textStatus, errorThrown) {
-              console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
-          }, async:true, context:this, cache: false, timeout: 15000});
-          
+      try {
+        if($(this).find('div[id="dodp"]').length){
+            //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
+          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/DETAIL_'+$(this).find('td').eq(0).text().match(new RegExp(/Dialog Order: \d*/))[0].replace('Dialog Order: ','')+'?disableRedirect=true';
+        //AJAX Get for the URL - response is now just the date, so we will only print it to html page
+            $.ajax({url:url, success: function(data){
+                $(this).find('div[id="dodp"]').text(data);
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
+            }, async:true, context:this, cache: false, timeout: 15000});
+            
+        };
+
+      if($(this).find('div[id="dod9v8"]').length){
+            if ($(this).find('div[id="dod9v8"]').text()!==''){
+              //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
+            var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/VINENQ_'+$(this).find('td').eq(0).text().match(new RegExp(/Dialog Order: \d*/))[0].replace('Dialog Order: ','')+'?disableRedirect=true';
+              //AJAX Get for the URL - response is now just the date, so we will only print it to html page
+              $.ajax({url:url, success: function(data){
+                  $(this).find('div[id="dod9v8"]').text(data);
+              }, async:true, context:this, cache: false, timeout: 15000});
+            }
       };
 
-     if($(this).find('div[id="dod9v8"]').length){
-          if ($(this).find('div[id="dod9v8"]').text()!==''){
+      if($(this).find('div[id="doAFRL"]').length){
+        if ($(this).find('div[id="doAFRL"]').text()!==''){
             //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-           var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/VINENQ_'+$(this).find('td').eq(0).text().match(new RegExp(/Dialog Order: \d*/))[0].replace('Dialog Order: ','')+'?disableRedirect=true';
-            //AJAX Get for the URL - response is now just the date, so we will only print it to html page
+          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/AFRL_'+$(this).find('td').eq(0).text().match(new RegExp(/Dialog Order: \d*/))[0].replace('Dialog Order: ','')+'?disableRedirect=true';
+        //AJAX Get for the URL - response is now just the date, so we will only print it to html page
             $.ajax({url:url, success: function(data){
-                $(this).find('div[id="dod9v8"]').text(data);
+                $(this).find('div[id="doAFRL"]').text(data);
             }, async:true, context:this, cache: false, timeout: 15000});
-          }
-     };
+        }
+      };
+      if($(this).find('div[id="doINV"]').length){
+        if ($(this).find('div[id="doINV"]').text()!==''){
+            //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
+          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/INVOICE_'+$(this).find('td').eq(0).text().match(new RegExp(/Dialog Order: \d*/))[0].replace('Dialog Order: ','')+'?disableRedirect=true';
+        //AJAX Get for the URL - response is now just the date, so we will only print it to html page
+            $.ajax({url:url, success: function(data){
+                $(this).find('div[id="doINV"]').text(data);
+            }, async:true, context:this, cache: false, timeout: 15000});
+        }
+      };
+      if($(this).find('div[id="doGEFCO"]').length){
+        if ($(this).find('div[id="doGEFCO"]').text()!==''){
+            //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
+          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/GEFCO_'+$(this).find('td').eq(0).text().match(new RegExp(/Dialog Order: \d*/))[0].replace('Dialog Order: ','')+'?disableRedirect=true';
+        //AJAX Get for the URL - response is now just the date, so we will only print it to html page
+            $.ajax({url:url, success: function(data){
+                $(this).find('div[id="doGEFCO"]').text(data);
+            }, async:true, context:this, cache: false, timeout: 15000});
+        }
+      };
+    } catch (e){
 
-     if($(this).find('div[id="doAFRL"]').length){
-       if ($(this).find('div[id="doAFRL"]').text()!==''){
-          //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-         var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/AFRL_'+$(this).find('td').eq(0).text().match(new RegExp(/Dialog Order: \d*/))[0].replace('Dialog Order: ','')+'?disableRedirect=true';
-		  //AJAX Get for the URL - response is now just the date, so we will only print it to html page
-          $.ajax({url:url, success: function(data){
-              $(this).find('div[id="doAFRL"]').text(data);
-          }, async:true, context:this, cache: false, timeout: 15000});
-       }
-     };
-     if($(this).find('div[id="doINV"]').length){
-       if ($(this).find('div[id="doINV"]').text()!==''){
-          //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-         var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/INVOICE_'+$(this).find('td').eq(0).text().match(new RegExp(/Dialog Order: \d*/))[0].replace('Dialog Order: ','')+'?disableRedirect=true';
-		  //AJAX Get for the URL - response is now just the date, so we will only print it to html page
-          $.ajax({url:url, success: function(data){
-              $(this).find('div[id="doINV"]').text(data);
-          }, async:true, context:this, cache: false, timeout: 15000});
-       }
-     };
-     if($(this).find('div[id="doGEFCO"]').length){
-       if ($(this).find('div[id="doGEFCO"]').text()!==''){
-          //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-         var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/GEFCO_'+$(this).find('td').eq(0).text().match(new RegExp(/Dialog Order: \d*/))[0].replace('Dialog Order: ','')+'?disableRedirect=true';
-		  //AJAX Get for the URL - response is now just the date, so we will only print it to html page
-          $.ajax({url:url, success: function(data){
-              $(this).find('div[id="doGEFCO"]').text(data);
-          }, async:true, context:this, cache: false, timeout: 15000});
-       }
-     };
+    }
 	});
     
 });
