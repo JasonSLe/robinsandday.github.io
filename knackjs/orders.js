@@ -67,7 +67,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
         }
       };
     } catch (e){
-
+      console.log(e);
     }
 	});
     
