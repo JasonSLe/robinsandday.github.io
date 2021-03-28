@@ -12,9 +12,11 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
   $('tbody tr').each(function(){ 
       //Check if the row has field for the date - it should be by all when it is updated
       try {
+        let orderNumber = $(this).find('td').eq(0).text().match(new RegExp(/PCD\/VX Order: \d*/))[0].replace('PCD/VX Order: ','');
+        console.log('orderNumber',orderNumber);
         if($(this).find('div[id="dodp"]').length){
             //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/DETAIL_'+$(this).find('td').eq(0).text().match(new RegExp(/PCD\/VX Order: \d*/))[0].replace('PCD/VX Order: ','')+'?disableRedirect=true';
+          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/DETAIL_'+orderNumber+'?disableRedirect=true';
         //AJAX Get for the URL - response is now just the date, so we will only print it to html page
             $.ajax({url:url, success: function(data){
                 $(this).find('div[id="dodp"]').text(data);
@@ -28,7 +30,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
       if($(this).find('div[id="dod9v8"]').length){
             if ($(this).find('div[id="dod9v8"]').text()!==''){
               //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-            var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/VINENQ_'+$(this).find('td').eq(0).text().match(new RegExp(/PCD\/VX Order: \d*/))[0].replace('PCD/VX Order: ','')+'?disableRedirect=true';
+            var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/VINENQ_'+orderNumber+'?disableRedirect=true';
               //AJAX Get for the URL - response is now just the date, so we will only print it to html page
               $.ajax({url:url, success: function(data){
                   $(this).find('div[id="dod9v8"]').text(data);
@@ -39,7 +41,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
       if($(this).find('div[id="doAFRL"]').length){
         if ($(this).find('div[id="doAFRL"]').text()!==''){
             //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/AFRL_'+$(this).find('td').eq(0).text().match(new RegExp(/PCD\/VX Order: \d*/))[0].replace('PCD/VX Order: ','')+'?disableRedirect=true';
+          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/AFRL_'+orderNumber+'?disableRedirect=true';
         //AJAX Get for the URL - response is now just the date, so we will only print it to html page
             $.ajax({url:url, success: function(data){
                 $(this).find('div[id="doAFRL"]').text(data);
@@ -49,7 +51,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
       if($(this).find('div[id="doINV"]').length){
         if ($(this).find('div[id="doINV"]').text()!==''){
             //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/INVOICE_'+$(this).find('td').eq(0).text().match(new RegExp(/PCD\/VX Order: \d*/))[0].replace('PCD/VX Order: ','')+'?disableRedirect=true';
+          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/INVOICE_'+orderNumber+'?disableRedirect=true';
         //AJAX Get for the URL - response is now just the date, so we will only print it to html page
             $.ajax({url:url, success: function(data){
                 $(this).find('div[id="doINV"]').text(data);
@@ -59,7 +61,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
       if($(this).find('div[id="doGEFCO"]').length){
         if ($(this).find('div[id="doGEFCO"]').text()!==''){
             //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/GEFCO_'+$(this).find('td').eq(0).text().match(new RegExp(/PCD\/VX Order: \d*/))[0].replace('PCD/VX Order: ','')+'?disableRedirect=true';
+          var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/GEFCO_'+orderNumber+'?disableRedirect=true';
         //AJAX Get for the URL - response is now just the date, so we will only print it to html page
             $.ajax({url:url, success: function(data){
                 $(this).find('div[id="doGEFCO"]').text(data);
