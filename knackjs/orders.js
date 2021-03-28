@@ -13,7 +13,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
       //Check if the row has field for the date - it should be by all when it is updated
       try {
         console.log($(this).attr('id'));
-        if ($(this).attr('id')!==''){
+        if ($(this).attr('id')!==undefined){
           let orderNumber = $(this).find('td').eq(0).text().match(new RegExp(/PCD\/VX Order: \d*/))[0].replace('PCD/VX Order: ','');
           console.log('orderNumber',orderNumber);
           if($(this).find('div[id="dodp"]').length){
