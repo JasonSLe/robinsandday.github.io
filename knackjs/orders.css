@@ -1360,6 +1360,13 @@ color: #FFFFFF;
 /* Type of Deal Details on AFRL Page */
 #view_3555 .kn-detail-label {background-color: transparent;}
 
+/*******DIGITAL P&l OVER VIEW PAGE *********/
+
+#view_3732 .kn-detail-label {background-color: transparent;}
+#view_3734 .kn-detail-label {background-color: transparent;}
+#view_3740 .kn-detail-label {background-color: transparent;}
+#view_3741 .kn-detail-label {background-color: transparent;}
+
 /******* CSS to make File Uploads Stand out when Files Exist *******/
 /* AFRL */
 #kn-input-field_6409 > div > div.kn-asset-current > div > div > a.kn-view-asset {
