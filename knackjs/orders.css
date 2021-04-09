@@ -1744,28 +1744,6 @@ div#kn-scene_1089 div.kn-view.kn-back-link > a {display:none;}
 
 /******* Button Colours for Customer View of Sign Online ******/
 
-/****** Blue for Completed Actions ******/
-
-#kn-scene_1089 .kn-detail-body a.kn-link-page .completed {
-  color: #FFFFFF;
-  background-color: #19365e;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-}
-
-#kn-scene_1089 .kn-detail-body a:hover.kn-link-page .completed {
-  color: #FFFFFF;
-  background-color: #0f2542;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: .3s;
-  border-width: 2px;
-  border-color: #FFFFFF;
-}
-
 /****** Orange for incomplete Actions ******/
 
 #kn-scene_1089 .kn-detail-body a.kn-link-page .active {
