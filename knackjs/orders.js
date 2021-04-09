@@ -352,6 +352,62 @@ $(document).on('knack-form-submit.view_3676', function(event, view, data) {
 
 });
 
+//Hide Crumbtrail & Header on Sign Online Customer Pages
+$(document).on('knack-scene-render.scene_1086', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1088', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1089', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1090', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1091', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1092', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1093', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1094', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1095', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1096', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
+$(document).on('knack-scene-render.scene_1097', function (event, view, data) {
+	$('[class="kn-container"]').hide();
+	$('[class="kn-info kn-container"]').hide();
+});
+
 //DOCUMENT SCAN APP
 var scanAppHTML = '';
 function embedScanApp(){
