@@ -573,6 +573,7 @@ This removes white spaces from all table headers*/
     color: #FFFFFF;
     font-weight: bold;
 }
+
 #view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a{
     background-color: #FFA100;
     color: #FFFFFF;
@@ -580,10 +581,11 @@ This removes white spaces from all table headers*/
 }
 
 }
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a{
-    background-color: #FFA100;
-    color: #FFFFFF;
-    font-weight: bold;
+
+#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
 }
 
 #view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -634,7 +636,6 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
-
 /* Deal File Search Filters on Admin Page */
 
 #view_2955 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -667,6 +668,24 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+#view_2955 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 #view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -692,6 +711,24 @@ This removes white spaces from all table headers*/
 }
 
 #view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
