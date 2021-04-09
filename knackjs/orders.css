@@ -1784,6 +1784,72 @@ div#kn-scene_1089 div.kn-view.kn-back-link > a {display:none;}
   display: inline-block;
 }
 
+/*********** PDF File Stand Out on Customer Sign Online Views ************/
+
+/* Service Schedule Read Only Document */
+#kn-input-field_6609 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Invoice Read Only Document */
+#kn-input-field_6611 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Test Drive Read Only Document */
+#kn-input-field_6368 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Pre Sale Pack Read Only Document */
+#kn-input-field_6259 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Post Sale Pack Read Only Document */
+#kn-input-field_6418 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Handover Checklist Read Only Document */
+#kn-input-field_6615 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Handover Checklist Read Only Document */
+#kn-input-field_6615 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Part Ex Invoice Read Only Document */
+#kn-input-field_6614 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
 
 /***************** Button Colour for Deal File Help Pages ******************/
 
