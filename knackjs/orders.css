@@ -1746,7 +1746,7 @@ div#kn-scene_1089 div.kn-view.kn-back-link > a {display:none;}
 
 /****** Blue for Completed Actions ******/
 
-#kn-scene_1089 .kn-detail-body a.kn-link-page .completed, #kn-scene_961 .kn-detail-body a.kn-link-page .completed {
+#kn-scene_1089 .kn-detail-body a.kn-link-page .completed {
   color: #FFFFFF;
   background-color: #19365e;
   padding: 8px;
@@ -1754,7 +1754,7 @@ div#kn-scene_1089 div.kn-view.kn-back-link > a {display:none;}
   display: inline-block;
 }
 
-#kn-scene_1089 .kn-detail-body a:hover.kn-link-page .completed, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .completed {
+#kn-scene_1089 .kn-detail-body a:hover.kn-link-page .completed {
   color: #FFFFFF;
   background-color: #0f2542;
   padding: 8px;
@@ -1768,7 +1768,7 @@ div#kn-scene_1089 div.kn-view.kn-back-link > a {display:none;}
 
 /****** Orange for incomplete Actions ******/
 
-#kn-scene_1089 .kn-detail-body a.kn-link-page .active, #kn-scene_961 .kn-detail-body a.kn-link-page .active {
+#kn-scene_1089 .kn-detail-body a.kn-link-page .active {
   color: #FFFFFF;
   background-color: #FFA100;
   padding: 8px;
@@ -1776,7 +1776,7 @@ div#kn-scene_1089 div.kn-view.kn-back-link > a {display:none;}
   display: inline-block;
 }
 
-#kn-scene_1089 .kn-detail-body a:hover.kn-link-page .active, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .active {
+#kn-scene_1089 .kn-detail-body a:hover.kn-link-page .active {
   color: #FFFFFF;
   background-color: #D18400;
   padding: 8px;
