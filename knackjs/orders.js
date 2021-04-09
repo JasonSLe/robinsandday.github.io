@@ -322,6 +322,36 @@ var addGroupExpandCollapse = function(view) {
 
 }
 
+//**************************** NEW DEAL FILE SIGN ONLINE ***********************
+
+// Code to wait following Form Submission while PIN is Checked in Integromat
+
+$(document).on('knack-form-submit.view_3676', function(event, view, data) { 
+
+
+	setTimeout(function(){ 
+
+    	Knack.showSpinner();
+
+    }, 0); 
+
+  
+
+	commandURL = "https://hook.integromat.com/vxmlosfeinmtjdo3mfn3v7tfcqru491z?recordid=" + data.id ;
+
+
+ 	$.get(commandURL, function(data, status){
+
+
+      Knack.hideSpinner();
+
+      $(".kn-message.success").html("<b>" + data + "</b>");
+
+
+    });
+
+});
+
 //DOCUMENT SCAN APP
 var scanAppHTML = '';
 function embedScanApp(){
