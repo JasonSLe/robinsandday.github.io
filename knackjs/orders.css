@@ -1740,6 +1740,72 @@ div#kn-scene_1088 div.kn-view.kn-back-link > a {display:none;}
 
 div#kn-scene_1089 div.kn-view.kn-back-link > a {display:none;}
 
+#view_3678 .kn-detail-label {background-color: transparent;}
+
+/******* Button Colours for Customer View of Sign Online ******/
+
+/****** Blue for Completed Actions ******/
+
+#kn-scene_1089 .kn-detail-body a.kn-link-page .completed, #kn-scene_961 .kn-detail-body a.kn-link-page .completed {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_1089 .kn-detail-body a:hover.kn-link-page .completed, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .completed {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/****** Orange for incomplete Actions ******/
+
+#kn-scene_1089 .kn-detail-body a.kn-link-page .active, #kn-scene_961 .kn-detail-body a.kn-link-page .active {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_1089 .kn-detail-body a:hover.kn-link-page .active, #kn-scene_961 .kn-detail-body a:hover.kn-link-page .active {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/******* Part Exchange Link to Button *********/
+
+#\36 05387a72cc12d001bea92b4 > td.kn-table-link > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#\36 05387a72cc12d001bea92b4 > td.kn-table-link > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
 
 /***************** Button Colour for Deal File Help Pages ******************/
 
