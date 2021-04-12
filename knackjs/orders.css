@@ -1363,7 +1363,7 @@ color: #FFFFFF;
 
 #view_2766 .kn-detail-label {background-color: transparent;}
 
-/*css for first select option*/
+/*css for Survey out of 10 fields */
 #view_2765-field_6481 > option:nth-child(2){
   background-color:#23d160;
   color:#fafafa;
@@ -1381,6 +1381,24 @@ color: #FFFFFF;
   color:black;
 }
 
+/* CSS for Sign Online Remote Satisfaction Survey out of 10 Fields */
+
+#view_3702-field_6481 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3702-field_6481 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3702-field_6481 > option {
+  background:#eee;
+  color:black;
+}
 
 /********* SERVICE PLAN PAGE *********/
 
