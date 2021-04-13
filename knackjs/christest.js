@@ -198,7 +198,7 @@ const constraints = {
     devices.forEach(function(device) {
       alert(device.kind + ": " + device.label +
                   " id = " + device.deviceId);
-                  if( device.label.toLowerCase().indexOf( 'back' ) !== 0 && deviceId ==='' ){
+                  if( device.label.toLowerCase().indexOf( 'back' ) !== 0 ){
                     deviceId = device.deviceId;
                   }
     });
@@ -207,7 +207,7 @@ const constraints = {
     alert(err.name + ": " + err.message);
   });
 
-  navigator.mediaDevices.getUserMedia({video: {deviceId: {exact: deviceId }}
+  navigator.mediaDevices.getUserMedia({video: {deviceId: deviceId }
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
 
