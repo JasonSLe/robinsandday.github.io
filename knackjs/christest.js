@@ -193,7 +193,7 @@ const constraints = {
 
   let backDeviceId = '';
 
-  const tempStream = await navigator.mediaDevices.getUserMedia({video:true})
+  const tempStream = navigator.mediaDevices.getUserMedia({video:true})
   const devices = navigator.mediaDevices.enumerateDevices()
 
   devices.forEach (device => {
