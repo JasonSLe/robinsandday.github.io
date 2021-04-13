@@ -182,7 +182,8 @@ var OperatingSystem = {
      }
 
 function openCamera(getUserMediaC, constraints){
-  navigator.mediaDevices.getUserMedia({video: {deviceId: {exact: deviceId } }}).then(mediaStream => {
+  alert('openCamera');
+  navigator.mediaDevices.getUserMedia(getUserMediaC).then(mediaStream => {
     document.querySelector('video').srcObject = mediaStream;
 
     const track = mediaStream.getVideoTracks()[0];
