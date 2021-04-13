@@ -238,9 +238,10 @@ const constraints = {
   let deviceId = '';
   if (OperatingSystem.Android()) {
     alert('aaaa')
-    let countOfBackCameras = 0;
+   
     navigator.mediaDevices.enumerateDevices()
     .then(function(devices) {
+      let countOfBackCameras = 0;
       devices.forEach(function(device) {
         alert(device.kind + ": " + device.label + " id = " + device.deviceId);
         if (device.label.toLowerCase().includes('back')){
