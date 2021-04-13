@@ -192,9 +192,7 @@ const constraints = {
   };
 
   /*
-  let deviceId = '';
-
-  const devices = navigator.mediaDevices.enumerateDevices()
+  
 
   navigator.mediaDevices.enumerateDevices()
   .then(function(devices) {
@@ -236,6 +234,31 @@ const constraints = {
   });
 
   */
+
+  let deviceId = '';
+  if (OperatingSystem.Android()) {
+    let countOfBackCameras = 0;
+    navigator.mediaDevices.enumerateDevices()
+    .then(function(devices) {
+      devices.forEach(function(device) {
+        alert(device.kind + ": " + device.label + " id = " + device.deviceId);
+        if (device.label.toLowerCase().includes('back')){
+            countOfBackCameras =+ 1;
+            alert('choosen',device.deviceId)
+            deviceId = device.deviceId;
+        }
+      });
+
+      alert(deviceId);
+      alert(countOfBackCameras);
+    })
+    .catch(function(err) {
+      console.log(err.name + ": " + err.message);
+    });
+  }
+
+  alert('a'+deviceId);
+
   navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}}).then(mediaStream => {
      document.querySelector('video').srcObject = mediaStream;
 
