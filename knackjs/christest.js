@@ -191,18 +191,23 @@ const constraints = {
     advanced: [{zoom:2.0}]
   };
 
+  let deviceId = '';
+
   navigator.mediaDevices.enumerateDevices()
   .then(function(devices) {
     devices.forEach(function(device) {
       alert(device.kind + ": " + device.label +
                   " id = " + device.deviceId);
+                  if( device.label.toLowerCase().indexOf( 'back' ) !== 0 && deviceId ==='' ){
+                    deviceId = device.deviceId;
+                  }
     });
   })
   .catch(function(err) {
     alert(err.name + ": " + err.message);
   });
 
-  navigator.mediaDevices.getUserMedia({video: {/*pan: true, zoom: true, facingMode: {exact: "environment"}*/}
+  navigator.mediaDevices.getUserMedia({video: {deviceId: {exact: deviceId }}
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
 
