@@ -237,6 +237,7 @@ const constraints = {
 
   let deviceId = '';
   if (OperatingSystem.Android()) {
+    alert('aaaa')
     let countOfBackCameras = 0;
     navigator.mediaDevices.enumerateDevices()
     .then(function(devices) {
