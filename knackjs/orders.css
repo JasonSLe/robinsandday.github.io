@@ -568,6 +568,24 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+    background-color: #FFA100;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+    background-color: #FFA100;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 #view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -597,17 +615,24 @@ This removes white spaces from all table headers*/
   	color: #FFFFFF;
   	font-weight: bold;
 }
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a{
-    background-color: #FFA100;
-    color: #FFFFFF;
-    font-weight: bold;
-}
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a{
-    background-color: #FFA100;
-    color: #FFFFFF;
-    font-weight: bold;
+
+#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
 }
 
+#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
 
 /* Deal File Search Filters on Admin Page */
 
@@ -641,6 +666,24 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+#view_2955 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 #view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -666,6 +709,24 @@ This removes white spaces from all table headers*/
 }
 
 #view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1286,6 +1347,10 @@ color: #FFFFFF;
 
 #view_2714 .kn-detail-label {background-color: transparent;}
 
+/******** Test Drive Verification CSS **********/
+
+#view_3764 .kn-detail-label {background-color: transparent;}
+
 /******** Handover Checklist Page CSS **********/
 
 #view_2756 .kn-detail-label {background-color: transparent;}
@@ -1298,7 +1363,7 @@ color: #FFFFFF;
 
 #view_2766 .kn-detail-label {background-color: transparent;}
 
-/*css for first select option*/
+/*css for Survey out of 10 fields */
 #view_2765-field_6481 > option:nth-child(2){
   background-color:#23d160;
   color:#fafafa;
@@ -1315,20 +1380,6 @@ color: #FFFFFF;
   background:#eee;
   color:black;
 }
-
-
-/********* SERVICE PLAN PAGE *********/
-
-/**Service table**/
-
-#view_3668 > div.kn-table-wrapper > table > thead > tr > th{background:#708090;}
-
-/*About service plan and video rich text*/
-#view_3665{overflow: auto;}
-#view_3667{overflow: auto;}
-
-
-/*css for second select option*/
 
 #view_2765-field_6482 > option:nth-child(2){
   background-color:#23d160;
@@ -1347,6 +1398,52 @@ color: #FFFFFF;
   color:black;
 }
 
+/* CSS for Sign Online Remote Satisfaction Survey out of 10 Fields */
+
+#view_3702-field_6481 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3702-field_6481 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3702-field_6481 > option {
+  background:#eee;
+  color:black;
+}
+
+#view_3702-field_6482 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3702-field_6482 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3702-field_6482 > option {
+  background:#eee;
+  color:black;
+}
+
+/********* SERVICE PLAN PAGE *********/
+
+/**Service table**/
+
+#view_3668 > div.kn-table-wrapper > table > thead > tr > th{background:#708090;}
+
+/*About service plan and video rich text*/
+#view_3665{overflow: auto;}
+#view_3667{overflow: auto;}
+
 /* New Vehicle Deal Files, Order Tracking & Admin */
 
 #view_2157-search.kn-search-form .kn-details-group.column-3 .kn-details-group-column-0,
@@ -1359,6 +1456,13 @@ color: #FFFFFF;
 
 /* Type of Deal Details on AFRL Page */
 #view_3555 .kn-detail-label {background-color: transparent;}
+
+/*******DIGITAL P&l OVER VIEW PAGE *********/
+
+#view_3732 .kn-detail-label {background-color: transparent;}
+#view_3734 .kn-detail-label {background-color: transparent;}
+#view_3740 .kn-detail-label {background-color: transparent;}
+#view_3741 .kn-detail-label {background-color: transparent;}
 
 /******* CSS to make File Uploads Stand out when Files Exist *******/
 /* AFRL */
@@ -1621,6 +1725,183 @@ color: #FFFFFF;
 /****** New Deal File Update Pre-Delivery Check *******/
 
 #view_3554 .kn-detail-label {background-color: transparent;}
+
+/*************** SIGN ONLINE ACTIVATION AND DEALER VIEW **************/
+
+#view_3749 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
+
+#view_3749 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
+
+#view_3749 .kn-detail-label {background-color: transparent;}
+
+#view_3754 .kn-detail-label {background-color: transparent;}
+
+#view_3755 .kn-detail-label {background-color: transparent;}
+
+#view_3756 .kn-detail-label {background-color: transparent;}
+
+#view_3757 .kn-detail-label {background-color: transparent;}
+
+#view_3758 .kn-detail-label {background-color: transparent;}
+
+#view_3759 .kn-detail-label {background-color: transparent;}
+
+#view_3760 .kn-detail-label {background-color: transparent;}
+
+#view_3761 .kn-detail-label {background-color: transparent;}
+
+/***************** SIGN ONLINE REMOTE CUSTOMER AGREEMENT OF DOCUMENTS *********************/
+
+#view_3669 {display:none;}
+
+#view_3674 .kn-detail-label {background-color: transparent;}
+
+/******** HIDE BACK LINKS ON SCENES ********/
+
+div#kn-scene_1088 div.kn-view.kn-back-link > a {display:none;}
+
+div#kn-scene_1089 div.kn-view.kn-back-link > a {display:none;}
+
+#view_3678 .kn-detail-label {background-color: transparent;}
+
+/******* Format for Requires Signing and Signed Views on Sign Your Documents Page ********/
+
+#view_3679, #view_3681, #view_3684, #view_3686, #view_3688, #view_3689, #view_3692, #view_3694, #view_3695, #view_3697, #view_3698, #view_3700, #view_3701, #view_3703 {
+border: 1px solid #CCCCCC;
+  text-align: center;
+  padding: 10px;
+  padding-left: 25px;
+  padding-top: 20px;
+  height: 100px;
+}
+
+#view_3679 h3, #view_3681 h3, #view_3684 h3, #view_3686 h3, #view_3688 h3, #view_3689 h3, #view_3692 h3, #view_3694 h3, #view_3695 h3, #view_3697 h3, #view_3698 h3, #view_3700 h3, #view_3701 h3, #view_3703 h3 {
+color: #19365e;
+  text-align: center;
+  padding-right: 10px;
+}
+
+/******* Button Colours for Customer View of Sign Online ******/
+
+/****** Orange for incomplete Actions ******/
+
+#kn-scene_1089 .kn-detail-body a.kn-link-page .active {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+}
+
+#kn-scene_1089 .kn-detail-body a:hover.kn-link-page .active {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/******* Part Exchange Link to Button *********/
+
+#\36 05387a72cc12d001bea92b4 > td.kn-table-link > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#\36 05387a72cc12d001bea92b4 > td.kn-table-link > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
+/*********** PDF File Stand Out on Customer Sign Online Views ************/
+
+/* Service Schedule Read Only Document */
+#kn-input-field_6609 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Invoice Read Only Document */
+#kn-input-field_6611 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Test Drive Read Only Document */
+#kn-input-field_6368 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Pre Sale Pack Read Only Document */
+#kn-input-field_6259 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Post Sale Pack Read Only Document */
+#kn-input-field_6418 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Handover Checklist Read Only Document */
+#kn-input-field_6615 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Handover Checklist Read Only Document */
+#kn-input-field_6615 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Part Ex Invoice Read Only Document */
+#kn-input-field_6614 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
 
 
 /***************** Button Colour for Deal File Help Pages ******************/
