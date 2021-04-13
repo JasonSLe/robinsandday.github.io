@@ -501,7 +501,7 @@ function scanDocsLinkFunction(selector_view){
   });
 }  
 
-// ----------  refresh Sales MAnager To Do (New Deal File Admin) Table every 50 seconds but not the page itself  ----------
+// ----------  refresh Sales Manager To Do (New Deal File Admin) Table every 50 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_989', function(event, scene) {
  recursivecall();
@@ -509,4 +509,14 @@ $(document).on('knack-scene-render.scene_989', function(event, scene) {
 
 function recursivecall(){
  setTimeout(function () { if($("#view_3766").is(":visible")==true){ Knack.views["view_3766"].model.fetch();recursivecall();} }, 50000);
+}
+
+// ----------  refresh Sales Admin To Do (New Deal File Admin) Table every 50 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_989', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_3767").is(":visible")==true){ Knack.views["view_3767"].model.fetch();recursivecall();} }, 50000);
 }
