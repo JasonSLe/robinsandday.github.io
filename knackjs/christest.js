@@ -202,7 +202,7 @@ const constraints = {
     alert(err.name + ": " + err.message);
   });
 
-  navigator.mediaDevices.getUserMedia({video: {pan: true, zoom: true, facingMode: {exact: "environment"}}
+  navigator.mediaDevices.getUserMedia({video: {/*pan: true, zoom: true, facingMode: {exact: "environment"}*/}
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
 
