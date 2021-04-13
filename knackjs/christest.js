@@ -200,7 +200,7 @@ const constraints = {
     devices.forEach(function(device) {
       alert(device.kind + ": " + device.label +
                   " id = " + device.deviceId);
-                  if( device.label.toLowerCase().indexOf( 'back' ) !== 0 ){
+                  if(device.label.toLowerCase().includes('back') && deviceId===''){
                     alert('choosen',device.deviceId)
                     deviceId = device.deviceId;
                   }
