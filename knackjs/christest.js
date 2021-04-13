@@ -191,6 +191,17 @@ const constraints = {
     advanced: [{zoom:2.0}]
   };
 
+  navigator.mediaDevices.enumerateDevices()
+  .then(function(devices) {
+    devices.forEach(function(device) {
+      alert(device.kind + ": " + device.label +
+                  " id = " + device.deviceId);
+    });
+  })
+  .catch(function(err) {
+    alert(err.name + ": " + err.message);
+  });
+
   navigator.mediaDevices.getUserMedia({video: {pan: true, zoom: true, facingMode: {exact: "environment"}}
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
