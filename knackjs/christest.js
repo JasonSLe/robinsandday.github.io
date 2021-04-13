@@ -191,31 +191,23 @@ const constraints = {
     advanced: [{zoom:2.0}]
   };
 
-  let backDeviceId = '';
+  let deviceId = '';
 
-  const tempStream = navigator.mediaDevices.getUserMedia({video:true})
   const devices = navigator.mediaDevices.enumerateDevices()
 
-  devices.forEach (device => {
-    if( device.kind === 'videoinput' ) {
-      if( device.label && device.label.length > 0 ) {
-        if( device.label.toLowerCase().indexOf( 'back' ) >= 0 ) 
-          backDeviceId = device.deviceId
-        //else if( device.label.toLowerCase().indexOf( 'front' ) >= 0 )
-        //  frontDeviceId = device.deviceId
-      }
-    }
-  });
+  navigator.mediaDevices.enumerateDevices()
+  .then(function(devices) {
+    devices.forEach(function(device) {
+      alert(device.kind + ": " + device.label +
+                  " id = " + device.deviceId);
+                  if( device.label.toLowerCase().indexOf( 'back' ) !== 0 ){
+                    deviceId = device.deviceId;
+                  }
+    });
 
-  alert(backDeviceId);
+    alert(deviceId);
 
-  /* close the temp stream */
-  const tracks = tempStream.getTracks()
-  if( tracks ) 
-    for( let t = 0; t < tracks.length; t++ ) tracks[t].stop()
-
-  navigator.mediaDevices.getUserMedia({video: {deviceId: {exact: backDeviceId } }
- }).then(mediaStream => {
+    navigator.mediaDevices.getUserMedia({video: {deviceId: {exact: deviceId } }}).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
 
       const track = mediaStream.getVideoTracks()[0];
@@ -236,6 +228,11 @@ const constraints = {
         alert('Error starting camera. Please report this error to admin.'+ error)
       }
     });
+
+  })
+  .catch(function(err) {
+    alert(err.name + ": " + err.message);
+  });
 
 
 
