@@ -181,6 +181,30 @@ var OperatingSystem = {
        document.documentElement.msRequestFullscreen();
      }
 
+function openCamera(getUserMediaC, constraints){
+  navigator.mediaDevices.getUserMedia({video: {deviceId: {exact: deviceId } }}).then(mediaStream => {
+    document.querySelector('video').srcObject = mediaStream;
+
+    const track = mediaStream.getVideoTracks()[0];
+
+    track.applyConstraints(constraints);
+
+    $('#dev').text(JSON.stringify(track.getCapabilities()));
+
+    if (OperatingSystem.Android()) {
+      imageCapture = new ImageCapture(track);
+    }
+
+  })
+  .catch(error =>{
+    if (error.toString().includes('Permission denied')){
+      alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
+    } else {
+      alert('Error starting camera. Please report this error to admin.'+ error)
+    }
+  });
+}
+
 //************************************* OPEN THE CAMERA BY ASKING USER PERMISSION(APPLE DEVICE) AND APPLY VIDEO STREAM SETTINGS*****************************************
 
 const constraints = {
@@ -206,28 +230,7 @@ const constraints = {
 
     alert(deviceId);
 
-    navigator.mediaDevices.getUserMedia({video: {deviceId: {exact: deviceId } }}).then(mediaStream => {
-      document.querySelector('video').srcObject = mediaStream;
-
-      const track = mediaStream.getVideoTracks()[0];
-
-      track.applyConstraints(constraints);
-
-      $('#dev').text(JSON.stringify(track.getCapabilities()));
-
-      if (OperatingSystem.Android()) {
-        imageCapture = new ImageCapture(track);
-      }
-
-    })
-    .catch(error =>{
-      if (error.toString().includes('Permission denied')){
-        alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
-      } else {
-        alert('Error starting camera. Please report this error to admin.'+ error)
-      }
-    });
-
+    
   })
   .catch(function(err) {
     alert(err.name + ": " + err.message);
@@ -235,10 +238,8 @@ const constraints = {
 
   */
 
-  let deviceId = '';
   if (OperatingSystem.Android()) {
-    alert('aaaa')
-   
+    let deviceId = '';
     navigator.mediaDevices.enumerateDevices()
     .then(function(devices) {
       let countOfBackCameras = 0;
@@ -253,34 +254,34 @@ const constraints = {
 
       alert(deviceId);
       alert(countOfBackCameras);
+
+      if (countOfBackCameras<=1){
+        openCamera({video: {facingMode: {exact: "environment"}}},constraints);
+      } else {
+        openCamera({video: {deviceId: {exact: deviceId}}},constraints);
+      }
     })
     .catch(function(err) {
-      console.log(err.name + ": " + err.message);
+      alert('error enumeration devices')
+      alert(err.name + ": " + err.message);
     });
+  } else {
+    openCamera({video: {facingMode: {exact: "environment"}}},constraints);/*
+    navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}}).then(mediaStream => {
+      document.querySelector('video').srcObject = mediaStream;
+ 
+      const track = mediaStream.getVideoTracks()[0];
+ 
+      track.applyConstraints(constraints); 
+    })
+    .catch(error =>{
+     if (error.toString().includes('Permission denied')){
+       alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
+     } else {
+       alert('Error starting camera. Please report this error to admin.'+ error)
+     }
+   });*/
   }
-
-  alert('a'+deviceId);
-
-  navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}}).then(mediaStream => {
-     document.querySelector('video').srcObject = mediaStream;
-
-     const track = mediaStream.getVideoTracks()[0];
-
-     track.applyConstraints(constraints);
-
-    if (OperatingSystem.Android()) {
-      imageCapture = new ImageCapture(track);
-    }
-
-   })
-   .catch(error =>{
-    if (error.toString().includes('Permission denied')){
-      alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
-    } else {
-      alert('Error starting camera. Please report this error to admin.'+ error)
-    }
-  });
-
 
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
