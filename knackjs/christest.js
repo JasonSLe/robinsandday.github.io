@@ -201,6 +201,7 @@ const constraints = {
       alert(device.kind + ": " + device.label +
                   " id = " + device.deviceId);
                   if( device.label.toLowerCase().indexOf( 'back' ) !== 0 ){
+                    alert('choosen',device.deviceId)
                     deviceId = device.deviceId;
                   }
     });
