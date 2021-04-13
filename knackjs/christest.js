@@ -216,28 +216,6 @@ const constraints = {
     advanced: [{zoom:2.0}]
   };
 
-  /*
-  
-
-  navigator.mediaDevices.enumerateDevices()
-  .then(function(devices) {
-    devices.forEach(function(device) {
-      alert(device.kind + ": " + device.label + " id = " + device.deviceId);
-      if (device.label.toLowerCase().includes('back')){
-          alert('choosen',device.deviceId)
-          deviceId = device.deviceId;
-      }
-    });
-
-    alert(deviceId);
-
-    
-  })
-  .catch(function(err) {
-    alert(err.name + ": " + err.message);
-  });
-
-  */
 
   if (OperatingSystem.Android()) {
     navigator.mediaDevices.enumerateDevices()
@@ -268,20 +246,6 @@ const constraints = {
     });
   } else {
     openCamera({video: {facingMode: {exact: "environment"}}},constraints);/*
-    navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}}).then(mediaStream => {
-      document.querySelector('video').srcObject = mediaStream;
- 
-      const track = mediaStream.getVideoTracks()[0];
- 
-      track.applyConstraints(constraints); 
-    })
-    .catch(error =>{
-     if (error.toString().includes('Permission denied')){
-       alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
-     } else {
-       alert('Error starting camera. Please report this error to admin.'+ error)
-     }
-   });*/
   }
 
 
