@@ -198,8 +198,7 @@ const constraints = {
   navigator.mediaDevices.enumerateDevices()
   .then(function(devices) {
     devices.forEach(function(device) {
-      alert(device.kind + ": " + device.label +
-                  " id = " + device.deviceId);
+      alert(device.kind + ": " + device.label + " id = " + device.deviceId);
       if (device.label.toLowerCase().includes('back')){
           alert('choosen',device.deviceId)
           deviceId = device.deviceId;
@@ -213,7 +212,7 @@ const constraints = {
 
       const track = mediaStream.getVideoTracks()[0];
 
-      //track.applyConstraints(constraints);
+      track.applyConstraints(constraints);
 
       /*$('#dev').text(JSON.stringify(track.getCapabilities()));*/
 
