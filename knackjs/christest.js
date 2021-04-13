@@ -245,7 +245,7 @@ const constraints = {
       devices.forEach(function(device) {
         alert(device.kind + ": " + device.label + " id = " + device.deviceId);
         if (device.label.toLowerCase().includes('back')){
-            countOfBackCameras =+ 1;
+            countOfBackCameras += 1;
             alert('choosen',device.deviceId)
             deviceId = device.deviceId;
         }
