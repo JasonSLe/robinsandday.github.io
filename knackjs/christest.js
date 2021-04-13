@@ -207,6 +207,8 @@ const constraints = {
     alert(err.name + ": " + err.message);
   });
 
+  alert(deviceId);
+
   navigator.mediaDevices.getUserMedia({video: {deviceId: deviceId }
  }).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
