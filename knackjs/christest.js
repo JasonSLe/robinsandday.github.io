@@ -245,16 +245,16 @@ const constraints = {
       let deviceId = '';
       let countOfBackCameras = 0;
       devices.forEach(function(device) {
-        alert(device.kind + ": " + device.label + " id = " + device.deviceId);
+        //alert(device.kind + ": " + device.label + " id = " + device.deviceId);
         if (device.label.toLowerCase().includes('back')){
             countOfBackCameras += 1;
-            alert('choosen',device.deviceId)
+            //alert('choosen',device.deviceId)
             deviceId = device.deviceId;
         }
       });
 
-      alert(deviceId);
-      alert(countOfBackCameras);
+      //alert(deviceId);
+      //alert(countOfBackCameras);
 
       if (countOfBackCameras<=1){
         openCamera({video: {facingMode: {exact: "environment"}}},constraints);
