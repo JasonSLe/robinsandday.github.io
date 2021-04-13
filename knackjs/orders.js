@@ -501,3 +501,12 @@ function scanDocsLinkFunction(selector_view){
   });
 }  
 
+// ----------  refresh Sales MAnager To Do (New Deal File Admin) Table every 50 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_989', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_3766").is(":visible")==true){ Knack.views["view_3766"].model.fetch();recursivecall();} }, 50000);
+}
