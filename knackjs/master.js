@@ -1188,7 +1188,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
       }
     })
     .catch(function(err) {
-      alert('error enumeration devices')
+      alert('error enumeration devices, contact support')
       alert(err.name + ": " + err.message);
     });
   } else {

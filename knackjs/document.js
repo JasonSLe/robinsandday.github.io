@@ -146,23 +146,53 @@ function prepareCameraView(imgToSaveName){
     frameRate:{max: 30},
   };
 
-  navigator.mediaDevices.getUserMedia({video: {facingMode: {exact: "environment"}}
- }).then(mediaStream => {
+  function openCamera(getUserMediaC, constraints){
+    navigator.mediaDevices.getUserMedia(getUserMediaC).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
+
       const track = mediaStream.getVideoTracks()[0];
+
       track.applyConstraints(constraints);
+  
       if (OperatingSystem.Android()) {
         imageCapture = new ImageCapture(track);
       }
+  
     })
     .catch(error =>{
       if (error.toString().includes('Permission denied')){
         alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
       } else {
-        alert('This application works only on mobile devices which have a camera. There was problem starting camera on this device. Please use another device. Admin error:'+ error.toString());
-        hideScanApp();
+        alert('Error starting camera. Please report this error to admin.'+ error)
       }
     });
+}
+
+if (OperatingSystem.Android()) {
+    navigator.mediaDevices.enumerateDevices()
+    .then(function(devices) {
+      let deviceId = '';
+      let countOfBackCameras = 0;
+      devices.forEach(function(device) {
+        if (device.label.toLowerCase().includes('back')){
+            countOfBackCameras += 1;
+            deviceId = device.deviceId;
+        }
+      });
+
+      if (countOfBackCameras<=1){
+        openCamera({video: {facingMode: {exact: "environment"}}},constraints);
+      } else {
+        openCamera({video: {deviceId: {exact: deviceId}}},constraints);
+      }
+    })
+    .catch(function(err) {
+      alert('error enumeration devices, contact support')
+      alert(err.name + ": " + err.message);
+    });
+  } else {
+    openCamera({video: {facingMode: {exact: "environment"}}},constraints);
+  }
 
 
 //************************************* TAKE A PICTURE AND CROP*****************************************
