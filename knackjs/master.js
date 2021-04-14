@@ -1184,7 +1184,6 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
       if (countOfBackCameras<=1){
         openCamera({video: {facingMode: {exact: "environment"}}},constraints);
       } else {
-        alert('more cameras, choose device '+deviceId)
         openCamera({video: {deviceId: {exact: deviceId}}},constraints);
       }
     })
