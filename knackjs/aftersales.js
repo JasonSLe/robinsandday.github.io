@@ -60,6 +60,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
         console.log('refresh model reload')
         var a = {};
         a.success = function () {
+            console.log('render')
             Knack.views["view_75"].render()
         }
         Knack.views["view_75"].model.fetch(a)
