@@ -1728,6 +1728,25 @@ color: #FFFFFF;
 
 /*************** SIGN ONLINE ACTIVATION AND DEALER VIEW **************/
 
+/**** Sign Online Help Page Button ****/
+
+#view_3783 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_3783 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
 #view_3749 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a {
   color: #FFFFFF;
   font-weight: bold;
