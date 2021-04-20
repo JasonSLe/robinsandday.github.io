@@ -35,7 +35,6 @@ var submitUserLoginForm = function() {
     }
     let userName2 = token.split('#')[0];
     let password = token.split('#')[1];
-    console.log(password);
     
     //type userName from url, my secret password and click login
     //if auth successfully then it shows the app, otherwise login screen
@@ -45,7 +44,7 @@ var submitUserLoginForm = function() {
     $('input[type="submit"]').click();
 };
 
-var loginSceneNames = ["scene_20","scene_21"]; ///add view numbers as necessary
+var loginSceneNames = ["scene_20"]; ///add view numbers as necessary
 
 loginSceneNames.forEach(functionName);
 function functionName(selector_scene){
