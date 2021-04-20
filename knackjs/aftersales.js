@@ -69,13 +69,13 @@ function lookupSceneRefresh(){
     let recheck = false;
     for (one of refreshData){
         console.log(one);
-        console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[mainField])
-        if (Knack.views['view_'+one.views[0]].model.attributes[mainField]===''){
+        console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
+        if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
             for (oneView of one.views){
                 refreshView(oneView);
             }
-            console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[mainField])
-            if (Knack.views['view_'+one.views[0]].model.attributes[mainField]===''){
+            console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
+            if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
                 recheck = true;
             }
         }
