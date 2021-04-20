@@ -98,18 +98,8 @@ function refreshView(viewID){
 }
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
-    console.log('set refresh 2')
-    console.log(Knack.views["view_76"].model);
+    console.log('set refresh')
     setTimeout(function(){
         lookupSceneRefresh();
-        /*
-        console.log('refresh model reload')
-        const a = {}
-        a.success = function () {
-            console.log('render')
-            Knack.views["view_75"].render()
-        };
-        Knack.views["view_75"].model.fetch(a)
-        */
     }, 3000);
   });
