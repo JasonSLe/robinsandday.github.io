@@ -49,7 +49,7 @@ var loginSceneNames = ["scene_20"]; ///add view numbers as necessary
 loginSceneNames.forEach(functionName);
 function functionName(selector_scene){
   $(document).on("knack-scene-render." + selector_scene, function(event, scene, data) {
-    console.log(selector_scene)
+    //console.log(selector_scene)
     submitUserLoginForm();
   });
 }
