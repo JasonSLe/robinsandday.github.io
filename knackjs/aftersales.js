@@ -60,22 +60,22 @@ function lookupSceneRefresh(){
         //mainField needs to be on first View in array
         {
             mainField : 'field_4',
-            views:['75','78',]   
+            views:['75','78']   
         },{
-            mainField : 'field_29',
+            mainField : 'field_74',
             views:['76']
         }
     ]
     let recheck = false;
     for (one of refreshData){
         console.log(one);
-        console.log('main field val',Knack.views[one.views[0]].model.attributes[mainField])
-        if (Knack.views[one.views[0]].model.attributes[mainField]===''){
+        console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[mainField])
+        if (Knack.views['view_'+one.views[0]].model.attributes[mainField]===''){
             for (oneView of one.views){
                 refreshView(oneView);
             }
-            console.log('main field val2',Knack.views[one.views[0]].model.attributes[mainField])
-            if (Knack.views[one.views[0]].model.attributes[mainField]===''){
+            console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[mainField])
+            if (Knack.views['view_'+one.views[0]].model.attributes[mainField]===''){
                 recheck = true;
             }
         }
@@ -92,9 +92,9 @@ function refreshView(viewID){
     console.log('refresh view', viewID)
     const a = {}
     a.success = function () {
-        Knack.views[viewID].render()
+        Knack.views['view_'+viewID].render()
     };
-    Knack.views[viewID].model.fetch(a)
+    Knack.views['view_'+viewID].model.fetch(a)
 }
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
