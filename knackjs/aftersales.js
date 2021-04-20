@@ -54,8 +54,21 @@ function functionName(selector_scene){
   });
 }
 
+function LookupSceneRefresh(){
+    let refreshData = [
+        {
+            mainField : '',
+            views:['75','78',]   
+        },{
+            mainField : '',
+            views:['77']
+        }
+    ]
+}
+
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     console.log('set refresh 2')
+    console.log(Knack.views["view_75"].model);
     setTimeout(function(){
         console.log('refresh model reload')
         const a = {}
