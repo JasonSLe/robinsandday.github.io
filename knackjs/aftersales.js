@@ -55,7 +55,7 @@ function functionName(selector_scene){
 }
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
-    console.log('set refresh')
+    console.log('set refresh 2')
     setTimeout(function(){
         console.log('refresh model reload')
         Knack.views["view_75"].model.fetch();
