@@ -63,7 +63,7 @@ function lookupSceneRefresh(){
             views:['75','78',]   
         },{
             mainField : 'field_29',
-            views:['77']
+            views:['76']
         }
     ]
     let recheck = false;
@@ -99,7 +99,7 @@ function refreshView(viewID){
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     console.log('set refresh 2')
-    console.log(Knack.views["view_77"].model);
+    console.log(Knack.views["view_76"].model);
     setTimeout(function(){
         lookupSceneRefresh();
         /*
