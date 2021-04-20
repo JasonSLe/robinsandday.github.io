@@ -55,14 +55,9 @@ function functionName(selector_scene){
 }
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
-   /* console.log('set refresh')
+    console.log('set refresh')
     setTimeout(function(){
-        console.log('first reload')
-        window.location.reload();
-    }, 4000);
-    setTimeout(function(){
-        console.log('second reload')
-        window.location.reload();
-    }, 10000);
-    */
+        console.log('refresh model reload')
+        Knack.views["view_75"].model.fetch();
+    }, 3000);
   });
