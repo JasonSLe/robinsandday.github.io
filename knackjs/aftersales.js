@@ -45,7 +45,7 @@ var submitUserLoginForm = function() {
     $('input[type="submit"]').click();
 };
 
-var loginSceneNames = ["scene_20"]; ///add view numbers as necessary
+var loginSceneNames = ["scene_20","scene_21"]; ///add view numbers as necessary
 
 loginSceneNames.forEach(functionName);
 function functionName(selector_scene){
