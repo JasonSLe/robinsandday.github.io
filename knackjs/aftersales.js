@@ -98,7 +98,6 @@ function refreshView(viewID){
 }
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
-    console.log('set refresh')
     setTimeout(function(){
         lookupSceneRefresh();
     }, 3000);
