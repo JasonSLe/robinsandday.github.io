@@ -59,5 +59,5 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     setTimeout(function(){
         console.log('refresh model reload')
         Knack.views["view_75"].model.fetch();
-    }, 3000);
+    }, 5000);
   });
