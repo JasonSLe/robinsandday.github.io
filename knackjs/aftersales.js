@@ -53,3 +53,13 @@ function functionName(selector_scene){
     submitUserLoginForm();
   });
 }
+
+$(document).on("knack-scene-render.scene_22", function(event, scene, data) {
+    console.log(selector_scene)
+    setTimeout(function(){
+        window.location.reload();
+    }, 4000);
+    setTimeout(function(){
+        window.location.reload();
+    }, 10000);
+  });
