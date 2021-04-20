@@ -217,6 +217,14 @@ $(document).on('knack-view-render.view_3978', function(event, view, data) {
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+$(document).on('knack-view-render.view_4272', function(event, view, data) {
+  var userName = Knack.getUserAttributes().email;
+  var timeStamp = Math.floor((new Date()).getTime() / 30000);
+  var hash = 'H' + hashCode('U' + userName + timeStamp)
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class="field_3"]').html('<iframe src="https://salesjourney2.knack.com/digital-aftersales-slave-app?token='+encodeURIComponent(token) + '#after-sales-vehicle-lookup" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 function openTab(url) {
   // Create link in memory
   var a = window.document.createElement("a");
