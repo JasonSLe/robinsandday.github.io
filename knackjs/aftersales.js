@@ -54,22 +54,55 @@ function functionName(selector_scene){
   });
 }
 
-function LookupSceneRefresh(){
+function lookupSceneRefresh(){
+    console.log('lookupSceneRefresh');
     let refreshData = [
+        //mainField needs to be on first View in array
         {
-            mainField : '',
+            mainField : 'field_4',
             views:['75','78',]   
         },{
-            mainField : '',
+            mainField : 'field_29',
             views:['77']
         }
     ]
+    let recheck = false;
+    for (one of refreshData){
+        console.log(one);
+        console.log('main field val',Knack.views[one.views[0]].model.attributes[mainField])
+        if (Knack.views[one.views[0]].model.attributes[mainField]===''){
+            for (oneView of one.views){
+                refreshView(oneView);
+            }
+            console.log('main field val2',Knack.views[one.views[0]].model.attributes[mainField])
+            if (Knack.views[one.views[0]].model.attributes[mainField]===''){
+                recheck = true;
+            }
+        }
+    }
+    if (recheck){
+        console.log('needs recheck')
+        setTimeout(function(){
+            lookupSceneRefresh();
+        }, 2500);
+    }
+}
+
+function refreshView(viewID){
+    console.log('refresh view', viewID)
+    const a = {}
+    a.success = function () {
+        Knack.views[viewID].render()
+    };
+    Knack.views[viewID].model.fetch(a)
 }
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     console.log('set refresh 2')
-    console.log(Knack.views["view_75"].model);
+    console.log(Knack.views["view_77"].model);
     setTimeout(function(){
+        lookupSceneRefresh();
+        /*
         console.log('refresh model reload')
         const a = {}
         a.success = function () {
@@ -77,5 +110,6 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
             Knack.views["view_75"].render()
         };
         Knack.views["view_75"].model.fetch(a)
-    }, 5000);
+        */
+    }, 3000);
   });
