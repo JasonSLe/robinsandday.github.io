@@ -55,7 +55,7 @@ function functionName(selector_scene){
 }
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
-    console.log(selector_scene)
+    console.log('set refresh')
     setTimeout(function(){
         window.location.reload();
     }, 4000);
