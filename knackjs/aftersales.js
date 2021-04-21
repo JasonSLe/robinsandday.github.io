@@ -116,7 +116,9 @@ function refreshView(viewID){
       const a = {}
       a.success = function () {
         //refresh view on page
-        Knack.views['view_'+viewID].render()
+        setTimeout(function(){
+          Knack.views['view_'+viewID].render()
+        }, 200);
       };
       //reload data from database
       Knack.views['view_'+viewID].model.fetch(a)
