@@ -2,5 +2,13 @@
 
 #kn-scene_22 .kn-detail-body {color:#37517e;font-size: 1rem;}
 
-#kn-scene_22 .field_31 .kn-detail-body>span {color:#000000; font-size: 2rem; background-color:yellow}
+#kn-scene_22 .field_31 .kn-detail-body>span {color:#000000; font-size: 2rem; background-color:yellow; font-weight: bold;}
 
+#kn-scene_22 .field_31 .kn-detail-body>span:before{
+    content: "";
+    display: block;
+    background: url('https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licencePlateGB.png') no-repeat;
+    width: 21px;
+    height: 44px;
+    float: left;
+}
