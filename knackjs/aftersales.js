@@ -94,7 +94,7 @@ function lookupSceneRefresh(refreshData){
       if (recheck){
           //console.log('needs recheck')
           setTimeout(function(){
-              lookupSceneRefresh();
+              lookupSceneRefresh(refreshData);
           }, 2500);
       }
     } catch (e){
