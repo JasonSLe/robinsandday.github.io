@@ -132,6 +132,9 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
           },{
             mainField : 'field_72',
             views:['82']
+          },{
+            mainField : 'field_245',
+            views:['81']
           }
         ]
         lookupSceneRefresh(refreshData);
