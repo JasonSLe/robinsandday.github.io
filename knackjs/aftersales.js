@@ -80,6 +80,8 @@ function lookupSceneRefresh(refreshData, startTime = null){
       if (!startTime){
         startTime = new Date();
         console.log('startTime', startTime);
+      } else {
+        console.log('elapsed',new Date() - startTime);
       }
       let recheck = false;
       for (one of refreshData){
@@ -98,7 +100,7 @@ function lookupSceneRefresh(refreshData, startTime = null){
       if (recheck){
           //console.log('needs recheck')
           setTimeout(function(){
-              lookupSceneRefresh(refreshData);
+              lookupSceneRefresh(refreshData, startTime);
           }, 2500);
       }
     } catch (e){
