@@ -118,7 +118,7 @@ function refreshView(viewID){
         //refresh view on page
         setTimeout(function(){
           Knack.views['view_'+viewID].render()
-        }, 200);
+        }, 500);
       };
       //reload data from database
       Knack.views['view_'+viewID].model.fetch(a)
