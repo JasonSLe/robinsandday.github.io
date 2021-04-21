@@ -18,3 +18,9 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 .view_78 .kn-details-column>.kn-details-group{ border: 2px solid red; }
+
+.view_80 .kn-details-column>.kn-details-group:before{
+content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/EMaCLogo.png);
+}
+
+.view_80 .kn-details-column>.kn-details-group{ border: 2px solid red; }
