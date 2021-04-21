@@ -1,6 +1,6 @@
 #kn-scene_22 .kn-detail-label {color:#a8aaac; background-color: #ffffff; font-weight: normal; padding-top: 0px;}
 
-#kn-scene_22 .kn-detail-body {color:#37517e;font-size: 0.95rem; padding-top: 0px; padding-bottom: 0px;}
+#kn-scene_22 .kn-detail-body {color:#37517e;font-size: 0.95rem; padding-top: 0px; padding-bottom: 0px;margin-top: -7px;margin-bottom: 7px}
 
 #kn-scene_22 .field_31 .kn-detail-body>span {color:#000000; font-size: 2rem; background-color:yellow; font-weight: bold;}
 
@@ -24,3 +24,9 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 .view_80 .kn-details-column>.kn-details-group{ border: 2px solid yellow; }
+
+.view_81 .kn-details-column>.kn-details-group:before{
+content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/DVLALogo.png);
+}
+
+.view_81 .kn-details-column>.kn-details-group{ border: 2px solid green; }
