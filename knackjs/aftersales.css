@@ -1,6 +1,6 @@
-#kn-scene_22 .kn-detail-label {color:#a8aaac; background-color: #ffffff; font-weight: normal;}
+#kn-scene_22 .kn-detail-label {color:#a8aaac; background-color: #ffffff; font-weight: normal; padding-top: 0px;}
 
-#kn-scene_22 .kn-detail-body {color:#37517e;font-size: 1rem;}
+#kn-scene_22 .kn-detail-body {color:#37517e;font-size: 0.95rem; padding-top: 0px; padding-bottom: 0px;}
 
 #kn-scene_22 .field_31 .kn-detail-body>span {color:#000000; font-size: 2rem; background-color:yellow; font-weight: bold;}
 
@@ -11,4 +11,8 @@
     width: 21px;
     height: 44px;
     float: left;
+}
+
+.view_78 .kn-details-column>.kn-details-group:before{
+content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/VHCLogo.png);
 }
