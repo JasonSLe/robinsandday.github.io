@@ -16,17 +16,17 @@
 .view_78 .kn-details-column>.kn-details-group:before{
 content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/VHCLogo.png);
 }
-
 .view_78 .kn-details-column>.kn-details-group{ border: 2px solid red; }
 
 .view_80 .kn-details-column>.kn-details-group:before{
 content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/EMaCLogo.png);
 }
-
 .view_80 .kn-details-column>.kn-details-group{ border: 2px solid yellow; }
 
 .view_81 .kn-details-column>.kn-details-group:before{
 content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/DVLALogo.png);
 }
-
 .view_81 .kn-details-column>.kn-details-group{ border: 2px solid green; }
+
+#kn-scene_22 .field_72 #serviceSchedule {display:none;}
+#kn-scene_22 .field_72 #arduousInfo {display:none;}
