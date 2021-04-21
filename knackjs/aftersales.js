@@ -97,8 +97,8 @@ function lookupSceneRefresh(refreshData, startTime = null){
               }
           }
       }
-      if (recheck){
-          //console.log('needs recheck')
+      if (recheck && (new Date() - startTime)<180000){
+          console.log('needs recheck')
           setTimeout(function(){
               lookupSceneRefresh(refreshData, startTime);
           }, 2500);
