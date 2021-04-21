@@ -74,9 +74,13 @@ function functionName(selector_scene){
           }
         ]
 */
-function lookupSceneRefresh(refreshData){
+function lookupSceneRefresh(refreshData, startTime = null){
     console.log('lookupSceneRefresh');
     try {
+      if (!startTime){
+        startTime = new Date();
+        console.log('startTime', startTime);
+      }
       let recheck = false;
       for (one of refreshData){
           console.log(one);
@@ -133,7 +137,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
             mainField : 'field_72',
             views:['82']
           },{
-            mainField : 'field_245',
+            mainField : 'field_246',
             views:['84']
           }
         ]
