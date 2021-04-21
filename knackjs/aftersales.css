@@ -1,4 +1,4 @@
-#kn-scene_22 .kn-detail-label {color:#a8aaac; background-color: #ffffff; font-weight: normal; padding-top: 0px;}
+#kn-scene_22 .kn-detail-label {color:#a8aaac; font-size: 0.9rem; background-color: #ffffff; font-weight: normal; padding-top: 0px;}
 
 #kn-scene_22 .kn-detail-body {color:#37517e;font-size: 0.95rem; padding-top: 0px; padding-bottom: 0px;margin-top: -7px;margin-bottom: 7px}
 
@@ -30,3 +30,5 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 #kn-scene_22 .field_72 #serviceSchedule {display:none;}
 #kn-scene_22 .field_72 #arduousInfo {display:none;}
+
+#kn-scene_22 th {font-size: 0.9rem; font-weight: normal;color:#a8aaac;}
