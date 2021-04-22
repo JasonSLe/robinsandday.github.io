@@ -147,4 +147,12 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
         ]
         lookupSceneRefresh(refreshData);
     }, 3000);
+
+    var serviceScheduleLabel = document.getElementsByClassName('field_72')[0];
+
+    serviceScheduleLabel.style.cursor = 'pointer';
+    serviceScheduleLabel.onclick = function() {
+      let servS = document.getElementById("serviceSchedule");
+      servS.style.display = "inline";
+    };
   });
