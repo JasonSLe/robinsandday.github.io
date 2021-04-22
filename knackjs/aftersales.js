@@ -139,9 +139,9 @@ function refreshView(viewID){
     }
 }
 
-function generateTyres(){
+/*function generateTyres(){
   console.log('GenerateTyres');
-}
+}*/
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     //first check after 3 seconds, but it can do the first check immediatelly
@@ -162,7 +162,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
           },{
             mainField : 'field_247',
             views:['88','89','90'],
-            runAfter : generateTyres
+            //runAfter : generateTyres
           }
         ]
         lookupSceneRefresh(refreshData);
