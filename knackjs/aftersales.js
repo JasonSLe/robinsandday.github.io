@@ -101,6 +101,12 @@ function lookupSceneRefresh(refreshData, startTime = null){
                   setTimeout(one.runAfter,100);
                 }
               }
+          } else {
+            console.log('DONE');
+            if (one.runAfter){
+              console.log('runAfter');
+              setTimeout(one.runAfter,100);
+            }
           }
       }
       if (recheck && (new Date() - startTime)<180000){
