@@ -95,6 +95,7 @@ function lookupSceneRefresh(refreshData, startTime = null){
               if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
                   recheck = true;
               } else {
+                console.log('DONE');
                 if (one.runAfter){
                   console.log('runAfter');
                   setTimeout(one.runAfter,100);
