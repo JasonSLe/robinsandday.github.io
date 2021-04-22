@@ -153,6 +153,10 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     serviceScheduleLabel.style.cursor = 'pointer';
     serviceScheduleLabel.onclick = function() {
       let servS = document.getElementById("serviceSchedule");
-      servS.style.display = "inline";
+      if (servS.style.display === "none"){
+        servS.style.display = "inline";
+      } else {
+        servS.style.display = "none";
+      }
     };
   });
