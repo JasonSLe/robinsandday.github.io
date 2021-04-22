@@ -154,7 +154,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     serviceScheduleLabel.onclick = function() {
       let servS = document.getElementById("serviceSchedule");
       console.log('servS.style.display',servS.style.display)
-      if (servS.style.display === "none"){
+      if (servS.style.display === "none" || servS.style.display === ""){
         servS.style.display = "inline";
       } else {
         servS.style.display = "none";
