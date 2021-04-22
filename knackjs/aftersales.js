@@ -94,6 +94,11 @@ function lookupSceneRefresh(refreshData, startTime = null){
               console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
               if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
                   recheck = true;
+              } else {
+                if (one.runAfter){
+                  console.log('runAfter');
+                  setTimeout(one.runAfter,100);
+                }
               }
           }
       }
@@ -127,6 +132,10 @@ function refreshView(viewID){
     }
 }
 
+function generateTyres(){
+  console.log('GenerateTyres');
+}
+
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     //first check after 3 seconds, but it can do the first check immediatelly
     setTimeout(function(){
@@ -145,7 +154,8 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
             views:['84']
           },{
             mainField : 'field_247',
-            views:['88']
+            views:['88'],
+            runAfter : generateTyres
           }
         ]
         lookupSceneRefresh(refreshData);
