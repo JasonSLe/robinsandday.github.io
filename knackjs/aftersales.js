@@ -161,7 +161,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
             views:['84']
           },{
             mainField : 'field_247',
-            views:['88'],
+            views:['88','89','90'],
             runAfter : generateTyres
           }
         ]
