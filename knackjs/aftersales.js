@@ -157,6 +157,9 @@ function generateTyres(){
     return el['a:StockPolicy'][0] === 'ACTIVE' && el['a:Winter'][0] === 'N'
   })
   console.log('tyresJSON.length filtered',tyresJSON.length);
+  tyresJSON = tyresJSON.sort(function(a,b){
+    return (a['a:RetailPrice'] < b['a:RetailPrice']?1:(a['a:RetailPrice'] > b['a:RetailPrice']?-1:0));
+  })
   let numberOfTables = 2;
   let recordsPerTableWhole = Math.floor(tyresJSON.length/numberOfTables);
   let outputTables = [];
