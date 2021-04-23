@@ -161,7 +161,7 @@ function generateTyres(){
     return (a['a:RetailPrice'] < b['a:RetailPrice']?1:(a['a:RetailPrice'] > b['a:RetailPrice']?-1:0));
   })
   let outputTables = [{name:'Premium'},{name:'Medium'},{name:'Budget'}];
-  let recordsPerTableWhole = Math.floor(tyresJSON.length/numberOfTables);
+  let recordsPerTableWhole = Math.floor(tyresJSON.length/outputTables.length);
   let remainderOfRecords = tyresJSON.length % numberOfTables;
   for (let i = 0;i<outputTables.length;i++){
     outputTables[i].count = recordsPerTableWhole;
