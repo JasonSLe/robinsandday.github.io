@@ -74,7 +74,7 @@ function functionName(selector_scene){
           }
         ]
 */
-function lookupSceneRefresh(refreshData, startTime = null){
+function lookupSceneRefresh(refreshData, startTime = null, runCounter = 1){
     console.log('lookupSceneRefresh');
     try {
       if (!startTime){
@@ -94,8 +94,10 @@ function lookupSceneRefresh(refreshData, startTime = null){
               //console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
               if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
                   recheck = true;
-                  for (oneView of one.views){
-                    fillLoading(oneView);
+                  if (runCounter===1){
+                    for (oneView of one.views){
+                      fillLoading(oneView);
+                    }
                   }
               } else {
                 if (one.runAfter){
@@ -111,7 +113,7 @@ function lookupSceneRefresh(refreshData, startTime = null){
       if (recheck && (new Date() - startTime)<180000){
           //console.log('needs recheck')
           setTimeout(function(){
-              lookupSceneRefresh(refreshData, startTime);
+              lookupSceneRefresh(refreshData, startTime, runCounter + 1);
           }, 2500);
       }
     } catch (e){
@@ -126,7 +128,7 @@ function refreshView(viewID, mainField, mainFieldView){
       const a = {}
       a.success = function () {
         //if the mainField has value, refresh the view in browser
-        if (Knack.views['view_'+mainFieldView].model.attributes[mainField]){
+        if (Knack.views['view_'+mainFieldView].model.attributes[mainField]===''){
           //refresh view on page
           setTimeout(function(){
             Knack.views['view_'+viewID].render()
