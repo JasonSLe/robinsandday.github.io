@@ -144,6 +144,10 @@ function refreshView(viewID, mainField, mainFieldView){
     }
 }
 
+function formatDateGB(date){
+  return date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear();
+}
+
 function fillLoading(viewID){
   console.log('fillLoading', viewID);
   $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){$(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')})
@@ -175,7 +179,7 @@ function generateTyres(){
   for (let i = 0;i<outputTables.length;i++){
     outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
     for (let j = jsonPosition;j<jsonPosition + (outputTables[i].count<5?outputTables[i].count:5);j++){
-      outputTables[i].text += '<tr title="Available:'+tyresJSON[j]['a:AvailableQuantity'][0]+';SOR:'+tyresJSON[j]['a:SORQuantity'][0]+';Delivery date:'+tyresJSON[j]['a:DeliveryDate'][0]+'"><td bgcolor="'+tyreRowColor(tyresJSON[j]['a:AvailableQuantity'][0],tyresJSON[j]['a:SORQuantity'][0])+'">'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:TotalFittedRetailPriceIncVAT'][0]+'</td></tr>';
+      outputTables[i].text += '<tr title="Available: '+tyresJSON[j]['a:AvailableQuantity'][0]+';SOR: '+tyresJSON[j]['a:SORQuantity'][0]+';Delivery date: '+formatDateGB(new Date(tyresJSON[j]['a:DeliveryDate'][0]))+'"><td bgcolor="'+tyreRowColor(tyresJSON[j]['a:AvailableQuantity'][0],tyresJSON[j]['a:SORQuantity'][0])+'">'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:TotalFittedRetailPriceIncVAT'][0]+'</td></tr>';
     }
     jsonPosition += outputTables[i].count;
     outputTables[i].text += '</table>';
