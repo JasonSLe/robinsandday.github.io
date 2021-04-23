@@ -104,11 +104,13 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
               } else {
                 if (one.runAfter){
                   setTimeout(one.runAfter,100);
+                  one.runAfter = null;
                 }
               }
           } else {
             if (one.runAfter){
               setTimeout(one.runAfter,100);
+              one.runAfter = null;
             }
           }
       }
