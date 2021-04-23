@@ -126,7 +126,6 @@ function lookupSceneRefresh(refreshData, startTime = null){
 //This function refreshes view acording viewId, what is just view number!
 //Can be called from scene render, view render
 function refreshView(viewID, mainField, mainFieldView){
-    console.log('refresh view', viewID)
     try {
       const a = {}
       a.success = function () {
