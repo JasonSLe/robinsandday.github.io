@@ -170,8 +170,8 @@ function generateTyres(){
     }
     outputTables[i] += '</table>';
   }
-  console.log(outputTables.join(''));
-  $('div[class*="field_250"]').html(outputTables.join(''));
+  console.log('<table><tr><td>Premium<br />'+outputTables.join('</td><td>')+'</td></tr></trable>');
+  $('div[class*="field_250"]').html('<table><tr><td>Premium<br />'+outputTables.join('</td><td>')+'</td></tr></trable>');
   $('div[class*="field_250"]').show();
 }
 
