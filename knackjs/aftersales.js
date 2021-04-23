@@ -128,7 +128,7 @@ function refreshView(viewID, mainField, mainFieldView){
       const a = {}
       a.success = function () {
         //if the mainField has value, refresh the view in browser
-        if (Knack.views['view_'+mainFieldView].model.attributes[mainField]===''){
+        if (Knack.views['view_'+mainFieldView].model.attributes[mainField]!==''){
           //refresh view on page
           setTimeout(function(){
             Knack.views['view_'+viewID].render()
