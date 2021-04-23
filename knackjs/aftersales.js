@@ -174,7 +174,7 @@ function createServiceScheduleClick(){
 }
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
-    //first check after 3 seconds, but it can do the first check immediatelly
+  console.log('scene22')
     setTimeout(function(){
         let refreshData = [
           {
@@ -196,6 +196,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
             runAfter : generateTyres
           }
         ]
+        console.log('call scenerefresh')
         sceneRefresh(refreshData);
     }, 100);
   });
