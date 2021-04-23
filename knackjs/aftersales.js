@@ -151,6 +151,20 @@ function fillLoading(viewID){
   console.log('GenerateTyres');
 }*/
 
+function createServiceScheduleClick(){
+  var serviceScheduleLabel = document.getElementsByClassName('field_72')[0];
+
+  serviceScheduleLabel.style.cursor = 'pointer';
+  serviceScheduleLabel.onclick = function() {
+    let servS = document.getElementById("serviceSchedule");
+    if (servS.style.display === "none" || servS.style.display === ""){
+      servS.style.display = "inline";
+    } else {
+      servS.style.display = "none";
+    }
+  };
+}
+
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     //first check after 3 seconds, but it can do the first check immediatelly
     setTimeout(function(){
@@ -163,7 +177,8 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
               views:['76','80', '81']
           },{
             mainField : 'field_72',
-            views:['82']
+            views:['82'],
+            runAfter : createServiceScheduleClick
           },{
             mainField : 'field_246',
             views:['84']
@@ -175,16 +190,4 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
         ]
         sceneRefresh(refreshData);
     }, 100);
-
-    var serviceScheduleLabel = document.getElementsByClassName('field_72')[0];
-
-    serviceScheduleLabel.style.cursor = 'pointer';
-    serviceScheduleLabel.onclick = function() {
-      let servS = document.getElementById("serviceSchedule");
-      if (servS.style.display === "none" || servS.style.display === ""){
-        servS.style.display = "inline";
-      } else {
-        servS.style.display = "none";
-      }
-    };
   });
