@@ -89,7 +89,7 @@ function lookupSceneRefresh(refreshData, startTime = null){
           console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
           if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
               for (oneView of one.views){
-                  refreshView(oneView);
+                  refreshView(oneView, one.mainField, one.views[0]);
               }
               console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
               if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
@@ -125,11 +125,12 @@ function lookupSceneRefresh(refreshData, startTime = null){
 
 //This function refreshes view acording viewId, what is just view number!
 //Can be called from scene render, view render
-function refreshView(viewID){
+function refreshView(viewID, mainField, mainFieldView){
     console.log('refresh view', viewID)
     try {
       const a = {}
       a.success = function () {
+        console.log('refreshView', Knack.views['view_'+mainFieldView].model.attributes[mainField])
         //refresh view on page
         setTimeout(function(){
           Knack.views['view_'+viewID].render()
