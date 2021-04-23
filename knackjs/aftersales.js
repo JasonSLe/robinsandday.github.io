@@ -156,7 +156,18 @@ function generateTyres(){
   tyresJSON = tyresJSON.filter(function(el){
     return el['a:StockPolicy'][0] === 'ACTIVE' && el['a:Winter'][0] === 'N'
   })
-  console.log('tyresJSON.length filtered',tyresJSON.length)
+  console.log('tyresJSON.length filtered',tyresJSON.length);
+  let numberOfTables = 2;
+  let recordsPerTableWhole = Math.floor(tyresJSON.length/numberOfTables);
+  let outputTables = [];
+  for (let i = 0;i<numberOfTables;i++){
+    outputTables[i] = '<table>';
+    for (let j = i*recordsPerTableWhole;j<(i+1)*recordsPerTableWhole;j++){
+      outputTables[i] += '<tr><td>'+tyresJSON[j]['a:StockDesc'][0]+'</td></tr>';
+    }
+    outputTables[i] += '</table>';
+  }
+  $('div[class="field_250"]').html(outputTables.join(''));
 }
 
 function createServiceScheduleClick(){
