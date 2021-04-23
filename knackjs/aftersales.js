@@ -112,7 +112,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
             }
           }
       }
-      if (recheck && (new Date() - startTime)<180000){
+      if (recheck && (new Date() - startTime)<240000){
           //console.log('needs recheck')
           setTimeout(function(){
               sceneRefresh(refreshData, startTime, runCounter + 1);
