@@ -174,7 +174,6 @@ function createServiceScheduleClick(){
 }
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
-  console.log('scene22')
     setTimeout(function(){
         let refreshData = [
           {
@@ -196,7 +195,6 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
             runAfter : generateTyres
           }
         ]
-        console.log('call scenerefresh')
         sceneRefresh(refreshData);
     }, 100);
   });
