@@ -174,8 +174,8 @@ function generateTyres(){
   let jsonPosition = 0;
   for (let i = 0;i<outputTables.length;i++){
     outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
-    for (let j = jsonPosition;j<jsonPosition + outputTables[i].count;j++){
-      outputTables[i].text += '<tr><td>'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:RetailPrice'][0]+'</td></tr>';
+    for (let j = jsonPosition;j<jsonPosition + (outputTables[i].count<5?outputTables[i].count:5);j++){
+      outputTables[i].text += '<tr><td bgcolor="'+tyreRowColor(tyresJSON[j]['a:AvailableQuantity'][0],tyresJSON[j]['a:SORQuantity'][0])+'">'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:RetailPrice'][0]+'</td></tr>';
     }
     jsonPosition += outputTables[i].count;
     outputTables[i].text += '</table>';
@@ -188,6 +188,18 @@ function generateTyres(){
 
   $('div[class*="field_250"]').html(output);
   $('div[class*="field_250"]').show();
+}
+
+function tyreRowColor(stockCount, SORCount){
+  if (SORCount>=4){
+    return '#00ff00';
+  } else if (stockCount>=4){
+    return '#56ff56';
+  } else if (stockCount>0){
+    return '#ffff00';
+  } else {
+    return '#ff0000';
+  }
 }
 
 function createServiceScheduleClick(){
