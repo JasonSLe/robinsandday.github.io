@@ -173,9 +173,9 @@ function generateTyres(){
   
   let jsonPosition = 0;
   for (let i = 0;i<outputTables.length;i++){
-    outputTables[i].text = '<table>';
+    outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
     for (let j = jsonPosition;j<jsonPosition + outputTables[i].count;j++){
-      outputTables[i].text += '<tr><td>'+tyresJSON[j]['a:StockDesc'][0]+'</td></tr>';
+      outputTables[i].text += '<tr><td>'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:RetailPrice'][0]+'</td></tr>';
     }
     jsonPosition += outputTables[i].count;
     outputTables[i].text += '</table>';
