@@ -130,11 +130,13 @@ function refreshView(viewID, mainField, mainFieldView){
     try {
       const a = {}
       a.success = function () {
-        console.log('refreshView', Knack.views['view_'+mainFieldView].model.attributes[mainField])
-        //refresh view on page
-        setTimeout(function(){
-          Knack.views['view_'+viewID].render()
-        }, 100);
+        //if the mainField has value, refresh the view in browser
+        if (Knack.views['view_'+mainFieldView].model.attributes[mainField]){
+          //refresh view on page
+          setTimeout(function(){
+            Knack.views['view_'+viewID].render()
+          }, 100);
+        }
       };
       //reload data from database
       Knack.views['view_'+viewID].model.fetch(a)
