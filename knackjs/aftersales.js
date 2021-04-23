@@ -61,6 +61,7 @@ function functionName(selector_scene){
   Field mainField is knack fields on first view of views array and this field is used for checking if the background process finished it run and updated the record, so the update process needs ALWAYS give some value to this field!
   Function updates all views in views property of record, if field mainField is blank, till there is some value in mainField 
   !mainField needs to be on first View in array!
+  runAfter is function, which is run after the data are loaded to the view
 
   This is just example
   let refreshData = [
@@ -70,7 +71,8 @@ function functionName(selector_scene){
               views:['75','78']   
           },{
               mainField : 'field_74',
-              views:['76']
+              views:['76'],
+              runAfter : functionName
           }
         ]
 */
@@ -147,9 +149,9 @@ function fillLoading(viewID){
   $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){$(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')})
 }
 
-/*function generateTyres(){
+function generateTyres(){
   console.log('GenerateTyres');
-}*/
+}
 
 function createServiceScheduleClick(){
   var serviceScheduleLabel = document.getElementsByClassName('field_72')[0];
@@ -185,7 +187,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
           },{
             mainField : 'field_247',
             views:['88','89','90'],
-            //runAfter : generateTyres
+            runAfter : generateTyres
           }
         ]
         sceneRefresh(refreshData);
