@@ -180,11 +180,11 @@ function generateTyres(){
     jsonPosition += outputTables[i].count;
     outputTables[i].text += '</table>';
   }
-  let output = '<table>';
+  let output = '<table><tr>';
   for (let i =0;i<outputTables.length;i++){
-    output += '<tr><td>' + outputTables[i].name + '<br />'+outputTables[i].text+'</tr></td>';
+    output += '<td>' + outputTables[i].name + '<br />'+outputTables[i].text+'</td>';
   }
-  output += '</table>';
+  output += '</tr></table>';
 
   $('div[class*="field_250"]').html(output);
   $('div[class*="field_250"]').show();
