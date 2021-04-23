@@ -162,7 +162,7 @@ function generateTyres(){
   })
   let outputTables = [{name:'Premium'},{name:'Medium'},{name:'Budget'}];
   let recordsPerTableWhole = Math.floor(tyresJSON.length/outputTables.length);
-  let remainderOfRecords = tyresJSON.length % numberOfTables;
+  let remainderOfRecords = tyresJSON.length % outputTables.length;
   for (let i = 0;i<outputTables.length;i++){
     outputTables[i].count = recordsPerTableWhole;
     if (remainderOfRecords>0) {
