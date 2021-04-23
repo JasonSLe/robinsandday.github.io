@@ -156,13 +156,12 @@ function fillLoading(viewID){
 function generateTyres(){
   console.log('GenerateTyres');
   let tyresJSON = JSON.parse(Knack.views['view_88'].model.attributes['field_250']);
-  console.log('tyresJSON.length',tyresJSON.length)
   tyresJSON = tyresJSON.filter(function(el){
     return el['a:StockPolicy'][0] === 'ACTIVE' && el['a:Winter'][0] === 'N'
   })
   console.log('tyresJSON.length filtered',tyresJSON.length);
   tyresJSON = tyresJSON.sort(function(a,b){
-    return (a['a:RetailPrice'] < b['a:RetailPrice']?1:(a['a:RetailPrice'] > b['a:RetailPrice']?-1:0));
+    return (a['a:TotalFittedRetailPriceIncVAT'][0] < b['a:TotalFittedRetailPriceIncVAT'][0]?1:(a['a:TotalFittedRetailPriceIncVAT'][0] > b['a:TotalFittedRetailPriceIncVAT'][0]?-1:0));
   })
   let outputTables = [{name:'Premium'},{name:'Medium'},{name:'Budget'}];
   let recordsPerTableWhole = Math.floor(tyresJSON.length/outputTables.length);
