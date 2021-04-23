@@ -94,6 +94,9 @@ function lookupSceneRefresh(refreshData, startTime = null){
               console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
               if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
                   recheck = true;
+                  for (oneView of one.views){
+                    fillLoading(oneView);
+                  }
               } else {
                 console.log('DONE');
                 if (one.runAfter){
@@ -139,6 +142,10 @@ function refreshView(viewID){
     }
 }
 
+function fillLoading(viewID){
+  $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){$(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')})
+}
+
 /*function generateTyres(){
   console.log('GenerateTyres');
 }*/
@@ -166,7 +173,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
           }
         ]
         lookupSceneRefresh(refreshData);
-    }, 3000);
+    }, 100);
 
     var serviceScheduleLabel = document.getElementsByClassName('field_72')[0];
 
