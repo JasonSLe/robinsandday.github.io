@@ -79,41 +79,37 @@ function lookupSceneRefresh(refreshData, startTime = null){
     try {
       if (!startTime){
         startTime = new Date();
-        console.log('startTime', startTime);
+        //console.log('startTime', startTime);
       } else {
-        console.log('elapsed',new Date() - startTime);
+        //console.log('elapsed',new Date() - startTime);
       }
       let recheck = false;
       for (one of refreshData){
-          console.log(one);
-          console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
+          //console.log(one);
+          //console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
           if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
               for (oneView of one.views){
                   refreshView(oneView, one.mainField, one.views[0]);
               }
-              console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
+              //console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
               if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
                   recheck = true;
                   for (oneView of one.views){
                     fillLoading(oneView);
                   }
               } else {
-                console.log('DONE');
                 if (one.runAfter){
-                  console.log('runAfter');
                   setTimeout(one.runAfter,100);
                 }
               }
           } else {
-            console.log('DONE');
             if (one.runAfter){
-              console.log('runAfter');
               setTimeout(one.runAfter,100);
             }
           }
       }
       if (recheck && (new Date() - startTime)<180000){
-          console.log('needs recheck')
+          //console.log('needs recheck')
           setTimeout(function(){
               lookupSceneRefresh(refreshData, startTime);
           }, 2500);
