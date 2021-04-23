@@ -74,8 +74,8 @@ function functionName(selector_scene){
           }
         ]
 */
-function lookupSceneRefresh(refreshData, startTime = null, runCounter = 1){
-    console.log('lookupSceneRefresh');
+function sceneRefresh(refreshData, startTime = null, runCounter = 1){
+    console.log('sceneRefresh');
     try {
       if (!startTime){
         startTime = new Date();
@@ -113,11 +113,11 @@ function lookupSceneRefresh(refreshData, startTime = null, runCounter = 1){
       if (recheck && (new Date() - startTime)<180000){
           //console.log('needs recheck')
           setTimeout(function(){
-              lookupSceneRefresh(refreshData, startTime, runCounter + 1);
+              sceneRefresh(refreshData, startTime, runCounter + 1);
           }, 2500);
       }
     } catch (e){
-      console.log('lookupSceneRefresh fail', refreshData, e)
+      console.log('sceneRefresh fail', refreshData, e)
     }
 }
 
@@ -173,7 +173,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
             //runAfter : generateTyres
           }
         ]
-        lookupSceneRefresh(refreshData);
+        sceneRefresh(refreshData);
     }, 100);
 
     var serviceScheduleLabel = document.getElementsByClassName('field_72')[0];
