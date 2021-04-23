@@ -160,18 +160,33 @@ function generateTyres(){
   tyresJSON = tyresJSON.sort(function(a,b){
     return (a['a:RetailPrice'] < b['a:RetailPrice']?1:(a['a:RetailPrice'] > b['a:RetailPrice']?-1:0));
   })
-  let numberOfTables = 2;
+  let outputTables = [{name:'Premium'},{name:'Medium'},{name:'Budget'}];
   let recordsPerTableWhole = Math.floor(tyresJSON.length/numberOfTables);
-  let outputTables = [];
-  for (let i = 0;i<numberOfTables;i++){
-    outputTables[i] = '<table>';
-    for (let j = i*recordsPerTableWhole;j<(i+1)*recordsPerTableWhole;j++){
-      outputTables[i] += '<tr><td>'+tyresJSON[j]['a:StockDesc'][0]+'</td></tr>';
+  let remainderOfRecords = tyresJSON.length % numberOfTables;
+  for (let i = 0;i<outputTables.length;i++){
+    outputTables[i].count = recordsPerTableWhole;
+    if (remainderOfRecords>0) {
+      outputTables[i].count += 1;
+      remainderOfRecords = remainderOfRecords - 1;
     }
-    outputTables[i] += '</table>';
   }
-  console.log('<table><tr><td>Premium<br />'+outputTables.join('</td><td>')+'</td></tr></trable>');
-  $('div[class*="field_250"]').html('<table><tr><td>Premium<br />'+outputTables.join('</td><td>')+'</td></tr></trable>');
+  
+  let jsonPosition = 0;
+  for (let i = 0;i<outputTables.length;i++){
+    outputTables[i].text = '<table>';
+    for (let j = jsonPosition;j<jsonPosition + outputTables[i].count;j++){
+      outputTables[i].text += '<tr><td>'+tyresJSON[j]['a:StockDesc'][0]+'</td></tr>';
+    }
+    jsonPosition += outputTables[i].count;
+    outputTables[i].text += '</table>';
+  }
+  let output = '<table>';
+  for (let i =0;i<outputTables.length;i++){
+    output += '<tr><td>' + outputTables[i].name + '<br />'+outputTables[i].text+'</tr></td>';
+  }
+  output += '</table>';
+
+  $('div[class*="field_250"]').html(output);
   $('div[class*="field_250"]').show();
 }
 
