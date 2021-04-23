@@ -175,7 +175,7 @@ function generateTyres(){
   for (let i = 0;i<outputTables.length;i++){
     outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
     for (let j = jsonPosition;j<jsonPosition + (outputTables[i].count<5?outputTables[i].count:5);j++){
-      outputTables[i].text += '<tr><td bgcolor="'+tyreRowColor(tyresJSON[j]['a:AvailableQuantity'][0],tyresJSON[j]['a:SORQuantity'][0])+'">'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:RetailPrice'][0]+'</td></tr>';
+      outputTables[i].text += '<tr title="Available:'+tyresJSON[j]['a:AvailableQuantity'][0]+';SOR:'+tyresJSON[j]['a:SORQuantity'][0]+';Delivery date:'+tyresJSON[j]['a:DeliveryDate'][0]+'"><td bgcolor="'+tyreRowColor(tyresJSON[j]['a:AvailableQuantity'][0],tyresJSON[j]['a:SORQuantity'][0])+'">'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:TotalFittedRetailPriceIncVAT'][0]+'</td></tr>';
     }
     jsonPosition += outputTables[i].count;
     outputTables[i].text += '</table>';
