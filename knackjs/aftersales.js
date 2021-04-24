@@ -133,10 +133,12 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
 //Can be called from scene render, view render
 function refreshView(viewID, mainField, mainFieldView){
     try {
+      var currModel = JSON.stringify(Knack.views['view_'+viewID].model.attributes);
       const a = {}
       a.success = function () {
         //if the mainField has value, refresh the view in browser
-        if (Knack.views['view_'+mainFieldView].model.attributes[mainField]!==''){
+        if (currModel !== JSON.stringify(Knack.views['view_'+viewID].model.attributes)){
+        //if (Knack.views['view_'+mainFieldView].model.attributes[mainField]!==''){
           //refresh view on page
           setTimeout(function(){
             Knack.views['view_'+viewID].render()
@@ -144,7 +146,6 @@ function refreshView(viewID, mainField, mainFieldView){
         }
       };
       //reload data from database
-      console.log(JSON.stringify(Knack.views['view_'+viewID].model.attributes));
       Knack.views['view_'+viewID].model.fetch(a);
     } catch (e){
       console.log('error refreshing view', viewID, e)
