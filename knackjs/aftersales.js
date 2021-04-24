@@ -144,7 +144,7 @@ function refreshView(viewID, mainField, mainFieldView){
         }
       };
       //reload data from database
-      console.log(Knack.views['view_'+viewID].model);
+      console.log(JSON.stringify(Knack.views['view_'+viewID].model.attributes));
       Knack.views['view_'+viewID].model.fetch(a);
     } catch (e){
       console.log('error refreshing view', viewID, e)
