@@ -151,7 +151,6 @@ function formatDateGB(date){
 }
 
 function fillLoading(viewID){
-  console.log('fillLoading', viewID);
   $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){$(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')})
 }
 
@@ -239,7 +238,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
             views:['84']
           },{
             mainField : 'field_247',
-            views:['88','89','90'],
+            views:['88'],
             runAfter : generateTyres
           }
         ]
