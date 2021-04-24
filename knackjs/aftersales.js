@@ -245,7 +245,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
             runAfter : createServiceScheduleClick
           },{
             mainField : 'field_246',
-            views:['84']
+            views:['84','91']
           },{
             mainField : 'field_247',
             views:['88'],
