@@ -121,6 +121,8 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
           }, 2500);
       } else if ((new Date() - startTime)>240000){
         console.log('ending refresh without all done')
+      } else {
+        console.log('everything checked');
       }
     } catch (e){
       console.log('sceneRefresh fail', refreshData, e)
@@ -142,7 +144,8 @@ function refreshView(viewID, mainField, mainFieldView){
         }
       };
       //reload data from database
-      Knack.views['view_'+viewID].model.fetch(a)
+      console.log(Knack.views['view_'+viewID].model);
+      Knack.views['view_'+viewID].model.fetch(a);
     } catch (e){
       console.log('error refreshing view', viewID, e)
     }
