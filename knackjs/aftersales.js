@@ -161,43 +161,47 @@ function fillLoading(viewID){
 }
 
 function generateTyres(){
-  console.log('GenerateTyres');
-  let tyresJSON = JSON.parse(Knack.views['view_88'].model.attributes['field_250']);
-  tyresJSON = tyresJSON.filter(function(el){
-    return el['a:StockPolicy'][0] === 'ACTIVE' && el['a:Winter'][0] === 'N'
-  })
-  console.log('tyresJSON.length filtered',tyresJSON.length);
-  tyresJSON = tyresJSON.sort(function(a,b){
-    return (a['a:TotalFittedRetailPriceIncVAT'][0] < b['a:TotalFittedRetailPriceIncVAT'][0]?1:(a['a:TotalFittedRetailPriceIncVAT'][0] > b['a:TotalFittedRetailPriceIncVAT'][0]?-1:0));
-  })
-  let outputTables = [{name:'Premium'},{name:'Medium'},{name:'Budget'}];
-  let recordsPerTableWhole = Math.floor(tyresJSON.length/outputTables.length);
-  let remainderOfRecords = tyresJSON.length % outputTables.length;
-  for (let i = 0;i<outputTables.length;i++){
-    outputTables[i].count = recordsPerTableWhole;
-    if (remainderOfRecords>0) {
-      outputTables[i].count += 1;
-      remainderOfRecords = remainderOfRecords - 1;
+  try {
+    console.log('GenerateTyres');
+    let tyresJSON = JSON.parse(Knack.views['view_88'].model.attributes['field_250']);
+    tyresJSON = tyresJSON.filter(function(el){
+      return el['a:StockPolicy'][0] === 'ACTIVE' && el['a:Winter'][0] === 'N'
+    })
+    console.log('tyresJSON.length filtered',tyresJSON.length);
+    tyresJSON = tyresJSON.sort(function(a,b){
+      return (a['a:TotalFittedRetailPriceIncVAT'][0] < b['a:TotalFittedRetailPriceIncVAT'][0]?1:(a['a:TotalFittedRetailPriceIncVAT'][0] > b['a:TotalFittedRetailPriceIncVAT'][0]?-1:0));
+    })
+    let outputTables = [{name:'Premium'},{name:'Medium'},{name:'Budget'}];
+    let recordsPerTableWhole = Math.floor(tyresJSON.length/outputTables.length);
+    let remainderOfRecords = tyresJSON.length % outputTables.length;
+    for (let i = 0;i<outputTables.length;i++){
+      outputTables[i].count = recordsPerTableWhole;
+      if (remainderOfRecords>0) {
+        outputTables[i].count += 1;
+        remainderOfRecords = remainderOfRecords - 1;
+      }
     }
-  }
-  
-  let jsonPosition = 0;
-  for (let i = 0;i<outputTables.length;i++){
-    outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
-    for (let j = jsonPosition;j<jsonPosition + (outputTables[i].count<5?outputTables[i].count:5);j++){
-      outputTables[i].text += '<tr title="Available: '+tyresJSON[j]['a:AvailableQuantity'][0]+'; SOR: '+tyresJSON[j]['a:SORQuantity'][0]+'; Delivery date: '+formatDateGB(new Date(tyresJSON[j]['a:DeliveryDate'][0]))+'"><td bgcolor="'+tyreRowColor(tyresJSON[j]['a:AvailableQuantity'][0],tyresJSON[j]['a:SORQuantity'][0])+'">'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:TotalFittedRetailPriceIncVAT'][0]+'</td></tr>';
+    
+    let jsonPosition = 0;
+    for (let i = 0;i<outputTables.length;i++){
+      outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
+      for (let j = jsonPosition;j<jsonPosition + (outputTables[i].count<5?outputTables[i].count:5);j++){
+        outputTables[i].text += '<tr title="Available: '+tyresJSON[j]['a:AvailableQuantity'][0]+'; SOR: '+tyresJSON[j]['a:SORQuantity'][0]+'; Delivery date: '+formatDateGB(new Date(tyresJSON[j]['a:DeliveryDate'][0]))+'"><td bgcolor="'+tyreRowColor(tyresJSON[j]['a:AvailableQuantity'][0],tyresJSON[j]['a:SORQuantity'][0])+'">'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:TotalFittedRetailPriceIncVAT'][0]+'</td></tr>';
+      }
+      jsonPosition += outputTables[i].count;
+      outputTables[i].text += '</table>';
     }
-    jsonPosition += outputTables[i].count;
-    outputTables[i].text += '</table>';
-  }
-  let output = '<table><tr>';
-  for (let i =0;i<outputTables.length;i++){
-    output += '<td>' + outputTables[i].name + '<br />'+outputTables[i].text+'</td>';
-  }
-  output += '</tr></table>';
+    let output = '<table><tr>';
+    for (let i =0;i<outputTables.length;i++){
+      output += '<td>' + outputTables[i].name + '<br />'+outputTables[i].text+'</td>';
+    }
+    output += '</tr></table>';
 
-  $('div[class*="field_250"]').html(output);
-  $('div[class*="field_250"]').show();
+    $('div[class*="field_250"]').html(output);
+    $('div[class*="field_250"]').show();
+  } catch (e){
+    console.log('Error Generating tires',e);
+  }
 }
 
 function tyreRowColor(stockCount, SORCount){
