@@ -119,6 +119,8 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
           setTimeout(function(){
               sceneRefresh(refreshData, startTime, runCounter + 1);
           }, 2500);
+      } else if ((new Date() - startTime)>240000){
+        console.log('ending refresh without all done')
       }
     } catch (e){
       console.log('sceneRefresh fail', refreshData, e)
