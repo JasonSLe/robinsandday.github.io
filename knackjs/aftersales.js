@@ -91,7 +91,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
           //console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
           if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
               for (oneView of one.views){
-                  refreshView(oneView, one.mainField, one.views[0]);
+                  refreshView(oneView);
               }
               //console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
               if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
@@ -131,13 +131,13 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
 
 //This function refreshes view acording viewId, what is just view number!
 //Can be called from scene render, view render
-function refreshView(viewID, mainField, mainFieldView){
+function refreshView(viewID, reload = false){
     try {
       var currModel = JSON.stringify(Knack.views['view_'+viewID].model.attributes);
       const a = {}
       a.success = function () {
         //if the mainField has value, refresh the view in browser
-        if (currModel !== JSON.stringify(Knack.views['view_'+viewID].model.attributes)){
+        if ((currModel !== JSON.stringify(Knack.views['view_'+viewID].model.attributes)) || reload){
         //if (Knack.views['view_'+mainFieldView].model.attributes[mainField]!==''){
           //refresh view on page
           setTimeout(function(){
