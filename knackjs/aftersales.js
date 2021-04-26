@@ -102,15 +102,15 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
                     }
                   }
               } else {
-                if (one.runAfter){
+                if (one.runAfter && !one.runAfterDone){
                   setTimeout(one.runAfter,100);
-                  one.runAfter = null;
+                  one.runAfterDone = true;
                 }
               }
           } else {
-            if (one.runAfter){
+            if (one.runAfter && !one.runAfterDone){
               setTimeout(one.runAfter,100);
-              one.runAfter = null;
+              one.runAfterDone = true;
             }
           }
       }
@@ -148,6 +148,11 @@ function refreshView(viewID, reload = false){
           setTimeout(function(){
             Knack.views['view_'+viewID].render()
           }, 100);
+          if (reload){
+            if (one.runAfter){
+              setTimeout(one.runAfter,200);
+            }
+          }
         }
       };
       //reload data from database
