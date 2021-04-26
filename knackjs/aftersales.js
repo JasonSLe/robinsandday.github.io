@@ -247,7 +247,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     setTimeout(function(){
         let refreshData = [
           {
-              mainField : 'field_4',
+              mainField : 'field_240',
               views:['75','78']   
           },{
               mainField : 'field_74',
