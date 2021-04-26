@@ -125,12 +125,15 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
         if (runCounter!==1){
           console.log('everything checked, reload views just for sure');
           for (one of refreshData){
-            for (oneView of one.views){
-              refreshView(oneView, true);
+            if (!one.runAfterDone){
+              for (oneView of one.views){
+                refreshView(oneView, true);
+              }
             }
+            /*
             if (one.runAfter){
               setTimeout(one.runAfter,300);
-            }
+            }*/
           }
         }
       }
