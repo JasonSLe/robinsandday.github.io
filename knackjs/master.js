@@ -577,7 +577,7 @@ $(document).on('knack-view-render.view_2548', function(event, view) {
 
 $(document).on('knack-record-update.view_2520', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 16000);
   
   alert("Please wait while we fetch the Order, Customer & P/X Details from Autoline. Click 'OK' & this page will refresh in a few moments...");
 
@@ -590,7 +590,7 @@ $(document).on('knack-record-update.view_2520', function(event, view, data) {
 
 $(document).on('knack-record-update.view_2548', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 16000);
   
   alert("Please wait while we fetch the Vehicle Invoice from Autoline. Click 'OK' & this page will refresh in a few moments...");
 
