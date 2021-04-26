@@ -149,7 +149,7 @@ function refreshView(viewID, reload = false){
             Knack.views['view_'+viewID].render();
             if (reload){
               if (one.runAfter){
-                setTimeout(one.runAfter,200);
+                setTimeout(one.runAfter,100);
               }
             }
           }, 100);
