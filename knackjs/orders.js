@@ -212,7 +212,7 @@ step: '15'		// Dropdown Interval every 15 mins
 
 $(document).on('knack-record-update.view_2854', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 16000);
   
   alert("Please wait while we fetch the Order, Customer & P/X Details from Autoline. Click 'OK' & this page will refresh in a few moments...");
 
@@ -224,7 +224,7 @@ $(document).on('knack-record-update.view_2854', function(event, view, data) {
 
 $(document).on('knack-record-update.view_2855', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 16000);
   
   alert("Please wait while we fetch the Invoice from Autoline. Click 'OK' & this page will refresh in a few moments...");
 
