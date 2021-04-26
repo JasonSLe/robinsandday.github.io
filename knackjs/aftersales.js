@@ -125,7 +125,9 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
         console.log('everything checked, reload views just for sure');
         for (one of refreshData){
           for (oneView of one.views){
-            refreshView(oneView, true);
+            if (!one.runAfterDone){
+              refreshView(oneView, true);
+            }
           }
         }
       }
@@ -147,11 +149,6 @@ function refreshView(viewID, reload = false){
           //refresh view on page
           setTimeout(function(){
             Knack.views['view_'+viewID].render();
-            if (reload){
-              if (one.runAfter){
-                setTimeout(one.runAfter,100);
-              }
-            }
           }, 100);
         }
       };
