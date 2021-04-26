@@ -248,7 +248,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
         let refreshData = [
           {
               mainField : 'field_240',
-              views:['75','78']   
+              views:['78']   
           },{
               mainField : 'field_74',
               views:['76','80', '81','92']
