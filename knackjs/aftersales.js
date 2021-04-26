@@ -146,13 +146,13 @@ function refreshView(viewID, reload = false){
         //if (Knack.views['view_'+mainFieldView].model.attributes[mainField]!==''){
           //refresh view on page
           setTimeout(function(){
-            Knack.views['view_'+viewID].render()
-          }, 100);
-          if (reload){
-            if (one.runAfter){
-              setTimeout(one.runAfter,200);
+            Knack.views['view_'+viewID].render();
+            if (reload){
+              if (one.runAfter){
+                setTimeout(one.runAfter,200);
+              }
             }
-          }
+          }, 100);
         }
       };
       //reload data from database
