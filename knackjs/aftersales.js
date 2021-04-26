@@ -122,7 +122,12 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
       } else if ((new Date() - startTime)>240000){
         console.log('ending refresh without all done')
       } else {
-        console.log('everything checked');
+        console.log('everything checked, reload views just for sure');
+        for (one of refreshData){
+          for (oneView of one.views){
+            refreshView(oneView, true);
+          }
+        }
       }
     } catch (e){
       console.log('sceneRefresh fail', refreshData, e)
