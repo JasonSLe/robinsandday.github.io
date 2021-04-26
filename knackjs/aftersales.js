@@ -129,7 +129,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
               refreshView(oneView, true);
             }
             if (one.runAfter){
-              setTimeout(one.runAfter,100);
+              setTimeout(one.runAfter,300);
             }
           }
         }
@@ -152,7 +152,7 @@ function refreshView(viewID, reload = false){
           //refresh view on page
           setTimeout(function(){
             Knack.views['view_'+viewID].render();
-          }, 100);
+          }, 50);
         }
       };
       //reload data from database
