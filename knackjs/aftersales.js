@@ -90,8 +90,9 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
           //console.log(one);
           //console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
           if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
+              let mainReloaded = false; 
               for (oneView of one.views){
-                  refreshView(oneView);
+                  mainReloaded = refreshView(oneView, mainReloaded);
               }
               //console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
               if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
@@ -156,6 +157,9 @@ function refreshView(viewID, reload = false){
           setTimeout(function(){
             Knack.views['view_'+viewID].render();
           }, 50);
+          return true;
+        } else {
+          return false;
         }
       };
       //reload data from database
