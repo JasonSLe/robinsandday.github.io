@@ -523,7 +523,15 @@ function recursivecall(){
 
 // NEW DEAL FILE – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION
 $(document).on('knack-form-submit.view_2765', function(event, view, data) { 
-	commandURL = " https://hook.integromat.com/lnunp83lom13c9swu0vgabmurbjxj5x6?recordid=" + data.id ;
+	let commandURL = " https://hook.integromat.com/lnunp83lom13c9swu0vgabmurbjxj5x6?recordid=" + data.id ;
+  let dataToSend = JSON.stringify({"recordid":data.id})
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
 });
 
 
