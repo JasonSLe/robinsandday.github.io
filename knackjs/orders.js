@@ -520,3 +520,9 @@ $(document).on('knack-scene-render.scene_989', function(event, scene) {
 function recursivecall(){
  setTimeout(function () { if($("#view_3767").is(":visible")==true){ Knack.views["view_3767"].model.fetch();recursivecall();} }, 50000);
 }
+
+// NEW DEAL FILE – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION
+$(document).on('knack-form-submit.view_2765, function(event, view, data) { 
+	commandURL = 
+" https://hook.integromat.com/lnunp83lom13c9swu0vgabmurbjxj5x6?recordid=" + data.id ;
+});
