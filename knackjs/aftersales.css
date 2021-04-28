@@ -32,3 +32,16 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #kn-scene_22 .field_72 #arduousInfo {display:none;}
 
 #kn-scene_22 th {font-size: 0.9rem; font-weight: normal;color:#a8aaac;}
+
+
+/* Make Reg number look like REG in David's test layout page*/
+
+#view_97 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(1) > div > div > div.field_31 > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 24px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
