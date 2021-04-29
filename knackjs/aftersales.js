@@ -278,8 +278,6 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
 
   $(document).on('knack-form-submit.view_71', function(event, view, data) { 
     let commandURL = "https://hook.integromat.com/53yx2tuy820lvzuobdqex8jem2utgwil" ;
-    //let dataToSend = JSON.stringify({"id":data.id,"regNumber":data.field_31_raw,"source":"NEWRECORD"})
-    //or theoretically to have all data from form 
     let dataToSend = Object.assign({"source":"NEWRECORD"}, data); 
     console.log(dataToSend);
     var rData = $.ajax({
