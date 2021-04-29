@@ -272,3 +272,18 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
         sceneRefresh(refreshData);
     }, 100);
   });
+
+  $(document).on('knack-form-submit.view_71', function(event, view, data) { 
+    let commandURL = "https://hook.integromat.com/53yx2tuy820lvzuobdqex8jem2utgwil" ;
+    //let dataToSend = JSON.stringify({"recordid":data.id,"field_6481_raw":data.field_6481_raw,"typeOfCustomerSurvey":"NEW"})
+    //or theoretically to have all data from form 
+    let dataToSend = Object.assign(data,{"source":"NEWRECORD"}); 
+    var rData = $.ajax({
+      url: commandURL,
+      type: 'POST',
+      contentType: 'application/json',
+      data: dataToSend,
+      async: false
+    }).responseText;
+    console.log(rData);
+  });
