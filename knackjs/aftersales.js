@@ -283,7 +283,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
       url: commandURL,
       type: 'POST',
       contentType: 'application/json',
-      data: dataToSend,
+      data: JSON.stringify(dataToSend),
       async: false
     }).responseText;
     console.log(rData);
