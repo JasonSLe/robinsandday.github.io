@@ -262,10 +262,10 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
             runAfter : createServiceScheduleClick
           },{
             mainField : 'field_307',
-            views:['84']
+            views:['100']
           },{
             mainField : 'field_278',
-            views:['84','91','75']
+            views:['84','91','75','100']
           },{
             mainField : 'field_247',
             views:['88'],
