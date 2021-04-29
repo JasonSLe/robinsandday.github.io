@@ -251,26 +251,26 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     setTimeout(function(){
         let refreshData = [
           {
-              mainField : 'field_240',
+              mainField : 'field_240', //VHC - last mileage = VHC
               views:['78']   
           },{
-              mainField : 'field_74',
-              views:['76','80', '81','92']
-          },{
-            mainField : 'field_72',
+            mainField : 'field_72', //Service schedule table = Service schedule and recall - service schedule save
             views:['82'],
             runAfter : createServiceScheduleClick
           },{
-            mainField : 'field_307',
+            mainField : 'field_307', //Owner name = Autoline - first save of basic details 
             views:['100']
           },{
-            mainField : 'field_278',
-            views:['84','91','75','100']
+            mainField : 'field_278', //Customer type of bussiness = Autoline - save of complete details
+            views:['84','91','75','100','92'] 
           },{
-            mainField : 'field_247',
+            mainField : 'field_247', //Tyres - Front = Stapletons
             views:['88'],
             runAfter : generateTyres
-          }
+          },{
+            mainField : 'field_30', //MOT expiry date = DVLA, MOT, Service Plan
+            views:['81','92','76','80']
+        }
         ]
         sceneRefresh(refreshData);
     }, 100);
