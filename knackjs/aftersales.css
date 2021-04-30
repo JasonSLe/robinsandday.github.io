@@ -50,3 +50,16 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	padding-right: 20px;
   	text-align: center;
 }
+
+/* Make Reg number look like REG in David's test layout page table view*/
+
+#\36 0866715119807001b7519e6 > td.field_31.cell-edit > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 24px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
