@@ -121,7 +121,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
               sceneRefresh(refreshData, startTime, runCounter + 1);
           }, (runCounter<3?1500:2500));
       } else if ((new Date() - startTime)>240000){
-        console.log('ending refresh without all done')
+        console.log('ending refresh without all done');
       } else {
         if (runCounter!==1){
           console.log('everything checked, reload views just for sure');
