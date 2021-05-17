@@ -586,49 +586,25 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
-#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2665 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1717,6 +1693,8 @@ color: #FFFFFF;
 /******* New Deal File Admin Audit ********/
 
 #view_2953 .kn-detail-label {background-color: transparent;}
+
+#view_3655 .kn-detail-label {background-color: transparent;}
 
 /****** New Deal File Pre-Delivery Check *******/
 
