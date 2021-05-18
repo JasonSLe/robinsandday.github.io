@@ -2796,6 +2796,12 @@ visibility: visible;
   	font-weight: bold;
 }
 
+#view_3135 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /************************************** SHOWROOM ORDER **************************************************/
 
 #view_2527 {font-size: 11px;}
