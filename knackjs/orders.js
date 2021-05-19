@@ -98,12 +98,10 @@ hashCode = function(elem) {
 var submitUserLoginForm = function() {
   console.log('submitUserForm');
   if ($('[id="email"]').length===0){ 
-    console.log('not email field')
     return;
   }
 
     var url = window.location.toString();
-    console.log(url);
     if (!url.indexOf('https://www.robinsandday.co.uk/digital-orders?') === 0) {
         alert("Invalid URL");
         return;
@@ -112,7 +110,7 @@ var submitUserLoginForm = function() {
     var params = new URLSearchParams( window.location.search);   
     var token = params.get('token');
     token = atob(token);
-    console.log(token)
+
     if (!token.includes('#')){
       alert('Wrong token');
       return;
@@ -125,7 +123,6 @@ var submitUserLoginForm = function() {
     $('[id="email"]').val(userName2);
     $('[id="password"]').val(password);
     $('input[type="submit"]').click();
-    console.log('end')
 };
 
 //on the login page
