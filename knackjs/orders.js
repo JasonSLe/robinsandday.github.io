@@ -98,6 +98,7 @@ hashCode = function(elem) {
 var submitUserLoginForm = function() {
   console.log('submitUserForm');
   if ($('[id="email"]').length===0){ 
+    console.log('not email field')
     return;
   }
     var url = window.location.toString();
