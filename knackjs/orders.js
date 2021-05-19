@@ -101,7 +101,9 @@ var submitUserLoginForm = function() {
     console.log('not email field')
     return;
   }
+
     var url = window.location.toString();
+    console.log(url);
     if (!url.indexOf('https://www.robinsandday.co.uk/digital-orders?') === 0) {
         alert("Invalid URL");
         return;
