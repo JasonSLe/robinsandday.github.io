@@ -106,34 +106,10 @@ var submitUserLoginForm = function() {
         return;
     }
 
-    var params = new URLSearchParams( window.location.search);
-    //console.log(window.location.search);
-    /*
-    var userName = params.get('user');
-    var hash = params.get('hash');
-    var timeStamp = params.get('timeStamp');
-    
-    var myHash = 'H' + hashCode('U' + userName + timeStamp);
-    if (myHash !== hash) {
-      console.log({
-        url, userName, hash, timeStamp
-      });
-        alert('BAD SECURITY HASH');
-        return;
-    }
-    timeStamp = parseInt(timeStamp);
-    var myTimeStamp = Math.floor((new Date()).getTime() / 30000);
-    if ((myTimeStamp - timeStamp) > 4) {
-      console.log({
-        url, userName, hash, timeStamp
-      });      
-        //alert('OLD TIME STAMP');
-        return;
-    }
-    */
-    
+    var params = new URLSearchParams( window.location.search);   
     var token = params.get('token');
     token = atob(token);
+    console.log(token)
     if (!token.includes('#')){
       alert('Wrong token');
       return;
@@ -144,9 +120,9 @@ var submitUserLoginForm = function() {
     //type userName from url, my secret password and click login
     //if auth successfully then it shows the app, otherwise login screen
     $('[id="email"]').val(userName2);
-    //alert('Pass'+hashCode(userName).toString());
     $('[id="password"]').val(password);
     $('input[type="submit"]').click();
+    console.log('end')
 };
 
 //on the login page
