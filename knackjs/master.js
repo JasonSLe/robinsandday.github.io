@@ -226,11 +226,13 @@ $(document).on('knack-view-render.view_4272', function(event, view, data) {
 });
 
 $(document).on('knack-view-render.view_4294', function(event, view, data) {
-  var userName = Knack.getUserAttributes().email;
-  var timeStamp = Math.floor((new Date()).getTime() / 30000);
-  var hash = 'H' + hashCode('U' + userName + timeStamp)
   var token = Knack.getUserAttributes().values["field_6440"];
   $('div[class="field_3"]').html('<iframe src="https://salesjourney2.knack.com/digital-orders?token='+encodeURIComponent(token) + '#new-deal-files-automotive-compliance" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
+$(document).on('knack-view-render.view_4295', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class="field_3"]').html('<iframe src="https://salesjourney2.knack.com/digital-orders?token='+encodeURIComponent(token) + '#new-deal-file-manager-view" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 function openTab(url) {
