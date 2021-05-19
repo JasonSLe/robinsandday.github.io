@@ -96,6 +96,7 @@ hashCode = function(elem) {
 };
 
 var submitUserLoginForm = function() {
+  console.log('submitUserForm');
   if ($('[id="email"]').length===0){ 
     return;
   }
