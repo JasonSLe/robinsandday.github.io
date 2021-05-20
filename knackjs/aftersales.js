@@ -16,7 +16,6 @@ hashCode = function(elem) {
 };
 
 var submitUserLoginForm = function() {
-  alert('submit start')
   if ($('[id="email"]').length===0){ 
     return;
   }
@@ -42,7 +41,6 @@ var submitUserLoginForm = function() {
     $('[id="email"]').val(userName2);
     //alert('Pass'+hashCode(userName).toString());
     $('[id="password"]').val(password);
-    alert('will submit');
     $('input[type="submit"]').click();
 };
 
@@ -248,7 +246,7 @@ function createServiceScheduleClick(){
     }
   };
 }
-
+/*
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     setTimeout(function(){
         let refreshData = [
@@ -291,3 +289,4 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     }).responseText;
     console.log(rData);
   });
+  */
