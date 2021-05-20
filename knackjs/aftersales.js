@@ -41,6 +41,7 @@ var submitUserLoginForm = function() {
     $('[id="email"]').val(userName2);
     //alert('Pass'+hashCode(userName).toString());
     $('[id="password"]').val(password);
+    alert('will submit');
     $('input[type="submit"]').click();
 };
 
