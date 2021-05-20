@@ -16,6 +16,7 @@ hashCode = function(elem) {
 };
 
 var submitUserLoginForm = function() {
+  alert('submit start')
   if ($('[id="email"]').length===0){ 
     return;
   }
