@@ -246,7 +246,7 @@ function createServiceScheduleClick(){
     }
   };
 }
-/*
+
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     setTimeout(function(){
         let refreshData = [
@@ -289,4 +289,4 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     }).responseText;
     console.log(rData);
   });
-  */
+  
