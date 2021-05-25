@@ -4176,6 +4176,26 @@ background-color:#0f2542;
   border-left: 10px solid #DE3163;
 }
 
+#view_4297 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#view_4297 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+
+
 /******* CSS to make File Uploads Stand out when Files Exist *******/
 /* Manual Order */
 #kn-input-field_5957 > div > div.kn-asset-current > div > div > a.kn-view-asset {
