@@ -1710,11 +1710,50 @@ color: #FFFFFF;
 }
 
 
-/******* New Deal File Admin Audit ********/
+/******* NEW DEAL FILE ADMIN AUDIT ********/
 
 #view_2953 .kn-detail-label {background-color: transparent;}
 
 #view_3655 .kn-detail-label {background-color: transparent;}
+
+/* Links to New Deal File Admin Audit */
+
+#view_3799 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#view_3799 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#view_3800 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#view_3800 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
 
 /****** New Deal File Pre-Delivery Check *******/
 
