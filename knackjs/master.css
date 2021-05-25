@@ -4140,7 +4140,7 @@ background-color:#0f2542;
   	text-align: center;
 }
 
-/**** Deal File Admin Audit ****/
+/**** DEAL FILE ADMIN AUDIT ****/
 
 #view_3614 > section > div > div > div > div > div.field_4941 > div > span > h2 > span {
 	background-color: #FFE74C;
@@ -4155,6 +4155,26 @@ background-color:#0f2542;
 #view_3614 .kn-detail-label {background-color: transparent;}
 
 #view_4155 .kn-detail-label {background-color: transparent;}
+
+/* Links to Admin Audit from Deal File and Handover Docs */
+
+#view_4296 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#view_4296 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
 
 /******* CSS to make File Uploads Stand out when Files Exist *******/
 /* Manual Order */
