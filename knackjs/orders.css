@@ -710,31 +710,31 @@ This removes white spaces from all table headers*/
 
 /******** MANAGER ORDERS TO DO LIST ON ADMIN PAGE *********/
 
-#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) {
+#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) {
+#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
 	background-color: #132031;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) {
+#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
 	background-color: #FFFFFF;
   	color: #777777;
   	font-weight: bold;
 }
 
-#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) {
+#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
 	background-color: #132031;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) {
+#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
 	background-color: #000000;
   	color: #FFFFFF;
   	font-weight: bold;
