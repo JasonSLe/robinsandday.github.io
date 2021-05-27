@@ -2848,6 +2848,26 @@ visibility: visible;
   	font-weight: bold;
 }
 
+/************ USED VEHICLE ADMIN - VEHICLES CHECKED IN REQUIRING AUTOLINE UPDATES Table Filters ***********/
+
+#view_3124 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3124 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3124 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 
 
 /************************************** SHOWROOM ORDER **************************************************/
