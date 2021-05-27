@@ -63,3 +63,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	text-align: center;
 }
 
+#kn-scene_24 > div.view-group.view-group-1 > div:nth-child(1) {
+	border: 1px solid #CCCCCC;
+	border-radius: 10px; 
+  }
+  
+  #kn-scene_24 > div.view-group.view-group-1 > div:nth-child(2) {
+	border: 1px solid #CCCCCC;
+	border-radius: 10px;
+  }
+  
+  #kn-scene_24 > div.view-group.view-group-1 > div:nth-child(3) {
+	border: 1px solid #CCCCCC; 
+	border-radius: 10px;
+  }
