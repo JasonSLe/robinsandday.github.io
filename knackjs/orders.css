@@ -538,73 +538,73 @@ This removes white spaces from all table headers*/
 
 /* Deal File Search Filters */
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
     background-color: #FFA100;
     color: #FFFFFF;
     font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
     background-color: #FFA100;
     color: #FFFFFF;
     font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2665 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -703,6 +703,58 @@ This removes white spaces from all table headers*/
 }
 
 #view_2955 > div.kn-records-nav.below > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/******** MANAGER ORDERS TO DO LIST ON ADMIN PAGE *********/
+
+#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3766 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/******** DEAL FILE ADMIN VIEW HANDOVER APPOINTMENT CONFIRMATION *********/
+
+#view_2874 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2874 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2874 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -962,8 +1014,9 @@ border-left: 10px solid #DE3163;
   border: 1px solid #CCCCCC;
   text-align: center;
   padding: 10px;
-  padding-left: 25px;
   padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 25px;
   height: 90px;
 }
 
@@ -982,6 +1035,7 @@ border-left: 10px solid #DE3163;
   padding: 10px;
   padding-left: 25px;
   padding-top: 20px;
+  padding-bottom: 20px;
   height: 90px;
 }
 
@@ -1317,6 +1371,10 @@ color: #FFFFFF;
 #view_2777 .kn-detail-label {background-color: transparent;}
 
 #view_2779 .kn-detail-label {background-color: transparent;}
+
+/******** HANDOVER APPOINTMENT **********/
+
+#view_3803 .kn-detail-label {background-color: transparent;}
 
 
 /******** VEHICLE CHECK IN DETAILS *********/
@@ -1690,11 +1748,50 @@ color: #FFFFFF;
 }
 
 
-/******* New Deal File Admin Audit ********/
+/******* NEW DEAL FILE ADMIN AUDIT ********/
 
 #view_2953 .kn-detail-label {background-color: transparent;}
 
 #view_3655 .kn-detail-label {background-color: transparent;}
+
+/* Links to New Deal File Admin Audit */
+
+#view_3799 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#view_3799 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#view_3800 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#view_3800 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
 
 /****** New Deal File Pre-Delivery Check *******/
 
