@@ -77,3 +77,10 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 	border: 1px solid #CCCCCC; 
 	border-radius: 10px;
   }
+
+  #field_31 {
+	background-color: #FFE74C;
+	font-weight: bold;
+	text-align: center;
+	font-size: 24px;
+  }
