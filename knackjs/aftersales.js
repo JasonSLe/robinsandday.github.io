@@ -54,6 +54,17 @@ function functionName(selector_scene){
   });
 }
 
+$(document).on('knack-view-render.any', function (event, view, data) {
+  //  ---------Auto Capitalise Regestration input-------------
+  $('input#field_31').keyup(function() {
+      this.value = this.value.toUpperCase();
+      $(this).css("background-color", "#FFE74C");  			// yellow
+      $(this).css("font-weight", "bold", "important");		// bolder
+      $(this).css("text-align", "center", "important");		// centre
+      $(this).css("fontSize", "24px", "important");         // bigger
+  });
+});
+
 /*
   Checks data acording to refreshData structure and updates views
   This is structure describing the page, consisting of different views, updated with different background processes
