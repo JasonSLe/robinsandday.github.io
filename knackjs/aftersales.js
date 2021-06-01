@@ -305,5 +305,6 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
       });
     }
     document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
+    showHideMoreServiceVisits();
   });
   
