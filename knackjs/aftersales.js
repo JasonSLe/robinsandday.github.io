@@ -298,11 +298,12 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
   });
 
   $(document).on('knack-view-render.view_96', function (event, view, data) {
-    document.getElementById("showHideMoreServiceVisits").onclick = function() {
+    function showHideMoreServiceVisits(){
       let newV = (document.querySelector('.more').style.display==="none"?"":"none");
       document.querySelectorAll('.more').forEach(function(el) {
          el.style.display = newV;
       });
-    };
+    }
+    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
   });
   
