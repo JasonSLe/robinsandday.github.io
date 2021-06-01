@@ -303,6 +303,11 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
       document.querySelectorAll('.more').forEach(function(el) {
          el.style.display = newV;
       });
+      if (newV==='none'){
+        document.getElementById("showHideMoreServiceVisits").innerText = "Show more";
+      } else {
+        document.getElementById("showHideMoreServiceVisits").innerText = "Hide more";
+      }
     }
     document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
     showHideMoreServiceVisits();
