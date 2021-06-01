@@ -296,4 +296,13 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     }).responseText;
     console.log(rData);
   });
+
+  $(document).on('knack-view-render.view_96', function (event, view, data) {
+    document.getElementById("showHideMoreServiceVisits").onclick = function() {
+      let newV = (document.querySelector('.more').style.display==="none"?"":"none");
+      document.querySelectorAll('.more').forEach(function(el) {
+         el.style.display = newV;
+      });
+    };
+  });
   
