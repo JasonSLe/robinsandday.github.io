@@ -262,7 +262,7 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
             views:['95','97']   
         },*/{
           mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
-          views:['95','97','98','96'],
+          views:['97','95','98','96'],
           //runAfter : createServiceScheduleClick
         },{
           mainField : 'field_312', //Service Plan Summary = Service plan
