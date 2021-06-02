@@ -265,7 +265,7 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
           views:['97','95','98','96'],
           //runAfter : createServiceScheduleClick
         },{
-          mainField : 'field_312', //Service Plan Summary = Service plan
+          mainField : 'field_312', //EMAC - service plan Summary = Service plan
           views:['98']
         },{
           mainField : 'field_247', //Tyres - Front = Stapletons
@@ -274,7 +274,10 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
         },{
           mainField : 'field_302', //VHC - exists = VHC
           views:['96','115']
-      }
+        },{
+          mainField : 'field_70', //Recalls Oustanding
+          views:['114']
+        }
       ]
       sceneRefresh(refreshData);
   }, 100);
