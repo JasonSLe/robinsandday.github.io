@@ -254,6 +254,32 @@ function createServiceScheduleClick(){
   };
 }
 
+$(document).on("knack-scene-render.scene_24", function(event, scene, data) {
+  setTimeout(function(){
+      let refreshData = [
+        {
+            mainField : 'field_307', //Autoline - vehicle owner - first Autoline save
+            views:['95','97']   
+        },{
+          mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
+          views:['95','97','98','96'],
+          //runAfter : createServiceScheduleClick
+        },{
+          mainField : 'field_312', //Service Plan Summary = Service plan
+          views:['98']
+        },{
+          mainField : 'field_247', //Tyres - Front = Stapletons
+          views:['114'],
+          //runAfter : generateTyres
+        },{
+          mainField : 'field_302', //VHC - exists = VHC
+          views:['96','115']
+      }
+      ]
+      sceneRefresh(refreshData);
+  }, 100);
+});
+
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     setTimeout(function(){
         let refreshData = [
