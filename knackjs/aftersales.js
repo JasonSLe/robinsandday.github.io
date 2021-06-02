@@ -94,14 +94,14 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
       }
       let recheck = false;
       for (one of refreshData){
-          //console.log(one);
-          //console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
+          console.log(one);
+          console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
           if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
               let mainReloaded = false; 
               for (oneView of one.views){
                   mainReloaded = refreshView(oneView, mainReloaded);
               }
-              //console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
+              console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
               if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
                   recheck = true;
                   if (runCounter===1){
@@ -123,7 +123,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
           }
       }
       if (recheck && (new Date() - startTime)<240000){
-          //console.log('needs recheck')
+          console.log('needs recheck')
           setTimeout(function(){
               sceneRefresh(refreshData, startTime, runCounter + 1);
           }, (runCounter<3?1500:2500));
