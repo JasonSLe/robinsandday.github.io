@@ -257,10 +257,10 @@ function createServiceScheduleClick(){
 $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
   setTimeout(function(){
       let refreshData = [
-        {
+        /*{
             mainField : 'field_27', //Autoline - type of bussines - first Autoline save
             views:['95','97']   
-        },{
+        },*/{
           mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
           views:['95','97','98','96'],
           //runAfter : createServiceScheduleClick
