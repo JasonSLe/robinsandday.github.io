@@ -610,6 +610,18 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(14) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /* Deal File Search Filters on Admin Page */
 
 #view_2955 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
