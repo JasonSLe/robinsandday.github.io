@@ -284,7 +284,17 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
 });
 
 $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
-  generateTyres();
+  setTimeout(function(){
+    let refreshData = [
+      {
+          mainField : 'field_250', //Tyres
+          views:['119'],
+          runAfter : generateTyres 
+      }
+    ]
+    sceneRefresh(refreshData);
+  }, 100);
+  //generateTyres();
 });
 
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
