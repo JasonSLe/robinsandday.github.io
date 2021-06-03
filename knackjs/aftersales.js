@@ -187,7 +187,7 @@ function fillLoading(viewID){
 function generateTyres(){
   try {
     console.log('GenerateTyres');
-    let tyresJSON = JSON.parse(Knack.views['view_88'].model.attributes['field_250']);
+    let tyresJSON = JSON.parse(Knack.views['view_119'].model.attributes['field_250']);
     tyresJSON = tyresJSON.filter(function(el){
       return el['a:StockPolicy'][0] === 'ACTIVE' && el['a:Winter'][0] === 'N'
     })
