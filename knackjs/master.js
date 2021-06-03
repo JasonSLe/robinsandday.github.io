@@ -222,7 +222,7 @@ $(document).on('knack-view-render.view_4272', function(event, view, data) {
   var timeStamp = Math.floor((new Date()).getTime() / 30000);
   var hash = 'H' + hashCode('U' + userName + timeStamp)
   var token = Knack.getUserAttributes().values["field_6440"];
-  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales?token='+encodeURIComponent(token) + '#after-sales-vehicle-lookup" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#after-sales-vehicle-lookup?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 $(document).on('knack-view-render.view_4294', function(event, view, data) {
