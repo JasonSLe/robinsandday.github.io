@@ -283,6 +283,10 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
   }, 100);
 });
 
+$(document).on("knack-scene-render.scene_24", function(event, scene, data) {
+  generateTyres();
+});
+
 $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     setTimeout(function(){
         let refreshData = [
