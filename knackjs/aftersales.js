@@ -284,7 +284,6 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
 });
 
 $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
-  setTimeout(function(){
     let refreshData = [
       {
           mainField : 'field_250', //Tyres
@@ -293,7 +292,6 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
       }
     ]
     sceneRefresh(refreshData);
-  }, 100);
   //generateTyres();
 });
 
