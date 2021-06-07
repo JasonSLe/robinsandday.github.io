@@ -190,8 +190,9 @@ function formatDateGB(date){
 
 function fillLoading(viewID){
   $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
-    console.log($(this).text());
-    $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
+    if ($(this).text().trim()===''){
+      $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
+    }
   });
 }
 
