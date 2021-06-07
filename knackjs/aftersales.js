@@ -21,7 +21,7 @@ function getTokenFromURL(url){
     if (tokenS.indexOf('&')!==-1){
       tokenS = tokenS.substring(tokenS,tokenS.indexOf('&'));
     } 
-    return tokenS
+    return decodeURIComponent(tokenS);
   } else { return null}
 }
 
