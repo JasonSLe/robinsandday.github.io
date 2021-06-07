@@ -281,14 +281,14 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
           views:['98']
         },{
           mainField : 'field_247', //Tyres - Front = Stapletons
-          views:['114'],
+          views:['122'],
           //runAfter : generateTyres
         },{
           mainField : 'field_302', //VHC - exists = VHC
           views:['96','115']
         },{
           mainField : 'field_70', //Recalls Oustanding
-          views:['114']
+          views:['121']
         },{
           mainField : 'field_316', //Autoline - is email valid - last Autoline save
           views:['95']   
