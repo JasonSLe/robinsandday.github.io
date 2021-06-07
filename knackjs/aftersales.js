@@ -189,7 +189,10 @@ function formatDateGB(date){
 }
 
 function fillLoading(viewID){
-  $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){$(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')})
+  $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
+    console.log($(this).text());
+    $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
+  });
 }
 
 function generateTyres(){
@@ -285,7 +288,10 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
         },{
           mainField : 'field_70', //Recalls Oustanding
           views:['114']
-        }
+        },{
+          mainField : 'field_316', //Autoline - is email valid - last Autoline save
+          views:['95']   
+      }
       ]
       sceneRefresh(refreshData);
   }, 100);
@@ -326,9 +332,6 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
           },{
             mainField : 'field_30', //MOT expiry date = DVLA, MOT, Service Plan
             views:['81','92','76','80']
-        },{
-          mainField : 'field_316', //IS Email Address Valid = Autoline - first save of basic details 
-          views:['100']
         }
         ]
         sceneRefresh(refreshData);
