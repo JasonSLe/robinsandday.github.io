@@ -30,10 +30,6 @@ var submitUserLoginForm = function() {
     return;
   }
     var url = window.location.href;
-    if (!url.indexOf('digital-aftersales?') === 0) {
-        alert("Invalid URL");
-        return;
-    }
     
     var token = getTokenFromURL(url);
     token = atob(token);
