@@ -32,6 +32,9 @@ var submitUserLoginForm = function() {
     var url = window.location.href;
     
     var token = getTokenFromURL(url);
+
+    console.log('token', token, 'url',url);
+    
     token = atob(token);
     if (!token.includes('#')){
       alert('Wrong token');
