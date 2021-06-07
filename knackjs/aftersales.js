@@ -285,7 +285,7 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
           //runAfter : generateTyres
         },{
           mainField : 'field_302', //VHC - exists = VHC
-          views:['96','115']
+          views:['115']
         },{
           mainField : 'field_70', //Recalls Oustanding
           views:['121']
