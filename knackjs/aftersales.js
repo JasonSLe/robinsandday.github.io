@@ -15,19 +15,27 @@ hashCode = function(elem) {
   return hash;
 };
 
+function getTokenFromURL(url){
+  if (url.indexOf('token=')!==-1){
+    let tokenS = url.substring(url.indexOf('token=')+6);
+    if (tokenS.indexOf('&')!==-1){
+      tokenS = tokenS.substring(tokenS,tokenS.indexOf('&'));
+    } 
+    return tokenS
+  } else { return null}
+}
+
 var submitUserLoginForm = function() {
   if ($('[id="email"]').length===0){ 
     return;
   }
-    var url = window.location.toString();
+    var url = window.location.href;
     if (!url.indexOf('digital-aftersales?') === 0) {
         alert("Invalid URL");
         return;
     }
-
-    var params = new URLSearchParams( window.location.search);
     
-    var token = params.get('token');
+    var token = getTokenFromURL(url);
     token = atob(token);
     if (!token.includes('#')){
       alert('Wrong token');
