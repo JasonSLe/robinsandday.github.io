@@ -326,6 +326,9 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
           },{
             mainField : 'field_30', //MOT expiry date = DVLA, MOT, Service Plan
             views:['81','92','76','80']
+        },{
+          mainField : 'field_316', //IS Email Address Valid = Autoline - first save of basic details 
+          views:['100']
         }
         ]
         sceneRefresh(refreshData);
