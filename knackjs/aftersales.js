@@ -298,6 +298,16 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
   }, 100);
 });
 
+$(document).on("knack-scene-render.scene_28", function(event, scene, data) {
+  let refreshData = [
+    {
+        mainField : 'field_72', //Service Schedule
+        views:['118']
+    }
+  ]
+  sceneRefresh(refreshData);
+});
+
 $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     let refreshData = [
       {
