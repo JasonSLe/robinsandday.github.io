@@ -3,7 +3,7 @@
   //Uploads given fileBlob to given app_id file store
   //and then calls the fillDataToKnack of master.js to fill coresponding data
   async function uploadFileOnly(app_id, fileBlob, fileName, pdfAssetField, infoElementId) {
-    var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/file/upload';
+    var url = 'https://api.rd.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
     var headers = {
       'X-Knack-Application-ID': app_id,

@@ -144,7 +144,7 @@ function functionName(selector_scene){
 checkUser = function(data) {
   if (Knack.getUserAttributes().email!==data.field_6218_raw.email && Knack.getUserAttributes().roles.includes('object_126')){
     alert('Sorry, you are not authorised to view this page. Please follow the link from your Customer Portal to view details & status of your Vehicle');
-    location.href = 'https://salesjourney2.knack.com/digital-deal-file-orders#dialog-order-information/new-digital-deal-file/customer-details/';
+    location.href = 'https://salesjourney2.rd.knack.com/digital-deal-file-orders#dialog-order-information/new-digital-deal-file/customer-details/';
   }	
 };
 

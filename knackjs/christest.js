@@ -10,7 +10,7 @@ var moreViewsImage = new Image(768, 576)
   }
 
   async function uploadImage(token, updatingRecordId , app_id, imgUrl, imageObject, infoText) {
-    var url = `https://api.knack.com/v1/applications/${app_id}/assets/image/upload`;
+    var url = `https://api.rd.knack.com/v1/applications/${app_id}/assets/image/upload`;
 
     var form = new FormData();
 
@@ -93,7 +93,7 @@ var moreViewsImage = new Image(768, 576)
     };
 
     var rData2 = $.ajax({
-      url: 'https://api.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
+      url: 'https://api.rd.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
       type: `PUT`,
       headers: headersForSecureView,
       contentType: 'application/json',

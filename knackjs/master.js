@@ -85,7 +85,7 @@ $(document).on('knack-view-render.view_1526', function(event, view, data) {
   })
 
   var iFrameString = "<!DOCTYPE html>" + "\n" + "<html>" + "\n" + "<body>" + "\n" + "<p>" + "\n";
-  iFrameString = iFrameString + "<iframe src='https://salesjourney.knack.com/vehicle-tracking#track-and-trace/";
+  iFrameString = iFrameString + "<iframe src='https://salesjourney.rd.knack.com/vehicle-tracking#track-and-trace/";
   iFrameString = iFrameString + "delivery-tracker-vehicle-details/" + TrackerID + "/delivery-tracker/" + TrackerID + "/'";
   iFrameString = iFrameString + " height='800' width='100%' scrolling='auto' allowfullscreen='' frameborder='0'>" + "\n";
   iFrameString = iFrameString + "</iframe>" + "\n";
@@ -1040,7 +1040,7 @@ if (document.exitFullscreen) {
   }
 
   async function uploadImage(app_id, imgUrl) {
-    var url = 'https://api.knack.com/v1/applications/'+app_id+'/assets/image/upload';
+    var url = 'https://api.rd.knack.com/v1/applications/'+app_id+'/assets/image/upload';
     var headers = {
       'X-Knack-Application-ID': app_id,
       'X-Knack-REST-API-Key': 'knack',
@@ -1099,7 +1099,7 @@ if (document.exitFullscreen) {
     };
 
     var rData2 = $.ajax({
-      url: 'https://api.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
+      url: 'https://api.rd.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
       type: 'PUT',
       headers: headersForSecureView,
       contentType: 'application/json',
