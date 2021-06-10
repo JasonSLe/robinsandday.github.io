@@ -288,6 +288,7 @@ function formatScene24(){
 }
 
 $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
+  formatScene24();
   setTimeout(function(){
       let refreshData = [
         {
