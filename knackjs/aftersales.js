@@ -273,9 +273,9 @@ function formatScene24(){
   sectionCenter.setAttribute("id", "sectionCenter");
   let sectionRight = document.createElement('div');
   sectionRight.setAttribute("id", "sectionRight");
-  sceneEl.prepend(sectionLeft)
-  sceneEl.prepend(sectionCenter)
   sceneEl.prepend(sectionRight)
+  sceneEl.prepend(sectionCenter)
+  sceneEl.prepend(sectionLeft)
   sectionLeft.appendChild(document.getElementById('view_95'));
   sectionLeft.appendChild(document.getElementById('view_98'));
   sectionCenter.appendChild(document.getElementById('view_97'));
