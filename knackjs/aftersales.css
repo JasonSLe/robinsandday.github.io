@@ -102,9 +102,46 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   #kn-scene_24 #view_125 {width:100%;float:left;}
   .kn-back-link {display: none;width:100%;float:left;}
 
-/* Menu Button back to Aftersales Lookup */
-#view_125 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_117 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/**** SERVICE SCHEDULE & TYRE PRICES BUTTONS ****/
+#view_117 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_117 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_117 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/**** Menu Button back to Aftersales Lookup ****/
+#view_125 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #071a28;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
