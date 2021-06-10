@@ -93,9 +93,12 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   
   #kn-scene_24 tr { line-height: 10px; }   
   
-  #sectionLeft {width:33%;float:left;}
-  #sectionCenter {width:33%;float:left;}
-  #sectionRight {width:33%;float:left;}
+  #sectionLeft {width:33%;float:left;border: 1px solid #CCCCCC;
+	border-radius: 10px;}
+  #sectionCenter {width:33%;float:left;border: 1px solid #CCCCCC;
+	border-radius: 10px;}
+  #sectionRight {width:33%;float:left;border: 1px solid #CCCCCC;
+	border-radius: 10px;}
   #kn-scene_24 #view_125 {width:100%;float:left;}
   .kn-back-link {width:100%;float:left;}
 
