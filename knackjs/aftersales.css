@@ -96,6 +96,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   #sectionLeft {width:33%;float:left;}
   #sectionCenter {width:33%;float:left;}
   #sectionRight {width:33%;float:left;}
-  #kn-scene_24 #view_125 {float:left;}
+  #kn-scene_24 #view_125 {width:100%;float:left;}
+  .kn-back-link {width:100%;float:left;}
 
 
