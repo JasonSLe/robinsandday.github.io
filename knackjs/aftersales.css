@@ -91,4 +91,10 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 	white-space: nowrap;
   }
   
-  #kn-scene_24 tr { line-height: 10px; }
+  #kn-scene_24 tr { line-height: 10px; }   
+  
+  #sectionLeft {width:33%;float:left;}
+  #sectionCenter {width:33%;float:left;}
+  #sectionRight {width:33%;float:left;}
+
+

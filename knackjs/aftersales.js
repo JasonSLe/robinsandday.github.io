@@ -265,6 +265,28 @@ function createServiceScheduleClick(){
   };
 }
 
+function formatScene24(){
+  let sceneEl = document.getElementById('kn-scene_24');
+  let sectionLeft = document.createElement('div');
+  sectionLeft.setAttribute("id", "sectionLeft");
+  let sectionCenter = document.createElement('div');
+  sectionCenter.setAttribute("id", "sectionCenter");
+  let sectionRight = document.createElement('div');
+  sectionRight.setAttribute("id", "sectionRight");
+  sceneEl.appendChild(sectionLeft)
+  sceneEl.appendChild(sectionCenter)
+  sceneEl.appendChild(sectionRight)
+  sectionLeft.appendChild(document.getElementById('view_95'));
+  sectionLeft.appendChild(document.getElementById('view_98'));
+  sectionCenter.appendChild(document.getElementById('view_97'));
+  sectionCenter.appendChild(document.getElementById('view_114'));
+  sectionCenter.appendChild(document.getElementById('view_117'));
+  sectionCenter.appendChild(document.getElementById('view_121'));
+  sectionCenter.appendChild(document.getElementById('view_122'));
+  sectionRight.appendChild(document.getElementById('view_96'));
+  sectionRight.appendChild(document.getElementById('view_115'));
+}
+
 $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
   setTimeout(function(){
       let refreshData = [
