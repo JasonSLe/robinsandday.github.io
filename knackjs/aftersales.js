@@ -280,9 +280,9 @@ function formatScene24(){
   sectionLeft.appendChild(document.getElementById('view_98'));
   sectionCenter.appendChild(document.getElementById('view_97'));
   sectionCenter.appendChild(document.getElementById('view_114'));
-  sectionCenter.appendChild(document.getElementById('view_117'));
   sectionCenter.appendChild(document.getElementById('view_121'));
   sectionCenter.appendChild(document.getElementById('view_122'));
+  sectionCenter.appendChild(document.getElementById('view_117'));
   sectionRight.appendChild(document.getElementById('view_96'));
   sectionRight.appendChild(document.getElementById('view_115'));
 }
