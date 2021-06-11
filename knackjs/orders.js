@@ -501,7 +501,7 @@ function recursivecall(){
 // NEW DEAL FILE – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION
 $(document).on('knack-form-submit.view_2765', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/lnunp83lom13c9swu0vgabmurbjxj5x6" ;
-  let dataToSend = JSON.stringify({"recordid":data.id,"field_6481_raw":data.field_6481_raw,"typeOfCustomerSurvey":"NEW"})
+  let dataToSend = JSON.stringify({"recordid":data.id,"field_6481_raw":data.field_6481_raw,"typeOfCustomerSurvey":"NEW","ConnectedDealer":data.field_6476_raw,"SalesAdvisor":data.field_6488_raw,"MaserAppDealerID":data.field_6678_raw})
   //or theoretically to have all data from form 
   //let dataToSend = Object.assign(data,{"typeOfCustomerSurvey":"NEW"}); 
   var rData = $.ajax({
