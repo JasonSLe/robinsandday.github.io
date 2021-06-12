@@ -94,12 +94,86 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   #kn-scene_24 tr { line-height: 10px; }   
   
   #sectionLeft {width:33%;float:left;border: 1px solid #CCCCCC;
-	border-radius: 10px;}
+	border-radius: 10px;padding: 10px;}
   #sectionCenter {width:33%;float:left;border: 1px solid #CCCCCC;
-	border-radius: 10px;}
+	border-radius: 10px;padding: 10px;}
   #sectionRight {width:33%;float:left;border: 1px solid #CCCCCC;
-	border-radius: 10px;}
+	border-radius: 10px;padding: 10px;}
   #kn-scene_24 #view_125 {width:100%;float:left;}
-  .kn-back-link {width:100%;float:left;}
+  .kn-back-link {display: none;width:100%;float:left;}
 
 
+/**** SERVICE SCHEDULE & TYRE PRICES BUTTONS ****/
+#view_117 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #00CC66;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_117 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #32936F;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_117 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #00CC66;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_117 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #32936F;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/**** Menu Button back to Aftersales Lookup ****/
+#view_125 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_125 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* BUGS & IMPROVEMENTS BUTTON */
+#view_123 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_123 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
