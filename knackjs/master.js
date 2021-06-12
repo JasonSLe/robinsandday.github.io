@@ -272,10 +272,12 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     var userBar = document.querySelector('.kn-info-bar .kn-current_user');
     toggleButton = document.createElement('span');
     toggleButton.classList.add('rad-toggle-header');
+    toggleButton.setAttribute("id", "toggleButton");
     var toggleButtonText = document.createTextNode("Hide Header");
     toggleButton.appendChild(toggleButtonText);
     var logOutElement = (userBar) ? userBar.querySelector('.kn-log-out') : false;
-    if (userBar && logOutElement) {
+    let toogleButtonExists = document.getElementById('toggleButton')
+    if (userBar && logOutElement && toogleButtonExists===undefined) {
         userBar.insertBefore(toggleButton, logOutElement);
         userBar.insertBefore(document.createTextNode(" - "), logOutElement);
     }
