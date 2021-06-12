@@ -267,15 +267,18 @@ function createServiceScheduleClick(){
 
 function formatScene24(){
   let sceneEl = document.getElementById('kn-scene_24');
+  let sections = document.createElement('div');
+  sections.setAttribute("id", "sections");
   let sectionLeft = document.createElement('div');
   sectionLeft.setAttribute("id", "sectionLeft");
   let sectionCenter = document.createElement('div');
   sectionCenter.setAttribute("id", "sectionCenter");
   let sectionRight = document.createElement('div');
   sectionRight.setAttribute("id", "sectionRight");
-  sceneEl.prepend(sectionRight)
-  sceneEl.prepend(sectionCenter)
-  sceneEl.prepend(sectionLeft)
+  sceneEl.prepend(sections);
+  sections.prepend(sectionRight)
+  sections.prepend(sectionCenter)
+  sections.prepend(sectionLeft)
   sectionLeft.appendChild(document.getElementById('view_95'));
   sectionLeft.appendChild(document.getElementById('view_98'));
   sectionCenter.appendChild(document.getElementById('view_97'));
