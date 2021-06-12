@@ -277,7 +277,6 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     toggleButton.appendChild(toggleButtonText);
     var logOutElement = (userBar) ? userBar.querySelector('.kn-log-out') : false;
     let toogleButtonExists = document.getElementById('toggleButton');
-    console.log('toogleButtonExists',toogleButtonExists)
     if (userBar && logOutElement && toogleButtonExists===null) {
         userBar.insertBefore(toggleButton, logOutElement);
         userBar.insertBefore(document.createTextNode(" - "), logOutElement);
