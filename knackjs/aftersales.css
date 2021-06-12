@@ -101,6 +101,9 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 	border-radius: 10px;padding: 10px;}
   #kn-scene_24 #view_125 {width:100%;float:left;}
   .kn-back-link {display: none;width:100%;float:left;}
+  #sections {
+	display: flex; /* equal height of the children */
+  }
 
 
 /**** SERVICE SCHEDULE & TYRE PRICES BUTTONS ****/
@@ -177,3 +180,5 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
+
+
