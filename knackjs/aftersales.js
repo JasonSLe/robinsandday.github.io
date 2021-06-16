@@ -335,7 +335,13 @@ function serviceVisitsTooltips(){
     console.log('CLEAR ALL')
     $(this).attr("style","position: fixed;display:none;");
   });
-  $('table[id="serviceVisitsTable"]').bind("mouseleave", function (e) {
+  $('table[id="serviceVisitsTable"] tr').bind("mouseleave", function (e) {
+    console.log('HIDE AFTER LEAVE')
+      $('div[id*="tooltip"]').each(function(){
+        $(this).hide();
+      });
+  });
+  $('table[id="serviceVisitsTable"] td').bind("mouseleave", function (e) {
     console.log('HIDE AFTER LEAVE')
       $('div[id*="tooltip"]').each(function(){
         $(this).hide();
