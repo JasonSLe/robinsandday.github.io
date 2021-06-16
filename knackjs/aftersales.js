@@ -292,6 +292,36 @@ function formatScene24(){
   sectionRight.appendChild(document.getElementById('view_115'));
 }
 
+let shownTooltipId = null;
+function serviceVisitsTooltips(){
+  $('div[id*="tooltip"]').each(function(){
+    $(this).attr("style","background: white; position: fixed; display:none;");
+  });
+  $('table[id="serviceVisitsTable"] tr').on("mouseleave", function (e) {
+    console.log('HIDE AFTER LEAVE')
+    $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+  });
+
+  $('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
+      let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
+      let trUnderMouse = null;
+      if (partOfTable.nodeName==='TD'){
+        trUnderMouse = partOfTable.parentElement;
+      }
+      if (partOfTable.nodeName==='TR'){
+        trUnderMouse = partOfTable;
+      }
+      if (trUnderMouse && trUnderMouse.id){
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
+        if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
+            $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+        }
+        shownTooltipId = trUnderMouse.id;
+      }
+  });
+}
+
 $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
   formatScene24();
   setTimeout(function(){
@@ -328,36 +358,6 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
       sceneRefresh(refreshData);
   }, 100);
 });
-
-let shownTooltipId = null;
-function serviceVisitsTooltips(){
-  $('div[id*="tooltip"]').each(function(){
-    $(this).attr("style","background: white; position: fixed; display:none;");
-  });
-  $('table[id="serviceVisitsTable"] tr').on("mouseleave", function (e) {
-    console.log('HIDE AFTER LEAVE')
-    $('div[id="tooltip_'+shownTooltipId+'"]').hide();
-  });
-
-  $('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
-      let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
-      let trUnderMouse = null;
-      if (partOfTable.nodeName==='TD'){
-        trUnderMouse = partOfTable.parentElement;
-      }
-      if (partOfTable.nodeName==='TR'){
-        trUnderMouse = partOfTable;
-      }
-      if (trUnderMouse && trUnderMouse.id){
-        $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
-        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
-        if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
-            $('div[id="tooltip_'+shownTooltipId+'"]').hide();
-        }
-        shownTooltipId = trUnderMouse.id;
-      }
-  });
-}
 
 $(document).on("knack-scene-render.scene_28", function(event, scene, data) {
   let refreshData = [
