@@ -331,7 +331,7 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
 
 function serviceVisitsTooltips(){
   $('div[id*="tooltip"]').each(function(){
-    $(this).attr("style","position: absolute;");
+    $(this).attr("style","position: fixed;display: inline-block;");
     $(this).hide();
   });
 }
