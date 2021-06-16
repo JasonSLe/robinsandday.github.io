@@ -331,15 +331,18 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
 
 let shownTooltipId = null;
 function serviceVisitsTooltips(){
+  /*
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","position: fixed;display: inline-block;");
     $(this).hide();
   });
+  */
+  /*
   $('table[id="serviceVisitsTable"]').bind("mouseleave", function (e) {
       $('div[id*="tooltip"]').each(function(){
         $(this).hide();
       });
-  });
+  });*/
   $('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
       let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
       console.log(partOfTable);
