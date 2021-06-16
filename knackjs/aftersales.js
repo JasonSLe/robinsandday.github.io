@@ -288,6 +288,7 @@ function formatScene24(){
   sectionCenter.appendChild(document.getElementById('view_122'));
   sectionCenter.appendChild(document.getElementById('view_117'));
   sectionRight.appendChild(document.getElementById('view_96'));
+  sectionRight.appendChild(document.getElementById('view_133'));
   sectionRight.appendChild(document.getElementById('view_115'));
 }
 
@@ -318,6 +319,9 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
         },{
           mainField : 'field_316', //Autoline - is email valid - last Autoline save
           views:['95']   
+        },{
+          mainField : 'field_325', //Autoline - service visits tooltips
+          views:['133']   
       }
       ]
       sceneRefresh(refreshData);
