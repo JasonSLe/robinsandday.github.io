@@ -353,11 +353,14 @@ function serviceVisitsTooltips(){
       console.log(trUnderMouse);
       if (trUnderMouse && trUnderMouse.id){
         console.log('in')
+        /*
         let tt = document.getElementById('tooltip_'+trUnderMouse.id);
         console.log(tt);
         tt.style = 'position: fixed;display: inline-block;';
-        //$('div[id="tooltip_'+trUnderMouse.id+'"]').show();
+        */
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
         $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX, top: e.pageY });
+        console.log({ left: e.pageX, top: e.pageY });
         if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
             console.log('tohide',shownTooltipId)
             $('div[id="tooltip_'+shownTooltipId+'"]').hide();
