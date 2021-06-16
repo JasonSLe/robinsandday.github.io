@@ -305,8 +305,9 @@ function serviceVisitsTooltips(){
 
   console.log('table',$('table[id="serviceVisitsTable"]'));
   //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
-  $('div[id="view_133"]').on("mousemove", function (e) {
+  $('div[id="view_96"]').on("mousemove", function (e) {
       console.log('on move');
+      console.log($('div[id*="tooltip"]').length);
       let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
       let trUnderMouse = null;
       if (partOfTable.nodeName==='TD'){
