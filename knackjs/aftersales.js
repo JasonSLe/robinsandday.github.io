@@ -335,18 +335,20 @@ function serviceVisitsTooltips(){
     console.log('CLEAR ALL')
     $(this).attr("style","position: fixed;display:none;");
   });
-  $('table[id="serviceVisitsTable"] tr').bind("mouseleave", function (e) {
+  $('table[id="serviceVisitsTable"] tr').on("mouseleave", function (e) {
+    let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
+    if (partOfTable.nodeName==='TD'){
+      partOfTable = partOfTable.parentElement;
+    }
+    if (partOfTable.nodeName==='TR'){
+      if (partOfTable.parentElement.parentElement.id === 'serviceVisitsTable') {
+        return;
+      }
+    }
     console.log('HIDE AFTER LEAVE')
-      $('div[id*="tooltip"]').each(function(){
-        $(this).hide();
-      });
+    $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
-  $('table[id="serviceVisitsTable"] td').bind("mouseleave", function (e) {
-    console.log('HIDE AFTER LEAVE')
-      $('div[id*="tooltip"]').each(function(){
-        $(this).hide();
-      });
-  });
+
   $('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
       let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
       let trUnderMouse = null;
