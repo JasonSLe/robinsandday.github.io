@@ -331,12 +331,10 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
 
 let shownTooltipId = null;
 function serviceVisitsTooltips(){
-  /*
   $('div[id*="tooltip"]').each(function(){
-    $(this).attr("style","position: fixed;display: inline-block;");
-    $(this).hide();
+    console.log('CLEAR ALL')
+    $(this).attr("style","position: fixed;display:none;");
   });
-  */
   /*
   $('table[id="serviceVisitsTable"]').bind("mouseleave", function (e) {
       $('div[id*="tooltip"]').each(function(){
