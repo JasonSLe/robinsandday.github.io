@@ -304,7 +304,8 @@ function serviceVisitsTooltips(){
   });
 
   console.log('table',$('table[id="serviceVisitsTable"]'));
-  $('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
+  //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
+  $('div[id="view_133"]').on("mousemove", function (e) {
       console.log('on move');
       let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
       let trUnderMouse = null;
