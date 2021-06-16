@@ -334,6 +334,30 @@ function serviceVisitsTooltips(){
     $(this).attr("style","position: fixed;display: inline-block;");
     $(this).hide();
   });
+  $('table[id="serviceVisitsTable"]').bind("mouseleave", function (e) {
+      $('div[id*="tooltip"]').each(function(){
+        $(this).hide();
+      });
+  });
+  let shownTooltipId = null;
+  $('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
+      let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
+      let trUnderMouse = null;
+      if (partOfTable.nodeName==='TD'){
+        trUnderMouse = partOfTable.parentElement;
+      }
+      if (partOfTable.nodeName==='TR'){
+        trUnderMouse = partOfTable;
+      }
+      if (trUnderMouse && trUnderMouse.id){
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX, top: e.pageY });
+        if (shownTooltipId != trUnderMouse.id && shownTooltipId){
+            $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+        }
+        shownTooltipId = trUnderMouse.id;
+      }
+  });
 }
 
 $(document).on("knack-scene-render.scene_28", function(event, scene, data) {
