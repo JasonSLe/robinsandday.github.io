@@ -336,6 +336,7 @@ function serviceVisitsTooltips(){
     $(this).attr("style","position: fixed;display:none;");
   });
   $('table[id="serviceVisitsTable"] tr').on("mouseleave", function (e) {
+    /*
     let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
     if (partOfTable.nodeName==='TD'){
       partOfTable = partOfTable.parentElement;
@@ -344,7 +345,8 @@ function serviceVisitsTooltips(){
       if (partOfTable.parentElement.parentElement.id === 'serviceVisitsTable') {
         return;
       }
-    }
+    }*/
+    
     console.log('HIDE AFTER LEAVE')
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
@@ -360,7 +362,7 @@ function serviceVisitsTooltips(){
       }
       if (trUnderMouse && trUnderMouse.id){
         $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
-        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+20, top: e.pageY+20 });
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
         if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
             $('div[id="tooltip_'+shownTooltipId+'"]').hide();
         }
