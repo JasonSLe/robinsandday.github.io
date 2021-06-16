@@ -329,6 +329,7 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
   }, 100);
 });
 
+let shownTooltipId = null;
 function serviceVisitsTooltips(){
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","position: fixed;display: inline-block;");
@@ -339,9 +340,9 @@ function serviceVisitsTooltips(){
         $(this).hide();
       });
   });
-  let shownTooltipId = null;
   $('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
       let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
+      console.log(partOfTable);
       let trUnderMouse = null;
       if (partOfTable.nodeName==='TD'){
         trUnderMouse = partOfTable.parentElement;
