@@ -332,21 +332,9 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
 let shownTooltipId = null;
 function serviceVisitsTooltips(){
   $('div[id*="tooltip"]').each(function(){
-    console.log('CLEAR ALL')
     $(this).attr("style","background: white; position: fixed; display:none;");
   });
   $('table[id="serviceVisitsTable"] tr').on("mouseleave", function (e) {
-    /*
-    let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
-    if (partOfTable.nodeName==='TD'){
-      partOfTable = partOfTable.parentElement;
-    }
-    if (partOfTable.nodeName==='TR'){
-      if (partOfTable.parentElement.parentElement.id === 'serviceVisitsTable') {
-        return;
-      }
-    }*/
-
     console.log('HIDE AFTER LEAVE')
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
