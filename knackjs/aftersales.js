@@ -350,7 +350,9 @@ function serviceVisitsTooltips(){
       if (partOfTable.nodeName==='TR'){
         trUnderMouse = partOfTable;
       }
+      console.log(trUnderMouse);
       if (trUnderMouse && trUnderMouse.id){
+        console.log('in')
         $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
         $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX, top: e.pageY });
         if (shownTooltipId != trUnderMouse.id && shownTooltipId){
