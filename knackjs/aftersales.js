@@ -333,7 +333,7 @@ let shownTooltipId = null;
 function serviceVisitsTooltips(){
   $('div[id*="tooltip"]').each(function(){
     console.log('CLEAR ALL')
-    $(this).attr("style","position: fixed;display:none;");
+    $(this).attr("style","background: white; position: fixed; display:none;");
   });
   $('table[id="serviceVisitsTable"] tr').on("mouseleave", function (e) {
     /*
@@ -346,7 +346,7 @@ function serviceVisitsTooltips(){
         return;
       }
     }*/
-    
+
     console.log('HIDE AFTER LEAVE')
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
