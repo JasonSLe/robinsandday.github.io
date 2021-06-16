@@ -360,7 +360,7 @@ function serviceVisitsTooltips(){
       }
       if (trUnderMouse && trUnderMouse.id){
         $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
-        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX, top: e.pageY });
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+20, top: e.pageY+20 });
         if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
             $('div[id="tooltip_'+shownTooltipId+'"]').hide();
         }
