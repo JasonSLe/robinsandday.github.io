@@ -305,6 +305,7 @@ function serviceVisitsTooltips(){
 
   console.log('table',$('table[id="serviceVisitsTable"]'));
   $('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
+      console.log('on move');
       let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
       let trUnderMouse = null;
       if (partOfTable.nodeName==='TD'){
@@ -323,25 +324,6 @@ function serviceVisitsTooltips(){
       }
   });
 }
-
-$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
-  let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
-  let trUnderMouse = null;
-  if (partOfTable.nodeName==='TD'){
-    trUnderMouse = partOfTable.parentElement;
-  }
-  if (partOfTable.nodeName==='TR'){
-    trUnderMouse = partOfTable;
-  }
-  if (trUnderMouse && trUnderMouse.id){
-    $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
-    $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
-    if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
-        $('div[id="tooltip_'+shownTooltipId+'"]').hide();
-    }
-    shownTooltipId = trUnderMouse.id;
-  }
-});
 
 $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
   formatScene24();
