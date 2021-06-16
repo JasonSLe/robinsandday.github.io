@@ -298,7 +298,7 @@ function serviceVisitsTooltips(){
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: fixed; display:none;");
   });
-  $('table[id="serviceVisitsTable"] tr').on("mouseleave", function (e) {
+  $('table[id="serviceVisitsTable"]').on("mouseleave", function (e) {
     console.log('HIDE AFTER LEAVE')
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
