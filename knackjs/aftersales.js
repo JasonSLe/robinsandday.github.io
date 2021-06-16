@@ -294,6 +294,7 @@ function formatScene24(){
 
 let shownTooltipId = null;
 function serviceVisitsTooltips(){
+  console.log('serviceVisitsTooltips');
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: fixed; display:none;");
   });
@@ -302,6 +303,7 @@ function serviceVisitsTooltips(){
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
 
+  console.log('table',$('table[id="serviceVisitsTable"]'));
   $('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
       let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
       let trUnderMouse = null;
