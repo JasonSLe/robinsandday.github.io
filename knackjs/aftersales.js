@@ -355,7 +355,7 @@ function serviceVisitsTooltips(){
         console.log('in')
         $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
         $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX, top: e.pageY });
-        if (shownTooltipId != trUnderMouse.id && shownTooltipId){
+        if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
             $('div[id="tooltip_'+shownTooltipId+'"]').hide();
         }
         shownTooltipId = trUnderMouse.id;
