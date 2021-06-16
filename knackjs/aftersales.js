@@ -321,12 +321,20 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
           views:['95']   
         },{
           mainField : 'field_325', //Autoline - service visits tooltips
-          views:['133']   
+          views:['133'],
+          runAfter : serviceVisitsTooltips
       }
       ]
       sceneRefresh(refreshData);
   }, 100);
 });
+
+function serviceVisitsTooltips(){
+  $('div[id*="tooltip"]').each(function(){
+    $(this).attr("style","position: absolute;");
+    $(this).hide();
+  });
+}
 
 $(document).on("knack-scene-render.scene_28", function(event, scene, data) {
   let refreshData = [
