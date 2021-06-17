@@ -226,7 +226,7 @@ takePhotoButton.onclick = takePhoto;
 	      img.src = URL.createObjectURL(blob);
 	    }, 'image/jpeg', 1);
     } else {
-     	alert('unsuported system'); 
+     	alert('Your web browser is not supported, detection shows not Android, not Safari on Apple. Please check, if you do not have "Show Desktop version" in Android web browser settings.'); 
 	    alert(navigator.userAgent);
     }
     
