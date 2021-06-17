@@ -90,8 +90,8 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 	overflow: hidden;
 	white-space: nowrap;
   }
-  
-  #kn-scene_24 tr { line-height: 10px; }   
+  #kn-scene_24 .kn-view {margin-bottom:5px;}
+  #kn-scene_24 tr { line-height: 20px; }   
   
   #sectionLeft {width:33%;float:left;border: 1px solid #CCCCCC;
 	border-radius: 10px;padding: 10px;}
@@ -180,5 +180,3 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
-
-
