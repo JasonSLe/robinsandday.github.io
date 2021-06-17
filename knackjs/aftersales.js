@@ -64,7 +64,7 @@ function functionName(selector_scene){
 $(document).on('knack-view-render.any', function (event, view, data) {
   //  ---------Auto Capitalise Regestration input-------------
   $('input#field_31').keyup(function() {
-      this.value = this.value.toUpperCase().replace(new RegExp(' ','g'),'');
+      this.value = this.value.toUpperCase().replace(new RegExp(' ','g'),'').replace(new RegExp('&#9;','g'),'');
   });
 });
 
