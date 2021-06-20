@@ -173,56 +173,37 @@ $(document).on('knack-view-render.any', function(event, view, data) {
 });
 
 $(document).on('knack-view-render.view_2163', function(event, view, data) {
-    //getting the username = email from the field
-    var userName = Knack.getUserAttributes().email;
-    var timeStamp = Math.floor((new Date()).getTime() / 30000);
-    var hash = 'H' + hashCode('U' + userName + timeStamp)
     var token = Knack.getUserAttributes().values["field_6440"];
     $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 $(document).on('knack-view-render.view_3921', function(event, view, data) {
-  //getting the username = email from the field
-  var userName = Knack.getUserAttributes().email;
-  var timeStamp = Math.floor((new Date()).getTime() / 30000);
-  var hash = 'H' + hashCode('U' + userName + timeStamp)
   var token = Knack.getUserAttributes().values["field_6440"];
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-digital-deal-file" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 $(document).on('knack-view-render.view_3923', function(event, view, data) {
-  //getting the username = email from the field
-  var userName = Knack.getUserAttributes().email;
-  var timeStamp = Math.floor((new Date()).getTime() / 30000);
-  var hash = 'H' + hashCode('U' + userName + timeStamp)
   var token = Knack.getUserAttributes().values["field_6440"];
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-deal-file-admin" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 $(document).on('knack-view-render.view_3925', function(event, view, data) {
-  //getting the username = email from the field
-  var userName = Knack.getUserAttributes().email;
-  var timeStamp = Math.floor((new Date()).getTime() / 30000);
-  var hash = 'H' + hashCode('U' + userName + timeStamp)
   var token = Knack.getUserAttributes().values["field_6440"];
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-sales-admin" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 $(document).on('knack-view-render.view_3978', function(event, view, data) {
-  //getting the username = email from the field
-  var userName = Knack.getUserAttributes().email;
-  var timeStamp = Math.floor((new Date()).getTime() / 30000);
-  var hash = 'H' + hashCode('U' + userName + timeStamp)
   var token = Knack.getUserAttributes().values["field_6440"];
-  console.log(token);
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 $(document).on('knack-view-render.view_4272', function(event, view, data) {
-  var userName = Knack.getUserAttributes().email;
-  var timeStamp = Math.floor((new Date()).getTime() / 30000);
-  var hash = 'H' + hashCode('U' + userName + timeStamp)
   var token = Knack.getUserAttributes().values["field_6440"];
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#after-sales-vehicle-lookup?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
+$(document).on('knack-view-render.view_4364', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#powersupply-orders?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 $(document).on('knack-view-render.view_4294', function(event, view, data) {
