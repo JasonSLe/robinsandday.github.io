@@ -226,8 +226,7 @@ takePhotoButton.onclick = takePhoto;
 	      img.src = URL.createObjectURL(blob);
 	    }, 'image/jpeg', 1);
     } else {
-     	alert('Your web browser is not supported, detection shows not Android, not Safari on Apple. Please check, if you do not have "Show Desktop version" in Android web browser settings.'); 
-	    alert(navigator.userAgent);
+      alert('Your web browser is not supported, detection shows not Android, not Safari on Apple. Please check, if you do not have "Desktop site" on in Chrome settings. Please report your user agent: '+navigator.userAgent); 
     }
     
     sndCameraTakePhoto.play();
