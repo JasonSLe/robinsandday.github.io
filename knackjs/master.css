@@ -1351,7 +1351,7 @@ body {
   	box-shadow:         3px 3px #ccc;
 }
 
-/* MENU TABS */
+/* USED VEHICLE REPORTING MENU TABS */
 #view_3171 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
   	background-color: #FFA100;
   	color: #FFFFFF;
@@ -1369,6 +1369,84 @@ body {
   	color: #FFFFFF;
   	font-weight: bold;
 }
+
+#view_3171 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/****** REGIONAL USED Stock Profiling Buttons ******/
+
+#view_4314 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4314 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_4314 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4314 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_4314 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4314 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_4314 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4314 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+
 
 #view_3171 > div > a.kn-link.kn-link-1.kn-link-page.is-primary.kn-button {
   	background-color: #D18400 !important;
