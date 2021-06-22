@@ -1656,7 +1656,13 @@ $(document).on('knack-form-submit.view_3538', function(event, view, data) {
 $(document).on('knack-form-submit.view_3424', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/baxf6i7ag8g6xaxn7nvqcz3f1neajylu" ;
 	console.log(data);
-  let dataToSend = JSON.stringify({"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection":data.field_6041_raw.date_formatted + " " + data.field_6041_raw.hours + ":" + data.field_6041_raw.minutes,
+	var num = data.field_6041_raw.time;
+        var hours = (num / 60);
+        var rhours = Math.floor(hours);
+        var minutes = (hours - rhours) * 60;
+        var rminutes = Math.round(minutes);
+        var time =  rhours + ":" + rminutes;
+  let dataToSend = JSON.stringify({"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection":time,
 				   "Dealer ID":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
   var rData = $.ajax({
     url: commandURL,
