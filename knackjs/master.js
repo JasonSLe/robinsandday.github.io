@@ -1635,5 +1635,3 @@ $(document).on('knack-form-submit.view_3553', function(event, view, data) {
   console.log(rData);
 });
 
-
-
