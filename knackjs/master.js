@@ -1655,7 +1655,8 @@ $(document).on('knack-form-submit.view_3538', function(event, view, data) {
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Trigger For Integromat When Dealer Pushes Vehicle For Prep Centre {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/88520373?redirect=true 
 $(document).on('knack-form-submit.view_3424', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/baxf6i7ag8g6xaxn7nvqcz3f1neajylu" ;
-  let dataToSend = JSON.stringify({"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection":data.field_6041_raw,"Dealer ID":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
+  let dataToSend = JSON.stringify({"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection":data.field_6041_raw[0].date_formatted + " " + data.field_6041_raw[0].hours + ":" + data.field_6041_raw[0].minutes,
+				   "Dealer ID":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
