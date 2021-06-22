@@ -1674,5 +1674,17 @@ $(document).on('knack-form-submit.view_3424', function(event, view, data) {
   console.log(rData);
 });
 
-
+// Used Vehicle Stock TRIGGER INTEGROMAT UPON –**Trigger Integromat to refresh Stock record (Form and trigger in Vehicle Advert Details) Replaces https://zapier.com/app/editor/110796625?redirect=true
+$(document).on('knack-form-submit.view_3994', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
+  let dataToSend = JSON.stringify({"Knack Stock UID":data.id,"Reg1":data.field_2694_raw,"Source Of Payload" : "knack direct", "Dealer":data.field_2721_raw}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
 
