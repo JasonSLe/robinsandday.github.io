@@ -457,7 +457,7 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
     };
     document.getElementById('view_140').appendChild(button1)
     let button2 = document.createElement('button');
-    button2.innerHTML = 'Only with notification';
+    button2.innerHTML = 'Has Hub In Stock';
     button2.setAttribute("class", "kn-button");
     button2.onclick = function(){
       let token = getTokenFromURL(document.location.href);
