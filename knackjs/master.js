@@ -1607,6 +1607,17 @@ $(document).on('knack-record-update.view_4086', function(event, view, data) {
   
 });
 
+
+
+//
+//
+//       USED VEHICLE STOCK
+//
+//
+//
+
+
+
 // Used Vehicle Stock TRIGGER INTEGROMAT UPON –***Trigger Integromat to refresh Stock record (Form and trigger in Autoline Vehicle Details) Replaces https://zapier.com/app/editor/110795723?redirect=true
 $(document).on('knack-form-submit.view_3993', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
@@ -1652,6 +1663,32 @@ $(document).on('knack-form-submit.view_3538', function(event, view, data) {
 });
 
 
+
+// Used Vehicle Stock TRIGGER INTEGROMAT UPON –**Trigger Integromat to refresh Stock record (Form and trigger in Vehicle Advert Details) Replaces https://zapier.com/app/editor/110796625?redirect=true
+$(document).on('knack-form-submit.view_3994', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
+  let dataToSend = JSON.stringify({"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Source Of Payload" : "knack direct", "Dealer":data.field_2721_raw[0].identifier}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
+
+
+//
+//       USED VEHICLE CHECK IN
+//
+//
+//
+//
+
+
+
+
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Trigger For Integromat When Dealer Pushes Vehicle For Prep Centre {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/88520373?redirect=true 
 $(document).on('knack-form-submit.view_3424', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/baxf6i7ag8g6xaxn7nvqcz3f1neajylu" ;
@@ -1673,18 +1710,3 @@ $(document).on('knack-form-submit.view_3424', function(event, view, data) {
   }).responseText;
   console.log(rData);
 });
-
-// Used Vehicle Stock TRIGGER INTEGROMAT UPON –**Trigger Integromat to refresh Stock record (Form and trigger in Vehicle Advert Details) Replaces https://zapier.com/app/editor/110796625?redirect=true
-$(document).on('knack-form-submit.view_3994', function(event, view, data) { 
-	let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
-  let dataToSend = JSON.stringify({"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Source Of Payload" : "knack direct", "Dealer":data.field_2721_raw[0].identifier}) ;
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend,
-    async: false
-  }).responseText;
-  console.log(rData);
-});
-
