@@ -1611,7 +1611,7 @@ $(document).on('knack-record-update.view_4086', function(event, view, data) {
 $(document).on('knack-form-submit.view_3993', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
 
-  let dataToSend = JSON.stringify({"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Dealer4":data.field_2721[0].keys(),"Source Of Payload" : "knack direct","ConnectedDealer":data.field_6476_raw}) ;
+  let dataToSend = JSON.stringify({"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Dealer4":Object.values(data.field_2721_raw[0]),"Source Of Payload" : "knack direct","ConnectedDealer":data.field_6476_raw}) ;
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
