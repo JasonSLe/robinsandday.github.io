@@ -456,6 +456,16 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
       return false;
     };
     document.getElementById('view_140').appendChild(button1)
+    let button2 = document.createElement('button');
+    button2.innerHTML = 'Only with notification';
+    button2.setAttribute("class", "kn-button");
+    button2.onclick = function(){
+      let token = getTokenFromURL(document.location.href);
+      document.location = "https://www.robinsandday.co.uk/aftersales#powersupply-orders/?token="+token+"&view_139_page=1&view_139_sort=field_344|desc&view_139_filters=%7B%22match%22%3A%22and%22%2C%22rules%22%3A%5B%7B%22field%22%3A%22field_345%22%2C%22operator%22%3A%22is%22%2C%22value%22%3A%22Yes%22%2C%22field_name%22%3A%22Has%20Hub%20In%20Stock%22%7D%5D%7D"
+      return false;
+    };
+    document.getElementById('view_140').appendChild(button2)
+    
   });
 
   
