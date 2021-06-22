@@ -1621,17 +1621,3 @@ $(document).on('knack-record-update.view_4086', function(event, view, data) {
 //   console.log(rData);
 // });
 
-// Used Vehicle Stock TRIGGER INTEGROMAT UPON –*Trigger Integromat when Dealer Imagery has been Updated for Used Vehicle Adverts Replaces https://zapier.com/app/editor/92841452?redirect=true
-$(document).on('knack-form-submit.view_3553', function(event, view, data) { 
-	let commandURL = "https://hook.integromat.com/8r1ayrzigjxtimjwafw9lhqae72xy6o7" ;
-  let dataToSend = JSON.stringify({"Record ID":data.id,"Source Of Payload" : “knack direct”}) ; 
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend,
-    async: false
-  }).responseText;
-  console.log(rData);
-});
-
