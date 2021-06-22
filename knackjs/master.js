@@ -1608,9 +1608,23 @@ $(document).on('knack-record-update.view_4086', function(event, view, data) {
 });
 
 // Used Vehicle Stock TRIGGER INTEGROMAT UPON –***Trigger Integromat to refresh Stock record (Form and trigger in Autoline Vehicle Details) Replaces https://zapier.com/app/editor/110795723?redirect=true
-$(document).on('knack-form-submit.view_3993', function(event, view, data) { 
-	let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
-  let dataToSend = JSON.stringify({"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Dealer":data.field_2721_raw[0].identifier,"Source Of Payload" : "knack direct","ConnectedDealer":data.field_6476_raw}) ;
+// $(document).on('knack-form-submit.view_3993', function(event, view, data) { 
+// 	let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
+//   let dataToSend = JSON.stringify({"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Dealer":data.field_2721_raw[0].identifier,"Source Of Payload" : "knack direct","ConnectedDealer":data.field_6476_raw}) ;
+//   var rData = $.ajax({
+//     url: commandURL,
+//     type: 'POST',
+//     contentType: 'application/json',
+//     data: dataToSend,
+//     async: false
+//   }).responseText;
+//   console.log(rData);
+// });
+
+// Used Vehicle Stock TRIGGER INTEGROMAT UPON –*Trigger Integromat when Dealer Imagery has been Updated for Used Vehicle Adverts Replaces https://zapier.com/app/editor/92841452?redirect=true
+$(document).on('knack-form-submit.view_3553', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/8r1ayrzigjxtimjwafw9lhqae72xy6o7" ;
+  let dataToSend = JSON.stringify({"Record ID":data.id,"Source Of Payload" : “knack direct”}) ; 
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
@@ -1620,4 +1634,6 @@ $(document).on('knack-form-submit.view_3993', function(event, view, data) {
   }).responseText;
   console.log(rData);
 });
+
+
 
