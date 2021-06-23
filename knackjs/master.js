@@ -1715,7 +1715,7 @@ $(document).on('knack-form-submit.view_3424', function(event, view, data) {
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – **Trigger Integromat to Background Replace Used Vehicle at point of Vehicle Disposal Selection {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/108678042/nodes/108678042/fields
 $(document).on('knack-form-submit.view_3926', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/8mnivmrh1gs4co3kd3k36eg798zt1ko9" ;
-  let dataToSend = JSON.stringify({"Knack ID of Used Deal File":data.id,"Image URL2":data.field_4944_raw.url,"Image thumbnail URL":data.field_4944_raw.thumb_url,"Dealer":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
+  let dataToSend = JSON.stringify({"Knack ID of Used Deal File":data.id,"Image URL":data.field_4944_raw.url,"Image thumbnail URL":data.field_4944_raw.thumb_url,"Dealer":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
