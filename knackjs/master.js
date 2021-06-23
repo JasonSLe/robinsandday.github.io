@@ -1833,7 +1833,7 @@ $(document).on('knack-form-submit.view_2966', function(event, view, data) {
 
   let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
  
-  let dataToSend = JSON.stringify({"Knack Deal File UID":data.id,"Reg":data.field_4941_raw,"Dealer":data.field_4943_raw,"Source Of Payload" : "knack direct"}) ;
+  let dataToSend = JSON.stringify({"Knack Deal File UID":data.id,"Reg":data.field_4941_raw,"Dealer":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
