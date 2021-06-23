@@ -1746,7 +1746,7 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
         if (data.field_5011_raw === "Trade"){
             
             let commandURL = "https://hook.integromat.com/9mmic64ktusvdxj85i4nyqobfrpef85o";
-            let dataToSend = JSON.stringify({"Knack Record ID":data.id, "Source Of Payload":"knack direct"});
+            let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
             var rData = $.ajax({
                 url: commandURL,
                 type: 'POST',
@@ -1759,7 +1759,7 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
         }else if (data.field_5011_raw === "Retail"){
             
             let commandURL = "https://hook.integromat.com/83njs7wwvslcjlo36abncth5dfmlexpm";
-            let dataToSend = JSON.stringify({"Knack Record ID":data.id, "Source Of Payload":"knack direct"});
+            let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
             var rData = $.ajax({
                 url: commandURL,
                 type: 'POST',
