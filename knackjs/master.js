@@ -1747,13 +1747,26 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
             
             let commandURL = "https://hook.integromat.com/9mmic64ktusvdxj85i4nyqobfrpef85o";
             let dataToSend = JSON.stringify({"Knack Record ID":data.id, "Source Of Payload":"knack direct"});
-            var rData; 
+            var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+            }).responseText;
+     
             
         }else if (data.field_5011_raw === "Retail"){
             
             let commandURL = "https://hook.integromat.com/83njs7wwvslcjlo36abncth5dfmlexpm";
             let dataToSend = JSON.stringify({"Knack Record ID":data.id, "Source Of Payload":"knack direct"});
-            var rData;
+            var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+            }).responseText;
         }
         
     }
