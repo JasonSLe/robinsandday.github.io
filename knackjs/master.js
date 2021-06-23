@@ -1631,7 +1631,7 @@ $(document).on('knack-form-submit.view_3993', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 // Used Vehicle Stock TRIGGER INTEGROMAT UPON –*Trigger Integromat when Dealer Imagery has been Updated for Used Vehicle Adverts Replaces https://zapier.com/app/editor/92841452?redirect=true
@@ -1645,7 +1645,7 @@ $(document).on('knack-form-submit.view_3553', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 // Used Vehicle Stock TRIGGER INTEGROMAT UPON –*Trigger Integromat when Marketing Imagery has been Updated for Used Vehicle Adverts Replaces https://zapier.com/app/editor/92838132/nodes/92838135
@@ -1659,7 +1659,7 @@ $(document).on('knack-form-submit.view_3538', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -1675,7 +1675,7 @@ $(document).on('knack-form-submit.view_3994', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -1708,7 +1708,7 @@ $(document).on('knack-form-submit.view_3424', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -1723,7 +1723,7 @@ $(document).on('knack-form-submit.view_3926', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Used Vehicle Check In - Retail or Trade Selection - Instant Webhook for Integromat (V2) {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/99112426/nodes/99112426
@@ -1739,7 +1739,7 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
         data: dataToSend,
         async: false
     }).responseText;
-    console.log(rData);
+    
     
     if (data.field_5011_raw !== "Vehicle Sold"){
         
@@ -1784,10 +1784,17 @@ $(document).on('knack-form-submit.view_2276', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
+//
+//
+//
+//    Capture PDF
+//
+//
+//
 /// Used Deal File - Capture PDF - Capture PDFs TRIGGER INTEGROMAT UPON – **Used Deal File PDF - Customer satisfaction survey signed on site V2 {(Deal File) Customer Satisfaction Survey} Replaces https://zapier.com/app/editor/113682381?redirect=true
 $(document).on('knack-form-submit.view_2940', function(event, view, data) { 
     
@@ -1802,7 +1809,7 @@ $(document).on('knack-form-submit.view_2940', function(event, view, data) {
             data: dataToSend,
             async: false
         }).responseText;
-        console.log(rData);
+        
               
     }
 
