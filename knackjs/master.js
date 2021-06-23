@@ -1848,13 +1848,11 @@ $(document).on('knack-form-submit.view_2966', function(event, view, data) {
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L when Approved {(Deal File) Profit Sheet} Replaces https://zapier.com/app/editor/111720452/nodes/111720452/fields
 $(document).on('knack-form-submit.view_4067', function(event, view, data) { 
-    console.log(typeof data.field_6449_raw);
-    console.log(data.field_6449_raw.Checked);
-	console.log(data.field_6449_raw);
+
     
     if(data.field_6449_raw === true){
         
-        let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
+        let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v" ;
         let dataToSend = JSON.stringify({"Record ID":data.id,"Form":"Digital P&L","Source Of Payload" : "knack direct"}) ;
         var rData = $.ajax({
             url: commandURL,
