@@ -1771,3 +1771,18 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
         
     }
 });
+
+
+// Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Used Vehicle Check In to Trigger AutoTrader Retail Metrics {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/84075829/nodes/84075829/fields
+$(document).on('knack-form-submit.view_2276', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/onkas3qpuuxq16qmnk54zu50uyffqoag" ;
+  let dataToSend = JSON.stringify({"RecordID":data.id,"Source Of Payload" : "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
