@@ -1901,20 +1901,4 @@ $(document).on('knack-form-submit.view_4146', function(event, view, data) {
 });
 
 
-// Used Deal File TRIGGER INTEGROMAT UPON – *Trigger Integromat to connect Used Deal file to a newly created Autoline VSB stock Item {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/110800495?redirect=true
-$(document).on('knack-form-submit.view_3997', function(event, view, data) { 
-    
-	console.log(data.field_4943_raw[0].identifier);
-	console.log("This is a test");
 
-  let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do";
- 
-  let dataToSend = JSON.stringify({"Knack Deal File UID":data.id,"Reg":data.field_4941_raw,"Dealer":data.field_4943_raw[0].identifier ,"Source Of Payload": "knack direct"}) ;
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend,
-    async: false
-  }).responseText; 
- });
