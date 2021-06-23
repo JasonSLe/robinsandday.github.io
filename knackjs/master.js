@@ -1809,9 +1809,21 @@ $(document).on('knack-form-submit.view_2940', function(event, view, data) {
             contentType: 'application/json',
             data: dataToSend,
             async: false
-        }).responseText;
-        
-              
+        }).responseText;          
     }
+});
 
+
+// Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Customer satisfaction survey signed online by Customer {(Deal File) Customer Satisfaction Survey} Replaces https://zapier.com/app/editor/113720424?redirect=true
+$(document).on('knack-form-submit.view_4149', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v" ;
+  let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Customer satisfaction survey", "Source Of Payload": "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
 });
