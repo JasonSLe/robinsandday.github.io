@@ -1850,7 +1850,7 @@ $(document).on('knack-form-submit.view_2966', function(event, view, data) {
 $(document).on('knack-form-submit.view_4067', function(event, view, data) { 
 
     
-    if(data.field_6449_raw === true){
+    if(data.field_6449_raw){
         
         let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v" ;
         let dataToSend = JSON.stringify({"Record ID":data.id,"Form":"Digital P&L","Source Of Payload" : "knack direct"}) ;
