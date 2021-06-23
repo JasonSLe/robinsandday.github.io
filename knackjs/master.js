@@ -1798,10 +1798,8 @@ $(document).on('knack-form-submit.view_2276', function(event, view, data) {
 /// Used Deal File - Capture PDF - Capture PDFs TRIGGER INTEGROMAT UPON – **Used Deal File PDF - Customer satisfaction survey signed on site V2 {(Deal File) Customer Satisfaction Survey} Replaces https://zapier.com/app/editor/113682381?redirect=true
 $(document).on('knack-form-submit.view_2940', function(event, view, data) { 
 	
-    console.log(typeof data.field_5977_raw);
-    console.log(data.field_5977_raw);
     
-    if (typeof data.field_5977_raw !== 'undefined' || data.field_5977_raw !== null){
+    if (typeof data.field_5977_raw !== 'undefined' && data.field_5977_raw !== null){
         
         let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v";
         let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Customer satisfaction survey", "Source Of Payload": "knack direct"});
