@@ -1869,10 +1869,27 @@ $(document).on('knack-form-submit.view_4067', function(event, view, data) {
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Handover Checklist signed at Dealer OR to be signed remotely {(Deal File) Handover Checklist} Replaces https://zapier.com/app/editor/103143311?redirect=true
 $(document).on('knack-form-submit.view_2568', function(event, view, data) { 
 	
-    console.log("This is a Test!!");
 
     let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v" ;
     let dataToSend = JSON.stringify({"Record ID":data.id,"Form":"Handover checklist","Source Of Payload": "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  
+});
+
+
+// Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Handover Checklist signed online by Customer {(Deal File) Handover Checklist} Replaces https://zapier.com/app/editor/113719265?redirect=true
+$(document).on('knack-form-submit.view_4146', function(event, view, data) { 
+	
+	console.log("This is a Test!!");
+
+    let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v" ;
+    let dataToSend = JSON.stringify({"Record ID":data.id,"Form":"Handover checklist","Source Of Payload" : "knack direct"}) ;
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
