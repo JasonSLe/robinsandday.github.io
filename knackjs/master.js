@@ -1725,3 +1725,36 @@ $(document).on('knack-form-submit.view_3926', function(event, view, data) {
   }).responseText;
   console.log(rData);
 });
+
+// Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Used Vehicle Check In - Retail or Trade Selection - Instant Webhook for Integromat (V2) {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/99112426/nodes/99112426
+$(document).on('knack-form-submit.view_2303', function(event, view, data) {
+
+    let commandURL = "https://hook.integromat.com/hrnilld87m88ereruz9m8k9uxywat6eb" ;
+    let dataToSend = JSON.stringify({"Knack Record ID":data.id, "Source Of Payload":"knack direct"}) ;
+    
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;
+    console.log(rData);
+    
+    if (data.field_5011_raw !== "Vehicle Sold"){
+        
+        if (data.field_5011_raw === "Trade"){
+            
+            let commandURL = "https://hook.integromat.com/9mmic64ktusvdxj85i4nyqobfrpef85o";
+            let dataToSend = JSON.stringify({"Knack Record ID":data.id, "Source Of Payload":"knack direct"});
+            var rData; 
+            
+        }else if (data.field_5011_raw === "Retail"){
+            
+            let commandURL = "https://hook.integromat.com/83njs7wwvslcjlo36abncth5dfmlexpm";
+            let dataToSend = JSON.stringify({"Knack Record ID":data.id, "Source Of Payload":"knack direct"});
+            var rData;
+        }
+        
+    }
+});
