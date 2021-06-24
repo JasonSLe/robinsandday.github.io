@@ -2044,7 +2044,9 @@ $(document).on('knack-form-submit.view_2582', function(event, view, data) {
 });
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Vehicle Invoice signed online by Customer {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/113717705?redirect=true
-$(document).on('knack-form-submit.view_4127', function(event, view, data) { 
+$(document).on('knack-form-submit.view_4127', function(event, view, data) {
+	
+	console.log("Test 1")
 	let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v" ;
  
   let dataToSend = JSON.stringify({"Record ID":data.id,"Form":"Vehicle invoice","Source Of Payload" : "knack direct"}) ;
