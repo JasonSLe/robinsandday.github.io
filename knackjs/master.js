@@ -2008,3 +2008,19 @@ $(document).on('knack-form-submit.view_4141', function(event, view, data) {
   }).responseText;
   console.log(rData);
 });
+
+
+// Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – **Used Deal File PDF - Service Schedule signed at Dealer OR to be signed remotely {(Deal File) Service Schedule} Replaces https://zapier.com/app/editor/103143807?redirect=true
+$(document).on('knack-form-submit.view_2915', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v" ;
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id,"Form":"Service schedule","Source Of Payload" : "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
