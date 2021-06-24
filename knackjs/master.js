@@ -1978,3 +1978,18 @@ $(document).on('knack-form-submit.view_3463', function(event, view, data) {
   }).responseText;
   console.log(rData);
 });
+
+// Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Part Ex Purchase Invoice signed online by Customer {(Deal File) Customer Part Exchange Invoice} Replaces https://zapier.com/app/editor/113718840?redirect=true
+$(document).on('knack-form-submit.view_4136', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v" ;
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id,"Form":"Part exchange purchase invoice","Source Of Payload" : "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
