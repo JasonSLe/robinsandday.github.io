@@ -1933,3 +1933,16 @@ $(document).on('knack-form-submit.view_4171', function(event, view, data) {
   console.log(rData);
 });
 
+// Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Merge PRE Sale Pack and Customer Signature {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/113720873?redirect=true
+$(document).on('knack-form-submit.view_4166', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/gx0km24b2cvo6myagf5xlhvxkrurmun4" ;
+  let dataToSend = JSON.stringify({"Record ID":data.id,"Form":"Pre Sale Pack","Source Of Payload" : "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
