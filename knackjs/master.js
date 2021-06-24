@@ -2075,6 +2075,21 @@ $(document).on('knack-form-submit.view_2901', function(event, view, data) {
     async: false
   }).responseText;
   console.log(rData);
-}
+});
 
-);
+
+// Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Handover Appointment Updated {(Deal File) Customer Handover Appointment} Replaces https://zapier.com/app/editor/102470844?redirect=true
+$(document).on('knack-form-submit.view_2925', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1" ;
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Handover Appointment Updated", "Source Of Payload": "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
