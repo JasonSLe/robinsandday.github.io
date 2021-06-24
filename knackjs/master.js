@@ -1950,11 +1950,7 @@ $(document).on('knack-form-submit.view_4166', function(event, view, data) {
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Order Form signed on site {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/103142236?redirect=true
 $(document).on('knack-form-submit.view_2531', function(event, view, data) {
-	
-	console.log("Test 2");
-	console.log(typeof data.field_5441_raw);
-        console.log(typeof data.field_5957_raw);
-    
+	   
     if((typeof data.field_5441_raw !== "undefined" && data.field_5441_raw !== null) && ( typeof data.field_5957_raw === "undefined" || data.field_5957_raw === null)){
         
         let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v";
