@@ -1908,7 +1908,7 @@ $(document).on('knack-form-submit.view_3997', function(event, view, data) {
         console.log(Object.values(data.field_4943_raw[0]));
 	
         console.log(Object.values(data.field_4943_raw));
-	console.log("This is test 2");
+	console.log("This is test 3");
 
   let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do";
  
