@@ -2103,7 +2103,7 @@ $(document).on('knack-form-submit.view_4067', function(event, view, data) {
         console.log("Test 3");
 	console.log(data.field_5977_raw);
 	
-    if(data.field_5977_raw){
+    if(data.field_6449_raw){
         
         let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v";
         let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Digital P&L", "Source Of Payload": "knack direct"});
@@ -2119,8 +2119,7 @@ $(document).on('knack-form-submit.view_4067', function(event, view, data) {
             
         let commandURL1 = "https://hook.integromat.com/qb810ofl9jwfvemwhvmvc6zjxqfgob9g";
         let dataToSend1 = JSON.stringify({"P&L Record ID":data.id, "Deal file ID":data.field_6454_raw, "Source Of Payload": "knack direct"});   
-        function postDelay1() {
-            
+
             rData = $.ajax({
                 url: commandURL1,
                 type: 'POST',
@@ -2128,14 +2127,12 @@ $(document).on('knack-form-submit.view_4067', function(event, view, data) {
                 data: dataToSend1,
                 async: false
             }).responseText;  
-        }            
-        setTimeout(postDelay1, 300);
+
 
         
         let commandURL2 = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
         let dataToSend2= JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Approved", "Source Of Payload": "knack direct"});
         
-        function postDelay2() {
             
             rData = $.ajax({
                 url: commandURL2,
@@ -2144,8 +2141,7 @@ $(document).on('knack-form-submit.view_4067', function(event, view, data) {
                 data: dataToSend2,
                 async: false
             }).responseText;  
-        }
-        setTimeout(postDelay2, 300);
+
   
     }
 });
