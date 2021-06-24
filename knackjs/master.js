@@ -2093,3 +2093,31 @@ $(document).on('knack-form-submit.view_2925', function(event, view, data) {
   }).responseText;
   console.log(rData);
 });
+
+
+// Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L when Approved {(Deal File) Profit Sheet} Replaces https://zapier.com/app/editor/111720452/nodes/111720452/fields
+ // Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Profit & Loss Approved {(Deal File) Profit Sheet} Replaces https://zapier.com/app/editor/111449060?redirect=true
+$(document).on('knack-form-submit.view_4067', function(event, view, data) {
+    
+    console.log("Test 1");
+    if(data.field_5977_raw){
+        
+        let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Digital P&L", "Source Of Payload": "knack direct"});
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+            }).responseText;
+        
+        let commandURL = "https://hook.integromat.com/qb810ofl9jwfvemwhvmvc6zjxqfgob9g";
+        let dataToSend = JSON.stringify({"P&L Record ID":data.id, "Deal file ID":data.field_6454_raw, "Source Of Payload": "knack direct"});
+        rData;
+        
+        let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Approved", "Source Of Payload": "knack direct"});
+        rData;    
+    }
+});
