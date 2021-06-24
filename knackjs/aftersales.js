@@ -465,6 +465,15 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
       return false;
     };
     document.getElementById('view_140').appendChild(button2)
+    let button3 = document.createElement('button');
+    button3.innerHTML = 'Status not None';
+    button3.setAttribute("class", "kn-button");
+    button3.onclick = function(){
+      let token = getTokenFromURL(document.location.href);
+      document.location = "https://www.robinsandday.co.uk/aftersales#powersupply-orders/?token="+token+"&view_139_page=1&view_139_sort=field_334|desc&view_139_filters=%7B%22match%22%3A%22and%22%2C%22rules%22%3A%5B%7B%22field%22%3A%22field_344%22%2C%22operator%22%3A%22is%20not%22%2C%22value%22%3A%22None%22%2C%22field_name%22%3A%22Order%20Processing%20Status%22%7D%5D%7D"
+      return false;
+    };
+    document.getElementById('view_140').appendChild(button3)
     
   });
 
