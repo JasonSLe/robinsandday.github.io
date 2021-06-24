@@ -2111,23 +2111,23 @@ $(document).on('knack-form-submit.view_4067', function(event, view, data) {
             async: false
             }).responseText;
         
-        let commandURL = "https://hook.integromat.com/qb810ofl9jwfvemwhvmvc6zjxqfgob9g";
-        let dataToSend = JSON.stringify({"P&L Record ID":data.id, "Deal file ID":data.field_6454_raw, "Source Of Payload": "knack direct"});
+        let commandURL1 = "https://hook.integromat.com/qb810ofl9jwfvemwhvmvc6zjxqfgob9g";
+        let dataToSend1 = JSON.stringify({"P&L Record ID":data.id, "Deal file ID":data.field_6454_raw, "Source Of Payload": "knack direct"});
         var rData = $.ajax({
-            url: commandURL,
+            url: commandURL1,
             type: 'POST',
             contentType: 'application/json',
-            data: dataToSend,
+            data: dataToSend1,
             async: false
             }).responseText;
         
-        let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
-        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Approved", "Source Of Payload": "knack direct"});
+        let commandURL2 = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+        let dataToSend2 = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Approved", "Source Of Payload": "knack direct"});
         var rData = $.ajax({
-            url: commandURL,
+            url: commandURL2,
             type: 'POST',
             contentType: 'application/json',
-            data: dataToSend,
+            data: dataToSend2,
             async: false
             }).responseText;    
     }
