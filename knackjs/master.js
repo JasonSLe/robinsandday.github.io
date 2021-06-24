@@ -1955,7 +1955,7 @@ $(document).on('knack-form-submit.view_2531', function(event, view, data) {
 	console.log(typeof data.field_5441_raw);
         console.log(typeof data.field_5957_raw);
     
-    if((typeof data.field_5441_raw !== "undefined" && data.field_5441_raw !== null) && ( typeof data.field_5957_raw === "undefined" && data.field_5957_raw === null)){
+    if((typeof data.field_5441_raw !== "undefined" && data.field_5441_raw !== null) && ( typeof data.field_5957_raw === "undefined" || data.field_5957_raw === null)){
         
         let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v";
         let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Order form", "Source Of Payload" : "knack direct"});
