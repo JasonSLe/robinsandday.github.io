@@ -2166,10 +2166,10 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 $(document).on('knack-form-submit.view_2548', function(event, view, data) { 
     
 
-  let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf" ;
+  let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
  
   let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, 
-      "Dealer":data.field_4943_raw, "Date in Stock":data.field_5842_raw, "Source Of Payload" : "knack direct"}) ;
+      "Dealer":data.field_4943_raw[0].identifier, "Date in Stock":data.field_5842_raw, "Source Of Payload" : "knack direct"}) ;
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
