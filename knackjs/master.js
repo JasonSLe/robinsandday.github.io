@@ -2145,3 +2145,18 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
     async: false
   }).responseText;
 });
+
+
+// Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Vehicle Invoice Retrieved {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/102574909?redirect=true
+$(document).on('knack-form-submit.view_2548', function(event, view, data) { 
+  let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id,"Trigger":"Vehicle Invoice","Source Of Payload": "knack direct"});
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+});
