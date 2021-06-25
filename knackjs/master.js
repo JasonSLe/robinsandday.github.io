@@ -2166,10 +2166,11 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 $(document).on('knack-form-submit.view_2548', function(event, view, data) { 
     
 
-    alert("Test 4");
+    
     console.log(Knack.getUserAttributes().email);
     console.log(Knack.getUserAttributes().roles);
     console.log(Knack.getUserAttributes().name);
+    console.log(Knack.getUserToken());
   let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf" ;
  
   let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, 
