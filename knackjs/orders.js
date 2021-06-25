@@ -516,6 +516,13 @@ $(document).on('knack-form-submit.view_2765', function(event, view, data) {
 
 $(document).on('knack-view-render.view_3633', function(event, view, data) {
   console.log('aaaa');
-  //Knack.getUserAttributes().values.field_2849
-  $('div[id="view_3633"] p[class="kn-description"]').text($('div[id="view_3633"] p[class="kn-description"]').text()+'<br />test')
+  try {
+    for (let i = 0;i<Knack.getUserAttributes().values.field_2849.length;i++){
+
+    }
+    //Knack.getUserAttributes().values.field_2849
+    $('div[id="view_3633"] p[class="kn-description"]').text($('div[id="view_3633"] p[class="kn-description"]').text()+' test')
+  } catch (ex){
+    console.log('error',ex)
+  }
 });
