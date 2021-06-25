@@ -2095,6 +2095,38 @@ $(document).on('knack-form-submit.view_2925', function(event, view, data) {
 });
 
 
+// Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Profit & Loss Updated {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/102469204?redirect=true
+$(document).on('knack-form-submit.view_2825', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Updated", "Source Of Payload": "knack direct"});
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  
+});
+
+
+// Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Profit & Loss Uploaded {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/102467550?redirect=true
+$(document).on('knack-form-submit.view_2824', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Uploaded", "Source Of Payload2": "knack direct"});
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  
+});
 
 
 
