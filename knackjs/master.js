@@ -2165,9 +2165,9 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 // Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/71559469?redirect=true
 $(document).on('knack-form-submit.view_2548', function(event, view, data) { 
     
-    alert("Test 2");
-    console.log("Test 2");
-    console.log(Knack.getUserRoles(98));
+
+    console.log("Test 3");
+    console.log(object.valueof(Knack.getUserRoles()));
   let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf" ;
  
   let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, 
