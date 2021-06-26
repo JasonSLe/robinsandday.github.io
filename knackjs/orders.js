@@ -514,6 +514,17 @@ $(document).on('knack-form-submit.view_2765', function(event, view, data) {
   console.log(rData);
 });
 
+function convertUTCDateToLocalDate(date) {
+  var newDate = new Date(date.getTime()+date.getTimezoneOffset()*60*1000);
+
+  var offset = date.getTimezoneOffset() / 60;
+  var hours = date.getHours();
+
+  newDate.setHours(hours - offset);
+
+  return newDate;   
+}
+
 $(document).on('knack-view-render.view_3633', function(event, view, data) {
   console.log('aaaa');
   try {
@@ -523,7 +534,8 @@ $(document).on('knack-view-render.view_3633', function(event, view, data) {
     console.log(document.getElementById('view_140').getElementsByClassName('kn-description'));
     document.getElementById('view_140').getElementsByClassName('kn-description').appendChild(checkedDateSpan);
     $.ajax({url:'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/registration_Citroen', success: function(data){
-      $('span[id="checkedDateSpan"]').text(data);
+      let dateFromData = new Date(data);
+      $('span[id="checkedDateSpan"]').text(data/*convertUTCDateToLocalDate(dateFromData)*/);
     },
     error: function(jqXHR, textStatus, errorThrown) {
         console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
