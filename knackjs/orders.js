@@ -519,29 +519,42 @@ $(document).on('knack-view-render.view_3633', function(event, view, data) {
   function dateTimeToGB(dateobj){
     return pad(dateobj.getDate())+"/"+pad(dateobj.getMonth()+1)+"/"+dateobj.getFullYear()+' '+pad(dateobj.getHours())+':'+pad(dateobj.getMinutes());
   }
-  console.log('aaaa');
   try {
-    let checkedDateSpan = document.createElement('span');
-    checkedDateSpan.innerHTML = 'Loading date ...';
-    checkedDateSpan.setAttribute("id", "checkedDateSpan");
-    console.log(document.getElementById('view_3633').getElementsByClassName('kn-description'));
-    document.getElementById('view_3633').getElementsByClassName('kn-description')[0].appendChild(checkedDateSpan);
+    let checkedDateSpanCitroen = document.createElement('span');
+    checkedDateSpanCitroen.innerHTML = 'Loading date ...';
+    checkedDateSpanCitroen.setAttribute("id", "checkedDateSpanCitroen");
+    document.getElementById('view_3633').getElementsByClassName('kn-description')[0].appendChild(checkedDateSpanCitroen);
     $.ajax({url:'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/registration_Citroen', success: function(data){
       let dateFromData = new Date(data);
-      $('span[id="checkedDateSpan"]').text(dateTimeToGB(dateFromData));
+      $('span[id="checkedDateSpanCitroen"]').text('Citroen:'+dateTimeToGB(dateFromData));
     },
     error: function(jqXHR, textStatus, errorThrown) {
         console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
     }, async:true, context:this, cache: false, timeout: 15000});
-  
-    /*
-    let franchises = ['Peugeot','Citroen','DS']
-    for (let i = 0;i<Knack.getUserAttributes().values.field_2849.length;i++){
-      for (let j = 0;j<franchises.length;j++){
-        console.log('registration_'+Knack.getUserAttributes().values.field_2849[i]+'_'+franchises[j])
-      }
-    }
-    */
+
+    let checkedDateSpanPeugeot = document.createElement('span');
+    checkedDateSpanPeugeot.innerHTML = 'Loading date ...';
+    checkedDateSpanPeugeot.setAttribute("id", "checkedDateSpanPeugeot");
+    document.getElementById('view_3633').getElementsByClassName('kn-description')[0].appendChild(checkedDateSpanPeugeot);
+    $.ajax({url:'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/registration_Peugeot', success: function(data){
+      let dateFromData = new Date(data);
+      $('span[id="checkedDateSpanPeugeot"]').text('Peugeot:'+dateTimeToGB(dateFromData));
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
+    }, async:true, context:this, cache: false, timeout: 15000});
+
+    let checkedDateSpanDS = document.createElement('span');
+    checkedDateSpanDS.innerHTML = 'Loading date ...';
+    checkedDateSpanDS.setAttribute("id", "checkedDateSpanDS");
+    document.getElementById('view_3633').getElementsByClassName('kn-description')[0].appendChild(checkedDateSpanDS);
+    $.ajax({url:'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/registration_DS', success: function(data){
+      let dateFromData = new Date(data);
+      $('span[id="checkedDateSpanDS"]').text('DS:'+dateTimeToGB(dateFromData));
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
+    }, async:true, context:this, cache: false, timeout: 15000});
   } catch (ex){
     console.log('error',ex)
   }
