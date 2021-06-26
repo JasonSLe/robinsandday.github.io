@@ -514,30 +514,20 @@ $(document).on('knack-form-submit.view_2765', function(event, view, data) {
   console.log(rData);
 });
 
-function convertUTCDateToLocalDate(date) {
-  var newDate = new Date(date.getTime()+date.getTimezoneOffset()*60*1000);
-
-  var offset = date.getTimezoneOffset() / 60;
-  var hours = date.getHours();
-
-  newDate.setHours(hours - offset);
-
-  return newDate;   
-}
-
-$(document).on('knack-view-render.view_3633', function(event, view, data) {
+$(document).on('knack-view-render.view_3633', function(event, view, data) {\
+  function dateTimeToGB(dateobj){
+    return pad(dateobj.getDate())+"/"+pad(dateobj.getMonth()+1)+"/"+dateobj.getFullYear()+' '+pad(dateobj.getHours())+':'+pad(dateobj.getMinutes());
+  }
   console.log('aaaa');
   try {
     let checkedDateSpan = document.createElement('span');
     checkedDateSpan.innerHTML = 'Loading date ...';
     checkedDateSpan.setAttribute("id", "checkedDateSpan");
     console.log(document.getElementById('view_3633').getElementsByClassName('kn-description'));
-    document.getElementById('view_3633').getElementsByClassName('kn-description').appendChild(checkedDateSpan);
+    document.getElementById('view_3633').getElementsByClassName('kn-description')[0].appendChild(checkedDateSpan);
     $.ajax({url:'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/registration_Citroen', success: function(data){
       let dateFromData = new Date(data);
-      $('span[id="checkedDateSpan"]').text(data/*convertUTCDateToLocalDate(dateFromData)*/);
-      console.log(dateFromData);
-      console.log(dateFromData.getHours());
+      $('span[id="checkedDateSpan"]').text(dateTimeToGB(dateFromData));
     },
     error: function(jqXHR, textStatus, errorThrown) {
         console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
