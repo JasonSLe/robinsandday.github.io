@@ -520,12 +520,23 @@ $(document).on('knack-view-render.view_3633', function(event, view, data) {
     let checkedDateSpan = document.createElement('span');
     checkedDateSpan.innerHTML = 'Loading date ...';
     checkedDateSpan.setAttribute("id", "checkedDateSpan");
+    console.log(document.getElementById('view_140').getElementsByClassName('kn-description'));
     document.getElementById('view_140').getElementsByClassName('kn-description').appendChild(checkedDateSpan);
+    $.ajax({url:'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/registration_Citroen', success: function(data){
+      $('span[id="checkedDateSpan"]').text(data);
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
+    }, async:true, context:this, cache: false, timeout: 15000});
+  
+    /*
+    let franchises = ['Peugeot','Citroen','DS']
     for (let i = 0;i<Knack.getUserAttributes().values.field_2849.length;i++){
-
+      for (let j = 0;j<franchises.length;j++){
+        console.log('registration_'+Knack.getUserAttributes().values.field_2849[i]+'_'+franchises[j])
+      }
     }
-    //Knack.getUserAttributes().values.field_2849
-    //$('div[id="view_3633"] p[class="kn-description"]').text($('div[id="view_3633"] p[class="kn-description"]').text()+' test')
+    */
   } catch (ex){
     console.log('error',ex)
   }
