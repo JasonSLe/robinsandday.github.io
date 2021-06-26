@@ -531,11 +531,13 @@ $(document).on('knack-view-render.view_3633', function(event, view, data) {
     let checkedDateSpan = document.createElement('span');
     checkedDateSpan.innerHTML = 'Loading date ...';
     checkedDateSpan.setAttribute("id", "checkedDateSpan");
-    console.log(document.getElementById('view_140').getElementsByClassName('kn-description'));
-    document.getElementById('view_140').getElementsByClassName('kn-description').appendChild(checkedDateSpan);
+    console.log(document.getElementById('view_3633').getElementsByClassName('kn-description'));
+    document.getElementById('view_3633').getElementsByClassName('kn-description').appendChild(checkedDateSpan);
     $.ajax({url:'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/registration_Citroen', success: function(data){
       let dateFromData = new Date(data);
       $('span[id="checkedDateSpan"]').text(data/*convertUTCDateToLocalDate(dateFromData)*/);
+      console.log(dateFromData);
+      console.log(dateFromData.getHours());
     },
     error: function(jqXHR, textStatus, errorThrown) {
         console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
