@@ -517,11 +517,15 @@ $(document).on('knack-form-submit.view_2765', function(event, view, data) {
 $(document).on('knack-view-render.view_3633', function(event, view, data) {
   console.log('aaaa');
   try {
+    let checkedDateSpan = document.createElement('span');
+    checkedDateSpan.innerHTML = 'Loading date ...';
+    checkedDateSpan.setAttribute("id", "checkedDateSpan");
+    document.getElementById('view_140').getElementsByClassName('kn-description').appendChild(checkedDateSpan);
     for (let i = 0;i<Knack.getUserAttributes().values.field_2849.length;i++){
 
     }
     //Knack.getUserAttributes().values.field_2849
-    $('div[id="view_3633"] p[class="kn-description"]').text($('div[id="view_3633"] p[class="kn-description"]').text()+' test')
+    //$('div[id="view_3633"] p[class="kn-description"]').text($('div[id="view_3633"] p[class="kn-description"]').text()+' test')
   } catch (ex){
     console.log('error',ex)
   }
