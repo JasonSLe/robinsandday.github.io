@@ -526,7 +526,7 @@ $(document).on('knack-view-render.view_3633', function(event, view, data) {
     document.getElementById('view_3633').getElementsByClassName('kn-description')[0].appendChild(checkedDateSpanCitroen);
     $.ajax({url:'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/registration_Citroen', success: function(data){
       let dateFromData = new Date(data);
-      $('span[id="checkedDateSpanCitroen"]').text('Citroen:'+dateTimeToGB(dateFromData));
+      $('span[id="checkedDateSpanCitroen"]').text('Citroen: '+dateTimeToGB(dateFromData)+'  ');
     },
     error: function(jqXHR, textStatus, errorThrown) {
         console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
@@ -538,7 +538,7 @@ $(document).on('knack-view-render.view_3633', function(event, view, data) {
     document.getElementById('view_3633').getElementsByClassName('kn-description')[0].appendChild(checkedDateSpanPeugeot);
     $.ajax({url:'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/registration_Peugeot', success: function(data){
       let dateFromData = new Date(data);
-      $('span[id="checkedDateSpanPeugeot"]').text('Peugeot:'+dateTimeToGB(dateFromData));
+      $('span[id="checkedDateSpanPeugeot"]').text('Peugeot: '+dateTimeToGB(dateFromData)+'  ');
     },
     error: function(jqXHR, textStatus, errorThrown) {
         console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
@@ -550,7 +550,7 @@ $(document).on('knack-view-render.view_3633', function(event, view, data) {
     document.getElementById('view_3633').getElementsByClassName('kn-description')[0].appendChild(checkedDateSpanDS);
     $.ajax({url:'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/registration_DS', success: function(data){
       let dateFromData = new Date(data);
-      $('span[id="checkedDateSpanDS"]').text('DS:'+dateTimeToGB(dateFromData));
+      $('span[id="checkedDateSpanDS"]').text('DS: '+dateTimeToGB(dateFromData)+'  ');
     },
     error: function(jqXHR, textStatus, errorThrown) {
         console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
