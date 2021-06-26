@@ -514,7 +514,7 @@ $(document).on('knack-form-submit.view_2765', function(event, view, data) {
   console.log(rData);
 });
 
-$(document).on('knack-view-render.view_3633', function(event, view, data) {\
+$(document).on('knack-view-render.view_3633', function(event, view, data) {
   function dateTimeToGB(dateobj){
     return pad(dateobj.getDate())+"/"+pad(dateobj.getMonth()+1)+"/"+dateobj.getFullYear()+' '+pad(dateobj.getHours())+':'+pad(dateobj.getMinutes());
   }
