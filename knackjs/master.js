@@ -2277,7 +2277,7 @@ $(document).on('knack-form-submit.view_2520', function(event, view, data) {
     if (data.field_6186_raw === "Showroom Order"){
         
         let commandURL = "https://hook.integromat.com/8xbvcrqjz4t7wcuwd7fxzk1tdhjg4vic";
-        let dataToSend = JSON.stringify({"KnackID":data.id, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Dealer":data.field_4943_raw, "Source Of Payload" : "knack direct"});
+        let dataToSend = JSON.stringify({"KnackID":data.id, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Dealer":data.field_4943_raw[0].identifier, "Source Of Payload" : "knack direct"});
         
         var rData = $.ajax({
             url: commandURL,
@@ -2290,7 +2290,7 @@ $(document).on('knack-form-submit.view_2520', function(event, view, data) {
     }else if(data.field_6186_raw === "Enquiry Max Order"){
         
         let commandURL = "https://hook.integromat.com/19yebbskfb7538eng623jbunr1f5gzoi";
-        let dataToSend = JSON.stringify({"KnackID":data.id,"Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Update Order":data.field_5669_raw, "Dealer":data.field_4943_raw,"Source Of Payload" : "knack direct"});
+        let dataToSend = JSON.stringify({"KnackID":data.id,"Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Update Order":data.field_5669_raw, "Dealer":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"});
         
         var rData = $.ajax({
             url: commandURL,
