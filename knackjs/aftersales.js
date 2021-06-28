@@ -148,6 +148,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
       } else {
         if (runCounter!==1){
           console.log('everything checked, reload views just for sure');
+          stats.finishTime = new Date();
           console.log('stats', stats);
           for (one of refreshData){
             if (!one.runAfterDone){
