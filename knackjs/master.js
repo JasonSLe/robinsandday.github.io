@@ -2360,3 +2360,18 @@ $(document).on('knack-form-submit.view_3915', function(event, view, data) {
     async: false
   }).responseText;
 });
+
+// Parts Hub TRIGGER INTEGROMAT UPON – *Trigger Integromat to run Maxoptra Scenario {(GENERAL) Dealer Specific Information} Replaces https://zapier.com/app/editor/109470901/nodes/109470901
+$(document).on('knack-form-submit.view_3935', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/3w3qq7yggjrgrc5pgof3k4ln3m1r2ph5" ;
+ 
+  let dataToSend = JSON.stringify({"Knack Dealer ID":data.id, "Date and time of Picks":data.field_6365_raw,"Autoline Company Code":data.field_2443_raw,"Excluded AR":data.field_6661_raw, "Source Of Payload" : "knack direct"});
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+});
