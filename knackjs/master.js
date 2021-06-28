@@ -2117,7 +2117,7 @@ $(document).on('knack-form-submit.view_2824', function(event, view, data) {
 
   let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
  
-  let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Uploaded", "Source Of Payload2": "knack direct"});
+  let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Uploaded", "Source Of Payload": "knack direct"});
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
@@ -2177,5 +2177,201 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
+});
+
+
+// Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Vehicle Checked In {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/102473068?redirect=true
+$(document).on('knack-form-submit.view_2303', function(event, view, data) { 
+  
+  let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1" ;
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id,"Trigger":"Vehicle Check In","Source Of Payload" : "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  
+});
+
+// Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Vehicle Delivery and Deal File Contents Status {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/111717789?redirect=true
+$(document).on('knack-form-submit.view_4070', function(event, view, data) { 
+    
+    if(data.field_6461_raw === "Vehicle Delivered and Deal File Contents Complete"){
+        
+        let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Vehicle Delivered and Deal File Contents Complete", "Source Of Payload" : "knack direct"});
+        
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+        
+    }else if(data.field_6461_raw === "Vehicle Delivered"){
+        
+        let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger": "Vehicle Delivered", "Source Of Payload": "knack direct"});
+        
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+        
+    }else if (data.field_6461_raw === "Deal File Contents Complete"){
+        
+        let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger": "Deal File Contents Complete", "Source Of Payload": "knack direct"});
+        
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;       
+    }
+});
+
+// Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/71559469?redirect=true
+$(document).on('knack-form-submit.view_2548', function(event, view, data) { 
+      
+  let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
+  let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw,
+      "Dealer":data.field_4943_raw, "Date in Stock":data.field_5842_raw, "Source Of Payload" : "knack direct"});
+  
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
   console.log(rData);
+  
+  
+  let commandURL1 = "https://hook.integromat.com/tbljhas7u4i6f2qh5s5xi57bs4a6p85j";
+  let dataToSend1 = JSON.stringify({"Record ID":data.id, "Form":"Used Service Quote", "Source Of Payload" : "knack direct"}) ;
+  
+  var rData = $.ajax({
+    url: commandURL1,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend1,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
+
+
+// Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Order for Showroom OR Enquiry Max Order {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/95215577?redirect=true
+$(document).on('knack-form-submit.view_2520', function(event, view, data) { 
+    
+    if (data.field_6186_raw === "Showroom Order"){
+        
+        let commandURL = "https://hook.integromat.com/8xbvcrqjz4t7wcuwd7fxzk1tdhjg4vic";
+        let dataToSend = JSON.stringify({"KnackID":data.id, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Dealer":data.field_4943_raw[0].identifier, "Source Of Payload" : "knack direct"});
+        
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+           data: dataToSend,
+            async: false
+        }).responseText;
+  
+    }else if(data.field_6186_raw === "Enquiry Max Order"){
+        
+        let commandURL = "https://hook.integromat.com/19yebbskfb7538eng623jbunr1f5gzoi";
+        let dataToSend = JSON.stringify({"KnackID":data.id,"Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Update Order":data.field_5669_raw, "Dealer":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"});
+        
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;    
+   }
+});
+
+// Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to Re-Check for Completed Customer Part Exchange Appraisal {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/73105399?redirect=true
+$(document).on('knack-form-submit.view_2807', function(event, view, data) { 
+  let commandURL = "https://hook.integromat.com/5q48r2313pbwq6u7onb6fru0r9gh2qm7" ;
+ 
+  let dataToSend = JSON.stringify({"KnackID":data.id,"Dealer Name":data.field_4943_raw[0].identifier, "Part Ex Reg 1":data.field_5581_raw,"Part Ex Reg 2":data.field_5582_raw,"Part Ex Reg 3":data.field_5583_raw, "Source Of Payload": "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+});
+
+// Used Deal File TRIGGER INTEGROMAT UPON – *Trigger for Integromat to Recheck HPI once vehicle checked in to clear finance {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/75692824?redirect=true
+$(document).on('knack-form-submit.view_3089', function(event, view, data) { 
+  let commandURL = "https://hook.integromat.com/dr13cfc5jaftorg3d2yw7252pglsr7w6" ;
+ 
+  let dataToSend = JSON.stringify({"Knack Vehicle ID":data.id,"Mileage":data.field_4942_raw, "Reg":data.field_4941_raw,"Dealer":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+});
+
+// Used Deal File TRIGGER INTEGROMAT UPON – *Used Deal File - Sign Online Feature Activated {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/112696446?redirect=true
+$(document).on('knack-form-submit.view_4194', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/17ik6dj95ukjdf7i7wtbos6dpq4dssut";
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id, "Source Of Payload" : "knack direct"});
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+});
+
+
+// Used Deal File TRIGGER INTEGROMAT UPON – *Used Deal File - Zip Folder of Customer Docs Email to Customer {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/108173439?redirect=true
+$(document).on('knack-form-submit.view_3915', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/3a7d6avwzo86miynac55zdsrrgy7pwjs" ;
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id, "Source Of Payload": "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+});
+
+// Parts Hub TRIGGER INTEGROMAT UPON – *Trigger Integromat to run Maxoptra Scenario {(GENERAL) Dealer Specific Information} Replaces https://zapier.com/app/editor/109470901/nodes/109470901
+$(document).on('knack-form-submit.view_3935', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/3w3qq7yggjrgrc5pgof3k4ln3m1r2ph5" ;
+ 
+  let dataToSend = JSON.stringify({"Knack Dealer ID":data.id, "Date and time of Picks":data.field_6365_raw,"Autoline Company Code":data.field_2443_raw,"Excluded AR":data.field_6661_raw, "Source Of Payload" : "knack direct"});
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
 });
