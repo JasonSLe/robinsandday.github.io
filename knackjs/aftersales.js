@@ -130,9 +130,10 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
             }
             let statsLogFound = stats.log.find(function(el){return el.one === one.name});
             if (!statsLogFound) {
-              stats.log.push({one:one.name,endTime:new Date()});
+              stats.log.push({one:one.name,finishTime:new Date(),duration : (new Date() - stats.startTime)/1000});
             } else {
-              statsLogFound.endTime = new Date();
+              statsLogFound.finishTime = new Date();
+              statsLogFound.duration = (statsLogFound.finishTime - stats.startTime)/1000
             }
           }
       }
