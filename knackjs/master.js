@@ -2177,7 +2177,6 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
 });
 
 
