@@ -2196,4 +2196,46 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
   
 });
 
-
+// Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Vehicle Delivery and Deal File Contents Status {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/111717789?redirect=true
+$(document).on('knack-form-submit.view_4070', function(event, view, data) { 
+    
+    if(data.field_6461_raw === "Vehicle Delivered and Deal File Contents Complete"){
+        
+        let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Vehicle Delivered and Deal File Contents Complete", "Source Of Payload" : "knack direct"});
+        
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+        
+    }else if(data.field_6461_raw === "Vehicle Delivered"){
+        
+        let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger": "Vehicle Delivered", "Source Of Payload": "knack direct"});
+        
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+        
+    }else if (data.field_6461_raw === "Deal File Contents Complete"){
+        
+        let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger": "Deal File Contents Complete", "Source Of Payload": "knack direct"});
+        
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;       
+    }
+});
