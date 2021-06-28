@@ -129,7 +129,6 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
               setTimeout(one.runAfter,100);
               one.runAfterDone = true;
             }
-            stats.log.push({one:one.name,endTime:new Date()});
           }
       }
       if (recheck && (new Date() - startTime)<120000){
