@@ -2344,3 +2344,19 @@ $(document).on('knack-form-submit.view_4194', function(event, view, data) {
     async: false
   }).responseText;
 });
+
+
+// Used Deal File TRIGGER INTEGROMAT UPON – *Used Deal File - Zip Folder of Customer Docs Email to Customer {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/108173439?redirect=true
+$(document).on('knack-form-submit.view_3915', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/3a7d6avwzo86miynac55zdsrrgy7pwjs" ;
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id, "Source Of Payload": "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+});
