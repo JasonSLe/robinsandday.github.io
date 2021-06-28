@@ -2117,7 +2117,7 @@ $(document).on('knack-form-submit.view_2824', function(event, view, data) {
 
   let commandURL = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
  
-  let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Uploaded", "Source Of Payload2": "knack direct"});
+  let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Uploaded", "Source Of Payload": "knack direct"});
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
