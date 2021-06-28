@@ -206,7 +206,7 @@ function generateTyres(){
     tyresJSON = tyresJSON.sort(function(a,b){
       return (a['a:TotalFittedRetailPriceIncVAT'][0] > b['a:TotalFittedRetailPriceIncVAT'][0]?1:(a['a:TotalFittedRetailPriceIncVAT'][0] < b['a:TotalFittedRetailPriceIncVAT'][0]?-1:0));
     })
-    let outputTables = [{name:'Premium'},{name:'Medium'},{name:'Budget'}];
+    let outputTables = [{name:'Budget'},{name:'Medium'},{name:'Premium'}];
     let recordsPerTableWhole = Math.floor(tyresJSON.length/outputTables.length);
     let remainderOfRecords = tyresJSON.length % outputTables.length;
     for (let i = 0;i<outputTables.length;i++){
