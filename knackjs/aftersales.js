@@ -90,11 +90,12 @@ $(document).on('knack-view-render.any', function (event, view, data) {
           }
         ]
 */
-function sceneRefresh(refreshData, startTime = null, runCounter = 1){
+function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = null){
     console.log('sceneRefresh');
     try {
       if (!startTime){
         startTime = new Date();
+        stats = {startTime:startTime, log:[]}
         //console.log('startTime', startTime);
       } else {
         //console.log('elapsed',new Date() - startTime);
@@ -121,6 +122,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
                   setTimeout(one.runAfter,100);
                   one.runAfterDone = true;
                 }
+                stats.log.push({one:one,endTime:new Date()});
               }
           } else {
             if (one.runAfter && !one.runAfterDone){
@@ -129,26 +131,30 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1){
             }
           }
       }
-      if (recheck && (new Date() - startTime)<240000){
+      if (recheck && (new Date() - startTime)<120000){
           console.log('needs recheck')
           setTimeout(function(){
-              sceneRefresh(refreshData, startTime, runCounter + 1);
+              sceneRefresh(refreshData, startTime, runCounter + 1, stats);
           }, (runCounter<3?1500:2500));
-      } else if ((new Date() - startTime)>240000){
+      } else if ((new Date() - startTime)>120000){
         console.log('ending refresh without all done');
+        for (one of refreshData){
+          if (!one.runAfterDone){
+            for (oneView of one.views){
+              refreshView(oneView, true);
+            }
+          }
+        }
       } else {
         if (runCounter!==1){
           console.log('everything checked, reload views just for sure');
+          console.log('stats', stats);
           for (one of refreshData){
             if (!one.runAfterDone){
               for (oneView of one.views){
                 refreshView(oneView, true);
               }
             }
-            /*
-            if (one.runAfter){
-              setTimeout(one.runAfter,300);
-            }*/
           }
         }
       }
