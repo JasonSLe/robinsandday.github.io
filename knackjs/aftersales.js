@@ -122,14 +122,14 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
                   setTimeout(one.runAfter,100);
                   one.runAfterDone = true;
                 }
-                stats.log.push({one:one,endTime:new Date()});
+                stats.log.push({one:one.name,endTime:new Date()});
               }
           } else {
             if (one.runAfter && !one.runAfterDone){
               setTimeout(one.runAfter,100);
               one.runAfterDone = true;
             }
-            stats.log.push({one:one,endTime:new Date()});
+            stats.log.push({one:one.name,endTime:new Date()});
           }
       }
       if (recheck && (new Date() - startTime)<120000){
@@ -340,29 +340,37 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
   setTimeout(function(){
       let refreshData = [
         {
+            name : 'Autoline - type of bussines - first Autoline save',
             mainField : 'field_278', //Autoline - type of bussines - first Autoline save
             views:['95','97']   
         },{
+          name : 'Autoline - vehicle summary - second Autoline save',
           mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
           views:['97','95','98','96'],
           //runAfter : createServiceScheduleClick
         },{
+          name : 'EMAC - service plan Summary = Service plan',
           mainField : 'field_312', //EMAC - service plan Summary = Service plan
           views:['131']
         },{
+          name : 'Tyres - Front = Stapletons',
           mainField : 'field_247', //Tyres - Front = Stapletons
           views:['122'],
           //runAfter : generateTyres
         },{
+          name : 'VHC - exists = VHC',
           mainField : 'field_302', //VHC - exists = VHC
           views:['115']
         },{
+          name : 'Recalls Oustanding',
           mainField : 'field_70', //Recalls Oustanding
           views:['121']
         },{
+          name : 'Autoline - is email valid - last Autoline save',
           mainField : 'field_316', //Autoline - is email valid - last Autoline save
           views:['95']   
         },{
+          name : 'Autoline - service visits tooltips',
           mainField : 'field_325', //Autoline - service visits tooltips
           views:['133'],
           runAfter : serviceVisitsTooltips
