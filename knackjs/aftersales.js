@@ -129,6 +129,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
               setTimeout(one.runAfter,100);
               one.runAfterDone = true;
             }
+            stats.log.push({one:one,endTime:new Date()});
           }
       }
       if (recheck && (new Date() - startTime)<120000){
@@ -149,6 +150,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
         if (runCounter!==1){
           console.log('everything checked, reload views just for sure');
           stats.finishTime = new Date();
+          stats.duration = stats.finishTime - stats.startTime;
           console.log('stats', stats);
           for (one of refreshData){
             if (!one.runAfterDone){
