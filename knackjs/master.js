@@ -2306,7 +2306,7 @@ $(document).on('knack-form-submit.view_2520', function(event, view, data) {
 $(document).on('knack-form-submit.view_2807', function(event, view, data) { 
   let commandURL = "https://hook.integromat.com/5q48r2313pbwq6u7onb6fru0r9gh2qm7" ;
  
-  let dataToSend = JSON.stringify({"KnackID":data.id,"Dealer Name":data.field_4943_raw, "Part Ex Reg 1":data.field_5581_raw,"Part Ex Reg 2":data.field_5582_raw,"Part Ex Reg 3":data.field_5583_raw, "Source Of Payload": "knack direct"}) ;
+  let dataToSend = JSON.stringify({"KnackID":data.id,"Dealer Name":data.field_4943_raw[0].identifier, "Part Ex Reg 1":data.field_5581_raw,"Part Ex Reg 2":data.field_5582_raw,"Part Ex Reg 3":data.field_5583_raw, "Source Of Payload": "knack direct"}) ;
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
