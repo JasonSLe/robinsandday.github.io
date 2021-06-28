@@ -2301,3 +2301,18 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
  //       }).responseText;    
 //   }
 //});
+
+// Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to Re-Check for Completed Customer Part Exchange Appraisal {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/73105399?redirect=true
+$(document).on('knack-form-submit.view_2807', function(event, view, data) { 
+  let commandURL = "https://hook.integromat.com/5q48r2313pbwq6u7onb6fru0r9gh2qm7" ;
+ 
+  let dataToSend = JSON.stringify({"KnackID":data.id,"Dealer Name":data.field_6306_raw, "Part Ex Reg 1":data.field_5581_raw,"Part Ex Reg 2":data.field_5582_raw,"Part Ex Reg 3":data.field_5583_raw, "Source Of Payload": "knack direct"}) ;
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
