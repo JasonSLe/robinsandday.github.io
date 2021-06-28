@@ -122,12 +122,17 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
                   setTimeout(one.runAfter,100);
                   one.runAfterDone = true;
                 }
-                stats.log.push({one:one.name,endTime:new Date()});
               }
           } else {
             if (one.runAfter && !one.runAfterDone){
               setTimeout(one.runAfter,100);
               one.runAfterDone = true;
+            }
+            let statsLogFound = stats.log.find(function(el){return el.one === one.name});
+            if (!statsLogFound) {
+              stats.log.push({one:one.name,endTime:new Date()});
+            } else {
+              statsLogFound.endTime = new Date();
             }
           }
       }
