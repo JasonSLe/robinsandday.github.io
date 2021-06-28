@@ -2314,7 +2314,6 @@ $(document).on('knack-form-submit.view_2807', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
 });
 
 // Used Deal File TRIGGER INTEGROMAT UPON – *Trigger for Integromat to Recheck HPI once vehicle checked in to clear finance {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/75692824?redirect=true
@@ -2329,5 +2328,19 @@ $(document).on('knack-form-submit.view_3089', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+});
+
+// Used Deal File TRIGGER INTEGROMAT UPON – *Used Deal File - Sign Online Feature Activated {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/112696446?redirect=true
+$(document).on('knack-form-submit.view_4194', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/17ik6dj95ukjdf7i7wtbos6dpq4dssut";
+ 
+  let dataToSend = JSON.stringify({"Record ID":data.id, "Source Of Payload" : "knack direct"});
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
 });
