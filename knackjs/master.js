@@ -2272,32 +2272,32 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 
 
 // Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Order for Showroom OR Enquiry Max Order {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/95215577?redirect=true
-$(document).on('knack-form-submit.view_2520', function(event, view, data) { 
+//$(document).on('knack-form-submit.view_2520', function(event, view, data) { 
     
-    if (data.field_6186_raw === "Showroom Order"){
+ //   if (data.field_6186_raw === "Showroom Order"){
         
-        let commandURL = "https://hook.integromat.com/8xbvcrqjz4t7wcuwd7fxzk1tdhjg4vic";
-        let dataToSend = JSON.stringify({"KnackID":data.id, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Dealer":data.field_4943_raw[0].identifier, "Source Of Payload" : "knack direct"});
+  //      let commandURL = "https://hook.integromat.com/8xbvcrqjz4t7wcuwd7fxzk1tdhjg4vic";
+   //     let dataToSend = JSON.stringify({"KnackID":data.id, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Dealer":data.field_4943_raw[0].identifier, "Source Of Payload" : "knack direct"});
         
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
+   //     var rData = $.ajax({
+  //          url: commandURL,
+   //         type: 'POST',
+   //         contentType: 'application/json',
+  //         data: dataToSend,
+  //          async: false
+  //      }).responseText;
   
-    }else if(data.field_6186_raw === "Enquiry Max Order"){
+  //  }else if(data.field_6186_raw === "Enquiry Max Order"){
         
-        let commandURL = "https://hook.integromat.com/19yebbskfb7538eng623jbunr1f5gzoi";
-        let dataToSend = JSON.stringify({"KnackID":data.id,"Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Update Order":data.field_5669_raw, "Dealer":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"});
+  //      let commandURL = "https://hook.integromat.com/19yebbskfb7538eng623jbunr1f5gzoi";
+  //      let dataToSend = JSON.stringify({"KnackID":data.id,"Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Update Order":data.field_5669_raw, "Dealer":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"});
         
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;    
-    }
-});
+  //      var rData = $.ajax({
+  //          url: commandURL,
+  //          type: 'POST',
+  //          contentType: 'application/json',
+  //          data: dataToSend,
+ //           async: false
+ //       }).responseText;    
+//   }
+//});
