@@ -2369,56 +2369,5 @@ $(document).on('knack-form-submit.view_3915', function(event, view, data) {
 
 
 
-// Parts Hub TRIGGER INTEGROMAT UPON – *Trigger Integromat to run Maxoptra Scenario {(GENERAL) Dealer Specific Information} Replaces https://zapier.com/app/editor/109470901/nodes/109470901
-$(document).on('knack-form-submit.view_3935', function(event, view, data) { 
-
-  let commandURL = "https://hook.integromat.com/3w3qq7yggjrgrc5pgof3k4ln3m1r2ph5" ;
-  
-    // --Date and time of Picks--
-    // converts the minutes for the start time of the Pick
-    let numFrom = data.field_6365_raw.time;
-    let hoursFrom = (numFrom / 60);
-    let rhoursFrom = Math.floor(hoursFrom);
-    let minutesFrom = (hoursFrom - rhoursFrom) * 60;
-    let rminutesFrom = Math.round(minutesFrom);
-    let timeFrom =  rhoursFrom + ":" + rminutesFrom;
-    
-    //retrieves the date for the start pick
-    let dateFrom = data.field_6365_raw.date_formatted;
-    
-    //converts the minutes for the end time of the Pick
-    let numTo = data.field_6365_raw.to.time;
-    let hoursTo = (numTo / 60);
-    let rhoursTo = Math.floor(hoursTo);
-    let minutesTo = (hoursTo - rhoursTo) * 60;
-    let rminutesTo = Math.round(minutesTo);
-    let timeTo =  rhoursTo + ":" + rminutesTo;
-    
-    //retrieves the date for the end pick
-    let dateTo = data.field_6365_raw.to.date_formatted;
-    
-    // combine the date and time for start and end pickup
-    let dateTime = dateFrom + " " + timeFrom + " to " + dateTo + " " + timeTo;
-    
-    // --Autoline company code--
-    //converts the boolean to yes/no
-    
-    let convertedValue = "No";
-    
-    if(data.field_2443_raw){
-        convertedValue = "Yes";
-    }
-    
- 
-  let dataToSend = JSON.stringify({"Knack Dealer ID":data.id, "Date and time of Picks":dateTime, "Autoline Company Code": convertedValue,"Excluded AR":data.field_6661_raw, "Source Of Payload" : "knack direct"});
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend,
-    async: false
-  }).responseText;
-  console.log(rData);
-});
 
 
