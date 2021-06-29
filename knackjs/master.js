@@ -2163,21 +2163,21 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 
 
 // Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/71559469?redirect=true
-$(document).on('knack-form-submit.view_2548', function(event, view, data) { 
+//$(document).on('knack-form-submit.view_2548', function(event, view, data) { 
     
 
-  let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
+//  let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
  
-  let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, 
-      "Dealer":data.field_4943_raw[0].identifier, "Date in Stock":data.field_5842_raw, "Source Of Payload" : "knack direct"}) ;
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend,
-    async: false
-  }).responseText;
-});
+ // let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, 
+ //     "Dealer":data.field_4943_raw[0].identifier, "Date in Stock":data.field_5842_raw, "Source Of Payload" : "knack direct"}) ;
+//  var rData = $.ajax({
+//    url: commandURL,
+//    type: 'POST',
+//    contentType: 'application/json',
+//    data: dataToSend,
+//    async: false
+// }).responseText;
+//});
 
 
 // Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Vehicle Checked In {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/102473068?redirect=true
