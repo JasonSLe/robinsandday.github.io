@@ -1698,7 +1698,7 @@ $(document).on('knack-form-submit.view_3424', function(event, view, data) {
         var rhours = Math.floor(hours);
         var minutes = (hours - rhours) * 60;
         var rminutes = Math.round(minutes);
-        var time =  rhours + ":" + rminutes;
+        var time =  rhours.toString().padStart(2, '0') + ":" + rminutes.toString().padStart(2, '0');
   let dataToSend = JSON.stringify({"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection": data.field_6041_raw.date_formatted + " " + time,
 				   "Dealer ID":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
   var rData = $.ajax({
