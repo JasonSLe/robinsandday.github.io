@@ -2365,7 +2365,7 @@ $(document).on('knack-form-submit.view_3915', function(event, view, data) {
 // Parts Hub TRIGGER INTEGROMAT UPON – *Trigger Integromat to run Maxoptra Scenario {(GENERAL) Dealer Specific Information} Replaces https://zapier.com/app/editor/109470901/nodes/109470901
 $(document).on('knack-form-submit.view_3935', function(event, view, data) { 
     
-    console.log("Test 2");
+    console.log("Test 3");
     
     // check if the date fields are blank
     if(typeof data.field_6365_raw.date_formatted === "undefined" || data.field_6365_raw.date_formatted === null){
