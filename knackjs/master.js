@@ -1698,7 +1698,7 @@ $(document).on('knack-form-submit.view_3424', function(event, view, data) {
         var rhours = Math.floor(hours);
         var minutes = (hours - rhours) * 60;
         var rminutes = Math.round(minutes);
-        var time =  rhours + ":" + rminutes;
+        var time =  rhours.toString().padStart(2, '0') + ":" + rminutes.toString().padStart(2, '0');
   let dataToSend = JSON.stringify({"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection": data.field_6041_raw.date_formatted + " " + time,
 				   "Dealer ID":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
   var rData = $.ajax({
@@ -1976,7 +1976,7 @@ $(document).on('knack-form-submit.view_3463', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Part Ex Purchase Invoice signed online by Customer {(Deal File) Customer Part Exchange Invoice} Replaces https://zapier.com/app/editor/113718840?redirect=true
@@ -1991,7 +1991,7 @@ $(document).on('knack-form-submit.view_4136', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+ 
 });
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Service Schedule signed online by Customer {(Deal File) Service Schedule} Replaces https://zapier.com/app/editor/113718447?redirect=true
@@ -2006,7 +2006,7 @@ $(document).on('knack-form-submit.view_4141', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -2022,7 +2022,7 @@ $(document).on('knack-form-submit.view_2915', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Vehicle Invoice signed at Dealer OR to be signed remotely {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/103142907?redirect=true
@@ -2057,7 +2057,7 @@ $(document).on('knack-form-submit.view_4127', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -2074,7 +2074,7 @@ $(document).on('knack-form-submit.view_2901', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -2091,7 +2091,7 @@ $(document).on('knack-form-submit.view_2925', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -2163,13 +2163,31 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 
 
 // Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/71559469?redirect=true
-$(document).on('knack-form-submit.view_2548', function(event, view, data) { 
+//IF ALL ZAPIE WORK DELETE THI CODE. i WANTED TO MAKE SURE IT'S A COPY BEFORE DELETING 
+//$(document).on('knack-form-submit.view_2548', function(event, view, data) { 
     
 
-  let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
+//  let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
  
-  let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, 
-      "Dealer":data.field_4943_raw[0].identifier, "Date in Stock":data.field_5842_raw, "Source Of Payload" : "knack direct"}) ;
+ // let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, 
+ //     "Dealer":data.field_4943_raw[0].identifier, "Date in Stock":data.field_5842_raw, "Source Of Payload" : "knack direct"}) ;
+//  var rData = $.ajax({
+//    url: commandURL,
+//    type: 'POST',
+//    contentType: 'application/json',
+//    data: dataToSend,
+//    async: false
+// }).responseText;
+//});
+
+// Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/71559469?redirect=true
+$(document).on('knack-form-submit.view_2548', function(event, view, data) { 
+     
+  let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
+  let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw,
+      "Dealer":data.field_4943_raw[0].identifier, "Date in Stock":data.field_5842_raw.date_formatted, "Source Of Payload" : "knack direct"});
+  
+  
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
@@ -2177,8 +2195,20 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
+  
+  
+  let commandURL1 = "https://hook.integromat.com/tbljhas7u4i6f2qh5s5xi57bs4a6p85j";
+  let dataToSend1 = JSON.stringify({"Record ID":data.id, "Form":"Used Service Quote", "Source Of Payload" : "knack direct"}) ;
+  
+  var rData = $.ajax({
+    url: commandURL1,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend1,
+    async: false
+  }).responseText;
+  
 });
-
 
 // Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Vehicle Checked In {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/102473068?redirect=true
 $(document).on('knack-form-submit.view_2303', function(event, view, data) { 
@@ -2238,36 +2268,6 @@ $(document).on('knack-form-submit.view_4070', function(event, view, data) {
             async: false
         }).responseText;       
     }
-});
-
-// Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/71559469?redirect=true
-$(document).on('knack-form-submit.view_2548', function(event, view, data) { 
-      
-  let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
-  let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw,
-      "Dealer":data.field_4943_raw, "Date in Stock":data.field_5842_raw, "Source Of Payload" : "knack direct"});
-  
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend,
-    async: false
-  }).responseText;
-  console.log(rData);
-  
-  
-  let commandURL1 = "https://hook.integromat.com/tbljhas7u4i6f2qh5s5xi57bs4a6p85j";
-  let dataToSend1 = JSON.stringify({"Record ID":data.id, "Form":"Used Service Quote", "Source Of Payload" : "knack direct"}) ;
-  
-  var rData = $.ajax({
-    url: commandURL1,
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend1,
-    async: false
-  }).responseText;
-  console.log(rData);
 });
 
 
@@ -2361,12 +2361,72 @@ $(document).on('knack-form-submit.view_3915', function(event, view, data) {
   }).responseText;
 });
 
+
 // Parts Hub TRIGGER INTEGROMAT UPON – *Trigger Integromat to run Maxoptra Scenario {(GENERAL) Dealer Specific Information} Replaces https://zapier.com/app/editor/109470901/nodes/109470901
 $(document).on('knack-form-submit.view_3935', function(event, view, data) { 
+    
+    
+    // check if the date fields are blank
+    if(typeof data.field_6365_raw.date_formatted === "undefined" || data.field_6365_raw.date_formatted === null){
+        
+        alert("Please specify the Start date!");
+        return;
+    } else if (typeof data.field_6365_raw.to === "undefined" || data.field_6365_raw.to === null){
+        
+        alert("Please specify the End date!");
+        return;
+    }
 
   let commandURL = "https://hook.integromat.com/3w3qq7yggjrgrc5pgof3k4ln3m1r2ph5" ;
+  
+    // --Date and time of Picks--
+    // converts the minutes for the start time of the Pick
+    var numFrom = data.field_6365_raw.time;
+    var hoursFrom = (numFrom / 60);
+    var rhoursFrom = Math.floor(hoursFrom);
+    var minutesFrom = (hoursFrom - rhoursFrom) * 60;
+    var rminutesFrom = Math.round(minutesFrom);
+    var timeFrom =  rhoursFrom.toString().padStart(2, '0') + ":" + rminutesFrom.toString().padStart(2, '0');
+    
+    //retrieves the date for the start pick
+    var dateFrom = data.field_6365_raw.date_formatted;
+    
+    //converts the minutes for the end time of the Pick
+    var numTo = data.field_6365_raw.to.time;
+    var hoursTo = (numTo / 60);
+    var rhoursTo = Math.floor(hoursTo);
+    var minutesTo = (hoursTo - rhoursTo) * 60;
+    var rminutesTo = Math.round(minutesTo);
+    var timeTo =  rhoursTo.toString().padStart(2, '0') + ":" + rminutesTo.toString().padStart(2, '0');
+    
+    //retrieves the date for the end pick
+    var dateTo = data.field_6365_raw.to.date_formatted;
+    
+    // combine the date and time for start and end pickup
+    
+    if(dateFrom === dateTo){
+        
+        var dateTime = dateFrom + " " + timeFrom + " to " + timeTo;
+        
+    }else{
+        
+        var dateTime = dateFrom + " " + timeFrom + " to " + dateTo + " " + timeTo;
+    }
+    
+    
+    // --Excluded AR code--
+    //converts the boolean to yes/no
+    
+    var convertedValue = "No";
+    
+    if(data.field_6661_raw){
+        
+        convertedValue = "Yes";
+        
+    }
+    
  
-  let dataToSend = JSON.stringify({"Knack Dealer ID":data.id, "Date and time of Picks":data.field_6365_raw,"Autoline Company Code":data.field_2443_raw,"Excluded AR":data.field_6661_raw, "Source Of Payload" : "knack direct"});
+  let dataToSend = JSON.stringify({"Knack Dealer ID":data.id, "Date and time of Picks":dateTime, "Autoline Company Code": data.field_2443_raw,"Excluded AR":convertedValue, "Source Of Payload": "knack direct"});
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
@@ -2374,4 +2434,66 @@ $(document).on('knack-form-submit.view_3935', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
+  
+});
+
+// Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X RETAIL APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles} Replaces https://zapier.com/app/editor/69807699?redirect=true
+$(document).on('knack-form-submit.view_346', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/lmaksb2o9ziepugv7vxuaem341utdpky" ;
+ 
+  let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo": "<img src=" +  "\"" + data.field_532_raw.url + "\"" + " />", "Rear 3/4 Photo": "<img src=" +  "\"" + data.field_5373_raw.url + "\"" + " />", 
+      "Side Profile": "<img src=" +  "\"" + data.field_5372_raw.url + "\"" + " />", "Interior Photo": "<img src=" +  "\"" + data.field_5374_raw.url + "\"" + " />", "Source Of Payload": "knack direct"});
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+});
+
+// Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X TRADE OR OFFSITE APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles} Replaces https://zapier.com/app/editor/69875590?redirect=true
+$(document).on('knack-form-submit.view_348', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/24a1c91x31e3eix3hq3wue5kcd4aoshq";
+
+  if(data.field_532_raw !== "Trade Appraisal (Vehicle Not Present)" && data.field_532_raw !== "Retail Appraisal (Vehicle Not Present)") {
+      
+      let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo":"<img src=" +  "\"" + data.field_532_raw.url + "\"" + " />","Rear 3/4 Photo":"<img src=" +  "\"" + data.field_5373_raw.url + "\"" + " />",
+          "Side Profile":"<img src=" +  "\"" + data.field_5372_raw.url + "\"" + " />", "Interior Photo":"<img src=" +  "\"" + data.field_5374_raw.url + "\"" + " />", "Source Of Payload" : "knack direct"});
+      
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+     }).responseText;
+  }
+});
+
+// Enquiry Max – **Instant trigger from RETAIL P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/80334038?redirect=true
+$(document).on('knack-form-submit.view_426', function(event, view, data) { 
+
+	let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
+  let dataToSend = JSON.stringify({"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":data.field_532_raw,
+  "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation":data.field_753_raw,
+  "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Rear 3/4 Photo":data.field_5373_raw, "Interior Photo":data.field_5374_raw, "Dashboard Photo":data.field_5723_raw,
+  "Damage Photo 1":data.field_716_raw, "Damage Photo 2":data.field_717_raw, "Damage Photo 3":data.field_718_raw, "Damage Photo 4":data.field_720_raw, "Damage Photo 5":data.field_719_raw, "Damage Photo 6":data.field_721_raw,
+  "Side Profile Photo":data.field_5372_raw, "Date Of Last Service":data.field_535_raw, "Total Refurb Cost":data.field_624_raw, "Mechanical Refub Cost":data.field_622_raw, 
+  "Aesthetic Refub Cost":data.field_623_raw, "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":data.field_3203_raw, 
+  "Sales Advisor Refurb Description":(data.field_882_raw, data.field_883_raw), "Source Of Payload": "knack direct"});
+
+  //or theoretically to have all data from form 
+  //let dataToSend = Object.assign(data,{"typeOfCustomerSurvey":"NEW"}); 
+
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  
 });
