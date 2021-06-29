@@ -2451,5 +2451,24 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+});
+
+// Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X TRADE OR OFFSITE APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles} Replaces https://zapier.com/app/editor/69875590?redirect=true
+$(document).on('knack-form-submit.view_348', function(event, view, data) { 
+
+  let commandURL = "https://hook.integromat.com/24a1c91x31e3eix3hq3wue5kcd4aoshq";
+
+  if(data.field_532_raw !== "Trade Appraisal (Vehicle Not Present)" && data.field_532_raw !== "Retail Appraisal (Vehicle Not Present)") {
+      
+      let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo":"<img src=" +  "\"" + data.field_532_raw.url + "\"" + " />","Rear 3/4 Photo":"<img src=" +  "\"" + data.field_5373_raw.url + "\"" + " />",
+          "Side Profile":"<img src=" +  "\"" + data.field_5372_raw.url + "\"" + " />", "Interior Photo":"<img src=" +  "\"" + data.field_5374_raw.url + "\"" + " />", "Source Of Payload" : "knack direct"});
+      
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+     }).responseText;
+  }
 });
