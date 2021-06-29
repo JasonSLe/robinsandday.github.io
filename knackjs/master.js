@@ -1976,7 +1976,7 @@ $(document).on('knack-form-submit.view_3463', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Part Ex Purchase Invoice signed online by Customer {(Deal File) Customer Part Exchange Invoice} Replaces https://zapier.com/app/editor/113718840?redirect=true
@@ -1991,7 +1991,7 @@ $(document).on('knack-form-submit.view_4136', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+ 
 });
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Service Schedule signed online by Customer {(Deal File) Service Schedule} Replaces https://zapier.com/app/editor/113718447?redirect=true
@@ -2006,7 +2006,7 @@ $(document).on('knack-form-submit.view_4141', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -2022,7 +2022,7 @@ $(document).on('knack-form-submit.view_2915', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Vehicle Invoice signed at Dealer OR to be signed remotely {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/103142907?redirect=true
@@ -2057,7 +2057,7 @@ $(document).on('knack-form-submit.view_4127', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -2074,7 +2074,7 @@ $(document).on('knack-form-submit.view_2901', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -2091,7 +2091,7 @@ $(document).on('knack-form-submit.view_2925', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -2245,7 +2245,7 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
       
   let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
   let dataToSend = JSON.stringify({"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw,
-      "Dealer":data.field_4943_raw, "Date in Stock":data.field_5842_raw, "Source Of Payload" : "knack direct"});
+      "Dealer":data.field_4943_raw, "Date in Stock":data.field_5842_raw.date_formatted, "Source Of Payload" : "knack direct"});
   
   var rData = $.ajax({
     url: commandURL,
@@ -2254,7 +2254,7 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
   
   
   let commandURL1 = "https://hook.integromat.com/tbljhas7u4i6f2qh5s5xi57bs4a6p85j";
@@ -2267,7 +2267,7 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
     data: dataToSend1,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
@@ -2361,12 +2361,49 @@ $(document).on('knack-form-submit.view_3915', function(event, view, data) {
   }).responseText;
 });
 
+
 // Parts Hub TRIGGER INTEGROMAT UPON – *Trigger Integromat to run Maxoptra Scenario {(GENERAL) Dealer Specific Information} Replaces https://zapier.com/app/editor/109470901/nodes/109470901
 $(document).on('knack-form-submit.view_3935', function(event, view, data) { 
 
   let commandURL = "https://hook.integromat.com/3w3qq7yggjrgrc5pgof3k4ln3m1r2ph5" ;
+  
+    // --Date and time of Picks--
+    // converts the minutes for the start time of the Pick
+    let numFrom = data.field_6365_raw.time;
+    let hoursFrom = (numFrom / 60);
+    let rhoursFrom = Math.floor(hoursFrom);
+    let minutesFrom = (hoursFrom - rhoursFrom) * 60;
+    let rminutesFrom = Math.round(minutesFrom);
+    let timeFrom =  rhoursFrom + ":" + rminutesFrom;
+    
+    //retrieves the date for the start pick
+    let dateFrom = data.field_6365_raw.date_formatted;
+    
+    //converts the minutes for the end time of the Pick
+    let numTo = data.field_6365_raw.to.time;
+    let hoursTo = (numTo / 60);
+    let rhoursTo = Math.floor(hoursTo);
+    let minutesTo = (hoursTo - rhoursTo) * 60;
+    let rminutesTo = Math.round(minutesTo);
+    let timeTo =  rhoursTo + ":" + rminutesTo;
+    
+    //retrieves the date for the end pick
+    let dateTo = data.field_6365_raw.to.date_formatted;
+    
+    // combine the date and time for start and end pickup
+    let dateTime = dateFrom + " " + timeFrom + " to " + dateTo + " " + timeTo;
+    
+    // --Autoline company code--
+    //converts the boolean to yes/no
+    
+    let convertedValue = "No";
+    
+    if(data.field_2443_raw){
+        convertedValue = "Yes";
+    }
+    
  
-  let dataToSend = JSON.stringify({"Knack Dealer ID":data.id, "Date and time of Picks":data.field_6365_raw,"Autoline Company Code":data.field_2443_raw,"Excluded AR":data.field_6661_raw, "Source Of Payload" : "knack direct"});
+  let dataToSend = JSON.stringify({"Knack Dealer ID":data.id, "Date and time of Picks":dateTime, "Autoline Company Code": convertedValue,"Excluded AR":data.field_6661_raw, "Source Of Payload" : "knack direct"});
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
@@ -2374,4 +2411,5 @@ $(document).on('knack-form-submit.view_3935', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
+  console.log(rData);
 });
