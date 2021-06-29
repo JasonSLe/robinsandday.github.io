@@ -2372,8 +2372,7 @@ $(document).on('knack-form-submit.view_3935', function(event, view, data) {
         
         alert("Please specify the Start date!");
         return;
-    }
-    if (typeof data.field_6365_raw.to.date_formatted === "undefined" || data.field_6365_raw.to.date_formatted === null){
+    } else if (typeof data.field_6365_raw.to === "undefined" || data.field_6365_raw.to === null){
         
         alert("Please specify the End date!");
         return;
