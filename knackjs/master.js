@@ -2437,4 +2437,19 @@ $(document).on('knack-form-submit.view_3935', function(event, view, data) {
   
 });
 
+// Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X RETAIL APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles} Replaces https://zapier.com/app/editor/69807699?redirect=true
+$(document).on('knack-form-submit.view_346', function(event, view, data) { 
 
+  let commandURL = "https://hook.integromat.com/lmaksb2o9ziepugv7vxuaem341utdpky" ;
+ 
+  let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo":data.field_532_raw, "Rear 3/4 Photo":data.field_5373_raw, 
+      "Side Profile":data.field_5372_raw, "Interior Photo":data.field_5374_raw, "Source Of Payload": "knack direct"});
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
