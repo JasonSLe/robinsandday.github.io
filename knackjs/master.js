@@ -2365,7 +2365,18 @@ $(document).on('knack-form-submit.view_3915', function(event, view, data) {
 // Parts Hub TRIGGER INTEGROMAT UPON – *Trigger Integromat to run Maxoptra Scenario {(GENERAL) Dealer Specific Information} Replaces https://zapier.com/app/editor/109470901/nodes/109470901
 $(document).on('knack-form-submit.view_3935', function(event, view, data) { 
     
-    console.log("Test 1");
+    console.log("Test 2");
+    
+    // check if the date fields are blank
+    if(typeof data.field_6365_raw.date_formatted === "undefined" || data.field_6365_raw.date_formatted === null){
+        
+        alert("Please specify the Start date!");
+        return;
+    }else if (typeof data.field_6365_raw.to.date_formatted === "undefined" || data.field_6365_raw.to.date_formatted === null){
+        
+        alert("Please specify the End date!");
+        return;
+    }
 
   let commandURL = "https://hook.integromat.com/3w3qq7yggjrgrc5pgof3k4ln3m1r2ph5" ;
   
@@ -2424,7 +2435,7 @@ $(document).on('knack-form-submit.view_3935', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
-  console.log(rData);
+  
 });
 
 
