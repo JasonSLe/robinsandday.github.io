@@ -2387,7 +2387,7 @@ $(document).on('knack-form-submit.view_3935', function(event, view, data) {
     var rhoursFrom = Math.floor(hoursFrom);
     var minutesFrom = (hoursFrom - rhoursFrom) * 60;
     var rminutesFrom = Math.round(minutesFrom);
-    var timeFrom =  rhoursFrom + ":" + rminutesFrom;
+    var timeFrom =  rhoursFrom.toString().padStart(2, '0') + ":" + rminutesFrom.toString().padStart(2, '0');
     
     //retrieves the date for the start pick
     var dateFrom = data.field_6365_raw.date_formatted;
@@ -2398,7 +2398,7 @@ $(document).on('knack-form-submit.view_3935', function(event, view, data) {
     var rhoursTo = Math.floor(hoursTo);
     var minutesTo = (hoursTo - rhoursTo) * 60;
     var rminutesTo = Math.round(minutesTo);
-    var timeTo =  rhoursTo + ":" + rminutesTo;
+    var timeTo =  rhoursTo.toString().padStart(2, '0') + ":" + rminutesTo.toString().padStart(2, '0');
     
     //retrieves the date for the end pick
     var dateTo = data.field_6365_raw.to.date_formatted;
