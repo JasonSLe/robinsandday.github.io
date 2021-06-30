@@ -2500,7 +2500,7 @@ $(document).on('knack-form-submit.view_426', function(event, view, data) {
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
 
 	let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
-  let dataToSend = JSON.stringify({"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":data.field_532_raw.url,
+  let dataToSend = JSON.stringify({"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":data.field_532_raw,
   "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation": "£" + data.field_753_raw,
   "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Offsite Image":data.field_4194_raw, "Valuation Pending On site Inspection":"£" + data.field_867_raw, 
   "Rear 3/4 Photo":data.field_5373_raw, "Interior Photo":data.field_5374_raw, "Dashboard Photo":data.field_5723_raw, "Damage Photo 1":data.field_716_raw, "Damage Photo 2":data.field_717_raw, "Damage Photo 3":data.field_718_raw, 
