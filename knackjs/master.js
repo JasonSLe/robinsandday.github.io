@@ -2483,7 +2483,7 @@ $(document).on('knack-form-submit.view_426', function(event, view, data) {
   "Damage Photo 1":data.field_716_raw.url, "Damage Photo 2":data.field_717_raw.url, "Damage Photo 3":data.field_718_raw.url, "Damage Photo 4":data.field_720_raw.url, "Damage Photo 5":data.field_719_raw.url, "Damage Photo 6":data.field_721_raw.url,
   "Side Profile Photo":data.field_5372_raw.url, "Date Of Last Service":data.field_535_raw.date_formatted, "Total Refurb Cost":"£" + data.field_624_raw, "Mechanical Refub Cost": "£" + Math.round(data.field_622_raw), 
   "Aesthetic Refub Cost":"£" + data.field_623_raw, "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":data.field_3203_raw.date_formatted, 
-  "Sales Advisor Refurb Description":(data.field_882_raw, data.field_883_raw), "Source Of Payload": "knack direct"});
+  "Sales Advisor Refurb Description":data.field_882_raw + " " + data.field_883_raw, "Source Of Payload": "knack direct"});
  
 
   var rData = $.ajax({
