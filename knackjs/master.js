@@ -2498,7 +2498,7 @@ $(document).on('knack-form-submit.view_426', function(event, view, data) {
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
-   console.log("Test 9");
+   console.log("Test 1");
 	let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
   let dataToSend = {"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":data.field_532_raw,
   "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation": "£" + data.field_753_raw,
@@ -2508,7 +2508,14 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
   "Mechanical Refub Cost":"£" + data.field_622_raw, "Aesthetic Refub Cost":"£" + data.field_623_raw, "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":data.field_3203_raw, 
   "Sales Advisor Refurb Description":data.field_882_raw + " " + data.field_883_raw, "Source Of Payload":"knack direct"};
   
-  let newJSON = JSON.stringify(dataToSend, function (key, value) {return ((value === undefined || value === null) || value.indexOf("undefined") !== -1) ? "1" : value;});
+  let newJSON = JSON.stringify(dataToSend, function (key, value) {
+      
+      if(value === undefined || value === null){
+          return (value === undefined || value === null) ? "1" : value;
+      }else{
+          return (value.indexOf("undefined") !== -1) ? "2" : value;
+      } 
+  });
  
   console.log(JSON.parse(newJSON));
   
