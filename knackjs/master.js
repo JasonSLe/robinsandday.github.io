@@ -2496,43 +2496,4 @@ $(document).on('knack-form-submit.view_426', function(event, view, data) {
   
 });
 
-// Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
-$(document).on('knack-form-submit.view_370', function(event, view, data) { 
-    
-    console.log("Test1");
-    var fields = [data.field_257_raw, data.field_258_raw, data.field_532_raw, data.field_753_raw, data.field_5799_raw, data.field_5800_raw, data.field_4194_raw, data.field_867_raw, data.field_5373_raw, data.field_5374_raw, data.field_5723_raw,
-    data.field_716_raw, data.field_717_raw, data.field_718_raw, data.field_720_raw, data.field_719_raw, data.field_721_raw, data.field_5372_raw, data.field_535_raw, data.field_624_raw, data.field_622_raw, data.field_623_raw,
-    data.field_4390_raw, data.field_745_raw, data.field_3203_raw, data.field_882_raw, data.field_883_raw];
 
-    var fieldValues = [data.field_257_raw, data.field_258_raw, data.field_532_raw.url, "£" + data.field_753_raw, data.field_5799_raw, data.field_5800_raw, data.field_4194_raw.url, "£" + data.field_867_raw,data.field_5373_raw.url, data.field_5374_raw.url, data.field_5723_raw.url,
-    data.field_716_raw.url,data.field_717_raw.url,data.field_718_raw.url, data.field_720_raw.url, data.field_719_raw.url, data.field_721_raw.url, data.field_5372_raw.url, data.field_535_raw.date_formatted, "£" + data.field_624_raw, "£" + data.field_622_raw, "£" + data.field_623_raw, data.field_4390_raw, data.field_745_raw,
-    data.field_3203_raw, data.field_882_raw + " " + data.field_883_raw, data.field_882_raw + " " + data.field_883_raw];
-
-
-    
-    for (var i=0; 1 < fields.length; i++){
-        
-        if(fields[i]=== "undefined" || fields[i]=== null){
-            fieldValues[i] = "";
-        }
-        
-    }
-
-	let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
-  let dataToSend = JSON.stringify({"Knack UID":data.id,"VRM":fieldValues[0],"Odometer":fieldValues[1],"Main Image":fieldValues[2],
-  "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation": fieldValues[3],
-  "Enquiry Max Dealer UID":fieldValues[4], "Enquiry Max Enquiry UID":fieldValues[5], "Offsite Image":fieldValues[6], "Valuation Pending On site Inspection":fieldValues[7], 
-  "Rear 3/4 Photo":fieldValues[8], "Interior Photo":fieldValues[9], "Dashboard Photo":fieldValues[10], "Damage Photo 1":fieldValues[11], "Damage Photo 2":fieldValues[12], "Damage Photo 3":fieldValues[13], 
-  "Damage Photo 4":fieldValues[14], "Damage Photo 5":fieldValues[15], "Damage Photo 6":fieldValues[16], "Side Profile Photo":fieldValues[17], "Date Of Last Service":fieldValues[18], "Total Refurb Cost": fieldValues[19],
-  "Mechanical Refub Cost": fieldValues[20], "Aesthetic Refub Cost": fieldValues[21], "Valuation Notes":fieldValues[22], "Vehicle Test Driven": fieldValues[23], "Offer valid Up to":fieldValues[24], 
-  "Sales Advisor Refurb Description":fieldValues[25] + " " + fieldValues[26], "Source Of Payload":"knack direct"});
- 
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend,
-    async: false
-  }).responseText;
-  
-});
