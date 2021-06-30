@@ -2509,7 +2509,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
   "Mechanical Refub Cost":"£" + data.field_622_raw, "Aesthetic Refub Cost":"£" + data.field_623_raw, "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":data.field_3203_raw, 
   "Sales Advisor Refurb Description":data.field_882_raw + " " + data.field_883_raw, "Source Of Payload":"knack direct"};
   
-  let newJSON = JSON.stringify(dataToSend, function (key, value) {return (value === undefined) ? "1" : value;});
+  let newJSON = JSON.stringify(dataToSend, function (key, value) {return (value === undefined || value === null || value.includes("undefined")) ? "1" : value;});
  
 
   var rData = $.ajax({
