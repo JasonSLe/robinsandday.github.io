@@ -2512,13 +2512,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
   let newJSON = JSON.stringify(dataToSend, function (key, value) {return (value === undefined) ? "1" : value;});
  
 
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: newJSON,
-    async: false
-  }).responseText;
+  console.log(JSON.parse(newJSON))
   
 });
 
