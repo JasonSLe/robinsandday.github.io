@@ -2515,7 +2515,6 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
   //Will create the final form of the data sent using POST
   let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
   
-  console.log(JSON.parse(dataToSend));
   var rData = $.ajax({
     url: commandURL,
     type: 'POST',
