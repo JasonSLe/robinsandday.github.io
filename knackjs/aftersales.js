@@ -171,10 +171,11 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
 }
 
 function saveStats(stats){
+  console.log('saveStats');
   let commandURL = "https://hook.integromat.com/cqqou5f36rhra151jzixw3mmhm5fxf1a" ;
   let dataToSend = Object.assign({"knackId":"AAA","stats":stats}, data); 
   console.log(dataToSend);
-  var rData = $.ajax({
+  $.ajax({
     url: commandURL,
     type: 'POST',
     contentType: 'application/json',
