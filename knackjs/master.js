@@ -2475,7 +2475,7 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
-   console.log("Test 6");
+   console.log("Test 7");
    
    function handlUndefined(valueA){
        var result = valueA;
@@ -2483,6 +2483,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
            result =[];
        }
        return result;
+       console.log(result);
    }
 	let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
   let dataToSend = {"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":data.field_532_raw,
