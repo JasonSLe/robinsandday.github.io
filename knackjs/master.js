@@ -2475,7 +2475,7 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
-   console.log("Test 5");
+   console.log("Test 1");
 	let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
   let dataToSend = {"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":data.field_532_raw,
   "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation": "£" + data.field_753_raw,
