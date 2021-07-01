@@ -155,6 +155,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
           stats.finishTime = new Date();
           stats.duration = (stats.finishTime - stats.startTime)/1000;
           console.log('stats', stats);
+          saveStats(stats);
           for (one of refreshData){
             if (!one.runAfterDone){
               for (oneView of one.views){
@@ -167,6 +168,19 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
     } catch (e){
       console.log('sceneRefresh fail', refreshData, e)
     }
+}
+
+function saveStats(stats){
+  let commandURL = "https://hook.integromat.com/cqqou5f36rhra151jzixw3mmhm5fxf1a" ;
+  let dataToSend = Object.assign({"knackId":"AAA","stats":stats}, data); 
+  console.log(dataToSend);
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify(dataToSend),
+    async: true
+  })
 }
 
 //This function refreshes view acording viewId, what is just view number!
