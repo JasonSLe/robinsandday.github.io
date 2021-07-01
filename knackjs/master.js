@@ -2477,7 +2477,7 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
-   console.log("Test 13");
+   console.log("Test 14");
    
    // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
    //Each type of search is done in a function containing a try/catch block.So if an exception occurs, the function replaces the value with "" and the javascript can continue to run.
@@ -2517,7 +2517,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
   
   //Iterate through all the values contained in createData and replaces any undefined values with ""
   //Will create the final form of the data sent using POST
-  let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "1" : value;});
+  let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
   
  
   console.log(JSON.parse(dataToSend));
