@@ -2477,7 +2477,7 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
-   console.log("Test 16");
+   console.log("Test 17");
    
    // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
    //Each type of search is done in a function containing a try/catch block.So if an exception occurs, the function replaces the value with "" and the javascript can continue to run.
@@ -2511,7 +2511,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
   "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Offsite Image":handlUrl(data.field_4194_raw), "Valuation Pending On site Inspection":("£" + data.field_853_raw).replace("undefined", ""), 
   "Rear 3/4 Photo":handlUrl(data.field_5373_raw), "Interior Photo":handlUrl(data.field_5374_raw), "Dashboard Photo":handlUrl(data.field_5723_raw), "Damage Photo 1":handlUrl(data.field_716_raw), "Damage Photo 2":handlUrl(data.field_717_raw), "Damage Photo 3":handlUrl(data.field_718_raw), 
   "Damage Photo 4":handlUrl(data.field_720_raw), "Damage Photo 5":handlUrl(data.field_719_raw), "Damage Photo 6":handlUrl(data.field_721_raw), "Side Profile Photo":handlUrl(data.field_5372_raw), "Date Of Last Service":handlDate(data.field_535_raw), "Total Refurb Cost": ("£" + data.field_624_raw).replace("undefined", ""),
-  "Mechanical Refub Cost":("£" + data.field_622_raw).replace("undefined", ""), "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":data.field_3203_raw, 
+  "Mechanical Refub Cost":("£" + Math.round(data.field_622_raw)).replace("undefined", ""), "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":data.field_3203_raw, 
   "Sales Advisor Refurb Description":(data.field_882_raw + "").replace("undefined", "") + " " + (data.field_883_raw + "").replace("undefined", ""), "Source Of Payload":"knack direct"};
   
   
