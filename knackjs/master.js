@@ -2454,39 +2454,37 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 });
 
 // Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X TRADE OR OFFSITE APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles} Replaces https://zapier.com/app/editor/69875590?redirect=true
-$(document).on('knack-form-submit.view_348', function(event, view, data) { 
+//$(document).on('knack-form-submit.view_348', function(event, view, data) { 
 
-  let commandURL = "https://hook.integromat.com/24a1c91x31e3eix3hq3wue5kcd4aoshq";
+//  let commandURL = "https://hook.integromat.com/24a1c91x31e3eix3hq3wue5kcd4aoshq";
 
-  if(data.field_532_raw !== "Trade Appraisal (Vehicle Not Present)" && data.field_532_raw !== "Retail Appraisal (Vehicle Not Present)") {
+//  if(data.field_532_raw !== "Trade Appraisal (Vehicle Not Present)" && data.field_532_raw !== "Retail Appraisal (Vehicle Not Present)") {
       
-      let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo":"<img src=" +  "\"" + data.field_532_raw.url + "\"" + " />","Rear 3/4 Photo":"<img src=" +  "\"" + data.field_5373_raw.url + "\"" + " />",
-          "Side Profile":"<img src=" +  "\"" + data.field_5372_raw.url + "\"" + " />", "Interior Photo":"<img src=" +  "\"" + data.field_5374_raw.url + "\"" + " />", "Source Of Payload" : "knack direct"});
+//      let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo":"<img src=" +  "\"" + data.field_532_raw.url + "\"" + " />","Rear 3/4 Photo":"<img src=" +  "\"" + data.field_5373_raw.url + "\"" + " />",
+//          "Side Profile":"<img src=" +  "\"" + data.field_5372_raw.url + "\"" + " />", "Interior Photo":"<img src=" +  "\"" + data.field_5374_raw.url + "\"" + " />", "Source Of Payload" : "knack direct"});
       
-      var rData = $.ajax({
-        url: commandURL,
-        type: 'POST',
-        contentType: 'application/json',
-        data: dataToSend,
-        async: false
-     }).responseText;
-  }
-});
+ //     var rData = $.ajax({
+ //       url: commandURL,
+ //       type: 'POST',
+ //       contentType: 'application/json',
+ //       data: dataToSend,
+ //       async: false
+ //    }).responseText;
+//  }
+//});
 
 // Enquiry Max – **Instant trigger from RETAIL P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/80334038?redirect=true
 $(document).on('knack-form-submit.view_426', function(event, view, data) { 
 
 	let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
-  let dataToSend = JSON.stringify({"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":data.field_532_raw,
-  "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation":data.field_753_raw,
-  "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Rear 3/4 Photo":data.field_5373_raw, "Interior Photo":data.field_5374_raw, "Dashboard Photo":data.field_5723_raw,
-  "Damage Photo 1":data.field_716_raw, "Damage Photo 2":data.field_717_raw, "Damage Photo 3":data.field_718_raw, "Damage Photo 4":data.field_720_raw, "Damage Photo 5":data.field_719_raw, "Damage Photo 6":data.field_721_raw,
-  "Side Profile Photo":data.field_5372_raw, "Date Of Last Service":data.field_535_raw, "Total Refurb Cost":data.field_624_raw, "Mechanical Refub Cost":data.field_622_raw, 
-  "Aesthetic Refub Cost":data.field_623_raw, "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":data.field_3203_raw, 
-  "Sales Advisor Refurb Description":(data.field_882_raw, data.field_883_raw), "Source Of Payload": "knack direct"});
-
-  //or theoretically to have all data from form 
-  //let dataToSend = Object.assign(data,{"typeOfCustomerSurvey":"NEW"}); 
+  let dataToSend = JSON.stringify({"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":data.field_532_raw.url,
+  "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation":"£" + data.field_753_raw,
+  "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Rear 3/4 Photo":data.field_5373_raw.url, "Interior Photo":data.field_5374_raw.url, "Dashboard Photo":data.field_5723_raw.url,
+  "Damage Photo 1":data.field_716_raw.url, "Damage Photo 2":data.field_717_raw.url, "Damage Photo 3":data.field_718_raw.url, "Damage Photo 4":data.field_720_raw.url, "Damage Photo 5":data.field_719_raw.url, "Damage Photo 6":data.field_721_raw.url,
+  "Side Profile Photo":data.field_5372_raw.url, "Date Of Last Service":data.field_535_raw.date_formatted, "Total Refurb Cost":"£" + data.field_624_raw, "Mechanical Refub Cost": "£" + Math.round(data.field_622_raw), 
+  "Aesthetic Refub Cost":"£" + data.field_623_raw, "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":data.field_3203_raw.date_formatted, 
+  "Sales Advisor Refurb Description":data.field_882_raw + " " + data.field_883_raw, "Source Of Payload": "knack direct"});
+ 
 
   var rData = $.ajax({
     url: commandURL,
@@ -2497,3 +2495,9 @@ $(document).on('knack-form-submit.view_426', function(event, view, data) {
   }).responseText;
   
 });
+
+
+
+
+
+
