@@ -173,7 +173,11 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
 function saveStats(stats){
   console.log('saveStats');
   let commandURL = "https://hook.integromat.com/cqqou5f36rhra151jzixw3mmhm5fxf1a" ;
-  let dataToSend = {"knackId":recordId,"stats":stats}; 
+  let textFromStats = 'Dur: '+stats.duration.toLocaleString(undefined, { maximumFractionDigits: 1, minimumFractionDigits: 0 });
+  for (let i = 0;i<stats.log.length;i++){
+    textFromStats += ', ' + stats.log[i].name + ':'+stats.log[i].duration.toLocaleString(undefined, { maximumFractionDigits: 1, minimumFractionDigits: 0 });
+  }
+  let dataToSend = {"knackId":recordId,"stats":stats, 'statsText':textFromStats}; 
   console.log(dataToSend);
   $.ajax({
     url: commandURL,
