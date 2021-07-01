@@ -313,6 +313,7 @@ function formatScene24(){
   sectionLeft.appendChild(document.getElementById('view_95'));
   sectionLeft.appendChild(document.getElementById('view_98'));
   sectionLeft.appendChild(document.getElementById('view_131'));
+  sectionLeft.appendChild(document.getElementById('view_148'));
   sectionCenter.appendChild(document.getElementById('view_97'));
   sectionCenter.appendChild(document.getElementById('view_114'));
   sectionCenter.appendChild(document.getElementById('view_121'));
@@ -374,6 +375,10 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
           name : 'EMAC Service plan',
           mainField : 'field_312', //EMAC - service plan Summary = Service plan
           views:['131']
+        },{
+          name : 'EMAC Service plan - offer',
+          mainField : 'field_348', //EMAC - service plan Summary = Service plan
+          views:['148']
         },{
           name : 'Tyres',
           mainField : 'field_247', //Tyres - Front = Stapletons
