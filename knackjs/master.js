@@ -2493,7 +2493,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
   "Rear 3/4 Photo":data.field_5373_raw, "Interior Photo":data.field_5374_raw, "Dashboard Photo":data.field_5723_raw, "Damage Photo 1":data.field_716_raw, "Damage Photo 2":data.field_717_raw, "Damage Photo 3":data.field_718_raw, 
   "Damage Photo 4":data.field_720_raw, "Damage Photo 5":data.field_719_raw, "Damage Photo 6":handlUndefined(data.field_721_raw), "Side Profile Photo":data.field_5372_raw, "Date Of Last Service":data.field_535_raw, "Total Refurb Cost": "£" + data.field_624_raw,
   "Mechanical Refub Cost":"£" + data.field_622_raw, "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":data.field_3203_raw, 
-  "Sales Advisor Refurb Description":(data.field_882_raw + " " + data.field_883_raw).replace("undefined", ""), "Source Of Payload":"knack direct"};
+  "Sales Advisor Refurb Description":(data.field_882_raw + " " + data.field_883_raw).replace("undefined", "").replace("undefined", ""), "Source Of Payload":"knack direct"};
   
   
   let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "1" : value;});
