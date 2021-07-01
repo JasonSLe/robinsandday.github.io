@@ -2477,10 +2477,10 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
-   console.log("Test 12");
+   console.log("Test 13");
    
-   // Searching an undefined collection will result in an exception and the javascript will stop execution!
-   //Each type of search is done in a function containing a try/catch block.So if an exception occurs the code replaces the value with undefined and the javascript can continue to run
+   // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+   //Each type of search is done in a function containing a try/catch block.So if an exception occurs, the function replaces the value with "" and the javascript can continue to run.
    
    //search .url
    function handlUrl(valueA){
@@ -2488,7 +2488,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
        try{
            return valueA.url; 
        }catch(undefine_exception){
-           return undefined;
+           return "";
        }
    }
    
@@ -2498,7 +2498,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
        try{
            return valueA.date_formatted; 
        }catch(undefine_exception){
-           return undefined;
+           return "";
        }
    }
    
@@ -2521,6 +2521,13 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
   
  
   console.log(JSON.parse(dataToSend));
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
   
 });
 
