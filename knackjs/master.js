@@ -2473,6 +2473,8 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 //  }
 //});
 
+
+
 // Enquiry Max – **Instant trigger from RETAIL P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/80334038?redirect=true
 $(document).on('knack-form-submit.view_426', function(event, view, data) { 
     
@@ -2520,6 +2522,7 @@ $(document).on('knack-form-submit.view_426', function(event, view, data) {
     data: dataToSend,
     async: false
   }).responseText;
+	console.log(JSON.parse(dataToSend));
 });
 
 
@@ -2570,7 +2573,8 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
     contentType: 'application/json',
     data: dataToSend,
     async: false
-  }).responseText; 
+  }).responseText;
+	console.log(JSON.parse(dataToSend));
 });
 
 
