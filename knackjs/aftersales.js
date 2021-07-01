@@ -362,37 +362,37 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
   setTimeout(function(){
       let refreshData = [
         {
-            name : 'Autoline - type of bussines - first Autoline save',
+            name : 'Autoline - Owner',
             mainField : 'field_278', //Autoline - type of bussines - first Autoline save
             views:['95','97']   
         },{
-          name : 'Autoline - vehicle summary - second Autoline save',
+          name : 'Autoline - Vehicle summary',
           mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
           views:['97','95','98','96'],
           //runAfter : createServiceScheduleClick
         },{
-          name : 'EMAC - service plan Summary = Service plan',
+          name : 'EMAC Service plan',
           mainField : 'field_312', //EMAC - service plan Summary = Service plan
           views:['131']
         },{
-          name : 'Tyres - Front = Stapletons',
+          name : 'Tyres',
           mainField : 'field_247', //Tyres - Front = Stapletons
           views:['122'],
           //runAfter : generateTyres
         },{
-          name : 'VHC - exists = VHC',
+          name : 'VHC',
           mainField : 'field_302', //VHC - exists = VHC
           views:['115']
         },{
-          name : 'Recalls Oustanding',
+          name : 'Recalls',
           mainField : 'field_70', //Recalls Oustanding
           views:['121']
         },{
-          name : 'Autoline - is email valid - last Autoline save',
+          name : 'Autoline - email valid',
           mainField : 'field_316', //Autoline - is email valid - last Autoline save
           views:['95']   
         },{
-          name : 'Autoline - service visits tooltips',
+          name : 'Autoline - service visits',
           mainField : 'field_325', //Autoline - service visits tooltips
           views:['133'],
           runAfter : serviceVisitsTooltips
