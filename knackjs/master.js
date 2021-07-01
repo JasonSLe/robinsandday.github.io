@@ -2475,7 +2475,7 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
-   console.log("Test 10");
+   console.log("Test 11");
    
    
    function handlUndefined(valueA){
@@ -2487,7 +2487,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
        }
    }
 	let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
-  let data = {"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":data.field_532_raw,
+  let createData = {"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":data.field_532_raw,
   "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation": "£" + data.field_753_raw,
   "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Offsite Image":data.field_4194_raw, "Valuation Pending On site Inspection":"£" + data.field_867_raw, 
   "Rear 3/4 Photo":data.field_5373_raw, "Interior Photo":data.field_5374_raw, "Dashboard Photo":data.field_5723_raw, "Damage Photo 1":data.field_716_raw, "Damage Photo 2":data.field_717_raw, "Damage Photo 3":data.field_718_raw, 
@@ -2496,7 +2496,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
   "Sales Advisor Refurb Description":(data.field_882_raw + " " + data.field_883_raw).replace("undefined", ""), "Source Of Payload":"knack direct"};
   
   
-  let dataToSend = JSON.stringify(data, function (key, value) {return (value === undefined || value === null) ? "1" : value;});
+  let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "1" : value;});
   
  
   console.log(JSON.parse(dataToSend));
