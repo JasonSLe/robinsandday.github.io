@@ -2477,7 +2477,6 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 // Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Profit & Loss Approved {(Deal File) Profit Sheet} Replaces https://zapier.com/app/editor/111449060?redirect=true
 $(document).on('knack-form-submit.view_4067', function(event, view, data) { 
   
-  console.log("test 1");
   try{
       if(data.field_6449_raw){
 
@@ -2530,6 +2529,8 @@ $(document).on('knack-form-submit.view_4067', function(event, view, data) {
         }).responseText;   
   }
 });
+
+
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
