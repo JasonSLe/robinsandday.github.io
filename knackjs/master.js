@@ -2474,6 +2474,62 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 //});
 
 
+// Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Profit & Loss Approved {(Deal File) Profit Sheet} Replaces https://zapier.com/app/editor/111449060?redirect=true
+$(document).on('knack-form-submit.view_4067', function(event, view, data) { 
+  
+  console.log("test 1");
+  try{
+      if(data.field_6449_raw){
+
+          let commandURL = "https://hook.integromat.com/qb810ofl9jwfvemwhvmvc6zjxqfgob9g";
+          let createData = {"P&L Record ID":data.id,"Deal file ID":data.field_6454_raw, "Source Of Payload" : "knack direct"};
+
+          //Iterate through all the values contained in createData and replaces any undefined values with ""
+          //Will create the final form of the data sent using POST
+          let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+          var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+          }).responseText;
+
+          let commandURL1 = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+          let createData1 = {"Record ID":data.field_6454_raw,"Trigger":"Profit & Loss Approved","Source Of Payload" : "knack direct"};
+
+          let dataToSend1 = JSON.stringify(createData1, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+          var rData = $.ajax({
+                url: commandURL1,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend1,
+                async: false
+          }).responseText;
+
+      }
+  }catch(exception){
+      
+        console.log("error");
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Profit & Loss Approved {(Deal File) Profit Sheet}",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;   
+  }
+});
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
