@@ -2734,6 +2734,42 @@ $(document).on('knack-form-submit.view_2584', function(event, view, data) {
     }
 });
 
+
+// New Deal File – **New Deal File - Sign Online Feature Activated {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/116816484?redirect=true
+$(document).on('knack-form-submit.view_3750', function(event, view, data) { 
+    
+    try{
+    let commandURL = "https://hook.integromat.com/891sve7f9q43lop42hpsa1wkt61qqfjy";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Source Of Payload":"knack direct"});
+ 
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  }catch(exception){
+      console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File - Sign Online Feature Activated {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;   
+  }
+});
+
+
 // New Deal File - Digital P&L – Triggering integromat to capture PDF of profit and loss overview to upload to knack
 $(document).on('knack-form-submit.view_3855', function(event, view, data) {
     
