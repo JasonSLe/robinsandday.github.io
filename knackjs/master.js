@@ -2737,6 +2737,7 @@ $(document).on('knack-form-submit.view_2584', function(event, view, data) {
 // New Deal File - Digital P&L – Triggering integromat to capture PDF of profit and loss overview to upload to knack
 $(document).on('knack-form-submit.view_3855', function(event, view, data) {
     
+    console.log("Test 1");
     try{
         let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
         let dataToSend = JSON.stringify({"Record ID":data.id, "Form":data.field_6929_raw, "Payload": data, "Source Of Payload":"knack direct"});
