@@ -1692,7 +1692,6 @@ $(document).on('knack-form-submit.view_3994', function(event, view, data) {
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Trigger For Integromat When Dealer Pushes Vehicle For Prep Centre {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/88520373?redirect=true 
 $(document).on('knack-form-submit.view_3424', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/baxf6i7ag8g6xaxn7nvqcz3f1neajylu" ;
-	console.log(data);
 	var num = data.field_6041_raw.time;
         var hours = (num / 60);
         var rhours = Math.floor(hours);
