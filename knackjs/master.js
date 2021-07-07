@@ -2446,11 +2446,11 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
       let commandURL = "https://hook.integromat.com/lmaksb2o9ziepugv7vxuaem341utdpky";
 
       function handlAll(valueA, fieldName){ 
-            return (valueA? valueA[fieldName]:undefined);
+            return (valueA? valueA[fieldName]:null);
         }
 
       function handlSRC (valueC){
-                return (valueC? "<img src=" + "\"" + valueC + "\"" + " />": "");
+                return (valueC? "<img src=" + "\"" + valueC + "\"" + " />": null);
             }
 
       let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo": handlSRC(handlAll(data.field_532_raw, "url")), "Rear 3/4 Photo": handlSRC(handlAll(data.field_5373_raw, "url")), 
