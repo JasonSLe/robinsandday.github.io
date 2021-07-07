@@ -2488,6 +2488,7 @@ $(document).on('knack-form-submit.view_348', function(event, view, data) {
     
     
     try{
+	    console.log(data.field_532_raw);
 
           let commandURL = "https://hook.integromat.com/24a1c91x31e3eix3hq3wue5kcd4aoshq";
 
