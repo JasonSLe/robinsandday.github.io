@@ -2436,20 +2436,50 @@ $(document).on('knack-form-submit.view_3935', function(event, view, data) {
   
 });
 
+
 // Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X RETAIL APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles} Replaces https://zapier.com/app/editor/69807699?redirect=true
 $(document).on('knack-form-submit.view_346', function(event, view, data) { 
+    
+    
+    try{
 
-  let commandURL = "https://hook.integromat.com/lmaksb2o9ziepugv7vxuaem341utdpky" ;
- 
-  let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo": "<img src=" +  "\"" + data.field_532_raw.url + "\"" + " />", "Rear 3/4 Photo": "<img src=" +  "\"" + data.field_5373_raw.url + "\"" + " />", 
-      "Side Profile": "<img src=" +  "\"" + data.field_5372_raw.url + "\"" + " />", "Interior Photo": "<img src=" +  "\"" + data.field_5374_raw.url + "\"" + " />", "Source Of Payload": "knack direct"});
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend,
-    async: false
+      let commandURL = "https://hook.integromat.com/lmaksb2o9ziepugv7vxuaem341utdpky";
+
+      function handlAll(valueA, fieldName){ 
+            return (valueA? valueA[fieldName]:undefined);
+        }
+
+      function handlSRC (valueC){
+                return (valueC? "<img src=" + "\"" + valueC + "\"" + " />": "");
+            }
+
+      let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo": handlSRC(handlAll(data.field_532_raw, "url")), "Rear 3/4 Photo": handlSRC(handlAll(data.field_5373_raw, "url")), 
+          "Side Profile": handlSRC(handlAll(data.field_5372_raw, "url")), "Interior Photo": handlSRC(handlAll(data.field_5374_raw, "url")), "Source Of Payload": "knack direct"});
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
   }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X RETAIL APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles}",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
 });
 
 // Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X TRADE OR OFFSITE APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles} Replaces https://zapier.com/app/editor/69875590?redirect=true
