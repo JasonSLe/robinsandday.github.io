@@ -1692,7 +1692,6 @@ $(document).on('knack-form-submit.view_3994', function(event, view, data) {
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Trigger For Integromat When Dealer Pushes Vehicle For Prep Centre {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/88520373?redirect=true 
 $(document).on('knack-form-submit.view_3424', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/baxf6i7ag8g6xaxn7nvqcz3f1neajylu" ;
-	console.log(data);
 	var num = data.field_6041_raw.time;
         var hours = (num / 60);
         var rhours = Math.floor(hours);
@@ -2474,61 +2473,370 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 //});
 
 
+// Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Profit & Loss Approved {(Deal File) Profit Sheet} Replaces https://zapier.com/app/editor/111449060?redirect=true
+$(document).on('knack-form-submit.view_4067', function(event, view, data) { 
+  
+  try{
+      if(data.field_6449_raw){
 
-// Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
-$(document).on('knack-form-submit.view_370', function(event, view, data) { 
-   console.log("Test 19");
-   
-   // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
-   //Each type of search is done in a function containing a try/catch block.So if an exception occurs, the function replaces the value with "" and the javascript can continue to run.
-   //search .url
-   function handlUrl(valueA){
-       
-       try{
-           return valueA.url; 
-       }catch(undefine_exception){
-           return "";
-       }
-   }
-   
-   //search .date_formatted
-   function handlDate(valueA){
-       
-       try{
-           return valueA.date_formatted; 
-       }catch(undefine_exception){
-           return "";
-       }
-   }
+          let commandURL = "https://hook.integromat.com/qb810ofl9jwfvemwhvmvc6zjxqfgob9g";
+          let createData = {"P&L Record ID":data.id,"Deal file ID":data.field_6454_raw, "Source Of Payload" : "knack direct"};
+
+          //Iterate through all the values contained in createData and replaces any undefined values with ""
+          //Will create the final form of the data sent using POST
+          let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+          var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+          }).responseText;
+
+          let commandURL1 = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
+          let createData1 = {"Record ID":data.field_6454_raw,"Trigger":"Profit & Loss Approved","Source Of Payload" : "knack direct"};
+
+          let dataToSend1 = JSON.stringify(createData1, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+          var rData = $.ajax({
+                url: commandURL1,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend1,
+                async: false
+          }).responseText;
+
+      }
+  }catch(exception){
+      
+        console.log("error");
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Profit & Loss Approved {(Deal File) Profit Sheet}",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;   
+  }
+});
+
+// Enquiry Max – **Instant trigger from RETAIL P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/80334038?redirect=true
+$(document).on('knack-form-submit.view_426', function(event, view, data) { 
     
-    let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
-    //CreateData contains the structure of the data that will be sent through the POST
-  let createData = {"Knack UID":data.id,"VRM":data.field_257_raw,"Odometer":data.field_258_raw,"Main Image":handlUrl(data.field_532_raw),
-  "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation": ("£" + data.field_753_raw).replace("undefined", "0.00"),
-  "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Offsite Image":handlUrl(data.field_4194_raw), "Valuation Pending On site Inspection":("£" + Math.round(data.field_853_raw)).replace("undefined", "0"), 
-  "Rear 3/4 Photo":handlUrl(data.field_5373_raw), "Interior Photo":handlUrl(data.field_5374_raw), "Dashboard Photo":handlUrl(data.field_5723_raw), "Damage Photo 1":handlUrl(data.field_716_raw), "Damage Photo 2":handlUrl(data.field_717_raw), "Damage Photo 3":handlUrl(data.field_718_raw), 
-  "Damage Photo 4":handlUrl(data.field_720_raw), "Damage Photo 5":handlUrl(data.field_719_raw), "Damage Photo 6":handlUrl(data.field_721_raw), "Side Profile Photo":handlUrl(data.field_5372_raw), "Date Of Last Service":handlDate(data.field_535_raw), "Total Refurb Cost": ("£" + Math.round(data.field_624_raw)).replace("undefined", ""),
-  "Mechanical Refub Cost":("£" + Math.round(data.field_622_raw)).replace("undefined", ""), "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":handlDate(data.field_3203_raw), 
-  "Sales Advisor Refurb Description":(data.field_882_raw + "").replace("undefined", "") + " " + (data.field_883_raw + "").replace("undefined", ""), "Source Of Payload":"knack direct"};
-  
-  //Iterate through all the values contained in createData and replaces any undefined values with ""
-  //Will create the final form of the data sent using POST
-  let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
-  
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend,
-    async: false
-  }).responseText;
-	
+    try{
+        
+            // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+          function handlAll(valueA, fieldName){ 
+              return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+          }
+
+          let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
+
+          let createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
+          "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation":("£" + data.field_753_raw).replace("undefined", "0.00"),
+          "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Rear 3/4 Photo":handlAll(data.field_5373_raw, "url"), "Interior Photo":handlAll(data.field_5374_raw, "url"), "Dashboard Photo":handlAll(data.field_5723_raw, "url"),
+          "Damage Photo 1":handlAll(data.field_716_raw, "url"), "Damage Photo 2":handlAll(data.field_717_raw, "url"), "Damage Photo 3":handlAll(data.field_718_raw, "url"), "Damage Photo 4":handlAll(data.field_720_raw, "url"), "Damage Photo 5":handlAll(data.field_719_raw, "url"), "Damage Photo 6":handlAll(data.field_721_raw, "url"),
+          "Side Profile Photo":handlAll(data.field_5372_raw, "url"), "Date Of Last Service":handlAll(data.field_535_raw, "date_formatted"), "Total Refurb Cost":("£" + Math.round(data.field_624_raw)).replace("undefined", ""), "Mechanical Refub Cost": ("£" + Math.round(data.field_622_raw)).replace("undefined", ""), 
+          "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":handlAll(data.field_3203_raw, "date_formatted"), 
+          "Sales Advisor Refurb Description":(data.field_882_raw + "").replace("undefined", "") + " " + (data.field_883_raw + "").replace("undefined", ""), "Source Of Payload": "knack direct"};
+
+          //Iterate through all the values contained in createData and replaces any undefined values with ""
+          //Will create the final form of the data sent using POST
+          let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+          var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+          }).responseText;
+          
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Instant trigger from RETAIL P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles}",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;  
+    }
 });
 
 
+// Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
+$(document).on('knack-form-submit.view_370', function(event, view, data) { 
+   console.log("Test 1");
+   
+   try{
+       // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+        function handlAll(valueA, fieldName){ 
+            return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+        }
+
+        let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p";
+
+        //CreateData contains the structure of the data that will be sent through the POST
+      let createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
+      "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation": ("£" + data.field_753_raw).replace("undefined", "0.00"),
+      "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Offsite Image":handlAll(data.field_4194_raw, "url"), "Valuation Pending On site Inspection":("£" + Math.round(data.field_853_raw)).replace("undefined", "0"), 
+      "Rear 3/4 Photo":handlAll(data.field_5373_raw, "url"), "Interior Photo":handlAll(data.field_5374_raw, "url"), "Dashboard Photo":handlAll(data.field_5723_raw, "url"), "Damage Photo 1":handlAll(data.field_716_raw, "url"), "Damage Photo 2":handlAll(data.field_717_raw, "url"), "Damage Photo 3":handlAll(data.field_718_raw, "url"), 
+      "Damage Photo 4":handlAll(data.field_720_raw, "url"), "Damage Photo 5":handlAll(data.field_719_raw, "url"), "Damage Photo 6":handlAll(data.field_721_raw, "url"), "Side Profile Photo":handlAll(data.field_5372_raw, "url"), "Date Of Last Service":handlAll(data.field_535_raw, "date_formatted"), "Total Refurb Cost": ("£" + Math.round(data.field_624_raw)).replace("undefined", ""),
+      "Mechanical Refub Cost":("£" + Math.round(data.field_622_raw)).replace("undefined", ""), "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":handlAll(data.field_3203_raw, "date_formatted"), 
+      "Sales Advisor Refurb Description":(data.field_882_raw + "").replace("undefined", "") + " " + (data.field_883_raw + "").replace("undefined", ""), "Source Of Payload":"knack direct"};
+
+      //Iterate through all the values contained in createData and replaces any undefined values with ""
+      //Will create the final form of the data sent using POST
+      let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+   }catch(exception){
+       console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();;
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles}",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;  
+   }	
+});
 
 
+// Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal MANAGER VALUATION OVERRIDE to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81423357/nodes/81423358/fields
+$(document).on('knack-form-submit.view_396', function(event, view, data) { 
+    
+    
+    try{
+        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+        function handlAll(valueA, fieldName){ 
+            return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+        }
+
+        let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
+
+        //CreateData contains the structure of the data that will be sent through the POST
+        let createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
+          "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/", "Valuation":("£" + data.field_753_raw).replace("undefined", "0.00"),
+          "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Offsite Image":handlAll(data.field_4194_raw, "url"), "Valuation Pending On site Inspection":("£" + Math.round(data.field_853_raw)).replace("undefined", "0"),
+           "Manger Override Valuation Pending Onsite Valuation":("£" + data.field_866_raw).replace("undefined", ""), "Date Of Last Service":handlAll(data.field_535_raw, "date_formatted"), "Total Refurb Cost":("£" + Math.round(data.field_624_raw)).replace("undefined", ""), "Mechanical Refub Cost":("£" + Math.round(data.field_622_raw)).replace("undefined", ""), 
+           "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":handlAll(data.field_3203_raw, "date_formatted"), "Valuation Notes":data.field_4390_raw, "Sales Advisor Refurb Description":(data.field_882_raw + "").replace("undefined", "") + " " + (data.field_883_raw + "").replace("undefined", ""), 
+           "Source Of Payload":"knack direct"};
 
 
+        //Iterate through all the values contained in createData and replaces any undefined values with ""
+        //Will create the final form of the data sent using POST
+        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Instant trigger from TRADE Or Offsite P/X appraisal MANAGER VALUATION OVERRIDE to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles}",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+// New Deal File – **Instant Trigger For Integromat to GET Digital P/X Appraisal For New Digital Deal File Upon Form Submission within Deal File P/X View {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/116816484?redirect=true
+$(document).on('knack-form-submit.view_2584', function(event, view, data) {
+    
+    
+    try{
+    // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+    function handlAll(valueA, collectionIndex, fieldName){ 
+        return (valueA? valueA[collectionIndex][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+    }
+
+    let commandURL = "https://hook.integromat.com/o8f4wtbtada9lh4bzgj34o3qc0dpa3dx";
+    let createData = {"Knack Digital Deal File ID":data.id, "Connected Dealer":handlAll(data.field_6048_raw, "0", "identifier"),"Dealer ID From Master App":data.field_6257_raw,"Part Exchange 1":data.field_6125_raw,
+  "Part Exchange 3":data.field_6127_raw, "Part Exchange 2":data.field_6126_raw, "Source Of Payload":"knack direct"};
+ 
+    //Iterate through all the values contained in createData and replaces any undefined values with ""
+    //Will create the final form of the data sent using POST
+    let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Instant Trigger For Integromat to GET Digital P/X Appraisal For New Digital Deal File Upon Form Submission within Deal File P/X View {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+// New Deal File – **New Deal File - Sign Online Feature Activated {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/116816484?redirect=true
+$(document).on('knack-form-submit.view_3750', function(event, view, data) { 
+    
+    try{
+    let commandURL = "https://hook.integromat.com/891sve7f9q43lop42hpsa1wkt61qqfjy";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Source Of Payload":"knack direct"});
+ 
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  }catch(exception){
+      console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File - Sign Online Feature Activated {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;   
+  }
+});
+
+// New Deal File – **New deal File Zip Folder to email customers(Send directly to customer email address) {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/109007166?redirect=true
+$(document).on('knack-form-submit.view_3567', function(event, view, data) { 
+    
+    try{
+    let commandURL = "https://hook.integromat.com/myx89w3wyjsq3plni1yftp4h7ngv3o5p";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Source Of Payload":"knack direct"});
+ 
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  }catch(exception){
+      console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New deal File Zip Folder to email customers(Send directly to customer email address) {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;   
+  }
+});
+
+
+// New Deal File - Digital P&L – Triggering integromat to capture PDF of profit and loss overview to upload to knack
+$(document).on('knack-form-submit.view_3855', function(event, view, data) {
+    
+    console.log("Test 2");
+    try{
+        let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Payload": data, "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+      
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File - Digital P&L – Triggering integromat to capture PDF of profit and loss overview to upload to knack",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
 
 
