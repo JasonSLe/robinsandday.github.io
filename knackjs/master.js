@@ -2822,3 +2822,85 @@ $(document).on('knack-form-submit.view_3567', function(event, view, data) {
 
 
 
+// New Deal File – **Trigger For Integromat Upon New Vehicle Handover Form Submission {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/73986254?redirect=true
+// "Telephone No 4 ":data.field_6105_raw, THE NAME WAS DECLARED WITH A SPACE IN THE ZAPIER!
+$(document).on('knack-form-submit.view_2630', function(event, view, data) {
+    
+    try{
+        console.log("Test2");
+    // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+    function handlAll(valueA, fieldName){ 
+        return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+    }
+    
+    //function to create the address string
+    function handlAddress(valueA){
+        if (typeof valueA !== undefined && typeof valueA !== null){
+            
+            function handlData (valueB, stringB){
+                return (valueB === undefined || valueB === null || valueB === "") ? "" : valueB + stringB;
+            }
+            return handlData(valueA["street"], " ") + handlData(valueA["street2"], ", ") + handlData(valueA["city"], ", ") + handlData(valueA["state"], " ") + handlData(valueA["zip"], "");
+            
+        }else{
+            return "";
+        }
+    }
+
+        var dateTime = "";
+        if(typeof data.field_6277_raw !== undefined && typeof data.field_6277_raw !== null){
+            
+            var num = data.field_6277_raw.time;
+            var hours = (num / 60);
+            var rhours = Math.floor(hours);
+            var minutes = (hours - rhours) * 60;
+            var rminutes = Math.round(minutes);
+            var time =  rhours.toString().padStart(2, '0') + ":" + rminutes.toString().padStart(2, '0');
+            dateTime = data.field_6277_raw.date_formatted + " " + time;   
+        }
+        //"<img src=\\\"https://visuel3d-secu  "<img src=\"https://vis
+        function handlSRC (valueC){
+            return (valueC? "<img src=" + "\"" + valueC + "\"" + " />": "");
+        }
+    let commandURL = "https://hook.integromat.com/ajxkfooskhy153u7ebtlipjmcfyp8guh";
+    let createData = {"Knack Record ID From New Vehicle Deal File":data.id, "Customer Address (Autoline Showroom)":handlAddress(data.field_6100_raw), "Autoline Showroom Order Number":data.field_6109_raw,
+      "Customer Name (Autoline Showroom)":data.field_6159_raw, "Telephone No 1 (Autoline Showroom)":handlAll(data.field_6101_raw, "formatted"), "Customer Name (Dialog":data.field_6070_raw, "Telephone No 4 (Autoline Showroom)":handlAll(data.field_6105_raw, "formatted"), 
+      "Telephone No 3 (Autoline Showroom)":handlAll(data.field_6104_raw, "formatted"), "Telephone No 4 ":handlAll(data.field_6105_raw, "formatted"), "Customer Phone (Dialog)":data.field_6052_raw, "Vehicle Description (Autoline Showroom)":data.field_6110_raw, 
+      "Vehicle Description (Dialog)":data.field_6281_raw, "Dealer ID from Master App":data.field_6257_raw, "Sales Adviser Email Linked to this order":handlAll(data.field_6280_raw, "email"), "Customer Email (Dialog)":handlAll(data.field_6102_raw, "email"),
+      "Front 3/4 Image":handlSRC(data.field_6279_raw), "Telephone No 2 (Autoline Showroom)":handlAll(data.field_6103_raw, "formatted"), "Customer Address (Dialog)":data.field_6051_raw, "Customer Secondary Email address from Portal creation":data.field_6078_raw, 
+      "Key Tag Number":data.field_6267_raw, "Date of customer handover":dateTime, "Customer Email (Autoline)":handlAll(data.field_6102_raw, "email"), "Handover Notes":data.field_6278_raw, "Enquiry Max or Showroom Order":data.field_6553_raw,
+      "Stock Number":data.field_6115_raw, "Handover Appointment Record ID from Master App":data.field_6628_raw, "Source Of Payload":"knack direct"};
+ 
+    //Iterate through all the values contained in createData and replaces any undefined values with ""
+    //Will create the final form of the data sent using POST
+    let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "New Deal File – **Trigger For Integromat Upon New Vehicle Handover Form Submission {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText; 
+    }
+});
+
+
+
