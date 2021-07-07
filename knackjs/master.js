@@ -2483,12 +2483,14 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
 });
 
 
+
 // Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X TRADE OR OFFSITE APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles} Replaces https://zapier.com/app/editor/69875590?redirect=true
 $(document).on('knack-form-submit.view_348', function(event, view, data) { 
     
     
     try{
-	    console.log(data.field_532_raw);
+        
+        console.log(data.field_800_raw);
 
           let commandURL = "https://hook.integromat.com/24a1c91x31e3eix3hq3wue5kcd4aoshq";
 
@@ -2500,7 +2502,7 @@ $(document).on('knack-form-submit.view_348', function(event, view, data) {
                     return (valueC? "<img src=" + "\"" + valueC + "\"" + " />": null);
                 }
 
-      if(data.field_532_raw !== "Trade Appraisal (Vehicle Not Present)" && data.field_532_raw !== "Retail Appraisal (Vehicle Not Present)") {
+      if(data.field_800_raw !== "Trade Appraisal (Vehicle Not Present)" && data.field_800_raw !== "Retail Appraisal (Vehicle Not Present)") {
 
           let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo": handlSRC(handlAll(data.field_532_raw, "url")), "Rear 3/4 Photo": handlSRC(handlAll(data.field_5373_raw, "url")),
               "Side Profile": handlSRC(handlAll(data.field_5372_raw, "url")), "Interior Photo": handlSRC(handlAll(data.field_5374_raw, "url")), "Source Of Payload" : "knack direct"});
@@ -2532,6 +2534,7 @@ $(document).on('knack-form-submit.view_348', function(event, view, data) {
         }).responseText;
     }
 });
+
 // Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X TRADE OR OFFSITE APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles} Replaces https://zapier.com/app/editor/69875590?redirect=true
 //$(document).on('knack-form-submit.view_348', function(event, view, data) { 
 
