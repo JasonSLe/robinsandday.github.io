@@ -493,6 +493,15 @@ $(document).on("knack-scene-render.scene_22", function(event, scene, data) {
   });
 
   $(document).on('knack-view-render.view_140', function (event, view, data) {
+    let button0 = document.createElement('button');
+    button0.innerHTML = 'With Autoline stock';
+    button0.setAttribute("class", "kn-button");
+    button0.onclick = function(){
+      let token = getTokenFromURL(document.location.href);
+      document.location = "https://www.robinsandday.co.uk/aftersales#powersupply-orders/?token="+token+"&view_139_page=1&view_139_sort=field_334|desc&view_139_filters=%7B%22match%22%3A%22and%22%2C%22rules%22%3A%5B%7B%22field%22%3A%22field_342%22%2C%22operator%22%3A%22higher%20than%22%2C%22value%22%3A%220%22%2C%22field_name%22%3A%22Total%20Available%20Quantity%22%7D%5D%7D"
+      return false;
+    };
+    document.getElementById('view_140').appendChild(button0)
     let button1 = document.createElement('button');
     button1.innerHTML = 'Only with notification';
     button1.setAttribute("class", "kn-button");
