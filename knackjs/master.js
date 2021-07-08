@@ -3067,3 +3067,60 @@ $(document).on('knack-form-submit.view_2855', function(event, view, data) {
 
 
 
+
+
+// New Deal File – **Trigger Refresh New Vehicle Order from Deal File Page V2 {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/95037338?redirect=true
+$(document).on('knack-form-submit.view_2854', function(event, view, data) { 
+    
+    try{
+
+      if(data.field_6553_raw === "Showroom Order"){
+
+        let commandURL = "https://hook.integromat.com/1ikhk4iopuuiwivpcpb58ulbsaey5x96";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
+        
+        var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+
+      }else{
+
+        let commandURL = "https://hook.integromat.com/4ps7dsjgushppofbwo4npmjdi8u0s8dw";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
+        
+        var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+      }
+
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Refresh New Vehicle Order from Deal File Page V2 {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;  
+    } 
+});
+
+
+
