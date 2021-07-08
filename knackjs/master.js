@@ -2182,12 +2182,11 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 
 
 
-
 // Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/71559469?redirect=true
 $(document).on('knack-form-submit.view_2548', function(event, view, data) {
     
     try{
-    
+        
            // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
             function handlAll(valueA, indexA, fieldName){ 
                 return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
@@ -2196,6 +2195,7 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
             function handlDate(valueB, fieldName){ 
                 return (valueB? valueB[fieldName]:"");
             }
+            
           let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
           let createData = {"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw,
               "Dealer":handlAll(data.field_4943_raw, "0", "identifier"), "Date in Stock":handlDate(data.field_5842_raw, "date_formatted"), "Source Of Payload" : "knack direct"};
@@ -2203,7 +2203,7 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 
         //Iterate through all the values contained in createData and replaces any undefined values with ""
         //Will create the final form of the data sent using POST
-        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null || value === "") ? delete createData[key] : value;});
 
         var rData = $.ajax({
             url: commandURL,
@@ -2212,7 +2212,6 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
             data: dataToSend,
             async: false
         }).responseText;
-
 
           let commandURL1 = "https://hook.integromat.com/tbljhas7u4i6f2qh5s5xi57bs4a6p85j";
           let dataToSend1 = JSON.stringify({"Record ID":data.id, "Form":"Used Service Quote", "Source Of Payload" : "knack direct"}) ;
@@ -2224,6 +2223,7 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
             data: dataToSend1,
             async: false
           }).responseText;
+      
   }catch(exception){
         console.log("error");
         var today = new Date();
@@ -2243,7 +2243,6 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
         }).responseText;
   }
 });
-
 // Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Vehicle Checked In {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/102473068?redirect=true
 $(document).on('knack-form-submit.view_2303', function(event, view, data) { 
   
