@@ -2185,7 +2185,8 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 $(document).on('knack-form-submit.view_2548', function(event, view, data) {
     
     try{
-        
+        console.log("test1");
+        console.log(data.field_5842_raw);
         if(typeof data.field_5842_raw !== undefined && typeof data.field_5842_raw !== null){
     
            // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
