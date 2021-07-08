@@ -2181,13 +2181,16 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 });
 
 
+
 // Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/71559469?redirect=true
 $(document).on('knack-form-submit.view_2548', function(event, view, data) {
     
     try{
+        
         console.log("test1");
-        console.log(data.field_5842_raw);
-        if(typeof data.field_5842_raw !== undefined && typeof data.field_5842_raw !== null){
+        console.log(data.field_5842_raw );
+	    console.log(typeof data.field_5842_raw );
+        if(data.field_5842_raw !== undefined &&  data.field_5842_raw !== null){
     
            // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
             function handlAll(valueA, indexA, fieldName){ 
@@ -2280,7 +2283,6 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
         }).responseText;
   }
 });
-
 
 
 // Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Vehicle Checked In {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/102473068?redirect=true
