@@ -2186,7 +2186,10 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 $(document).on('knack-form-submit.view_2548', function(event, view, data) {
     
     try{
-           console.log("Testing2");
+        
+        
+        if(data.field_5842_raw !== undefined &&  data.field_5842_raw !== null){
+    
            // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
             function handlAll(valueA, indexA, fieldName){ 
                 return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
@@ -2195,18 +2198,6 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
             function handlDate(valueB, fieldName){ 
                 return (valueB? valueB[fieldName]:"");
             }
-            
-                function createObject(objectA){
-                    var objectB = {};
-                for (const [key, value] of Object.entries(objectA)) {
-                    if (objectA[key] !== undefined && objectA[key] !== null){
-                        objectB.key = value;
-                    }
-                    console.log(`${key}: ${value}`);
-                }
-                return objectB;
-                console.log(objectB);
-            }
           let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
           let createData = {"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw,
               "Dealer":handlAll(data.field_4943_raw, "0", "identifier"), "Date in Stock":handlDate(data.field_5842_raw, "date_formatted"), "Source Of Payload" : "knack direct"};
@@ -2214,7 +2205,7 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 
         //Iterate through all the values contained in createData and replaces any undefined values with ""
         //Will create the final form of the data sent using POST
-        let dataToSend = JSON.stringify(createObject(createData));
+        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
 
         var rData = $.ajax({
             url: commandURL,
@@ -2234,7 +2225,43 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
             data: dataToSend1,
             async: false
           }).responseText;
-      
+      }else{
+          
+          // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+            function handlAll(valueA, indexA, fieldName){ 
+                return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+            } 
+
+
+          let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
+          let createData = {"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw,
+              "Dealer":handlAll(data.field_4943_raw, "0", "identifier"), "Source Of Payload" : "knack direct"};
+
+
+        //Iterate through all the values contained in createData and replaces any undefined values with ""
+        //Will create the final form of the data sent using POST
+        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+
+          let commandURL1 = "https://hook.integromat.com/tbljhas7u4i6f2qh5s5xi57bs4a6p85j";
+          let dataToSend1 = JSON.stringify({"Record ID":data.id, "Form":"Used Service Quote", "Source Of Payload" : "knack direct"}) ;
+
+          var rData = $.ajax({
+            url: commandURL1,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend1,
+            async: false
+          }).responseText;
+          
+      }
   }catch(exception){
         console.log("error");
         var today = new Date();
