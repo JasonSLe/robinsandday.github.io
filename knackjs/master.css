@@ -6403,5 +6403,14 @@ margin: -30px;
 padding-bottom: 0px;
 }
 
+/**BOX around vehicle checkin Route Selection**/
 
+#view_4306 {
+  	border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #6E6F71;
+  	text-align: center;
+  	box-shadow:         3px 3px 3px 3px #ccc;
+}
 
