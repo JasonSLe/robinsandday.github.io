@@ -2181,11 +2181,12 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 });
 
 
+
 // Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/71559469?redirect=true
 $(document).on('knack-form-submit.view_2548', function(event, view, data) {
     
     try{
-           console.log("Testing");
+           console.log("Testing2");
            // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
             function handlAll(valueA, indexA, fieldName){ 
                 return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
@@ -2204,6 +2205,7 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
                     console.log(`${key}: ${value}`);
                 }
                 return objectB;
+                console.log(objectB);
             }
           let commandURL = "https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf";
           let createData = {"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw,
@@ -2252,8 +2254,6 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
         }).responseText;
   }
 });
-
-
 
 
 
