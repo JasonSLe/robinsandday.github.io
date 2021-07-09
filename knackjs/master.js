@@ -1622,7 +1622,6 @@ $(document).on('knack-record-update.view_4086', function(event, view, data) {
 $(document).on('knack-form-submit.view_3993', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
 
-  //console.log(data);
   let dataToSend = JSON.stringify({"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Dealer":data.field_2721_raw[0].identifier,"Source Of Payload" : "knack direct","ConnectedDealer":data.field_6476_raw}) ;
   var rData = $.ajax({
     url: commandURL,
@@ -2707,11 +2706,9 @@ $(document).on('knack-form-submit.view_426', function(event, view, data) {
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal completion to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81416151?redirect=true
 $(document).on('knack-form-submit.view_370', function(event, view, data) { 
-   console.log("Test 1");
    
    try{
-       console.log(handlDate(data.field_535_raw, "date_formatted"));
-       console.log(handlDate(data.field_3203_raw, "date_formatted"));
+
        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
         function handlAll(valueA, fieldName){ 
             return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
@@ -2944,8 +2941,7 @@ $(document).on('knack-form-submit.view_3567', function(event, view, data) {
 // "Telephone No 4 ":data.field_6105_raw, THE NAME WAS DECLARED WITH A SPACE IN THE ZAPIER!
 $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
-    try{
-        console.log("Test2");
+    try{      
     // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
     function handlAll(valueA, fieldName){ 
         return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
