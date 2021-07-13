@@ -3529,7 +3529,7 @@ $(document).on('knack-form-submit.view_2765', function(event, view, data) {
     
     try{
 
-      if(data.field_6485_raw !== null && data.field_6485_raw !== ""){
+      if(data.field_6485_raw !== null || data.field_6485_raw !== undefined){
 
             let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
             let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Customer satisfaction survey", "Source Of Payload":"knack direct"});
