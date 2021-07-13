@@ -3528,6 +3528,10 @@ $(document).on('knack-form-submit.view_2765', function(event, view, data) {
     
     
     try{
+	    
+	console.log("test 1");
+        console.log(data.field_6485_raw !== null || data.field_6485_raw !== undefined);
+        console.log(data.field_6485_raw);
 
       if(data.field_6485_raw !== null || data.field_6485_raw !== undefined){
 
