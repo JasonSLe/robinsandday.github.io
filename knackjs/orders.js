@@ -646,3 +646,1133 @@ $(document).on('knack-form-submit.view_2765', function(event, view, data) {
         }).responseText;  
     }
 });
+
+
+// New Deal File – **Instant Trigger For Integromat to GET Digital P/X Appraisal For New Digital Deal File Upon Form Submission within Deal File P/X View {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/116816484?redirect=true
+$(document).on('knack-form-submit.view_2584', function(event, view, data) {
+    
+    
+    try{
+    // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+    function handlAll(valueA, collectionIndex, fieldName){ 
+        return (valueA? valueA[collectionIndex][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+    }
+
+    let commandURL = "https://hook.integromat.com/o8f4wtbtada9lh4bzgj34o3qc0dpa3dx";
+    let createData = {"Knack Digital Deal File ID":data.id, "Connected Dealer":handlAll(data.field_6048_raw, "0", "identifier"),"Dealer ID From Master App":data.field_6257_raw,"Part Exchange 1":data.field_6125_raw,
+  "Part Exchange 3":data.field_6127_raw, "Part Exchange 2":data.field_6126_raw, "Source Of Payload":"knack direct"};
+ 
+    //Iterate through all the values contained in createData and replaces any undefined values with ""
+    //Will create the final form of the data sent using POST
+    let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Instant Trigger For Integromat to GET Digital P/X Appraisal For New Digital Deal File Upon Form Submission within Deal File P/X View {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+// New Deal File – **New Deal File - Sign Online Feature Activated {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/116816484?redirect=true
+$(document).on('knack-form-submit.view_3750', function(event, view, data) { 
+    
+    try{
+    let commandURL = "https://hook.integromat.com/891sve7f9q43lop42hpsa1wkt61qqfjy";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Source Of Payload":"knack direct"});
+ 
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  }catch(exception){
+      console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File - Sign Online Feature Activated {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;   
+  }
+});
+
+// New Deal File – **New deal File Zip Folder to email customers(Send directly to customer email address) {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/109007166?redirect=true
+$(document).on('knack-form-submit.view_3567', function(event, view, data) { 
+    
+    try{
+    let commandURL = "https://hook.integromat.com/myx89w3wyjsq3plni1yftp4h7ngv3o5p";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Source Of Payload":"knack direct"});
+ 
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  }catch(exception){
+      console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New deal File Zip Folder to email customers(Send directly to customer email address) {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;   
+  }
+});
+
+
+
+
+// New Deal File – **Trigger For Integromat Upon New Vehicle Handover Form Submission {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/73986254?redirect=true
+// "Telephone No 4 ":data.field_6105_raw, THE NAME WAS DECLARED WITH A SPACE IN THE ZAPIER!
+$(document).on('knack-form-submit.view_2630', function(event, view, data) {
+    
+    try{      
+    // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+    function handlAll(valueA, fieldName){ 
+        return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+    }
+    
+    //function to create the address string
+    function handlAddress(valueA){
+        if (typeof valueA !== undefined && typeof valueA !== null){
+            
+            function handlData (valueB, stringB){
+                return (valueB === undefined || valueB === null || valueB === "") ? "" : valueB + stringB;
+            }
+            return handlData(valueA["street"], " ") + handlData(valueA["street2"], ", ") + handlData(valueA["city"], ", ") + handlData(valueA["state"], " ") + handlData(valueA["zip"], "");
+            
+        }else{
+            return "";
+        }
+    }
+
+        var dateTime = "";
+        if(typeof data.field_6277_raw !== undefined && typeof data.field_6277_raw !== null){
+            
+            var num = data.field_6277_raw.time;
+            var hours = (num / 60);
+            var rhours = Math.floor(hours);
+            var minutes = (hours - rhours) * 60;
+            var rminutes = Math.round(minutes);
+            var time =  rhours.toString().padStart(2, '0') + ":" + rminutes.toString().padStart(2, '0');
+            dateTime = data.field_6277_raw.date_formatted + " " + time;   
+        }
+        //"<img src=\\\"https://visuel3d-secu  "<img src=\"https://vis
+        function handlSRC (valueC){
+            return (valueC? "<img src=" + "\"" + valueC + "\"" + " />": "");
+        }
+    let commandURL = "https://hook.integromat.com/ajxkfooskhy153u7ebtlipjmcfyp8guh";
+    let createData = {"Knack Record ID From New Vehicle Deal File":data.id, "Customer Address (Autoline Showroom)":handlAddress(data.field_6100_raw), "Autoline Showroom Order Number":data.field_6109_raw,
+      "Customer Name (Autoline Showroom)":data.field_6159_raw, "Telephone No 1 (Autoline Showroom)":handlAll(data.field_6101_raw, "formatted"), "Customer Name (Dialog":data.field_6070_raw, "Telephone No 4 (Autoline Showroom)":handlAll(data.field_6105_raw, "formatted"), 
+      "Telephone No 3 (Autoline Showroom)":handlAll(data.field_6104_raw, "formatted"), "Telephone No 4 ":handlAll(data.field_6105_raw, "formatted"), "Customer Phone (Dialog)":data.field_6052_raw, "Vehicle Description (Autoline Showroom)":data.field_6110_raw, 
+      "Vehicle Description (Dialog)":data.field_6281_raw, "Dealer ID from Master App":data.field_6257_raw, "Sales Adviser Email Linked to this order":handlAll(data.field_6280_raw, "email"), "Customer Email (Dialog)":handlAll(data.field_6102_raw, "email"),
+      "Front 3/4 Image":handlSRC(data.field_6279_raw), "Telephone No 2 (Autoline Showroom)":handlAll(data.field_6103_raw, "formatted"), "Customer Address (Dialog)":data.field_6051_raw, "Customer Secondary Email address from Portal creation":data.field_6078_raw, 
+      "Key Tag Number":data.field_6267_raw, "Date of customer handover":dateTime, "Customer Email (Autoline)":handlAll(data.field_6102_raw, "email"), "Handover Notes":data.field_6278_raw, "Enquiry Max or Showroom Order":data.field_6553_raw,
+      "Stock Number":data.field_6115_raw, "Handover Appointment Record ID from Master App":data.field_6628_raw, "Source Of Payload":"knack direct"};
+ 
+    //Iterate through all the values contained in createData and replaces any undefined values with ""
+    //Will create the final form of the data sent using POST
+    let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "New Deal File – **Trigger For Integromat Upon New Vehicle Handover Form Submission {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText; 
+    }
+});
+
+
+
+// New Deal File – **Trigger GET New Vehicle Order from Showroom or Enquiry Max Scenario V3 {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/95033758?redirect=true
+$(document).on('knack-form-submit.view_2828', function(event, view, data) { 
+    
+    try{
+      if(data.field_6553_raw === "Showroom Order"){
+
+        let commandURL = "https://hook.integromat.com/1ikhk4iopuuiwivpcpb58ulbsaey5x96";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
+        
+        var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+
+      }else{
+
+        let commandURL = "https://hook.integromat.com/4ps7dsjgushppofbwo4npmjdi8u0s8dw";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
+        
+        var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+      }
+
+      
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger GET New Vehicle Order from Showroom or Enquiry Max Scenario V3 {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+// New Deal File – **Trigger Integromat to GET New Vehicle Invoice From Autoline V2 {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/89782269?redirect=true
+$(document).on('knack-form-submit.view_2855', function(event, view, data) { 
+    
+    
+     try{  
+         
+    
+        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+        function handlAll(valueA, indexA, fieldName){ 
+            return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+        }
+
+        let commandURL = "https://hook.integromat.com/c81bcra3lmhe7dlj3dvbcev551frqdf3";
+        let createData = {"Knack Deal File ID":data.id, "Dealer":handlAll(data.field_6048_raw, "0", "identifier"), "New Vehicle Stockbook Number from Showroom":data.field_6115_raw, "Source Of Payload":"knack direct"};
+
+        //Iterate through all the values contained in createData and replaces any undefined values with ""
+        //Will create the final form of the data sent using POST
+        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    
+     }catch(exception){
+         console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Integromat to GET New Vehicle Invoice From Autoline V2 {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+     }
+  
+});
+
+
+
+
+
+// New Deal File – **Trigger Refresh New Vehicle Order from Deal File Page V2 {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/95037338?redirect=true
+$(document).on('knack-form-submit.view_2854', function(event, view, data) { 
+    
+    try{
+
+      if(data.field_6553_raw === "Showroom Order"){
+
+        let commandURL = "https://hook.integromat.com/1ikhk4iopuuiwivpcpb58ulbsaey5x96";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
+        
+        var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+
+      }else{
+
+        let commandURL = "https://hook.integromat.com/4ps7dsjgushppofbwo4npmjdi8u0s8dw";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
+        
+        var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+      }
+
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Refresh New Vehicle Order from Deal File Page V2 {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;  
+    } 
+});
+
+
+
+// New Deal File - Automated Comms – **New Deal File Automated Comms - Handover Appointment {{(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/102282638?redirect=true
+$(document).on('knack-form-submit.view_2630', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Handover Appointment", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - Handover Appointment {{(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText; 
+    }
+});
+
+
+
+// New Deal File – **Instant Trigger For Integromat to GET Digital P/X Appraisal For New Digital Deal File Upon Form Submission {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/72890073?redirect=true
+$(document).on('knack-form-submit.view_2574', function(event, view, data) { 
+    
+    try{
+        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+        function handlAll(valueA, indexA, fieldName){ 
+            return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+        }
+        
+        
+
+        let commandURL = "https://hook.integromat.com/o8f4wtbtada9lh4bzgj34o3qc0dpa3dx";
+        let createData = {"Knack Digital Deal File ID":data.id, "Connected Dealer":handlAll(data.field_6048_raw,"0", "identifier"), "Dealer ID From Master App":data.field_6257_raw, "Part Exchange 1":data.field_6125_raw,
+      "Part Exchange 3":data.field_6127_raw, "Part Exchange 2":data.field_6126_raw, "Source Of Payload":"knack direct"};
+
+
+       //Iterate through all the values contained in createData and replaces any undefined values with ""
+       //Will create the final form of the data sent using POST
+        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch (exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Instant Trigger For Integromat to GET Digital P/X Appraisal For New Digital Deal File Upon Form Submission {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+// New Deal File - Automated Comms – **New Deal File Automated Comms - New Vehicle Checked In {(Deal File) Vehicle Check In, Documents and Status} Slave App - Replaces https://zapier.com/app/editor/101944107?redirect=true
+$(document).on('knack-form-submit.view_2692', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"New Vehicle Check In", "Source Of Payload":"knack direct"});
+
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - New Vehicle Checked In {(Deal File) Vehicle Check In, Documents and Status} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+// New Deal File - Automated Comms – **New Deal File Automated Comms - Profit & Loss Updated {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/102278316?redirect=true
+$(document).on('knack-form-submit.view_2680', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Updated", "Source Of Payload":"knack direct"});
+
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+    }catch(exception){
+        
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - Profit & Loss Updated {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    } 
+});
+
+
+// New Deal File - Automated Comms – **New Deal File Automated Comms - Profit & Loss Uploaded {(Deal File) Digital Deal File} Slave App- Replaces https://zapier.com/app/editor/102172889?redirect=true
+$(document).on('knack-form-submit.view_2602', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Profit & Loss Uploaded", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - Profit & Loss Uploaded {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    } 
+});
+
+
+// New Deal File - Automated Comms – **New Deal File Automated Comms - Registration Consent Doc (AFRL) {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/102296823?redirect=true
+$(document).on('knack-form-submit.view_2705', function(event, view, data) { 
+    
+    try{
+
+       let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+       let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Registration Consent Doc", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - Registration Consent Doc (AFRL) {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+
+// New Deal File - Automated Commsv – **New Deal File Automated Comms - Vehicle Delivered and Deal File Contents Status {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/111571812?redirect=true
+$(document).on('knack-form-submit.view_3620', function(event, view, data) { 
+    
+    try{
+
+      if(data.field_6768_raw === "Vehicle Delivered and Deal File Contents Complete"){
+
+        let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Vehicle Delivered and Deal File Contents Complete", "Source Of Payload":"knack direct"});
+
+        var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+
+      }else if(data.field_6768_raw === "Vehicle Delivered"){
+
+        let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Vehicle Delivered", "Source Of Payload":"knack direct"});
+
+        var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+
+      }else{
+
+        let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Deal File Contents Complete", "Source Of Payload":"knack direct"});
+
+        var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+
+      }
+
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - Vehicle Delivered and Deal File Contents Status {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+  
+});
+
+
+// New Deal File - Automated Comms – **New Deal File Automated Comms - Vehicle Invoice Retrieved {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/102299451?redirect=true
+$(document).on('knack-form-submit.view_2855', function(event, view, data) { 
+    
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Vehicle Invoice", "Source Of Payload":"knack direct"});
+
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - Vehicle Invoice Retrieved {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+
+
+// New Deal File - Capture PDFs – **New Deal File PDF - Customer satisfaction survey signed online by Customer {(Deal File) Customer Satisfaction Survey} Slave App - Replaces https://zapier.com/app/editor/116187423?redirect=true
+$(document).on('knack-form-submit.view_3702', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Customer satisfaction survey", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File PDF - Customer satisfaction survey signed online by Customer {(Deal File) Customer Satisfaction Survey} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    } 
+});
+
+
+
+// New Deal File - Capture PDFs – **New Deal File PDF - Merge PRE Sale Pack and Customer Signature {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/116785534?redirect=true
+$(document).on('knack-form-submit.view_3685', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/6aee4yo8i2g1chdo9hphjnaw4n42ldor";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Pre Sale Pack", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File PDF - Merge PRE Sale Pack and Customer Signature {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+  
+});
+
+
+
+// New Deal File - Capture PDFs – **New Deal File PDF - New Vehicle handover checklist signed at Dealer OR to be signed remotely {(Deal File) New Vehicle Handover Checklist} Slave App - Replaces https://zapier.com/app/editor/100712090?redirect=true
+$(document).on('knack-form-submit.view_2757', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"New vehicle handover checklist", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+      
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File PDF - New Vehicle handover checklist signed at Dealer OR to be signed remotely {(Deal File) New Vehicle Handover Checklist} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+
+// New Deal File - Capture PDFs – **New Deal File PDF - New Vehicle handover checklist signed online by Customer {(Deal File) New Vehicle Handover Checklist} Slave App - Replaces https://zapier.com/app/editor/116189095?redirect=true
+$(document).on('knack-form-submit.view_3693', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"New vehicle handover checklist", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File PDF - New Vehicle handover checklist signed online by Customer {(Deal File) New Vehicle Handover Checklist} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+  
+});
+
+
+
+// New Deal File - Capture PDFs – **New Deal File PDF - Part Ex Purchase Invoice signed at dealer or to be signed remotely {(Deal File) Customer Part Exchange Invoice} Slave App - Replaces https://zapier.com/app/editor/100725890?redirect=true
+$(document).on('knack-form-submit.view_2822', function(event, view, data) {
+    
+    try{
+    
+        let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Part exchange purchase invoice", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+      
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File PDF - Part Ex Purchase Invoice signed at dealer or to be signed remotely {(Deal File) Customer Part Exchange Invoice} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+// New Deal File - Capture PDFs – **New Deal File PDF - Part Ex Purchase Invoice signed online by Customer {(Deal File) Customer Part Exchange Invoice} Slave App - Replaces https://zapier.com/app/editor/116189304?redirect=true
+$(document).on('knack-form-submit.view_3683', function(event, view, data) {
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Part exchange purchase invoice", "Source Of Payload":"knack direct"});
+
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File - Capture PDFs – **New Deal File PDF - Part Ex Purchase Invoice signed online by Customer {(Deal File) Customer Part Exchange Invoice} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+// New Deal File - Capture PDFs – **New Deal File PDF - Service Schedule signed at dealer or to be signed remotely {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/100698595?redirect=true
+$(document).on('knack-form-submit.view_2778', function(event, view, data) {
+    
+    try{
+
+       let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+       let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Service schedule", "Source Of Payload":"knack direct"});
+
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File - Capture PDFs – **New Deal File PDF - Service Schedule signed at dealer or to be signed remotely {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+  
+});
+
+
+// New Deal File - Capture PDFs – **New Deal File PDF - Service Schedule signed online by Customer {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/116190873?redirect=true
+$(document).on('knack-form-submit.view_3690', function(event, view, data) {
+    
+    
+    try{
+    
+    let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Service schedule", "Source Of Payload":"knack direct"});
+ 
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File PDF - Service Schedule signed online by Customer {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+  
+});
+
+// New Deal File - Capture PDFs – **New Deal File PDF - Vehicle Invoice signed at dealer or to be signed remotely {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/100708580?redirect=true
+$(document).on('knack-form-submit.view_2674', function(event, view, data) {
+    
+    try{
+        
+        if(data.field_6567_raw === null || data.field_6567_raw === undefined){
+
+
+            let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+            let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Vehicle invoice", "Source Of Payload":"knack direct"});
+
+
+
+            var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+              }).responseText;
+
+        }
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File PDF - Vehicle Invoice signed at dealer or to be signed remotely {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+// New Deal File - **New Deal File PDF - Vehicle Invoice signed online by Customer {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/116194118?redirect=true
+$(document).on('knack-form-submit.view_3680', function(event, view, data) {
+     
+    try{
+    
+        let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Vehicle invoice", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+      
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File PDF - Vehicle Invoice signed online by Customer {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+  
+});
+
+
+//**New Deal File PDF - Merge POST Sale Pack and Customer Signature {(Deal File) Digital Deal File} Slave App https://zapier.com/app/editor/116785934?redirect=true
+$(document).on('knack-form-submit.view_3696', function(event, view, data) { 
+    
+    try{
+    
+
+        let commandURL = "https://hook.integromat.com/6aee4yo8i2g1chdo9hphjnaw4n42ldor";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Post Sale Pack", "Source Of Payload":"knack direct"});
+
+          var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+          }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File PDF - Merge POST Sale Pack and Customer Signature {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
