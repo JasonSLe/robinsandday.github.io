@@ -763,13 +763,12 @@ $(document).on('knack-form-submit.view_3567', function(event, view, data) {
 });
 
 
-
 // New Deal File – **Trigger For Integromat Upon New Vehicle Handover Form Submission {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/73986254?redirect=true
 // "Telephone No 4 ":data.field_6105_raw, THE NAME WAS DECLARED WITH A SPACE IN THE ZAPIER!
 $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     try{
-        console.log("Test2");
+        console.log("Test3");
     // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
     function handlAll(valueA, fieldName){ 
         return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
@@ -782,6 +781,12 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
             function handlData (valueB, stringB){
                 return (valueB === undefined || valueB === null || valueB === "") ? "" : valueB + stringB;
             }
+            console.log(handlData(valueA["street"], ", "));
+            console.log(handlData(valueA["street2"], ", "));
+            console.log(handlData(valueA["city"], ", "));
+            console.log(handlData(valueA["state"], " "));
+            console.log(handlData(valueA["zip"], ""));
+            
             return handlData(valueA["street"], ", ") + handlData(valueA["street2"], ", ") + handlData(valueA["city"], ", ") + handlData(valueA["state"], " ") + handlData(valueA["zip"], "");
             
         }else{
@@ -843,7 +848,6 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
         }).responseText; 
     }
 });
-
 
 
 
