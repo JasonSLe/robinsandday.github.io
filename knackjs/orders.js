@@ -768,10 +768,17 @@ $(document).on('knack-form-submit.view_3567', function(event, view, data) {
 $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     try{
-        console.log("Test3");
     // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
     function handlAll(valueA, fieldName){ 
         return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+    }
+    
+    function handlArray(valueA){
+        if (typeof valueA === Array){
+            return handlAll(data.field_6553_raw, 0);
+        }else{
+            return data.field_6553_raw;
+        }
     }
     
     //function to create the address string
@@ -779,13 +786,8 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
         if (typeof valueA !== undefined && typeof valueA !== null){
             
             function handlData (valueB, stringB){
-                return (valueB === undefined || valueB === null || valueB === "") ? "" : valueB + stringB;
+                return (valueB === undefined || valueB === null || valueB === "" || valueB === " ") ? "" : valueB + stringB;
             }
-            console.log(handlData(valueA["street"], ", "));
-            console.log(handlData(valueA["street2"], ", "));
-            console.log(handlData(valueA["city"], ", "));
-            console.log(handlData(valueA["state"], " "));
-            console.log(handlData(valueA["zip"], ""));
             
             return handlData(valueA["street"], ", ") + handlData(valueA["street2"], ", ") + handlData(valueA["city"], ", ") + handlData(valueA["state"], " ") + handlData(valueA["zip"], "");
             
@@ -815,7 +817,7 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
       "Telephone No 3 (Autoline Showroom)":handlAll(data.field_6104_raw, "formatted"), "Telephone No 4 ":handlAll(data.field_6105_raw, "formatted"), "Customer Phone (Dialog)":data.field_6052_raw, "Vehicle Description (Autoline Showroom)":data.field_6110_raw, 
       "Vehicle Description (Dialog)":data.field_6281_raw, "Dealer ID from Master App":data.field_6257_raw, "Sales Adviser Email Linked to this order":handlAll(data.field_6280_raw, "email"), "Customer Email (Dialog)":handlAll(data.field_6102_raw, "email"),
       "Front 3/4 Image":handlSRC(data.field_6279_raw), "Telephone No 2 (Autoline Showroom)":handlAll(data.field_6103_raw, "formatted"), "Customer Address (Dialog)":data.field_6051_raw, "Customer Secondary Email address from Portal creation":data.field_6078_raw, 
-      "Key Tag Number":data.field_6267_raw, "Date of customer handover":dateTime, "Customer Email (Autoline)":handlAll(data.field_6102_raw, "email"), "Handover Notes":data.field_6278_raw, "Enquiry Max or Showroom Order":handlAll(data.field_6553_raw, 0),
+      "Key Tag Number":data.field_6267_raw, "Date of customer handover":dateTime, "Customer Email (Autoline)":handlAll(data.field_6102_raw, "email"), "Handover Notes":data.field_6278_raw, "Enquiry Max or Showroom Order":handlArray(data.field_6553_raw),
       "Stock Number":data.field_6115_raw, "Handover Appointment Record ID from Master App":data.field_6628_raw, "Source Of Payload":"knack direct"};
  
     //Iterate through all the values contained in createData and replaces any undefined values with ""
@@ -848,7 +850,6 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
         }).responseText; 
     }
 });
-
 
 
 // New Deal File – **Trigger GET New Vehicle Order from Showroom or Enquiry Max Scenario V3 {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/95033758?redirect=true
