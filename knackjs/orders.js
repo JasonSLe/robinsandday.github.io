@@ -764,6 +764,7 @@ $(document).on('knack-form-submit.view_3567', function(event, view, data) {
 
 
 
+
 // New Deal File – **Trigger For Integromat Upon New Vehicle Handover Form Submission {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/73986254?redirect=true
 // "Telephone No 4 ":data.field_6105_raw, THE NAME WAS DECLARED WITH A SPACE IN THE ZAPIER!
 $(document).on('knack-form-submit.view_2630', function(event, view, data) {
@@ -775,8 +776,8 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     }
     
     function handlArray(valueA){
-        if (typeof valueA === Array){
-            return handlAll(data.field_6553_raw, "1");
+        if (Array.isArray(valueA)){
+            return handlAll(data.field_6553_raw, 1);
         }else{
             return data.field_6553_raw;
         }
@@ -851,7 +852,6 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
         }).responseText; 
     }
 });
-
 
 
 
