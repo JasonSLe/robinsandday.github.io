@@ -785,7 +785,7 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     //function to create the address string
     function handlAddress(valueA){
-        if (typeof valueA !== undefined && typeof valueA !== null){
+        if (valueA !== undefined && valueA !== null){
             
             function handlData (valueB, stringB){
                 return (valueB === undefined || valueB === null || valueB === "" || valueB === " ") ? "" : valueB + stringB;
