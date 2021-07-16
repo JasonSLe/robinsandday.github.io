@@ -793,7 +793,7 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
         if (typeof valueA !== "undefined" && valueA !== null){
             
             function handlData (valueB, stringB){
-                return (typeof valueB[stringB] === "undefined" || valueB[stringB] === null || valueB[stringB] === "" || valueB[stringB] === " ") ? "" : valueB + stringB;
+                return (typeof valueB === "undefined" || valueB === null || valueB === "" || valueB === " ") ? "" : valueB + stringB;
             }
             
             return handlData(handlAll(valueA, "street"), ", ") + handlData(handlAll(valueA, "street2"), ", ") + handlData(handlAll(valueA, "city"), ", ") + 
