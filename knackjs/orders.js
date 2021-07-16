@@ -785,10 +785,10 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     //function to create the address string
     function handlAddress(valueA){
-        if (valueA !== undefined && valueA !== null){
+        if (typeof valueA !== "undefined" && valueA !== null){
             
             function handlData (valueB, stringB){
-                return (valueB === undefined || valueB === null || valueB === "" || valueB === " ") ? "" : valueB + stringB;
+                return (typeof valueB[stringB] === "undefined" || valueB[stringB] === null || valueB[stringB] === "" || valueB[stringB] === " ") ? "" : valueB + stringB;
             }
             
             return handlData(valueA["street"], ", ") + handlData(valueA["street2"], ", ") + handlData(valueA["city"], ", ") + handlData(valueA["state"], " ") + handlData(valueA["zip"], "");
@@ -852,6 +852,7 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
         }).responseText; 
     }
 });
+
 
 
 
