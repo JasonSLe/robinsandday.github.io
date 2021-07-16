@@ -777,7 +777,13 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     function handlArray(valueA){
         if (Array.isArray(valueA)){
-            return handlAll(data.field_6553_raw, 1);
+            
+            for (var i = 0; i < valueA.length; i++) {
+                
+                if(typeof valueA[i] !== "undefined" && valueA[i] !== null){
+                    return valueA[i];
+                    }
+                }
         }else{
             return data.field_6553_raw;
         }
@@ -852,7 +858,6 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
         }).responseText; 
     }
 });
-
 
 
 
