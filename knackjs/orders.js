@@ -612,14 +612,16 @@ $(document).on('knack-form-submit.view_3855', function(event, view, data) {
 });
 
 
-
 // New Deal File - Capture PDFs – **New Deal File PDF - Customer satisfaction survey signed at dealer V2 {(Deal File) Customer Satisfaction Survey} Slave App - Replaces https://zapier.com/app/editor/116188221?redirect=true
 $(document).on('knack-form-submit.view_2765', function(event, view, data) { 
     
     
     try{
+        
+        console.log("test1");
+        console.log(data.field_6485_raw);
 
-      if(data.field_6485_raw !== null || data.field_6485_raw !== undefined){
+      if(data.field_6485_raw !== null && data.field_6485_raw !== undefined){
 
             let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
             let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Customer satisfaction survey", "Source Of Payload":"knack direct"});
@@ -652,6 +654,7 @@ $(document).on('knack-form-submit.view_2765', function(event, view, data) {
         }).responseText;  
     }
 });
+
 
 
 // New Deal File – **Instant Trigger For Integromat to GET Digital P/X Appraisal For New Digital Deal File Upon Form Submission within Deal File P/X View {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/116816484?redirect=true
