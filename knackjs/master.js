@@ -1791,26 +1791,44 @@ $(document).on('knack-form-submit.view_3994', function(event, view, data) {
 
 
 
+
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Trigger For Integromat When Dealer Pushes Vehicle For Prep Centre {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/88520373?redirect=true 
 $(document).on('knack-form-submit.view_3424', function(event, view, data) {
     
     try{
-	let commandURL = "https://hook.integromat.com/baxf6i7ag8g6xaxn7nvqcz3f1neajylu" ;
-	var num = data.field_6041_raw.time;
-        var hours = (num / 60);
-        var rhours = Math.floor(hours);
-        var minutes = (hours - rhours) * 60;
-        var rminutes = Math.round(minutes);
-        var time =  rhours.toString().padStart(2, '0') + ":" + rminutes.toString().padStart(2, '0');
-          let dataToSend = JSON.stringify({"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection": data.field_6041_raw.date_formatted + " " + time,
-                                           "Dealer ID":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
-          var rData = $.ajax({
+	let commandURL = "https://hook.integromat.com/baxf6i7ag8g6xaxn7nvqcz3f1neajylu";
+        
+        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+        function handlAll(valueA, fieldName){ 
+            return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+        }
+        
+        function handlIndex(valueA, indexA, fieldName){ 
+            return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+        }
+        
+        if(data.field_6041_raw !== null && data.field_6041_raw !== undefined){
+            var num = data.field_6041_raw.time;
+            var hours = (num / 60);
+            var rhours = Math.floor(hours);
+            var minutes = (hours - rhours) * 60;
+            var rminutes = Math.round(minutes);
+            var time =  rhours.toString().padStart(2, '0') + ":" + rminutes.toString().padStart(2, '0');
+        }else{
+            var time = "";
+        }
+        
+        let createData = {"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection": handlAll(data.field_6041_raw, "date_formatted") + " " + time,
+                                           "Dealer ID":handlIndex(data.field_4943_raw, "0", "identifier"),"Source Of Payload" : "knack direct"};
+        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+        var rData = $.ajax({
             url: commandURL,
             type: 'POST',
             contentType: 'application/json',
             data: dataToSend,
             async: false
-          }).responseText;
+        }).responseText;
     }catch(exception){
         console.log("error");
         var today = new Date();
@@ -1837,15 +1855,28 @@ $(document).on('knack-form-submit.view_3424', function(event, view, data) {
 $(document).on('knack-form-submit.view_3926', function(event, view, data) { 
     
     try{
-        let commandURL = "https://hook.integromat.com/8mnivmrh1gs4co3kd3k36eg798zt1ko9" ;
-      let dataToSend = JSON.stringify({"Knack ID of Used Deal File":data.id,"Image URL":data.field_4944_raw.url,"Image thumbnail URL":data.field_4944_raw.thumb_url,"Dealer":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"}) ;
-      var rData = $.ajax({
-        url: commandURL,
-        type: 'POST',
-        contentType: 'application/json',
-        data: dataToSend,
-        async: false
-      }).responseText;
+        
+        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+        function handlAll(valueA, fieldName){ 
+            return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+        }
+        
+        function handlIndex(valueA, indexA, fieldName){ 
+            return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+        }
+        
+          let commandURL = "https://hook.integromat.com/8mnivmrh1gs4co3kd3k36eg798zt1ko9";
+          
+          let createData = {"Knack ID of Used Deal File":data.id, "Image URL":handlAll(data.field_4944_raw, "url"), "Image thumbnail URL": handlAll(data.field_4944_raw, "thumb_url"),"Dealer": handlIndex(data.field_4943_raw, "0", "identifier"),"Source Of Payload" : "knack direct"} ;
+          let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
     }catch(exception){
         console.log("error");
         var today = new Date();
@@ -1967,7 +1998,6 @@ $(document).on('knack-form-submit.view_2276', function(event, view, data) {
     }
   
 });
-
 
 
 
