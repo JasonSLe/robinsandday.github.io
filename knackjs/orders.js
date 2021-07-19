@@ -570,6 +570,10 @@ $(document).on('knack-view-render.view_3633', function(event, view, data) {
   }
 });
 
+//
+//
+//
+//
 
 // New Deal File - Digital P&L – Triggering integromat to capture PDF of profit and loss overview to upload to knack
 $(document).on('knack-form-submit.view_3855', function(event, view, data) {
@@ -577,7 +581,7 @@ $(document).on('knack-form-submit.view_3855', function(event, view, data) {
     console.log("Test 2");
     try{
         let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
-        let dataToSend = JSON.stringify({"Record ID":data.id, "Payload": data, "Source Of Payload":"knack direct"});
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Payload": data, "Form": "NEW P&L", "Source Of Payload":"knack direct"});
 
       var rData = $.ajax({
         url: commandURL,
@@ -606,6 +610,8 @@ $(document).on('knack-form-submit.view_3855', function(event, view, data) {
         }).responseText;
     }
 });
+
+
 
 // New Deal File - Capture PDFs – **New Deal File PDF - Customer satisfaction survey signed at dealer V2 {(Deal File) Customer Satisfaction Survey} Slave App - Replaces https://zapier.com/app/editor/116188221?redirect=true
 $(document).on('knack-form-submit.view_2765', function(event, view, data) { 
