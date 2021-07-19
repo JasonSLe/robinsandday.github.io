@@ -1618,20 +1618,31 @@ $(document).on('knack-record-update.view_4086', function(event, view, data) {
 
 
 
+
 // Used Vehicle Stock TRIGGER INTEGROMAT UPON –***Trigger Integromat to refresh Stock record (Form and trigger in Autoline Vehicle Details) Replaces https://zapier.com/app/editor/110795723?redirect=true
 $(document).on('knack-form-submit.view_3993', function(event, view, data) {
     
     try{
+        
+        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+        function handlAll(valueA, indexA, fieldName){ 
+            return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+        }
+        
 	let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
+        let createData = {"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Dealer":handlAll(data.field_2721_raw, "0","identifier"),"Source Of Payload" : "knack direct","ConnectedDealer":data.field_6476_raw};
+        
+        //Iterate through all the values contained in createData and replaces any undefined values with ""
+        //Will create the final form of the data sent using POST
+        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
 
-          let dataToSend = JSON.stringify({"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Dealer":data.field_2721_raw[0].identifier,"Source Of Payload" : "knack direct","ConnectedDealer":data.field_6476_raw}) ;
-          var rData = $.ajax({
+        var rData = $.ajax({
             url: commandURL,
             type: 'POST',
             contentType: 'application/json',
             data: dataToSend,
             async: false
-          }).responseText;
+        }).responseText;
     }catch(exception){
         console.log("error");
         var today = new Date();
@@ -1728,15 +1739,27 @@ $(document).on('knack-form-submit.view_3538', function(event, view, data) {
 $(document).on('knack-form-submit.view_3994', function(event, view, data) { 
     
     try{
+        
+        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
+        function handlAll(valueA, indexA, fieldName){ 
+            return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
+        }
+        
       let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
-      let dataToSend = JSON.stringify({"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Source Of Payload" : "knack direct", "Dealer":data.field_2721_raw[0].identifier}) ;
-      var rData = $.ajax({
-        url: commandURL,
-        type: 'POST',
-        contentType: 'application/json',
-        data: dataToSend,
-        async: false
-      }).responseText;
+      let createData = {"Knack Stock UID":data.id,"Reg":data.field_2694_raw,"Source Of Payload" : "knack direct", "Dealer":handlAll(data.field_2721_raw, "0", "identifier")};
+      
+        //Iterate through all the values contained in createData and replaces any undefined values with ""
+        //Will create the final form of the data sent using POST
+        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+
   }catch(exception){
         console.log("error");
         var today = new Date();
