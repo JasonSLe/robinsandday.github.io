@@ -777,9 +777,9 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     try{
         
-        console.log("Test3");
-        console.log(data.field_6628_raw);
-        console.log(typeof data.field_6628_raw);
+        console.log("Test4");
+       
+        
     // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
     function handlAll(valueA, fieldName){ 
         return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
@@ -841,9 +841,20 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
       "Key Tag Number":data.field_6267_raw, "Date of customer handover":dateTime, "Customer Email (Autoline)":handlAll(data.field_6102_raw, "email"), "Handover Notes":data.field_6278_raw, "Enquiry Max or Showroom Order":handlArray(data.field_6553_raw),
       "Stock Number":data.field_6115_raw, "Handover Appointment Record ID from Master App":data.field_6628_raw, "Source Of Payload":"knack direct"};
  
+   
+    function deleteEmpty(objectA){
+        
+        for (const [key, value] of Object.entries(objectA)) {
+            if (value === undefined || value === null || value === ""){
+                delete objectA[key];
+                console.log("Deleted key:" + key);
+            }
+        }
+        return objectA;
+    }
     //Iterate through all the values contained in createData and replaces any undefined values with ""
     //Will create the final form of the data sent using POST
-    let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null || value === "") ? delete createData[key] : value;});
+    let dataToSend = JSON.stringify(deleteEmpty(createData));
 
     var rData = $.ajax({
         url: commandURL,
