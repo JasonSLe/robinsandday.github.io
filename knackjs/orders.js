@@ -837,7 +837,7 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
  
     //Iterate through all the values contained in createData and replaces any undefined values with ""
     //Will create the final form of the data sent using POST
-    let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+    let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? delete createData[key] : value;});
 
     var rData = $.ajax({
         url: commandURL,
