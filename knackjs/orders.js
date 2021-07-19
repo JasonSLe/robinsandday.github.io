@@ -776,6 +776,9 @@ $(document).on('knack-form-submit.view_3567', function(event, view, data) {
 $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     try{
+        
+        console.log("Test2");
+        console.log(data.field_6628_raw);
     // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
     function handlAll(valueA, fieldName){ 
         return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
@@ -827,6 +830,8 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
             return (valueC? "<img src=" + "\"" + valueC + "\"" + " />": "");
         }
     let commandURL = "https://hook.integromat.com/ajxkfooskhy153u7ebtlipjmcfyp8guh";
+    
+    
     let createData = {"Knack Record ID From New Vehicle Deal File":data.id, "Customer Address (Autoline Showroom)":handlAddress(data.field_6100_raw), "Autoline Showroom Order Number":data.field_6109_raw,
       "Customer Name (Autoline Showroom)":data.field_6159_raw, "Telephone No 1 (Autoline Showroom)":handlAll(data.field_6101_raw, "formatted"), "Customer Name (Dialog":data.field_6070_raw, "Telephone No 4 (Autoline Showroom)":handlAll(data.field_6105_raw, "formatted"), 
       "Telephone No 3 (Autoline Showroom)":handlAll(data.field_6104_raw, "formatted"), "Telephone No 4 ":handlAll(data.field_6105_raw, "formatted"), "Customer Phone (Dialog)":data.field_6052_raw, "Vehicle Description (Autoline Showroom)":data.field_6110_raw, 
@@ -837,7 +842,7 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
  
     //Iterate through all the values contained in createData and replaces any undefined values with ""
     //Will create the final form of the data sent using POST
-    let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? delete createData[key] : value;});
+    let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? console.log("The key is empty" + key) : value;});
 
     var rData = $.ajax({
         url: commandURL,
@@ -865,6 +870,7 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
         }).responseText; 
     }
 });
+
 
 
 
