@@ -776,9 +776,7 @@ $(document).on('knack-form-submit.view_3567', function(event, view, data) {
 $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     try{
-        
-        console.log("Test4");
-       
+          
         
     // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
     function handlAll(valueA, fieldName){ 
@@ -847,7 +845,6 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
         for (const [key, value] of Object.entries(objectA)) {
             if (value === undefined || value === null || value === ""){
                 delete objectA[key];
-                console.log("Deleted key:" + key);
             }
         }
         return objectA;
