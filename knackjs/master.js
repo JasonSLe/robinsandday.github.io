@@ -2287,6 +2287,7 @@ $(document).on('knack-form-submit.view_4146', function(event, view, data) {
 });
 
 
+
 // Used Deal File TRIGGER INTEGROMAT UPON – *Trigger Integromat to connect Used Deal file to a newly created Autoline VSB stock Item {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/110800495?redirect=true
 $(document).on('knack-form-submit.view_3997', function(event, view, data) { 
     
@@ -2300,8 +2301,19 @@ $(document).on('knack-form-submit.view_3997', function(event, view, data) {
         
           let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do";
 
-          let createData = {"Knack Deal File UID":data.id,"Reg":data.field_4941_raw,"Dealer":handlIndex(data.field_4943_raw, "0", "identifier") ,"Source Of Payload": "knack direct"} ;
-         let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+          var createData = {"Knack Deal File UID":data.id,"Reg":data.field_4941_raw,"Dealer":handlIndex(data.field_4943_raw, "0", "identifier") ,"Source Of Payload": "knack direct"} ;
+          function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
 
         var rData = $.ajax({
             url: commandURL,
