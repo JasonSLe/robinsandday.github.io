@@ -1811,7 +1811,6 @@ $(document).on('knack-form-submit.view_3994', function(event, view, data) {
 
 
 
-
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Trigger For Integromat When Dealer Pushes Vehicle For Prep Centre {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/88520373?redirect=true 
 $(document).on('knack-form-submit.view_3424', function(event, view, data) {
     
@@ -1838,9 +1837,20 @@ $(document).on('knack-form-submit.view_3424', function(event, view, data) {
             var time = "";
         }
         
-        let createData = {"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection": handlAll(data.field_6041_raw, "date_formatted") + " " + time,
+        var createData = {"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection": handlAll(data.field_6041_raw, "date_formatted") + " " + time,
                                            "Dealer ID":handlIndex(data.field_4943_raw, "0", "identifier"),"Source Of Payload" : "knack direct"};
-        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+        function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+        //Iterate through all the values contained in createData and deletesany undefined object properties
+        //Will create the final form of the data sent using POST
+        let dataToSend = JSON.stringify(deleteEmpty(createData));
 
         var rData = $.ajax({
             url: commandURL,
@@ -1887,8 +1897,19 @@ $(document).on('knack-form-submit.view_3926', function(event, view, data) {
         
           let commandURL = "https://hook.integromat.com/8mnivmrh1gs4co3kd3k36eg798zt1ko9";
           
-          let createData = {"Knack ID of Used Deal File":data.id, "Image URL":handlAll(data.field_4944_raw, "url"), "Image thumbnail URL": handlAll(data.field_4944_raw, "thumb_url"),"Dealer": handlIndex(data.field_4943_raw, "0", "identifier"),"Source Of Payload" : "knack direct"} ;
-          let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+          var createData = {"Knack ID of Used Deal File":data.id, "Image URL":handlAll(data.field_4944_raw, "url"), "Image thumbnail URL": handlAll(data.field_4944_raw, "thumb_url"),"Dealer": handlIndex(data.field_4943_raw, "0", "identifier"),"Source Of Payload" : "knack direct"} ;
+          function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+        //Iterate through all the values contained in createData and deletesany undefined object properties
+        //Will create the final form of the data sent using POST
+        let dataToSend = JSON.stringify(deleteEmpty(createData));
 
         var rData = $.ajax({
             url: commandURL,
@@ -2018,7 +2039,6 @@ $(document).on('knack-form-submit.view_2276', function(event, view, data) {
     }
   
 });
-
 
 
 //
