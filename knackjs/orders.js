@@ -1843,7 +1843,6 @@ $(document).on('knack-form-submit.view_3696', function(event, view, data) {
 
 
 
-
 //**Instant Trigger For Integromat to GET Digital P/X Appraisal For New Digital Deal File Upon Form Submission within Deal File P/X View {(Deal File) Digital Deal File} Slave App https://zapier.com/app/editor/73106017?redirect=true
 $(document).on('knack-form-submit.view_2584', function(event, view, data) { 
     
@@ -1855,13 +1854,22 @@ $(document).on('knack-form-submit.view_2584', function(event, view, data) {
         }
         
         let commandURL = "https://hook.integromat.com/o8f4wtbtada9lh4bzgj34o3qc0dpa3dx";
-        let createData = {"Knack Digital Deal File ID":data.id, "Connected Dealer":handlAll(data.field_6048_raw,"0", "identifier"), "Dealer ID From Master App":data.field_6257_raw, "Part Exchange 1":data.field_6125_raw,
+        var createData = {"Knack Digital Deal File ID":data.id, "Connected Dealer":handlAll(data.field_6048_raw,"0", "identifier"), "Dealer ID From Master App":data.field_6257_raw, "Part Exchange 1":data.field_6125_raw,
       "Part Exchange 3":data.field_6127_raw, "Part Exchange 2":data.field_6126_raw, "Source Of Payload":"knack direct"};
 
 
-       //Iterate through all the values contained in createData and replaces any undefined values with ""
-       //Will create the final form of the data sent using POST
-        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+       function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
 
         var rData = $.ajax({
             url: commandURL,
