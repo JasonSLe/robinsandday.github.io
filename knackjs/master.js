@@ -3402,7 +3402,6 @@ $(document).on('knack-form-submit.view_3935', function(event, view, data) {
 
 
 
-
 // Part Exhange Appraisal TRIGGER INTEGROMAT UPON – *Trigger to resize P/X RETAIL APPRAISAL and send to Integromat {(P/X) Part Exchange Vehicles} Replaces https://zapier.com/app/editor/69807699?redirect=true
 $(document).on('knack-form-submit.view_346', function(event, view, data) { 
     
@@ -3419,8 +3418,21 @@ $(document).on('knack-form-submit.view_346', function(event, view, data) {
                 return (valueC? "<img src=" + "\"" + valueC + "\"" + " />": null);
             }
 
-      let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo": handlSRC(handlAll(data.field_532_raw, "url")), "Rear 3/4 Photo": handlSRC(handlAll(data.field_5373_raw, "url")), 
-          "Side Profile": handlSRC(handlAll(data.field_5372_raw, "url")), "Interior Photo": handlSRC(handlAll(data.field_5374_raw, "url")), "Source Of Payload": "knack direct"});
+      var createData = {"Knack ID":data.id, "Front 3/4 Photo": handlSRC(handlAll(data.field_532_raw, "url")), "Rear 3/4 Photo": handlSRC(handlAll(data.field_5373_raw, "url")), 
+          "Side Profile": handlSRC(handlAll(data.field_5372_raw, "url")), "Interior Photo": handlSRC(handlAll(data.field_5374_raw, "url")), "Source Of Payload": "knack direct"};
+      
+      function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
       var rData = $.ajax({
         url: commandURL,
         type: 'POST',
@@ -3467,9 +3479,21 @@ $(document).on('knack-form-submit.view_348', function(event, view, data) {
 
       if(data.field_800_raw[0]["identifier"] !== "Trade Appraisal (Vehicle Not Present)" && data.field_800_raw[0]["identifier"] !== "Retail Appraisal (Vehicle Not Present)") {
 
-          let dataToSend = JSON.stringify({"Knack ID":data.id, "Front 3/4 Photo": handlSRC(handlAll(data.field_532_raw, "url")), "Rear 3/4 Photo": handlSRC(handlAll(data.field_5373_raw, "url")),
-              "Side Profile": handlSRC(handlAll(data.field_5372_raw, "url")), "Interior Photo": handlSRC(handlAll(data.field_5374_raw, "url")), "Source Of Payload" : "knack direct"});
-
+          var createData = {"Knack ID":data.id, "Front 3/4 Photo": handlSRC(handlAll(data.field_532_raw, "url")), "Rear 3/4 Photo": handlSRC(handlAll(data.field_5373_raw, "url")),
+              "Side Profile": handlSRC(handlAll(data.field_5372_raw, "url")), "Interior Photo": handlSRC(handlAll(data.field_5374_raw, "url")), "Source Of Payload" : "knack direct"};
+          
+          function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
           var rData = $.ajax({
             url: commandURL,
             type: 'POST',
@@ -3502,15 +3526,27 @@ $(document).on('knack-form-submit.view_348', function(event, view, data) {
 // Used Deal File Automated Comms - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File Automated Comms - Profit & Loss Approved {(Deal File) Profit Sheet} Replaces https://zapier.com/app/editor/111449060?redirect=true
 $(document).on('knack-form-submit.view_4067', function(event, view, data) { 
   
-  try{
+  try{  
+      
+      function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
       if(data.field_6449_raw){
 
           let commandURL = "https://hook.integromat.com/qb810ofl9jwfvemwhvmvc6zjxqfgob9g";
-          let createData = {"P&L Record ID":data.id,"Deal file ID":data.field_6454_raw, "Source Of Payload" : "knack direct"};
+          var createData = {"P&L Record ID":data.id,"Deal file ID":data.field_6454_raw, "Source Of Payload" : "knack direct"};
 
-          //Iterate through all the values contained in createData and replaces any undefined values with ""
-          //Will create the final form of the data sent using POST
-          let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+          //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
+          
+          
 
           var rData = $.ajax({
                 url: commandURL,
@@ -3521,9 +3557,11 @@ $(document).on('knack-form-submit.view_4067', function(event, view, data) {
           }).responseText;
 
           let commandURL1 = "https://hook.integromat.com/kg86nmpzd5lec8kjtlsfben4zlkcgjf1";
-          let createData1 = {"Record ID":data.field_6454_raw,"Trigger":"Profit & Loss Approved","Source Of Payload" : "knack direct"};
-
-          let dataToSend1 = JSON.stringify(createData1, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+          var createData1 = {"Record ID":data.field_6454_raw,"Trigger":"Profit & Loss Approved","Source Of Payload" : "knack direct"};
+          
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend1 = JSON.stringify(deleteEmpty(createData1));
 
           var rData = $.ajax({
                 url: commandURL1,
@@ -3572,7 +3610,7 @@ $(document).on('knack-form-submit.view_426', function(event, view, data) {
 
           let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p" ;
 
-          let createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
+          var createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
           "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation":("£" + data.field_753_raw).replace("undefined", "0.00"),
           "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Rear 3/4 Photo":handlAll(data.field_5373_raw, "url"), "Interior Photo":handlAll(data.field_5374_raw, "url"), "Dashboard Photo":handlAll(data.field_5723_raw, "url"),
           "Damage Photo 1":handlAll(data.field_716_raw, "url"), "Damage Photo 2":handlAll(data.field_717_raw, "url"), "Damage Photo 3":handlAll(data.field_718_raw, "url"), "Damage Photo 4":handlAll(data.field_720_raw, "url"), "Damage Photo 5":handlAll(data.field_719_raw, "url"), "Damage Photo 6":handlAll(data.field_721_raw, "url"),
@@ -3580,9 +3618,18 @@ $(document).on('knack-form-submit.view_426', function(event, view, data) {
           "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":handlAll(data.field_3203_raw, "date_formatted"), 
           "Sales Advisor Refurb Description":(data.field_882_raw + "").replace("undefined", "") + " " + (data.field_883_raw + "").replace("undefined", ""), "Source Of Payload": "knack direct"};
 
-          //Iterate through all the values contained in createData and replaces any undefined values with ""
-          //Will create the final form of the data sent using POST
-          let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+          function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
 
           var rData = $.ajax({
             url: commandURL,
@@ -3630,7 +3677,7 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
         let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p";
 
         //CreateData contains the structure of the data that will be sent through the POST
-      let createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
+      var createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
       "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/","Valuation": ("£" + data.field_753_raw).replace("undefined", "0.00"),
       "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Offsite Image":handlAll(data.field_4194_raw, "url"), "Valuation Pending On site Inspection":("£" + Math.round(data.field_853_raw)).replace("undefined", "0").replace("NaN", "0"), 
       "Rear 3/4 Photo":handlAll(data.field_5373_raw, "url"), "Interior Photo":handlAll(data.field_5374_raw, "url"), "Dashboard Photo":handlAll(data.field_5723_raw, "url"), "Damage Photo 1":handlAll(data.field_716_raw, "url"), "Damage Photo 2":handlAll(data.field_717_raw, "url"), "Damage Photo 3":handlAll(data.field_718_raw, "url"), 
@@ -3638,9 +3685,18 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
       "Mechanical Refub Cost":("£" + Math.round(data.field_622_raw)).replace("undefined", "").replace("NaN", ""), "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Valuation Notes":data.field_4390_raw, "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":handlDate(data.field_3203_raw, "date_formatted"), 
       "Sales Advisor Refurb Description":(data.field_882_raw + "").replace("undefined", "") + " " + (data.field_883_raw + "").replace("undefined", ""), "Source Of Payload":"knack direct"};
 
-      //Iterate through all the values contained in createData and replaces any undefined values with ""
-      //Will create the final form of the data sent using POST
-      let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+      function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+        let dataToSend = JSON.stringify(deleteEmpty(createData));
 
       var rData = $.ajax({
         url: commandURL,
@@ -3689,7 +3745,7 @@ $(document).on('knack-form-submit.view_396', function(event, view, data) {
         let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p";
 
         //CreateData contains the structure of the data that will be sent through the POST
-        let createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
+        var createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
           "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/", "Valuation":("£" + data.field_753_raw).replace("undefined", "0.00"),
           "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Offsite Image":handlAll(data.field_4194_raw, "url"), "Valuation Pending On site Inspection":("£" + Math.round(data.field_853_raw)).replace("undefined", "0").replace("NaN", "0"),
            "Manger Override Valuation Pending Onsite Valuation":("£" + data.field_866_raw).replace("undefined", ""), "Date Of Last Service":handlDate(data.field_535_raw, "date_formatted"), "Total Refurb Cost":("£" + Math.round(data.field_624_raw)).replace("undefined", "").replace("NaN", ""), "Mechanical Refub Cost":("£" + Math.round(data.field_622_raw)).replace("undefined", "").replace("NaN", ""), 
@@ -3697,9 +3753,18 @@ $(document).on('knack-form-submit.view_396', function(event, view, data) {
            "Source Of Payload":"knack direct"};
 
 
-        //Iterate through all the values contained in createData and replaces any undefined values with ""
-        //Will create the final form of the data sent using POST
-        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+        function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
 
         var rData = $.ajax({
             url: commandURL,
@@ -3727,5 +3792,4 @@ $(document).on('knack-form-submit.view_396', function(event, view, data) {
         }).responseText;
     }
 });
-
 
