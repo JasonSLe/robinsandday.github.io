@@ -3801,7 +3801,7 @@ $(document).on('knack-form-submit.view_407', function(event, view, data) {
     try{
     
         let commandURL = "https://hook.integromat.com/ztjcyglouzfis5l4wktkui7htszs6615";
-        let dataToSend = JSON.stringify({"Knack Digital Deal File ID":data.id , "Source Of Payload":"knack direct"});
+        let dataToSend = JSON.stringify({"Record ID":data.id , "Source Of Payload":"knack direct"});
 
         var rData = $.ajax({
             url: commandURL,
