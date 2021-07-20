@@ -945,6 +945,7 @@ $(document).on('knack-form-submit.view_2828', function(event, view, data) {
 });
 
 
+
 // New Deal File – **Trigger Integromat to GET New Vehicle Invoice From Autoline V2 {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/89782269?redirect=true
 $(document).on('knack-form-submit.view_2855', function(event, view, data) { 
     
@@ -958,11 +959,20 @@ $(document).on('knack-form-submit.view_2855', function(event, view, data) {
         }
 
         let commandURL = "https://hook.integromat.com/c81bcra3lmhe7dlj3dvbcev551frqdf3";
-        let createData = {"Knack Deal File ID":data.id, "Dealer":handlAll(data.field_6048_raw, "0", "identifier"), "New Vehicle Stockbook Number from Showroom":data.field_6115_raw, "Source Of Payload":"knack direct"};
+        var createData = {"Knack Deal File ID":data.id, "Dealer":handlAll(data.field_6048_raw, "0", "identifier"), "New Vehicle Stockbook Number from Showroom":data.field_6115_raw, "Source Of Payload":"knack direct"};
 
-        //Iterate through all the values contained in createData and replaces any undefined values with ""
-        //Will create the final form of the data sent using POST
-        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+        function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
 
         var rData = $.ajax({
             url: commandURL,
@@ -992,7 +1002,6 @@ $(document).on('knack-form-submit.view_2855', function(event, view, data) {
      }
   
 });
-
 
 
 
