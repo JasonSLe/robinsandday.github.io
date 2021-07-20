@@ -1098,7 +1098,6 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
 });
 
 
-
 // New Deal File – **Instant Trigger For Integromat to GET Digital P/X Appraisal For New Digital Deal File Upon Form Submission {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/72890073?redirect=true
 $(document).on('knack-form-submit.view_2574', function(event, view, data) { 
     
@@ -1111,13 +1110,21 @@ $(document).on('knack-form-submit.view_2574', function(event, view, data) {
         
 
         let commandURL = "https://hook.integromat.com/o8f4wtbtada9lh4bzgj34o3qc0dpa3dx";
-        let createData = {"Knack Digital Deal File ID":data.id, "Connected Dealer":handlAll(data.field_6048_raw,"0", "identifier"), "Dealer ID From Master App":data.field_6257_raw, "Part Exchange 1":data.field_6125_raw,
+        var createData = {"Knack Digital Deal File ID":data.id, "Connected Dealer":handlAll(data.field_6048_raw,"0", "identifier"), "Dealer ID From Master App":data.field_6257_raw, "Part Exchange 1":data.field_6125_raw,
       "Part Exchange 3":data.field_6127_raw, "Part Exchange 2":data.field_6126_raw, "Source Of Payload":"knack direct"};
 
-
-       //Iterate through all the values contained in createData and replaces any undefined values with ""
-       //Will create the final form of the data sent using POST
-        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+        function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
 
         var rData = $.ajax({
             url: commandURL,
@@ -1145,6 +1152,8 @@ $(document).on('knack-form-submit.view_2574', function(event, view, data) {
         }).responseText;
     }
 });
+
+
 
 // New Deal File - Automated Comms – **New Deal File Automated Comms - New Vehicle Checked In {(Deal File) Vehicle Check In, Documents and Status} Slave App - Replaces https://zapier.com/app/editor/101944107?redirect=true
 $(document).on('knack-form-submit.view_2692', function(event, view, data) { 
