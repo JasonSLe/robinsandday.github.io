@@ -2121,6 +2121,8 @@ $(document).on('knack-form-submit.view_4149', function(event, view, data) {
     }
 });
 
+
+
 // Used Deal File TRIGGER INTEGROMAT UPON – *Trigger Integromat to create stock record if New Vehicle Purchase Added {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/110797771?redirect=true
 $(document).on('knack-form-submit.view_2966', function(event, view, data) { 
     
@@ -2133,10 +2135,20 @@ $(document).on('knack-form-submit.view_2966', function(event, view, data) {
 
       let commandURL = "https://hook.integromat.com/7hyc8ignx5bg0p598dcd2sp4e91vi0do" ;
 
-      let createData = {"Knack Deal File UID":data.id,"Reg":data.field_4941_raw,"Dealer": handlAll(data.field_4943_raw,"0", "identifier"),"Source Of Payload" : "knack direct"} ;
-         //Iterate through all the values contained in createData and replaces any undefined values with ""
-        //Will create the final form of the data sent using POST
-        let dataToSend = JSON.stringify(createData, function (key, value) {return (value === undefined || value === null) ? "" : value;});
+      var createData = {"Knack Deal File UID":data.id,"Reg":data.field_4941_raw,"Dealer": handlAll(data.field_4943_raw,"0", "identifier"),"Source Of Payload" : "knack direct"} ;
+         
+         function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
 
         var rData = $.ajax({
             url: commandURL,
@@ -2165,6 +2177,7 @@ $(document).on('knack-form-submit.view_2966', function(event, view, data) {
         }).responseText;
     }
      });
+
 
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L when Approved {(Deal File) Profit Sheet} Replaces https://zapier.com/app/editor/111720452/nodes/111720452/fields
