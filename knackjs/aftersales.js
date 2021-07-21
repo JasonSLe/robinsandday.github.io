@@ -319,6 +319,7 @@ function formatScene24(){
   sectionCenter.appendChild(document.getElementById('view_121'));
   sectionCenter.appendChild(document.getElementById('view_122'));
   sectionCenter.appendChild(document.getElementById('view_117'));
+  sectionCenter.appendChild(document.getElementById('view_149'));
   sectionRight.appendChild(document.getElementById('view_96'));
   sectionRight.appendChild(document.getElementById('view_133'));
   sectionRight.appendChild(document.getElementById('view_115'));
