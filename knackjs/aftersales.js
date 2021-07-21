@@ -392,7 +392,7 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
         },{
           name : 'Recalls',
           mainField : 'field_70', //Recalls Oustanding
-          views:['121']
+          views:['121','149']
         },{
           name : 'Autoline - email valid',
           mainField : 'field_316', //Autoline - is email valid - last Autoline save
@@ -429,35 +429,6 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     sceneRefresh(refreshData);
   //generateTyres();
 });
-
-$(document).on("knack-scene-render.scene_22", function(event, scene, data) {
-    setTimeout(function(){
-        let refreshData = [
-          {
-              mainField : 'field_240', //VHC - last mileage = VHC
-              views:['78']   
-          },{
-            mainField : 'field_72', //Service schedule table = Service schedule and recall - service schedule save
-            views:['82'],
-            runAfter : createServiceScheduleClick
-          },{
-            mainField : 'field_307', //Owner name = Autoline - first save of basic details 
-            views:['100']
-          },{
-            mainField : 'field_278', //Customer type of bussiness = Autoline - save of complete details
-            views:['84','91','75','100','92'] 
-          },{
-            mainField : 'field_247', //Tyres - Front = Stapletons
-            views:['88'],
-            runAfter : generateTyres
-          },{
-            mainField : 'field_30', //MOT expiry date = DVLA, MOT, Service Plan
-            views:['81','92','76','80']
-        }
-        ]
-        sceneRefresh(refreshData);
-    }, 100);
-  });
 
   var recordId = '';
   $(document).on('knack-form-submit.view_71', function(event, view, data) { 
