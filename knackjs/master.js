@@ -2591,12 +2591,9 @@ $(document).on('knack-form-submit.view_2915', function(event, view, data) {
 $(document).on('knack-form-submit.view_2582', function(event, view, data) { 
     
     try{
-        console.log(data.field_6223_raw);
-        console.log(typeof data.field_6223_raw);
-        console.log("Test 2");
-        
+    
         if (typeof data.field_6223_raw === 'undefined' || data.field_6223_raw === null || data.field_6223_raw === ""){
-		console.log("if statement works");
+
 
             let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v";
             let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Vehicle invoice", "Source Of Payload": "knack direct"});
