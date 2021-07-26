@@ -1521,12 +1521,30 @@ color: #FFFFFF;
 /* Type of Deal Details on AFRL Page */
 #view_3555 .kn-detail-label {background-color: transparent;}
 
-/*******DIGITAL P&l OVER VIEW PAGE *********/
+/******* DIGITAL P&L PAGES *********/
 
 #view_3732 .kn-detail-label {background-color: transparent;}
 #view_3734 .kn-detail-label {background-color: transparent;}
 #view_3740 .kn-detail-label {background-color: transparent;}
 #view_3741 .kn-detail-label {background-color: transparent;}
+
+/* Link to Complete Auto Created P&L */
+
+#\36 0f929dfcc178c098299b5a6 > td.kn-table-link > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#\36 0f929dfcc178c098299b5a6 > td.kn-table-link > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
 
 /******* CSS to make File Uploads Stand out when Files Exist *******/
 /* AFRL */
