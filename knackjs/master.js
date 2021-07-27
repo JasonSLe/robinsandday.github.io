@@ -3832,3 +3832,18 @@ $(document).on('knack-form-submit.view_407', function(event, view, data) {
     }
 });
 
+//User data update
+$(document).on('knack-form-submit.view_5', function(event, view, data) { 
+  let commandURL = "https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D" ;
+  let dataToSend = {"action": "replicate_users"}; 
+  recordId = data.id;
+  console.log(dataToSend);
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify(dataToSend),
+    async: true
+  })
+});
+
