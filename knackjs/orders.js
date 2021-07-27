@@ -276,7 +276,7 @@ $(document).on('knack-record-update.view_3836', function(event, view, data) {
 
 //****************** Refresh Profit & Loss Sheet Page when Digital P&L Created Manually by Dealer ****************//
 
-$(document).on('knack-record-update.view_3949', function(event, view, data) {
+$(document).on('knack-record-create.view_3949', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 2000);
 
