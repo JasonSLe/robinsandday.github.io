@@ -1530,7 +1530,7 @@ color: #FFFFFF;
 
 /* Link to go back to Deal File OverView from Profit & Loss Sheet Page */
 
-#view_3942 > section > div > div > div > div > div > div > span > a {
+#view_3942 > section > div > div > div > div > div > div > span > a > span {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #FFA100;
@@ -1538,7 +1538,7 @@ color: #FFFFFF;
   display: inline-block;
 }
 
-#view_3942 > section > div > div > div > div > div > div > span > a:hover {
+#view_3942 > section > div > div > div > div > div > div > span > a:hover > span {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #D18400;
