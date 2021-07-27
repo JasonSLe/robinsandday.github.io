@@ -274,6 +274,16 @@ $(document).on('knack-record-update.view_3836', function(event, view, data) {
   
 });
 
+//****************** Refresh Profit & Loss Sheet Page when Digital P&L Created Manually by Dealer ****************//
+
+$(document).on('knack-record-update.view_3949', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 2000);
+
+  Knack.showSpinner();
+  
+});
+
 // ----------  Service Plan table expand or collapse groupings ----------
 
 // Call the function when your table renders – do this for each table you’re applying this to
