@@ -1528,9 +1528,9 @@ color: #FFFFFF;
 #view_3740 .kn-detail-label {background-color: transparent;}
 #view_3741 .kn-detail-label {background-color: transparent;}
 
-/* Link to Complete Auto Created P&L */
+/* Link to go back to Deal File OverView from Profit & Loss Sheet Page */
 
-#\36 0f929dfcc178c098299b5a6 > td.kn-table-link > span > a {
+#view_3942 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #FFA100;
@@ -1538,7 +1538,7 @@ color: #FFFFFF;
   display: inline-block;
 }
 
-#\36 0f929dfcc178c098299b5a6 > td.kn-table-link > span > a:hover {
+#view_3942 > section > div > div > div > div > div > div > span > a:hover {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #D18400;
