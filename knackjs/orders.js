@@ -1899,12 +1899,12 @@ $(document).on('knack-form-submit.view_2584', function(event, view, data) {
 });
 
 
-// New Deal File - Website Capture
+// New Deal File - NEW P&L
 $(document).on('knack-form-submit.view_3927', function(event, view, data) {
      
     try{
         let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
-        let dataToSend = JSON.stringify({"Record ID":data.id, "Payload": data, "Form": "Website Capture"});
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Payload": data, "Form": "NEW P&L"});
 
       var rData = $.ajax({
         url: commandURL,
@@ -1922,7 +1922,7 @@ $(document).on('knack-form-submit.view_3927', function(event, view, data) {
         var dateTime = date+' '+time;
 
         let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "// New Deal File - Website Capture",
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "// NEW P&L",
         "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
         var rData = $.ajax({
            url: commandURL,
