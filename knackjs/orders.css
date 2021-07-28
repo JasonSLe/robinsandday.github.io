@@ -1546,6 +1546,59 @@ color: #FFFFFF;
   display: inline-block;
 }
 
+/* Edit Profit & Loss Links to Buttons */
+/* Edit Vehicle Income */
+#view_3947 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_3947 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
+/* Edit Vehicle Expenses */
+#view_3953 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_3953 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
+/* Edit Add Ons and Funding */
+#view_3955 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_3955 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
+
 /******* CSS to make File Uploads Stand out when Files Exist *******/
 /* AFRL */
 #kn-input-field_6409 > div > div.kn-asset-current > div > div > a.kn-view-asset {
