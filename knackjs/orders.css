@@ -1666,6 +1666,13 @@ color: #FFFFFF;
 #view_3740 .kn-detail-label {background-color: transparent;}
 #view_3741 .kn-detail-label {background-color: transparent;}
 
+/* Complete P&L - Hide IF Franchise Vauxhall Field = 1 */
+
+#kn-input-field_7180 {
+  color: #FFFFFF;
+}
+
+
 /* Link to go back to Deal File OverView from Profit & Loss Sheet Page */
 
 #view_3942 > section > div > div > div > div > div > div > span > a > span {
