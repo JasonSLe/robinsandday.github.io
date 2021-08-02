@@ -1743,6 +1743,26 @@ color: #FFFFFF;
   display: inline-block;
 }
 
+/* Detail Labels on P&L Overview */
+
+#view_3905 .kn-detail-label {background-color: transparent;}
+
+#view_3907 .kn-detail-label {background-color: transparent;}
+
+#view_3911 .kn-detail-label {background-color: transparent;}
+
+#view_3914 .kn-detail-label {background-color: transparent;}
+
+#view_3916 .kn-detail-label {background-color: transparent;}
+
+#view_3918 .kn-detail-label {background-color: transparent;}
+
+#view_3922 .kn-detail-label {background-color: transparent;}
+
+#view_3925 .kn-detail-label {background-color: transparent;}
+
+#view_3929 .kn-detail-label {background-color: transparent;}
+
 
 /******* CSS to make File Uploads Stand out when Files Exist *******/
 /* AFRL */
