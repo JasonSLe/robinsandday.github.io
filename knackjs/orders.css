@@ -1743,6 +1743,23 @@ color: #FFFFFF;
   display: inline-block;
 }
 
+/* Edit Add Ons */
+#view_3960 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_3960 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
 /* Detail Labels on P&L Overview */
 
 #view_3905 .kn-detail-label {background-color: transparent;}
