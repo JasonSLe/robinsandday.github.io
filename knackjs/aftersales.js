@@ -475,7 +475,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     };
     document.getElementById('view_140').appendChild(button0)
     let button1 = document.createElement('button');
-    button1.innerHTML = 'Only with notification';
+    button1.innerHTML = 'With BON Raised';
     button1.setAttribute("class", "kn-button");
     button1.onclick = function(){
       let token = getTokenFromURL(document.location.href);
@@ -493,7 +493,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     };
     document.getElementById('view_140').appendChild(button2)
     let button3 = document.createElement('button');
-    button3.innerHTML = 'Status not None';
+    button3.innerHTML = 'BO’s with Actions';
     button3.setAttribute("class", "kn-button");
     button3.onclick = function(){
       let token = getTokenFromURL(document.location.href);
