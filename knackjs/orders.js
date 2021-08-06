@@ -796,7 +796,9 @@ $(document).on('knack-form-submit.view_3567', function(event, view, data) {
 $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     try{
-          
+        console.log("Test 1");
+        console.log(data.field_7190_raw);
+        console.log(typeof data.field_7190_raw);   
         
     // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
     function handlAll(valueA, fieldName){ 
