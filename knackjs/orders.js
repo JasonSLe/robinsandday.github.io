@@ -797,7 +797,11 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     try{
         
-        
+        console.log("Test 3");
+        console.log(data.field_7197_raw);
+	    console.log(data.field_7197_raw.identifier);
+	    console.log(handlAll(data.field_7197_raw, "identifier"))
+        console.log(typeof data.field_7197_raw);
     // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
     function handlAll(valueA, fieldName){ 
         return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
