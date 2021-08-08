@@ -484,7 +484,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     };
     document.getElementById('view_140').appendChild(button1)
     let button2 = document.createElement('button');
-    button2.innerHTML = 'In stock at own hub';
+    button2.innerHTML = 'In Stock at Own Hub';
     button2.setAttribute("class", "kn-button");
     button2.onclick = function(){
       let token = getTokenFromURL(document.location.href);
@@ -502,7 +502,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     };
     document.getElementById('view_140').appendChild(button3)
     let button4 = document.createElement('button');
-    button4.innerHTML = 'In stock at own hub, with BON Raised';
+    button4.innerHTML = 'In Stock at Own Hub, with BON Raised';
     button4.setAttribute("class", "kn-button");
     button4.onclick = function(){
       let token = getTokenFromURL(document.location.href);
@@ -510,6 +510,15 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
       return false;
     };
     document.getElementById('view_140').appendChild(button4)
+    let button5 = document.createElement('button');
+    button5.innerHTML = 'In Stock at All Hubs, with BON Raised';
+    button5.setAttribute("class", "kn-button");
+    button5.onclick = function(){
+      let token = getTokenFromURL(document.location.href);
+      document.location = "https://www.robinsandday.co.uk/aftersales#powersupply-orders/?token="+token+"&view_139_page=1&view_139_sort=field_334|desc&view_139_filters=%7B%22match%22%3A%22and%22%2C%22rules%22%3A%5B%7B%22field%22%3A%22field_342%22%2C%22operator%22%3A%22higher%20than%22%2C%22value%22%3A%220%22%2C%22field_name%22%3A%22Total%20Available%20Quantity%22%7D%2C%7B%22match%22%3A%22and%22%2C%22field%22%3A%22field_336%22%2C%22operator%22%3A%22is%20not%20blank%22%2C%22field_name%22%3A%22Power%20Supply%20Notfication%22%7D%5D%7D"
+      return false;
+    };
+    document.getElementById('view_140').appendChild(button5)
   });
 
   
