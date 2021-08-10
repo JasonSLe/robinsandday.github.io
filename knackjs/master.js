@@ -3122,6 +3122,7 @@ $(document).on('knack-form-submit.view_2520', function(event, view, data) {
     }
 });
 
+
 // Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to Re-Check for Completed Customer Part Exchange Appraisal {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/73105399?redirect=true
 $(document).on('knack-form-submit.view_2807', function(event, view, data) { 
     
@@ -3134,7 +3135,8 @@ $(document).on('knack-form-submit.view_2807', function(event, view, data) {
         
       let commandURL = "https://hook.integromat.com/5q48r2313pbwq6u7onb6fru0r9gh2qm7" ;
 
-      var createData = JSON.stringify({"KnackID":data.id,"Dealer Name":handlIndex(data.field_4943_raw, "0", "identifier"), "Part Ex Reg 1":data.field_5581_raw,"Part Ex Reg 2":data.field_5582_raw,"Part Ex Reg 3":data.field_5583_raw, "Source Of Payload": "knack direct"});
+      var createData = {"KnackID":data.id,"Dealer Name":handlIndex(data.field_4943_raw, "0", "identifier"), "Part Ex Reg 1":data.field_5581_raw,"Part Ex Reg 2":data.field_5582_raw,"Part Ex Reg 3":data.field_5583_raw, "Source Of Payload": "knack direct"};
+      
       function deleteEmpty(objectA){
         
                 for (const [key, value] of Object.entries(objectA)) {
@@ -3173,6 +3175,7 @@ $(document).on('knack-form-submit.view_2807', function(event, view, data) {
         }).responseText;
     }
 });
+
 
 // Used Deal File TRIGGER INTEGROMAT UPON – *Trigger for Integromat to Recheck HPI once vehicle checked in to clear finance {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/75692824?redirect=true
 $(document).on('knack-form-submit.view_3089', function(event, view, data) { 
