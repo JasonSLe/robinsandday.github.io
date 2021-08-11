@@ -807,17 +807,17 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     }
     
     function handlArrayID(valueA, indexNumber, fieldName){
-        if(typeof valueA === "undefined" || valueA === null){
+        if(valueA === "undefined" || valueA === null){
             return"";
         }
-        if(typeof valueA[indexNumber] === "undefined" || valueA[indexNumber] === null){
+        if(valueA[indexNumber] === "undefined" || valueA[indexNumber] === null){
             return"";
         }
-        if(typeof valueA[indexNumber][fieldName] === "undefined" || valueA[indexNumber][fieldName] === null){
+        if(valueA[indexNumber][fieldName] === "undefined" || valueA[indexNumber][fieldName] === null){
             return"";
         }else{
             return valueA[indexNumber][fieldName];
-        }
+	}
     }
     
     function handlArray(valueA){
