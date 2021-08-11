@@ -797,7 +797,7 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     try{
         
  
-	    console.log("Test 5");
+	    console.log("Test 6");
         console.log(data.field_7197_raw);
         console.log(data.field_7197_raw[0]);
         console.log(data.field_7197_raw[0]["identifier"]);
@@ -807,8 +807,17 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     }
     
     function handlArrayID(valueA, indexNumber, fieldName){
-        return (((typeof valueA !== "undefined" && valueA !== null) && (typeof valueA[indexNumber] !== "undefined" && valueA[indexNumber] !== null)
-                && (typeof valueA[indexNumber][fieldName] !== "undefined" && valueA[indexNumber][fieldName] !== null))? valueA[indexNumber][fieldName]:"");
+        if(typeof valueA === "undefined" || valueA === null){
+            return"";
+        }
+        if(typeof valueA[indexNumber] === "undefined" || valueA[indexNumber] === null){
+            return"";
+        }
+        if(typeof valueA[indexNumber][fieldName] === "undefined" || valueA[indexNumber][fieldName] === null){
+            return"";
+        }else{
+            return valueA[indexNumber][fieldName];
+        }
     }
     
     function handlArray(valueA){
