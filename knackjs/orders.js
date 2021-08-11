@@ -797,7 +797,7 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     try{
         
  
-    console.log("Test 3");
+    console.log("Test 4");
     console.log(data.field_7197_raw);
     // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
     function handlAll(valueA, fieldName){ 
@@ -808,7 +808,8 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
         console.log("The value of the if statement :" + valueA !== undefined && valueA !== null);
         console.log("ValueA is :" + valueA !== undefined && valueA !== null);
         console.log("The value of the undefined :" + valueA !== "undefined");
-	 console.log("The value of the undefined :" + valueA !== undefined);
+        console.log("The value of the undefined :" + typeof valueA !== "undefined");
+	console.log("The value of the undefined :" + valueA !== undefined);
         console.log("The value of the null :" + valueA !== null);
         if(valueA !== undefined && valueA !== null){
             console.log("The valueA: " + valueA);
