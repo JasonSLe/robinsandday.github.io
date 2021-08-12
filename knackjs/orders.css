@@ -2816,7 +2816,7 @@ color: red;
 font-size:12px;
 }
 
-#view_3907 .kn-details-group column-3 columns{
+#view_3907 > section.columns > div.kn-details-column first column is-horizontal > div.kn-details-group column-3 columns{
     color: #940000;
     background-color:red;
 }
