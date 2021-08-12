@@ -2816,8 +2816,8 @@ color: red;
 font-size:12px;
 }
 
-#view_3907 > section.columns > div.kn-details-column first column is-horizontal > div.kn-details-group column-3 columns{
-    color: #940000;
+#view_3907 div.kn-details-column first column is-horizontal > div.kn-details-group column-3 columns > div.kn-label-left kn-table is-unbordered{
+    color: red;
     background-color:red;
 }
 
