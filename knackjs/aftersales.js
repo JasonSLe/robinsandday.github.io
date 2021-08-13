@@ -540,9 +540,12 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
      refresh151();
   });
 
-  function refresh151(){
-    console.log('refresh151')
-    setTimeout(function () { if($("#view_151").is(":visible")==true){ Knack.views["view_151"].model.fetch();refresh151();} }, 10000);
+  function refresh(viewID){
+    console.log('refresh', viewID);
+    if (Knack.views["view_"+viewID]){
+      console.log(Knack.views["view_"+viewID].model);
+    }
+    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){ Knack.views["view_"+viewID].model.fetch();refresh(viewID);} }, 30000);
    }
 
   
