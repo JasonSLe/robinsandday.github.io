@@ -550,13 +550,13 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
       console.log('data',data)
       if (data===null){
         data = {};
-        data.total_records = Knack.views["view_"+viewID].model.data.total_records;
-        data.records = Knack.views["view_"+viewID].model.data.models.map(function(el){ return el.id});
       } else {
         if (data.total_records!== Knack.views["view_"+viewID].model.data.total_records){
           console.log('NEW RECORD');
         }
       }
+      data.total_records = Knack.views["view_"+viewID].model.data.total_records;
+      data.records = Knack.views["view_"+viewID].model.data.models.map(function(el){ return el.id});
     }
     setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){ Knack.views["view_"+viewID].model.fetch();refresh(viewID, data);} }, 15000);
    }
