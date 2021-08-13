@@ -526,23 +526,17 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     console.log('view_151')
     navigator.serviceWorker.register('sw.js');
     if (Notification.permission !== 'granted') Notification.requestPermission();
-    /*
+    
     var notification = new Notification('Notification title', {
       icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
       body: 'Hey there! You\'ve been notified!',
       requireInteraction: true
      });
+     /*
      notification.onclick = function() {
       window.open('http://stackoverflow.com/a/13328397/1269037');
-     };*/
-     navigator.serviceWorker.ready.then(function(registration) {
-      registration.showNotification('Vibration Sample', {
-        body: 'Buzz! Buzz!',
-        icon: '../images/touch/chrome-touch-icon-192x192.png',
-        vibrate: [200, 100, 200, 100, 200, 100, 200],
-        tag: 'vibration-sample'
-      });
-    });
+     };
+*/
   });
 
   
