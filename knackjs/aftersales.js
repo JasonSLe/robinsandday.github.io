@@ -524,6 +524,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
   
   $(document).on('knack-view-render.view_151', function (event, view, data) {
     console.log('view_151')
+    navigator.serviceWorker.register('sw.js');
     if (Notification.permission !== 'granted') Notification.requestPermission();
     /*
     var notification = new Notification('Notification title', {
