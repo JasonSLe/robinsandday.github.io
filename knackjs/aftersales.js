@@ -547,6 +547,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     console.log('refresh', viewID);
     if (Knack.views["view_"+viewID]){
       console.log(Knack.views["view_"+viewID].model);
+      console.log('data',data)
       if (data===null){
         data = {};
         data.total_records = Knack.views["view_"+viewID].model.data.total_records;
