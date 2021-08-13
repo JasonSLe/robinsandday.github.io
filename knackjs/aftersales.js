@@ -522,4 +522,8 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
   });
 
   
+  $(document).on('knack-view-render.view_15', function (event, view, data) {
+    if (Notification.permission !== 'granted') Notification.requestPermission();
+  });
+
   
