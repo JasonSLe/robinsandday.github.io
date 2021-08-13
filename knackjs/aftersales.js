@@ -550,7 +550,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
           })
           console.log('newRec', newRec)
           for (newRecOne of newRec){
-            showNotification('New record created','','New record created\n'+newRecOne.attributes.field_351)
+            showNotification('New record created','','Record data\n'+newRecOne.attributes.field_351)
           }
         }
       }
