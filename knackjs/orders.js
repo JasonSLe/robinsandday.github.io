@@ -796,14 +796,30 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
     
     try{
         
-        console.log("Test 4");
+ 
+     console.log("test2");
+
     // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
     function handlAll(valueA, fieldName){ 
         return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
     }
     
     function handlArrayID(valueA, indexNumber, fieldName){
-        return (valueA? valueA[indexNumber][fieldName]:"");
+        
+        if(valueA !== undefined && valueA !== null){
+            console.log("The valueA: " + valueA);
+            return valueA.length > 0? valueA[indexNumber][fieldName]:"";
+            
+        }else{
+            return "";
+        }
+        if(valueA !== "undefined" && valueA !== null){
+            console.log("The valueA: " + valueA);
+            return valueA.length > 0? valueA[indexNumber][fieldName]:"";
+            
+        }else{
+            return "";
+        }
     }
     
     function handlArray(valueA){
@@ -860,7 +876,7 @@ $(document).on('knack-form-submit.view_2630', function(event, view, data) {
       "Vehicle Description (Dialog)":data.field_6281_raw, "Dealer ID from Master App":data.field_6257_raw, "Sales Adviser Email Linked to this order":handlAll(data.field_6280_raw, "email"), "Customer Email (Dialog)":handlAll(data.field_6102_raw, "email"),
       "Front 3/4 Image":handlSRC(data.field_6279_raw), "Telephone No 2 (Autoline Showroom)":handlAll(data.field_6103_raw, "formatted"), "Customer Address (Dialog)":data.field_6051_raw, "Customer Secondary Email address from Portal creation":data.field_6078_raw, 
       "Key Tag Number":data.field_6267_raw, "Date of customer handover":dateTime, "Customer Email (Autoline)":handlAll(data.field_6102_raw, "email"), "Handover Notes":data.field_6278_raw, "Enquiry Max or Showroom Order":handlArray(data.field_6553_raw),
-      "Stock Number":data.field_6115_raw, "Handover Appointment Record ID from Master App":data.field_6628_raw, "Source Of Payload":"knack direct", "Valet Type": handlArrayID(data.field_7197_raw, "0", "identifier") };
+      "Stock Number":data.field_6115_raw, "Handover Appointment Record ID from Master App":data.field_6628_raw, "Source Of Payload":"knack direct", "Valet Type": handlArrayID(data.field_7197_raw, "0", "identifier"), "Valet Journey": handlArrayID(data.field_7206_raw, "0", "id") };
  
    
     function deleteEmpty(objectA){
