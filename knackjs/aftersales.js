@@ -526,12 +526,19 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     refresh('151');
    });
 
+   var refreshList = [];
+
   function refresh(viewID, data = null){
     console.log('refresh', viewID);
     if (Knack.views["view_"+viewID]){
       console.log(Knack.views["view_"+viewID].model);
       console.log('data',data)
       if (data===null){
+        if (refreshList.find(el => el === viewID)){
+          console.log('already registered');
+          return;
+        }
+        refreshList.push(viewID);
         data = {};
       } else {
         if (data.total_records!== Knack.views["view_"+viewID].model.data.total_records){
