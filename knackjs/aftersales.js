@@ -542,7 +542,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
 
   function refresh151(){
     console.log('refresh151')
-    setTimeout(function () { if($("#view_151").is(":visible")==true){ Knack.views["view_151"].model.fetch();recursivecall();} }, 10000);
+    setTimeout(function () { if($("#view_151").is(":visible")==true){ Knack.views["view_151"].model.fetch();refresh151();} }, 10000);
    }
 
   
