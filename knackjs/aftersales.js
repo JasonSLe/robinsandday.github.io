@@ -525,6 +525,14 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
   $(document).on('knack-view-render.view_151', function (event, view, data) {
     console.log('view_151')
     if (Notification.permission !== 'granted') Notification.requestPermission();
+    var notification = new Notification('Notification title', {
+      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: 'Hey there! You\'ve been notified!',
+      requireInteraction: true
+     });
+     notification.onclick = function() {
+      window.open('http://stackoverflow.com/a/13328397/1269037');
+     };
   });
 
   
