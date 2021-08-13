@@ -6391,14 +6391,14 @@ color: red;
 font-size:12px;
 }
 
-/**SCAN V5 DOCUMENT: RICH TEXT**/
+/**SCAN DOCUMENT BUTTONS: RICH TEXT**/
   
 #view_3929, #view_3952, #view_3948, #view_3949, #view_3951, #view_3947, #view_3945, #view_3943, #view_3950, #view_3953, #view_3954, #view_3955 > div > p {
 margin: -30px;
 padding-bottom: 20px;
 }
 
-#view_3956, #view_3957, #view_3958, #view_3959, #view_3960, #view_3962, #view_3963, #view_3983, #view_3984, #view_3985, #view_4181, #view_4180, #view_4273 > div > p {
+#view_3956, #view_3957, #view_3958, #view_3959, #view_3960, #view_3962, #view_3963, #view_3983, #view_3984, #view_3985, #view_4181, #view_4180, #view_4273, #view_4518 > div > p {
 margin: -30px;
 padding-bottom: 20px;
 }
