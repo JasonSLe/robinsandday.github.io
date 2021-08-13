@@ -558,7 +558,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
         }
       }
     }
-    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){ Knack.views["view_"+viewID].model.fetch();refresh(viewID, data);} }, 30000);
+    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){ Knack.views["view_"+viewID].model.fetch();refresh(viewID, data);} }, 15000);
    }
 
   
