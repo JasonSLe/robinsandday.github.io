@@ -524,7 +524,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
   
   $(document).on('knack-view-render.view_151', function (event, view, data) {
     console.log('view_151')
-    navigator.serviceWorker.register('sw.js');
+    /*
     if (Notification.permission !== 'granted') Notification.requestPermission();
     
     var notification = new Notification('Notification title', {
@@ -536,7 +536,12 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
      notification.onclick = function() {
       notification.close();
       //window.open('http://stackoverflow.com/a/13328397/1269037');
-     };
+     };*/
+     refresh151();
   });
+
+  function refresh151(){
+    setTimeout(function () { if($("#view_151").is(":visible")==true){ Knack.views["view_151"].model.fetch();recursivecall();} }, 10000);
+   }
 
   
