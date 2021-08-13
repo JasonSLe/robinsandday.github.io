@@ -537,7 +537,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
       notification.close();
       //window.open('http://stackoverflow.com/a/13328397/1269037');
      };*/
-     refresh151();
+     refresh('151');
   });
 
   function refresh(viewID){
