@@ -549,7 +549,9 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
             }).length===0
           })
           console.log('newRec', newRec)
-          showNotification('New record created','','New record created\n'+newRec[0].attributes.field_351)
+          for (newRecOne of newRec){
+            showNotification('New record created','','New record created\n'+newRecOne.attributes.field_351)
+          }
         }
       }
       data.total_records = Knack.views["view_"+viewID].model.data.total_records;
