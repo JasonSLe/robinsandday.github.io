@@ -528,11 +528,14 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     var notification = new Notification('Notification title', {
       icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
       body: 'Hey there! You\'ve been notified!',
-      requireInteraction: true
+      requireInteraction: true,
+      actions: [  
+        {action: 'like', title: 'Like'},  
+        {action: 'reply', title: 'Reply'}]
      });
-     notification.onclick = function() {
+     /*notification.onclick = function() {
       window.open('http://stackoverflow.com/a/13328397/1269037');
-     };
+     };*/
   });
 
   
