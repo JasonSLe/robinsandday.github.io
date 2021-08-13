@@ -532,11 +532,11 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
       body: 'Hey there! You\'ve been notified!',
       requireInteraction: true
      });
-     /*
+     
      notification.onclick = function() {
-      window.open('http://stackoverflow.com/a/13328397/1269037');
+      notification.close();
+      //window.open('http://stackoverflow.com/a/13328397/1269037');
      };
-*/
   });
 
   
