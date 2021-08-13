@@ -553,12 +553,34 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
       } else {
         if (data.total_records!== Knack.views["view_"+viewID].model.data.total_records){
           console.log('NEW RECORD');
+          let newRec = Knack.views["view_"+viewID].model.data.models.filter(function(el){
+            return data.records.filter(function(el2){
+              return el2 === el.id;
+            }).length===0
+          })
+          console.log('newRec', newRec)
+          showNotification('New record created','','New record created\n'+newRec[0].attributes.field_351)
         }
       }
       data.total_records = Knack.views["view_"+viewID].model.data.total_records;
       data.records = Knack.views["view_"+viewID].model.data.models.map(function(el){ return el.id});
     }
     setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){ Knack.views["view_"+viewID].model.fetch();refresh(viewID, data);} }, 15000);
+   }
+
+   function showNotification(title, icon, body){
+    if (Notification.permission !== 'granted') Notification.requestPermission();
+    
+    var notification = new Notification(title, {
+      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: body,
+      requireInteraction: true
+     });
+     
+     notification.onclick = function() {
+      notification.close();
+      //window.open('http://stackoverflow.com/a/13328397/1269037');
+     };
    }
 
   
