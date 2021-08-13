@@ -540,12 +540,13 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
      refresh('151');
   });
 
-  function refresh(viewID){
+  function refresh(viewID, data = null){
     console.log('refresh', viewID);
     if (Knack.views["view_"+viewID]){
       console.log(Knack.views["view_"+viewID].model);
+      let cData = Knack.views["view_"+viewID].model.data.total_records;
     }
-    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){ Knack.views["view_"+viewID].model.fetch();refresh(viewID);} }, 30000);
+    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){ Knack.views["view_"+viewID].model.fetch();/*refresh(viewID);*/} }, 30000);
    }
 
   
