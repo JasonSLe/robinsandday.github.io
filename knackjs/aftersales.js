@@ -567,7 +567,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
 
    function showNotification(title, icon, body){
     if (Notification.permission !== 'granted') Notification.requestPermission();
-    if (Notification.permission === 'denied') alert('NOTIFICATION DENIED');
+    if (Notification.permission === 'denied') alert('NOTIFICATION DENIED, enable notification for this site');
     console.log(Notification.permission);
     
     var notification = new Notification(title, {
