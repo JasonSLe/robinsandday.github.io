@@ -566,8 +566,9 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
    }
 
    function viewFetch(viewID, data = null){
+    console.log('viewFetch');
     Knack.views["view_"+viewID].model.fetch();
-    setTimeout(function () { refresh(viewID, data); }, 100);
+    setTimeout(function () { refresh(viewID, data); }, 500);
    }
 
    function showNotification(title, icon, body){
