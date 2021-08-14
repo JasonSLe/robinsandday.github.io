@@ -541,6 +541,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
         refreshList.push(viewID);
         data = {};
       } else {
+        console.log(Knack.views["view_"+viewID].model.fetch());
         if (data.total_records!== Knack.views["view_"+viewID].model.data.total_records){
           console.log('NEW RECORD');
           let newRec = Knack.views["view_"+viewID].model.data.models.filter(function(el){
@@ -560,7 +561,6 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
       }
       data.total_records = Knack.views["view_"+viewID].model.data.total_records;
       data.records = Knack.views["view_"+viewID].model.data.models.map(function(el){ return el.id});
-      Knack.views["view_"+viewID].model.fetch();
     }
     setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){refresh(viewID, data);} }, 15000);
    }
