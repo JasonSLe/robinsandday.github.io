@@ -549,8 +549,12 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
             }).length===0
           })
           console.log('newRec', newRec)
-          for (newRecOne of newRec){
-            showNotification('New record created','','Record data\n'+newRecOne.attributes.field_351)
+          if (newRec.length>0){
+            for (newRecOne of newRec){
+              showNotification('New record created','','Record data\n'+newRecOne.attributes.field_351)
+            }
+          } else {
+            showNotification('New record created','','Detail not on current list page')
           }
         }
       }
