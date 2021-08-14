@@ -568,6 +568,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
    function showNotification(title, icon, body){
     if (Notification.permission !== 'granted') Notification.requestPermission();
     if (Notification.permission !== 'denied') alert('NOTIFICATION DENIED');
+    console.log(Notification.permission);
     
     var notification = new Notification(title, {
       icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
