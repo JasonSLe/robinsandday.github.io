@@ -541,7 +541,8 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
         refreshList.push(viewID);
         data = {};
       } else {
-        console.log(Knack.views["view_"+viewID].model.fetch());
+        Knack.views["view_"+viewID].model.fetch();
+        console.log(Knack.views["view_"+viewID].model.data.total_records);
         if (data.total_records!== Knack.views["view_"+viewID].model.data.total_records){
           console.log('NEW RECORD');
           let newRec = Knack.views["view_"+viewID].model.data.models.filter(function(el){
