@@ -2006,3 +2006,46 @@ $(document).on('knack-form-submit.view_3968', function(event, view, data) {
         }).responseText;  
     }
 });
+
+
+// New Deal File - Capture PDFs – **New Deal File PDF - Customer satisfaction survey VX signed at dealer V2 {(Deal File) Customer Satisfaction Survey} Slave App - Replaces https://zapier.com/app/editor/116188221?redirect=true
+$(document).on('knack-form-submit.view_3968', function(event, view, data) { 
+    
+    
+    try{
+        
+
+      if(data.field_6485_raw !== null && data.field_6485_raw !== undefined){
+
+            let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+            let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Customer satisfaction survey", "Source Of Payload":"knack direct"});
+
+             var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+              }).responseText;
+
+      }
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File PDF - Customer satisfaction survey signed at dealer V2 {(Deal File) Customer Satisfaction Survey} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;  
+    }
+});
+
