@@ -1968,7 +1968,7 @@ $(document).on('knack-form-submit.view_3927', function(event, view, data) {
 
 
 // **New Deal File PDF - Customer Satisfaction Survey VX signed at dealer V2 {(Deal File) Customer Satisfaction Survey} Slave App - Replaces https://zapier.com/app/editor/116188221?redirect=true
-$(document).on('knack-form-submit.view_3970', function(event, view, data) { 
+$(document).on('knack-form-submit.view_3968', function(event, view, data) { 
     
     try{
         
