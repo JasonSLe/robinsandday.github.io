@@ -525,7 +525,12 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     refresh('151', 'TITLE', 'TEXT $field_351');
    });
 
-   var refreshList = [];
+  //PART OF THE CODE FOR NOTIFICATION AND REFRESH OF LIST
+  // START
+  // Usage - to the scene where there is the view with list add this code 
+  // refresh('151', 'TITLE', 'TEXT $field_351');
+  // 151 is the view number, and in text you can use any fields in the view with $
+  var refreshList = [];
 
   function refresh(viewID, notifTitle, notifText, data = null){
     console.log('refresh', viewID);
@@ -564,7 +569,6 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
    }
 
    function viewFetch(viewID, notifTitle, notifText, data = null){
-    console.log('viewFetch');
     Knack.views["view_"+viewID].model.fetch();
     setTimeout(function () { refresh(viewID, notifTitle, notifText, data); }, 500);
    }
@@ -586,7 +590,6 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
      
      notification.onclick = function() {
       notification.close();
-      //window.open('http://stackoverflow.com/a/13328397/1269037');
      };
    }
 
@@ -595,5 +598,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     if (Notification.permission === 'denied') alert('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F');
     console.log(Notification.permission);
    }
+
+   //END OF CODE FOR NOTIFICATION AND REFRESH OF LIST
 
   
