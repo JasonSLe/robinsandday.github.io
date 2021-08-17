@@ -560,10 +560,10 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
       data.total_records = Knack.views["view_"+viewID].model.data.total_records;
       data.records = Knack.views["view_"+viewID].model.data.models.map(function(el){ return el.id});
     }
-    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){viewFetch(viewID, data);} }, 15000);
+    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){viewFetch(viewID, notifTitle, notifText, data);} }, 15000);
    }
 
-   function viewFetch(viewID, data = null){
+   function viewFetch(viewID, notifTitle, notifText, data = null){
     console.log('viewFetch');
     Knack.views["view_"+viewID].model.fetch();
     setTimeout(function () { refresh(viewID, notifTitle, notifText, data); }, 500);
