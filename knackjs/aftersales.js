@@ -522,7 +522,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
   });
 
   $(document).on('knack-records-render.view_151', function(event, view, records) {
-    console.log(records);
+    console.log('records',records);
   });
 
   $(document).on('knack-scene-render.scene_38', function(event, scene) {
