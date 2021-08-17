@@ -522,17 +522,15 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
   });
 
   $(document).on('knack-scene-render.scene_38', function(event, scene) {
-    console.log('knack-scene-render.scene_38')
-    refresh('151');
+    refresh('151', 'TITLE', 'TEXT $field_351');
    });
 
    var refreshList = [];
 
-  function refresh(viewID, data = null){
+  function refresh(viewID, notifTitle, notifText, data = null){
     console.log('refresh', viewID);
+    askNotifications();
     if (Knack.views["view_"+viewID]){
-      console.log(Knack.views["view_"+viewID].model);
-      console.log('data',data)
       if (data===null){
         if (refreshList.find(el => el === viewID)){
           console.log('already registered');
@@ -552,10 +550,10 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
           console.log('newRec', newRec)
           if (newRec.length>0){
             for (newRecOne of newRec){
-              showNotification('New record created','','Record data\n'+newRecOne.attributes.field_351)
+              showNotification(notifTitle,'',fillTextFromData(notifText, newRecOne.attributes))
             }
           } else {
-            showNotification('New record created','','Detail not on current list page')
+            showNotification(notifTitle,'','Detail not on current list page')
           }
         }
       }
@@ -568,14 +566,18 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
    function viewFetch(viewID, data = null){
     console.log('viewFetch');
     Knack.views["view_"+viewID].model.fetch();
-    setTimeout(function () { refresh(viewID, data); }, 500);
+    setTimeout(function () { refresh(viewID, notifTitle, notifText, data); }, 500);
    }
 
-   function showNotification(title, icon, body){
-    if (Notification.permission !== 'granted') Notification.requestPermission();
-    if (Notification.permission === 'denied') alert('NOTIFICATION DENIED, enable notification for this site');
-    console.log(Notification.permission);
-    
+   function fillTextFromData(pattern, data){
+      if (!pattern.includes('$')) return pattern;
+      for (let varP in data) {
+        pattern = pattern.replace('$'+varP,data[varP]);
+      }
+      return pattern;
+   }
+
+   function showNotification(title, icon = '', body){   
     var notification = new Notification(title, {
       icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
       body: body,
@@ -586,6 +588,12 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
       notification.close();
       //window.open('http://stackoverflow.com/a/13328397/1269037');
      };
+   }
+
+   function askNotifications(){
+    if (Notification.permission !== 'granted') Notification.requestPermission();
+    if (Notification.permission === 'denied') alert('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F');
+    console.log(Notification.permission);
    }
 
   
