@@ -521,6 +521,11 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     document.getElementById('view_140').appendChild(button5)
   });
 
+  $(document).on('knack-view-render.view_151', function (event, view, data) {
+    $('th[class="field_356"]').hide();
+    $('td[class*="field_356"]').hide()
+  });
+
   $(document).on('knack-scene-render.scene_38', function(event, scene) {
     refresh('151', 'TITLE', 'TEXT $field_351');
    });
