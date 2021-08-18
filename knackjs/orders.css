@@ -1664,6 +1664,10 @@ color: #FFFFFF;
 
 #view_2766 .kn-detail-label {background-color: transparent;}
 
+/******* Vauxhall CSI Survey Page GDPR added *********/
+
+#view_3970 .kn-detail-label {background-color: transparent;}
+
 /*css for Survey out of 10 fields */
 #view_2765-field_6481 > option:nth-child(2){
   background-color:#23d160;
@@ -2893,9 +2897,9 @@ font-size:12px;
     font-size: 14px;
 }
 
-/* Detail Labels on P&L Overview */
 
-#view_3970 .kn-detail-label {background-color: transparent;}
+
+
 
 
 
