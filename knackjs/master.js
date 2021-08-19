@@ -1940,6 +1940,7 @@ $(document).on('knack-form-submit.view_3926', function(event, view, data) {
   
 });
 
+
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Used Vehicle Check In - Retail or Trade Selection - Instant Webhook for Integromat (V2) {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/99112426/nodes/99112426
 $(document).on('knack-form-submit.view_2303', function(event, view, data) {
     
@@ -1957,7 +1958,6 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
         }).responseText;
 
 
-        if (data.field_5011_raw !== "Vehicle Sold"){
 
             if (data.field_5011_raw === "Trade"){
 
@@ -1972,7 +1972,7 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
                 }).responseText;
 
 
-            }else if (data.field_5011_raw === "Retail"){
+            }else if (data.field_5011_raw === "Retail" || data.field_5011_raw === "Vehicle Sold" ){
 
                 let commandURL = "https://hook.integromat.com/83njs7wwvslcjlo36abncth5dfmlexpm";
                 let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
@@ -1985,7 +1985,6 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
                 }).responseText;
             }
 
-        }
     }catch(exception){
         console.log("error");
         var today = new Date();
@@ -2007,7 +2006,8 @@ $(document).on('knack-form-submit.view_2303', function(event, view, data) {
 });
 
 
-// Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Used Vehicle Check In to Trigger AutoTrader Retail Metrics {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/84075829/nodes/84075829/fields
+
+ER INTEGROMAT UPON – *Used Vehicle Check In to Trigger AutoTrader Retail Metrics {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/84075829/nodes/84075829/fields
 $(document).on('knack-form-submit.view_2276', function(event, view, data) {
     
     try{
