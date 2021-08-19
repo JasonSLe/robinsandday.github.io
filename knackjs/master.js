@@ -1945,7 +1945,11 @@ $(document).on('knack-form-submit.view_3926', function(event, view, data) {
 $(document).on('knack-form-submit.view_2303', function(event, view, data) {
     
     try{
-
+        console.log("Test 1");
+        console.log(data.field_5011_raw);
+        console.log(data.field_5011_raw === "Retail");
+        console.log(data.field_5011_raw === "Vehicle Sold");
+        console.log(data.field_5011_raw === "Retail" || data.field_5011_raw === "Vehicle Sold");
         let commandURL = "https://hook.integromat.com/hrnilld87m88ereruz9m8k9uxywat6eb" ;
         let dataToSend = JSON.stringify({"Knack Record ID":data.id, "Source Of Payload":"knack direct"}) ;
 
