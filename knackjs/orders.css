@@ -928,6 +928,12 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+#view_2871 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /********* DEAL FILE MANAGER VIEW **********/
 
 /*** Deal File Manager Orders to Process ***/
@@ -1664,6 +1670,10 @@ color: #FFFFFF;
 
 #view_2766 .kn-detail-label {background-color: transparent;}
 
+/******* Vauxhall CSI Survey Page GDPR added *********/
+
+#view_3970 .kn-detail-label {background-color: transparent;}
+
 /*css for Survey out of 10 fields */
 #view_2765-field_6481 > option:nth-child(2){
   background-color:#23d160;
@@ -2143,6 +2153,16 @@ color: #FFFFFF;
 #view_2953 .kn-detail-label {background-color: transparent;}
 
 #view_3655 .kn-detail-label {background-color: transparent;}
+
+#view_3972 .kn-detail-label {background-color: transparent;}
+
+#view_3973 .kn-detail-label {background-color: transparent;}
+
+#view_3974 .kn-detail-label {background-color: transparent;}
+
+#view_3975 .kn-detail-label {background-color: transparent;}
+
+#view_3976 .kn-detail-label {background-color: transparent;}
 
 /* Links to New Deal File Admin Audit */
 
@@ -2892,6 +2912,10 @@ font-size:12px;
     color: #008000;
     font-size: 14px;
 }
+
+
+
+
 
 
 
