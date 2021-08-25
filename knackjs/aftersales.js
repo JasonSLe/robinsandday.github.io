@@ -530,6 +530,10 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     document.getElementById('view_140').appendChild(button6)
   });
 
+  $(document).on('knack-view-render.view_139', function (event, view, data) {
+    $('td[class="field_334"]').each(function(){$(this).text($(this).text().trim().substr(0,6)+$(this).text().trim().substr(8,2));});
+  });
+
   $(document).on('knack-view-render.view_151', function (event, view, data) {
     $('th[class="field_356"]').hide();
     $('td[class*="field_356"]').hide();
