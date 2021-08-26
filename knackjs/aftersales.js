@@ -359,7 +359,9 @@ function serviceVisitsTooltips(){
         shownTooltipId = trUnderMouse.id;
       }
   });
-  $('div[class="field_325"]').show();
+  setTimeout(function(){
+    $('div[class="field_325"]').show();
+  }, 100);
 }
 
 $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
