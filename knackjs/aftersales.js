@@ -553,7 +553,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     $('td[class="field_334"]').each(function(){$(this).text($(this).text().trim().substr(0,6)+$(this).text().trim().substr(8,2));});
 
     //This part of code hides field_330 from the list and then adds it as mouse over to field 380
-    //It needs function "getFieldForRowID"
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
     //start
     $('th[class="field_330"]').hide();
     $('td[class*="field_330"]').hide();
