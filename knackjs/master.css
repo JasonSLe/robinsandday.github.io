@@ -3816,6 +3816,8 @@ color: #FFFFFF;
 
 /********* PROFIT & LOSS PAGE *******/
 
+#view_3498 .kn-detail-label {background-color: transparent;}
+
 #view_2824 > form > div > button{
 	background-color: #FFA100 !important;
   	color: #FFFFFF;
