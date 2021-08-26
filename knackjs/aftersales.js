@@ -535,11 +535,32 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     document.getElementById('view_140').appendChild(button6)
   });
 
+  function getFieldForRowID(view, field, id){
+    try {
+      if (Knack.views[view] && Knack.views[view].model){
+        let record = Knack.views[view].model.data.models.find(function(el){
+          return el.id === id
+        })
+        if (record){
+          return record.attributes[field];
+        }
+      }
+    } catch (ex) { console.log('getFieldForRowID',ex)}
+  }
+
   //Parts Power Supply - scene 32 - Power Supply Orders view
   $(document).on('knack-view-render.view_139', function (event, view, data) {
     $('td[class="field_334"]').each(function(){$(this).text($(this).text().trim().substr(0,6)+$(this).text().trim().substr(8,2));});
+
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID"
+    //start
     $('th[class="field_330"]').hide();
     $('td[class*="field_330"]').hide();
+    $('div[id="view_139"] table>tbody>tr').each(function(){
+      $(this).find('td[class="field_380"]').attr('title',getFieldForRowID('view_139','field_330',$(this).attr('id')));
+    });
+    //end
   });
 
   $(document).on('knack-scene-render.scene_38', function(event, scene) {
