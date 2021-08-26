@@ -323,6 +323,8 @@ function formatScene24(){
   sectionRight.appendChild(document.getElementById('view_96'));
   sectionRight.appendChild(document.getElementById('view_133'));
   sectionRight.appendChild(document.getElementById('view_115'));
+  //Hide service tooltips field
+  $('div[class="field_325"]').hide();
 }
 
 let shownTooltipId = null;
@@ -357,6 +359,9 @@ function serviceVisitsTooltips(){
         shownTooltipId = trUnderMouse.id;
       }
   });
+  setTimeout(function(){
+    $('div[class="field_325"]').show();
+  }, 100);
 }
 
 $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
