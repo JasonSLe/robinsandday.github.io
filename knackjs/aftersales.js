@@ -333,7 +333,6 @@ function serviceVisitsTooltips(){
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: fixed; display:none;");
   });
-  $('div[class="field_325"]').show();
   $('div[id="view_96"]').on("mouseleave", function (e) {
     console.log('HIDE AFTER LEAVE')
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
@@ -360,6 +359,7 @@ function serviceVisitsTooltips(){
         shownTooltipId = trUnderMouse.id;
       }
   });
+  $('div[class="field_325"]').show();
 }
 
 $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
