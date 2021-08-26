@@ -391,6 +391,12 @@ body {
   	font-weight: bold;
 }
 
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(17) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /* Auto Pricing Dashboard Filters */
 
 #view_4025 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -3810,6 +3816,8 @@ color: #FFFFFF;
 
 /********* PROFIT & LOSS PAGE *******/
 
+#view_3498 .kn-detail-label {background-color: transparent;}
+
 #view_2824 > form > div > button{
 	background-color: #FFA100 !important;
   	color: #FFFFFF;
@@ -3831,14 +3839,13 @@ color: #FFFFFF;
 
 
 #view_4058 > section > div > div > div > div > div > div > span > h2 > span > span {
-    background-color: #FFE74C;
-    border-radius: 10px;
-    border: 2px solid #0a0a0a;
-    font-size: 30px;
-    font-weight: bold;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
 }
  
 /*******DIGITAL P&l OVER VIEW PAGE *********/
