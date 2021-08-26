@@ -561,6 +561,9 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
       $(this).find('td[class="field_380"]').attr('title',getFieldForRowID('view_139','field_330',$(this).attr('id')));
     });
     //end
+
+    $('th[class="field_380"]').attr('title','This is the location of the Parts Warehouse');
+    $('th[class="field_381"]').attr('title','This is the quantity and part number on backorder');
   });
 
   $(document).on('knack-scene-render.scene_38', function(event, scene) {
