@@ -564,7 +564,8 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
 
     //Column headers
     $('th[class="field_380"]').attr('title','This is the location of the Parts Warehouse');
-    $('th[class="field_381"]').attr('title','This is the quantity and part number on backorder');
+    $('th[class="field_381"]').attr('data-tooltip','This is the quantity and part number on backorder');
+    $('th[class="field_381"]').addClass('tooltip-bottom')
   });
 
   $(document).on('knack-scene-render.scene_38', function(event, scene) {
