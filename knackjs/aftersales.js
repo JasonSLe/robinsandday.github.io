@@ -558,7 +558,8 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     $('th[class="field_330"]').hide();
     $('td[class*="field_330"]').hide();
     $('div[id="view_139"] table>tbody>tr').each(function(){
-      $(this).find('td[class="field_380"]').attr('title',getFieldForRowID('view_139','field_330',$(this).attr('id')));
+      $(this).find('td[class="field_380"]').addClass('tooltip-right')
+      $(this).find('td[class="field_380"]').attr('data-tooltip',getFieldForRowID('view_139','field_330',$(this).attr('id')));
     });
     //end
 
