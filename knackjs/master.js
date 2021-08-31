@@ -3076,23 +3076,7 @@ $(document).on('knack-form-submit.view_2520', function(event, view, data) {
                 }
                 return objectA;
             }
-        if (data.field_6186_raw === "Showroom Order"){
 
-            let commandURL = "https://hook.integromat.com/8xbvcrqjz4t7wcuwd7fxzk1tdhjg4vic";
-            var createData = {"KnackID":data.id, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Dealer":data.field_4943_raw[0].identifier, "Source Of Payload" : "knack direct"};
-            
-            //Iterate through all the values contained in createData and deletesany undefined object properties
-            //Will create the final form of the data sent using POST
-            let dataToSend = JSON.stringify(deleteEmpty(createData));
-            var rData = $.ajax({
-                url: commandURL,
-                type: 'POST',
-                contentType: 'application/json',
-               data: dataToSend,
-                async: false
-            }).responseText;
-
-        }else if(data.field_6186_raw === "Enquiry Max Order"){
 
             let commandURL = "https://hook.integromat.com/19yebbskfb7538eng623jbunr1f5gzoi";
             let createData = {"KnackID":data.id,"Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw, "Registration Number":data.field_4941_raw, "Update Order":data.field_5669_raw, "Dealer":data.field_4943_raw[0].identifier,"Source Of Payload" : "knack direct"};
@@ -3107,7 +3091,7 @@ $(document).on('knack-form-submit.view_2520', function(event, view, data) {
                 data: dataToSend,
                 async: false
             }).responseText;    
-       }
+
     }catch(exception){
         console.log("error");
         var today = new Date();
@@ -3127,6 +3111,8 @@ $(document).on('knack-form-submit.view_2520', function(event, view, data) {
         }).responseText;
     }
 });
+
+
 
 
 // Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to Re-Check for Completed Customer Part Exchange Appraisal {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/73105399?redirect=true
