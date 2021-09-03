@@ -3858,6 +3858,23 @@ color: #FFFFFF;
 #view_4115 .kn-detail-label {background-color: transparent;}
 #view_4120 .kn-detail-label {background-color: transparent;}
 #view_4130 .kn-detail-label {background-color: transparent;}
+}
+
+/**Digital P&L Overview PAGE V2**/
+#view_4559 .kn-detail-label {background-color: transparent;}
+#view_4560 .kn-detail-label {background-color: transparent;}
+#view_4564 .kn-detail-label {background-color: transparent;}
+#view_4566 .kn-detail-label {background-color: transparent;}
+#view_4584 .kn-detail-label {background-color: transparent;}
+#view_4585 .kn-detail-label {background-color: transparent;}
+#view_4586 .kn-detail-label {background-color: transparent;}
+#view_4588 .kn-detail-label {background-color: transparent;}
+#view_4571 .kn-detail-label {background-color: transparent;}
+#view_4572 .kn-detail-label {background-color: transparent;}
+#view_4574 .kn-detail-label {background-color: transparent;}
+#view_4575 .kn-detail-label {background-color: transparent;}
+}
+
 
 
 /**Back to Overview page button**/
@@ -6442,5 +6459,3 @@ padding-bottom: 0px;
   	box-shadow:         3px 3px 3px 3px #ccc;
 }
 
-#view_4559 .kn-detail-label {background-color: transparent;}
-}
