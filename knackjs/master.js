@@ -1619,7 +1619,7 @@ $(document).on('knack-record-update.view_4589', function(event, view, data) {
   setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
   Knack.showSpinner();
 	
-});
+}
   
 
 
