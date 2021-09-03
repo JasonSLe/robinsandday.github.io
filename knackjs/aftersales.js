@@ -535,6 +535,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     document.getElementById('view_140').appendChild(button6)
   });
 
+  //General function, needs to be copied to other apps JS files if needed
   function getFieldForRowID(view, field, id){
     try {
       if (Knack.views[view] && Knack.views[view].model){
@@ -552,6 +553,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
   $(document).on('knack-view-render.view_139', function (event, view, data) {
     $('td[class="field_334"]').each(function(){$(this).text($(this).text().trim().substr(0,6)+$(this).text().trim().substr(8,2));});
 
+    //This part is for tooltip of another field above field in list
     //This part of code hides field_330 from the list and then adds it as mouse over to field 380
     //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
     //start
@@ -563,6 +565,7 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
     });
     //end
 
+    //This part is for column headers
     //Column headers
     $('th[class="field_380"]').attr('title','This is the location of the Parts Warehouse');
     $('th[class="field_381"]').attr('data-tooltip','Quantity and part number on backorder');
