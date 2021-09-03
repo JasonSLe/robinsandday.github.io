@@ -1610,16 +1610,6 @@ $(document).on('knack-record-update.view_4086', function(event, view, data) {
   setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
   Knack.showSpinner();
 	
-}
-	
-/***Profit and Loss, refresh after Franchise selected***/
-	
-$(document).on('knack-record-update.view_4589', function(event, view, data) {
-  
-  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
-  Knack.showSpinner();
-	
-   }
   
 });
   
