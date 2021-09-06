@@ -3927,7 +3927,7 @@ $(document).on('knack-form-submit.view_3562', function(event, view, data) {
 $(document).on('knack-form-submit.view_4589', function(event, view, data) { 
     
     try{
-    
+        console.log("Test1");
         let commandURL = "https://hook.integromat.com/0s2n28ijchplc7orwld2r7nqw6lh7mm8";
         let dataToSend = JSON.stringify({"Record ID":data.id});
 
