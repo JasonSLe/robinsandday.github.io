@@ -3923,4 +3923,37 @@ $(document).on('knack-form-submit.view_3562', function(event, view, data) {
     }
 });
 
+//Description - Used Deal File Profit Sheet - Franchise Selection
+$(document).on('knack-form-submit.view_4589', function(event, view, data) { 
+    
+    try{
+    
+        let commandURL = "https://hook.integromat.com/0s2n28ijchplc7orwld2r7nqw6lh7mm8";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
 
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Description - Used Deal File Profit Sheet - Franchise Selection",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
