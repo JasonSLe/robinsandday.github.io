@@ -3069,26 +3069,6 @@ visibility: visible;
   	font-weight: bold;
 }
 
-/************ Used Deal Files with Audit Actions Identified by Admin Table Filters ***********/
-
-#view_4557 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4557 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4557 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
 
 
 /************************************** SHOWROOM ORDER **************************************************/
