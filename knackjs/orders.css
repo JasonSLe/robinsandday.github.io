@@ -1960,6 +1960,10 @@ color: #FFFFFF;
 
 #view_3960 .kn-detail-label {background-color: transparent;}
 
+/* Detail Labels on Receipt of Monies Page */
+
+#view_3977 .kn-detail-label {background-color: transparent;}
+
 /******* CSS to make File Uploads Stand out when Files Exist *******/
 /* AFRL */
 #kn-input-field_6409 > div > div.kn-asset-current > div > div > a.kn-view-asset {
