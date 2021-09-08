@@ -2216,6 +2216,22 @@ color: #FFFFFF;
   color: #388cf5;
 }
 
+/* Bank Transferred Funds */
+#kn-input-field_6751 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+/* Finance Payout */
+#kn-input-field_6756 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
 
 /******* NEW DEAL FILE ADMIN AUDIT ********/
 
