@@ -4004,3 +4004,40 @@ $(document).on('knack-form-submit.view_4589', function(event, view, data) {
         }).responseText;
     }
 });
+
+// Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L V2 when Approved {(Deal File) Profit Sheet} 
+$(document).on('knack-form-submit.view_4573', function(event, view, data) { 
+
+    try{
+        if(data.field_6449_raw){
+
+            let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v" ;
+            let dataToSend = JSON.stringify({"Record ID":data.id,"Form":"Digital P&L"}) ;
+            var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+            }).responseText;
+
+        }
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L when Approved {(Deal File) Profit Sheet} ",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+    });
