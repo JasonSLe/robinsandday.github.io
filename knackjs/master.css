@@ -3994,6 +3994,39 @@ color: #FFFFFF;
 #view_4600 .kn-detail-label {background-color: transparent;}
 }
 
+/* Edit Profit & Loss Links to Buttons for Overview Page V2 */
+/* Edit Pricing and Cost P&L*/
+#view_4599 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4599 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+/* Edit Add Ons and Misc. P&L*/
+#view_4594 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4594 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
 
 
 /**Back to Overview page button**/
