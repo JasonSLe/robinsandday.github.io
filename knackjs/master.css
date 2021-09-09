@@ -3953,7 +3953,18 @@ color: #FFFFFF;
   	text-align: center;
 }
 
- 
+#view_4604 > section > div > div > div > div > div > div > span > h2 > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+
+
 /*******DIGITAL P&l OVER VIEW PAGE *********/
 #view_4058 .kn-detail-label {background-color: transparent;}
 #view_4059 .kn-detail-label {background-color: transparent;}
