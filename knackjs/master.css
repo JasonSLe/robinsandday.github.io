@@ -4005,11 +4005,10 @@ color: #FFFFFF;
   display: inline-block;
 }
 
-/* Edit Add Ons and Misc. P&L*/
-#view_4593 > section > div > div > div > div > div > div > span > a > span {
+#view_4598 > section > div > div > div > div > div > div > span > a:hover > span {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #FFA100;
+  background-color: #D18400;
   padding: 8px;
   display: inline-block;
 }
