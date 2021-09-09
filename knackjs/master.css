@@ -3997,7 +3997,7 @@ color: #FFFFFF;
 
 /* Edit Profit & Loss Links to Buttons for Overview Page V2 */
 /* Edit Pricing and Cost P&L*/
-#view_4598 > section > div > div > div > div > div > div > span > a > span {
+#view_4598 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #FFA100;
