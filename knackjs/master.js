@@ -4041,3 +4041,12 @@ $(document).on('knack-form-submit.view_4573', function(event, view, data) {
         }).responseText;
     }
     });
+
+// Refresh the table on WALL-E's status page         
+$(document).on('knack-scene-render.scene_1417', function(event, scene) {
+ recursivecallWallePage();
+});
+
+function recursivecallWallePage(){
+ setTimeout(function () { if($("#view_4579").is(":visible")==true){ Knack.views["view_4579"].model.fetch();recursivecallWallePage();} }, 10000);
+}
