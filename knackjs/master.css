@@ -6608,7 +6608,7 @@ padding-bottom: 0px;
 
 /* Centre Table Headers for Used DOC.*/
 
-#view_4690# th
+#view_4690 th span
 {
-  text-align: center;
+  margin: auto !important;
 }
