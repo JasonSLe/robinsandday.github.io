@@ -6606,3 +6606,14 @@ padding-bottom: 0px;
   	box-shadow:         3px 3px 3px 3px #ccc;
 }
 
+/* Centre Table Headers for Used DOC.*/
+
+#view_4690# th
+{
+  text-align: center;
+}
+/* Use for the Knack Standard Theme */
+#view_4690# th span
+{
+  margin: auto !important;
+}
