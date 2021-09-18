@@ -4050,3 +4050,42 @@ $(document).on('knack-scene-render.scene_1417', function(event, scene) {
 function recursivecallWallePage(){
  setTimeout(function () { if($("#view_4579").is(":visible")==true){ Knack.views["view_4579"].model.fetch();recursivecallWallePage();} }, 10000);
 }
+/*
+$(document).on("knack-scene-render.scene_1408", function(event, scene, data) {
+  let sceneEl = document.getElementById('kn-scene_1408');
+  sceneEl.setAttribute("class", "flip-book");
+  let cover = document.createElement('div');
+  cover.setAttribute("class", "page page-cover page-cover-top");
+  cover.setAttribute("data-density","hard");
+  cover.innerHTML = '<div class="page-content"><h2>BOOK TITLE</h2></div>';
+  let page1 = document.createElement('div');
+  page1.setAttribute("class", "page");
+  page1.innerHTML = '<div class="page-content"><h2 class="page-header">Page Header 1</h2><div class="page-image" style="background-image: url(1.jpg)"></div><div class="page-text">Page Content 1</div><div class="page-footer">2</div></div>';
+
+  let sections = document.createElement('div');
+  sections.setAttribute("id", "sections");
+  let sectionLeft = document.createElement('div');
+  sectionLeft.setAttribute("id", "sectionLeft");
+  let sectionCenter = document.createElement('div');
+  sectionCenter.setAttribute("id", "sectionCenter");
+  let sectionRight = document.createElement('div');
+  sectionRight.setAttribute("id", "sectionRight");
+  sceneEl.prepend(sections);
+  sections.prepend(sectionRight)
+  sections.prepend(sectionCenter)
+  sections.prepend(sectionLeft)
+  sectionLeft.appendChild(document.getElementById('view_95'));
+  sectionLeft.appendChild(document.getElementById('view_98'));
+  sectionLeft.appendChild(document.getElementById('view_131'));
+  sectionLeft.appendChild(document.getElementById('view_148'));
+  sectionCenter.appendChild(document.getElementById('view_97'));
+  sectionCenter.appendChild(document.getElementById('view_114'));
+  sectionCenter.appendChild(document.getElementById('view_121'));
+  sectionCenter.appendChild(document.getElementById('view_122'));
+  sectionCenter.appendChild(document.getElementById('view_117'));
+  sectionCenter.appendChild(document.getElementById('view_149'));
+  sectionRight.appendChild(document.getElementById('view_96'));
+  sectionRight.appendChild(document.getElementById('view_133'));
+  sectionRight.appendChild(document.getElementById('view_115'));
+});
+*/
