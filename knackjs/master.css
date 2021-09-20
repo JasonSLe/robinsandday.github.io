@@ -6606,12 +6606,12 @@ padding-bottom: 0px;
   	box-shadow:         3px 3px 3px 3px #ccc;
 }
 
-/* Centre Table Headers for Used DOC.*/
+/* Centre Table Headers and Change Font Size for Used DOC.*/
 
 #view_4690 th span
 {
   margin: auto !important;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 #view_4696 th span
