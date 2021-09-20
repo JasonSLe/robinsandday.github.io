@@ -6611,6 +6611,7 @@ padding-bottom: 0px;
 #view_4690 th span
 {
   margin: auto !important;
+  font-size: 50px;
 }
 
 #view_4696 th span
@@ -6619,7 +6620,3 @@ padding-bottom: 0px;
 }
 
 
-#view_4690 div.view-header div.kn-records-nav div.kn-filter-rule div.table-wrapper.is-constrained table.kn-table.kn-table-table.is-bordered.is-striped{
-    color: #008000;
-    font-size: 50px;
-}
