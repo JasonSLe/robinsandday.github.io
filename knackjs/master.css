@@ -6626,6 +6626,29 @@ padding-bottom: 0px;
 #view_4694 th span
 {
   margin: auto !important;
+  font-size: 25px;
 }
+
+#view_4694
+{
+  margin: auto !important;
+  font-size: 25px;
+}
+
+/**Dealers in that Region Page**/
+
+#view_4696 th span
+{
+  margin: auto !important;
+  font-size: 20px;
+}
+
+#view_4696
+{
+  margin: auto !important;
+  font-size: 20px;
+}
+
+
 
 
