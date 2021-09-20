@@ -6617,3 +6617,9 @@ padding-bottom: 0px;
 {
   margin: auto !important;
 }
+
+
+#view_4690 div.view-header div.kn-records-nav div.kn-filter-rule div.table-wrapper.is-constrained table.kn-table.kn-table-table.is-bordered.is-striped{
+    color: #008000;
+    font-size: 50px;
+}
