@@ -6611,7 +6611,13 @@ padding-bottom: 0px;
 #view_4690 th span
 {
   margin: auto !important;
-  font-size: 15px;
+  font-size: 20px;
+}
+
+#view_4690 
+{
+  margin: auto !important;
+  font-size: 20px;
 }
 
 #view_4696 th span
