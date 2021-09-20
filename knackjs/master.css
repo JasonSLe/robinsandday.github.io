@@ -6607,20 +6607,23 @@ padding-bottom: 0px;
 }
 
 /* Centre Table Headers and Change Font Size for Used DOC.*/
+/**Group Performance Page**/
 
 #view_4690 th span
 {
   margin: auto !important;
-  font-size: 25px;
+  font-size: 28px;
 }
 
 #view_4690 
 {
   margin: auto !important;
-  font-size: 25px;
+  font-size: 28px;
 }
 
-#view_4696 th span
+/**Region Performance Page**/
+
+#view_4694 th span
 {
   margin: auto !important;
 }
