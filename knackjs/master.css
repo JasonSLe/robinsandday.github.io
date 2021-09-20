@@ -6606,7 +6606,7 @@ padding-bottom: 0px;
   	box-shadow:         3px 3px 3px 3px #ccc;
 }
 
-/* Centre Table Headers and Change Font Size for Used DOC.*/
+/* Centre Table Headers and Change Font for Used DOC.*/
 /**Group Performance Page**/
 
 #view_4690 th span
@@ -6649,6 +6649,7 @@ padding-bottom: 0px;
   font-size: 20px;
 }
 
-
+/**Used Doc - Dealer Performance (Individual) Page**/
+#view_4744 .kn-detail-label {background-color: transparent;}
 
 
