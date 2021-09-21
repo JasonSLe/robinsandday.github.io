@@ -6623,6 +6623,12 @@ padding-bottom: 0px;
 
 /**Region Performance Page**/
 
+#view_4750 th span
+{
+  margin: auto !important;
+  
+}
+
 #view_4694 th span
 {
   margin: auto !important;
