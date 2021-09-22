@@ -6632,7 +6632,12 @@ padding-bottom: 0px;
 #view_4694 th span
 {
   margin: auto !important;
-  font-size: 22px;
+}
+
+#view_4694 th span
+{
+  margin: auto !important;
+  font-size: 20px;
 }
 
 /**Dealers in that Region Page**/
