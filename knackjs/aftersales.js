@@ -314,6 +314,7 @@ function formatScene24(){
   sectionLeft.appendChild(document.getElementById('view_98'));
   sectionLeft.appendChild(document.getElementById('view_131'));
   sectionLeft.appendChild(document.getElementById('view_148'));
+  sectionLeft.appendChild(document.getElementById('view_170'));
   sectionCenter.appendChild(document.getElementById('view_97'));
   sectionCenter.appendChild(document.getElementById('view_114'));
   sectionCenter.appendChild(document.getElementById('view_121'));
@@ -398,6 +399,10 @@ $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
           name : 'Recalls',
           mainField : 'field_70', //Recalls Oustanding
           views:['121','149']
+        },{
+          name : 'Service schedule',
+          mainField : 'field_350', //Vehicle details
+          views:['149','170']
         },{
           name : 'Autoline - email valid',
           mainField : 'field_316', //Autoline - is email valid - last Autoline save
