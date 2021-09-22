@@ -6635,12 +6635,6 @@ padding-bottom: 0px;
   font-size: 22px;
 }
 
-#view_4694
-{
-  margin: auto !important;
-  font-size: 22px;
-}
-
 /**Dealers in that Region Page**/
 
 #view_4696 th span
@@ -6653,6 +6647,12 @@ padding-bottom: 0px;
 {
   margin: auto !important;
   font-size: 20px;
+}
+
+#view_4751 th span
+{
+  margin: auto !important;
+  
 }
 
 /**Used Doc - Dealer Performance (Individual) Page**/
