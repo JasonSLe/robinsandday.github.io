@@ -4042,6 +4042,41 @@ $(document).on('knack-form-submit.view_4573', function(event, view, data) {
     }
     });
 
+//Valeting check in/out (Master App)
+$(document).on('knack-form-submit.view_4733', function(event, view, data) { 
+    
+    try{
+    
+        let commandURL = "https://hook.integromat.com/j5s5ksuxtqjd4jcwh41qm5gy2afujni3";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Valeting check in out (Master App)",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
 // Refresh the table on WALL-E's status page         
 $(document).on('knack-scene-render.scene_1417', function(event, scene) {
  recursivecallWallePage();
