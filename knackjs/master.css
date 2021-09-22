@@ -6727,7 +6727,20 @@ padding-bottom: 0px;
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  display: inline-block;
+}
 
-
-
-
+#view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
