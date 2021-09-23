@@ -6949,7 +6949,7 @@ padding-bottom: 0px;
       border-color: #FFFFFF;
       box-shadow:         3px 3px #ccc;
 }
-	/**"Valeter's Login DetailSend Valet Instructions" button on Used deal book Handover*/
+	/**"Send Valet Instructions" button on Used deal book Handover*/
 #view_3604 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
     background-color: #FFA100;
       color: #FFFFFF;
@@ -6960,6 +6960,86 @@ padding-bottom: 0px;
  
 
 #view_3604 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+	/**"Begin Valeting" button on Valeter's Instructions */
+#view_4791 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4791 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+	/**"Send Valet Instructions" button on Valeter's Instructions */
+#view_4791 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4791 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+	/**"Begin Valeting" button on Valeter's Instructions */
+#view_4784 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4784 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+	/**"Send Valet Instructions" button on Valeter's Instructions */
+#view_4784 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4784 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
     background-color: #D18400;
       color: #FFFFFF;
       font-weight: bold;
