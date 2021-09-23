@@ -6909,3 +6909,63 @@ padding-bottom: 0px;
       border-color: #FFFFFF;
       box-shadow:         3px 3px #ccc;
 }
+	/**"Book a Used Handover Valet help & Support" button on Used deal book Handover*/
+#view_3604 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_3604 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+	/**"Valeter's Login Details" button on Used deal book Handover*/
+#view_3604 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_3604 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+	/**"Valeter's Login DetailSend Valet Instructions" button on Used deal book Handover*/
+#view_3604 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_3604 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
