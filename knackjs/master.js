@@ -4124,3 +4124,25 @@ $(document).on("knack-scene-render.scene_1408", function(event, scene, data) {
   sectionRight.appendChild(document.getElementById('view_115'));
 });
 */
+//Valet Button
+    
+#view_4811 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {​​​​​
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+
+#view_4811 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {​​​​​
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+
