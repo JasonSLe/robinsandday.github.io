@@ -6612,14 +6612,28 @@ padding-bottom: 0px;
 #view_4690 th span
 {
   margin: auto !important;
-  font-size: 28px;
+  font-size: 25px;
 }
 
 #view_4690 
 {
   margin: auto !important;
-  font-size: 28px;
+  font-size: 25px;
 }
+
+/*Group Budget Table*/
+#view_4839 th span
+{
+  margin: auto !important;
+  font-size: 20px;
+}
+
+#view_4839
+{
+  margin: auto !important;
+  font-size: 20px;
+}
+
 
 /**Region Performance Page**/
 
