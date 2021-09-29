@@ -4005,6 +4005,7 @@ $(document).on('knack-form-submit.view_4589', function(event, view, data) {
     }
 });
 
+
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L V2 when Approved {(Deal File) Profit Sheet} 
 $(document).on('knack-form-submit.view_4573', function(event, view, data) { 
 
@@ -4018,6 +4019,16 @@ $(document).on('knack-form-submit.view_4573', function(event, view, data) {
                 type: 'POST',
                 contentType: 'application/json',
                 data: dataToSend,
+                async: false
+            }).responseText;
+            
+            let commandURL1 = "https://hook.integromat.com/3q2btvigi1w229klrxitmlnluedv9v3c" ;
+            let dataToSend1 = JSON.stringify({"Record ID":data.id,"Form":"Digital P&L"}) ;
+            var rData = $.ajax({
+                url: commandURL1,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend1,
                 async: false
             }).responseText;
 
@@ -4041,6 +4052,8 @@ $(document).on('knack-form-submit.view_4573', function(event, view, data) {
         }).responseText;
     }
     });
+    
+
 
 //Valeting check in/out (Master App)
 $(document).on('knack-form-submit.view_4733', function(event, view, data) { 
