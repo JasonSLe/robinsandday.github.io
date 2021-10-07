@@ -1550,6 +1550,11 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+/* Update Admin View Details CSS */
+
+#view_4025 h4 {
+  text-align: center;
+}
 
 
 /* Update Order Form CSS */
@@ -1654,6 +1659,9 @@ border-left: 10px solid #DE3163;
 #view_2532 {font-size: 10px;}*/
 
 #view_2502 {font-size: 12px;}*/
+
+#view_4025 .kn-detail-label {background-color: transparent;}
+
 
 /********** ENQUIRY MAX VIEWS **********/
 
