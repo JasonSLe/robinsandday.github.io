@@ -7084,3 +7084,113 @@ padding-bottom: 0px;
       border-color: #FFFFFF;
       box-shadow:         3px 3px #ccc;
 }
+
+/**Pitch Review Valet - Change Valeter's instructions buttons to Pink**/ 
+
+#view_1368 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_1368 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/**Pitch Review Valet - Change E-mail Valeter's Instructions buttons to Pink**/ 
+
+#view_1368 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_1368 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/**Used car Handover - Change How To Book a Used Handover Valet buttons to Pink**/ 
+
+#view_4850 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4850 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/**Used car Handover - Change Valeter's Instructions buttons to Pink**/ 
+
+#view_4850 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4850 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/**Used car Handover - Change E-mail Valeter's Instructions buttons to Pink**/ 
+
+#view_4850 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4850 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
