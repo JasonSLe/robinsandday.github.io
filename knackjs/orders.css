@@ -692,6 +692,98 @@ This removes white spaces from all table headers*/
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
+
+/**New car Handover - Change How To Book a New Vehicle Handover Valet buttons to Pink**/ 
+
+#view_4024 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4024 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+
+/**New car Handover - Change View Valet buttons to Pink**/ 
+
+#view_4024 > div > a.kn-link.kn-link-2.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4024 > div > a:hover.kn-link.kn-link-2.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/**New car Handover - Change Valeter's Instructions buttons to Pink**/ 
+
+#view_4024 > div > a.kn-link.kn-link-3.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4024 > div > a:hover.kn-link.kn-link-3.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+
+/**New car Handover - Change E-mail Valeter's Instructions buttons to Pink**/ 
+
+#view_4024 > div > a.kn-link.kn-link-4.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4024 > div > a:hover.kn-link.kn-link-4.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+
 /*   *******************************************************************************************
 ************************** END OF ALL BUTTON COLOUR CHANGES **********************************
 ***********************************************************************************************/
