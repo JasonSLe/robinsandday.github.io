@@ -1552,8 +1552,31 @@ This removes white spaces from all table headers*/
 
 /* Update Admin View Details CSS */
 
-#view_4025 h4 {
+#view_2854 h3 {
   text-align: center;
+}
+
+#view_2854 > form > div {
+  	text-align: center;
+}
+
+#view_2854 > form > div > button {
+background-color: #8D8E8E !important;
+display: inline-block;
+border-left: 10px solid #DE3163;
+}
+
+#view_2854 > form > div > button:hover {
+ color: #FFFFFF;
+  background-color: #463F3A;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+#view_2854 {
+   border: 4px solid #CCCCCC;
+   padding: 10px;
 }
 
 
