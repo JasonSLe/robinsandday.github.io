@@ -4138,4 +4138,54 @@ $(document).on("knack-scene-render.scene_1408", function(event, scene, data) {
 });
 */
 
+//Trigger Integromat to Unreserve Vehicle via Updates to Website/AutoTrader From Used Stock Management - Edit Adverts 
+$(document).on('knack-form-submit.view_4857', function(event, view, data) { 
 
+    try{
+
+            let commandURL = "https://hook.integromat.com/n04o2rpxiiodil3pf91sn2b6khppbjlx" ;
+            var createData = ({"Record ID":data.id,"Reg No":data.field_2694_raw, "Stock ID":data.field_5713_raw, 
+                                             "Peugeot Dealer ID":data.field_4161_raw, "Citroen Dealer ID":data.field_4162_raw, 
+                                             "DS Dealer ID":data.field_4163_raw, "Vauxhall Dealer ID":data.field_5931_raw });
+            
+            function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
+        var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+            }).responseText;
+                       
+
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Integromat to Unreserve Vehicle via Updates to Website/AutoTrader From Used Stock Management - Edit Adverts",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+    });
+    
