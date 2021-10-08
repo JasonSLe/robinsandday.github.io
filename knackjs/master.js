@@ -4146,7 +4146,7 @@ $(document).on('knack-form-submit.view_4857', function(event, view, data) {
             let commandURL = "https://hook.integromat.com/n04o2rpxiiodil3pf91sn2b6khppbjlx" ;
             var createData = ({"Record ID":data.id,"Reg No":data.field_2694_raw, "Stock ID":data.field_5713_raw, 
                                              "Peugeot Dealer ID":data.field_4161_raw, "Citroen Dealer ID":data.field_4162_raw, 
-                                             "DS Dealer ID":data.field_4163_raw, "Vauxhall Dealer ID":data.field_5931_raw });
+                                             "DS Dealer ID":data.field_4163_raw, "Vauxhall Dealer ID":data.field_5931_raw, "DID for Used Stock FTP":data.field_4857_raw });
             
             function deleteEmpty(objectA){
         
