@@ -4214,17 +4214,17 @@ view_names.forEach(bindToUpdate1);
 function bindToUpdate1(selector_view_name){
 $(document).on('knack-view-render.' + selector_view_name, function(event, view, data) {
 
-$(document).ready(function(){
-$('.ui-timepicker-input').timepicker({
-minTime: '08:00:00',     //  8:00 AM,  Change as necessary
-maxTime: '19:00:00',        //  7:00 PM,  Change as necessary
-step: '15'		// Dropdown Interval every 15 mins
+    $(document).ready(function(){
+      $('.ui-timepicker-input').timepicker({
+      minTime: '08:00:00',     //  8:00 AM,  Change as necessary
+      maxTime: '19:00:00',        //  7:00 PM,  Change as necessary
+      step: '15'		// Dropdown Interval every 15 mins
 
-});
-});
-});
+      });
+      });
 
-//Hides All Day and Repeat from Time/Date selection
-$('div[id="kn-input-field_6772"]>div[style="margin-top: 5px;"]').hide();
+      //Hides All Day and Repeat from Time/Date selection
+      $('div[id="kn-input-field_6772"]>div[style="margin-top: 5px;"]').hide();
+    });
 
 }
