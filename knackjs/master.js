@@ -4010,6 +4010,7 @@ $(document).on('knack-form-submit.view_4589', function(event, view, data) {
     }
 });
 
+
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L V2 when Approved {(Deal File) Profit Sheet} 
 $(document).on('knack-form-submit.view_4573', function(event, view, data) { 
 
@@ -4023,6 +4024,16 @@ $(document).on('knack-form-submit.view_4573', function(event, view, data) {
                 type: 'POST',
                 contentType: 'application/json',
                 data: dataToSend,
+                async: false
+            }).responseText;
+            
+            let commandURL1 = "https://hook.integromat.com/3q2btvigi1w229klrxitmlnluedv9v3c" ;
+            let dataToSend1 = JSON.stringify({"Record ID":data.id,"Form":"Digital P&L"}) ;
+            var rData = $.ajax({
+                url: commandURL1,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend1,
                 async: false
             }).responseText;
 
@@ -4046,6 +4057,8 @@ $(document).on('knack-form-submit.view_4573', function(event, view, data) {
         }).responseText;
     }
     });
+    
+
 
 //Valeting check in/out (Master App)
 $(document).on('knack-form-submit.view_4733', function(event, view, data) { 
@@ -4129,3 +4142,76 @@ $(document).on("knack-scene-render.scene_1408", function(event, scene, data) {
   sectionRight.appendChild(document.getElementById('view_115'));
 });
 */
+
+//Trigger Integromat to Unreserve Vehicle via Updates to Website/AutoTrader From Used Stock Management - Edit Adverts 
+$(document).on('knack-form-submit.view_4857', function(event, view, data) { 
+
+    try{
+
+            let commandURL = "https://hook.integromat.com/n04o2rpxiiodil3pf91sn2b6khppbjlx" ;
+            var createData = ({"Record ID":data.id,"Reg No":data.field_2694_raw, "Stock ID":data.field_5713_raw, 
+                                             "Peugeot Dealer ID":data.field_4161_raw, "Citroen Dealer ID":data.field_4162_raw, 
+                                             "DS Dealer ID":data.field_4163_raw, "Vauxhall Dealer ID":data.field_5931_raw, "DID for Used Stock FTP":data.field_4623_raw });
+            
+            function deleteEmpty(objectA){
+        
+                for (const [key, value] of Object.entries(objectA)) {
+                    if (value === undefined || value === null || value === ""){
+                        delete objectA[key];
+                    }
+                }
+                return objectA;
+            }
+            //Iterate through all the values contained in createData and deletesany undefined object properties
+            //Will create the final form of the data sent using POST
+            let dataToSend = JSON.stringify(deleteEmpty(createData));
+        var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+            }).responseText;
+                       
+
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Integromat to Unreserve Vehicle via Updates to Website/AutoTrader From Used Stock Management - Edit Adverts",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+    });
+    
+//Add Valet (manually) PAGE
+//Restrict Available Times for adding a valet to 8am - 7pm
+
+var view_names = ["view_4510"]; ///add view numbers as necessary
+
+view_names.forEach(bindToUpdate1);
+
+function bindToUpdate1(selector_view_name){
+$(document).on('knack-view-render.' + selector_view_name, function(event, view, data) {
+
+$(document).ready(function(){
+$('.ui-timepicker-input').timepicker({
+minTime: '08:00:00',     //  8:00 AM,  Change as necessary
+maxTime: '19:00:00',        //  7:00 PM,  Change as necessary
+step: '15'		// Dropdown Interval every 15 mins
+
+});
+});
+});
+
+}

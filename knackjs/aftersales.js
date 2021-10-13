@@ -658,5 +658,21 @@ $(document).on("knack-scene-render.scene_29", function(event, scene, data) {
    //END OF CODE FOR NOTIFICATION AND REFRESH OF LIST
 
  
+// Refresh the Workshop Pre Call Customer List         
+$(document).on('knack-scene-render.scene_20', function(event, scene) {
+ recursivecallWallePage();
+});
 
+function recursivecallWallePage(){
+ setTimeout(function () { if($("#view_173").is(":visible")==true){ Knack.views["view_173"].model.fetch();recursivecallWallePage();} }, 60000);
+}
+
+// Refresh the Customer Advisors Pre Call Customer List         
+$(document).on('knack-scene-render.scene_20', function(event, scene) {
+ recursivecallWallePage();
+});
+
+function recursivecallWallePage(){
+ setTimeout(function () { if($("#view_169").is(":visible")==true){ Knack.views["view_169"].model.fetch();recursivecallWallePage();} }, 60000);
+}
   

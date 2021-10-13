@@ -230,7 +230,39 @@ This removes white spaces from all table headers*/
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_2487 > div > a.kn-link.kn-link-6.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_2487 > div > a:hover.kn-link.kn-link-6.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_2487 > div > a.kn-link.kn-link-7.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
 
+#view_2487 > div > a:hover.kn-link.kn-link-7.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
 /* Change Button Colour - Deal File Specific Button back to All Deal Files */
 
 #view_2776 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
@@ -240,6 +272,25 @@ This removes white spaces from all table headers*/
   	box-shadow:         3px 3px #ccc;
 }
 #view_2776 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Change Button Colour - Deal File Specific Button back to All Deal Files (ADMIN VIEW) */
+
+#view_4023 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_4023 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -492,7 +543,335 @@ This removes white spaces from all table headers*/
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_2875 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
 
+#view_2875 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/*Change Button 'New Vehicle Handover Valet Help & Support' in New Deal Customer Handover*/ 
+#view_2913 > div > a.kn-link.kn-link-2.kn-button {
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_2913 > div > a:hover.kn-link.kn-link-2.kn-button {
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/*Change Button 'Valeter Instructions' in New Deal Customer Handover*/ 
+#view_2913 > div > a.kn-link.kn-link-3.kn-button {
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_2913 > div > a:hover.kn-link.kn-link-3.kn-button {
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/*Change button 'Send Valet Instructions' in New Deal Customer Handover*/ 
+#view_2913 > div > a.kn-link.kn-link-4.kn-button {
+    background-color: #FFA100;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_2913 > div > a:hover.kn-link.kn-link-4.kn-button {
+    background-color: #D18400;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/* Change Button Colour - New vehicle Check in "View Valets"  */
+#view_4002 > div > a.kn-link.kn-link-1.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_4002 > div > a:hover.kn-link.kn-link-1.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+/* Change Button Colour - New vehicle Check in "Valet Instructions"  */
+#view_4002 > div > a.kn-link.kn-link-2.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_4002 > div > a:hover.kn-link.kn-link-2.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+/* Change Button Colour - New vehicle Check in "send Valet instuctions"  */
+#view_4002 > div > a.kn-link.kn-link-3.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_4002 > div > a:hover.kn-link.kn-link-3.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+/* Change Button Colour - New vehicle Check in "Book New vehicle Check in <br />Valet Help & Support"  */
+#view_4002 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_4002 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/**New car Handover - Change How To Book a New Vehicle Handover Valet buttons to Pink**/ 
+
+#view_4024 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4024 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+
+/**New car Handover - Change View Valet buttons to Pink**/ 
+
+#view_4024 > div > a.kn-link.kn-link-2.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4024 > div > a:hover.kn-link.kn-link-2.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/**New car Handover - Change Valeter's Instructions buttons to Pink**/ 
+
+#view_4024 > div > a.kn-link.kn-link-3.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4024 > div > a:hover.kn-link.kn-link-3.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+
+/**New car Handover - Change E-mail Valeter's Instructions buttons to Pink**/ 
+
+#view_4024 > div > a.kn-link.kn-link-4.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4024 > div > a:hover.kn-link.kn-link-4.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/**New car Check in - Change View Valets buttons to Pink**/ 
+
+#view_4002 > div > a.kn-link.kn-link-1.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4002 > div > a:hover.kn-link.kn-link-1.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+
+
+/**New car Check in - Change Valeter Instructions buttons to Pink**/ 
+
+#view_4002 > div > a.kn-link.kn-link-2.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4002 > div > a:hover.kn-link.kn-link-2.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/**New car Check in - Change E-mail Valeter's Instructions buttons to Pink**/ 
+
+#view_4002 > div > a.kn-link.kn-link-3.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4002 > div > a:hover.kn-link.kn-link-3.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
+
+/**New car Check in - Change Book New Vehicle Check in Valet Help & Support buttons to Pink**/ 
+
+#view_4002 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+    background-color: #ffafcc;
+      color: #FFFFFF;
+      font-weight: bold;
+      box-shadow:         3px 3px #ccc;
+}
+
+ 
+
+#view_4002 > div > a:hover.kn-link.kn-link-4.kn-link-4.kn-button {
+    background-color: #FF5C98;
+      color: #FFFFFF;
+      font-weight: bold;
+      transition-property: color;
+      transition-duration: .3s;
+      border-width: 2px;
+      border-color: #FFFFFF;
+      box-shadow:         3px 3px #ccc;
+}
 
 /*   *******************************************************************************************
 ************************** END OF ALL BUTTON COLOUR CHANGES **********************************
@@ -954,6 +1333,12 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+#view_3966 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /******** Vehicles Consigned that Require Reg Number Allocation & AFRL Uploading to Deal File TO DO LIST ON ADMIN PAGE *********/
 
 #view_3989 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -1346,6 +1731,34 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+/* Update Admin View Details CSS */
+
+#view_2854 h3 {
+  text-align: center;
+}
+
+#view_2854 > form > div {
+  	text-align: center;
+}
+
+#view_2854 > form > div > button {
+background-color: #8D8E8E !important;
+display: inline-block;
+border-left: 10px solid #DE3163;
+}
+
+#view_2854 > form > div > button:hover {
+ color: #FFFFFF;
+  background-color: #463F3A;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+#view_2854 {
+   border: 4px solid #CCCCCC;
+   padding: 10px;
+}
 
 
 /* Update Order Form CSS */
@@ -1450,6 +1863,9 @@ border-left: 10px solid #DE3163;
 #view_2532 {font-size: 10px;}*/
 
 #view_2502 {font-size: 12px;}*/
+
+#view_4025 .kn-detail-label {background-color: transparent;}
+
 
 /********** ENQUIRY MAX VIEWS **********/
 
@@ -2204,6 +2620,11 @@ color: #FFFFFF;
 #view_3929 .kn-detail-label {background-color: transparent;}
 
 #view_3960 .kn-detail-label {background-color: transparent;}
+
+#view_4013 .kn-detail-label {background-color: transparent;}
+
+#view_4014 .kn-detail-label {background-color: transparent;}
+
 
 /* Detail Labels on Receipt of Monies Page */
 
@@ -3256,11 +3677,6 @@ font-size:12px;
     color: #008000;
     font-size: 14px;
 }
-
-
-
-
-
 
 
 
