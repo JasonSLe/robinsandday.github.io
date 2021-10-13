@@ -223,7 +223,7 @@ $(document).on('knack-view-render.view_4550', function(event, view, data) {
 
 $(document).on('knack-view-render.view_4887', function(event, view, data) {
   var token = Knack.getUserAttributes().values["field_6440"];
-  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#aftersales-service-reporting-login?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#aftersales-service-reporting?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 function openTab(url) {
