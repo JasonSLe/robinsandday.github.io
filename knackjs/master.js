@@ -4224,4 +4224,7 @@ step: '15'		// Dropdown Interval every 15 mins
 });
 });
 
+//Hides All Day and Repeat from Time/Date selection
+$('div[id="kn-input-field_6772"]>div[style="margin-top: 5px;"]').hide();
+
 }
