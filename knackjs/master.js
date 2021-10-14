@@ -4281,7 +4281,7 @@ view, data) {
 
     $('td[class*="field_7215"]').hide();
 
-    $('div[id="view_139"] table>tbody>tr').each(function(){
+    $('div[id="view_1149"] table>tbody>tr').each(function(){
 
       $(this).find('td[class="field_3155"]').attr('data-tooltip',getFieldForRowID('view_1149','field_7215',$(this).attr('id')));
 
