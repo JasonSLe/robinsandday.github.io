@@ -4251,6 +4251,13 @@ $(document).on('knack-view-render.' + selector_view_name, function(event, view, 
       $(this).find('td[class="field_3155"]').attr('data-tooltip',getFieldForRowID('view_1149','field_7215',$(this).attr('id')));
       $(this).find('td[class="field_3155"]').addClass('tooltip-right');
   });
-  });
+  //end
+
+    //This part is for column headers
+    //Column headers
+    $('th[class="field_380"]').attr('title','This is the location of the Parts Warehouse');
+    $('th[class="field_381"]').attr('data-tooltip','Quantity and part number on backorder');
+    $('th[class="field_381"]').addClass('tooltip-bottom');
+});
 
 
