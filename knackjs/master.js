@@ -4223,4 +4223,33 @@ $(document).on('knack-view-render.' + selector_view_name, function(event, view, 
 
 }
 
+//General function, needs to be copied to other apps JS files if needed
+  function getFieldForRowID(view, field, id){
+    try {
+      if (Knack.views[view] && Knack.views[view].model){
+        let record = Knack.views[view].model.data.models.find(function(el){
+          return el.id === id
+        })
+        if (record){
+          return record.attributes[field];
+        }
+      }
+    } catch (ex) { console.log('getFieldForRowID',ex)}
+  }
+
+  //Parts Power Supply - scene 32 - Power Supply Orders view
+  $(document).on('knack-view-render.view_1149', function (event, view, data) {
+    $('td[class="field_3155"]').each(function(){$(this).text($(this).text().trim().substr(0,6)+$(this).text().trim().substr(8,2));});
+
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_7215"]').hide();
+    $('td[class*="field_7215"]').hide();
+    $('div[id="view_1149"] table>tbody>tr').each(function(){
+      $(this).find('td[class="field_3155"]').attr('data-tooltip',getFieldForRowID('view_1149','field_7215',$(this).attr('id')));
+      $(this).find('td[class="field_3155"]').addClass('tooltip-right');
+    });
+
 
