@@ -245,15 +245,19 @@ function openTab(url) {
 
 var headerElement, toggleButton, firstLoad = true;
 var toggleHeaderVisibility = function() {
+  console.log('toggleHeaderVisibility')
     if (!headerElement) {
+      console.log('no header')
         return;
     }
     $(headerElement).slideToggle(350, function() {
         if (headerElement.style.display == 'none') {
             document.body.classList.add('rad-header-closed');
             toggleButton.innerHTML = "Show Header";
+            console.log('hide header')
             return;
         }
+        console.log('show header')
         document.body.classList.remove('rad-header-closed');
         toggleButton.innerHTML = "Hide Header";
     });
