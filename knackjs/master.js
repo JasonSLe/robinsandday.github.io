@@ -294,7 +294,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     // Always hide the header when rendering scene in IFRAME, add other scenes if necessary
     if (scene.key == 'scene_860' || scene.key == 'scene_1269' || scene.key == 'scene_1271' || scene.key == 'scene_1273' || scene.key == 'scene_1279' || scene.key == 'scene_1339' || scene.key == 'scene_1362' || scene.key == 'scene_1412' || scene.key == 'scene_1497') {
         if (window.matchMedia('(min-width: 768px)').matches !== false) {
-            toggleHeaderVisibility();
+            toggleHeaderVisibility('hidden');
         }
     }
   
