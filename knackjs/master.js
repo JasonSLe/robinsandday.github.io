@@ -244,15 +244,13 @@ function openTab(url) {
 // ************************************************************************************************************************************************
 
 var headerElement, toggleButton, firstLoad = true;
-var toggleHeaderVisibility = function() {
-  console.log('toggleHeaderVisibility')
+var toggleHeaderVisibility = function(toWhatState = null) {
   console.log(toggleButton);
     if (!headerElement) {
-      console.log('no header')
         return;
     }
     $(headerElement).slideToggle(350, function() {
-        if (headerElement.style.display == 'none') {
+        if (headerElement.style.display == 'none' || toWhatState === 'hidden') {
             document.body.classList.add('rad-header-closed');
             toggleButton.innerHTML = "<b>Show Header</b>";
             console.log('hide header')
@@ -295,14 +293,10 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 
     // Always hide the header when rendering scene in IFRAME, add other scenes if necessary
     if (scene.key == 'scene_860' || scene.key == 'scene_1269' || scene.key == 'scene_1271' || scene.key == 'scene_1273' || scene.key == 'scene_1279' || scene.key == 'scene_1339' || scene.key == 'scene_1362' || scene.key == 'scene_1412' || scene.key == 'scene_1497') {
-      console.log('toogle visib prepare')
         if (window.matchMedia('(min-width: 768px)').matches !== false) {
-            console.log('goto toogle visib')
-            toggleHeaderVisibility();
+            toggleHeaderVisibility('hidden');
         }
     }
-
-    console.log('outside',toggleButton.innerHTML, scene.key)
   
  //**************************************************************************************************************
 //****** Hynek's Code to check version on user Browser with what is stored in Apify. If version is different, 
