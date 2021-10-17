@@ -248,7 +248,7 @@ var toggleHeaderVisibility = function(toWhatState = null) {
     if (!headerElement) {
         return;
     }
-    if (toWhatState === 'hidden'){
+    if (toWhatState === 'hidden' && headerElement.style.display !== 'none'){
       $(headerElement).slideUp(350, function(){
           document.body.classList.add('rad-header-closed');
           toggleButton.innerHTML = "<b>Show Header</b>";
