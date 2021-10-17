@@ -4237,7 +4237,6 @@ $(document).on('knack-view-render.' + selector_view_name, function(event, view, 
     } catch (ex) { console.log('getFieldForRowID',ex);}
   }
 
-  //Parts Power Supply - scene 32 - Power Supply Orders view
   $(document).on('knack-view-render.view_1149', function (event, view, data) {
 
     //This part is for tooltip of another field above field in list
@@ -4247,8 +4246,8 @@ $(document).on('knack-view-render.' + selector_view_name, function(event, view, 
     $('th[class="field_7215"]').hide();
     $('td[class*="field_7215"]').hide();
     $('div[id="view_1149"] table>tbody>tr').each(function(){
-      $(this).find('td[class="field_3155"]').attr('data-tooltip',getFieldForRowID('view_1149','field_7215',$(this).attr('id')));
-      $(this).find('td[class="field_3155"]').addClass('tooltip-right');
+      $(this).find('td[data-field-key="field_3155"]').attr('data-tooltip',getFieldForRowID('view_1149','field_7215',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_3155"]').addClass('tooltip-right');
   });
 });
 
