@@ -251,21 +251,22 @@ var toggleHeaderVisibility = function() {
       console.log('no header')
         return;
     }
-    $(headerElement).slideToggle(350, function() {
+    //$(headerElement).slideToggle(350, function() {
         if (headerElement.style.display == 'none') {
             document.body.classList.add('rad-header-closed');
-            toggleButton.innerHTML = "Show Header";
+            toggleButton.innerHTML = "<b>Show Header</b>";
             console.log('hide header')
             console.log(toggleButton.innerHTML)
             return;
         }
         console.log('show header')
         document.body.classList.remove('rad-header-closed');
-        toggleButton.innerHTML = "Hide Header";
-    });
+        toggleButton.innerHTML = "<b>Hide Header</b>";
+    //});
 }
 
 $(document).on('knack-scene-render.any', function(event, scene) {
+  console.log('knack-scene-render.any')
     var userBar = document.querySelector('.kn-info-bar .kn-current_user');
     toggleButton = document.createElement('span');
     toggleButton.classList.add('rad-toggle-header');
