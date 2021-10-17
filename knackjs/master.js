@@ -297,6 +297,8 @@ $(document).on('knack-scene-render.any', function(event, scene) {
             toggleHeaderVisibility();
         }
     }
+
+    console.log('outside',toggleButton.innerHTML)
   
  //**************************************************************************************************************
 //****** Hynek's Code to check version on user Browser with what is stored in Apify. If version is different, 
