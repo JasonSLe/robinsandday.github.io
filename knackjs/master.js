@@ -246,6 +246,7 @@ function openTab(url) {
 var headerElement, toggleButton, firstLoad = true;
 var toggleHeaderVisibility = function() {
   console.log('toggleHeaderVisibility')
+  console.log(toggleButton);
     if (!headerElement) {
       console.log('no header')
         return;
