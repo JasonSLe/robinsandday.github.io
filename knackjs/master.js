@@ -250,11 +250,11 @@ var toggleHeaderVisibility = function(toWhatState = null) {
     }
     console.log('toWhatState',toWhatState)
     if (toWhatState === 'hidden'){
-      if (headerElement.style.display !== 'none'){
+      //if (headerElement.style.display !== 'none'){
         $(headerElement).slideUp(350, function(){})
         document.body.classList.add('rad-header-closed');
         toggleButton.innerHTML = "<b>Show Header</b>";
-      }
+      //}
     } else {
       $(headerElement).slideToggle(350, function() {
           if (headerElement.style.display === 'none') {
