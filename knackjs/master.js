@@ -270,8 +270,9 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     toggleButton = document.createElement('span');
     toggleButton.classList.add('rad-toggle-header');
     toggleButton.setAttribute("id", "toggleButton");
-    var toggleButtonText = document.createTextNode("<b>Hide Header</b>");
-    toggleButton.appendChild(toggleButtonText);
+    toggleButton.innerHTML = "Hide Header"
+    //var toggleButtonText = document.createTextNode("Hide Header");
+    //toggleButton.appendChild(toggleButtonText);
     var logOutElement = (userBar) ? userBar.querySelector('.kn-log-out') : false;
     let toogleButtonExists = document.getElementById('toggleButton');
     if (userBar && logOutElement && toogleButtonExists===null) {
@@ -298,7 +299,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
         }
     }
 
-    console.log('outside',toggleButton.innerHTML)
+    console.log('outside',toggleButton.innerHTML, scene.key)
   
  //**************************************************************************************************************
 //****** Hynek's Code to check version on user Browser with what is stored in Apify. If version is different, 
