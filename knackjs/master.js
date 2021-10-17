@@ -256,6 +256,7 @@ var toggleHeaderVisibility = function() {
             document.body.classList.add('rad-header-closed');
             toggleButton.innerHTML = "Show Header";
             console.log('hide header')
+            console.log(toggleButton.innerHTML)
             return;
         }
         console.log('show header')
