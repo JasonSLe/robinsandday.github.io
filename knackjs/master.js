@@ -248,8 +248,15 @@ var toggleHeaderVisibility = function(toWhatState = null) {
     if (!headerElement) {
         return;
     }
+    if (toWhatState === 'hidden'){
+      $(headerElement).slideUp(350, function(){
+          document.body.classList.add('rad-header-closed');
+          toggleButton.innerHTML = "<b>Show Header</b>";
+          return;
+      })
+    }
     $(headerElement).slideToggle(350, function() {
-        if (headerElement.style.display === 'none' || toWhatState === 'hidden') {
+        if (headerElement.style.display === 'none') {
             document.body.classList.add('rad-header-closed');
             toggleButton.innerHTML = "<b>Show Header</b>";
             console.log('hide header')
