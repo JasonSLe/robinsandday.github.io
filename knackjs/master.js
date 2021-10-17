@@ -250,7 +250,7 @@ var toggleHeaderVisibility = function(toWhatState = null) {
         return;
     }
     $(headerElement).slideToggle(350, function() {
-        if (headerElement.style.display == 'none' || toWhatState === 'hidden') {
+        if (headerElement.style.display === 'none' || toWhatState === 'hidden') {
             document.body.classList.add('rad-header-closed');
             toggleButton.innerHTML = "<b>Show Header</b>";
             console.log('hide header')
