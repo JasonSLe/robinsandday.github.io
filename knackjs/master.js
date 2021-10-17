@@ -270,7 +270,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     toggleButton = document.createElement('span');
     toggleButton.classList.add('rad-toggle-header');
     toggleButton.setAttribute("id", "toggleButton");
-    var toggleButtonText = document.createTextNode("Hide Header");
+    var toggleButtonText = document.createTextNode("<b>Hide Header</b>");
     toggleButton.appendChild(toggleButtonText);
     var logOutElement = (userBar) ? userBar.querySelector('.kn-log-out') : false;
     let toogleButtonExists = document.getElementById('toggleButton');
