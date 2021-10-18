@@ -4257,6 +4257,7 @@ $(document).on('knack-view-render.' + selector_view_name, function(event, view, 
     //This part of code hides field_330 from the list and then adds it as mouse over to field 380
     //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
     //start
+	  //this code works for hover message without inline editing
     $('th[class="field_7215"]').hide();
     $('td[class*="field_7215"]').hide();
     $('div[id="view_1149"] table>tbody>tr').each(function(){
