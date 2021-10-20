@@ -6610,7 +6610,7 @@ padding-bottom: 0px;
 }
 
 /* Centre Table Headers and Change Font for Used DOC.*/
-/**Group Performance Page**/
+/**Group and Region Performance Page**/
 
 #view_4690 th span
 {
@@ -6619,6 +6619,18 @@ padding-bottom: 0px;
 }
 
 #view_4690 
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+view_4891 th span
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+#view_4891
 {
   margin: auto !important;
   font-size: 15px;
