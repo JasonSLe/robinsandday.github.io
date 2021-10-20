@@ -2069,7 +2069,7 @@ $(document).on('knack-form-submit.view_2745', function(event, view, data) {
         var dateTime = date+' '+time;
 
         let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Part exchange appraisal retail mechanical ",
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal Files -Additional Product Certificates Uploaded Submit Certificates",
         "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
         var rData = $.ajax({
            url: commandURL,
@@ -2104,7 +2104,7 @@ $(document).on('knack-form-submit.view_2746', function(event, view, data) {
         var dateTime = date+' '+time;
 
         let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Part exchange appraisal retail mechanical ",
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal Files -Additional Product Certificates Uploaded View Certificates",
         "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
         var rData = $.ajax({
            url: commandURL,
@@ -2115,4 +2115,5 @@ $(document).on('knack-form-submit.view_2746', function(event, view, data) {
         }).responseText;
     }
 });
+
 
