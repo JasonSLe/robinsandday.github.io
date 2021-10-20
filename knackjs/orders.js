@@ -2046,4 +2046,73 @@ $(document).on('knack-form-submit.view_3968', function(event, view, data) {
     }
 });
 
+//**New Deal Files -Additional Product Certificates Uploaded Submit Certificates
+$(document).on('knack-form-submit.view_2745', function(event, view, data) { 
+    
+    try{
+    
+        let commandURL = "https://hook.integromat.com/wbis2xdxwspei1lilnkle6db1tvbuh5r";
+        let dataToSend = JSON.stringify({"Record ID":data.id , "Form":"New Deal Files -Additional Product Certificates Uploaded Submit Certificates"});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Part exchange appraisal retail mechanical ",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+//**New Deal Files -Additional Product Certificates Uploaded View Certificates
+$(document).on('knack-form-submit.view_2746', function(event, view, data) { 
+    
+    try{
+    
+        let commandURL = "https://hook.integromat.com/wbis2xdxwspei1lilnkle6db1tvbuh5r";
+        let dataToSend = JSON.stringify({"Record ID":data.id , "Form":"New Deal Files -Additional Product Certificates Uploaded View Certificates"});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Part exchange appraisal retail mechanical ",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
 
