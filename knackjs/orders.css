@@ -2973,6 +2973,26 @@ color: #FFFFFF;
   border-right: 10px solid #32a1ce;
 }
 
+#view_4035 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
+}
+
+#view_4035 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
+}
+
 
 /****** New Deal File Pre-Delivery Check *******/
 
