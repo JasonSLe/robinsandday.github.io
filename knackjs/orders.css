@@ -2296,6 +2296,7 @@ color: #FFFFFF;
   background-color: #FFA100;
   padding: 8px;
   display: inline-block;
+  border-left: 10px solid #32a1ce;
 }
 
 #view_3546 > section > div > div > div > div > div > div > span > a:hover {
@@ -2304,6 +2305,7 @@ color: #FFFFFF;
   background-color: #D18400;
   padding: 8px;
   display: inline-block;
+  border-left: 10px solid #32a1ce;
 }
 
 
