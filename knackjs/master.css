@@ -4505,7 +4505,7 @@ background-color:#0f2542;
 
 #view_4522 .kn-detail-label {background-color: transparent;}
 
-/* Links to Admin Audit from Deal File and Handover Docs */
+/* Links to Audit Page from Deal File and Handover Docs */
 
 #view_4296 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
@@ -4514,6 +4514,7 @@ background-color:#0f2542;
   padding: 8px;
   display: inline-block;
   border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
 }
 
 #view_4296 > section > div > div > div > div > div > div > span > a:hover {
@@ -4523,6 +4524,7 @@ background-color:#0f2542;
   padding: 8px;
   display: inline-block;
   border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
 }
 
 #view_4297 > section > div > div > div > div > div > div > span > a {
@@ -4532,6 +4534,7 @@ background-color:#0f2542;
   padding: 8px;
   display: inline-block;
   border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
 }
 
 #view_4297 > section > div > div > div > div > div > div > span > a:hover {
@@ -4541,6 +4544,7 @@ background-color:#0f2542;
   padding: 8px;
   display: inline-block;
   border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
 }
 
 
