@@ -4338,3 +4338,16 @@ $(document).on('knack-form-submit.view_3324', function(event, view, data) {
     }
 });
 
+//****************** Show Alert & Refresh Digital Deal File Page 12 seconds after Order Retrieval ****************//
+
+$(document).on('knack-record-update.view_2966', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 10000);
+  
+  //alert("Please wait while we fetch the Order, Customer & P/X Details from Autoline. Click 'OK' & this page will refresh in a few moments...");
+
+  Knack.showSpinner();
+  
+});
+
+
