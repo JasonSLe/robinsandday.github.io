@@ -4338,13 +4338,12 @@ $(document).on('knack-form-submit.view_3324', function(event, view, data) {
     }
 });
 
-//****************** Show Alert & Refresh Digital Deal File Page 12 seconds after Order Retrieval ****************//
+//****************** Refresh Digital Deal File Vehicle Data On USed Stock Route Selection for Page 12 seconds to display the data ****************//
 
 $(document).on('knack-record-create.view_2966', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 10000);
-  
-  alert("Please wait while we fetch Vehicle Data. This page will refresh in a few moments...");
+ 
 
   Knack.showSpinner();
   
