@@ -4344,7 +4344,7 @@ $(document).on('knack-record-create.view_2966', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 10000);
   
-  //alert("Please wait while we fetch the Order, Customer & P/X Details from Autoline. Click 'OK' & this page will refresh in a few moments...");
+  alert("Please wait while we fetch Vehicle Data. This page will refresh in a few moments...");
 
   Knack.showSpinner();
   
