@@ -3327,6 +3327,26 @@ visibility: visible;
   border-left: 10px solid #32a1ce;
 }
 
+/* Link from Email ZIP Folder Page */
+
+#view_4892 > section > div > div:nth-child(1) > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
+
+#view_4892 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
+
 /**** Delivery and Deal File Contents Page ****/
 
 #view_4083 .kn-detail-label {background-color: transparent;}
