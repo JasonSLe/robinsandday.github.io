@@ -915,6 +915,7 @@ This removes white spaces from all table headers*/
 /********************************************************* NEW VEHICLE DEAL FILE ************************************************************/
 /*********************************************************                       ************************************************************/
 
+
 /* Deal File Search Filters */
 
 #view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -1760,6 +1761,10 @@ border-left: 10px solid #DE3163;
    padding: 10px;
 }
 
+
+/* Deal File Overview */
+
+#view_4025 .kn-detail-label {background-color: transparent;}
 
 /* Update Order Form CSS */
 
