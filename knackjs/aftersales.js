@@ -368,55 +368,59 @@ function serviceVisitsTooltips(){
 $(document).on("knack-scene-render.scene_24", function(event, scene, data) {
   formatScene24();
   setTimeout(function(){
-      let refreshData = [
-        {
-            name : 'Autoline - Owner',
-            mainField : 'field_278', //Autoline - type of bussines - first Autoline save
-            views:['95','97']   
-        },{
-          name : 'Autoline - Vehicle summary',
-          mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
-          views:['97','95','98','96'],
-          //runAfter : createServiceScheduleClick
-        },{
-          name : 'EMAC Service plan',
-          mainField : 'field_312', //EMAC - service plan Summary = Service plan
-          views:['131']
-        },{
-          name : 'EMAC Service plan - offer',
-          mainField : 'field_348', //EMAC - service plan Summary = Service plan
-          views:['148']
-        },{
-          name : 'Tyres',
-          mainField : 'field_247', //Tyres - Front = Stapletons
-          views:['122'],
-          //runAfter : generateTyres
-        },{
-          name : 'VHC',
-          mainField : 'field_302', //VHC - exists = VHC
-          views:['115']
-        },{
-          name : 'Recalls',
-          mainField : 'field_70', //Recalls Oustanding
-          views:['121','149']
-        },{
-          name : 'Service schedule',
-          mainField : 'field_350', //Vehicle details
-          views:['149','170']
-        },{
-          name : 'Autoline - email valid',
-          mainField : 'field_316', //Autoline - is email valid - last Autoline save
-          views:['95']   
-        },{
-          name : 'Autoline - service visits',
-          mainField : 'field_325', //Autoline - service visits tooltips
-          views:['133'],
-          runAfter : serviceVisitsTooltips
-      }
-      ]
-      sceneRefresh(refreshData);
+    refreshScene24();
   }, 100);
 });
+
+function refreshScene24(){
+  let refreshData = [
+    {
+        name : 'Autoline - Owner',
+        mainField : 'field_278', //Autoline - type of bussines - first Autoline save
+        views:['95','97']   
+    },{
+      name : 'Autoline - Vehicle summary',
+      mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
+      views:['97','95','98','96'],
+      //runAfter : createServiceScheduleClick
+    },{
+      name : 'EMAC Service plan',
+      mainField : 'field_312', //EMAC - service plan Summary = Service plan
+      views:['131']
+    },{
+      name : 'EMAC Service plan - offer',
+      mainField : 'field_348', //EMAC - service plan Summary = Service plan
+      views:['148']
+    },{
+      name : 'Tyres',
+      mainField : 'field_247', //Tyres - Front = Stapletons
+      views:['122'],
+      //runAfter : generateTyres
+    },{
+      name : 'VHC',
+      mainField : 'field_302', //VHC - exists = VHC
+      views:['115']
+    },{
+      name : 'Recalls',
+      mainField : 'field_70', //Recalls Oustanding
+      views:['121','149']
+    },{
+      name : 'Service schedule',
+      mainField : 'field_350', //Vehicle details
+      views:['149','170']
+    },{
+      name : 'Autoline - email valid',
+      mainField : 'field_316', //Autoline - is email valid - last Autoline save
+      views:['95']   
+    },{
+      name : 'Autoline - service visits',
+      mainField : 'field_325', //Autoline - service visits tooltips
+      views:['133'],
+      runAfter : serviceVisitsTooltips
+  }
+  ]
+  sceneRefresh(refreshData);
+}
 
 $(document).on("knack-scene-render.scene_28", function(event, scene, data) {
   let refreshData = [
@@ -689,4 +693,7 @@ $(document).on('knack-form-submit.view_186', function(event, view, data) {
     async: false
   }).responseText;
   console.log(rData);
+  setTimeout(function(){
+    refreshScene24();
+  }, 200);
 });
