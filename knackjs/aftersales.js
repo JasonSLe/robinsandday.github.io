@@ -695,8 +695,8 @@ $(document).on('knack-form-submit.view_186', function(event, view, data) {
   }).responseText;
   console.log(rData);
 
+  refreshView('148', true);
   setTimeout(function(){
-    refreshView('148', true);
     refreshScene24();
-  }, 100);
+  }, 1000);
 });
