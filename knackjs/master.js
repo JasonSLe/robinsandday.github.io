@@ -4338,15 +4338,4 @@ $(document).on('knack-form-submit.view_3324', function(event, view, data) {
     }
 });
 
-//****************** Refresh Digital Deal File Vehicle Data On USed Stock Route Selection for Page 12 seconds to display the data ****************//
-
-$(document).on('knack-record-create.view_2966', function(event, view, data) {
-  
-  setTimeout(function () { location.hash = location.hash + "#"; }, 10000);
- 
-
-  Knack.showSpinner();
-  
-});
-
 
