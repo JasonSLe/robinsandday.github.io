@@ -915,6 +915,7 @@ This removes white spaces from all table headers*/
 /********************************************************* NEW VEHICLE DEAL FILE ************************************************************/
 /*********************************************************                       ************************************************************/
 
+
 /* Deal File Search Filters */
 
 #view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -1761,6 +1762,10 @@ border-left: 10px solid #DE3163;
 }
 
 
+/* Deal File Overview */
+
+#view_4025 .kn-detail-label {background-color: transparent;}
+
 /* Update Order Form CSS */
 
 #view_2854 h3 {
@@ -2291,6 +2296,7 @@ color: #FFFFFF;
   background-color: #FFA100;
   padding: 8px;
   display: inline-block;
+  border-left: 10px solid #32a1ce;
 }
 
 #view_3546 > section > div > div > div > div > div > div > span > a:hover {
@@ -2299,6 +2305,7 @@ color: #FFFFFF;
   background-color: #D18400;
   padding: 8px;
   display: inline-block;
+  border-left: 10px solid #32a1ce;
 }
 
 
@@ -2935,6 +2942,7 @@ color: #FFFFFF;
   padding: 8px;
   display: inline-block;
   border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
 }
 
 #view_3799 > section > div > div > div > div > div > div > span > a:hover {
@@ -2944,6 +2952,7 @@ color: #FFFFFF;
   padding: 8px;
   display: inline-block;
   border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
 }
 
 #view_3800 > section > div > div > div > div > div > div > span > a {
@@ -2953,6 +2962,7 @@ color: #FFFFFF;
   padding: 8px;
   display: inline-block;
   border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
 }
 
 #view_3800 > section > div > div > div > div > div > div > span > a:hover {
@@ -2962,6 +2972,27 @@ color: #FFFFFF;
   padding: 8px;
   display: inline-block;
   border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
+}
+
+#view_4035 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
+}
+
+#view_4035 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+  border-right: 10px solid #32a1ce;
 }
 
 

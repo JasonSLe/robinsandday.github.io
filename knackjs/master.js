@@ -4266,3 +4266,87 @@ $(document).on('knack-view-render.' + selector_view_name, function(event, view, 
   });
 });
 
+
+//**Used Deal Files - Submit Additional Product Certificates Uploaded
+$(document).on('knack-form-submit.view_3321', function(event, view, data) { 
+    
+    try{
+    
+        let commandURL = "https://hook.integromat.com/3umnr247redycud7ind5l6xbge6lhq4k";
+        let dataToSend = JSON.stringify({"Record ID":data.id , "Form":"Used Deal Files - Submit Additional Product Certificates Uploaded"});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Deal Files - Submit Additional Product Certificates Uploaded",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+//**Used Deal Files - View Additional Product Certificates Uploaded
+$(document).on('knack-form-submit.view_3324', function(event, view, data) { 
+    
+    try{
+    
+        let commandURL = "https://hook.integromat.com/3umnr247redycud7ind5l6xbge6lhq4k";
+        let dataToSend = JSON.stringify({"Record ID":data.id , "Form":"Used Deal Files - View Additional Product Certificates Uploaded"});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Deal Files - View Additional Product Certificates Uploaded",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+//****************** Refresh Digital Deal File Vehicle Data On USed Stock Route Selection for Page 12 seconds to display the data ****************//
+
+$(document).on('knack-record-create.view_2966', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 10000);
+ 
+
+  Knack.showSpinner();
+  
+});
+
+
