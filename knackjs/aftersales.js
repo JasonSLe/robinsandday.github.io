@@ -696,6 +696,7 @@ $(document).on('knack-form-submit.view_186', function(event, view, data) {
 
   setTimeout(function(){
     refreshView('148', true);
+    fillLoading('148');
     refreshScene24();
   }, 100);
 });
