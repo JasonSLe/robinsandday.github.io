@@ -209,6 +209,7 @@ function refreshView(viewID, reload = false){
       };
       //reload data from database
       Knack.views['view_'+viewID].model.fetch(a);
+      fillLoading(viewID);
     } catch (e){
       console.log('error refreshing view', viewID, e)
     }
@@ -222,8 +223,6 @@ function fillLoading(viewID){
   $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
     if ($(this).text().trim()===''){
       $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
-    } else {
-      console.log('val',$(this).text().trim())
     }
   });
 }
@@ -698,7 +697,6 @@ $(document).on('knack-form-submit.view_186', function(event, view, data) {
 
   setTimeout(function(){
     refreshView('148', true);
-    fillLoading('148');
     refreshScene24();
   }, 100);
 });
