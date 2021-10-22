@@ -676,3 +676,17 @@ function recursivecallWallePage(){
  setTimeout(function () { if($("#view_169").is(":visible")==true){ Knack.views["view_169"].model.fetch();recursivecallWallePage();} }, 60000);
 }
   
+$(document).on('knack-form-submit.view_186', function(event, view, data) { 
+  let commandURL = "https://hook.integromat.com/82cg83yb0g9ekakjvn4ep8k8xh27kyps" ;
+  let dataToSend = Object.assign({"source":"EMACOfferRefresh"}, data); 
+  recordId = data.id;
+  console.log(dataToSend);
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify(dataToSend),
+    async: false
+  }).responseText;
+  console.log(rData);
+});
