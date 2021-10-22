@@ -201,6 +201,7 @@ function refreshView(viewID, reload = false){
           //refresh view on page
           setTimeout(function(){
             Knack.views['view_'+viewID].render();
+            fillLoading(viewID);
           }, 50);
           return true;
         } else {
@@ -209,7 +210,6 @@ function refreshView(viewID, reload = false){
       };
       //reload data from database
       Knack.views['view_'+viewID].model.fetch(a);
-      fillLoading(viewID);
     } catch (e){
       console.log('error refreshing view', viewID, e)
     }
