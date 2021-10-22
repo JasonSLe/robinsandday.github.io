@@ -3007,6 +3007,21 @@ visibility: visible;
 
 /***************************** DEAL FILE MANAGER VIEW ********************************/
 
+
+/************ Enquiry Max Confirmed Orders Where Signed Orders Need Uploading and Profit Sheets Completing ***********/
+
+#view_4310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /************ Vehicles that Require Finance to be Paid Table Filters ***********/
 
 #view_4526 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
