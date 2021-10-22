@@ -693,7 +693,8 @@ $(document).on('knack-form-submit.view_186', function(event, view, data) {
     async: false
   }).responseText;
   console.log(rData);
+
   setTimeout(function(){
     refreshScene24();
-  }, 200);
+  }, 100);
 });
