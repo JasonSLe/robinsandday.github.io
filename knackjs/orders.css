@@ -2676,6 +2676,8 @@ color: #FFFFFF;
 
 /* Detail Labels on P&L Overview */
 
+#view_4037 .kn-detail-label {background-color: transparent;}
+
 #view_3905 .kn-detail-label {background-color: transparent;}
 
 #view_3907 .kn-detail-label {background-color: transparent;}
