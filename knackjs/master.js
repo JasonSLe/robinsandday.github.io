@@ -1569,7 +1569,7 @@ function refreshScene909(){
     {
         name : 'HPI Status',
         mainField : 'field_5038', 
-        views:['2298']   
+        views:['2298','2299','3586','2301']   
     }
   ]
   sceneRefresh(refreshData);
