@@ -1558,6 +1558,7 @@ $(document).on('knack-view-render.view_3910', function(event, view, data) {
 
 $(document).on('knack-scene-render.scene_909', function(event, scene) {
  recursivecall();
+ $('div[class="field_5038"]').hide()
  setTimeout(function(){
   refreshScene909();
 }, 100);
