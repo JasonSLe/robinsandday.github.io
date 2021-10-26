@@ -4442,7 +4442,6 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
         stats.finishTime = new Date();
         stats.duration = (stats.finishTime - stats.startTime)/1000;
         console.log('stats', stats);
-        saveStats(stats);
         for (one of refreshData){
           if (!one.runAfterDone){
             for (oneView of one.views){
@@ -4496,21 +4495,4 @@ $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"
 });
 }
 
-function saveStats(stats){
-  console.log('saveStats');
-  let commandURL = "https://hook.integromat.com/cqqou5f36rhra151jzixw3mmhm5fxf1a" ;
-  let textFromStats = 'Duration: '+stats.duration.toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 0 });
-  for (let i = 0;i<stats.log.length;i++){
-    textFromStats += ', ' + stats.log[i].one + ': '+stats.log[i].duration.toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 0 });
-  }
-  let dataToSend = {"knackId":recordId,"stats":stats, 'statsText':textFromStats}; 
-  console.log(dataToSend);
-  $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: JSON.stringify(dataToSend),
-    async: true
-  })
-}
 
