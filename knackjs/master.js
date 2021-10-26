@@ -1557,10 +1557,13 @@ $(document).on('knack-view-render.view_3910', function(event, view, data) {
 // refresh background replaced image at used vehicle check in - disposal selection page
 
 $(document).on('knack-scene-render.scene_909', function(event, scene) {
-  Knack.showSpinner();
-  console.log('scene',scene)
  recursivecall();
 });
+
+$(document).on('knack-view-render.view_2298', function(event, view, data) {
+  console.log('data',data);
+});
+
 
 function recursivecall(){
  setTimeout(function () { if($("#view_3927").is(":visible")==true){ Knack.views["view_3927"].model.fetch();recursivecall();} }, 100000);
