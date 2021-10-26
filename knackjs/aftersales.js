@@ -170,24 +170,6 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
     }
 }
 
-function saveStats(stats){
-  console.log('saveStats');
-  let commandURL = "https://hook.integromat.com/cqqou5f36rhra151jzixw3mmhm5fxf1a" ;
-  let textFromStats = 'Duration: '+stats.duration.toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 0 });
-  for (let i = 0;i<stats.log.length;i++){
-    textFromStats += ', ' + stats.log[i].one + ': '+stats.log[i].duration.toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 0 });
-  }
-  let dataToSend = {"knackId":recordId,"stats":stats, 'statsText':textFromStats}; 
-  console.log(dataToSend);
-  $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: JSON.stringify(dataToSend),
-    async: true
-  })
-}
-
 //This function refreshes view acording viewId, what is just view number!
 //Can be called from scene render, view render
 function refreshView(viewID, reload = false){
@@ -225,6 +207,24 @@ function fillLoading(viewID){
       $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
     }
   });
+}
+
+function saveStats(stats){
+  console.log('saveStats');
+  let commandURL = "https://hook.integromat.com/cqqou5f36rhra151jzixw3mmhm5fxf1a" ;
+  let textFromStats = 'Duration: '+stats.duration.toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 0 });
+  for (let i = 0;i<stats.log.length;i++){
+    textFromStats += ', ' + stats.log[i].one + ': '+stats.log[i].duration.toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 0 });
+  }
+  let dataToSend = {"knackId":recordId,"stats":stats, 'statsText':textFromStats}; 
+  console.log(dataToSend);
+  $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify(dataToSend),
+    async: true
+  })
 }
 
 function generateTyres(){
