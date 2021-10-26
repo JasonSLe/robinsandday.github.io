@@ -1557,6 +1557,7 @@ $(document).on('knack-view-render.view_3910', function(event, view, data) {
 // refresh background replaced image at used vehicle check in - disposal selection page
 
 $(document).on('knack-scene-render.scene_909', function(event, scene) {
+  Knack.showSpinner();
   console.log('scene',scene)
  recursivecall();
 });
