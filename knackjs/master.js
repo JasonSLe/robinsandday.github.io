@@ -1558,11 +1558,21 @@ $(document).on('knack-view-render.view_3910', function(event, view, data) {
 
 $(document).on('knack-scene-render.scene_909', function(event, scene) {
  recursivecall();
+ setTimeout(function(){
+  refreshScene909();
+}, 100);
 });
 
-$(document).on('knack-view-render.view_2298', function(event, view, data) {
-  console.log('data',data);
-});
+function refreshScene909(){
+  let refreshData = [
+    {
+        name : 'HPI Status',
+        mainField : 'field_5038', 
+        views:['2298']   
+    }
+  ]
+  sceneRefresh(refreshData);
+}
 
 
 function recursivecall(){
@@ -4343,4 +4353,145 @@ $(document).on('knack-form-submit.view_3324', function(event, view, data) {
     }
 });
 
+
+/*
+  Checks data acording to refreshData structure and updates views
+  This is structure describing the page, consisting of different views, updated with different background processes
+  Each record in refreshData represents one background update process
+  Field mainField is knack fields on first view of views array and this field is used for checking if the background process finished it run and updated the record, so the update process needs ALWAYS give some value to this field!
+  Function updates all views in views property of record, if field mainField is blank, till there is some value in mainField 
+  !mainField needs to be on first View in array!
+  runAfter is function, which is run after the data are loaded to the view
+
+  This is just example
+  let refreshData = [
+          //mainField needs to be on first View in array
+          {
+              mainField : 'field_4',
+              views:['75','78']   
+          },{
+              mainField : 'field_74',
+              views:['76'],
+              runAfter : functionName
+          }
+        ]
+*/
+function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = null){
+  console.log('sceneRefresh');
+  try {
+    if (!startTime){
+      startTime = new Date();
+      stats = {startTime:startTime, log:[]}
+      //console.log('startTime', startTime);
+    } else {
+      //console.log('elapsed',new Date() - startTime);
+    }
+    let recheck = false;
+    for (one of refreshData){
+        //console.log(one);
+        //console.log('main field val',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
+        if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
+            let mainReloaded = false; 
+            for (oneView of one.views){
+                mainReloaded = refreshView(oneView, mainReloaded);
+            }
+            //console.log('main field val2',Knack.views['view_'+one.views[0]].model.attributes[one.mainField])
+            if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
+                recheck = true;
+                if (runCounter===1){
+                  for (oneView of one.views){
+                    fillLoading(oneView);
+                  }
+                }
+            } else {
+              if (one.runAfter && !one.runAfterDone){
+                setTimeout(one.runAfter,100);
+                one.runAfterDone = true;
+              }
+            }
+        } else {
+          if (one.runAfter && !one.runAfterDone){
+            setTimeout(one.runAfter,100);
+            one.runAfterDone = true;
+          }
+          
+          let statsLogFound = stats.log.find(function(el){return el.one === one.name});
+          if (!statsLogFound) {
+            stats.log.push({one:one.name,finishTime:new Date(),duration : (new Date() - stats.startTime)/1000});
+          }
+        }
+    }
+    if (recheck && (new Date() - startTime)<120000){
+        console.log('needs recheck')
+        setTimeout(function(){
+            sceneRefresh(refreshData, startTime, runCounter + 1, stats);
+        }, (runCounter<3?1500:2500));
+    } else if ((new Date() - startTime)>120000){
+      console.log('ending refresh without all done');
+      for (one of refreshData){
+        if (!one.runAfterDone){
+          for (oneView of one.views){
+            refreshView(oneView, true);
+          }
+        }
+      }
+    } else {
+      if (runCounter!==1){
+        console.log('everything checked, reload views just for sure');
+        stats.finishTime = new Date();
+        stats.duration = (stats.finishTime - stats.startTime)/1000;
+        console.log('stats', stats);
+        saveStats(stats);
+        for (one of refreshData){
+          if (!one.runAfterDone){
+            for (oneView of one.views){
+              refreshView(oneView, true);
+            }
+          }
+        }
+      }
+    }
+  } catch (e){
+    console.log('sceneRefresh fail', refreshData, e)
+  }
+}
+
+//This function refreshes view acording viewId, what is just view number!
+//Can be called from scene render, view render
+function refreshView(viewID, reload = false){
+  try {
+    var currModel = JSON.stringify(Knack.views['view_'+viewID].model.attributes);
+    const a = {}
+    a.success = function () {
+      //if the mainField has value, refresh the view in browser
+      if ((currModel !== JSON.stringify(Knack.views['view_'+viewID].model.attributes)) || reload){
+      //if (Knack.views['view_'+mainFieldView].model.attributes[mainField]!==''){
+        //refresh view on page
+        setTimeout(function(){
+          Knack.views['view_'+viewID].render();
+          fillLoading(viewID);
+        }, 50);
+        return true;
+      } else {
+        return false;
+      }
+    };
+    //reload data from database
+    Knack.views['view_'+viewID].model.fetch(a);
+  } catch (e){
+    console.log('error refreshing view', viewID, e)
+  }
+}
+
+function formatDateGB(date){
+return date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear();
+}
+
+function fillLoading(viewID){
+$('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
+  if ($(this).text().trim()===''){
+    $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
+  }
+});
+}
 
