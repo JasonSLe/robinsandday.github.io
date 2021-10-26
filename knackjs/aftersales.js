@@ -697,6 +697,13 @@ $(document).on('knack-form-submit.view_186', function(event, view, data) {
 
   refreshView('148', true);
   setTimeout(function(){
-    refreshScene24();
+    let refreshData = [
+      {
+        name : 'EMAC Service plan - offer',
+        mainField : 'field_348', //EMAC - service plan Summary = Service plan
+        views:['148']
+      }
+    ]
+    sceneRefresh(refreshData);
   }, 1000);
 });
