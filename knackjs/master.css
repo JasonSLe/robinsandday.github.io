@@ -6832,6 +6832,18 @@ padding-bottom: 0px;
   	font-weight: bold;
 }
 
+#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /* Customer Address Map */
 
 #view_4776 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
