@@ -146,6 +146,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
           if (!one.runAfterDone){
             for (oneView of one.views){
               refreshView(oneView, true);
+              stopLoading(oneView);
             }
           }
         }
@@ -160,6 +161,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
             if (!one.runAfterDone){
               for (oneView of one.views){
                 refreshView(oneView, true);
+                stopLoading(oneView);
               }
             }
           }
@@ -205,6 +207,14 @@ function fillLoading(viewID){
   $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
     if ($(this).text().trim()===''){
       $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
+    }
+  });
+}
+
+function stopLoading(viewID){
+  $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
+    if ($(this).text().trim().includes('Loading...')){
+      $(this).html('');
     }
   });
 }
