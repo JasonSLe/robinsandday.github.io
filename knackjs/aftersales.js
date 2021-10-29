@@ -212,9 +212,11 @@ function fillLoading(viewID){
 }
 
 function stopLoading(viewID){
+  console.log('stopLoading', viewID);
   $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
     if ($(this).text().trim().includes('Loading...')){
       $(this).html('');
+      console.log(this);
     }
   });
 }
