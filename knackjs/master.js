@@ -4449,6 +4449,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
             }
           }
         }
+        setTimeout(function () { location.hash = location.hash + "#"; }, 100);
       }
     }
   } catch (e){
