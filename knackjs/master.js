@@ -4248,7 +4248,7 @@ $(document).on('knack-view-render.' + selector_view_name, function(event, view, 
       });
 
       //Hides All Day and Repeat from Time/Date selection
-      $('div[id="kn-input-field_6772"]>div[style="margin-top: 5px;"]').hide();
+      $('div[id="kn-input-field_7259"]>div[style="margin-top: 5px;"]').hide();
     });
 
 }
