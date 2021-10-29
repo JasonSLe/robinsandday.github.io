@@ -183,7 +183,7 @@ function refreshView(viewID, reload = false, stopLoading = false){
           //refresh view on page
           setTimeout(function(){
             Knack.views['view_'+viewID].render();
-            if (stopLoading) {stopLoading(oneView);} else {fillLoading(viewID);}
+            if (stopLoading) {stopLoading(oneView);} //else {fillLoading(viewID);}
           }, 50);
           return true;
         } else {
