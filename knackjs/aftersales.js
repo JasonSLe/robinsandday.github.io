@@ -177,13 +177,10 @@ function refreshView(viewID, reload = false, stopLoading = false){
       var currModel = JSON.stringify(Knack.views['view_'+viewID].model.attributes);
       const a = {}
       a.success = function () {
-        //if the mainField has value, refresh the view in browser
         if ((currModel !== JSON.stringify(Knack.views['view_'+viewID].model.attributes)) || reload){
-        //if (Knack.views['view_'+mainFieldView].model.attributes[mainField]!==''){
-          //refresh view on page
           setTimeout(function(){
             Knack.views['view_'+viewID].render();
-            if (stopLoading) {stopLoading(oneView);} //else {fillLoading(viewID);}
+            if (stopLoading) {stopLoading(oneView);} else {fillLoading(viewID);}
           }, 50);
           return true;
         } else {
