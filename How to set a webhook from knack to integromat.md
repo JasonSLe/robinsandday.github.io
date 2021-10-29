@@ -1,4 +1,5 @@
 //No empty fields
+
 $(document).on('knack-form-submit.view_3324', function(event, view, data) { 
     
     try{
@@ -33,9 +34,10 @@ $(document).on('knack-form-submit.view_3324', function(event, view, data) {
     }
 });
 
-
+========================================================================================================================================================================
 
 //With empty fields
+
 $(document).on('knack-form-submit.view_4857', function(event, view, data) { 
 
     try{
