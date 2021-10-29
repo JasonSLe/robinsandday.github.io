@@ -180,7 +180,7 @@ function refreshView(viewID, reload = false, stopLoading = false){
         if ((currModel !== JSON.stringify(Knack.views['view_'+viewID].model.attributes)) || reload){
           setTimeout(function(){
             Knack.views['view_'+viewID].render();
-            if (stopLoading) {stopLoading(oneView);} else {fillLoading(viewID);}
+            if (stopLoading) {stopLoading(oneView);} //else {fillLoading(viewID);}
           }, 50);
           return true;
         } else {
