@@ -1,4 +1,4 @@
-//No empty fields
+//Please use the code bellow if there will never be an empty field as there is not code to deal with blank fields
 
 $(document).on('knack-form-submit.view_3324', function(event, view, data) { 
     
@@ -13,7 +13,7 @@ $(document).on('knack-form-submit.view_3324', function(event, view, data) {
             contentType: 'application/json',
             data: dataToSend,
             async: false
-        }).responseText;
+        }).responseText;    
     }catch(exception){
         console.log("error");
         var today = new Date();
@@ -22,7 +22,7 @@ $(document).on('knack-form-submit.view_3324', function(event, view, data) {
         var dateTime = date+' '+time;
 
         let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "MY DESCRIPTION",
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Scenario DESCRIPTION what for the error webhook",
         "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
         var rData = $.ajax({
            url: commandURL,
@@ -36,7 +36,7 @@ $(document).on('knack-form-submit.view_3324', function(event, view, data) {
 
 ========================================================================================================================================================================
 
-//With empty fields
+//Please use the code bellow if there will be an empty field as there is code to deal with blank fields
 
 $(document).on('knack-form-submit.view_4857', function(event, view, data) { 
 
@@ -76,7 +76,7 @@ $(document).on('knack-form-submit.view_4857', function(event, view, data) {
         var dateTime = date+' '+time;
 
         let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "mY DESCRIPTION",
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Scenario DESCRIPTION for webhook",
         "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
         var rData = $.ajax({
            url: commandURL,
