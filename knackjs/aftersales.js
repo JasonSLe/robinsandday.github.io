@@ -145,8 +145,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
         for (one of refreshData){
           if (!one.runAfterDone){
             for (oneView of one.views){
-              refreshView(oneView, true);
-              stopLoading(oneView);
+              refreshView(oneView, true, true);
             }
           }
         }
@@ -160,8 +159,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
           for (one of refreshData){
             if (!one.runAfterDone){
               for (oneView of one.views){
-                refreshView(oneView, true);
-                stopLoading(oneView);
+                refreshView(oneView, true, true);
               }
             }
           }
@@ -174,7 +172,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
 
 //This function refreshes view acording viewId, what is just view number!
 //Can be called from scene render, view render
-function refreshView(viewID, reload = false){
+function refreshView(viewID, reload = false, stopLoading = false){
     try {
       var currModel = JSON.stringify(Knack.views['view_'+viewID].model.attributes);
       const a = {}
@@ -185,7 +183,7 @@ function refreshView(viewID, reload = false){
           //refresh view on page
           setTimeout(function(){
             Knack.views['view_'+viewID].render();
-            fillLoading(viewID);
+            if (stopLoading) {stopLoading(oneView);} else {fillLoading(viewID);}
           }, 50);
           return true;
         } else {
