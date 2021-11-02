@@ -13,7 +13,10 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
       //Check if the row has field for the date - it should be by all when it is updated
       try {
         if ($(this).attr('id')!==undefined){
-          let orderNumber = $(this).find('td').eq(0).text().match(new RegExp(/PCD\/VX Order: \d*/))[0].replace('PCD/VX Order: ','');
+          //let orderNumber = $(this).find('td').eq(0).text().match(new RegExp(/PCD\/VX Order: \d*/))[0].replace('PCD/VX Order: ','');
+          let orderNumber = $(this).find('td').eq(0).text();
+          orderNumber = orderNumber.substring(0,orderNumber.indexOf('Order Placed:'));
+          orderNumber = orderNumber.substring(orderNumber.indexOf('Order: ')+7)
           console.log('orderNumber',orderNumber);
           if($(this).find('div[id="dodp"]').length){
               //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
