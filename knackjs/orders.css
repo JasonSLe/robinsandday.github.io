@@ -1397,6 +1397,8 @@ color: #FFFFFF;
   transition-duration: .3s;
 }
 
+#view_4043 .kn-detail-label {background-color: transparent;}
+
 /******************************** NEW VEHICLE DIALOG ADMINISTRATION PAGE ******************************/
 
 /******** Group PSA Auto Allocated Orders To Add To Autoline (W, X, Y, C buyer types) *********/
