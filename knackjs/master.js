@@ -4496,4 +4496,6 @@ $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"
 });
 }
 
+  $('div[id="kn-input-field_3935"]>div[style="margin-top: 5px;"]').hide();
+    });
 
