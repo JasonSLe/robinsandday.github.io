@@ -226,6 +226,11 @@ $(document).on('knack-view-render.view_4887', function(event, view, data) {
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#aftersales-service-reporting?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+$(document).on('knack-view-render.view_4929', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#parts-sales-reporting?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 function openTab(url) {
   // Create link in memory
   var a = window.document.createElement("a");
@@ -299,8 +304,8 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     // Setup the onclick event for our toggle button to slideToggle the header open and closed, and add a class to the body tag so we can adjust the iframe height
     toggleButton.addEventListener('click', toggleHeaderVisibility);
 
-    // Always hide the header when rendering scene in IFRAME, add other scenes if necessary
-    if (scene.key == 'scene_860' || scene.key == 'scene_1269' || scene.key == 'scene_1271' || scene.key == 'scene_1273' || scene.key == 'scene_1279' || scene.key == 'scene_1339' || scene.key == 'scene_1362' || scene.key == 'scene_1412' || scene.key == 'scene_1497') {
+    // Always hide/collapse the header when rendering scene in IFRAME, add other scenes if necessary
+    if (scene.key == 'scene_860' || scene.key == 'scene_1269' || scene.key == 'scene_1271' || scene.key == 'scene_1273' || scene.key == 'scene_1279' || scene.key == 'scene_1339' || scene.key == 'scene_1362' || scene.key == 'scene_1412' || scene.key == 'scene_1497' || scene.key == 'scene_1505') {
         if (window.matchMedia('(min-width: 768px)').matches !== false) {
             toggleHeaderVisibility('hidden');
         }
