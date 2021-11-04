@@ -51,6 +51,7 @@ var submitUserLoginForm = function() {
     $('input[type="submit"]').click();
 };
 
+//MASTER/SLAVE CONNECT
 //Scenes where the App is accessed from the Master App and needs to login
 var loginSceneNames = ["scene_20","scene_32","scene_38","scene_42","scene_44","scene_52"]; ///add view numbers as necessary
 
