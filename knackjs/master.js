@@ -4283,7 +4283,7 @@ $(document).on('knack-view-render.' + selector_view_name, function(event, view, 
     $('td[class*="field_7215"]').hide();
     $('div[id="view_1149"] table>tbody>tr').each(function(){
       $(this).find('td[data-field-key="field_3155"]').attr('data-tooltip',getFieldForRowID('view_1149','field_7215',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_3155"]').addClass('tooltip-right');
+      $(this).find('td[data-field-key="field_3155"]').addClass('tooltip-bottom');
   });
 });
 
@@ -4501,4 +4501,5 @@ $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"
 });
 }
 
+ 
 

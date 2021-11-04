@@ -1378,6 +1378,27 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+#view_4043 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#view_4043 > section > div > div > div > div > div > div > span > a:hover {
+color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+#view_4043 .kn-detail-label {background-color: transparent;}
+
 /******************************** NEW VEHICLE DIALOG ADMINISTRATION PAGE ******************************/
 
 /******** Group PSA Auto Allocated Orders To Add To Autoline (W, X, Y, C buyer types) *********/
