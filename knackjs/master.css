@@ -4520,6 +4520,29 @@ background-color:#0f2542;
 
 #view_4522 .kn-detail-label {background-color: transparent;}
 
+/* Upload Tax Confirmation Page - Admin Confirm Handover */
+
+#kn-scene_1134 .kn-detail-body a.kn-link-page .admin-task {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+}
+
+#kn-scene_1134 .kn-detail-body a:hover.kn-link-page .admin-task {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+#view_4934 .kn-detail-label {background-color: transparent;}
+
 /* Links to Audit Page from Deal File and Handover Docs */
 
 #view_4296 > section > div > div > div > div > div > div > span > a {
