@@ -2777,6 +2777,32 @@ color: #FFFFFF;
 
 #view_4014 .kn-detail-label {background-color: transparent;}
 
+/* Vehicle Tax Confirmation - Admin Confirm Handover */
+
+#view_4059 > section > div > div:nth-child(3) > div > div > div > div > span > a {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+  font-weight: bold;
+}
+
+#view_4059 > section > div > div:nth-child(3) > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  font-weight: bold;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+#view_4059 .kn-detail-label {background-color: transparent;}
+
+
 
 /* Detail Labels on Receipt of Monies Page */
 
