@@ -2783,19 +2783,21 @@ color: #FFFFFF;
   color: #FFFFFF;
   background-color: #FFA100;
   padding: 8px;
-  width: 250px;
+  width: 300px;
   display: inline-block;
   border-left: 10px solid #DE3163;
   font-weight: bold;
+  text-align: center;
 }
 
 #view_4059 > section > div > div:nth-child(3) > div > div > div > div > span > a:hover {
   color: #FFFFFF;
   background-color: #D18400;
   padding: 8px;
-  width: 250px;
+  width: 300px;
   display: inline-block;
   font-weight: bold;
+  text-align: center;
   transition-property: color;
   transition-duration: .3s;
 }
