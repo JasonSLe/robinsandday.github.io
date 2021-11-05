@@ -4529,6 +4529,7 @@ background-color:#0f2542;
   width: 250px;
   display: inline-block;
   border-left: 10px solid #DE3163;
+  font-weight: bold;
 }
 
 #view_4934 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a:hover {
@@ -4537,6 +4538,7 @@ background-color:#0f2542;
   padding: 8px;
   width: 250px;
   display: inline-block;
+  font-weight: bold;
   transition-property: color;
   transition-duration: .3s;
 }
