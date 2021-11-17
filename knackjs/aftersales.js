@@ -796,3 +796,20 @@ try{
     }).responseText;
 }
 });
+
+//auto reload Get tyres in customer & vehicle look up /precalls
+$(document).on('knack-record-update.view_230', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 100);
+
+  Knack.showSpinner();
+  
+});
+//auto reload Clear tyres in customer & vehicle look up /precalls
+$(document).on('knack-record-update.view_243', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 100);
+
+  Knack.showSpinner();
+  
+});
