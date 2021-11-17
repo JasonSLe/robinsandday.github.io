@@ -115,6 +115,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
               if (Knack.views['view_'+one.views[0]].model.attributes[one.mainField]===''){
                   recheck = true;
                   if (runCounter===1){
+                    console.log('fillLoading');
                     for (oneView of one.views){
                       fillLoading(oneView);
                     }
