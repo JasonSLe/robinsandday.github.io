@@ -204,7 +204,6 @@ function formatDateGB(date){
 function fillLoading(viewID){
   $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
     if ($(this).text().trim()===''){
-      console.log('fillLoadingOne');
       $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
     }
   });
