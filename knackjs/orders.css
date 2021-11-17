@@ -1002,6 +1002,12 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(15) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /* Deal File Search Filters on Admin Page */
 
 #view_2955 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -1098,6 +1104,54 @@ This removes white spaces from all table headers*/
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
+}
+
+/******** DEAL FILES FOR ADMIN TO PLACE ORDER ON ADMIN PAGE *********/
+
+#view_4052 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4052 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4052 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4052 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4052 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4052 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4052 th span
+{
+  margin: auto !important;
+}
+
+#view_4052 
+{
+  margin: auto !important;
 }
 
 /******** MANAGER ORDERS TO DO LIST ON ADMIN PAGE *********/
@@ -1621,6 +1675,39 @@ color: #FFFFFF;
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
+}
+
+/*** Deal Files Requiring Action ***/
+
+#view_4060 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4060 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4060 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4060 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4060 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+	
 }
 
 /*** Deal File Manager List of Vehicles Delivered ***/
@@ -2728,6 +2815,34 @@ color: #FFFFFF;
 #view_4013 .kn-detail-label {background-color: transparent;}
 
 #view_4014 .kn-detail-label {background-color: transparent;}
+
+/* Vehicle Tax Confirmation - Admin Confirm Handover */
+
+#view_4059 > section > div > div:nth-child(3) > div > div > div > div > span > a {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  width: 300px;
+  display: inline-block;
+  border-left: 10px solid #DE3163;
+  font-weight: bold;
+  text-align: center;
+}
+
+#view_4059 > section > div > div:nth-child(3) > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  width: 300px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+#view_4059 .kn-detail-label {background-color: transparent;}
+
 
 
 /* Detail Labels on Receipt of Monies Page */
