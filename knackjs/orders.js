@@ -659,6 +659,53 @@ $(document).on('knack-view-render.view_4001', function(event, view, data) {
   Knack.fn.hideExpand("view_4001");
 });
 
+
+// MANAGER VIEWS
+$(document).on('knack-view-render.view_3810', function(event, view, data) {
+  console.log('view3810');
+  Knack.fn.hideExpand("view_3810");
+});
+
+$(document).on('knack-view-render.view_4060', function(event, view, data) {
+  console.log('view4060');
+  Knack.fn.hideExpand("view_4060");
+});
+
+$(document).on('knack-view-render.view_3962', function(event, view, data) {
+  console.log('view3962');
+  Knack.fn.hideExpand("view_3962");
+});
+
+$(document).on('knack-view-render.view_3816', function(event, view, data) {
+  console.log('view3816');
+  Knack.fn.hideExpand("view_3816");
+});
+
+$(document).on('knack-view-render.view_3811', function(event, view, data) {
+  console.log('view3811');
+  Knack.fn.hideExpand("view_3811");
+});
+
+$(document).on('knack-view-render.view_3992', function(event, view, data) {
+  console.log('view3992');
+  Knack.fn.hideExpand("view_3992");
+});
+
+$(document).on('knack-view-render.view_3993', function(event, view, data) {
+  console.log('view3993');
+  Knack.fn.hideExpand("view_3993");
+});
+
+$(document).on('knack-view-render.view_3994', function(event, view, data) {
+  console.log('view3994');
+  Knack.fn.hideExpand("view_3994");
+});
+
+$(document).on('knack-view-render.view_4032', function(event, view, data) {
+  console.log('view4032');
+  Knack.fn.hideExpand("view_4032");
+});
+
 // END OF HIDE AND EXPAND CODE
 
 
