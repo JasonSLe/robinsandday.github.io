@@ -701,10 +701,6 @@ $(document).on('knack-view-render.view_3994', function(event, view, data) {
   Knack.fn.hideExpand("view_3994");
 });
 
-$(document).on('knack-view-render.view_4032', function(event, view, data) {
-  console.log('view4032');
-  Knack.fn.hideExpand("view_4032");
-});
 
 // END OF HIDE AND EXPAND CODE
 
