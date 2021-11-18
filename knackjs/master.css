@@ -293,6 +293,25 @@ body {
 
 #view_2142 .kn-detail-label {background-color: transparent;}
 
+/* Link to Pricing and Advert Performance History from Sales Channel Page */
+
+#view_4937 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
+
+#view_4937 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
 
 /****** Used Stock Management Filters *******/
 
