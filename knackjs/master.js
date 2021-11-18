@@ -839,7 +839,7 @@ var addGroupExpandCollapse = function(view) {
 
 }
 
-// USED DEAL FILE ADMIN VIEW - HIDE AND EXPAND TABLES
+// USED DEAL FILE ADMIN AND MANAGER VIEW - HIDE AND EXPAND TABLES
 // CODE FOR HIDE AND EXPANDING TABLE VIEWS - DO NOT ADD VIEWS HERE - ADD THE VIEW NUMBERS BELOW
 
 var originalHeights = [];
@@ -914,6 +914,7 @@ Knack.fn.hideExpand = (viewKey) => {
 };
 
 // ADD THE VIEW NUMBERS THAT YOU WOULD LIKE THE HIDE AND EXPAND FEATURE TO WORK ON
+// ADMIN VIEWS
 $(document).on('knack-view-render.view_4517', function(event, view, data) {
   console.log('view4517');
   Knack.fn.hideExpand("view_4517");
@@ -957,6 +958,32 @@ $(document).on('knack-view-render.view_4516', function(event, view, data) {
 $(document).on('knack-view-render.view_4271', function(event, view, data) {
   console.log('view4271');
   Knack.fn.hideExpand("view_4271");
+});
+
+// MANAGER VIEWS
+$(document).on('knack-view-render.view_4310', function(event, view, data) {
+  console.log('view4310');
+  Knack.fn.hideExpand("view_4310");
+});
+
+$(document).on('knack-view-render.view_4547', function(event, view, data) {
+  console.log('view4547');
+  Knack.fn.hideExpand("view_4547");
+});
+
+$(document).on('knack-view-render.view_4556', function(event, view, data) {
+  console.log('view4556');
+  Knack.fn.hideExpand("view_4556");
+});
+
+$(document).on('knack-view-render.view_4557', function(event, view, data) {
+  console.log('view4557');
+  Knack.fn.hideExpand("view_4557");
+});
+
+$(document).on('knack-view-render.view_4526', function(event, view, data) {
+  console.log('view4526');
+  Knack.fn.hideExpand("view_4526");
 });
 
 //END OF HIDE AND EXPAND CODE
