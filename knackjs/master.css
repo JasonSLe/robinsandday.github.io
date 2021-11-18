@@ -299,18 +299,16 @@ body {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00CC66;
-  padding: 8px;
+  padding: 20px;
   display: inline-block;
-  border-left: 10px solid #32a1ce;
 }
 
 #view_4937 > section > div > div > div > div > div > div > span > a:hover {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #32936F;
-  padding: 8px;
+  padding: 20px;
   display: inline-block;
-  border-left: 10px solid #32a1ce;
 }
 
 /****** Used Stock Management Filters *******/
