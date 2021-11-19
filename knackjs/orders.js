@@ -1484,7 +1484,7 @@ $(document).on('knack-form-submit.view_2602', function(event, view, data) {
 });
 
 
-// New Deal File - Automated Comms – **New Deal File Automated Comms - Registration Consent Doc (AFRL) {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/102296823?redirect=true
+// New Deal File - Automated Comms – **New Deal File Automated Comms - Registration Consent Doc Uploaded (AFRL) {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/102296823?redirect=true
 $(document).on('knack-form-submit.view_2705', function(event, view, data) { 
     
     try{
@@ -1510,6 +1510,45 @@ $(document).on('knack-form-submit.view_2705', function(event, view, data) {
 
         let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
         let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - Registration Consent Doc (AFRL) {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+
+// New Deal File - Automated Comms – **New Deal File Automated Comms - Registration Consent Doc UPDATED (AFRL) {(Deal File) Digital Deal File} Slave App
+$(document).on('knack-form-submit.view_2706', function(event, view, data) { 
+    
+    try{
+
+       let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+       let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Registration Consent Doc", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - Registration Consent Doc UPDATED (AFRL) {(Deal File) Digital Deal File} Slave App",
         "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
         var rData = $.ajax({
            url: commandURL,
