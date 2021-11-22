@@ -2185,7 +2185,7 @@ $(document).on('knack-form-submit.view_2584', function(event, view, data) {
 });
 
 
-// New Deal File - NEW P&L
+// New Deal File - NEW P& AND New Car Approved P&L for New Car DOC
 $(document).on('knack-form-submit.view_3927', function(event, view, data) {
      
     try{
@@ -2198,7 +2198,18 @@ $(document).on('knack-form-submit.view_3927', function(event, view, data) {
         contentType: 'application/json',
         data: dataToSend,
         async: false
-      }).responseText;      
+      }).responseText;  
+      
+    let commandURL1 = "https://hook.integromat.com/3e3g6ao4wr3kcgmoejfrgtmeiohlg8rj";
+    let dataToSend1 = JSON.stringify({"Record ID":data.id , "Form":"New Car Digital P&L"});
+
+    var rData = $.ajax({
+        url: commandURL1,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend1,
+        async: false
+    }).responseText;   
       
     }catch(exception){
         console.log("error");
@@ -2208,7 +2219,7 @@ $(document).on('knack-form-submit.view_3927', function(event, view, data) {
         var dateTime = date+' '+time;
 
         let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "// NEW P&L",
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File - NEW P& AND New Car Approved P&L for New Car DOC",
         "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
         var rData = $.ajax({
            url: commandURL,
@@ -2220,6 +2231,7 @@ $(document).on('knack-form-submit.view_3927', function(event, view, data) {
         
     }
 });
+
 
 
 // **New Deal File PDF - Customer Satisfaction Survey VX signed at dealer V2 {(Deal File) Customer Satisfaction Survey} Slave App - Replaces https://zapier.com/app/editor/116188221?redirect=true
@@ -2375,37 +2387,4 @@ $(document).on('knack-form-submit.view_2746', function(event, view, data) {
     }
 });
 
-//New Car Approved P&L for New Car DOC
-$(document).on('knack-form-submit.view_3927', function(event, view, data) {
 
-try{
-
-    let commandURL = "https://hook.integromat.com/3e3g6ao4wr3kcgmoejfrgtmeiohlg8rj";
-    let dataToSend = JSON.stringify({"Record ID":data.id , "Form":"New Car Digital P&L"});
-
-    var rData = $.ajax({
-        url: commandURL,
-        type: 'POST',
-        contentType: 'application/json',
-        data: dataToSend,
-        async: false
-    }).responseText;    
-}catch(exception){
-    console.log("error");
-    var today = new Date();
-    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    var dateTime = date+' '+time;
-
-    let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-    let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Car Approved P&L for New Car DOC",
-    "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-    var rData = $.ajax({
-       url: commandURL,
-       type: 'POST',
-       contentType: 'application/json',
-       data: dataToSend,
-       async: false
-    }).responseText;
-}
-});
