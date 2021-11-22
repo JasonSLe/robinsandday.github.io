@@ -2380,7 +2380,7 @@ $(document).on('knack-form-submit.view_3927', function(event, view, data) {
 
 try{
 
-    let commandURL = "https://hook.integromat.com/3q2btvigi1w229klrxitmlnluedv9v3c";
+    let commandURL = "https://hook.integromat.com/3e3g6ao4wr3kcgmoejfrgtmeiohlg8rj";
     let dataToSend = JSON.stringify({"Record ID":data.id , "Form":"New Car Digital P&L"});
 
     var rData = $.ajax({
