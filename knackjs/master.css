@@ -311,6 +311,18 @@ body {
   display: inline-block;
 }
 
+/* Reg No CSS to look like Reg */
+
+#view_4969 > section > div > div > div > div > div > div > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
 /****** Used Stock Management Filters *******/
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
