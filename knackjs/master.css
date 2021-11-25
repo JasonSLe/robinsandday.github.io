@@ -7563,10 +7563,9 @@ text-transform: uppercase;
 }
 
 #view_4912 .kn-detail-label {
-  height: 10px !important;
-  width: 10px !important;
-  max-width: 20px !important;
-  min-width: 10px !important;
+  height: 50px !important;
+  max-width: 50px !important;
+  min-width: 50px !important;
   padding: 2px !important;
   border: 2px !important;
   margin: 2px !important;
