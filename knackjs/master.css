@@ -7563,5 +7563,6 @@ text-transform: uppercase;
 }
 
 #view_4912 .kn-detail-label {
-  width: auto !important;
+  height: 20px;
+  width: 20px;
 }
