@@ -3966,6 +3966,18 @@ font-size:12px;
 
 /* Change size of Region Table */
 
+#view_4108 th span
+{
+  margin: auto !important;
+  
+}
+
+#view_4108
+{
+  margin: auto !important;
+  font-size: 15px;
+  
+}
 
 
 
