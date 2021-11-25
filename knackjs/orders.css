@@ -487,6 +487,24 @@ This removes white spaces from all table headers*/
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_2389 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2389 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
 /*********** NEW DEAL FILE ADMIN PAGE *******************/
 
 #view_2875 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
@@ -2049,7 +2067,7 @@ border-left: 10px solid #DE3163;
 
 #view_2532 {font-size: 10px;}*/
 
-#view_2502 {font-size: 12px;}*/
+#view_2502 {font-size: 12px;}
 
 #view_4025 .kn-detail-label {background-color: transparent;}
 
@@ -3858,6 +3876,22 @@ font-size:12px;
     font-size: 14px;
 }
 
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_6850{
+    color: #008000;
+    font-size: 14px;
+}
+
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_6549{
+    color: #008000;
+    font-size: 14px;
+}
+
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_6881{
+    color: #008000;
+    font-size: 14px;
+}
+
+
 #view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6855{
     color: #008000;
     font-size: 14px;
@@ -3928,8 +3962,22 @@ font-size:12px;
     font-size: 14px;
 }
 
+/***************** New DOC Formatting ******************/
 
+/* Change size of Region Table */
 
+#view_4108 th span
+{
+  margin: auto !important;
+  
+}
+
+#view_4108
+{
+  margin: auto !important;
+  font-size: 15px;
+  
+}
 
 
 

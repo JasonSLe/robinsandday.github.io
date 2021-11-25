@@ -293,6 +293,35 @@ body {
 
 #view_2142 .kn-detail-label {background-color: transparent;}
 
+/* Link to Pricing and Advert Performance History from Sales Channel Page */
+
+#view_4937 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 12px;
+  display: inline-block;
+}
+
+#view_4937 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 12px;
+  display: inline-block;
+}
+
+/* Reg No CSS to look like Reg */
+
+#view_4969 > section > div > div > div > div > div > div > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
 
 /****** Used Stock Management Filters *******/
 
@@ -4690,8 +4719,15 @@ background-color:#0f2542;
   text-decoration-color: #388cf5;
   color: #388cf5;
 }
-/* GAP / FSI / CRI */
+/* GAP / FSI */
 #kn-input-field_6096 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* CRI */
+#kn-input-field_6433 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
@@ -7505,3 +7541,79 @@ padding-bottom: 0px;
   }
   
   /*TOOLTIP CSS END*/
+
+#\36 1207baf95229a0a59a7c2f7 > section > div > div > div:nth-child(1) > div > div > div.kn-detail-body > span > strong > span > a {
+background-color: #EEEEEE;
+font-weight: bold;
+padding: 10px 15px;
+margin: 5px 5px !important;
+display: inline-block;
+border-radius: 10px;
+margin: 1.5rem;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+border: none;
+outline:none;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+text-transform: uppercase;
+align: center;
+}
+
+#\36 1207baf95229a0a59a7c2f7 > section > div > div > div:nth-child(1) > div > div > div.kn-detail-body > span > strong > span > a:hover {
+  background-color: #CDCDCD;
+}
+
+#\36 1207baf95229a0a59a7c2f7 > section > div > div > div:nth-child(2) > div > div > div.kn-detail-body > span > strong > span > a {
+background-color: #EEEEEE;
+font-weight: bold;
+padding: 10px 15px;
+margin: 5px 5px !important;
+display: inline-block;
+border-radius: 10px;
+margin: 1.5rem;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+border: none;
+outline:none;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+text-transform: uppercase;
+align: center;
+}
+
+#\36 1207baf95229a0a59a7c2f7 > section > div > div > div:nth-child(2) > div > div > div.kn-detail-body > span > strong > span > a:hover {
+  background-color: #CDCDCD;
+}
+
+#\36 1207baf95229a0a59a7c2f7 > section > div > div > div:nth-child(3) > div > div > div.kn-detail-body > span > strong > span > a {
+background-color: #EEEEEE;
+font-weight: bold;
+padding: 10px 15px;
+margin: 5px 5px !important;
+display: inline-block;
+border-radius: 10px;
+margin: 1.5rem;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+border: none;
+outline:none;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+text-transform: uppercase;
+align: center;
+}
+
+#\36 1207baf95229a0a59a7c2f7 > section > div > div > div:nth-child(3) > div > div > div.kn-detail-body > span > strong > span > a:hover {
+  background-color: #CDCDCD;
+}
+
+#view_4912 .kn-detail-label {
+  background-color: transparent;
+  height: 50px !important;
+  max-width: 30px !important;
+  min-width: 30px !important;
+  padding: 2px !important;
+  border: 2px !important;
+  margin: 2px !important;
+  text-align: center;
+}
+
+

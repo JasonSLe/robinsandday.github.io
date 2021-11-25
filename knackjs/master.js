@@ -844,6 +844,157 @@ var addGroupExpandCollapse = function(view) {
 
 }
 
+// USED DEAL FILE ADMIN AND MANAGER VIEW - HIDE AND EXPAND TABLES
+// CODE FOR HIDE AND EXPANDING TABLE VIEWS - DO NOT ADD VIEWS HERE - ADD THE VIEW NUMBERS BELOW
+
+var originalHeights = [];
+
+Knack.fn = Knack.fn || {};
+Knack.fn.hideExpand = (viewKey) => {
+  Knack.$(`#${viewKey} .expandBtn`).show();
+  Knack.$(`#${viewKey} .kn-title`).prepend(
+    '<i class="fa fa-minus toggleBtn hidden" style="color:#FFA100; margin: 5px"></i>'
+  );
+  Knack.$(`#${viewKey} section`).show();
+  Knack.$(`#${viewKey} .kn-table-wrapper`).show();
+  Knack.$(`#${viewKey} .kn-records-nav`).show();
+  Knack.$(`#${viewKey} .kn-description`).show();
+  Knack.$(`#${viewKey} .toggleBtn`).on("click", function () {
+    let classes = Knack.$(this).attr("class").split(/\s+/);
+    if (classes.indexOf("hidden") === 2) {
+      //show it
+      const $section = Knack.$(this).parent().parent().siblings("section");
+      const $table = Knack.$(this)
+        .parent()
+        .parent()
+        .siblings(".kn-table-wrapper");
+      if ($section.length) {
+        $section.show();
+      } else if ($table.length) {
+        const $navFilters = Knack.$(this)
+          .parent()
+          .parent()
+          .siblings(".kn-records-nav");
+        $table.show();
+        $navFilters.show();
+        //console.log('prevH',originalHeights.find(function(el){return el.viewKey === viewKey}).height);
+        $table.height(originalHeights.find(function(el){return el.viewKey === viewKey}).height);
+      }
+      Knack.$(this).removeClass("hidden");
+      Knack.$(this).removeClass("fa-plus");
+      Knack.$(this).addClass("fa-minus");
+      Knack.$(`#${viewKey} .kn-description`).show();
+      
+      
+      
+      
+    } else {
+      //hide it
+      const $section = Knack.$(this).parent().parent().siblings("section");
+      const $table = Knack.$(this)
+        .parent()
+        .parent()
+        .siblings(".kn-table-wrapper");
+      let isSaved = originalHeights.find(function(el){return el.viewKey === viewKey});
+      if (!isSaved){
+        originalHeights.push({viewKey:viewKey,height:$table.height()})
+      }
+      //console.log('height', originalHeights);
+      if ($section.length) {
+        $section.hide();
+      } else if ($table.length) {
+        const $navFilters = Knack.$(this)
+          .parent()
+          .parent()
+          .siblings(".kn-records-nav");
+        $table.hide();
+        $navFilters.hide();
+      }
+      Knack.$(this).addClass("hidden");
+      Knack.$(this).removeClass("fa-minus");
+      Knack.$(this).addClass("fa-plus");
+      Knack.$(`#${viewKey} .kn-description`).hide();
+    }
+  });
+};
+
+// ADD THE VIEW NUMBERS THAT YOU WOULD LIKE THE HIDE AND EXPAND FEATURE TO WORK ON
+// ADMIN VIEWS
+$(document).on('knack-view-render.view_4517', function(event, view, data) {
+  console.log('view4517');
+  Knack.fn.hideExpand("view_4517");
+});
+
+$(document).on('knack-view-render.view_3310', function(event, view, data) {
+  console.log('view3310');
+  Knack.fn.hideExpand("view_3310");
+});
+
+$(document).on('knack-view-render.view_4889', function(event, view, data) {
+  console.log('view4889');
+  Knack.fn.hideExpand("view_4889");
+});
+
+$(document).on('knack-view-render.view_3136', function(event, view, data) {
+  console.log('view3136');
+  Knack.fn.hideExpand("view_3136");
+});
+
+$(document).on('knack-view-render.view_3135', function(event, view, data) {
+  console.log('view3135');
+  Knack.fn.hideExpand("view_3135");
+});
+
+$(document).on('knack-view-render.view_3124', function(event, view, data) {
+  console.log('view3124');
+  Knack.fn.hideExpand("view_3124");
+});
+
+$(document).on('knack-view-render.view_4602', function(event, view, data) {
+  console.log('view4602');
+  Knack.fn.hideExpand("view_4602");
+});
+
+$(document).on('knack-view-render.view_4516', function(event, view, data) {
+  console.log('view4516');
+  Knack.fn.hideExpand("view_4516");
+});
+
+$(document).on('knack-view-render.view_4271', function(event, view, data) {
+  console.log('view4271');
+  Knack.fn.hideExpand("view_4271");
+});
+
+// MANAGER VIEWS
+$(document).on('knack-view-render.view_4310', function(event, view, data) {
+  console.log('view4310');
+  Knack.fn.hideExpand("view_4310");
+});
+
+$(document).on('knack-view-render.view_4547', function(event, view, data) {
+  console.log('view4547');
+  Knack.fn.hideExpand("view_4547");
+});
+
+$(document).on('knack-view-render.view_4556', function(event, view, data) {
+  console.log('view4556');
+  Knack.fn.hideExpand("view_4556");
+});
+
+$(document).on('knack-view-render.view_4557', function(event, view, data) {
+  console.log('view4557');
+  Knack.fn.hideExpand("view_4557");
+});
+
+$(document).on('knack-view-render.view_4526', function(event, view, data) {
+  console.log('view4526');
+  Knack.fn.hideExpand("view_4526");
+});
+
+//END OF HIDE AND EXPAND CODE
+
+
+
 
 // ----------  refresh Prep Centre driver pickup table every 60 seconds but not the page itself  ----------
 
@@ -4514,5 +4665,4 @@ $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"
 });
 }
 
- 
 

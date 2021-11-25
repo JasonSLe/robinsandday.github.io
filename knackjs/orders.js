@@ -523,6 +523,223 @@ function recursivecall(){
  setTimeout(function () { if($("#view_3767").is(":visible")==true){ Knack.views["view_3767"].model.fetch();recursivecall();} }, 50000);
 }
 
+
+
+// NEW DEAL FILE ADMIN AND MANAGER VIEW - HIDE AND EXPAND TABLES
+// CODE FOR HIDE AND EXPANDING TABLE VIEWS - DO NOT ADD VIEWS HERE - ADD THE VIEW NUMBERS BELOW
+
+var originalHeights = [];
+
+Knack.fn = Knack.fn || {};
+Knack.fn.hideExpand = (viewKey) => {
+  Knack.$(`#${viewKey} .expandBtn`).show();
+  Knack.$(`#${viewKey} .kn-title`).prepend(
+    '<i class="fa fa-minus toggleBtn hidden" style="color:#FFA100; margin: 5px"></i>'
+  );
+  Knack.$(`#${viewKey} section`).show();
+  Knack.$(`#${viewKey} .kn-table-wrapper`).show();
+  Knack.$(`#${viewKey} .kn-records-nav`).show();
+  Knack.$(`#${viewKey} .kn-description`).show();
+  Knack.$(`#${viewKey} .toggleBtn`).on("click", function () {
+    let classes = Knack.$(this).attr("class").split(/\s+/);
+    if (classes.indexOf("hidden") === 2) {
+      //show it
+      const $section = Knack.$(this).parent().parent().siblings("section");
+      const $table = Knack.$(this)
+        .parent()
+        .parent()
+        .siblings(".kn-table-wrapper");
+      if ($section.length) {
+        $section.show();
+      } else if ($table.length) {
+        const $navFilters = Knack.$(this)
+          .parent()
+          .parent()
+          .siblings(".kn-records-nav");
+        $table.show();
+        $navFilters.show();
+        //console.log('prevH',originalHeights.find(function(el){return el.viewKey === viewKey}).height);
+        $table.height(originalHeights.find(function(el){return el.viewKey === viewKey}).height);
+      }
+      Knack.$(this).removeClass("hidden");
+      Knack.$(this).removeClass("fa-plus");
+      Knack.$(this).addClass("fa-minus");
+      Knack.$(`#${viewKey} .kn-description`).show();
+      
+      
+      
+      
+    } else {
+      //hide it
+      const $section = Knack.$(this).parent().parent().siblings("section");
+      const $table = Knack.$(this)
+        .parent()
+        .parent()
+        .siblings(".kn-table-wrapper");
+      let isSaved = originalHeights.find(function(el){return el.viewKey === viewKey});
+      if (!isSaved){
+        originalHeights.push({viewKey:viewKey,height:$table.height()})
+      }
+      //console.log('height', originalHeights);
+      if ($section.length) {
+        $section.hide();
+      } else if ($table.length) {
+        const $navFilters = Knack.$(this)
+          .parent()
+          .parent()
+          .siblings(".kn-records-nav");
+        $table.hide();
+        $navFilters.hide();
+      }
+      Knack.$(this).addClass("hidden");
+      Knack.$(this).removeClass("fa-minus");
+      Knack.$(this).addClass("fa-plus");
+      Knack.$(`#${viewKey} .kn-description`).hide();
+    }
+  });
+};
+
+// ADD THE VIEW NUMBERS THAT YOU WOULD LIKE THE HIDE AND EXPAND FEATURE TO WORK ON
+// ADMIN VIEWS
+$(document).on('knack-view-render.view_3767', function(event, view, data) {
+  console.log('view3767');
+  Knack.fn.hideExpand("view_3767");
+});
+
+$(document).on('knack-view-render.view_4052', function(event, view, data) {
+  console.log('view4052');
+  Knack.fn.hideExpand("view_4052");
+});
+
+$(document).on('knack-view-render.view_2871', function(event, view, data) {
+  console.log('view2871');
+  Knack.fn.hideExpand("view_2871");
+});
+
+$(document).on('knack-view-render.view_2874', function(event, view, data) {
+  console.log('view2874');
+  Knack.fn.hideExpand("view_2874");
+});
+
+$(document).on('knack-view-render.view_2897', function(event, view, data) {
+  console.log('view2897');
+  Knack.fn.hideExpand("view_2897");
+});
+
+$(document).on('knack-view-render.view_2873', function(event, view, data) {
+  console.log('view2873');
+  Knack.fn.hideExpand("view_2873");
+});
+
+$(document).on('knack-view-render.view_3989', function(event, view, data) {
+  console.log('view3989');
+  Knack.fn.hideExpand("view_3989");
+});
+
+$(document).on('knack-view-render.view_4038', function(event, view, data) {
+  console.log('view4038');
+  Knack.fn.hideExpand("view_4038");
+});
+
+$(document).on('knack-view-render.view_3966', function(event, view, data) {
+  console.log('view3966');
+  Knack.fn.hideExpand("view_3966");
+});
+
+$(document).on('knack-view-render.view_3988', function(event, view, data) {
+  console.log('view3988');
+  Knack.fn.hideExpand("view_3988");
+});
+
+$(document).on('knack-view-render.view_3766', function(event, view, data) {
+  console.log('view3766');
+  Knack.fn.hideExpand("view_3766");
+});
+
+$(document).on('knack-view-render.view_4001', function(event, view, data) {
+  console.log('view4001');
+  Knack.fn.hideExpand("view_4001");
+});
+
+
+// MANAGER VIEWS
+$(document).on('knack-view-render.view_3810', function(event, view, data) {
+  console.log('view3810');
+  Knack.fn.hideExpand("view_3810");
+});
+
+$(document).on('knack-view-render.view_4060', function(event, view, data) {
+  console.log('view4060');
+  Knack.fn.hideExpand("view_4060");
+});
+
+$(document).on('knack-view-render.view_3962', function(event, view, data) {
+  console.log('view3962');
+  Knack.fn.hideExpand("view_3962");
+});
+
+$(document).on('knack-view-render.view_3816', function(event, view, data) {
+  console.log('view3816');
+  Knack.fn.hideExpand("view_3816");
+});
+
+$(document).on('knack-view-render.view_3811', function(event, view, data) {
+  console.log('view3811');
+  Knack.fn.hideExpand("view_3811");
+});
+
+$(document).on('knack-view-render.view_3992', function(event, view, data) {
+  console.log('view3992');
+  Knack.fn.hideExpand("view_3992");
+});
+
+$(document).on('knack-view-render.view_3993', function(event, view, data) {
+  console.log('view3993');
+  Knack.fn.hideExpand("view_3993");
+});
+
+$(document).on('knack-view-render.view_3994', function(event, view, data) {
+  console.log('view3994');
+  Knack.fn.hideExpand("view_3994");
+});
+
+// ADMIN VEHICLE ORDER ADMINISTRATION PAGE
+$(document).on('knack-view-render.view_2390', function(event, view, data) {
+  console.log('view2390');
+  Knack.fn.hideExpand("view_2390");
+});
+
+$(document).on('knack-view-render.view_2391', function(event, view, data) {
+  console.log('view2391');
+  Knack.fn.hideExpand("view_2391");
+});
+
+$(document).on('knack-view-render.view_2392', function(event, view, data) {
+  console.log('view2392');
+  Knack.fn.hideExpand("view_2392");
+});
+
+$(document).on('knack-view-render.view_2393', function(event, view, data) {
+  console.log('view2393');
+  Knack.fn.hideExpand("view_2393");
+});
+
+$(document).on('knack-view-render.view_2394', function(event, view, data) {
+  console.log('view2394');
+  Knack.fn.hideExpand("view_2394");
+});
+
+$(document).on('knack-view-render.view_2395', function(event, view, data) {
+  console.log('view2395');
+  Knack.fn.hideExpand("view_2395");
+});
+
+
+// END OF HIDE AND EXPAND CODE
+
+
+
+
 // NEW DEAL FILE – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION
 $(document).on('knack-form-submit.view_2765', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/lnunp83lom13c9swu0vgabmurbjxj5x6" ;
@@ -1300,7 +1517,7 @@ $(document).on('knack-form-submit.view_2602', function(event, view, data) {
 });
 
 
-// New Deal File - Automated Comms – **New Deal File Automated Comms - Registration Consent Doc (AFRL) {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/102296823?redirect=true
+// New Deal File - Automated Comms – **New Deal File Automated Comms - Registration Consent Doc Uploaded (AFRL) {(Deal File) Digital Deal File} Slave App - Replaces https://zapier.com/app/editor/102296823?redirect=true
 $(document).on('knack-form-submit.view_2705', function(event, view, data) { 
     
     try{
@@ -1326,6 +1543,45 @@ $(document).on('knack-form-submit.view_2705', function(event, view, data) {
 
         let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
         let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - Registration Consent Doc (AFRL) {(Deal File) Digital Deal File} Slave App",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
+
+// New Deal File - Automated Comms – **New Deal File Automated Comms - Registration Consent Doc UPDATED (AFRL) {(Deal File) Digital Deal File} Slave App
+$(document).on('knack-form-submit.view_2706', function(event, view, data) { 
+    
+    try{
+
+       let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
+       let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"Registration Consent Doc", "Source Of Payload":"knack direct"});
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File Automated Comms - Registration Consent Doc UPDATED (AFRL) {(Deal File) Digital Deal File} Slave App",
         "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
         var rData = $.ajax({
            url: commandURL,
@@ -1931,7 +2187,7 @@ $(document).on('knack-form-submit.view_2584', function(event, view, data) {
 });
 
 
-// New Deal File - NEW P&L
+// New Deal File - NEW P& AND New Car Approved P&L for New Car DOC
 $(document).on('knack-form-submit.view_3927', function(event, view, data) {
      
     try{
@@ -1944,7 +2200,18 @@ $(document).on('knack-form-submit.view_3927', function(event, view, data) {
         contentType: 'application/json',
         data: dataToSend,
         async: false
-      }).responseText;      
+      }).responseText;  
+      
+    let commandURL1 = "https://hook.integromat.com/3e3g6ao4wr3kcgmoejfrgtmeiohlg8rj";
+    let dataToSend1 = JSON.stringify({"Record ID":data.id , "Form":"New Car Digital P&L"});
+
+    var rData = $.ajax({
+        url: commandURL1,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend1,
+        async: false
+    }).responseText;   
       
     }catch(exception){
         console.log("error");
@@ -1954,7 +2221,7 @@ $(document).on('knack-form-submit.view_3927', function(event, view, data) {
         var dateTime = date+' '+time;
 
         let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "// NEW P&L",
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "New Deal File - NEW P& AND New Car Approved P&L for New Car DOC",
         "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
         var rData = $.ajax({
            url: commandURL,
@@ -1966,6 +2233,7 @@ $(document).on('knack-form-submit.view_3927', function(event, view, data) {
         
     }
 });
+
 
 
 // **New Deal File PDF - Customer Satisfaction Survey VX signed at dealer V2 {(Deal File) Customer Satisfaction Survey} Slave App - Replaces https://zapier.com/app/editor/116188221?redirect=true
