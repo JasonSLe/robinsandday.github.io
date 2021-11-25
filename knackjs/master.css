@@ -7557,3 +7557,7 @@ outline:none;
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 text-transform: uppercase;
 }
+
+#\36 1207baf95229a0a59a7c2f7 > section > div.kn-details-column.first.column.is-horizontal > div > div:nth-child(1) > div > div > div > span > strong > span > a:hover {
+  background-color: #CDCDCD;
+}
