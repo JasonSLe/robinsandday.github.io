@@ -7563,10 +7563,10 @@ text-transform: uppercase;
 }
 
 #view_4912 .kn-detail-label {
-  height: 5px !important;
-  width: 5px !important;
-  min-width: 5px !important;
-  max-width: 5px !important;
+  height: 10px !important;
+  width: 10px !important;
+  padding: 2px !important;
+  border: 2px !important;
   text-align: left;
 }
 
