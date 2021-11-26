@@ -3979,8 +3979,10 @@ font-size:12px;
   
 }
 
+/*Transparent DetaiL Labels*/
 
-
+#view_4111 .kn-detail-label {background-color: transparent;}
+#view_4117 .kn-detail-label {background-color: transparent;}
 
 
 
