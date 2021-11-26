@@ -98,17 +98,6 @@ hashCode = function(elem) {
   return hash;
 };
 
-function getTokenFromURL(url){
-  if (url.indexOf('token=')!==-1){
-    let tokenS = url.substring(url.indexOf('token=')+6);
-    if (tokenS.indexOf('&')!==-1){
-      tokenS = tokenS.substring(tokenS,tokenS.indexOf('&'));
-    } 
-    return decodeURIComponent(tokenS);
-  } else { return null}
-}
-
-/*
 var submitUserLoginForm = function() {
   console.log('submitUserForm');
   if ($('[id="email"]').length===0){ 
@@ -137,31 +126,6 @@ var submitUserLoginForm = function() {
     $('[id="email"]').val(userName2);
     $('[id="password"]').val(password);
     $('input[type="submit"]').click();
-};*/
-var submitUserLoginForm = function() {
-  if ($('[id="email"]').length===0){ 
-    return;
-  }
-    var url = window.location.href;
-    
-    var token = getTokenFromURL(url);
-
-    console.log('token', token, 'url',url);
-    
-    token = atob(token);
-    if (!token.includes('#')){
-      alert('Wrong token');
-      return;
-    }
-    let userName2 = token.split('#')[0];
-    let password = token.split('#')[1];
-    
-    //type userName from url, my secret password and click login
-    //if auth successfully then it shows the app, otherwise login screen
-    $('[id="email"]').val(userName2);
-    //alert('Pass'+hashCode(userName).toString());
-    $('[id="password"]').val(password);
-    $('input[type="submit"]').click();
 };
 
 //on the login page
@@ -169,9 +133,7 @@ $(document).on("knack-view-render.view_2146", function (event, view) {
   submitUserLoginForm();
 });
 
-//MASTER/SLAVE CONNECT
-//Scenes where the App is accessed from the Master App and needs to login
-var loginSceneNames = ["scene_917","scene_989","scene_883","scene_1074","scene_1113","scene_1115","scene_1190"]; ///add scene numbers as necessary
+var loginSceneNames = ["scene_917","scene_989","scene_883","scene_1074","scene_1113","scene_1115"]; ///add scene numbers as necessary
 
 loginSceneNames.forEach(functionName);
 function functionName(selector_scene){
@@ -2424,5 +2386,4 @@ $(document).on('knack-form-submit.view_2746', function(event, view, data) {
         }).responseText;
     }
 });
-
 
