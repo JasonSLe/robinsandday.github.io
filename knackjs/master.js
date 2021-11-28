@@ -240,7 +240,7 @@ $(document).on('knack-view-render.view_4946', function(event, view, data) {
 
 $(document).on('knack-view-render.view_4982', function(event, view, data) {
   var token = Knack.getUserAttributes().values["field_6440"];
-  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders#general-dealer-groups?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#general-dealer-groups" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 function openTab(url) {
