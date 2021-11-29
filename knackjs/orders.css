@@ -3965,7 +3965,6 @@ font-size:12px;
 /***************** New DOC Formatting ******************/
 
 /* Change size of Region Table */
-
 #view_4108 th span
 {
   margin: auto !important;
@@ -3976,6 +3975,13 @@ font-size:12px;
 {
   margin: auto !important;
   font-size: 15px;
+  
+}
+
+/* Center DOC Headings*/
+#view_4108 th span
+{
+  margin: auto !important;
   
 }
 
