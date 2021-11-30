@@ -1728,6 +1728,13 @@ color: #FFFFFF;
 	
 }
 
+/* Center Headings*/
+
+#view_4060 th span
+{
+  margin: auto !important;
+}
+
 /*** Deal File Manager List of Vehicles Delivered ***/
 
 #view_3962 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
