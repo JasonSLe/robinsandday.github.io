@@ -4682,7 +4682,7 @@ $(document).on('knack-form-submit.view_4985', function(event, view, data) {
 
       var createData = {"VRM":data.field_2694_raw, "Vehicle Stock Record ID":data.id, "Sales Channel Record ID":data.field_4886_raw, "Price":data.field_2725_raw,
                         "CAP ID":data.field_3257_raw, "Current Mileage":data.field_2693_raw, "Registration Date": handlAll(data.field_2695_raw, "date_formatted"), "Vehicle Type":data.field_2586_raw,
-                        "VAT Status":handlAll(data.field_2689_raw, "1")};
+                        "VAT Status":handlAll(data.field_2689_raw, "1"),"Deposit":data.field_7394_raw};
       
       function deleteEmpty(objectA){
         
