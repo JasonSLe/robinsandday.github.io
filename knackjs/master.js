@@ -4665,6 +4665,8 @@ $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"
 });
 }
 
+
+
 // Webhook to Trigger Silent Salesman Scenario to update Deposit for Finance PDF https://www.integromat.com/scenario/2554226/edit
 $(document).on('knack-form-submit.view_4985', function(event, view, data) { 
     
@@ -4673,9 +4675,14 @@ $(document).on('knack-form-submit.view_4985', function(event, view, data) {
 
       let commandURL = "https://hook.integromat.com/8dyychx6lyitshvxjep1l699zc5wym37";
 
+      function handlAll(valueA, fieldName){ 
+            return (valueA? valueA[fieldName]:null);
+        }
+
+
       var createData = {"VRM":data.field_2694_raw, "Vehicle Stock Record ID":data.id, "Sales Channel Record ID":data.field_4886_raw, "Price":data.field_2725_raw,
-                        "CAP ID":data.field_3257_raw, "Current Mileage":data.field_2693_raw, "Registration Date": data.field_2695_raw, "Vehicle Type":data.field_2586_raw,
-                        "VAT Status":data.field_2689_raw};
+                        "CAP ID":data.field_3257_raw, "Current Mileage":data.field_2693_raw, "Registration Date": handlAll(data.field_2695_raw, "date_formatted"), "Vehicle Type":data.field_2586_raw,
+                        "VAT Status":handlAll(data.field_2689_raw, "1")};
       
       function deleteEmpty(objectA){
         
@@ -4715,4 +4722,5 @@ $(document).on('knack-form-submit.view_4985', function(event, view, data) {
         }).responseText;
     }
 });
+
 
