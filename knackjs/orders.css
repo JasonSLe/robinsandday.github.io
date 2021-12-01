@@ -3986,6 +3986,17 @@ font-size:12px;
 }
 
 /* Center DOC Headings*/
+
+#view_4093 th span
+{
+  margin: auto !important;
+}
+
+#view_4105 th span
+{
+  margin: auto !important;
+}
+
 #view_4120 th span
 {
   margin: auto !important;
