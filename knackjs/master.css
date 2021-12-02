@@ -4737,6 +4737,13 @@ background-color:#0f2542;
   text-decoration-color: #388cf5;
   color: #388cf5;
 }
+/* Extended Warranty (Spoticar Only) */
+#kn-input-field_7396 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
 /* GAP / FSI */
 #kn-input-field_6096 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
