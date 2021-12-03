@@ -522,42 +522,6 @@ function recursivecall(){
 }
 
 
-
-// ----------  Table expand or collapse groupings ----------
-
-// Call the function when your table renders – do this for each table you’re applying this to
-$(document).on('knack-view-render.view_4060', function(event, view, data) {
-    addGroupExpandCollapse(view);
-})
-
-// The function itself – only needed once
-var addGroupExpandCollapse = function(view) {
-
-    $('#' + view.key + ' .kn-table-group').css("cursor", "pointer");
-
-    $('#' + view.key + " .kn-group-level-1 td").each(function() {
-        if ($(this).text().length > 1) {
-            var RowText = $(this).html();
-            $(this).html('<i class="fa fa-minus-square-o"></i>&nbsp;' + RowText);
-        }
-    });
-
-    // This line causes groups to be collapsed by default.
-    //$('#' + view.key + ' .kn-table-group').nextUntil('.kn-table-group').toggle();
-
-    $('#' + view.key + ' .kn-table-group').click(function() {
-
-        $(this).nextUntil('.kn-table-group').toggle();
-
-        if ($(this).html().indexOf('fa-minus') !== -1) {
-            $(this).html($(this).html().replace('minus', 'plus'));
-        } else {
-            $(this).html($(this).html().replace('plus', 'minus'));
-        }
-    });
-
-}
-
 // NEW DEAL FILE ADMIN AND MANAGER VIEW - HIDE AND EXPAND TABLES
 // CODE FOR HIDE AND EXPANDING TABLE VIEWS - DO NOT ADD VIEWS HERE - ADD THE VIEW NUMBERS BELOW
 
