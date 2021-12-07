@@ -3971,7 +3971,17 @@ font-size:12px;
 
 /***************** New DOC Formatting ******************/
 
+/* Change DOC Help and Support Menu Button */
+
+#view_4183 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
 /* Change size of Region Table */
+
 #view_4108 th span
 {
   margin: auto !important;
