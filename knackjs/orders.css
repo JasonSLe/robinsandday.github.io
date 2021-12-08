@@ -3980,6 +3980,17 @@ font-size:12px;
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_4183 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
 /* Change Group Map Menu Button */
 
 #view_4188 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
@@ -3987,6 +3998,17 @@ font-size:12px;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
+}
+
+#view_4188 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
 }
 
 /* Change size of Region Table */
