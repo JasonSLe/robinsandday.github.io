@@ -7640,7 +7640,7 @@ align: center;
     border-color: lightgrey;
     padding: 5px;
 
-/*border around individual cars*/
+/*border around individual cars
 	
 #view_5004 > div > div.kn-list-content.columns.is-multiline {
 			border-radius: 10px;
@@ -7650,11 +7650,12 @@ align: center;
     padding: 5px;
 
 	/*border around purchasing auction vehicles individual data on cars
-*/
+
 	#view_5006 > section > div.kn-details-column.first.column.is-horizontal {
 			border-radius: 10px;
     border-style: solid;
     border-width: 5px;
     border-color: lightgrey;
     padding: 5px;
+	*/
 		
