@@ -7632,9 +7632,18 @@ align: center;
   text-align: center;
 }
 
-/*border around puchasing */
+/*border around puchasing auction vehicles */
 #view_5004 > div {
   	border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: lightgrey;
+    padding: 5px;
+
+/*border around individual cars*/
+	
+#view_5004 > div > div.kn-list-content.columns.is-multiline {
+			border-radius: 10px;
     border-style: solid;
     border-width: 5px;
     border-color: lightgrey;
