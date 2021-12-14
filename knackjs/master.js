@@ -1714,12 +1714,12 @@ takePhotoButton.onclick = function () {
 
 $(document).on('knack-view-render.view_3900', function(event, view, data) {
   $('[class="kn-view kn-back-link"]').hide();
-	prepareCameraView(location.origin+"/digital#used-vehicle-check-in/used-vehicle-check-in-2/"+getRecordIdFromHref(location.href)+"/used-vehicle-check-in-3/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_4944','scene_1262/views/view_3904');
+	prepareCameraView(location.origin+"/digital#used-vehicle-check-in/used-vehicle-check-in-2/"+getRecordIdFromHref(location.href)+"/used-vehicle-check-in-3/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_4944','scene_1543/views/view_5014'/*scene_1262/views/view_3904*/);
 });
 
 $(document).on('knack-view-render.view_3910', function(event, view, data) {
   $('[class="kn-view kn-back-link"]').hide();
-	prepareCameraView(location.origin+"/digital#new-appraisal/retail-appraisal-aesthetic-condition/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_532','scene_1262/views/view_3911');
+	prepareCameraView(location.origin+"/digital#new-appraisal/retail-appraisal-aesthetic-condition/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_532','scene_1544/views/view_5016'/*scene_1262/views/view_3911*/);
 });
 
 
