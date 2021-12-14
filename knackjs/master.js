@@ -1255,6 +1255,7 @@ if (document.exitFullscreen) {
           return {'status': 'fail'};
         } catch (e) {
           alert('uploadFail_2:'+e.toString());
+          alert(rData);
           return {'status': 'fail'};
         }
       });
