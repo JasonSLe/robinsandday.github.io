@@ -281,6 +281,7 @@ var toggleHeaderVisibility = function(toWhatState = null) {
               return;
           }
           console.log('show header')
+          console.log(toggleButton);
           document.body.classList.remove('rad-header-closed');
           toggleButton.innerHTML = "<b>Hide Header</b>";
       });
