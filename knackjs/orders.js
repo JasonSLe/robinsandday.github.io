@@ -1405,9 +1405,15 @@ $(document).on('knack-form-submit.view_2574', function(event, view, data) {
 $(document).on('knack-form-submit.view_2692', function(event, view, data) { 
     
     try{
-
+	    console.log("Testing");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+        
         let commandURL = "https://hook.integromat.com/27gimyyfnsdz3jfji1q5b4ag65xx9wzc";
-        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"New Vehicle Check In", "Source Of Payload":"knack direct"});
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Trigger":"New Vehicle Check In", "Source Of Payload":"knack direct", 
+                         "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "dateTime": dateTime});
 
 
       var rData = $.ajax({

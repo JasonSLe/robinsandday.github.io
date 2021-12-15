@@ -84,7 +84,7 @@ body {
 
 /* Part-Ex Reg No CSS to look like Reg */
 
-#view_5006 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(2) > div:nth-child(2) > div > div.field_7225 > div > span > h2 > strong > span {
+#view_5006 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div {
 	background-color: #FFE74C;
   	border-radius: 10px;
   	font-size: 30px;
@@ -7638,14 +7638,14 @@ align: center;
   text-align: center;
 }
 
-/*border around puchasing auction vehicles */
+/*border around puchasing auction vehicles 
 #view_5004 > div {
   	border-radius: 10px;
     border-style: solid;
     border-width: 5px;
     border-color: lightgrey;
     padding: 5px;
-
+*/
 /*border around individual cars
 	
 #view_5004 > div > div.kn-list-content.columns.is-multiline {
