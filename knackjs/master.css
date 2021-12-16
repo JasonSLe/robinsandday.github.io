@@ -7665,9 +7665,8 @@ align: center;
     padding: 5px;
 	*/
 		
-/* Jason testing code*/
+/* Limit purchasing derivite counters to one line*/
 #view_5004 .kn-label-none.field_7415 > div > span > strong > span {
-    background-color: #1f2dad;
     display:inline-block;
     white-space: nowrap;
     overflow: hidden;
