@@ -84,7 +84,7 @@ body {
 
 /* Part-Ex Reg No CSS to look like Reg */
 
-#view_5006 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span {
+#view_5006 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span {
 	background-color: #FFE74C;
   	border-radius: 10px;
   	font-size: 30px;
