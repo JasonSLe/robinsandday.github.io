@@ -7667,5 +7667,10 @@ align: center;
 		
 /* Jason testing code*/
 #view_5004 .kn-label-none.field_7415 > div > span > strong > span {
-    background-color: #1f2dad;  
+    background-color: #1f2dad;
+    display:inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 40ch;
 }
