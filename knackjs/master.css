@@ -7696,3 +7696,11 @@ align: center;
   padding: 12px;
   display: inline-block;
 }
+
+#view_5006 > section > div:nth-child(2) > div:nth-child(4) > div > div > div.kn-label-none.field_7422 > div > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 12px;
+  display: inline-block;
+}
