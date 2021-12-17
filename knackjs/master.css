@@ -7704,3 +7704,13 @@ align: center;
   padding: 12px;
   display: inline-block;
 }
+
+/*make purchasing vehicle data transparent*/
+
+#view_5006 > section > div:nth-child(2) > div:nth-child(2) > div > div > div.kn-detail.field_7241 > div.kn-detail-label {background-color: transparent;}
+
+#view_5006 > section > div:nth-child(2) > div:nth-child(2) > div > div > div.kn-detail.field_7262 > div.kn-detail-label {background-color: transparent;}
+
+#view_5006 > section > div:nth-child(2) > div:nth-child(2) > div > div > div.kn-detail.field_7263 > div.kn-detail-label {background-color: transparent;}
+
+#view_5006 > section > div:nth-child(2) > div:nth-child(2) > div > div > div.kn-detail.field_7255 > div.kn-detail-label {background-color: transparent;}
