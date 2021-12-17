@@ -7745,12 +7745,13 @@ align: center;
 }
 
 /*make purchasing vehicle data transparent v2*/
+
 #view_5028 > section > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(4) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(5) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
-#view_5028 > section > div > div:nth-child(5) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(5) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(6) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(6) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(7) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
