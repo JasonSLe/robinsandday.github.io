@@ -7689,6 +7689,24 @@ align: center;
   display: inline-block;
 }
 
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
+/* hover */ 
+
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span {
   color: #FFFFFF;
   font-weight: bold;
