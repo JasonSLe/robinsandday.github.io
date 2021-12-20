@@ -84,7 +84,7 @@ body {
 
 /* Part-Ex Reg No CSS to look like Reg */
 
-#view_5006 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span {
+#view_5029 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div {
 	background-color: #FFE74C;
   	border-radius: 10px;
   	font-size: 30px;
@@ -7679,48 +7679,9 @@ align: center;
     text-overflow: ellipsis;
     max-width: 40ch;
 }
-/*change links to buttons on purchasing auction data v1 */
-
-#view_5006 > section > div:nth-child(2) > div:nth-child(6) > div > div > div.kn-label-none.field_7403 {
-  color: #FFFFFF;
-  font-weight: bold;
-  background-color: #00CC66;
-  padding: 12px;
-  display: inline-block;
-}
-
-#view_5006 > section > div:nth-child(2) > div:nth-child(6) > div > div > div.kn-label-none.field_7404 {
-  color: #FFFFFF;
-  font-weight: bold;
-  background-color: #00CC66;
-  padding: 12px;
-  display: inline-block;
-}
-
-#view_5006 > section > div:nth-child(2) > div:nth-child(4) > div > div > div.kn-label-none.field_7422 > div > span {
-  color: #FFFFFF;
-  font-weight: bold;
-  background-color: #00CC66;
-  padding: 12px;
-  display: inline-block;
-}
-
-/*make purchasing vehicle data transparent v1*/
-
-#view_5006 > section > div:nth-child(2) > div:nth-child(2) > div > div > div.kn-detail.field_7241 > div.kn-detail-label {background-color: transparent;}
-
-#view_5006 > section > div:nth-child(2) > div:nth-child(2) > div > div > div.kn-detail.field_7262 > div.kn-detail-label {background-color: transparent;}
-
-#view_5006 > section > div:nth-child(2) > div:nth-child(2) > div > div > div.kn-detail.field_7263 > div.kn-detail-label {background-color: transparent;}
-
-#view_5006 > section > div:nth-child(2) > div:nth-child(2) > div > div > div.kn-detail.field_7255 > div.kn-detail-label {background-color: transparent;}
-
-#view_5006 > section > div:nth-child(2) > div:nth-child(2) > div > div > div.kn-detail.field_7254 > div.kn-detail-label {background-color: transparent;}
-
-
 /*change links to buttons on purchasing auction data v2 */
 
-#view_5028 > section > div > div:nth-child(8) > div > div > div.kn-label-none.field_7403 > div > span > span > a {
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00CC66;
@@ -7728,7 +7689,7 @@ align: center;
   display: inline-block;
 }
 
-#view_5028 > section > div > div:nth-child(8) > div > div > div.kn-label-none.field_7404 > div > span > span > a {
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00CC66;
@@ -7736,13 +7697,14 @@ align: center;
   display: inline-block;
 }
 
-#view_5028 > section > div > div:nth-child(8) > div > div > div.kn-label-none.field_7422 > div > span > span > a{
+#view_5028 > section > div > div:nth-child(10) > div > div > div > div > span {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00CC66;
   padding: 12px;
   display: inline-block;
 }
+
 
 /*make purchasing vehicle data transparent v2*/
 
