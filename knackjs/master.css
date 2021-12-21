@@ -7756,7 +7756,7 @@ align: center;
 
 /* move purchasing images down  
 #view_5004 .nailthumb-container > span > img*/ 
-#view_5004 > section > div > div:nth-child(1) > div > div > div.field_7295_thumb_203 > div > span > a > div > span > img {
+#view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
     position: relative;
     width: 325px;
     height: 217px;
