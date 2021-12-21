@@ -7753,5 +7753,9 @@ align: center;
 
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7234 > div.kn-detail-label {background-color: transparent;}
 
+/*wrap filters for key accounts */ 
+#kn-report-view_219-7 > div.kn-records-nav  {
+  white-space: inherit;
+}
 
 
