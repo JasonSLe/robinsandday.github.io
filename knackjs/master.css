@@ -7756,18 +7756,10 @@ align: center;
 
 /* move purchasing images down  
 #view_5004 .nailthumb-container > span > img*/ 
-#view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
-    position: relative;
-    width: 325px;
-    height: 217px;
-    top: 90px;
-    left: 0px;
-    display: inline;
-background-color: #1f2dad;
-}
 
 #view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
     background-color: #1f2dad !important;
+	top: 90px !important;
 }
 
 
