@@ -7755,7 +7755,7 @@ align: center;
 
 
 /* move purchasing images down */ 
-#view_5004  .div:nailthumb-container > span > img {
+#view_5004 .nailthumb-container > span > img {
     position: relative;
     width: 325px;
     height: 217px;
@@ -7763,6 +7763,5 @@ align: center;
     left: 0px;
     display: inline;
 }
-
 
 
