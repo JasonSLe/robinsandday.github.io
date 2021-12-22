@@ -2637,6 +2637,22 @@ visibility: visible;
   	border-color: #FFFFFF;
 }
 
+#view_2311 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
+	background-color: #EA9191;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2311> div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
+	background-color: #E05454;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
 #view_2262 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
