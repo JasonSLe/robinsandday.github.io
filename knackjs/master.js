@@ -4726,3 +4726,41 @@ $(document).on('knack-form-submit.view_4985', function(event, view, data) {
 });
 
 
+//  Trigger Integromat following Photo Upload At Used Vehicle Check In
+$(document).on('knack-form-submit.view_2281', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.integromat.com/xakduhf9nvro3xoa1o7p56c3q53sxl9u";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+  
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Integromat following Photo Upload At Used Vehicle Check In",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
+
