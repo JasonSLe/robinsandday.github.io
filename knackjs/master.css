@@ -84,7 +84,7 @@ body {
 
 /* Part-Ex Reg No CSS to look like Reg */
 
-#view_5006 > section > div.kn-details-column.first.column.is-horizontal > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div {
+#view_5029 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div {
 	background-color: #FFE74C;
   	border-radius: 10px;
   	font-size: 30px;
@@ -445,6 +445,12 @@ body {
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(19) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(20) > a {
 	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -2623,6 +2629,22 @@ visibility: visible;
 
 #view_2311> div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
 	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_2311 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
+	background-color: #EA9191;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2311> div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
+	background-color: #E05454;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
@@ -7665,3 +7687,95 @@ align: center;
     padding: 5px;
 	*/
 		
+/* Limit purchasing derivative counters to one line*/
+#view_5004 .kn-label-none.field_7415 > div > span > strong > span {
+    display:inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 40ch;
+}
+/*change links to buttons on purchasing auction data v2 */
+
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 12px;
+  display: inline-block;
+}
+
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
+/* hover */ 
+
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 12px;
+  display: inline-block;
+}
+
+#view_5028 > section > div > div:nth-child(10) > div > div > div > div > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 12px;
+  display: inline-block;
+}
+
+#view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 12px;
+  display: inline-block;
+}
+
+
+/*make purchasing vehicle data transparent v2*/
+
+#view_5028 > section > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(4) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(5) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(5) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(6) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(6) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(7) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(7) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(5) > div:nth-child(3) > div > div:nth-child(1) > div {background-color: transparent;}
+#view_5028 > section > div > div:nth-child(6) > div:nth-child(3) > div > div:nth-child(1) > div {background-color: transparent;}
+/*mot expiry */ 
+#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7261 > div.kn-detail-label {background-color: transparent;}
+
+#view_5028 > section > div > div:nth-child(11) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
+
+#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7234 > div.kn-detail-label {background-color: transparent;}
+
+
+/* move purchasing images down  
+#view_5004 .nailthumb-container > span > img*/ 
+
+#view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
+    background-color: #1f2dad !important;
+	top: 90px !important;
+}
+
+
