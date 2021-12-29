@@ -7778,7 +7778,7 @@ align: center;
 	top: 90px !important;
 }
 
-/*hide table for MFL */ 
+/*hide service table for MFL */ 
 #view_5029 > section > div > div:nth-child(3) > div > div {
 	border: none !important;
 }
