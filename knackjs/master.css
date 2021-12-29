@@ -7779,6 +7779,6 @@ align: center;
 }
 
 /*hide service table for MFL */ 
-#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 > div > span > strong > span > table, tr, td{
+#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 > div table, tr, td{
  border:none;
 }
