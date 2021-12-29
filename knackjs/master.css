@@ -7780,4 +7780,4 @@ align: center;
 
 /*hide table for MFL */ 
 
-#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 > div > span > strong > span > table {border: none;}
+#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 > div > span > strong > span > table {border: none !important;}
