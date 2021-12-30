@@ -7700,7 +7700,7 @@ align: center;
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00f37a;
+  background-color: #00CC66;
   padding: 12px;
   display: inline-block;
 }
@@ -7708,17 +7708,19 @@ align: center;
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 a:hover {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00CC66;
+  background-color: #00f37a;
   padding: 8px;
   display: inline-block;
 }
-
+/*
+#00f37a hover
+#00CC66 normal*/
 /* hover */ 
 
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00f37a;
+  background-color: #00CC66;
   padding: 12px;
   display: inline-block;
 }
@@ -7726,7 +7728,7 @@ align: center;
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span a:hover {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00CC66;
+  background-color: #00f37a;
   padding: 12px;
   display: inline-block;
 }
@@ -7734,28 +7736,28 @@ align: center;
 #view_5028 > section > div > div:nth-child(10) > div > div > div > div > span {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00f37a;
+  background-color: #00CC66;
   padding: 12px;
   display: inline-block;
 }
 #view_5028 > section > div > div:nth-child(10) > div > div > div > div > span a:hover {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00CC66;
+  background-color: #00f37a;
   padding: 12px;
   display: inline-block;
 }
 #view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00f37a;
+  background-color: #00CC66;
   padding: 12px;
   display: inline-block;
 }
 #view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div a:hover  {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00CC66;
+  background-color: #00f37a;
   padding: 12px;
   display: inline-block;
 }
@@ -7783,7 +7785,7 @@ align: center;
 
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7234 > div.kn-detail-label {background-color: transparent;}
 /*total number of fails or advisories to remove grey space*/ 
-#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label {background-color: transparent;}
+#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7373 > div.kn-detail-label > span > strong > span {background-color: transparent;}
 /*surecheck fail remove grey space*/
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label {background-color: transparent;}
 /* move purchasing images down  
