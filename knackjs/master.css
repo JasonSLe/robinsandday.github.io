@@ -7697,19 +7697,11 @@ align: center;
 }
 /*change links to buttons on purchasing auction data v2 */
 
-#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 {
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00f37a;
   padding: 12px;
-  display: inline-block;
-}
-
-#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 a:hover {
-  color: #FFFFFF;
-  font-weight: bold;
-  background-color: #00f37a;
-  padding: 8px;
   display: inline-block;
 }
 
