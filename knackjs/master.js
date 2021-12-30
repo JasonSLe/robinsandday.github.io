@@ -4762,6 +4762,6 @@ $(document).on('knack-form-submit.view_2281', function(event, view, data) {
     }
 });
 /*Collapse purchasing MFL service Table */ 
-$(document).on('knack-view-render.view_5029', function(event, view, data) {
-    addGroupExpandCollapse(field_7242);
+$(document).on('knack-view-render.view_5029', function(event, view, data){
+    addGroupExpandCollapse(div.kn-label-none.field_7242);
 })
