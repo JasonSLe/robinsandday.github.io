@@ -7753,14 +7753,14 @@ align: center;
   padding: 12px;
   display: inline-block;
 }
-#view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div a:hover {
+#view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00f37a;
   padding: 12px;
   display: inline-block;
 }
-#view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div {
+#view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div a:hover  {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #ccffe6;
