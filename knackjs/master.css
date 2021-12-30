@@ -7697,7 +7697,7 @@ align: center;
 }
 /*change links to buttons on purchasing auction data v2 */
 
-#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span {
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00f37a;
@@ -7705,7 +7705,7 @@ align: center;
   display: inline-block;
 }
 
-#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span > a:hover {
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 a:hover {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00CC66;
@@ -7783,7 +7783,7 @@ align: center;
 
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7234 > div.kn-detail-label {background-color: transparent;}
 /*total number of fails or advisories to remove grey space*/ 
-#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 {background-color: transparent;}
+#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label {background-color: transparent;}
 /*surecheck fail remove grey space*/
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label {background-color: transparent;}
 /* move purchasing images down  
