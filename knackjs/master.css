@@ -7723,7 +7723,15 @@ align: center;
 
 /* hover */ 
 
-#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span {
+#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 12px;
+  display: inline-block;
+}
+/*inspection report */ 
+#view_5028 > section > div > div:nth-child(10) > div > div > div > div > span a:hover {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00CC66;
@@ -7731,7 +7739,7 @@ align: center;
   display: inline-block;
 }
 
-#view_5028 > section > div > div:nth-child(10) > div > div > div > div > span {
+#view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div a:hover {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #00CC66;
@@ -7739,13 +7747,6 @@ align: center;
   display: inline-block;
 }
 
-#view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div {
-  color: #FFFFFF;
-  font-weight: bold;
-  background-color: #00CC66;
-  padding: 12px;
-  display: inline-block;
-}
 
 
 /*make purchasing vehicle data transparent v2*/
