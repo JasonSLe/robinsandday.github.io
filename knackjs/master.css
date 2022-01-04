@@ -7821,8 +7821,9 @@ align: center;
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7373 > div.kn-detail-label {background-color: transparent;}
 /*surecheck fail remove grey space*/
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label {background-color: transparent;}
-/* move purchasing images down  
-#view_5004 .nailthumb-container > span > img*/ 
+
+/* hide metrics from main purchasing page */ 
+#view_5004 section > div > div:nth-child(3) > div:nth-child(1) > div {background-color: transparent;}
 
 
 
