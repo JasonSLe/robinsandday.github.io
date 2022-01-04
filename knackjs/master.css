@@ -7703,6 +7703,7 @@ align: center;
   background-color: #FFA100;
   padding: 12px;
   display: inline-block;
+	border-radius: 25px;
 }
 
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 a:hover {
@@ -7711,6 +7712,7 @@ align: center;
   background-color: #D18400;
   padding: 8px;
   display: inline-block;
+	border-radius: 25px;
 }
 /*
 #00f37a hover
@@ -7723,6 +7725,7 @@ align: center;
   background-color: #FFA100;
   padding: 12px;
   display: inline-block;
+	border-radius: 25px;
 }
 
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span a:hover {
@@ -7731,6 +7734,7 @@ align: center;
   background-color: #D18400;
   padding: 12px;
   display: inline-block;
+	border-radius: 25px;
 }
 /*inspection report */ 
 #view_5028 > section > div > div:nth-child(10) > div > div > div > div > span {
@@ -7739,6 +7743,7 @@ align: center;
   background-color: #FFA100;
   padding: 12px;
   display: inline-block;
+	border-radius: 25px;
 }
 #view_5028 > section > div > div:nth-child(10) > div > div > div > div > span a:hover {
   color: #FFFFFF;
@@ -7746,6 +7751,7 @@ align: center;
   background-color: #D18400;
   padding: 12px;
   display: inline-block;
+	border-radius: 25px;
 }
 #view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div {
   color: #FFFFFF !important;
@@ -7753,6 +7759,7 @@ align: center;
   background-color: #FFA100;
   padding: 12px;
   display: inline-block;
+	border-radius: 25px;
 }
 #view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div a:hover  {
   color: #FFFFFF;
@@ -7760,6 +7767,7 @@ align: center;
   background-color: #D18400;
   padding: 12px;
   display: inline-block;
+	border-radius: 25px;
 }
 
 
