@@ -89,8 +89,8 @@ body {
   	border-radius: 10px;
   	font-size: 30px;
   	font-weight: bold;
-  	padding-left: 10px;
-  	padding-right: 10px;
+  	padding-left: 20px;
+  	padding-right: 20px;
   	text-align: center;
 }
 
@@ -7707,7 +7707,7 @@ align: center;
 }
 
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 a:hover {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: bold;
   background-color: #D18400;
   padding: 8px;
@@ -7729,7 +7729,7 @@ align: center;
 }
 
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span a:hover {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: bold;
   background-color: #D18400;
   padding: 8px;
@@ -7746,7 +7746,7 @@ align: center;
 	border-radius: 12px;
 }
 #view_5028 > section > div > div:nth-child(10) > div > div > div > div > span a:hover {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: bold;
   background-color: #D18400;
   padding: 8px;
@@ -7762,7 +7762,7 @@ align: center;
 	border-radius: 12px;
 }
 #view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div a:hover  {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: bold;
   background-color: #D18400;
   padding: 8px;
