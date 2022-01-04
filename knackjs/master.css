@@ -7700,7 +7700,7 @@ align: center;
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00CC66;
+  background-color: #FFA100;
   padding: 12px;
   display: inline-block;
 }
@@ -7708,7 +7708,7 @@ align: center;
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 a:hover {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00f37a;
+  background-color: #D18400;
   padding: 8px;
   display: inline-block;
 }
@@ -7720,7 +7720,7 @@ align: center;
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00CC66;
+  background-color: #FFA100;
   padding: 12px;
   display: inline-block;
 }
@@ -7728,7 +7728,7 @@ align: center;
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span a:hover {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00f37a;
+  background-color: #D18400;
   padding: 12px;
   display: inline-block;
 }
@@ -7736,28 +7736,28 @@ align: center;
 #view_5028 > section > div > div:nth-child(10) > div > div > div > div > span {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00CC66;
+  background-color: #FFA100;
   padding: 12px;
   display: inline-block;
 }
 #view_5028 > section > div > div:nth-child(10) > div > div > div > div > span a:hover {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00f37a;
+  background-color: #D18400;
   padding: 12px;
   display: inline-block;
 }
 #view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00CC66;
+  background-color: #FFA100;
   padding: 12px;
   display: inline-block;
 }
 #view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div a:hover  {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #00f37a;
+  background-color: #D18400;
   padding: 12px;
   display: inline-block;
 }
@@ -7796,7 +7796,7 @@ align: center;
 	top: 90px !important;
 }
 
-/*hide service table for MFL */ 
+/*hide borders service table for MFL */ 
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 table, tr, td{
  border:none !important;
 }
