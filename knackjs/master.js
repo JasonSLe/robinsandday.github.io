@@ -4761,6 +4761,40 @@ $(document).on('knack-form-submit.view_2281', function(event, view, data) {
         }).responseText;
     }
 });
+
+// Used Stock Management - Update Autorola Trade Price
+$(document).on('knack-form-submit.view_5048', function(event, view, data) { 
+    
+    try{
+      let commandURL = "https://hook.integromat.com/vigtgktsw7fh3meswwm37ybgie0fc8p8" ;
+      let dataToSend = JSON.stringify({"Record ID":data.id}) ;
+      var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+      }).responseText;
+   }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Stock Management - Update Autorola Trade Price",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
+});
+
 /*Collapse purchasing MFL service Table 
 $(document).on('view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242', function(event, view, data){
     addGroupExpandCollapse(view);
