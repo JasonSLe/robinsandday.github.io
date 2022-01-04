@@ -7844,10 +7844,3 @@ overflow: hidden !important;
 }
 
 
-/* move search results up in purchase results */
-
-#view_5004 .kn-content .columns {
-	margin-left: -6px;
-    margin-right: -10px;
-    margin-top: -100px;
-}
