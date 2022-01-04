@@ -7697,7 +7697,9 @@ align: center;
 }
 
 /*make date/time auction transparent on purchasing */
-#view_5004 .kn-label-top.field_7268 {background-color: transparent;}
+
+#view_5004 div.kn-label-top.field_7268 > div {
+	background-color: transparent;}
 	
 
 /*change links to buttons on purchasing auction data v2 */
