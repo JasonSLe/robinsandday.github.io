@@ -7698,7 +7698,7 @@ align: center;
 
 /*make date/time auction transparent on purchasing */
 
-#view_5004 div.kn-label-top.field_7268 > div {
+#view_5004 .kn-label-top.field_7268 > div {
 	background-color: transparent;}
 	
 
