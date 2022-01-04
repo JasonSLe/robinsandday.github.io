@@ -7832,10 +7832,10 @@ align: center;
 	top: 90px !important;
 }
 
-/*hide borders service table for MFL */ 
+/*hide borders service table for MFL 
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 table, tr, td{
  border:none !important;
-}
+}*/
 
 /*hide scroll bar on purchasing vehicle description*/ 
 
