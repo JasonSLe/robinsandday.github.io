@@ -7695,6 +7695,11 @@ align: center;
     text-overflow: ellipsis;
     max-width: 40ch;
 }
+
+/*make date/time auction transparent on purchasing */
+#view_5004 .kn-label-top.field_7268 {background-color: transparent;}
+	
+
 /*change links to buttons on purchasing auction data v2 */
 
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 {
@@ -7799,6 +7804,8 @@ align: center;
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label {background-color: transparent;}
 /* move purchasing images down  
 #view_5004 .nailthumb-container > span > img*/ 
+
+
 
 #view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
     background-color: #1f2dad !important;
