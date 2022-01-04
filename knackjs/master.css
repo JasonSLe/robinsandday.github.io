@@ -7809,3 +7809,9 @@ align: center;
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 table, tr, td{
  border:none !important;
 }
+
+/*hide scroll bar on purchasing vehicle description*/ 
+
+#view_5029 > section > div > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div > div > span > div > span > img {
+overflow: hidden !important;
+}
