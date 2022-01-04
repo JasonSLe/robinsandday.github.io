@@ -7704,7 +7704,7 @@ align: center;
 
 /*change links to buttons on purchasing auction data v2 */
 
-#view_5028 .div:nth-child(4) > div:nth-child(2) > div > div > div {
+#view_5028  > section > div > div:nth-child(4) > div:nth-child(2) > div {
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
