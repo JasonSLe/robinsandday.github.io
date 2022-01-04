@@ -7721,10 +7721,26 @@ align: center;
   display: inline-block;
 	border-radius: 12px;
 }
-/*
-#00f37a hover
-#00CC66 normal*/
-/* hover */ 
+
+/*purchasing main page make auction a button */
+#view_5028 > section > div > div:nth-child(4) > div:nth-child(2) > div > div > div > span > strong > span {
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
+#view_5028 > section > div > div:nth-child(4) > div:nth-child(2) > div > div > div > span > strong > span a:hover {
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
 
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span {
   color: #FFFFFF !important;
