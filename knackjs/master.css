@@ -7698,7 +7698,7 @@ align: center;
 /*change links to buttons on purchasing auction data v2 */
 
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
   padding: 12px;
@@ -7718,7 +7718,7 @@ align: center;
 /* hover */ 
 
 #view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
   padding: 12px;
@@ -7734,7 +7734,7 @@ align: center;
 }
 /*inspection report */ 
 #view_5028 > section > div > div:nth-child(10) > div > div > div > div > span {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
   padding: 12px;
@@ -7748,7 +7748,7 @@ align: center;
   display: inline-block;
 }
 #view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
   padding: 12px;
