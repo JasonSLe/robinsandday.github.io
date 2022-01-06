@@ -4194,7 +4194,6 @@ font-size:12px;
   	font-weight: bold;
 }
 /* make handover white text */
-#view_2630 .kn-input-kn-read-only-kn-input-short_text-control > label {
+#view_2630 .label-kn-label {
 	color:#FFA100 !important
-		
 		}
