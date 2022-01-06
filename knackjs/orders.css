@@ -4193,3 +4193,7 @@ font-size:12px;
   	color: #FFFFFF;
   	font-weight: bold;
 }
+/* make handover white text */
+#view_2630 .kn-input-field_6628 {
+	color:transparent !important
+}
