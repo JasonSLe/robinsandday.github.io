@@ -4812,7 +4812,7 @@ var addCheckboxes = function(view) {
     });
   });
   // Add a checkbox to each row in the table body
-  $('#' + view.key + '.kn-table tbody tr').each(function() {
+  $('#' + view.key + 'col-2').each(function() {
     $(this).prepend('<td><input type="checkbox"></td>');
   });
 }
