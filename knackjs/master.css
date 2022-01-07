@@ -7772,8 +7772,8 @@ align: center;
   display: inline-block;
 	border-radius: 12px;
 }
-/*link to view retail metrics */ 
-#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7403 > div > span {
+/*link to view auction */ 
+#view_5028 > section > div > div:nth-child(12) > div:nth-child(2) > div > div > div > span{
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
@@ -7781,7 +7781,7 @@ align: center;
   display: inline-block;
 	border-radius: 12px;
 }
-#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7403 > div > span a:hover {
+#view_5028 > section > div > div:nth-child(12) > div:nth-child(2) > div > div > div > span {
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #D18400;
