@@ -3075,6 +3075,11 @@ visibility: visible;
   	font-weight: bold;
 }
 
+/************* Hide Form Submit from Admin Confirm Vehicle Check In Prep Pushed Page ************/
+#view_3126 > form > div > button {
+	display: none;
+}
+
 
 /************ USED VEHICLE ADMIN - Deal File Admin Audit Status Table Filters ***********/
 
