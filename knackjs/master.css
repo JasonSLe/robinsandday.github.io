@@ -7730,8 +7730,8 @@ align: center;
 	border-radius: 12px;
 }
 
-
-#view_5028 > section > div > div:nth-child(4) > div:nth-child(2) > div > div > div > span > strong > span {
+/* Link to similar vehicles */
+#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7404 > div > span {
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
@@ -7740,7 +7740,7 @@ align: center;
 	border-radius: 12px;
 }
 
-#view_5028 > section > div > div:nth-child(4) > div:nth-child(2) > div > div > div > span > strong > span a:hover {
+#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7404 > div > span a:hover {
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
