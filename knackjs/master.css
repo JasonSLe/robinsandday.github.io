@@ -7767,7 +7767,7 @@ align: center;
   display: inline-block;
 	border-radius: 12px;
 }
-/*inspection report */ 
+/*link to view retail metrics */ 
 #view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7403 > div > span {
   color: #FFFFFF !important;
   font-weight: bold;
@@ -7776,7 +7776,7 @@ align: center;
   display: inline-block;
 	border-radius: 12px;
 }
-#view_5028 > section > div > div:nth-child(10) > div > div > div > div > span a:hover {
+#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7403 > div > span a:hover {
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #D18400;
