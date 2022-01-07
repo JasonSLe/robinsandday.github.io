@@ -4800,3 +4800,28 @@ $(document).on('view_5029 > section > div > div:nth-child(3) > div > div > div.k
     addGroupExpandCollapse(view);
 })
 */ 
+
+/* testing autotrader multiple choice check box in table*/
+// Function that adds checkboxes
+var addCheckboxes = function(view_5055) {
+  // Add the checkbox to to the header to select/unselect all
+  $('#' + view.key + '.kn-table thead tr').prepend('<th><input type="checkbox"></th>');
+  $('#' + view.key + '.kn-table thead input').change(function() {
+    $('.' + view.key + '.kn-table tbody tr input').each(function() {
+      $(this).attr('checked', $('#' + view.key + '.kn-table thead input').attr('checked') != undefined);
+    });
+  });
+  // Add a checkbox to each row in the table body
+  $('#' + view.key + '.kn-table tbody tr').each(function() {
+    $(this).prepend('<td><input type="checkbox"></td>');
+  });
+}
+// Add checkboxes to a specific table view (view_1). Replace view_1 with your view key
+$(document).on('knack-view-render.view_5055', function (event, view) {
+  addCheckboxes(view);
+});
+// Cycle through selected checkboxes. Use this in any code that needs to get the checked IDs
+$('#view_5055 tbody input[type=checkbox]:checked').each(function() {
+  // add code here to get record id or row value
+  var id = $(this).closest('tr').attr('id'); // record id
+});
