@@ -4803,7 +4803,7 @@ $(document).on('view_5029 > section > div > div:nth-child(3) > div > div > div.k
 
 /* testing autotrader multiple choice check box in table*/
 // Function that adds checkboxes
-var addCheckboxes = function(view_5055) {
+var addCheckboxes = function(view) {
   // Add the checkbox to to the header to select/unselect all
   $('#' + view.key + '.kn-table thead tr').prepend('<th><input type="checkbox"></th>');
   $('#' + view.key + '.kn-table thead input').change(function() {
