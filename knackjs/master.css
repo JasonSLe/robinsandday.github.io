@@ -7727,6 +7727,25 @@ align: center;
   display: inline-block;
 	border-radius: 12px;
 }
+
+/* Make view auction link as a button*/
+#view_5004 .kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span {
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
+#view_5004 .kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span a:hover{
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
 /*make date/time auction transparent on purchasing */
 
 #view_5028 > section > div > div:nth-child(12) > div:nth-child(1) > div > div:nth-child(1) > div {
