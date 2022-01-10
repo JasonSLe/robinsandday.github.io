@@ -2694,7 +2694,7 @@ color: #FFFFFF;
   color:black;
 }
 
-/* CSS for Sign Online Remote Satisfaction Survey out of 10 Fields */
+/* CSS for PCD Sign Online Remote Satisfaction Survey out of 10 Fields */
 
 #view_3702-field_6481 > option:nth-child(2){
   background-color:#23d160;
@@ -2726,6 +2726,42 @@ color: #FFFFFF;
 }
 
 #view_3702-field_6482 > option {
+  background:#eee;
+  color:black;
+}
+
+/* CSS for VX Sign Online Remote Satisfaction Survey out of 10 Fields */
+
+#view_4219-field_6481 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4219-field_6481 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4219-field_6481 > option {
+  background:#eee;
+  color:black;
+}
+
+#view_4219-field_6482 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4219-field_6482 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4219-field_6482 > option {
   background:#eee;
   color:black;
 }
