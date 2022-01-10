@@ -7708,6 +7708,16 @@ align: center;
     max-width: 40ch;
 }
 
+/* make purchasing main page button for retail metrics */
+#view_5004 .kn-label-none.field_7403 > div > span {
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
 /*make date/time auction transparent on purchasing */
 
 #view_5028 > section > div > div:nth-child(12) > div:nth-child(1) > div > div:nth-child(1) > div {
@@ -7856,5 +7866,3 @@ align: center;
 #view_5029 > section > div > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div > div {
 overflow: hidden !important;
 }
-
-
