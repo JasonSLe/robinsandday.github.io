@@ -2624,7 +2624,7 @@ color: #FFFFFF;
 
 #view_3970 .kn-detail-label {background-color: transparent;}
 
-/*css for Survey out of 10 fields */
+/*CSS for PCD Survey out of 10 fields */
 #view_2765-field_6481 > option:nth-child(2){
   background-color:#23d160;
   color:#fafafa;
@@ -2655,6 +2655,41 @@ color: #FFFFFF;
 }
 
 #view_2765-field_6482 > option {
+  background:#eee;
+  color:black;
+}
+
+/*CSS for VX Survey out of 10 fields */
+#view_3968-field_6481 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3968-field_6481 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3968-field_6481 > option {
+  background:#eee;
+  color:black;
+}
+
+#view_3968-field_6482 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3968-field_6482 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3968-field_6482 > option {
   background:#eee;
   color:black;
 }
