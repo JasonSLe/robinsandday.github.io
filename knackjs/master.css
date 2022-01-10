@@ -7755,7 +7755,7 @@ align: center;
 /*purchasing main page make auction a button */
 
 /*link to view retail check*/
-#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7403 > div > span {
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7403 > div > span > span{
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
@@ -7764,7 +7764,7 @@ align: center;
 	border-radius: 12px;
 }
 
-#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7403 > div > span a:hover{
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7403 > div > span > span a:hover{
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
@@ -7774,7 +7774,7 @@ align: center;
 }
 
 /* Link to similar vehicles */
-#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7404 > div > span {
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7404 > div > span > span {
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
@@ -7783,7 +7783,7 @@ align: center;
 	border-radius: 12px;
 }
 
-#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7404 > div > span a:hover {
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7404 > div > span > span a:hover {
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
@@ -7793,7 +7793,7 @@ align: center;
 }
 
 /* View inspection report*/
-#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7422 > div > span {
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7422 > div > span > span {
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
@@ -7802,7 +7802,7 @@ align: center;
 	border-radius: 12px;
 }
 
-#view_5028 > section > div > div:nth-child(11) > div > div > div.kn-label-none.field_7422 > div > span a:hover {
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7422 > div > span > span a:hover {
   color: #FFFFFF !important;
   font-weight: bold;
   background-color: #D18400;
