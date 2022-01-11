@@ -4825,3 +4825,39 @@ $('#view_5055 tbody input[type=checkbox]:checked').each(function() {
   // add code here to get record id or row value
   var id = $(this).closest('tr').attr('id'); // record id
 });
+
+//Trigger Auth Actor password sync when user resets password
+$(document).on('knack-form-submit.view_1141', function(event, view, data) {
+  try{
+    let commandURL = "https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D" ;
+    let dataToSend = JSON.stringify({"action":"replicate_users", "userEmail":Knack.getUserAttributes().email}) ;
+    var rData = $.ajax({
+      url: commandURL,
+      type: 'POST',
+      contentType: 'application/json',
+      data: dataToSend,
+      async: false
+    }).responseText;
+  }catch(exception){
+    sendErrorToIntegromat(exception, "Call Auth Actor Password Sync");
+  }
+});
+
+function sendErrorToIntegromat(exception, name){
+  console.log("error");
+  const today = new Date();
+  const date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+  const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  const dateTime = date+' '+time;
+
+  let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+  let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": name,
+  "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+  var rData = $.ajax({
+     url: commandURL,
+     type: 'POST',
+     contentType: 'application/json',
+     data: dataToSend,
+     async: false
+  }).responseText;
+}
