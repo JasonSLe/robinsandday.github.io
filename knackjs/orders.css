@@ -2630,6 +2630,18 @@ color: #FFFFFF;
 
 #view_3970 .kn-detail-label {background-color: transparent;}
 
+#view_3970 div.kn-detail.field_7209{
+    font-size: 18px;
+}
+
+#view_4223 div.kn-detail.field_6159{
+    font-size: 18px;
+}
+
+#view_4223 div.kn-detail.field_6184{
+    font-size: 18px;
+}
+
 /*CSS for PCD Survey out of 10 fields */
 #view_2765-field_6481 > option:nth-child(2){
   background-color:#23d160;
@@ -4281,17 +4293,6 @@ font-size:12px;
 	color:#FFA100 !important
 		}
 
-#view_3970 div.kn-detail.field_7209{
-    font-size: 18px;
-}
-
-#view_4223 div.kn-detail.field_6159{
-    font-size: 18px;
-}
-
-#view_4223 div.kn-detail.field_6184{
-    font-size: 18px;
-}
 
 
 
