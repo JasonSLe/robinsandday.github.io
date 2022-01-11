@@ -4762,4 +4762,39 @@ $(document).on('knack-form-submit.view_2281', function(event, view, data) {
     }
 });
 
+// Synchronize password Actor
+$(document).on('knack-form-submit.view_1141', function(event, view, data) { 
+    
+  try{
+    let commandURL = "https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D";
+    let dataToSend = JSON.stringify({"action":"replicate_users", "userEmail":Knack.getUserAttributes().email});
+
+    var rData = $.ajax({
+      url: commandURL,
+      type: 'POST',
+      contentType: 'application/json',
+      data: dataToSend,
+      async: false
+    }).responseText;
+
+  }catch(exception){
+      console.log("error");
+      var today = new Date();
+      var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      var dateTime = date+' '+time;
+
+      let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+      let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Integromat following Photo Upload At Used Vehicle Check In",
+      "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+      var rData = $.ajax({
+         url: commandURL,
+         type: 'POST',
+         contentType: 'application/json',
+         data: dataToSend,
+         async: false
+      }).responseText;
+  }
+});
+
 
