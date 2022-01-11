@@ -1026,6 +1026,12 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+#view_2665 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(16) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /* Deal File Search Filters on Admin Page */
 
 #view_2955 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -2614,11 +2620,29 @@ color: #FFFFFF;
 
 #view_2766 .kn-detail-label {background-color: transparent;}
 
+/*CSS Survey VX Details*/
+
+#view_4223 .kn-detail-label {background-color: transparent;}
+
+#view_4226 .kn-detail-label {background-color: transparent;}
+
 /******* Vauxhall CSI Survey Page GDPR added *********/
 
 #view_3970 .kn-detail-label {background-color: transparent;}
 
-/*css for Survey out of 10 fields */
+#view_3970 div.kn-detail.field_7209{
+    font-size: 17px;
+}
+
+#view_4223 div.kn-detail.field_6159{
+    font-size: 17px;
+}
+
+#view_4223 div.kn-detail.field_6184{
+    font-size: 17px;
+}
+
+/*CSS for PCD Survey out of 10 fields */
 #view_2765-field_6481 > option:nth-child(2){
   background-color:#23d160;
   color:#fafafa;
@@ -2653,7 +2677,42 @@ color: #FFFFFF;
   color:black;
 }
 
-/* CSS for Sign Online Remote Satisfaction Survey out of 10 Fields */
+/*CSS for VX Survey out of 10 fields */
+#view_3968-field_6481 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3968-field_6481 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3968-field_6481 > option {
+  background:#eee;
+  color:black;
+}
+
+#view_3968-field_6482 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3968-field_6482 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_3968-field_6482 > option {
+  background:#eee;
+  color:black;
+}
+
+/* CSS for PCD Sign Online Remote Satisfaction Survey out of 10 Fields */
 
 #view_3702-field_6481 > option:nth-child(2){
   background-color:#23d160;
@@ -2685,6 +2744,42 @@ color: #FFFFFF;
 }
 
 #view_3702-field_6482 > option {
+  background:#eee;
+  color:black;
+}
+
+/* CSS for VX Sign Online Remote Satisfaction Survey out of 10 Fields */
+
+#view_4219-field_6481 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4219-field_6481 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4219-field_6481 > option {
+  background:#eee;
+  color:black;
+}
+
+#view_4219-field_6482 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4219-field_6482 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4219-field_6482 > option {
   background:#eee;
   color:black;
 }
@@ -4193,3 +4288,12 @@ font-size:12px;
   	color: #FFFFFF;
   	font-weight: bold;
 }
+/* make handover white text */
+#view_2630 .kn-label {
+	color:#FFA100 !important
+		}
+
+
+
+
+

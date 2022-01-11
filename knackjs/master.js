@@ -4762,39 +4762,66 @@ $(document).on('knack-form-submit.view_2281', function(event, view, data) {
     }
 });
 
-// Synchronize password Actor
-$(document).on('knack-form-submit.view_1141', function(event, view, data) { 
+// Used Stock Management - Update Autorola Trade Price
+$(document).on('knack-form-submit.view_5048', function(event, view, data) { 
     
-  try{
-    let commandURL = "https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D";
-    let dataToSend = JSON.stringify({"action":"replicate_users", "userEmail":Knack.getUserAttributes().email});
-
-    var rData = $.ajax({
-      url: commandURL,
-      type: 'POST',
-      contentType: 'application/json',
-      data: dataToSend,
-      async: false
-    }).responseText;
-
-  }catch(exception){
-      console.log("error");
-      var today = new Date();
-      var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-      var dateTime = date+' '+time;
-
-      let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-      let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Integromat following Photo Upload At Used Vehicle Check In",
-      "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+    try{
+      let commandURL = "https://hook.integromat.com/vigtgktsw7fh3meswwm37ybgie0fc8p8" ;
+      let dataToSend = JSON.stringify({"Record ID":data.id}) ;
       var rData = $.ajax({
-         url: commandURL,
-         type: 'POST',
-         contentType: 'application/json',
-         data: dataToSend,
-         async: false
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
       }).responseText;
-  }
+   }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Stock Management - Update Autorola Trade Price",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;
+    }
 });
 
+/*Collapse purchasing MFL service Table 
+$(document).on('view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242', function(event, view, data){
+    addGroupExpandCollapse(view);
+})
+*/ 
 
+/* testing autotrader multiple choice check box in table*/
+// Function that adds checkboxes
+var addCheckboxes = function(view) {
+  // Add the checkbox to to the header to select/unselect all
+  $('#' + view.key + '.kn-table thead tr').prepend('<th><input type="checkbox"></th>');
+  $('#' + view.key + '.kn-table thead input').change(function() {
+    $('.' + view.key + '.kn-table tbody tr input').each(function() {
+      $(this).attr('checked', $('#' + view.key + '.kn-table thead input').attr('checked') != undefined);
+    });
+  });
+  // Add a checkbox to each row in the table body
+  $('#' + view.key + '.kn-table tbody tr').each(function() {
+    $(this).prepend('<td><input type="checkbox"></td>');
+  });
+}
+// Add checkboxes to a specific table view (view_1). Replace view_1 with your view key
+$(document).on('knack-view-render.view_5055', function (event, view) {
+  addCheckboxes(view);
+});
+// Cycle through selected checkboxes. Use this in any code that needs to get the checked IDs
+$('#view_5055 tbody input[type=checkbox]:checked').each(function() {
+  // add code here to get record id or row value
+  var id = $(this).closest('tr').attr('id'); // record id
+});

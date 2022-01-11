@@ -456,6 +456,12 @@ body {
   	font-weight: bold;
 }
 
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(21) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /* Auto Pricing Dashboard Filters */
 
 #view_4025 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -2908,6 +2914,13 @@ visibility: visible;
   	font-weight: bold;
 }
 
+#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(15) > a{
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+
 /************ USED VEHICLE ADMIN - DEAL FILE CHECKLIST Table Filters ***********/
 
 #view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -3066,6 +3079,11 @@ visibility: visible;
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
+}
+
+/************* Hide Form Submit from Admin Confirm Vehicle Check In Prep Pushed Page ************/
+#view_3126 > form > div > button {
+	display: none;
 }
 
 
@@ -7688,67 +7706,156 @@ align: center;
 	*/
 		
 /* Limit purchasing derivative counters to one line*/
-#view_5004 .kn-label-none.field_7415 > div > span > strong > span {
+#view_5004 .kn-label-none.field_7438 > div > span > strong > span {
     display:inline-block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 40ch;
 }
-/*change links to buttons on purchasing auction data v2 */
 
-#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span {
-  color: #FFFFFF;
-  font-weight: bold;
-  background-color: #00CC66;
-  padding: 12px;
-  display: inline-block;
-}
-
-#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span > a {
-  color: #FFFFFF;
+/* make purchasing main page button for retail metrics */
+#view_5004 .kn-label-none.field_7403 > div > span {
+  color: #FFFFFF !important;
   font-weight: bold;
   background-color: #FFA100;
   padding: 8px;
   display: inline-block;
+	border-radius: 12px;
 }
 
-#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7403 > div > span > a:hover {
-  color: #FFFFFF;
+
+#view_5004 .kn-label-none.field_7403 > div > span a:hover{
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
+/* Make view auction link as a button*/
+#view_5004 .kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span {
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
+#view_5004 .kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span a:hover{
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+/*make date/time auction transparent on purchasing */
+
+#view_5028 > section > div > div:nth-child(12) > div:nth-child(1) > div > div:nth-child(1) > div {
+	background-color: transparent;}
+	
+
+/*purchasing main page make auction a button */
+
+/*link to view retail check*/
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7403 > div > span > span{
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7403 > div > span > span a:hover{
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
+/* Link to similar vehicles */
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7404 > div > span > span {
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7404 > div > span > span a:hover {
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
+/* View inspection report*/
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7422 > div > span > span {
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7422 > div > span > span a:hover {
+  color: #FFFFFF !important;
   font-weight: bold;
   background-color: #D18400;
   padding: 8px;
   display: inline-block;
+	border-radius: 12px;
 }
-
-/* hover */ 
-
-#view_5028 > section > div > div:nth-child(7) > div > div > div.kn-label-none.field_7404 > div > span {
-  color: #FFFFFF;
+/*link to view auction */ 
+#view_5028 > section > div > div:nth-child(12) > div:nth-child(2) > div > div > div > span{
+  color: #FFFFFF !important;
   font-weight: bold;
-  background-color: #00CC66;
-  padding: 12px;
+  background-color: #FFA100;
+  padding: 8px;
   display: inline-block;
+	border-radius: 12px;
 }
-
-#view_5028 > section > div > div:nth-child(10) > div > div > div > div > span {
-  color: #FFFFFF;
+#view_5028 > section > div > div:nth-child(12) > div:nth-child(2) > div > div > div > span a:hover{
+  color: #FFFFFF !important;
   font-weight: bold;
-  background-color: #00CC66;
-  padding: 12px;
+  background-color: #D18400;
+  padding: 8px;
   display: inline-block;
+	border-radius: 12px;
 }
-
 #view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: bold;
-  background-color: #00CC66;
-  padding: 12px;
+  background-color: #FFA100;
+  padding: 8px;
   display: inline-block;
+	border-radius: 12px;
+	    height: 60px
 }
+#view_5028 > section > div > div:nth-child(11) > div:nth-child(2) > div > div a:hover  {
+  color: #FFFFFF !important;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+	border-radius: 12px;
+}
+
 
 
 /*make purchasing vehicle data transparent v2*/
+/*cap make transparaent in purchasing main page*/
+#view_5004 .kn-details .kn-detail-label, .kn-list .kn-detail-label {background-color: transparent;}
 
 #view_5028 > section > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
@@ -7768,14 +7875,28 @@ align: center;
 #view_5028 > section > div > div:nth-child(11) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
 
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7234 > div.kn-detail-label {background-color: transparent;}
+/*total number of fails or advisories to remove grey space*/ 
+#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7373 > div.kn-detail-label {background-color: transparent;}
+/*surecheck fail remove grey space*/
+#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label {background-color: transparent;}
+
+/* hide metrics from main purchasing page */ 
+#view_5004 section > div > div:nth-child(3) > div:nth-child(1) > div {background-color: transparent;}
 
 
-/* move purchasing images down  
-#view_5004 .nailthumb-container > span > img*/ 
 
 #view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
     background-color: #1f2dad !important;
 	top: 90px !important;
 }
 
+/*hide borders service table for MFL 
+#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 table, tr, td{
+ border:none !important;
+}*/
 
+/*hide scroll bar on purchasing vehicle description*/ 
+
+#view_5029 > section > div > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div > div {
+overflow: hidden !important;
+}
