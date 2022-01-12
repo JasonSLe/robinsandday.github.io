@@ -2479,14 +2479,14 @@ color: #FFFFFF;
 
 #view_4025 .kn-details-group.column-1.columns {background-color: transparent;}
 
-#view_4025 > section > div > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-body > span > span > a
+#view_4025 > section > div > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-body > span > span > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_4025 > section > div > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-body > span > span > a
+#view_4025 > section > div > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-body > span > span > a:hover {
         background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
