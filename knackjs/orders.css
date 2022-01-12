@@ -2492,7 +2492,7 @@ color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
   	transition-duration: .3s;
-  	border-width: 2px;
+  	border-width: 7px;
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
