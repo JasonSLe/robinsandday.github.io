@@ -2477,7 +2477,7 @@ color: #FFFFFF;
 
 /**** Enquiry Max Link ****/
 
-#view_4025 .kn-details-group.column-1.columns {background-color: transparent;}
+#view_4025 .kn-label-none.field_7500 {background-color: transparent;}
 
 #view_4025 > section > div > div > div:nth-child(2) > div > div.kn-label-none.field_7500 > div > span > span > a {
   color: #FFFFFF;
