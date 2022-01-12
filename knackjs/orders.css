@@ -2480,21 +2480,21 @@ color: #FFFFFF;
 #view_4025 .kn-details-group.column-1.columns {background-color: transparent;}
 
 #view_4025 > section > div > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-body > span > span > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	box-shadow:         3px 3px #ccc;
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
 }
 
 #view_4025 > section > div > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-body > span > span > a:hover {
-        background-color: #D18400;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
-  	border-width: 20px;
-  	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 8px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
 }
 	
 /**** Link from Handover Docs ****/
