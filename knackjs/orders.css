@@ -2480,9 +2480,9 @@ color: #FFFFFF;
 #view_4025 .kn-details-group.column-1.columns {background-color: transparent;}
 
 #view_4025 > section > div > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-body > span > span > a {
-  color: #FFA100;
+  color: #FFFFFF;
   font-weight: bold;
-  background-color: #00CC66;
+  background-color: #FFA100;
   padding: 8px;
   display: inline-block;
 }
@@ -2490,7 +2490,7 @@ color: #FFFFFF;
 #view_4025 > section > div > div.kn-details-group.column-1.columns > div > div > div > div.kn-detail-body > span > span > a:hover {
   color: #FFFFFF;
   font-weight: bold;
-  background-color: #32936F;
+  background-color: #FFA100;
   padding: 8px;
   display: inline-block;
 }
