@@ -1480,7 +1480,12 @@ imageBeforeResize.onload = () => {
 
   //if ((imageBeforeResize.width/imageBeforeResize.height)===(4/3)){
     var percentOfPicture = 0.6;
-    ctx.drawImage(imageBeforeResize, imageBeforeResize.width * (1-percentOfPicture)/2, imageBeforeResize.height * (1-percentOfPicture)/2, imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
+    var left = imageBeforeResize.width * ((1-percentOfPicture)/2);
+    var top = imageBeforeResize.height * ((1-percentOfPicture)/2);
+    if (OperatingSystem.iOS()){
+      top = 0;
+    }
+    ctx.drawImage(imageBeforeResize, left, top , imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
   /*} else {
     var percentOfPicture69 = 0.7;
     //if not, compute what you need to crop, now it expects the width/heigth more than 4/3, so it crops just width
