@@ -1478,16 +1478,16 @@ imageBeforeResize.onload = () => {
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
 
-  if ((imageBeforeResize.width/imageBeforeResize.height)===(4/3)){
+  //if ((imageBeforeResize.width/imageBeforeResize.height)===(4/3)){
     var percentOfPicture = 0.6;
     ctx.drawImage(imageBeforeResize, imageBeforeResize.width * (1-percentOfPicture)/2, imageBeforeResize.height * (1-percentOfPicture)/2, imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
-  } else {
+  /*} else {
     var percentOfPicture69 = 0.7;
     //if not, compute what you need to crop, now it expects the width/heigth more than 4/3, so it crops just width
     var sx = ((imageBeforeResize.width-((4/3)*imageBeforeResize.height))/imageBeforeResize.width) * imageBeforeResize.width / 2;
     var sw = imageBeforeResize.width - (((imageBeforeResize.width-((4/3)*imageBeforeResize.height))/imageBeforeResize.width) * imageBeforeResize.width);
     ctx.drawImage(imageBeforeResize, sx + sw * (1-percentOfPicture69)/2, imageBeforeResize.height * (1-percentOfPicture69)/2, sw * percentOfPicture69, imageBeforeResize.height * percentOfPicture69, 0, 0, 768, 576);
-  }
+  }*/
    //save the resized image to the shown img
    ctx.canvas.toBlob((blob) => {
       img.src = URL.createObjectURL(blob);
