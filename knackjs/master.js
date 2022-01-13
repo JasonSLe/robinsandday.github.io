@@ -1483,6 +1483,7 @@ imageBeforeResize.onload = () => {
     var left = imageBeforeResize.width * ((1-percentOfPicture)/2);
     var top = imageBeforeResize.height * ((1-percentOfPicture)/2);
     if (OperatingSystem.iOS()){
+      alert(window.navigator.standalone);
       top = 0;
     }
     ctx.drawImage(imageBeforeResize, left, top , imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
