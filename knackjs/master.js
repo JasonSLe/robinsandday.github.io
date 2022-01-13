@@ -1485,14 +1485,14 @@ imageBeforeResize.onload = () => {
     if (OperatingSystem.iOS()){
       if (!window.navigator.standalone){
         top = 0;
-        alert('Safari with top')
+        //alert('Safari with top')
       } else {
-        alert('Safari without top');
+        //alert('Safari without top');
       }
     }
     ctx.drawImage(imageBeforeResize, left, top , imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
   } else {
-    alert('another resolution');
+    //alert('another resolution');
     var percentOfPicture69 = 0.7;
     //if not, compute what you need to crop, now it expects the width/heigth more than 4/3, so it crops just width
     var sx = ((imageBeforeResize.width-((4/3)*imageBeforeResize.height))/imageBeforeResize.width) * imageBeforeResize.width / 2;
