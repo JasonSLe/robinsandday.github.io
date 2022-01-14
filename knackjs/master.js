@@ -1484,7 +1484,7 @@ imageBeforeResize.onload = () => {
     var top = imageBeforeResize.height * ((1-percentOfPicture)/2);
     if (OperatingSystem.iOS()){
       if (!window.navigator.standalone){
-        top = 0;
+        //top = 0;
         //alert('Safari with top')
       } else {
         //alert('Safari without top');
