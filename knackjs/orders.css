@@ -2642,11 +2642,11 @@ color: #FFFFFF;
 
 #view_2766 .kn-detail-label {background-color: transparent;}
 
-/*CSS Survey VX Details
+/*CSS Survey VX Details*/
 
 #view_4223 .kn-detail-label {background-color: transparent;}
 
-#view_4226 .kn-detail-label {background-color: transparent;}*/
+#view_4226 .kn-detail-label {background-color: transparent;}
 
 /******* Vauxhall CSI Survey Page GDPR added *********/
 
@@ -2699,7 +2699,7 @@ color: #FFFFFF;
   color:black;
 }
 
-/*CSS for VX Survey out of 10 fields 
+/*CSS for VX Survey out of 10 fields*/ 
 #view_3968-field_6481 > option:nth-child(2){
   background-color:#23d160;
   color:#fafafa;
@@ -2732,7 +2732,7 @@ color: #FFFFFF;
 #view_3968-field_6482 > option {
   background:#eee;
   color:black;
-}*/
+}
 
 /* CSS for PCD Sign Online Remote Satisfaction Survey out of 10 Fields */
 
