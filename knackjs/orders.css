@@ -2664,7 +2664,7 @@ color: #FFFFFF;
     font-size: 17px;
 }
 
-/*CSS for PCD Survey out of 10 fields */
+/*CSS for PCD Survey out of 10 fields*/ 
 #view_2765-field_6481 > option:nth-child(2){
   background-color:#23d160;
   color:#fafafa;
@@ -2699,7 +2699,7 @@ color: #FFFFFF;
   color:black;
 }
 
-/*CSS for VX Survey out of 10 fields */
+/*CSS for VX Survey out of 10 fields*/ 
 #view_3968-field_6481 > option:nth-child(2){
   background-color:#23d160;
   color:#fafafa;
@@ -2770,7 +2770,7 @@ color: #FFFFFF;
   color:black;
 }
 
-/* CSS for VX Sign Online Remote Satisfaction Survey out of 10 Fields */
+/* CSS for VX Sign Online Remote Satisfaction Survey out of 10 Fields 
 
 #view_4219-field_6481 > option:nth-child(2){
   background-color:#23d160;
@@ -2804,7 +2804,7 @@ color: #FFFFFF;
 #view_4219-field_6482 > option {
   background:#eee;
   color:black;
-}
+}*/
 
 /********* SERVICE PLAN PAGE *********/
 
