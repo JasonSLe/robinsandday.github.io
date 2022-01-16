@@ -4681,113 +4681,21 @@ $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"
 
 // Webhook to Trigger Silent Salesman Scenario to update Deposit for Finance PDF https://www.integromat.com/scenario/2554226/edit
 $(document).on('knack-form-submit.view_4985', function(event, view, data) { 
-    
-    
-    try{
-
-      let commandURL = "https://hook.integromat.com/8dyychx6lyitshvxjep1l699zc5wym37";
-
-      function handlAll(valueA, fieldName){ 
-            return (valueA? valueA[fieldName]:null);
-        }
-
-
-      var createData = {"VRM":data.field_2694_raw, "Vehicle Stock Record ID":data.id, "Sales Channel Record ID":data.field_4886_raw, "Price":data.field_2725_raw,
-                        "CAP ID":data.field_3257_raw, "Current Mileage":data.field_2693_raw, "Registration Date": handlAll(data.field_2695_raw, "date_formatted"), "Vehicle Type":data.field_2586_raw,
-                        "VAT Status":handlAll(data.field_2689_raw, "1"),"Deposit":data.field_7394_raw};
-      
-      function deleteEmpty(objectA){
-        
-                for (const [key, value] of Object.entries(objectA)) {
-                    if (value === undefined || value === null || value === ""){
-                        delete objectA[key];
-                    }
-                }
-                return objectA;
-            }
-            //Iterate through all the values contained in createData and deletesany undefined object properties
-            //Will create the final form of the data sent using POST
-            let dataToSend = JSON.stringify(deleteEmpty(createData));
-      var rData = $.ajax({
-        url: commandURL,
-        type: 'POST',
-        contentType: 'application/json',
-        data: dataToSend,
-        async: false
-  }).responseText;
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Webhook to Trigger Silent Salesman Scenario to update Deposit for Finance PDF https://www.integromat.com/scenario/2554226/edit",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
+  var createData = {"VRM":data.field_2694_raw, "Vehicle Stock Record ID":data.id, "Sales Channel Record ID":data.field_4886_raw, "Price":data.field_2725_raw,
+  "CAP ID":data.field_3257_raw, "Current Mileage":data.field_2693_raw, "Registration Date": handlAll(data.field_2695_raw, "date_formatted"), "Vehicle Type":data.field_2586_raw,
+  "VAT Status":handlAll(data.field_2689_raw, "1"),"Deposit":data.field_7394_raw};
+  callPostHttpRequest("https://hook.integromat.com/8dyychx6lyitshvxjep1l699zc5wym37", deleteEmpty(createData),"Webhook to Trigger Silent Salesman Scenario to update Deposit for Finance PDF https://www.integromat.com/scenario/2554226/edit")
 });
 
 
 //  Trigger Integromat following Photo Upload At Used Vehicle Check In
 $(document).on('knack-form-submit.view_2281', function(event, view, data) { 
-    
-    try{
-
-        let commandURL = "https://hook.integromat.com/xakduhf9nvro3xoa1o7p56c3q53sxl9u";
-        let dataToSend = JSON.stringify({"Record ID":data.id});
-
-
-      var rData = $.ajax({
-        url: commandURL,
-        type: 'POST',
-        contentType: 'application/json',
-        data: dataToSend,
-        async: false
-      }).responseText;
-  
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Integromat following Photo Upload At Used Vehicle Check In",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
+  callPostHttpRequest("https://hook.integromat.com/xakduhf9nvro3xoa1o7p56c3q53sxl9u", {"Record ID":data.id},"Trigger Integromat following Photo Upload At Used Vehicle Check In")
 });
 
 // Used Stock Management - Update Autorola Trade Price
 $(document).on('knack-form-submit.view_5048', function(event, view, data) { 
-    try{
-      let commandURL = "https://hook.integromat.com/vigtgktsw7fh3meswwm37ybgie0fc8p8" ;
-      let dataToSend = JSON.stringify({"Record ID":data.id}) ;
-      var rData = $.ajax({
-        url: commandURL,
-        type: 'POST',
-        contentType: 'application/json',
-        data: dataToSend,
-        async: false
-      }).responseText;
-   }catch(exception){
-     sendErrorToIntegromat(exception, "Used Stock Management - Update Autorola Trade Price");
-    }
+  callPostHttpRequest("https://hook.integromat.com/vigtgktsw7fh3meswwm37ybgie0fc8p8", {"Record ID":data.id},"Used Stock Management - Update Autorola Trade Price")
 });
 
 /*Collapse purchasing MFL service Table 
@@ -4823,10 +4731,22 @@ $('#view_5055 tbody input[type=checkbox]:checked').each(function() {
 
 //Trigger Auth Actor password sync when user resets password
 $(document).on('knack-form-submit.view_1141', function(event, view, data) {
-  callPostHttpRequest("https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D", {"action":"replicate_users", "userEmail":Knack.getUserAttributes().email})
+  callPostHttpRequest("https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D", {"action":"replicate_users", "userEmail":Knack.getUserAttributes().email},"Call Auth Actor Password Sync")
 });
 
-function callPostHttpRequest(url, payloadObject){
+function handlAll(valueA, fieldName){ 
+  return (valueA? valueA[fieldName]:null);
+}
+function deleteEmpty(objectA){   
+  for (const [key, value] of Object.entries(objectA)) {
+      if (value === undefined || value === null || value === ""){
+          delete objectA[key];
+      }
+  }
+  return objectA;
+}
+
+function callPostHttpRequest(url, payloadObject, callName){
   try{
     let commandURL = "https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D" ;
     let dataToSend = JSON.stringify({"action":"replicate_users", "userEmail":Knack.getUserAttributes().email}) ;
@@ -4839,7 +4759,7 @@ function callPostHttpRequest(url, payloadObject){
     }).responseText;
     return rData;
   } catch(exception) {
-    sendErrorToIntegromat(exception, "Call Auth Actor Password Sync");
+    sendErrorToIntegromat(exception, callName);
   }
 }
 
