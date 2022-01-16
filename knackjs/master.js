@@ -4228,86 +4228,15 @@ $(document).on('knack-form-submit.view_4589', function(event, view, data) {
 
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L V2 when Approved {(Deal File) Profit Sheet} 
 $(document).on('knack-form-submit.view_4573', function(event, view, data) { 
-
-    try{
-        if(data.field_6449_raw){
-
-            let commandURL = "https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v" ;
-            let dataToSend = JSON.stringify({"Record ID":data.id,"Form":"Digital P&L"}) ;
-            var rData = $.ajax({
-                url: commandURL,
-                type: 'POST',
-                contentType: 'application/json',
-                data: dataToSend,
-                async: false
-            }).responseText;
-            
-            let commandURL1 = "https://hook.integromat.com/3q2btvigi1w229klrxitmlnluedv9v3c" ;
-            let dataToSend1 = JSON.stringify({"Record ID":data.id,"Form":"Digital P&L"}) ;
-            var rData = $.ajax({
-                url: commandURL1,
-                type: 'POST',
-                contentType: 'application/json',
-                data: dataToSend1,
-                async: false
-            }).responseText;
-
-        }
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L when Approved {(Deal File) Profit Sheet} ",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
-    });
+  if(data.field_6449_raw){
+    callPostHttpRequest("https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v", {"Record ID":data.id,"Form":"Digital P&L"},"Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L when Approved {(Deal File) Profit Sheet} ");
+    callPostHttpRequest("https://hook.integromat.com/3q2btvigi1w229klrxitmlnluedv9v3c", {"Record ID":data.id,"Form":"Digital P&L"},"Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Digital P&L when Approved {(Deal File) Profit Sheet} ");
+  }
+});
     
-
-
 //Valeting check in/out (Master App)
 $(document).on('knack-form-submit.view_4733', function(event, view, data) { 
-    
-    try{
-    
-        let commandURL = "https://hook.integromat.com/j5s5ksuxtqjd4jcwh41qm5gy2afujni3";
-        let dataToSend = JSON.stringify({"Record ID":data.id});
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Valeting check in out (Master App)",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
+  callPostHttpRequest("https://hook.integromat.com/j5s5ksuxtqjd4jcwh41qm5gy2afujni3", {"Record ID":data.id},"Valeting check in out (Master App)")
 });
 
 // Refresh the table on WALL-E's status page         
@@ -4318,96 +4247,14 @@ $(document).on('knack-scene-render.scene_1417', function(event, scene) {
 function recursivecallWallePage(){
  setTimeout(function () { if($("#view_4579").is(":visible")==true){ Knack.views["view_4579"].model.fetch();recursivecallWallePage();} }, 10000);
 }
-/*
-$(document).on("knack-scene-render.scene_1408", function(event, scene, data) {
-  let sceneEl = document.getElementById('kn-scene_1408');
-  sceneEl.setAttribute("class", "flip-book");
-  let cover = document.createElement('div');
-  cover.setAttribute("class", "page page-cover page-cover-top");
-  cover.setAttribute("data-density","hard");
-  cover.innerHTML = '<div class="page-content"><h2>BOOK TITLE</h2></div>';
-  let page1 = document.createElement('div');
-  page1.setAttribute("class", "page");
-  page1.innerHTML = '<div class="page-content"><h2 class="page-header">Page Header 1</h2><div class="page-image" style="background-image: url(1.jpg)"></div><div class="page-text">Page Content 1</div><div class="page-footer">2</div></div>';
-
-  let sections = document.createElement('div');
-  sections.setAttribute("id", "sections");
-  let sectionLeft = document.createElement('div');
-  sectionLeft.setAttribute("id", "sectionLeft");
-  let sectionCenter = document.createElement('div');
-  sectionCenter.setAttribute("id", "sectionCenter");
-  let sectionRight = document.createElement('div');
-  sectionRight.setAttribute("id", "sectionRight");
-  sceneEl.prepend(sections);
-  sections.prepend(sectionRight)
-  sections.prepend(sectionCenter)
-  sections.prepend(sectionLeft)
-  sectionLeft.appendChild(document.getElementById('view_95'));
-  sectionLeft.appendChild(document.getElementById('view_98'));
-  sectionLeft.appendChild(document.getElementById('view_131'));
-  sectionLeft.appendChild(document.getElementById('view_148'));
-  sectionCenter.appendChild(document.getElementById('view_97'));
-  sectionCenter.appendChild(document.getElementById('view_114'));
-  sectionCenter.appendChild(document.getElementById('view_121'));
-  sectionCenter.appendChild(document.getElementById('view_122'));
-  sectionCenter.appendChild(document.getElementById('view_117'));
-  sectionCenter.appendChild(document.getElementById('view_149'));
-  sectionRight.appendChild(document.getElementById('view_96'));
-  sectionRight.appendChild(document.getElementById('view_133'));
-  sectionRight.appendChild(document.getElementById('view_115'));
-});
-*/
 
 //Trigger Integromat to Unreserve Vehicle via Updates to Website/AutoTrader From Used Stock Management - Edit Adverts 
 $(document).on('knack-form-submit.view_4857', function(event, view, data) { 
-
-    try{
-
-            let commandURL = "https://hook.integromat.com/n04o2rpxiiodil3pf91sn2b6khppbjlx" ;
-            var createData = ({"Record ID":data.id,"Reg No":data.field_2694_raw, "Stock ID":data.field_5713_raw, 
+  var createData = ({"Record ID":data.id,"Reg No":data.field_2694_raw, "Stock ID":data.field_5713_raw, 
                                              "Peugeot Dealer ID":data.field_4161_raw, "Citroen Dealer ID":data.field_4162_raw, 
                                              "DS Dealer ID":data.field_4163_raw, "Vauxhall Dealer ID":data.field_5931_raw, "DID for Used Stock FTP":data.field_4623_raw});
-            
-            function deleteEmpty(objectA){
-        
-                for (const [key, value] of Object.entries(objectA)) {
-                    if (value === undefined || value === null || value === ""){
-                        delete objectA[key];
-                    }
-                }
-                return objectA;
-            }
-            //Iterate through all the values contained in createData and deletesany undefined object properties
-            //Will create the final form of the data sent using POST
-            let dataToSend = JSON.stringify(deleteEmpty(createData));
-        var rData = $.ajax({
-                url: commandURL,
-                type: 'POST',
-                contentType: 'application/json',
-                data: dataToSend,
-                async: false
-            }).responseText;
-                       
-
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Integromat to Unreserve Vehicle via Updates to Website/AutoTrader From Used Stock Management - Edit Adverts",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
-    });
+  callPostHttpRequest("https://hook.integromat.com/n04o2rpxiiodil3pf91sn2b6khppbjlx", deleteEmpty(createData),"Trigger Integromat to Unreserve Vehicle via Updates to Website/AutoTrader From Used Stock Management - Edit Adverts")
+});
     
 //Add Valet (manually) PAGE
 //Restrict Available Times for adding a valet to 8am - 7pm
@@ -4417,21 +4264,19 @@ var view_names = ["view_4510"]; ///add view numbers as necessary
 view_names.forEach(bindToUpdate1);
 
 function bindToUpdate1(selector_view_name){
-$(document).on('knack-view-render.' + selector_view_name, function(event, view, data) {
+  $(document).on('knack-view-render.' + selector_view_name, function(event, view, data) {
 
     $(document).ready(function(){
       $('.ui-timepicker-input').timepicker({
       minTime: '08:00:00',     //  8:00 AM,  Change as necessary
       maxTime: '19:00:00',        //  7:00 PM,  Change as necessary
       step: '15'		// Dropdown Interval every 15 mins
-
       });
-      });
-
-      //Hides All Day and Repeat from Time/Date selection
-      $('div[id="kn-input-field_7259"]>div[style="margin-top: 5px;"]').hide();
     });
 
+    //Hides All Day and Repeat from Time/Date selection
+    $('div[id="kn-input-field_7259"]>div[style="margin-top: 5px;"]').hide();
+  });
 }
 
 //General function, needs to be copied to other apps JS files if needed
@@ -4466,73 +4311,13 @@ $(document).on('knack-view-render.' + selector_view_name, function(event, view, 
 
 //**Used Deal Files - Submit Additional Product Certificates Uploaded
 $(document).on('knack-form-submit.view_3321', function(event, view, data) { 
-    
-    try{
-    
-        let commandURL = "https://hook.integromat.com/3umnr247redycud7ind5l6xbge6lhq4k";
-        let dataToSend = JSON.stringify({"Record ID":data.id , "Form":"Used Deal Files - Submit Additional Product Certificates Uploaded"});
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Deal Files - Submit Additional Product Certificates Uploaded",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
+  callPostHttpRequest("https://hook.integromat.com/3umnr247redycud7ind5l6xbge6lhq4k", {"Record ID":data.id , "Form":"Used Deal Files - Submit Additional Product Certificates Uploaded"},"Used Deal Files - Submit Additional Product Certificates Uploaded")
 });
 
 
 //**Used Deal Files - View Additional Product Certificates Uploaded
 $(document).on('knack-form-submit.view_3324', function(event, view, data) { 
-    
-    try{
-    
-        let commandURL = "https://hook.integromat.com/3umnr247redycud7ind5l6xbge6lhq4k";
-        let dataToSend = JSON.stringify({"Record ID":data.id , "Form":"Used Deal Files - View Additional Product Certificates Uploaded"});
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Deal Files - View Additional Product Certificates Uploaded",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
+  callPostHttpRequest("https://hook.integromat.com/3umnr247redycud7ind5l6xbge6lhq4k", {"Record ID":data.id , "Form":"Used Deal Files - View Additional Product Certificates Uploaded"},"Used Deal Files - View Additional Product Certificates Uploaded")
 });
 
 
