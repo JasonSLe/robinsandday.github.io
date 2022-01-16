@@ -4099,3 +4099,9 @@ function sendErrorToIntegromat(exception, name){
      async: false
   }).responseText;
 }
+
+$(document).on('knack-scene-render.scene_960', function (event, view, data) {
+	const iH = IsInHomeScreen();
+  console.log('IsInHomeScreen', iH);
+  $('[class="kn-current-user-intro"]').text((iH?'H':'B')+'Logged in as');
+});
