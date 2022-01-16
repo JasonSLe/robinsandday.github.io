@@ -3968,67 +3968,13 @@ $(document).on('knack-form-submit.view_370', function(event, view, data) {
 
 // Enquiry Max – **Instant trigger from TRADE Or Offsite P/X appraisal MANAGER VALUATION OVERRIDE to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles} - Replaces https://zapier.com/app/editor/81423357/nodes/81423358/fields
 $(document).on('knack-form-submit.view_396', function(event, view, data) { 
-    
-    
-    try{
-        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
-        function handlAll(valueA, fieldName){ 
-            return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
-        }
-        
-        function handlDate(valueB, fieldDate){
-              return (valueB? valueB[fieldDate]: null); // if the date is undefined it will return null
-          }
-
-        let commandURL = "https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p";
-
-        //CreateData contains the structure of the data that will be sent through the POST
-        var createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
-          "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/", "Valuation":("£" + data.field_753_raw).replace("undefined", "0.00"),
-          "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Offsite Image":handlAll(data.field_4194_raw, "url"), "Valuation Pending On site Inspection":("£" + Math.round(data.field_853_raw)).replace("undefined", "0").replace("NaN", "0"),
-           "Manger Override Valuation Pending Onsite Valuation":("£" + data.field_866_raw).replace("undefined", ""), "Date Of Last Service":handlDate(data.field_535_raw, "date_formatted"), "Total Refurb Cost":("£" + Math.round(data.field_624_raw)).replace("undefined", "").replace("NaN", ""), "Mechanical Refub Cost":("£" + Math.round(data.field_622_raw)).replace("undefined", "").replace("NaN", ""), 
-           "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":handlDate(data.field_3203_raw, "date_formatted"), "Valuation Notes":data.field_4390_raw, "Sales Advisor Refurb Description":(data.field_882_raw + "").replace("undefined", "") + " " + (data.field_883_raw + "").replace("undefined", ""), 
-           "Source Of Payload":"knack direct"};
-
-
-        function deleteEmpty(objectA){
-        
-                for (const [key, value] of Object.entries(objectA)) {
-                    if (value === undefined || value === null || value === ""){
-                        delete objectA[key];
-                    }
-                }
-                return objectA;
-            }
-            //Iterate through all the values contained in createData and deletesany undefined object properties
-            //Will create the final form of the data sent using POST
-            let dataToSend = JSON.stringify(deleteEmpty(createData));
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"ID":data.id, "Source":"Javascript error", "Function": "Instant trigger from TRADE Or Offsite P/X appraisal MANAGER VALUATION OVERRIDE to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles}",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
+  var createData = {"Knack UID":data.id, "VRM":data.field_257_raw, "Odometer":data.field_258_raw, "Main Image":handlAll(data.field_532_raw, "url"),
+  "URL to Access Valuation":"https://www.robinsandday.co.uk/digital#new-appraisal/offsite-or-trade-valuation/" + data.id + "/", "Valuation":("£" + data.field_753_raw).replace("undefined", "0.00"),
+  "Enquiry Max Dealer UID":data.field_5799_raw, "Enquiry Max Enquiry UID":data.field_5800_raw, "Offsite Image":handlAll(data.field_4194_raw, "url"), "Valuation Pending On site Inspection":("£" + Math.round(data.field_853_raw)).replace("undefined", "0").replace("NaN", "0"),
+   "Manger Override Valuation Pending Onsite Valuation":("£" + data.field_866_raw).replace("undefined", ""), "Date Of Last Service":handlDate(data.field_535_raw, "date_formatted"), "Total Refurb Cost":("£" + Math.round(data.field_624_raw)).replace("undefined", "").replace("NaN", ""), "Mechanical Refub Cost":("£" + Math.round(data.field_622_raw)).replace("undefined", "").replace("NaN", ""), 
+   "Aesthetic Refub Cost":("£" + data.field_623_raw).replace("undefined", ""), "Vehicle Test Driven":data.field_745_raw, "Offer valid Up to":handlDate(data.field_3203_raw, "date_formatted"), "Valuation Notes":data.field_4390_raw, "Sales Advisor Refurb Description":(data.field_882_raw + "").replace("undefined", "") + " " + (data.field_883_raw + "").replace("undefined", ""), 
+   "Source Of Payload":"knack direct"};
+  callPostHttpRequest("https://hook.integromat.com/71nekxpf0if53hc6gauk8j2rc3wqiv7p", deleteEmpty(createData),"Instant trigger from TRADE Or Offsite P/X appraisal MANAGER VALUATION OVERRIDE to Integromat to return data to Enquiry Max {(P/X) Part Exchange Vehicles}");
 });
 
 //**Part exchange appraisal retail mechanical (Master App)
@@ -4355,6 +4301,9 @@ $(document).on('knack-form-submit.view_1141', function(event, view, data) {
 
 function handlAll(valueA, fieldName){ 
   return (valueA? valueA[fieldName]:null);
+}
+function handlDate(valueB, fieldDate){
+  return (valueB? valueB[fieldDate]: null); // if the date is undefined it will return null
 }
 function deleteEmpty(objectA){   
   for (const [key, value] of Object.entries(objectA)) {
