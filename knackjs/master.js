@@ -1314,7 +1314,7 @@ function IsInHomeScreen(){
       return false;
     }
   }
-  return false;
+  return null;
 }
 
 function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
