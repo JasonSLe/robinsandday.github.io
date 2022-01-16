@@ -4069,88 +4069,18 @@ $(document).on('knack-form-submit.view_407', function(event, view, data) {
 });
 
 //User data update
-$(document).on('knack-form-submit.view_5', function(event, view, data) { 
-  let commandURL = "https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D" ;
-  let dataToSend = {"action": "replicate_users"}; 
-  recordId = data.id;
-  console.log(dataToSend);
-  var rData = $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: JSON.stringify(dataToSend),
-    async: true
-  })
+$(document).on('knack-form-submit.view_5', function(event, view, data) {
+  callPostHttpRequest("https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D", {"action": "replicate_users"},"User data update");   
 });
 
 //Valeting check out (Master App)
 $(document).on('knack-form-submit.view_4504', function(event, view, data) { 
-    
-    try{
-    
-        let commandURL = "https://hook.integromat.com/j5s5ksuxtqjd4jcwh41qm5gy2afujni3";
-        let dataToSend = JSON.stringify({"Record ID":data.id});
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Valeting check out (Master App)",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
+  callPostHttpRequest("https://hook.integromat.com/j5s5ksuxtqjd4jcwh41qm5gy2afujni3", {"Record ID":data.id},"Valeting check out (Master App)");  
 });
 
 //(used deal file) - trigger intergromat to cancel used deal file
 $(document).on('knack-form-submit.view_3562', function(event, view, data) { 
-    
-    try{
-    
-        let commandURL = "https://hook.integromat.com/vq733xr47qnzl4cb86q9ccmqoxvl62t1";
-        let dataToSend = JSON.stringify({"Record ID":data.id});
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "(used deal file) - trigger intergromat to cancel used deal file",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
+  callPostHttpRequest("https://hook.integromat.com/vq733xr47qnzl4cb86q9ccmqoxvl62t1", {"Record ID":data.id},"(used deal file) - trigger intergromat to cancel used deal file");  
 });
 
 //Description - Used Deal File Profit Sheet - Franchise Selection
