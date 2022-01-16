@@ -1299,6 +1299,24 @@ if (document.exitFullscreen) {
     }
   }
 
+function IsInHomeScreen(){
+  if (OperatingSystem.iOS()){
+    if (window.navigator.standalone){
+      return true;
+    } else {
+      return false;
+    }
+  } 
+  if (OperatingSystem.Android()) {
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  return false;
+}
+
 function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // ***************************************************************************************************************************
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
