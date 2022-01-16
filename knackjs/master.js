@@ -4823,6 +4823,10 @@ $('#view_5055 tbody input[type=checkbox]:checked').each(function() {
 
 //Trigger Auth Actor password sync when user resets password
 $(document).on('knack-form-submit.view_1141', function(event, view, data) {
+  callPostHttpRequest("https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D", {"action":"replicate_users", "userEmail":Knack.getUserAttributes().email})
+});
+
+function callPostHttpRequest(url, payloadObject){
   try{
     let commandURL = "https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D" ;
     let dataToSend = JSON.stringify({"action":"replicate_users", "userEmail":Knack.getUserAttributes().email}) ;
@@ -4833,10 +4837,11 @@ $(document).on('knack-form-submit.view_1141', function(event, view, data) {
       data: dataToSend,
       async: false
     }).responseText;
-  }catch(exception){
+    return rData;
+  } catch(exception) {
     sendErrorToIntegromat(exception, "Call Auth Actor Password Sync");
   }
-});
+}
 
 function sendErrorToIntegromat(exception, name){
   console.log("error");
