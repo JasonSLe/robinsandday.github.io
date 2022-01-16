@@ -4031,41 +4031,9 @@ $(document).on('knack-form-submit.view_396', function(event, view, data) {
     }
 });
 
-
-
 //**Part exchange appraisal retail mechanical (Master App)
 $(document).on('knack-form-submit.view_407', function(event, view, data) { 
-    
-    try{
-    
-        let commandURL = "https://hook.integromat.com/ztjcyglouzfis5l4wktkui7htszs6615";
-        let dataToSend = JSON.stringify({"Record ID":data.id , "Source Of Payload":"knack direct"});
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Part exchange appraisal retail mechanical (Master App)",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
+  callPostHttpRequest("https://hook.integromat.com/ztjcyglouzfis5l4wktkui7htszs6615", {"Record ID":data.id , "Source Of Payload":"knack direct"},"Part exchange appraisal retail mechanical (Master App)");
 });
 
 //User data update
@@ -4399,8 +4367,8 @@ function deleteEmpty(objectA){
 
 function callPostHttpRequest(url, payloadObject, callName){
   try{
-    let commandURL = "https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D" ;
-    let dataToSend = JSON.stringify({"action":"replicate_users", "userEmail":Knack.getUserAttributes().email}) ;
+    let commandURL = url ;
+    let dataToSend = JSON.stringify(payloadObject) ;
     var rData = $.ajax({
       url: commandURL,
       type: 'POST',
