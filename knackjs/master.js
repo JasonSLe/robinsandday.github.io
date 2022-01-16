@@ -4677,8 +4677,6 @@ $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"
 });
 }
 
-
-
 // Webhook to Trigger Silent Salesman Scenario to update Deposit for Finance PDF https://www.integromat.com/scenario/2554226/edit
 $(document).on('knack-form-submit.view_4985', function(event, view, data) { 
   var createData = {"VRM":data.field_2694_raw, "Vehicle Stock Record ID":data.id, "Sales Channel Record ID":data.field_4886_raw, "Price":data.field_2725_raw,
