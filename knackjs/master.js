@@ -1423,6 +1423,9 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   image.onload = drawImageActualSize;
   //image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebg.png?token=AK2DHPRJXE5E2DFU5EXYCXS7Y6ROW';
   image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv3.png';
+  if (Knack.getUserAttributes().email.includes('hynek')){
+    image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-background-v2.png';
+  }
 
    //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
   var imageBeforeResize = document.createElement('img');
