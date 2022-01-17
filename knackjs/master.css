@@ -4614,7 +4614,7 @@ background-color:#0f2542;
 
 #view_3614 .kn-detail-label {background-color: transparent;}
 
-/* #view_4155 .kn-detail-label {background-color: transparent;} */
+#view_4155 .kn-detail-label {background-color: transparent;}
 
 #view_4155 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6263 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
