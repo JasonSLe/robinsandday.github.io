@@ -1323,12 +1323,16 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // *****************************************************************************************************************************
   var go = () => {
     effect.show();
-    if(interval===0) { // if interval is equal to 0     
-      interval = setInterval(function () {
-          effect.fadeIn(1500, function () {
-            effect.fadeOut(1500);
-          });
-        }, 3000);
+    if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
+      console.log('nothide');
+    } else {
+      if(interval===0) { // if interval is equal to 0     
+        interval = setInterval(function () {
+            effect.fadeIn(1500, function () {
+              effect.fadeOut(1500);
+            });
+          }, 3000);
+      }
     }
   }
 
