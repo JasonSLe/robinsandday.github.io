@@ -2475,7 +2475,7 @@ color: #FFFFFF;
   border-left: 10px solid #32a1ce;
 }
 
-/**** Enquiry Max Link ****/
+/**** Enquiry Max Link on Deal File Overview ****/
 
 #view_4025 .kn-label-none.field_7500 {background-color: transparent;}
 
@@ -2495,8 +2495,26 @@ color: #FFFFFF;
   display: inline-block;
 }
 
+/*** Enquiry Max Link on TCF Pre Sale Pack ***/
 
-	
+#view_4215 .kn-label-none.field_7500 {background-color: transparent;}
+
+#view_4215 > section > div > div > div > div > div.kn-label-none.field_7500 > div > span > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4215 > section > div > div > div > div > div.kn-label-none.field_7500 > div > span > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
 /**** Link from Handover Docs ****/
 
 #view_3623 .kn-detail-label {background-color: transparent;}
