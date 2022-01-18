@@ -5569,6 +5569,24 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
 
 /*** Deal File Overview Page ***/
 
+#view_5131 .kn-label-none.field_7447 {background-color: transparent;}
+
+#view_5131 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_5131 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
 
 
 
