@@ -4653,6 +4653,12 @@ background-color:#0f2542;
 /* Satisfaction Survey NOT Complete */
 #view_4155 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5672 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
+/* Satisfaction Survey */
+#view_4522 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6267 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* Manual Satisfaction Survey */
+#view_4522 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6006 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
 
 /*** Admin DOCs to Review ***/
 
@@ -4712,6 +4718,22 @@ background-color:#0f2542;
 
 /* Customer P/XAppraisal 3 */
 #view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5562 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Service Schedule */
+#view_4519 > section > div > div > div:nth-child(1) > div > div > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Customer P/X Invoice and V5 */
+#view_4521 {border-left: 10px solid #DE3163;}
+
+
+/*** ADMIN & MANAGER TO REVIEW ***/
+
+/* Handover Checklist */
+#view_4520 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6264 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
+
+/* Manual Handover Checklist */
+#view_4520 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6003 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
+
 
 
 
