@@ -1681,6 +1681,13 @@ takePhotoButton.onclick = function () {
       return;
     }
 
+      //***** check if user is on mobile and is not in homescreen */
+    let iH = IsInHomeScreen();
+    if (!iH && iH!==null){
+      alert('You are on mobile device and the app is not pined to homescreen, you can not take photos. Pin your app to homescreen to be able to take photos.');
+      return;
+    }
+
     Knack.showSpinner();
 
     // DISABLE SAVE BUTTON
