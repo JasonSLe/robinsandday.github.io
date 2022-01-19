@@ -1348,9 +1348,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // *****************************************************************************************************************************
   var go = () => {
     effect.show();
-    if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
-      console.log('nothide');
-    } else {
+    /*
       if(interval===0) { // if interval is equal to 0     
         interval = setInterval(function () {
             effect.fadeIn(1500, function () {
@@ -1358,7 +1356,8 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
             });
           }, 3000);
       }
-    }
+      
+    }*/
   }
 
   var stop = () => {
@@ -1452,11 +1451,11 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   image.onload = drawImageActualSize;
   //image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebg.png?token=AK2DHPRJXE5E2DFU5EXYCXS7Y6ROW';
   
-  if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
+  //if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
     image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-background-v2.png';
-  } else {
-    image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv3.png';
-  }
+  //} else {
+  //  image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv3.png';
+  //}
 
    //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
   var imageBeforeResize = document.createElement('img');
