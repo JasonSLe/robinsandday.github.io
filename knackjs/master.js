@@ -1580,7 +1580,7 @@ imageBeforeResize.onload = () => {
     $("#cameraLine").hide();
   }
 
-  if(beta <=1 && beta >= -1 && gamma <= -80)
+  if(beta <=2 && beta >= -2 && gamma <= -80)
   {
     line.style.backgroundColor = 'green';
     if (!OperatingSystem.iOS() && !canTakePhoto && lineVisible) window.navigator.vibrate(50);
