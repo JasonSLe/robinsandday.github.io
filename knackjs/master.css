@@ -4656,8 +4656,64 @@ background-color:#0f2542;
 
 /*** Admin DOCs to Review ***/
 
+/* V5 Doc */
+#view_4155 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5988 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Vehicle Purchase Invoice */
+#view_4155 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5685 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Settlement Confirmation */
+#view_4155 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5959 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Part Exxchange Appraisal Link */
+#view_4155 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5959 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
 /* Vehicle Invoice */
 #view_4155 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6263 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Manual Vehicle Invoice */
+#view_4155 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6223 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Trade Confirmation of Sale */
+#view_4155 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6109 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Additional Warranty */
+#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5662 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Total Loss Cover Conf */
+#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6096 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* CRI Conf */
+#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6433 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Supaguard/Protect Conf */
+#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6112 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Finance Quote */
+#view_4155 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5643 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Finance Acceptance */
+#view_4155 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6805 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Service Plan Confirmation */
+#view_4155 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5667 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* No Service Plan Reason */
+#view_4155 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6242 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Customer P/X Settlement */
+#view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6115 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Customer P/XAppraisal 1 */
+#view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5556 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Customer P/XAppraisal 2 */
+#view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5559 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Customer P/XAppraisal 3 */
+#view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5562 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+
 
 
 
