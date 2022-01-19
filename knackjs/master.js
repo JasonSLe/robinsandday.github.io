@@ -1622,6 +1622,15 @@ sndCameraTakePhoto.load();
 //************************************* TAKE A PICTURE AND CROP*****************************************
 
 takePhotoButton.onclick = function () {
+  
+      //***** check if user is on mobile and is not in homescreen */
+      let iH = IsInHomeScreen();
+      alert(iH);
+      if (!iH && iH!==null){
+        alert('You are on mobile device and the app is not pined to homescreen, you can not take photos. Pin your app to homescreen to be able to take photos.');
+        return;
+      }
+      
     Knack.showSpinner();
     sndCameraTakePhoto.play();
 
@@ -1678,14 +1687,6 @@ takePhotoButton.onclick = function () {
   confirmButton.onclick = function() {
     if (!isOnline){
       alert('You are offline, please go online before confirming the photo.');
-      return;
-    }
-
-      //***** check if user is on mobile and is not in homescreen */
-    let iH = IsInHomeScreen();
-    alert(iH);
-    if (!iH && iH!==null){
-      alert('You are on mobile device and the app is not pined to homescreen, you can not take photos. Pin your app to homescreen to be able to take photos.');
       return;
     }
 
