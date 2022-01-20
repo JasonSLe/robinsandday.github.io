@@ -1626,7 +1626,7 @@ takePhotoButton.onclick = function () {
     //***** check if user is on mobile and is not in homescreen */
     let iH = IsInHomeScreen();
     if (!iH && iH!==null){
-      alert('You are on mobile device and the app is not pined to homescreen, you can not take photos. Pin your app to homescreen to be able to take photos.');
+      alert('We found a problem with the breathing ghost image not aligning to the car when accessing our app as a web page and have now disabled this option. Please goto robinsandday.co.uk/digital and save to your home screen (pin to home screen). Opening our app from there resolves the alignment problem.');
       return;
     }
 
