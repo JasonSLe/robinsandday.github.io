@@ -2851,7 +2851,7 @@ color: #FFFFFF;
   color:black;
 }
 
-/* CSS for VX Sign Online Remote Satisfaction Survey out of 10 Fields 
+/* CSS for VX Sign Online Remote Satisfaction Survey out of 10 Fields */
 
 #view_4219-field_6481 > option:nth-child(2){
   background-color:#23d160;
@@ -2885,7 +2885,7 @@ color: #FFFFFF;
 #view_4219-field_6482 > option {
   background:#eee;
   color:black;
-}*/
+}
 
 /********* SERVICE PLAN PAGE *********/
 
@@ -3980,6 +3980,8 @@ color: #19365e;
   	box-shadow:         3px 3px #ccc;
 }
 
+/* Receipt of Monies Page - Change Button Colour for Tutorials*/
+
 #view_2938 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -3988,6 +3990,24 @@ color: #19365e;
 }
 
 #view_2938 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2938 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2938 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -4016,6 +4036,9 @@ color: #19365e;
   	box-shadow:         3px 3px #ccc;
 }
 
+
+/* Order Form Page - Change Button Colour for Tutorials*/
+
 #view_2942 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -4033,8 +4056,6 @@ color: #19365e;
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
-
-/* Change Button Colour Order Form Scan Tutorial*/
 
 #view_2942 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #FFA100;
