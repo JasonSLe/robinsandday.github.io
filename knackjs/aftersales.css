@@ -202,6 +202,36 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_284 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_284 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_284 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_284 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_284 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 
 /* TOOLTIP CSS*/
 [data-tooltip] {
