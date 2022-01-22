@@ -323,7 +323,7 @@
         }
     ],
     "start_url": "/add-to-homescreen-master/demos/?utm_source=homescreen",
-    "display": "standalone",
+    "display": "fullscreen",
     "background_color": "#7E040E",
     "theme_color": "#DFD6D9"
 }
