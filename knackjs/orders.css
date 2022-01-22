@@ -2851,7 +2851,7 @@ color: #FFFFFF;
   color:black;
 }
 
-/* CSS for VX Sign Online Remote Satisfaction Survey out of 10 Fields 
+/* CSS for VX Sign Online Remote Satisfaction Survey out of 10 Fields */
 
 #view_4219-field_6481 > option:nth-child(2){
   background-color:#23d160;
@@ -2885,7 +2885,7 @@ color: #FFFFFF;
 #view_4219-field_6482 > option {
   background:#eee;
   color:black;
-}*/
+}
 
 /********* SERVICE PLAN PAGE *********/
 
@@ -3638,7 +3638,8 @@ color: #19365e;
 
 /***************** Button Colour for Deal File Help Pages ******************/
 
-/* Change Button Colour order details*/
+/* TCF Pre Sale Pack Page - Change Button Colour for Tutorials*/
+
 #view_2898 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -3646,6 +3647,23 @@ color: #19365e;
   	box-shadow:         3px 3px #ccc;
 }
 #view_2898 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2898 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+#view_2898 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -3782,6 +3800,8 @@ color: #19365e;
   	box-shadow:         3px 3px #ccc;
 }
 
+/* TCF Post Sale Pack Page - Change Button Colour for Tutorials*/
+
 #view_2917 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -3790,6 +3810,24 @@ color: #19365e;
 }
 
 #view_2917 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2917 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2917 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -3818,6 +3856,8 @@ color: #19365e;
   	box-shadow:         3px 3px #ccc;
 }
 
+/* Tax Confirmation Page - Change Button Colour for Tutorial*/
+
 #view_2921 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -3835,6 +3875,26 @@ color: #19365e;
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
+
+#view_2921 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2921 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Paint Protect Page - Change Button Colour for Tutorials*/
 
 #view_2923 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
@@ -3854,6 +3914,26 @@ color: #19365e;
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_2923 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2923 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Warranty and Add On Page - Change Button Colour for Tutorials*/
+
 #view_2925 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -3862,6 +3942,24 @@ color: #19365e;
 }
 
 #view_2925 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2925 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2925 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -3944,6 +4042,8 @@ color: #19365e;
   	box-shadow:         3px 3px #ccc;
 }
 
+/* Finance Quote and Acceptance Page - Change Button Colour for Tutorials */
+
 #view_2935 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -3961,6 +4061,26 @@ color: #19365e;
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
+
+#view_2935 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2935 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Registration Consent Docuemnt Page - Change Button Colour for Tutorials */
 
 #view_2937 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
@@ -3980,6 +4100,26 @@ color: #19365e;
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_2937 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2937 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Receipt of Monies Page - Change Button Colour for Tutorials*/
+
 #view_2938 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -3988,6 +4128,24 @@ color: #19365e;
 }
 
 #view_2938 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2938 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2938 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -4016,6 +4174,9 @@ color: #19365e;
   	box-shadow:         3px 3px #ccc;
 }
 
+
+/* Order Form Page - Change Button Colour for Tutorials*/
+
 #view_2942 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -4034,9 +4195,69 @@ color: #19365e;
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_2942 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2942 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Connected Services Page - Change Button Colour for Tutorial*/
+
+#view_4244 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4244 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Service Plan Confirmation Page - Change Button Colour for Tutorials*/
+
+#view_4245 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4245 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
 #view_3672 div.field_4415_thumb_81 > div.kn-detail-body {
 	overflow-x: hidden;
 }
+
+
 
 /**SCAN BUTTON STYLING**/
 #scanDocument {
