@@ -1,6 +1,6 @@
 // Declare Global Variables for use in all functions //
 var TrackerID = "";
-
+/*
 //Service worker
 if ('serviceWorker' in navigator) {
   console.log("Will the service worker register?");
@@ -11,7 +11,7 @@ if ('serviceWorker' in navigator) {
       console.log("No it didn't. This happened:", err)
   });
 }
-
+*/
 //we need the app to be on secure connection, so if we find we are on http:// we redirect to secure https:// on the same page ...
 $(document).on('knack-view-render.any', function (event, view, data) {
   if (location.href.includes('http://')){
