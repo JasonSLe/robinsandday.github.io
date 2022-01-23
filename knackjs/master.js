@@ -1213,12 +1213,12 @@ function embedCalibrateApp(){
 
   var nowS = Date.now().toString();
 
-  if ($('#scanAppCss').length===0){
+  if ($('#calAppCss').length===0){
     var style = document.createElement('link');
-    style.id = "scanAppCss";
+    style.id = "calAppCss";
     style.rel = 'stylesheet';
     style.type = 'text/css';
-    style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
+    style.href = 'https://robinsandday.github.io/knackjs/calApp.css?'+nowS;
     document.getElementsByTagName( 'head' )[0].appendChild( style )
   }
 
@@ -1236,12 +1236,13 @@ function embedCalibrateApp(){
     scriptTag = document.getElementsByTagName('script')[0];
     scriptTag.parentNode.insertBefore(script, scriptTag);
   }
-  if ($('#scanAppJS').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS', emptyCallback);
+  if ($('#calAppJS').length===0){
+    loadScript("https://robinsandday.github.io/knackjs/calApp.js?"+nowS,'calAppJS', emptyCallback);
   }
 }
 
 function showCalibrateApp(button){
+  afterLoad();
   $('#calApp').show();
   $('.kn-content').hide();
 }
