@@ -1,11 +1,21 @@
 <h1 class="scanAppH1">Spirit calibration</h1>
         <div id="cameraTakePhotoDiv">
+            <p id="cameraLine" style="display: none; background-color: red; transform: rotate(0deg);">
+                -
+            </p>
+            <p id="cameraModal" style="display: none;">
+                <a id="cameraModal_header">Please enable Device Motion on your device</a>
+                <br>
+                <a id="cameraModal_txt">This app requires you to enable the Device Motion event on your device.</a>
+                <button id="cameraAccept" name="confirm request" type="button" class="cameraButton">Enable</button>
+            </p>
             <div id="scanCameraVid_container">
                 <video id="videoElement" autoplay="" playsinline="" class="hidden"></video>
             </div>
             <div id="scanCameraGui_controls">
-                <button id="scanTakePhoto" class="scanCameraButton"></button>
+                <button id="calibrate" class="scanCameraButton"></button>
                 <button id="scanCameraExit" name="exit photo" type="button" class="scanCameraButton"></button>
+                <button id="cameraRotate" name="rotate camera" type="button" class="cameraButton" style="display: none;"></button>
             </div>
         </div>
         

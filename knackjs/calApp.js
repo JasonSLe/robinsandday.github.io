@@ -86,6 +86,87 @@ if (OperatingSystem.Android()) {
   }  
 }
 
+//**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
+var isLandscape = false;
+//DETECT WHICH ORIENTATION THE USEER IS IN
+if(window.innerHeight > window.innerWidth){ // if portrait
+     $("#cameraLine").hide();
+     $("#calibrate").hide();
+     $("#cameraRotate").show();
+     $(stop);
+     isLandscape = false;
+}
+
+if(window.innerWidth > window.innerHeight){ // if landscape
+    $("#calibrate").show();
+    $("#cameraRotate").hide();
+    $(go);
+    isLandscape = true;
+}
+
+window.addEventListener("deviceorientation", handleOrientation, true);
+
+var permissionForOrientation = 'none';
+  // when page loads checks if the device requires user to to enable motion sensors, If they do then display the dialog
+  // but here it just gives to the property permissionForOrientation the info about need, the dialog is shown after 1 second if no orientation events are coming
+  if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermission === 'function' ){
+    permissionForOrientation = 'need';
+      console.log("permision needed");
+      //This function after 1 second checks if the events are coming or not
+      setTimeout(function() {
+        if (permissionForOrientation==='need'){
+          $('#cameraModal').show(); // show dialog asking user to enable motion sensor
+          //De-activate takephoto button until user agnet agreed
+          $("#calibrate").hide();
+
+          acceptButton.onclick = function(){
+            DeviceOrientationEvent.requestPermission()
+            .then(response => {
+              if (response == 'granted') {
+                window.addEventListener("deviceorientation", handleOrientation, true);
+                $('#cameraModal').hide();
+                //$("#takePhoto").removeAttr('disabled');
+                if (isLandscape) $("#calibrate").show();
+              }
+            })
+            .catch(console.error)
+          }
+        }
+      }, 1000);
+  }
+
+//**************************** SPIRIT LEVEL *****************************************
+var lineVisible = true;
+var canTakePhoto = false;
+function handleOrientation(event) {
+ var absolute = event.absolute;
+ var alpha    = event.alpha;
+ var beta     = event.beta;
+ var gamma    = event.gamma;
+ console.log(beta);
+
+ if (isLandscape && beta && lineVisible) {
+   $("#cameraLine").show();
+ } else {
+   $("#cameraLine").hide();
+ }
+
+ if(beta <=2 && beta >= -2 && gamma <= -80)
+ {
+   line.style.backgroundColor = 'green';
+   if (!OperatingSystem.iOS() && !canTakePhoto && lineVisible) window.navigator.vibrate(50);
+   canTakePhoto = true;
+ }
+ else
+ {
+   line.style.backgroundColor = 'red';
+   if (!OperatingSystem.iOS() && canTakePhoto && lineVisible) window.navigator.vibrate(50);
+   canTakePhoto = false;
+ }
+ line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
+ permissionForOrientation = 'none'
+}
+
 var cameraView = false;
 var takingPhoto = false;
 
