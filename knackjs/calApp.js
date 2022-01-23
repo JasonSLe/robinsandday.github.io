@@ -110,10 +110,9 @@ if (OperatingSystem.Android()) {
     } catch (e) {}
 
     hideCalibrateApp();
-  }  
-}
-
-//**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
+  }
+  
+  //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
 var isLandscape = false;
 //DETECT WHICH ORIENTATION THE USEER IS IN
 if(window.innerHeight > window.innerWidth){ // if portrait
@@ -190,6 +189,7 @@ function handleOrientation(event) {
  }
  line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
  permissionForOrientation = 'none'
+}
 }
 
 var cameraView = false;
