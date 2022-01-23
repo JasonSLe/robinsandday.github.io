@@ -212,11 +212,13 @@ function handleOrientation(event) {
  {
    line.style.backgroundColor = 'green';
    if (!OperatingSystem.iOS() && !canTakePhoto && lineVisible) window.navigator.vibrate(50);
+   canTakePhoto = true;
  }
  else
  {
    line.style.backgroundColor = 'red';
    if (!OperatingSystem.iOS() && canTakePhoto && lineVisible) window.navigator.vibrate(50);
+   canTakePhoto = false;
  }
  line.style.transform = 'rotate(' + (-betaComp).toString() + 'deg)';
  permissionForOrientation = 'none'
