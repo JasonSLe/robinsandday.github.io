@@ -119,14 +119,12 @@ if(window.innerHeight > window.innerWidth){ // if portrait
      $("#cameraLine").hide();
      $("#calibrate").hide();
      $("#cameraRotate").show();
-     $(stop);
      isLandscape = false;
 }
 
 if(window.innerWidth > window.innerHeight){ // if landscape
     $("#calibrate").show();
     $("#cameraRotate").hide();
-    $(go);
     isLandscape = true;
 }
 
