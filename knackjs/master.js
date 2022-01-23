@@ -1247,7 +1247,7 @@ function showCalibrateApp(button){
 }
 //END
 
-$(document).on("knack-scene-render.scene_530", function(event, view, data) {
+$(document).on("knack-scene-render.scene_874", function(event, view, data) {
   embedCalibrateApp();
   if ($('button[id="calibrateSpirit"]').length>0){
     for (let i = 0;i<$('button[id="calibrateSpirit"]').length;i++){
