@@ -135,7 +135,7 @@
       z-index: 2;
     }
     
-    #scanTakePhoto {
+    #calibrate {
       left: calc(50% - 40px);
       top: calc(50% - 40px);
       width: 80px;
@@ -144,16 +144,16 @@
       border-radius: 50%;
     }
     
-    #scanTakePhoto:active {
+    #calibrate:active {
       background-color: #fafafa;
     }
     
-    #scanTakePhoto:enabled {
+    #calibrate:enabled {
       /*background-color: #fafafa;*/
       background-color: #4cc417;
     }
     
-    #scanTakePhoto:disabled {
+    #calibrate:disabled {
       /*background-color: #fafafa;*/
       background-color: #ff0000;
     }
