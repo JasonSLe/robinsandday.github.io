@@ -12,6 +12,32 @@ var OperatingSystem = {
    }
 };
 
+//************************************* GO INTO FULLSCREEN (ONLY ANDRIOD DEVICE WORK) *****************************************
+function goToFullscreen(){
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) {
+      document.documentElement.msRequestFullscreen();
+    }
+  }
+  
+  function exitFullscreen(){
+  //EXIT FULL SCREEN MODE
+  if (document.exitFullscreen) {
+   document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+   document.webkitExitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+   document.mozCancelFullScreen();
+  } else if (document.msExitFullscreen) {
+   document.msExitFullscreen();
+  }
+  }
+
 //prepares everything for opening the camera and taking the photo
 function prepareCameraView(imgToSaveName){
   var imageCapture;
