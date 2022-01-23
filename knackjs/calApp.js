@@ -43,9 +43,7 @@ function prepareCameraView(imgToSaveName){
   var imageCapture;
 
   var video = document.querySelector('video');
-  var takePhotoButton = document.querySelector('button#scanTakePhoto');
-  var confirmButton = document.querySelector('#scanCameraConfirm');
-  var retakeButton = document.querySelector('#scanCameraRetake');
+  var calibrateButton = document.querySelector('#calibrate');
   var exitButton = document.querySelector('#scanCameraExit');
   var line = document.getElementById('cameraLine');
 
@@ -113,6 +111,10 @@ if (OperatingSystem.Android()) {
     exitFullscreen();
     hideCalibrateApp();
   }
+
+  calibrateButton.onclick = function(){
+    alert(lastBeta);
+  }
   
   //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
 var isLandscape = false;
@@ -164,12 +166,14 @@ var permissionForOrientation = 'none';
 //**************************** SPIRIT LEVEL *****************************************
 var lineVisible = true;
 var canTakePhoto = false;
+var lastBeta = null;
 function handleOrientation(event) {
  var absolute = event.absolute;
  var alpha    = event.alpha;
  var beta     = event.beta;
  var gamma    = event.gamma;
  console.log(beta);
+ lastBeta = beta;
 
  if (isLandscape && beta && lineVisible) {
    $("#cameraLine").show();
