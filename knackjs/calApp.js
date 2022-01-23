@@ -200,6 +200,7 @@ function handleOrientation(event) {
  var gamma    = event.gamma;
  console.log(beta);
  lastBeta = beta;
+ let betaComp = beta - (calibrationValue?calibrationValue:0);
 
  if (isLandscape && beta && lineVisible) {
    $("#cameraLine").show();
@@ -207,19 +208,16 @@ function handleOrientation(event) {
    $("#cameraLine").hide();
  }
 
- if(beta <=2 && beta >= -2 && gamma <= -80)
+ if(betaComp <=2 && betaComp >= -2 && gamma <= -80)
  {
    line.style.backgroundColor = 'green';
    if (!OperatingSystem.iOS() && !canTakePhoto && lineVisible) window.navigator.vibrate(50);
-   canTakePhoto = true;
  }
  else
  {
    line.style.backgroundColor = 'red';
    if (!OperatingSystem.iOS() && canTakePhoto && lineVisible) window.navigator.vibrate(50);
-   canTakePhoto = false;
  }
- let betaComp = beta - (calibrationValue?calibrationValue:0);
  line.style.transform = 'rotate(' + (-betaComp).toString() + 'deg)';
  permissionForOrientation = 'none'
 }
