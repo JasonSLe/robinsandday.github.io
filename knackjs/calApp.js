@@ -104,11 +104,13 @@ if (OperatingSystem.Android()) {
     openCamera({video: {facingMode: {exact: "environment"}}},constraints);
   }
 
+  goToFullscreen();
+
   exitButton.onclick = function() {
     try {
       video.srcObject.getVideoTracks().forEach(track => track.stop());
     } catch (e) {}
-
+    exitFullscreen();
     hideCalibrateApp();
   }
   
