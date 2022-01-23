@@ -14,10 +14,6 @@ var OperatingSystem = {
 
 //prepares everything for opening the camera and taking the photo
 function prepareCameraView(imgToSaveName){
-  cameraView = true;
-  takingPhoto = true;
-  prepareLayout(cameraView, takingPhoto);
-
   var imageCapture;
 
   var video = document.querySelector('video');
@@ -25,8 +21,6 @@ function prepareCameraView(imgToSaveName){
   var confirmButton = document.querySelector('#scanCameraConfirm');
   var retakeButton = document.querySelector('#scanCameraRetake');
   var exitButton = document.querySelector('#scanCameraExit');
-
-  img.style.visibility = 'hidden';
 
   const constraints = {
     width: { min: 1440, max: 3984 },
