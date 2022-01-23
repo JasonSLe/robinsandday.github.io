@@ -82,6 +82,14 @@ if (OperatingSystem.Android()) {
   } else {
     openCamera({video: {facingMode: {exact: "environment"}}},constraints);
   }
+
+  exitButton.onclick = function() {
+    try {
+      video.srcObject.getVideoTracks().forEach(track => track.stop());
+    } catch (e) {}
+
+    hideCalibrateApp();
+  }  
 }
 
 var cameraView = false;

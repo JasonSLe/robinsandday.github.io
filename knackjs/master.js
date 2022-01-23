@@ -1246,6 +1246,11 @@ function showCalibrateApp(button){
   $('#calApp').show();
   $('.kn-content').hide();
 }
+
+function hideCalibrateApp(){
+  $('#calApp').hide();
+  $('.kn-content').show();
+}
 //END
 
 $(document).on("knack-scene-render.scene_874", function(event, view, data) {
