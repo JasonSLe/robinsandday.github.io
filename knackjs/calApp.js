@@ -47,6 +47,7 @@ function prepareCameraView(imgToSaveName){
   var confirmButton = document.querySelector('#scanCameraConfirm');
   var retakeButton = document.querySelector('#scanCameraRetake');
   var exitButton = document.querySelector('#scanCameraExit');
+  var line = document.getElementById('cameraLine');
 
   const constraints = {
     width: { min: 1440, max: 3984 },
