@@ -115,6 +115,7 @@ if (OperatingSystem.Android()) {
   calibrateButton.onclick = function(){
     alert(lastBeta);
     setCookie('rdSpiritCalibration', lastBeta,365);
+    calibrationValue = lastBeta;
   }
 
   function setCookie(name,value,days) {
@@ -191,6 +192,7 @@ var permissionForOrientation = 'none';
 var lineVisible = true;
 var canTakePhoto = false;
 var lastBeta = null;
+var calibrationValue = getCookie('rdSpiritCalibration');
 function handleOrientation(event) {
  var absolute = event.absolute;
  var alpha    = event.alpha;
@@ -217,7 +219,8 @@ function handleOrientation(event) {
    if (!OperatingSystem.iOS() && canTakePhoto && lineVisible) window.navigator.vibrate(50);
    canTakePhoto = false;
  }
- line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
+ let betaComp = beta - (calibrationValue?calibrationValue:0);
+ line.style.transform = 'rotate(' + (-betaComp).toString() + 'deg)';
  permissionForOrientation = 'none'
 }
 }
