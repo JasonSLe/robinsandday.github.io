@@ -46,6 +46,7 @@ function prepareCameraView(imgToSaveName){
   var calibrateButton = document.querySelector('#calibrate');
   var exitButton = document.querySelector('#scanCameraExit');
   var line = document.getElementById('cameraLine');
+  var acceptButton = document.querySelector('#cameraAccept');
 
   const constraints = {
     width: { min: 1440, max: 3984 },
