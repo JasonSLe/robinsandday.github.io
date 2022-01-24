@@ -159,16 +159,14 @@ if(window.innerWidth > window.innerHeight){ // if landscape
 
 $(window).on("orientationchange",function(){
   if(window.orientation == 0 || window.orientation == 180){ // Portrait
-    $(stop);
     $("#cameraLine").hide();
-    $("#takePhoto").hide();
+    $("#calibrate").hide();
     $("#cameraRotate").show();
     isLandscape = false;
   }
   else if(window.orientation == 90 || window.orientation == 270){ // Landscape
-    $("#takePhoto").show();
+    $("#calibrate").show();
     $("#cameraRotate").hide();
-    $(go);
     isLandscape = true;
   }
 });
