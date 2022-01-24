@@ -3372,7 +3372,36 @@ color: #FFFFFF;
 
 /*** Manager Docs to Review ***/
 
+/* TCF Pre Sale Pack */
 #view_3655 > section > div > div:nth-child(1) > div:nth-child(1) > div > div.kn-detail.field_6259 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* TCF Pre Sale Pack NOT Required */
+#view_3655 > section > div > div:nth-child(1) > div:nth-child(1) > div > div.kn-detail.field_6505 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* TCF Post Sale Pack */
+#view_3655 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.field_6418 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* TCF Post Sale Pack NOT Required */
+#view_3655 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.field_6764 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* Receipt of Deposit */
+#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6266 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* No Receipt of Deposit */
+#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6569 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* Receipt of Balance */
+#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6405 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* Confirm Payment Method */
+#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6406 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* Bank Transfer Confirmation */
+#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6751 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* Finance Payout Confirmation */
+#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6751 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
 
 /* Links to New Deal File Admin Audit */
 
