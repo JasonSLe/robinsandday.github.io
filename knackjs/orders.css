@@ -3368,6 +3368,12 @@ color: #FFFFFF;
 
 #view_3976 .kn-detail-label {background-color: transparent;}
 
+/***** Colour Code CSS for Deal File Audit Page *****/
+
+/*** Manager Docs to Review ***/
+
+#view_3655 > section > div > div:nth-child(1) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6259 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
 /* Links to New Deal File Admin Audit */
 
 #view_3799 > section > div > div > div > div > div > div > span > a {
