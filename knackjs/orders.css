@@ -3493,7 +3493,7 @@ color: #FFFFFF;
 /*** ADMIN & MANAGER TO REVIEW ***/
 
 /* Handover Checklist */
-#view_3973 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6615 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
+#view_3973 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6615 > div.kn-detail-label {border-left: 20px solid #DE3163; border-left: 10px solid #32a1ce;}
 
 /* Manual Handover Checklist */
 #view_3973 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6470 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
