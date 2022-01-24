@@ -3402,6 +3402,61 @@ color: #FFFFFF;
 /* Finance Payout Confirmation */
 #view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6751 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
+/* Connected Nav Confirmation */
+#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6590 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* No Connected Nav Conf to Upload */
+#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6595 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+/* No Satisfaction Survey Completed */
+#view_3655 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.field_6541 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
+
+/*** Admin Docs to Review ***/
+
+/* Digital Invoice */
+#view_3655 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.field_6611 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Manual Invoice */
+#view_3655 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.field_6567 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Finance Quote */
+#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6424 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Finance Acceptance/Situation */
+#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_7184 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Additional Warranty */
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6435 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Additional Warranty Not Required */
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6539 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* TLC Confirmation */
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6537 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* CRI Confirmation */
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6757 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* TLC and CRI Not Applicable V1 */
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6538 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* TLC and CRI Not Applicable V2 */
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_7002 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Supaguard Confirmation */
+#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6431 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Supaguard Not Applicable */
+#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6497 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Service Plan Conf */
+#view_3655 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.field_6428 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* No Service Plan */
+#view_3655 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.field_6599 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+
 
 /* Links to New Deal File Admin Audit */
 
