@@ -7129,6 +7129,29 @@ padding-bottom: 0px;
   margin: auto !important;
 }
 
+/**Used Historic Doc - Dealer Performance (Individual) Page**/
+
+#view_5142 
+{
+  font-size: 23px;
+}
+
+#view_5143
+{
+  font-size: 17px;
+}
+
+#view_5144
+{
+  font-size: 17px;
+}
+
+#view_5142 .kn-detail-label {background-color: transparent;}
+#view_5143 .kn-detail-label {background-color: transparent;}
+#view_5144 .kn-detail-label {background-color: transparent;}
+
+
+
 /* Dealer DOC or Profit Sheets Table Filters */
 
 #view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
