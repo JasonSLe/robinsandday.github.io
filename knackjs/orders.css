@@ -1477,6 +1477,26 @@ color: #FFFFFF;
 
 #view_4043 .kn-detail-label {background-color: transparent;}
 
+/******** Electric Grant TO DO LIST ON ADMIN PAGE *********/
+
+#view_4221 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4221 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4221 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /******************************** NEW VEHICLE DIALOG ADMINISTRATION PAGE ******************************/
 
 /******** Group PSA Auto Allocated Orders To Add To Autoline (W, X, Y, C buyer types) *********/
