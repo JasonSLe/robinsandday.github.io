@@ -4690,6 +4690,15 @@ font-size:12px;
 #view_4179 .kn-detail-label {background-color: transparent;}
 #view_4180 .kn-detail-label {background-color: transparent;}
 
+
+
+/*Change Details View Size*/
+
+#view_4170
+{
+  font-size: 17px;
+}
+
 /*Map Filters*/
 
 #view_4190 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
