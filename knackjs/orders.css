@@ -4932,8 +4932,10 @@ font-size:12px;
   	font-weight: bold;
 }
 
-
-
+#view_4754 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div.kn-detail.field_7559 > div.kn-detail-label > span > strong > span {
+    color: #008000;
+    font-size: 14px;
+}
 
 
 
