@@ -4814,6 +4814,14 @@ font-size:12px;
   	font-weight: bold;
 }
 
+
+/*SEt Average Discount Colour Red*/
+
+#view_4117 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7542 > div.kn-detail-label {
+    color: #FF0000;
+    font-size: 17px;
+}
+
 /* make handover white text */
 #view_2630 .kn-label {
 	color:#FFA100 !important
