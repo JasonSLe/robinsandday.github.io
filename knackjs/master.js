@@ -3387,6 +3387,7 @@ $('#view_5055 tbody input[type=checkbox]:checked').each(function() {
 
 //Trigger Auth Actor password sync when user resets password
 $(document).on('knack-form-submit.view_1141', function(event, view, data) {
+  console.log('knack-form-submit.view_1141',data);
   callPostHttpRequest("https://api.apify.com/v2/acts/davidmale~auth/runs?token=jP5rS2dPuuxTGiEige3fCWp8D", {"action":"replicate_users", "userEmail":Knack.getUserAttributes().email},"Call Auth Actor Password Sync")
 });
 
