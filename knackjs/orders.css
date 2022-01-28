@@ -3431,6 +3431,18 @@ color: #FFFFFF;
 /* No Satisfaction Survey Completed */
 #view_3655 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.field_6541 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
+/* Customer P/X Settlement */
+#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6503 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Customer P/X 1 Appraisal */
+#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6246 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Customer P/X 2 Appraisal */
+#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6247 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Customer P/X 3 Appraisal */
+#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6248 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
 /* Satisfaction Survey Completed */
 #view_3974 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6616 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
@@ -3447,16 +3459,10 @@ color: #FFFFFF;
 /*** Admin Docs to Review ***/
 
 /* Digital Invoice */
-#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6611 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6611 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Manual Invoice */
-#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6567 > div.kn-detail-label {border-left: 10px solid #DE3163;}
-
-/* Finance Quote */
-#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6424 > div.kn-detail-label {border-left: 10px solid #DE3163;}
-
-/* Finance Acceptance/Situation */
-#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_7184 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6567 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Additional Warranty */
 #view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6435 > div.kn-detail-label {border-left: 10px solid #DE3163;}
@@ -3488,29 +3494,17 @@ color: #FFFFFF;
 /* No Service Plan */
 #view_3655 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.field_6599 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
-/* Customer P/X Settlement */
-#view_3655 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.field_6503 > div.kn-detail-label {border-left: 10px solid #DE3163;}
-
-/* Customer P/X 1 Appraisal */
-#view_3655 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.field_6246 > div.kn-detail-label {border-left: 10px solid #DE3163;}
-
-/* Customer P/X 2 Appraisal */
-#view_3655 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.field_6247 > div.kn-detail-label {border-left: 10px solid #DE3163;}
-
-/* Customer P/X 3 Appraisal */
-#view_3655 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.field_6248 > div.kn-detail-label {border-left: 10px solid #DE3163;}
-
 /* Service Schedule */
-#view_3655 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.field_6609 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.field_6609 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Credit Note 1 */
-#view_3655 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.field_6617 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.field_6617 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Credit Note 2 */
-#view_3655 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.field_6618 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.field_6618 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Credit Note 3 */
-#view_3655 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.field_6619 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.field_6619 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Customer P/X Invoice and V5 */
 #view_3972 {border-left: 10px solid #DE3163;}
