@@ -3393,43 +3393,43 @@ color: #FFFFFF;
 /*** Manager Docs to Review ***/
 
 /* TCF Pre Sale Pack */
-#view_3655 > section > div > div:nth-child(1) > div:nth-child(1) > div > div.kn-detail.field_6259 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.field_6259 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* TCF Pre Sale Pack NOT Required */
-#view_3655 > section > div > div:nth-child(1) > div:nth-child(1) > div > div.kn-detail.field_6505 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.field_6505 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* TCF Post Sale Pack */
-#view_3655 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.field_6418 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6418 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* TCF Post Sale Pack NOT Required */
-#view_3655 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.field_6764 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6764 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* Receipt of Deposit */
-#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6266 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6266 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* No Receipt of Deposit */
-#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6569 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6569 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* Receipt of Balance */
-#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6405 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6405 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* Confirm Payment Method */
-#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6406 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6406 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* Bank Transfer Confirmation */
-#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6751 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6751 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* Finance Payout Confirmation */
-#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6751 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6751 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* Connected Nav Confirmation */
-#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6590 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.field_6590 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* No Connected Nav Conf to Upload */
-#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6595 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.field_6595 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* No Satisfaction Survey Completed */
-#view_3655 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.field_6541 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+#view_3655 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.field_6541 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
 /* Satisfaction Survey Completed */
 #view_3974 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6616 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
@@ -3447,70 +3447,70 @@ color: #FFFFFF;
 /*** Admin Docs to Review ***/
 
 /* Digital Invoice */
-#view_3655 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.field_6611 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6611 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Manual Invoice */
-#view_3655 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.field_6567 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6567 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Finance Quote */
-#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6424 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6424 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Finance Acceptance/Situation */
-#view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_7184 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_7184 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Additional Warranty */
-#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6435 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6435 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Additional Warranty Not Required */
-#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6539 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6539 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* TLC Confirmation */
-#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6537 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6537 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* CRI Confirmation */
-#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6757 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6757 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* TLC and CRI Not Applicable V1 */
-#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6538 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6538 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* TLC and CRI Not Applicable V2 */
-#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_7002 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_7002 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Supaguard Confirmation */
-#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6431 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.field_6431 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Supaguard Not Applicable */
-#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6497 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.field_6497 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Service Plan Conf */
-#view_3655 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.field_6428 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.field_6428 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* No Service Plan */
-#view_3655 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.field_6599 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.field_6599 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Customer P/X Settlement */
-#view_3655 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.field_6503 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.field_6503 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Customer P/X 1 Appraisal */
-#view_3655 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.field_6246 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.field_6246 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Customer P/X 2 Appraisal */
-#view_3655 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.field_6247 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.field_6247 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Customer P/X 3 Appraisal */
-#view_3655 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.field_6248 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.field_6248 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Service Schedule */
-#view_3655 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.field_6609 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.field_6609 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Credit Note 1 */
-#view_3655 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.field_6617 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.field_6617 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Credit Note 2 */
-#view_3655 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.field_6618 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.field_6618 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Credit Note 3 */
-#view_3655 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.field_6619 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+#view_3655 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.field_6619 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Customer P/X Invoice and V5 */
 #view_3972 {border-left: 10px solid #DE3163;}
