@@ -1861,6 +1861,7 @@ takePhotoButton.onclick = function () {
       isInCalibrationMode = false;
       $("#takePhoto").show();
       $(go);
+      alert('Calibration canceled.')
       return;
     }
 
