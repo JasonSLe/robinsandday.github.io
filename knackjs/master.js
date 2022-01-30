@@ -1465,6 +1465,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   var confirmButton = document.querySelector('#cameraConfirm');
   var retakeButton = document.querySelector('#cameraRetake');
   var exitButton = document.querySelector('#cameraExit');
+  var calibrateButton = document.querySelector('#cameraCalibrate');
   var line = document.getElementById('cameraLine');
   var acceptButton = document.querySelector('#cameraAccept');
 
@@ -1860,6 +1861,15 @@ takePhotoButton.onclick = function () {
 
     //STOP TRACK WHEN USER EXIT THE APP
     video.srcObject.getVideoTracks().forEach(track => track.stop());
+  }  
+
+  //*************************************CALIBRATE BUTTON ASKS AND THEN OPEN CALIBRATION*****************************************
+  calibrateButton.onclick = function() {
+    if (confirm('Please confirm that you wish to enter calibration mode to set the spirit level.')) {
+      console.log('Thing was saved to the database.');
+    } else {
+      console.log('Thing was not saved to the database.');
+    }
   }  
 }
 
