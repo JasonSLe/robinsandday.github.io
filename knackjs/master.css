@@ -6845,6 +6845,20 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
   background-color: #fafafa;
 }
 
+#cameraCalibrate {
+	left: calc(50% - 32px);
+	top: calc(25% - 32px);
+	width: 60px;
+	height: 60px;
+	background-image: url("https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/calibration_icon.png");
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  #cameraCalibrate:active {
+	background-color: #fafafa;
+  }
+
 #cameraRetake {
   left: calc(50% - 32px);
   top: calc(82% - 32px);
@@ -6904,6 +6918,11 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
     left: calc(20% - 32px);
     top: calc(50% - 32px);
   }
+
+  #cameraCalibrate {
+    left: calc(80% - 32px);
+    top: calc(50% - 32px);
+  }
 }
 
 @media screen and (orientation: landscape) {
@@ -6942,6 +6961,11 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
   #cameraExit {
     left: calc(50% - 32px);
     top: calc(82% - 32px);
+  }
+
+  #cameraCalibrate {
+    left: calc(50% - 32px);
+    top: calc(25% - 32px);
   }
 }
 
