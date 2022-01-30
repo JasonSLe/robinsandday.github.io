@@ -1884,6 +1884,10 @@ takePhotoButton.onclick = function () {
     if (isInCalibrationMode){
       setCookie('rdSpiritCalibration', lastBeta,365);
       calibrationValue = lastBeta;
+      isInCalibrationMode = false;
+      $("#takePhoto").show();
+      $(go);
+      alert('Calibration finished.');
     } else {
       if (confirm('Please confirm that you wish to enter calibration mode to set the spirit level.')) {
         console.log('Let go for calibration.');
