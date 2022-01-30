@@ -1559,6 +1559,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   //DETECT WHICH ORIENTATION THE USEER IS IN
   if(window.innerHeight > window.innerWidth){ // if portrait
        $("#cameraLine").hide();
+       $("#cameraCalibrate").hide();
        $("#takePhoto").hide();
        $("#cameraRotate").show();
        $(stop);
@@ -1566,6 +1567,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   }
 
   if(window.innerWidth > window.innerHeight){ // if landscape
+    $("#cameraCalibrate").show();
       $("#takePhoto").show();
       $("#cameraRotate").hide();
       $(go);
@@ -1687,12 +1689,14 @@ imageBeforeResize.onload = () => {
 $(window).on("orientationchange",function(){
   if(window.orientation == 0 || window.orientation == 180){ // Portrait
     $(stop);
+    $("#cameraCalibrate").hide();
     $("#cameraLine").hide();
     $("#takePhoto").hide();
     $("#cameraRotate").show();
     isLandscape = false;
   }
   else if(window.orientation == 90 || window.orientation == 270){ // Landscape
+    $("#cameraCalibrate").show();
     $("#takePhoto").show();
     $("#cameraRotate").hide();
     $(go);
