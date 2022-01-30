@@ -1741,6 +1741,7 @@ takePhotoButton.onclick = function () {
     //HIDE LEVEL LINE
     $("#cameraLine").hide();
     lineVisible = false;
+    $("#cameraCalibrate").hide();
 
     // DISABLE TAKEPHOTO BUTTON
     $("#takePhoto").hide();
@@ -1836,6 +1837,7 @@ takePhotoButton.onclick = function () {
 
     // SHOW LEVEL LINE
     lineVisible = true;
+    $("#cameraCalibrate").show();
 
     //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
     $('video').show();
@@ -1890,8 +1892,8 @@ takePhotoButton.onclick = function () {
         $(stop);
         alert('Place device upright in landscape mode on level surface and click calibration button.');
       } else {
-        alert('calibration cancled');
         $(go);
+        goToFullscreen();
         console.log('Calibration canceled.');
       }
     }
