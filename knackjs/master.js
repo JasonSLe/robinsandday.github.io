@@ -1859,6 +1859,7 @@ takePhotoButton.onclick = function () {
 
     if (isInCalibrationMode){
       isInCalibrationMode = false;
+      $("#takePhoto").show();
       $(go);
       return;
     }
@@ -1888,6 +1889,8 @@ takePhotoButton.onclick = function () {
         $(stop);
         alert('Place device upright in landscape mode on level surface and click calibration button.');
       } else {
+        alert('calibration cancled');
+        $(go);
         console.log('Calibration canceled.');
       }
     }
