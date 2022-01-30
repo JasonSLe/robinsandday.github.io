@@ -1188,81 +1188,7 @@ function fillDataToKnack(message){
 }
 
 //END OF SCAN APP CODE
-
-//SPIRIT LEVEL CALIBRATE
-var spiritLevelCalibrateHTML = '';
-function embedCalibrateApp(){
-  let calApp = document.getElementById('calApp');
-  if (!calApp){
-    if (spiritLevelCalibrateHTML===''){
-      spiritLevelCalibrateHTML = $.ajax({
-          type: "GET",
-          url: 'https://robinsandday.github.io/photoTakeApp/calibrateSpirit.html',
-          cache: false,
-          async: false
-      }).responseText;
-    }
-    calApp = document.createElement('div');
-    calApp.innerHTML = spiritLevelCalibrateHTML;
-    calApp.id = 'calApp';
-    calApp.style="display: none;"
-    document.body.appendChild(calApp);
-  } else {
-    calApp.innerHTML = spiritLevelCalibrateHTML;
-  }
-
-  var nowS = Date.now().toString();
-
-  if ($('#calAppCss').length===0){
-    var style = document.createElement('link');
-    style.id = "calAppCss";
-    style.rel = 'stylesheet';
-    style.type = 'text/css';
-    style.href = 'https://robinsandday.github.io/knackjs/calApp.css?'+nowS;
-    document.getElementsByTagName( 'head' )[0].appendChild( style )
-  }
-
-  function emptyCallback() { }
-
-  function loadScript(src, id,  callback){
-    var script, scriptTag;
-    script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.id = id;
-    script.src = src;
-    script.onload = script.onreadystatechange = function() {
-      if (!this.readyState || this.readyState == 'complete' ){ callback(); }
-    };
-    scriptTag = document.getElementsByTagName('script')[0];
-    scriptTag.parentNode.insertBefore(script, scriptTag);
-  }
-  if ($('#calAppJS').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/calApp.js?"+nowS,'calAppJS', emptyCallback);
-  }
-}
-
-function showCalibrateApp(button){
-  afterLoad();
-  $('#calApp').show();
-  $('.kn-content').hide();
-}
-
-function hideCalibrateApp(){
-  $('#calApp').hide();
-  $('.kn-content').show();
-}
 //END
-
-$(document).on("knack-scene-render.scene_874", function(event, view, data) {
-  embedCalibrateApp();
-  if ($('button[id="calibrateSpirit"]').length>0){
-    for (let i = 0;i<$('button[id="calibrateSpirit"]').length;i++){
-      $('button[id="calibrateSpirit"]').eq(i).on("click",function(){
-        showCalibrateApp(this);
-      });
-    }
-  }
-});
 
 //THIS IS ARRAY OF scenes with document scan
 var scanDocsSceneNames = ["scene_1133", "scene_1147", "scene_1135", "scene_1032", "scene_1164", "scene_1035", "scene_1035", "scene_1047", "scene_1031", "scene_1078",
@@ -1939,7 +1865,6 @@ $(document).on('knack-view-render.view_3900', function(event, view, data) {
     }
   $('[class="kn-view kn-back-link"]').hide();
 	prepareCameraView(location.origin+"/digital#used-vehicle-check-in/used-vehicle-check-in-2/"+getRecordIdFromHref(location.href)+"/used-vehicle-check-in-3/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_4944','scene_1543/views/view_5014'/*scene_1262/views/view_3904*/);
-  //embedCalibrateApp();
 });
 
 $(document).on('knack-view-render.view_3910', function(event, view, data) {
@@ -1954,7 +1879,6 @@ $(document).on('knack-view-render.view_3910', function(event, view, data) {
   }
   $('[class="kn-view kn-back-link"]').hide();
 	prepareCameraView(location.origin+"/digital#new-appraisal/retail-appraisal-aesthetic-condition/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_532','scene_1544/views/view_5016'/*scene_1262/views/view_3911*/);
-  //embedCalibrateApp();
 });
 
 
