@@ -1871,12 +1871,17 @@ takePhotoButton.onclick = function () {
 
   //*************************************CALIBRATE BUTTON ASKS AND THEN OPEN CALIBRATION*****************************************
   calibrateButton.onclick = function() {
-    if (confirm('Please confirm that you wish to enter calibration mode to set the spirit level.')) {
-      console.log('Let go for calibration.');
-      isInCalibrationMode = true;
-      $(stop);
+    if (isInCalibrationMode){
+
     } else {
-      console.log('Calibration canceled.');
+      if (confirm('Please confirm that you wish to enter calibration mode to set the spirit level.')) {
+        console.log('Let go for calibration.');
+        isInCalibrationMode = true;
+        $("#takePhoto").hide();
+        $(stop);
+      } else {
+        console.log('Calibration canceled.');
+      }
     }
   }  
 }
