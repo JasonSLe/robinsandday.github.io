@@ -1568,7 +1568,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   }
 
   if(window.innerWidth > window.innerHeight){ // if landscape
-    $("#cameraCalibrate").hide(); //.show();
+    $("#cameraCalibrate").show();
       $("#takePhoto").show();
       $("#cameraRotate").hide();
       $(go);
@@ -1652,7 +1652,7 @@ imageBeforeResize.onload = () => {
    ctx.drawImage(this, 0, 0);
  }
 
-
+var isInCalibrationMode = false;
 //**************************** SPIRIT LEVEL *****************************************
  var lineVisible = true;
  var canTakePhoto = false;
@@ -1697,7 +1697,7 @@ $(window).on("orientationchange",function(){
     isLandscape = false;
   }
   else if(window.orientation == 90 || window.orientation == 270){ // Landscape
-    $("#cameraCalibrate").hide(); //show();
+    $("#cameraCalibrate").show();
     $("#takePhoto").show();
     $("#cameraRotate").hide();
     $(go);
@@ -1851,6 +1851,12 @@ takePhotoButton.onclick = function () {
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
   exitButton.onclick = function() {
 
+    if (isInCalibrationMode){
+      isInCalibrationMode = false;
+      $(go);
+      return;
+    }
+
     //REDIRECT USER BACK TO HOME PAGE
     setTimeout(function() {
       window.location = backUrl;
@@ -1867,7 +1873,8 @@ takePhotoButton.onclick = function () {
   calibrateButton.onclick = function() {
     if (confirm('Please confirm that you wish to enter calibration mode to set the spirit level.')) {
       console.log('Let go for calibration.');
-      showCalibrateApp(this);
+      isInCalibrationMode = true;
+      $(stop);
     } else {
       console.log('Calibration canceled.');
     }
