@@ -1568,7 +1568,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
   }
 
   if(window.innerWidth > window.innerHeight){ // if landscape
-    $("#cameraCalibrate").show();
+    $("#cameraCalibrate").hide(); //.show();
       $("#takePhoto").show();
       $("#cameraRotate").hide();
       $(go);
@@ -1697,7 +1697,7 @@ $(window).on("orientationchange",function(){
     isLandscape = false;
   }
   else if(window.orientation == 90 || window.orientation == 270){ // Landscape
-    $("#cameraCalibrate").show();
+    $("#cameraCalibrate").hide(); //show();
     $("#takePhoto").show();
     $("#cameraRotate").hide();
     $(go);
