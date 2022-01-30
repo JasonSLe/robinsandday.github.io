@@ -1653,6 +1653,8 @@ imageBeforeResize.onload = () => {
  }
 
 var isInCalibrationMode = false;
+var lastBeta = null;
+var calibrationValue = getCookie('rdSpiritCalibration');
 //**************************** SPIRIT LEVEL *****************************************
  var lineVisible = true;
  var canTakePhoto = false;
@@ -1662,6 +1664,8 @@ var isInCalibrationMode = false;
   var beta     = event.beta;
   var gamma    = event.gamma;
   console.log(beta);
+  lastBeta = beta;
+  let betaComp = beta - (calibrationValue?calibrationValue:0);
 
   if (isLandscape && beta && lineVisible) {
     $("#cameraLine").show();
@@ -1669,7 +1673,7 @@ var isInCalibrationMode = false;
     $("#cameraLine").hide();
   }
 
-  if(beta <=2 && beta >= -2 && gamma <= -80)
+  if(betaComp <=2 && betaComp >= -2 && gamma <= -80)
   {
     line.style.backgroundColor = 'green';
     if (!OperatingSystem.iOS() && !canTakePhoto && lineVisible) window.navigator.vibrate(50);
@@ -1681,7 +1685,7 @@ var isInCalibrationMode = false;
     if (!OperatingSystem.iOS() && canTakePhoto && lineVisible) window.navigator.vibrate(50);
     canTakePhoto = false;
   }
-  line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
+  line.style.transform = 'rotate(' + (-betaComp).toString() + 'deg)';
   permissionForOrientation = 'none'
 }
 
@@ -1874,18 +1878,40 @@ takePhotoButton.onclick = function () {
   //*************************************CALIBRATE BUTTON ASKS AND THEN OPEN CALIBRATION*****************************************
   calibrateButton.onclick = function() {
     if (isInCalibrationMode){
-
+      setCookie('rdSpiritCalibration', lastBeta,365);
+      calibrationValue = lastBeta;
     } else {
       if (confirm('Please confirm that you wish to enter calibration mode to set the spirit level.')) {
         console.log('Let go for calibration.');
         isInCalibrationMode = true;
         $("#takePhoto").hide();
         $(stop);
+        alert('Place device upright in landscape mode on level surface and click calibration button.');
       } else {
         console.log('Calibration canceled.');
       }
     }
   }  
+}
+
+function setCookie(name,value,days) {
+  var expires = "";
+  if (days) {
+      var date = new Date();
+      date.setTime(date.getTime() + (days*24*60*60*1000));
+      expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+}
+function getCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
 }
 
 //end of shared camera app code
