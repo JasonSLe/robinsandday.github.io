@@ -1698,8 +1698,10 @@ $(window).on("orientationchange",function(){
   }
   else if(window.orientation == 90 || window.orientation == 270){ // Landscape
     $("#cameraCalibrate").show();
-    $("#takePhoto").show();
     $("#cameraRotate").hide();
+    if (!isInCalibrationMode){
+      $("#takePhoto").show();
+    }
     $(go);
     isLandscape = true;
   }
