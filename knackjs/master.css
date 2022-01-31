@@ -3583,9 +3583,10 @@ visibility: visible;
 }
 
 #view_2520 > form > div > button {
+	background-color: #8D8E8E !important;
   	color: #FFFFFF;
   	font-weight: bold;
-	border-left: 10px solid #DE3163;
+	border-left: 10px solid #DE3163 !important;
 }
 
 #view_2520 > form > div > button:hover {
