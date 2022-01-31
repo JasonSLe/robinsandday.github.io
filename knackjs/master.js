@@ -1580,7 +1580,7 @@ imageBeforeResize.onload = () => {
 
 var isInCalibrationMode = false;
 var lastBeta = null;
-var calibrationValue = getCookie('rdSpiritCalibration');
+var calibrationValue = null; //getCookie('rdSpiritCalibration');
 //**************************** SPIRIT LEVEL *****************************************
  var lineVisible = true;
  var canTakePhoto = false;
