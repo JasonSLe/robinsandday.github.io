@@ -2180,8 +2180,6 @@ $(document).on('knack-form-submit.view_3994', function(event, view, data) {
   
 });
 
-
-
 //
 //       USED VEHICLE CHECK IN
 //
@@ -2189,200 +2187,37 @@ $(document).on('knack-form-submit.view_3994', function(event, view, data) {
 //
 //
 
-
-
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Trigger For Integromat When Dealer Pushes Vehicle For Prep Centre {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/88520373?redirect=true 
 $(document).on('knack-form-submit.view_3424', function(event, view, data) {
-    
-    try{
-	let commandURL = "https://hook.integromat.com/baxf6i7ag8g6xaxn7nvqcz3f1neajylu";
-        
-        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
-        function handlAll(valueA, fieldName){ 
-            return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
-        }
-        
-        function handlIndex(valueA, indexA, fieldName){ 
-            return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
-        }
-        
-        if(data.field_6041_raw !== null && data.field_6041_raw !== undefined){
-            var num = data.field_6041_raw.time;
-            var hours = (num / 60);
-            var rhours = Math.floor(hours);
-            var minutes = (hours - rhours) * 60;
-            var rminutes = Math.round(minutes);
-            var time =  rhours.toString().padStart(2, '0') + ":" + rminutes.toString().padStart(2, '0');
-        }else{
-            var time = "";
-        }
-        
-        var createData = {"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection": handlAll(data.field_6041_raw, "date_formatted") + " " + time,
+  if(data.field_6041_raw !== null && data.field_6041_raw !== undefined){
+    var num = data.field_6041_raw.time;
+    var hours = (num / 60);
+    var rhours = Math.floor(hours);
+    var minutes = (hours - rhours) * 60;
+    var rminutes = Math.round(minutes);
+    var time =  rhours.toString().padStart(2, '0') + ":" + rminutes.toString().padStart(2, '0');
+  }else{
+      var time = "";
+  }
+  var createData = {"Knack ID":data.id,"Dare Vehicle Marked Ready For Collection": handlAll(data.field_6041_raw, "date_formatted") + " " + time,
                                            "Dealer ID":handlIndex(data.field_4943_raw, "0", "identifier"),"Source Of Payload" : "knack direct"};
-        function deleteEmpty(objectA){
-        
-                for (const [key, value] of Object.entries(objectA)) {
-                    if (value === undefined || value === null || value === ""){
-                        delete objectA[key];
-                    }
-                }
-                return objectA;
-            }
-        //Iterate through all the values contained in createData and deletesany undefined object properties
-        //Will create the final form of the data sent using POST
-        let dataToSend = JSON.stringify(deleteEmpty(createData));
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Trigger For Integromat When Dealer Pushes Vehicle For Prep Centre {(Deal File) Used Vehicle Deal File}",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
-  
+  callPostHttpRequest("https://hook.integromat.com/baxf6i7ag8g6xaxn7nvqcz3f1neajylu",deleteEmpty(createData), "Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Trigger For Integromat When Dealer Pushes Vehicle For Prep Centre {(Deal File) Used Vehicle Deal File}");
 });
-
 
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – **Trigger Integromat to Background Replace Used Vehicle at point of Vehicle Disposal Selection {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/108678042/nodes/108678042/fields
 $(document).on('knack-form-submit.view_3926', function(event, view, data) { 
-    
-    try{
-        
-        // Searching an undefined collection/aray will result in an exception and the javascript will stop execution!
-        function handlAll(valueA, fieldName){ 
-            return (valueA? valueA[fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
-        }
-        
-        function handlIndex(valueA, indexA, fieldName){ 
-            return (valueA? valueA[indexA][fieldName]:"");//This tests if valueA is not null or undefined, if yes it returns empty string, otherwise it returns property of fieldName of valueA
-        }
-        
-          let commandURL = "https://hook.integromat.com/8mnivmrh1gs4co3kd3k36eg798zt1ko9";
-          
-          var createData = {"Knack ID of Used Deal File":data.id, "Image URL":handlAll(data.field_4944_raw, "url"), "Image thumbnail URL": handlAll(data.field_4944_raw, "thumb_url"),"Dealer": handlIndex(data.field_4943_raw, "0", "identifier"),"Source Of Payload" : "knack direct"} ;
-          function deleteEmpty(objectA){
-        
-                for (const [key, value] of Object.entries(objectA)) {
-                    if (value === undefined || value === null || value === ""){
-                        delete objectA[key];
-                    }
-                }
-                return objectA;
-            }
-        //Iterate through all the values contained in createData and deletesany undefined object properties
-        //Will create the final form of the data sent using POST
-        let dataToSend = JSON.stringify(deleteEmpty(createData));
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Vehicle Check in TRIGGER INTEGROMAT UPON – **Trigger Integromat to Background Replace Used Vehicle at point of Vehicle Disposal Selection {(Deal File) Used Vehicle Deal File}",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
-  
+  var createData = {"Knack ID of Used Deal File":data.id, "Image URL":handlAll(data.field_4944_raw, "url"), "Image thumbnail URL": handlAll(data.field_4944_raw, "thumb_url"),"Dealer": handlIndex(data.field_4943_raw, "0", "identifier"),"Source Of Payload" : "knack direct"} ;
+  callPostHttpRequest("https://hook.integromat.com/8mnivmrh1gs4co3kd3k36eg798zt1ko9",deleteEmpty(createData), "Used Vehicle Check in TRIGGER INTEGROMAT UPON – **Trigger Integromat to Background Replace Used Vehicle at point of Vehicle Disposal Selection {(Deal File) Used Vehicle Deal File}"); 
 });
-
 
 // Used Vehicle Check in TRIGGER INTEGROMAT UPON – *Used Vehicle Check In - Retail or Trade Selection - Instant Webhook for Integromat (V2) {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/99112426/nodes/99112426
 $(document).on('knack-form-submit.view_2303', function(event, view, data) {
-    
-    try{
-
-        let commandURL = "https://hook.integromat.com/hrnilld87m88ereruz9m8k9uxywat6eb" ;
-        let dataToSend = JSON.stringify({"Knack Record ID":data.id, "Source Of Payload":"knack direct"}) ;
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-
-
-        
-
-            if (data.field_5011_raw === "Trade"){
-
-                let commandURL = "https://hook.integromat.com/9mmic64ktusvdxj85i4nyqobfrpef85o";
-                let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
-                var rData = $.ajax({
-                    url: commandURL,
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: dataToSend,
-                    async: false
-                }).responseText;
-
-
-            }else if (data.field_5011_raw === "Retail" || data.field_5011_raw === "Vehicle Sold"){
-
-                let commandURL = "https://hook.integromat.com/83njs7wwvslcjlo36abncth5dfmlexpm";
-                let dataToSend = JSON.stringify({"RecordID":data.id, "Source Of Payload":"knack direct"});
-                var rData = $.ajax({
-                    url: commandURL,
-                    type: 'POST',
-                    contentType: 'application/json',
-                    data: dataToSend,
-                    async: false
-                }).responseText;
-            }
-
-    }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Used Vehicle Check In - Retail or Trade Selection - Instant Webhook for Integromat (V2) {(Deal File) Used Vehicle Deal File}",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
-    }
+  callPostHttpRequest("https://hook.integromat.com/hrnilld87m88ereruz9m8k9uxywat6eb",{"Knack Record ID":data.id, "Source Of Payload":"knack direct"}, "Used Vehicle Check In - Retail or Trade Selection - Instant Webhook for Integromat (V2) {(Deal File) Used Vehicle Deal File}");   
+  if (data.field_5011_raw === "Trade"){
+    callPostHttpRequest("https://hook.integromat.com/9mmic64ktusvdxj85i4nyqobfrpef85o",{"RecordID":data.id, "Source Of Payload":"knack direct"}, "Used Vehicle Check In - Retail or Trade Selection - Instant Webhook for Integromat (V2) {(Deal File) Used Vehicle Deal File}");   
+  } else if (data.field_5011_raw === "Retail" || data.field_5011_raw === "Vehicle Sold"){
+    callPostHttpRequest("https://hook.integromat.com/83njs7wwvslcjlo36abncth5dfmlexpm",{"RecordID":data.id, "Source Of Payload":"knack direct"}, "Used Vehicle Check In - Retail or Trade Selection - Instant Webhook for Integromat (V2) {(Deal File) Used Vehicle Deal File}");   
+  }
 });
 
 //trigerER INTEGROMAT UPON – *Used Vehicle Check In to Trigger AutoTrader Retail Metrics {(Deal File) Used Vehicle Deal File} Replaces https://zapier.com/app/editor/84075829/nodes/84075829/fields
