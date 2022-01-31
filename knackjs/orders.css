@@ -1965,41 +1965,11 @@ color: #FFFFFF;
   	font-weight: bold;
 }
 
-/* Update Admin View Details CSS */
-
-#view_2854 h3 {
-  text-align: center;
-}
-
-#view_2854 > form > div {
-  	text-align: center;
-}
-
-#view_2854 > form > div > button {
-background-color: #8D8E8E !important;
-display: inline-block;
-border-left: 10px solid #DE3163;
-}
-
-#view_2854 > form > div > button:hover {
- color: #FFFFFF;
-  background-color: #463F3A;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: .3s;
-}
-
-#view_2854 {
-   border: 4px solid #CCCCCC;
-   padding: 10px;
-}
-
-
-/* Deal File Overview */
+/*************** Deal File Overview ******************/
 
 #view_4036 .kn-detail-label {background-color: transparent;}
 
-/* Update Order Form CSS */
+/* Retreive Order Details from VSB CSS */
 
 #view_2854 h3 {
   text-align: center;
@@ -2012,7 +1982,7 @@ border-left: 10px solid #DE3163;
 #view_2854 > form > div > button {
 background-color: #8D8E8E !important;
 display: inline-block;
-border-left: 10px solid #DE3163;
+border-left: 10px solid #DE3163 !important;
 }
 
 #view_2854 > form > div > button:hover {
@@ -2041,7 +2011,7 @@ border-left: 10px solid #DE3163;
 #view_2855 > form > div > button {
 background-color: #8D8E8E !important;
 display: inline-block;
-border-left: 10px solid #DE3163;
+border-left: 10px solid #DE3163 !important;
 
 }
 
