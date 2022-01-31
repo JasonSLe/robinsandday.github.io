@@ -4777,7 +4777,7 @@ font-size:12px;
   	font-weight: bold;
 }
 
-#view_4120 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
+view_4120 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -4808,9 +4808,31 @@ font-size:12px;
 }
 
 
-/*SEt Average Discount Colour Red*/
+/*Set Average Discount Colour Red*/
 
 #view_4117 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7542 > div.kn-detail-label {
+    color: #FF0000;
+    font-size: 17px;
+}
+
+#view_4170 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7544 {
+    color: #FF0000;
+    font-size: 17px;
+}
+
+#view_4175 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7545 {
+    color: #FF0000;
+    font-size: 17px;
+}
+
+
+#view_4179 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7546 {
+    color: #FF0000;
+    font-size: 17px;
+}
+
+
+#view_4180 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7547 {
     color: #FF0000;
     font-size: 17px;
 }
