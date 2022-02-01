@@ -1601,6 +1601,12 @@ var calibrationValue = getCookie('rdSpiritCalibration');
   lastBeta = beta;
   let betaComp = beta - (calibrationValue?calibrationValue:0);
 
+  if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
+    if (isInCalibrationMode){
+      $('#infoText').text('b:'+beta+',g:'+gamma);
+    }
+  }
+
   if (isLandscape && beta && lineVisible) {
     $("#cameraLine").show();
   } else {
@@ -1826,6 +1832,11 @@ takePhotoButton.onclick = function () {
       if (confirm('Please confirm that you wish to enter calibration mode to set the spirit level.')) {
         console.log('Let go for calibration.');
         isInCalibrationMode = true;
+        if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
+          var infoText = document.createElement('span');
+          infoText.setAttribute("id", "infoText");
+          document.getElementById('cameraGui_controls').appendChild(infoText);
+        }
         $("#takePhoto").hide();
         $(stop);
         alert('Place device upright in landscape mode on level surface and click calibration button.');
