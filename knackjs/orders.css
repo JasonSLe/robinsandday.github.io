@@ -1965,41 +1965,11 @@ color: #FFFFFF;
   	font-weight: bold;
 }
 
-/* Update Admin View Details CSS */
-
-#view_2854 h3 {
-  text-align: center;
-}
-
-#view_2854 > form > div {
-  	text-align: center;
-}
-
-#view_2854 > form > div > button {
-background-color: #8D8E8E !important;
-display: inline-block;
-border-left: 10px solid #DE3163;
-}
-
-#view_2854 > form > div > button:hover {
- color: #FFFFFF;
-  background-color: #463F3A;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: .3s;
-}
-
-#view_2854 {
-   border: 4px solid #CCCCCC;
-   padding: 10px;
-}
-
-
-/* Deal File Overview */
+/*************** Deal File Overview ******************/
 
 #view_4036 .kn-detail-label {background-color: transparent;}
 
-/* Update Order Form CSS */
+/* Retreive Order Details from VSB CSS */
 
 #view_2854 h3 {
   text-align: center;
@@ -2012,7 +1982,7 @@ border-left: 10px solid #DE3163;
 #view_2854 > form > div > button {
 background-color: #8D8E8E !important;
 display: inline-block;
-border-left: 10px solid #DE3163;
+border-left: 10px solid #DE3163 !important;
 }
 
 #view_2854 > form > div > button:hover {
@@ -2041,7 +2011,7 @@ border-left: 10px solid #DE3163;
 #view_2855 > form > div > button {
 background-color: #8D8E8E !important;
 display: inline-block;
-border-left: 10px solid #DE3163;
+border-left: 10px solid #DE3163 !important;
 
 }
 
@@ -4838,9 +4808,31 @@ font-size:12px;
 }
 
 
-/*SEt Average Discount Colour Red*/
+/*Set Average Discount Colour Red*/
 
-#view_4117 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7542 > div.kn-detail-label {
+#view_4117 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7542 {
+    color: #FF0000;
+    font-size: 17px;
+}
+
+#view_4170 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7544 {
+    color: #FF0000;
+    font-size: 17px;
+}
+
+#view_4175 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7545 {
+    color: #FF0000;
+    font-size: 17px;
+}
+
+
+#view_4179 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7546 {
+    color: #FF0000;
+    font-size: 17px;
+}
+
+
+#view_4180 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7547 {
     color: #FF0000;
     font-size: 17px;
 }
@@ -4892,97 +4884,7 @@ font-size:12px;
 #view_4259 .kn-detail-label {background-color: transparent;}
 #view_4260 .kn-detail-label {background-color: transparent;}
 
-/*Table Filters*/
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a{
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(14) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_4262 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(15) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
+/*Historic DOC Search Filter Buttons*/
 
 #view_4252 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
   	background-color: #FFA100;
@@ -5003,7 +4905,104 @@ font-size:12px;
 }
 
 
+/*Historic DOC Table Filters*/
 
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a{
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(14) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4264 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(15) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/*Set Discount Font Red*/
+
+#view_4259 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_7543 {
+    color: #FF0000;
+    font-size: 17px;
+}
 
 
 

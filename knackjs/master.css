@@ -3583,9 +3583,10 @@ visibility: visible;
 }
 
 #view_2520 > form > div > button {
+	background-color: #8D8E8E !important;
   	color: #FFFFFF;
   	font-weight: bold;
-	border-left: 10px solid #DE3163;
+	border-left: 10px solid #DE3163 !important;
 }
 
 #view_2520 > form > div > button:hover {
@@ -3621,7 +3622,7 @@ visibility: visible;
 	background-color: #8D8E8E !important;
   	color: #FFFFFF;
   	font-weight: bold;
-	border-left: 10px solid #DE3163;
+	border-left: 10px solid #DE3163 !important;
 }
 
 #view_2548 > form > div > button:hover {
@@ -7182,59 +7183,16 @@ padding-bottom: 0px;
     font-size: 17px;
 }
 
-/**Used Historic Doc - Dealer Performance (Individual) Page**/
+/* Customer Address Map */
 
-#view_5165
-{
-  font-size: 23px;
-}
-
-#view_5164
-{
-  font-size: 17px;
-}
-
-
-#view_5142 .kn-detail-label {background-color: transparent;}
-#view_5143 .kn-detail-label {background-color: transparent;}
-#view_5164 .kn-detail-label {background-color: transparent;}
-
-/**Used Historic Doc - Center Table Headings**/
-
-#view_5154 th span
-{
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_5154 
-{
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_5134 th span
-{
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_5134 
-{
-  margin: auto !important;
-  font-size: 15px;
-}
-
-/**Used Historic Doc - Orange Button to View Docs**/
-
-#view_5161 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4776 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_5161 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4776 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -7245,84 +7203,22 @@ padding-bottom: 0px;
   	box-shadow:         3px 3px #ccc;
 }
 
-/**Used Historic Doc - Orange Filter Buttons**/
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
+#view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  display: inline-block;
 }
 
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
-  	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
+#view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
 }
 
 /* Dealer DOC or Profit Sheets Table Filters */
@@ -7405,16 +7301,68 @@ padding-bottom: 0px;
   	font-weight: bold;
 }
 
-/* Customer Address Map */
+/*********Used Historic Doc*********/
 
-#view_4776 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+/*Dealer Performance (Individual) Page*/
+
+#view_5165
+{
+  font-size: 23px;
+}
+
+#view_5164
+{
+  font-size: 17px;
+}
+
+
+#view_5142 .kn-detail-label {background-color: transparent;}
+#view_5143 .kn-detail-label {background-color: transparent;}
+#view_5164 .kn-detail-label {background-color: transparent;}
+
+/*Red Colour for Average Discount*/
+
+#view_5164 > section > div > div.kn-details-group.column-1.columns > div > div > div.kn-detail.field_7560 {
+    color: #FF0000;
+    font-size: 17px;
+}
+
+/**Center Table Headings**/
+
+#view_5154 th span
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+#view_5154 
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+#view_5134 th span
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+#view_5134 
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+/**Orange Button to View Historic Docs**/
+
+#view_5161 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_4776 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_5161 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -7425,23 +7373,107 @@ padding-bottom: 0px;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a > span {
-  color: #FFFFFF;
-  background-color: #19365e;
-  padding: 8px;
-  display: inline-block;
+/**Orange Filter Buttons**/
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
 }
 
-#view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a:hover > span {
-  color: #FFFFFF;
-  background-color: #0f2542;
-  padding: 8px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: .3s;
-  border-width: 2px;
-  border-color: #FFFFFF;
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
 }
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+
+/**Orange Filters on Historic DOC Table**/
+
+#view_5154 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5154 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5154 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 
 /**"add valet" button on valet to do page*/
 #view_4811 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
@@ -7471,8 +7503,6 @@ padding-bottom: 0px;
       font-weight: bold;
       box-shadow:         3px 3px #ccc;
 }
-
- 
 
 #view_4811 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
     background-color: #FF5C98;
@@ -7942,6 +7972,31 @@ padding-bottom: 0px;
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;	
 }
+
+/****************** AUDIT TEAM *********************/
+
+/*** Physical Stock Audit ***/
+
+#view_5210 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_5210 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+
+
 
 
 /* TOOLTIP CSS*/
