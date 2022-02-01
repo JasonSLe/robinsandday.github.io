@@ -1354,6 +1354,14 @@ function IsInHomeScreen(){
   return null;
 }
 
+$(document).on('knack-scene-render.scene_435', function(event, scene) {
+  let iH = IsInHomeScreen();
+  if (iH || iH===null){
+    $('div[class="kn-view"]:contains("MUST add Robins")').hide()
+    $('div[id="view_5185"]').hide()
+  }
+ });
+
 function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 // ***************************************************************************************************************************
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
