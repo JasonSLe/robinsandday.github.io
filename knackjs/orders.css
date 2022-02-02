@@ -4559,14 +4559,14 @@ font-size:12px;
 
 /* Change Group Map Menu Button */
 
-#view_4188 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4188 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_4188 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4188 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -4847,14 +4847,14 @@ font-size:12px;
 /*DOC Orange Button*/
 
 #view_4188 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-	background-color: #FFA100;
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_4188 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-	background-color: #D18400;
+	background-color: #32936F;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
@@ -4865,14 +4865,14 @@ font-size:12px;
 }
 
 #view_4268 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #FFA100;
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_4268 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #D18400;
+	background-color: #32936F;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
@@ -4884,14 +4884,14 @@ font-size:12px;
 
 
 #view_4254 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #FFA100;
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_4254 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #D18400;
+	background-color: #32936F;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
@@ -4900,7 +4900,6 @@ font-size:12px;
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;	
 }
-
 
 /*Historic DOC Font Size*/
 
