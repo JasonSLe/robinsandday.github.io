@@ -7355,14 +7355,14 @@ padding-bottom: 0px;
 
 /**Orange Buttons to View Historic Docs**/
 
-#view_4776 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_4890 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_4776 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_4890 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -7372,28 +7372,6 @@ padding-bottom: 0px;
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
-
-
-
-#view_4878 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	box-shadow:         3px 3px #ccc;
-}
-
-#view_4878 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-	background-color: #D18400;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
-  	border-width: 2px;
-  	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
-}
-
-
 
 #view_5213 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #FFA100;
@@ -7413,6 +7391,26 @@ padding-bottom: 0px;
   	box-shadow:         3px 3px #ccc;
 }
 
+
+
+#view_4776 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4776 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+
+}
 
 /**Orange Filter Buttons**/
 
