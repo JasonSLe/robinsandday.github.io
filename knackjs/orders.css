@@ -4846,14 +4846,14 @@ font-size:12px;
 
 /*Future Orders Button*/
 
-#view_4298> div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4254 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_4298 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4254 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -4866,19 +4866,19 @@ font-size:12px;
 
 /*Future Orders Table Filters*/
 
-#view_4299> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+#view_4308> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_4299> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+#view_4308> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_4299> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+#view_4308> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
