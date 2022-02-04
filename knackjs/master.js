@@ -2942,7 +2942,7 @@ function handlJSExceptions(exception, functionName){
 $(document).on('knack-form-submit.view_318', function(event, view, data) { 
     
     try{
-        throw new Error('oops');
+        console.log("test1");
         let commandURL = "https://hook.integromat.com/reyy2orzb5n7ututhmsltfcxqvkfpjmh";
         let dataToSend = JSON.stringify({"Record ID":data.id, "ExitSurveyUID":data.field_769_raw});
 
