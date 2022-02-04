@@ -805,3 +805,46 @@ $(document).on('knack-record-update.view_243', function(event, view, data) {
   Knack.showSpinner();
   
 });
+
+function sendErrorToIntegromat(exception, name){
+  console.log("error");
+  const today = new Date();
+  const date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+  const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  const dateTime = date+' '+time;
+
+  let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+  let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": name,
+  "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+  var rData = $.ajax({
+     url: commandURL,
+     type: 'POST',
+     contentType: 'application/json',
+     data: dataToSend,
+     async: false
+  }).responseText;
+}
+
+
+
+//**Trigger Text To Customer To Complete Exit Survey At Workshop "Check Out"
+$(document).on('knack-form-submit.view_318', function(event, view, data) { 
+    
+    try{
+        
+        console.log("Testing this");
+        let commandURL = "https://hook.integromat.com/reyy2orzb5n7ututhmsltfcxqvkfpjmh";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger Text To Customer To Complete Exit Survey At Workshop \"Check Out\"");
+    }
+});
+
