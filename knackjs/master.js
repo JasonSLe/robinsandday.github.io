@@ -2942,7 +2942,8 @@ function handlJSExceptions(exception, functionName){
 $(document).on('knack-form-submit.view_318', function(event, view, data) { 
     
     try{
-        console.log("test1");
+        
+        console.log("Testing1");
         let commandURL = "https://hook.integromat.com/reyy2orzb5n7ututhmsltfcxqvkfpjmh";
         let dataToSend = JSON.stringify({"Record ID":data.id, "ExitSurveyUID":data.field_769_raw});
 
@@ -2954,21 +2955,6 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
             async: false
         }).responseText;
     }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Trigger Text To Customer To Complete Exit Survey At Workshop \"Check Out\"",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
+        handlJSExceptions(exception, "Trigger Text To Customer To Complete Exit Survey At Workshop \"Check Out\"");
     }
 });
