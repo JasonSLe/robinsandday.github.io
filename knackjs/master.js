@@ -1598,12 +1598,24 @@ var calibrationValue = getCookie('rdSpiritCalibration');
   var beta     = event.beta;
   var gamma    = event.gamma;
   console.log(beta);
+  let origBeta = beta;
+
+  if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
+    if (gamma>0){
+      if (beta>0){
+        beta = 180 - beta;
+      } else {
+        beta = Math.abs(beta) - 180;
+      }
+    }
+  }
+
   lastBeta = beta;
   let betaComp = beta - (calibrationValue?calibrationValue:0);
 
   if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
     if (isInCalibrationMode){
-      $('#infoText').html('b:'+beta+'<br />g:'+gamma);
+      $('#infoText').html('b:'+beta+'<br />g:'+gamma+'<br />ob:'+origBeta);
     }
   }
 
