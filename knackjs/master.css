@@ -4093,6 +4093,8 @@ color: #FFFFFF;
 
 #view_3498 .kn-detail-label {background-color: transparent;}
 
+#view_5214 .kn-detail-label {background-color: transparent;}
+
 /********* PROFIT & LOSS PAGE - CONTINUE FROM ENQUIRY MAX (VEHICLE DETAILS) *******/
 
 #view_4524 .kn-detail-label {background-color: transparent;}
@@ -4363,6 +4365,36 @@ border-radius: 6px;
 #view_2941 .kn-detail-label {background-color: transparent;}
 
 #view_2942 .kn-detail-label {background-color: transparent;}
+
+#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
 
 /**Button with link to Service plan Page**/
 #view_4247 > section > div > div > div > div > div > div > span > a > span{
@@ -7185,14 +7217,14 @@ padding-bottom: 0px;
 
 /* Customer Address Map */
 
-#view_4776 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4776 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_4776 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4776 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -7353,17 +7385,53 @@ padding-bottom: 0px;
   font-size: 15px;
 }
 
-/**Orange Button to View Historic Docs**/
+/**Orange Buttons to View Historic Docs**/
 
-#view_5161 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #FFA100;
+#view_4890 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_5161 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #D18400;
+#view_4890 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #32936F;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+#view_5213 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #00CC66;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_5213 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #32936F;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+#view_4776 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #00CC66;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4776 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #32936F;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
@@ -7955,14 +8023,14 @@ padding-bottom: 0px;
 
 /**Group Level Map Button Colour**/ 
 
-#view_4890 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4890 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_4890 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4890 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
