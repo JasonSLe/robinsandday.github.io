@@ -1600,7 +1600,7 @@ var calibrationValue = getCookie('rdSpiritCalibration');
   console.log(beta);
   let origBeta = beta;
 
-  if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
+  //if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
     if (gamma>0){
       if (beta>0){
         beta = 180 - beta;
@@ -1608,7 +1608,7 @@ var calibrationValue = getCookie('rdSpiritCalibration');
         beta = Math.abs(beta) - 180;
       }
     }
-  }
+  //}
 
   lastBeta = beta;
   let betaComp = beta - (calibrationValue?calibrationValue:0);
