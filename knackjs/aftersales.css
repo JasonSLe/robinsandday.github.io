@@ -477,3 +477,15 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 	border: 1px solid #CCCCCC; 
 	border-radius: 10px;
   }
+
+/* Make Reg number look like REG*/
+
+#view_325 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(1) > div > div > div > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 24px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
