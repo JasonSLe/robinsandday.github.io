@@ -480,7 +480,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 /* Make Reg number look like REG*/
 
-#view_325 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(1) > div > div > div > div > span > span {
+#view_344 > section > div > div > div > div > div > div > span > span {
 	background-color: #FFE74C;
   	border-radius: 10px;
   	font-size: 24px;
