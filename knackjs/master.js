@@ -1615,7 +1615,7 @@ var calibrationValue = getCookie('rdSpiritCalibration');
 
   if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
     if (isInCalibrationMode){
-      $('#infoText').html('b:'+beta+'<br />g:'+gamma+'<br />ob:'+origBeta);
+      //$('#infoText').html('b:'+beta+'<br />g:'+gamma+'<br />ob:'+origBeta);
     }
   }
 
