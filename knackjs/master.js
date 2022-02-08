@@ -1491,6 +1491,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 
 //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
   var isLandscape = false;
+  var portraitStill = true;
   //DETECT WHICH ORIENTATION THE USEER IS IN
   if(window.innerHeight > window.innerWidth){ // if portrait
        $("#cameraLine").hide();
@@ -1499,6 +1500,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
        $("#cameraRotate").show();
        $(stop);
        isLandscape = false;
+       portraitStill = true;
   }
 
   if(window.innerWidth > window.innerHeight){ // if landscape
@@ -1507,6 +1509,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
       $("#cameraRotate").hide();
       $(go);
       isLandscape = true;
+      portraitStill = false;
   }
 
   window.addEventListener("deviceorientation", handleOrientation, true);
@@ -1660,9 +1663,16 @@ $(window).on("orientationchange",function(){
     }
     $(go);
     isLandscape = true;
+    portraitStill = false;
   }
 });
 
+//This function checks if user is still in Portrait mode
+setTimeout(function() {
+  if (portraitStill){
+    alert('Your are still in Portrait mode, are you sure you do not have the screen orientation locked ?')
+  }
+}, 10000);
 
 var sndCameraTakePhoto = document.createElement('audio');  
 sndCameraTakePhoto.type = "audio/mpeg";     
