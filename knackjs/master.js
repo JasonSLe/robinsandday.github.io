@@ -1500,7 +1500,6 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
        $("#cameraRotate").show();
        $(stop);
        isLandscape = false;
-       portraitStill = true;
   }
 
   if(window.innerWidth > window.innerHeight){ // if landscape
