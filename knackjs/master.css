@@ -4170,6 +4170,22 @@ color: #FFFFFF;
 
 /**Digital P&L Overview PAGE V2**/
 
+/* No SIV Found - Link to Clear Franchise Selection */
+
+#view_5215 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  background-color: #ff1414;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_5215 > section > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  background-color: #b10000;
+  padding: 8px;
+  display: inline-block;
+}
+
 #view_4560 .kn-detail-label {background-color: transparent;}
 #view_4609 .kn-detail-label {background-color: transparent;}
 #view_4566 .kn-detail-label {background-color: transparent;}
