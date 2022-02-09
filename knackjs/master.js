@@ -419,18 +419,23 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 
 
   function getVersionFromApify(){
-    
-    var token = $.ajax({
-      url: 'https://api.apify.com/v2/key-value-stores/60ues2gA9nwF71pzK/records/KNACKVERSION?disableRedirect=true',
-      type: 'GET',
-      async: false
-    }).responseText;
-
-    if (!token) return '';
-
-    token = token.replace('"', '').replace('"', '');
-
-    return token;
+    try {
+      var token = $.ajax({
+        url: 'https://api.apify.com/v2/key-value-stores/60ues2gA9nwF71pzK/records/KNACKVERSION?disableRedirect=true',
+        type: 'GET',
+        async: false,
+        timeout: 3000
+      }).responseText;
+  
+      if (!token) return '';
+  
+      token = token.replace('"', '').replace('"', '');
+  
+      return token;
+    } catch (ex){
+      console.log(ex);
+      return '';
+    }
   }
 
 
