@@ -1669,7 +1669,11 @@ $(window).on("orientationchange",function(){
 //This function checks if user is still in Portrait mode
 setTimeout(function() {
   if (portraitStill){
-    alert('Your are still in Portrait mode, are you sure you do not have the screen orientation locked ?')
+    if (OperatingSystem.iOS()) {
+      alert('Your Device is still in Portrait mode. Please check that “Screen Orientation Lock” is NOT enabled on your device, and then rotate it to enter Landscape mode and take a photo…')
+    } else {
+      alert('Your Device is still in Portrait mode. Please check that the device is NOT Locked in Portrait mode, and then rotate it to enter Landscape mode and take a photo…')
+    }
   }
 }, 10000);
 
