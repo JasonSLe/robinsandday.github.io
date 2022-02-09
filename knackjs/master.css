@@ -8260,14 +8260,14 @@ align: center;
     padding: 5px;
 	*/
 		
-/* Limit purchasing derivative counters to one line
+/* Limit purchasing derivative counters to one line*/
 #view_5004 .kn-label-none.field_7438 > div > span > strong > span {
     display:inline-block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 40ch;
-}*/
+}
 
 /* make purchasing main page button for retail metrics */
 #view_5004 .kn-label-none.field_7403 > div > span {
@@ -8435,7 +8435,7 @@ align: center;
 /*surecheck fail remove grey space*/
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label {background-color: transparent;}
 
-/* hide metrics from main purchasing page  
+/* hide metrics from main purchasing page*/  
 #view_5004 section > div > div:nth-child(3) > div:nth-child(1) > div {background-color: transparent;}
 
 
@@ -8443,7 +8443,7 @@ align: center;
 #view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
     background-color: #1f2dad !important;
 	top: 90px !important;
-}*/
+}
 
 /*hide borders service table for MFL 
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 table, tr, td{
