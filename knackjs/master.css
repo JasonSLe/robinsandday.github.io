@@ -8409,8 +8409,8 @@ align: center;
 
 
 /*make purchasing vehicle data transparent v2*/
-/*cap make transparaent in purchasing main page
-#view_5004 .kn-details .kn-detail-label, .kn-list .kn-detail-label {background-color: transparent;}*/
+/*cap make transparaent in purchasing main page*/
+#view_5004 .kn-details .kn-detail-label, .kn-list .kn-detail-label {background-color: transparent;}
 
 #view_5028 > section > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
