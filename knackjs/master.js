@@ -424,7 +424,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
         url: 'https://api.apify.com/v2/key-value-stores/60ues2gA9nwF71pzK/records/KNACKVERSION?disableRedirect=true',
         type: 'GET',
         async: false,
-        timeout: 3000
+        timeout: 1000
       }).responseText;
   
       if (!token) return '';
