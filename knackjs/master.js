@@ -2229,6 +2229,28 @@ $(document).on('knack-form-submit.view_3994', function(event, view, data) {
   
 });
 
+
+//**Used Deal File - Credit Note Raised and Check VSB for Credit Note Number
+$(document).on('knack-form-submit.view_5239', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.integromat.com/70c9ajyp2qsdg46ezfc4z5q5e2pbnqxu";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Used Deal File - Credit Note Raised and Check VSB for Credit Note Number");
+    }
+});
+
+
 //
 //       USED VEHICLE CHECK IN
 //
