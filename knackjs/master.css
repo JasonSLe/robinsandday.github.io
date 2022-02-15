@@ -8516,3 +8516,10 @@ align: center;
 #view_5029 > section > div > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div > div {
 overflow: hidden !important;
 }
+
+/**Center Table Headings TEST**/
+
+#view_4013 th span
+{
+  margin: auto !important;
+}
