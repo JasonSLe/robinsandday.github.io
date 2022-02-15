@@ -1011,7 +1011,14 @@ $(document).on('knack-view-render.view_4271', function(event, view, data) {
   Knack.fn.hideExpand("view_4271");
 });
 
+$(document).on('knack-view-render.view_5232', function(event, view, data) {
+  console.log('view5232');
+  Knack.fn.hideExpand("view_5232");
+});
+
+
 // MANAGER VIEWS
+
 $(document).on('knack-view-render.view_4310', function(event, view, data) {
   console.log('view4310');
   Knack.fn.hideExpand("view_4310");
@@ -1035,6 +1042,11 @@ $(document).on('knack-view-render.view_4557', function(event, view, data) {
 $(document).on('knack-view-render.view_4526', function(event, view, data) {
   console.log('view4526');
   Knack.fn.hideExpand("view_4526");
+});
+
+$(document).on('knack-view-render.view_5219', function(event, view, data) {
+  console.log('view5219');
+  Knack.fn.hideExpand("view_5219");
 });
 
 //END OF HIDE AND EXPAND CODE
@@ -2233,6 +2245,28 @@ $(document).on('knack-form-submit.view_3994', function(event, view, data) {
     }
   
 });
+
+
+//**Used Deal File - Credit Note Raised and Check VSB for Credit Note Number
+$(document).on('knack-form-submit.view_5239', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.integromat.com/70c9ajyp2qsdg46ezfc4z5q5e2pbnqxu";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Used Deal File - Credit Note Raised and Check VSB for Credit Note Number");
+    }
+});
+
 
 //
 //       USED VEHICLE CHECK IN
