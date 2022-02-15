@@ -1006,7 +1006,14 @@ $(document).on('knack-view-render.view_4271', function(event, view, data) {
   Knack.fn.hideExpand("view_4271");
 });
 
+$(document).on('knack-view-render.view_5232', function(event, view, data) {
+  console.log('view5232');
+  Knack.fn.hideExpand("view_5232");
+});
+
+
 // MANAGER VIEWS
+
 $(document).on('knack-view-render.view_4310', function(event, view, data) {
   console.log('view4310');
   Knack.fn.hideExpand("view_4310");
@@ -1030,6 +1037,11 @@ $(document).on('knack-view-render.view_4557', function(event, view, data) {
 $(document).on('knack-view-render.view_4526', function(event, view, data) {
   console.log('view4526');
   Knack.fn.hideExpand("view_4526");
+});
+
+$(document).on('knack-view-render.view_5219', function(event, view, data) {
+  console.log('view5219');
+  Knack.fn.hideExpand("view_5219");
 });
 
 //END OF HIDE AND EXPAND CODE
