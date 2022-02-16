@@ -809,6 +809,31 @@ $(document).on('knack-view-render.view_3633', function(event, view, data) {
 //
 //
 //
+//**Function that will trigger a javascript error in integromat
+function sendErrorToIntegromat(exception, name){
+  console.log("error");
+  const today = new Date();
+  const date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+  const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  const dateTime = date+' '+time;
+
+  let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+  let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": name,
+  "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+  var rData = $.ajax({
+     url: commandURL,
+     type: 'POST',
+     contentType: 'application/json',
+     data: dataToSend,
+     async: false
+  }).responseText;
+}
+
+
+
+
+
+
 
 // New Deal File - Digital P&L – Triggering integromat to capture PDF of profit and loss overview to upload to knack
 $(document).on('knack-form-submit.view_3855', function(event, view, data) {
@@ -2397,4 +2422,26 @@ $(document).on('knack-form-submit.view_2746', function(event, view, data) {
         }).responseText;
     }
 });
+
+
+//**New Deal File - Admin Processing Credit Request - GET Credit Note Number from VSB
+$(document).on('knack-form-submit.view_4314', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.integromat.com/xu1jig54toecb6zdlvffvktb2xcogpbe";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "New Deal File - Admin Processing Credit Request - GET Credit Note Number from VSB");
+    }
+});
+
 

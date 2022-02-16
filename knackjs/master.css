@@ -482,6 +482,18 @@ body {
   	font-weight: bold;
 }
 
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(22) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(23) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /* Auto Pricing Dashboard Filters */
 
 #view_4025 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -4451,6 +4463,33 @@ border-radius: 6px;
 	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
+}
+
+/**LEV Reporting Center Table Headings**/
+
+#view_5241 th span
+{
+  margin: auto !important;
+}
+
+#view_5236 th span
+{
+  margin: auto !important;
+}
+
+#view_5241 th span
+{
+  margin: auto !important;
+}
+
+#view_5238 th span
+{
+  margin: auto !important;
+}
+
+#view_5243 th span
+{
+  margin: auto !important;
 }
 
 /**Button with link to Service plan Page**/
@@ -8517,9 +8556,4 @@ align: center;
 overflow: hidden !important;
 }
 
-/**Center Table Headings TEST**/
 
-#view_4013 th span
-{
-  margin: auto !important;
-}
