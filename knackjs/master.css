@@ -8529,9 +8529,4 @@ align: center;
 overflow: hidden !important;
 }
 
-/**Center Table Headings TEST**/
 
-#view_4013 th span
-{
-  margin: auto !important;
-}
