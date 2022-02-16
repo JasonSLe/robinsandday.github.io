@@ -4465,6 +4465,33 @@ border-radius: 6px;
   	font-weight: bold;
 }
 
+/**LEV Reporting Center Table Headings**/
+
+#view_5241 th span
+{
+  margin: auto !important;
+}
+
+#view_5236 th span
+{
+  margin: auto !important;
+}
+
+#view_5241 th span
+{
+  margin: auto !important;
+}
+
+#view_5238 th span
+{
+  margin: auto !important;
+}
+
+#view_5243 th span
+{
+  margin: auto !important;
+}
+
 /**Button with link to Service plan Page**/
 #view_4247 > section > div > div > div > div > div > div > span > a > span{
 background-color:#0f2542;
