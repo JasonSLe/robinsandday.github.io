@@ -306,6 +306,7 @@ function createServiceScheduleClick(){
 }
 
 function formatScene24(){
+  /*
   let sceneEl = document.getElementById('kn-scene_24');
   let sections = document.createElement('div');
   sections.setAttribute("id", "sections");
@@ -333,6 +334,7 @@ function formatScene24(){
   sectionRight.appendChild(document.getElementById('view_96'));
   sectionRight.appendChild(document.getElementById('view_133'));
   sectionRight.appendChild(document.getElementById('view_115'));
+  */
   //Hide service tooltips field
   $('div[class="field_325"]').hide();
 }
@@ -343,14 +345,14 @@ function serviceVisitsTooltips(){
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: fixed; display:none;");
   });
-  $('div[id="view_96"]').on("mouseleave", function (e) {
+  $('div[id="view_324"]').on("mouseleave", function (e) {
     console.log('HIDE AFTER LEAVE')
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
 
   console.log('table',$('table[id="serviceVisitsTable"]'));
   //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
-  $('div[id="view_96"]').on("mousemove", function (e) {
+  $('div[id="view_324"]').on("mousemove", function (e) {
       //console.log('on move');
       let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
       let trUnderMouse = null;
@@ -478,7 +480,7 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
     console.log(rData);
   });
 
-  $(document).on('knack-view-render.view_96', function (event, view, data) {
+  $(document).on('knack-view-render.view_324', function (event, view, data) {
     function showHideMoreServiceVisits(){
       let newV = (document.querySelector('.more').style.display==="none"?"":"none");
       document.querySelectorAll('.more').forEach(function(el) {
