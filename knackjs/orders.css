@@ -4839,11 +4839,11 @@ font-size:12px;
     font-size: 17px;
 }
 
-/* make handover white text 
-#view_2630 .kn-label {
+/* make handover white text */
+#view_2630 #kn-input-field_6628 {
 	color:#FFA100 !important
 		}
-*/
+
 /*Future Orders Button*/
 
 #view_4254 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
