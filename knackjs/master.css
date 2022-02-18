@@ -520,6 +520,12 @@ body {
   	font-weight: bold;
 }
 
+#view_4025 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 
 /* Used Stock Management Tool Reg No. */
 
