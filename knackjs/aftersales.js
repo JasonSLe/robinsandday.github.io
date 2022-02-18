@@ -374,7 +374,7 @@ function serviceVisitsTooltips(){
   }, 100);
 }
 
-$(document).on("knack-scene-render.scene_1339", function(event, scene, data) {
+$(document).on("knack-scene-render.scene_105", function(event, scene, data) {
   //formatScene24();
   setTimeout(function(){
     refreshScene24();
