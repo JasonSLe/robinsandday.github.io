@@ -439,21 +439,21 @@ function refreshScene24(){
   sceneRefresh(refreshData);
 }
 
-$(document).on("knack-scene-render.scene_28", function(event, scene, data) {
+$(document).on("knack-scene-render.scene_118", function(event, scene, data) {
   let refreshData = [
     {
         mainField : 'field_72', //Service Schedule
-        views:['118']
+        views:['369']
     }
   ]
   sceneRefresh(refreshData);
 });
 
-$(document).on("knack-scene-render.scene_29", function(event, scene, data) {
+$(document).on("knack-scene-render.scene_119", function(event, scene, data) {
     let refreshData = [
       {
           mainField : 'field_250', //Tyres
-          views:['119'],
+          views:['374'],
           runAfter : generateTyres 
       }
     ]
