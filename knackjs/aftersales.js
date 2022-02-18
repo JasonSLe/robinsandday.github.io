@@ -356,11 +356,13 @@ function serviceVisitsTooltips(){
       //console.log('on move');
       let partOfTable = document.elementFromPoint(e.pageX, e.pageY);
       let trUnderMouse = null;
-      if (partOfTable.nodeName==='TD'){
-        trUnderMouse = partOfTable.parentElement;
-      }
-      if (partOfTable.nodeName==='TR'){
-        trUnderMouse = partOfTable;
+      if (partOfTable){
+        if (partOfTable.nodeName==='TD'){
+          trUnderMouse = partOfTable.parentElement;
+        }
+        if (partOfTable.nodeName==='TR'){
+          trUnderMouse = partOfTable;
+        }
       }
       if (trUnderMouse && trUnderMouse.id){
         $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
