@@ -382,6 +382,7 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
 });
 
 function refreshScene24(){
+  /*
   let refreshData = [
     {
         name : 'Autoline - Owner',
@@ -427,6 +428,13 @@ function refreshScene24(){
       views:['133'],
       runAfter : serviceVisitsTooltips
   }
+  ]*/
+  let refreshData = [
+    {
+        name : 'Autoline - Owner',
+        mainField : 'field_70', //Autoline - type of bussines - first Autoline save
+        views:['326','344','325','327','329','332','330','324','328']   
+    }
   ]
   sceneRefresh(refreshData);
 }
