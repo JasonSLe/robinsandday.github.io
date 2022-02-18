@@ -433,7 +433,7 @@ function refreshScene24(){
     {
         name : 'Autoline - Owner',
         mainField : 'field_70', //Autoline - type of bussines - first Autoline save
-        views:['326','344','325','327','329','332','330','324','328']   
+        views:['329','326','344','325','327','332','330','324','328']   
     }
   ]
   sceneRefresh(refreshData);
