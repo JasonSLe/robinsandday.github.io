@@ -341,16 +341,16 @@ function formatScene24(){
 
 let shownTooltipId = null;
 function serviceVisitsTooltips(){
-  console.log('serviceVisitsTooltips');
+  //console.log('serviceVisitsTooltips');
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: fixed; display:none;");
   });
   $('div[id="view_324"]').on("mouseleave", function (e) {
-    console.log('HIDE AFTER LEAVE')
+    //console.log('HIDE AFTER LEAVE')
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
 
-  console.log('table',$('table[id="serviceVisitsTable"]'));
+  //console.log('table',$('table[id="serviceVisitsTable"]'));
   //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
   $('div[id="view_324"]').on("mousemove", function (e) {
       //console.log('on move');
@@ -367,7 +367,7 @@ function serviceVisitsTooltips(){
       if (trUnderMouse && trUnderMouse.id){
         $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
         //$('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
-        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: 100, top: 100 });
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: document.getElementById('serviceVisitsTable').getBoundingClientRect().left-150, top: 50 });
         if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
             $('div[id="tooltip_'+shownTooltipId+'"]').hide();
         }
