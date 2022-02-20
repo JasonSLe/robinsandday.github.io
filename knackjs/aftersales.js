@@ -389,28 +389,10 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
 function refreshScene24(){
   /*
   let refreshData = [
-    {
-        name : 'Autoline - Owner',
-        mainField : 'field_278', //Autoline - type of bussines - first Autoline save
-        views:['95','97']   
-    },{
+{
       name : 'Autoline - Vehicle summary',
       mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
       views:['97','95','98','96'],
-      //runAfter : createServiceScheduleClick
-    },{
-      name : 'EMAC Service plan - offer',
-      mainField : 'field_348', //EMAC - service plan Summary = Service plan
-      views:['148']
-    },{
-      name : 'Tyres',
-      mainField : 'field_247', //Tyres - Front = Stapletons
-      views:['122'],
-      //runAfter : generateTyres
-    },{
-      name : 'VHC',
-      mainField : 'field_302', //VHC - exists = VHC
-      views:['115']
     },{
       name : 'Recalls',
       mainField : 'field_70', //Recalls Oustanding
@@ -419,32 +401,45 @@ function refreshScene24(){
       name : 'Service schedule',
       mainField : 'field_350', //Vehicle details
       views:['149','170']
-    },{
-      name : 'Autoline - email valid',
-      mainField : 'field_316', //Autoline - is email valid - last Autoline save
-      views:['95']   
-    },{
-      name : 'Autoline - service visits',
-      mainField : 'field_325', //Autoline - service visits tooltips
-      views:['133'],
-      runAfter : serviceVisitsTooltips
-  }
+    }
   ]*/
   let refreshData = [
     {
-        name : 'Autoline - Owner',
-        mainField : 'field_70', //Autoline - type of bussines - first Autoline save
-        views:['329','326','344','327','332','330','324','328'],
-        runAfter : serviceVisitsTooltips
+      name : 'Autoline - Owner',
+      mainField : 'field_70', //Autoline - type of bussines - first Autoline save
+      views:['329','377','326','344','327','332'],
+      runAfter : serviceVisitsTooltips
     },{
       name : 'Autoline - Vehicle summary',
       mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
-      views:['325','375'],
+      views:['325','375','324'],
     },{
       name : 'EMAC Service plan',
       mainField : 'field_312', //EMAC - service plan Summary = Service plan
       views:['376']
-    }
+    },{
+      name : 'EMAC Service plan - offer',
+      mainField : 'field_348', //EMAC - service plan Summary = Service plan
+      views:['378']
+    },{
+      name : 'Tyres',
+      mainField : 'field_247', //Tyres - Front = Stapletons
+      views:['330'],
+      //runAfter : generateTyres
+    },{
+      name : 'VHC',
+      mainField : 'field_302', //VHC - exists = VHC
+      views:['328']
+    },{
+      name : 'Autoline - email valid',
+      mainField : 'field_316', //Autoline - is email valid - last Autoline save
+      views:['379']   
+    },{
+      name : 'Autoline - service visits',
+      mainField : 'field_325', //Autoline - service visits tooltips
+      views:['380'],
+      runAfter : serviceVisitsTooltips
+  }
   ]
   sceneRefresh(refreshData);
 }
