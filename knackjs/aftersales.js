@@ -391,8 +391,7 @@ function refreshScene24(){
     {
       name : 'Autoline - Owner',
       mainField : 'field_70', //Autoline - type of bussines - first Autoline save
-      views:['377','326','344','327'],
-      runAfter : serviceVisitsTooltips
+      views:['377','326','344','327']
     },{
       name : 'Autoline - Vehicle summary',
       mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
