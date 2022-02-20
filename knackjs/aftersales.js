@@ -387,27 +387,11 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
 });
 
 function refreshScene24(){
-  /*
-  let refreshData = [
-{
-      name : 'Autoline - Vehicle summary',
-      mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
-      views:['97','95','98','96'],
-    },{
-      name : 'Recalls',
-      mainField : 'field_70', //Recalls Oustanding
-      views:['121','149']
-    },{
-      name : 'Service schedule',
-      mainField : 'field_350', //Vehicle details
-      views:['149','170']
-    }
-  ]*/
   let refreshData = [
     {
       name : 'Autoline - Owner',
       mainField : 'field_70', //Autoline - type of bussines - first Autoline save
-      views:['329','377','326','344','327','332'],
+      views:['377','326','344','327'],
       runAfter : serviceVisitsTooltips
     },{
       name : 'Autoline - Vehicle summary',
@@ -439,7 +423,15 @@ function refreshScene24(){
       mainField : 'field_325', //Autoline - service visits tooltips
       views:['380'],
       runAfter : serviceVisitsTooltips
-  }
+    },{
+    name : 'Recalls',
+    mainField : 'field_70', //Recalls Oustanding
+    views:['329','332']
+    },{
+      name : 'Service schedule',
+      mainField : 'field_350', //Vehicle details
+      views:['332']
+    }
   ]
   sceneRefresh(refreshData);
 }
