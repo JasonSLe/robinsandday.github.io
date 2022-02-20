@@ -399,10 +399,6 @@ function refreshScene24(){
       views:['97','95','98','96'],
       //runAfter : createServiceScheduleClick
     },{
-      name : 'EMAC Service plan',
-      mainField : 'field_312', //EMAC - service plan Summary = Service plan
-      views:['131']
-    },{
       name : 'EMAC Service plan - offer',
       mainField : 'field_348', //EMAC - service plan Summary = Service plan
       views:['148']
@@ -438,8 +434,16 @@ function refreshScene24(){
     {
         name : 'Autoline - Owner',
         mainField : 'field_70', //Autoline - type of bussines - first Autoline save
-        views:['329','326','344','325','327','332','330','324','328'],
+        views:['329','326','344','327','332','330','324','328'],
         runAfter : serviceVisitsTooltips
+    },{
+      name : 'Autoline - Vehicle summary',
+      mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
+      views:['325','375'],
+    },{
+      name : 'EMAC Service plan',
+      mainField : 'field_312', //EMAC - service plan Summary = Service plan
+      views:['376']
     }
   ]
   sceneRefresh(refreshData);
