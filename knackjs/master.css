@@ -8366,7 +8366,7 @@ align: center;
     padding: 5px;
 	*/
 		
-/* Limit purchasing derivative counters to one line*/
+/* turn back on Limit purchasing derivative counters to one line
 #view_5004 .kn-label-none.field_7438 > div > span > strong > span {
     display:inline-block;
     white-space: nowrap;
@@ -8375,7 +8375,7 @@ align: center;
     max-width: 40ch;
 }
 
-/* make purchasing main page button for retail metrics */
+/* make purchasing main page button for retail metrics 
 #view_5004 .kn-label-none.field_7403 > div > span {
   color: #FFFFFF !important;
   font-weight: bold;
@@ -8395,7 +8395,7 @@ align: center;
 	border-radius: 12px;
 }
 
-/* Make view auction link as a button*/
+/* Make view auction link as a button
 #view_5004 .kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span {
   color: #FFFFFF !important;
   font-weight: bold;
@@ -8413,6 +8413,10 @@ align: center;
   display: inline-block;
 	border-radius: 12px;
 }
+
+
+turn everything above back on */
+
 /*make date/time auction transparent on purchasing */
 
 #view_5028 > section > div > div:nth-child(12) > div:nth-child(1) > div > div:nth-child(1) > div {
@@ -8515,8 +8519,8 @@ align: center;
 
 
 /*make purchasing vehicle data transparent v2*/
-/*cap make transparaent in purchasing main page*/
-#view_5004 .kn-details .kn-detail-label, .kn-list .kn-detail-label {background-color: transparent;}
+/* Turn back on cap make transparaent in purchasing main page
+#view_5004 .kn-details .kn-detail-label, .kn-list .kn-detail-label {background-color: transparent;}*/
 
 #view_5028 > section > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
@@ -8546,10 +8550,11 @@ align: center;
 
 
 
-#view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
+/*TURN BACK ON #view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
     background-color: #1f2dad !important;
 	top: 90px !important;
 }
+*/
 
 /*hide borders service table for MFL 
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 table, tr, td{
