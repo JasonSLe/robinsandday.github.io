@@ -3166,6 +3166,10 @@ visibility: visible;
   	font-weight: bold;
 }
 
+/* Confirm Credit Note Raised by Admin */
+
+#view_5240 .kn-detail-label {background-color: transparent;}
+
 
 
 /***************************** DEAL FILE MANAGER VIEW ********************************/
