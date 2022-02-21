@@ -8545,9 +8545,9 @@ turn everything above back on */
 /*surecheck fail remove grey space*/
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label {background-color: transparent;}
 
-/* hide metrics from main purchasing page*/  
+/* TURN BACK ON hide metrics from main purchasing page  
 #view_5004 section > div > div:nth-child(3) > div:nth-child(1) > div {background-color: transparent;}
-
+*/
 
 
 /*TURN BACK ON #view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
