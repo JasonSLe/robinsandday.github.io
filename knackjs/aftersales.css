@@ -448,13 +448,13 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 }
 
-#view_300 > div > a.kn-link.kn-link-7.kn-button {
+#view_300 > div > a.kn-link.kn-link-7.link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_300 > div > a:hover.kn-link.kn-link-7.kn-button {
+#view_300 > div > a:hover.kn-link.kn-link-7.link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
