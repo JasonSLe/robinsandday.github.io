@@ -280,6 +280,7 @@ $(document).on('knack-view-render.view_4982', function(event, view, data) {
 });
 
 $(document).on('knack-view-render.view_5250', function(event, view, data) {
+  console.log('5250 view')
   var token = Knack.getUserAttributes().values["field_6440"];
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#parts-cash-and-credit-account-administration?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
