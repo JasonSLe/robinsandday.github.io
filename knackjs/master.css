@@ -4850,6 +4850,9 @@ background-color:#0f2542;
 /* Manual Vehicle Invoice */
 #view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6223 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
+/* Supplementary Invoice */
+#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6369 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
 /* Trade Confirmation of Sale */
 #view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6109 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
