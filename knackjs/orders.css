@@ -3441,6 +3441,9 @@ color: #FFFFFF;
 /* Manual Invoice */
 #view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6567 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
+/* Supplementary Invoice */
+#view_3655 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.field_6752 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
 /* Additional Warranty */
 #view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6435 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
