@@ -693,7 +693,7 @@ function recursivecallWallePage(){
  setTimeout(function () { if($("#view_169").is(":visible")==true){ Knack.views["view_169"].model.fetch();recursivecallWallePage();} }, 60000);
 }
   
-$(document).on('knack-form-submit.view_186', function(event, view, data) { 
+$(document).on('knack-form-submit.view_338', function(event, view, data) { 
   let commandURL = "https://hook.integromat.com/82cg83yb0g9ekakjvn4ep8k8xh27kyps" ;
   let dataToSend = Object.assign({"source":"EMACOfferRefresh"}, data); 
   recordId = data.id;
@@ -707,13 +707,13 @@ $(document).on('knack-form-submit.view_186', function(event, view, data) {
   }).responseText;
   console.log(rData);
 
-  refreshView('148', true);
+  refreshView('378', true);
   setTimeout(function(){
     let refreshData = [
       {
         name : 'EMAC Service plan - offer',
         mainField : 'field_348', //EMAC - service plan Summary = Service plan
-        views:['148']
+        views:['378']
       }
     ]
     sceneRefresh(refreshData);
