@@ -2060,6 +2060,12 @@ $(document).on('knack-record-update.view_4589', function(event, view, data) {
   Knack.showSpinner();
 });
 
+/***Profit and Loss, refresh after Manual Digital P&L created to redirect user to Digital P&L V2***/
+$(document).on('knack-record-update.view_3988', function(event, view, data) {
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+  Knack.showSpinner();
+});
+
 //
 //
 //       USED VEHICLE STOCK
