@@ -2914,6 +2914,12 @@ color: #FFFFFF;
 #view_3740 .kn-detail-label {background-color: transparent;}
 #view_3741 .kn-detail-label {background-color: transparent;}
 
+
+#view_3725 th span
+{
+  margin: auto !important;
+}
+
 /* Complete P&L - Hide IF Franchise Vauxhall Field = 1 */
 
 #kn-input-field_7180 {
