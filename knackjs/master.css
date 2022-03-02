@@ -7497,7 +7497,19 @@ padding-bottom: 0px;
   font-size: 15px;
 }
 
-/**Orange Buttons to View Historic Docs**/
+#view_5278
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+#view_5279
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+/**Orange Buttons to View Historic Docs (Dealer)**/
 
 #view_4890 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #00CC66;
@@ -7551,6 +7563,26 @@ padding-bottom: 0px;
   	border-width: 2px;
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
+}
+
+/*Orange Buttons to View Historic Docs (Group and Region)*/
+
+#view_5277 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #00CC66;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_5277 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #32936F;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
 }
 
 /**Orange Filter Buttons**/
