@@ -664,6 +664,11 @@ $(document).on('knack-view-render.view_4221', function(event, view, data) {
   Knack.fn.hideExpand("view_4221");
 });
 
+$(document).on('knack-view-render.view_4313', function(event, view, data) {
+  console.log('view4313');
+  Knack.fn.hideExpand("view_4313");
+});
+
 
 // MANAGER VIEWS
 $(document).on('knack-view-render.view_3810', function(event, view, data) {
@@ -704,6 +709,11 @@ $(document).on('knack-view-render.view_3993', function(event, view, data) {
 $(document).on('knack-view-render.view_3994', function(event, view, data) {
   console.log('view3994');
   Knack.fn.hideExpand("view_3994");
+});
+
+$(document).on('knack-view-render.view_4316', function(event, view, data) {
+  console.log('view4316');
+  Knack.fn.hideExpand("view_4316");
 });
 
 // ADMIN VEHICLE ORDER ADMINISTRATION PAGE
