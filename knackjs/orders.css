@@ -5174,6 +5174,11 @@ font-size:12px;
 	
 }
 
+#kn-report-view_4329-1 > div > #highcharts-0 > svg > g.highcharts-legend > g > g > g:nth-child(3) > rect {
+	fill: #023e8a;
+	
+}
+
 #kn-report-view_4329-1 > div > #highcharts-0 > svg > g.highcharts-series-group > g.highcharts-series.highcharts-series-2.highcharts-tracker > rect:nth-child(1) {
 	fill: #023e8a;
 	
@@ -5215,6 +5220,11 @@ font-size:12px;
 	
 }
 
+
+#kn-report-view_4329-1 > div > #highcharts-0 > svg > g.highcharts-legend > g > g > g:nth-child(4) > rect {
+	fill: #e63946;
+	
+}
 
 
 #kn-report-view_4329-1 > div > #highcharts-0 > svg > g.highcharts-series-group > g.highcharts-series.highcharts-series-3.highcharts-tracker > rect:nth-child(1) {
