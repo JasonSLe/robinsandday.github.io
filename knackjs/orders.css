@@ -5134,6 +5134,11 @@ font-size:12px;
 
 /*Group*/
 
+#kn-report-view_4329-1 > div > #highcharts-0 > svg > g.highcharts-legend > g > g > g:nth-child(1) > rect {
+	fill: #b8d3d1;
+	
+}
+
 #kn-report-view_4329-1 > div > #highcharts-0 > svg > g.highcharts-series-group > g.highcharts-series.highcharts-series-0.highcharts-tracker > rect:nth-child(1) {
 	fill: #b8d3d1;
 	
