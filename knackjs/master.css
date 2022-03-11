@@ -4310,11 +4310,13 @@ border-radius: 6px;
   	box-shadow:         3px 3px #ccc;
 }
 
-/******** HANDOVER APPOINTMENT PAGE *******/
+/******** HANDOVER APPOINTMENT PAGE AND ON DEAL FILE PAGE *******/
 
 #view_2906 .kn-detail-label {background-color: transparent;}
 
 #view_2905 .kn-detail-label {background-color: transparent;}
+
+#view_5131 .kn-detail-label {background-color: transparent;}
 
 /* Resize Text on Details for Customer View */
 
