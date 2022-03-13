@@ -4158,6 +4158,11 @@ color: #FFFFFF;
 
 #view_5214 .kn-detail-label {background-color: transparent;}
 
+#view_4013 th span
+{
+  margin: auto !important;
+}
+
 /********* PROFIT & LOSS PAGE - CONTINUE FROM ENQUIRY MAX (VEHICLE DETAILS) *******/
 
 #view_4524 .kn-detail-label {background-color: transparent;}
@@ -4305,11 +4310,13 @@ border-radius: 6px;
   	box-shadow:         3px 3px #ccc;
 }
 
-/******** HANDOVER APPOINTMENT PAGE *******/
+/******** HANDOVER APPOINTMENT PAGE AND ON DEAL FILE PAGE *******/
 
 #view_2906 .kn-detail-label {background-color: transparent;}
 
 #view_2905 .kn-detail-label {background-color: transparent;}
+
+#view_5131 .kn-detail-label {background-color: transparent;}
 
 /* Resize Text on Details for Customer View */
 
@@ -4849,6 +4856,9 @@ background-color:#0f2542;
 
 /* Manual Vehicle Invoice */
 #view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6223 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
+/* Supplementary Invoice */
+#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6369 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
 /* Trade Confirmation of Sale */
 #view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6109 > div.kn-detail-label {border-left: 10px solid #DE3163;}
@@ -7283,14 +7293,12 @@ padding-bottom: 0px;
 #view_4751 th span
 {
   margin: auto !important;
-  
 }
 
 #view_4751 
 {
   margin: auto !important;
   font-size: 15px;
-  
 }
 
 
@@ -7491,7 +7499,31 @@ padding-bottom: 0px;
   font-size: 15px;
 }
 
-/**Orange Buttons to View Historic Docs**/
+#view_5278 th span
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+#view_5278
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+#view_5279 th span
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+#view_5279
+{
+  margin: auto !important;
+  font-size: 15px;
+}
+
+/**Orange Buttons to View Historic Docs (Dealer)**/
 
 #view_4890 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #00CC66;
@@ -7547,7 +7579,27 @@ padding-bottom: 0px;
   	box-shadow:         3px 3px #ccc;
 }
 
-/**Orange Filter Buttons**/
+/*Orange Buttons to View Historic Docs (Group and Region)*/
+
+#view_5277 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #00CC66;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_5277 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #32936F;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+/**Orange Filter Buttons on Dealer DOC Table**/
 
 #view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
   	background-color: #FFA100;
@@ -7628,7 +7680,7 @@ padding-bottom: 0px;
 }
 
 
-/**Orange Filters on Historic DOC Table**/
+/**Orange Date Filters on Historic DOC Table**/
 
 #view_5154 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
   	background-color: #FFA100;
@@ -7647,6 +7699,55 @@ padding-bottom: 0px;
   	color: #FFFFFF;
   	font-weight: bold;
 }
+
+#view_5278 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5278 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5278 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5279 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5279 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_5279 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**"add valet" button on valet to do page*/
@@ -8370,7 +8471,7 @@ align: center;
     padding: 5px;
 	*/
 		
-/* turn back on Limit purchasing derivative counters to one line
+/* turn back on Limit purchasing derivative counters to one line*/ 
 #view_5004 .kn-label-none.field_7438 > div > span > strong > span {
     display:inline-block;
     white-space: nowrap;
@@ -8379,7 +8480,7 @@ align: center;
     max-width: 40ch;
 }
 
-/* make purchasing main page button for retail metrics 
+/* make purchasing main page button for retail metrics */
 #view_5004 .kn-label-none.field_7403 > div > span {
   color: #FFFFFF !important;
   font-weight: bold;
@@ -8399,7 +8500,7 @@ align: center;
 	border-radius: 12px;
 }
 
-/* Make view auction link as a button
+/* Make view auction link as a button*/
 #view_5004 .kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span {
   color: #FFFFFF !important;
   font-weight: bold;
@@ -8419,7 +8520,6 @@ align: center;
 }
 
 
-turn everything above back on */
 
 /*make date/time auction transparent on purchasing */
 
@@ -8523,8 +8623,8 @@ turn everything above back on */
 
 
 /*make purchasing vehicle data transparent v2*/
-/* Turn back on cap make transparaent in purchasing main page
-#view_5004 .kn-details .kn-detail-label, .kn-list .kn-detail-label {background-color: transparent;}*/
+/* Turn back on cap make transparaent in purchasing main page*/
+#view_5004 .kn-details .kn-detail-label, .kn-list .kn-detail-label {background-color: transparent;}
 
 #view_5028 > section > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div {background-color: transparent;}
 #view_5028 > section > div > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div {background-color: transparent;}
@@ -8549,16 +8649,16 @@ turn everything above back on */
 /*surecheck fail remove grey space*/
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label {background-color: transparent;}
 
-/* TURN BACK ON hide metrics from main purchasing page  
+/* TURN BACK ON hide metrics from main purchasing page  */
 #view_5004 section > div > div:nth-child(3) > div:nth-child(1) > div {background-color: transparent;}
-*/
 
 
-/*TURN BACK ON #view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
+
+ #view_5004 .field_7295_thumb_203 > div > span > a > div > span > img {
     background-color: #1f2dad !important;
 	top: 90px !important;
 }
-*/
+
 
 /*hide borders service table for MFL 
 #view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242 table, tr, td{
