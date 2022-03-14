@@ -605,6 +605,22 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
+#view_417 > div > a.kn-link.kn-link-8.kn-button {
+	background-color: #2ab27b;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_417 > div > a:hover.kn-link.kn-link-8.kn-button {
+	background-color: #308965;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+		
+}
 /* Aftersales Pre Call Section */
 
 #view_416 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
@@ -716,6 +732,22 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	transition-duration: .3s;
   	border-width: 2px;
   	border-color: #FFFFFF;
+}
+#view_416 > div > a.kn-link.kn-link-8.kn-button {
+	background-color: #2ab27b;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_416 > div > a:hover.kn-link.kn-link-8.kn-button {
+	background-color: #308965;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+		
 }
 
 /* Aftersales Check Out Section */
@@ -830,7 +862,22 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-width: 2px;
   	border-color: #FFFFFF;
 }
+#view_420 > div > a.kn-link.kn-link-8.kn-button {
+	background-color: #2ab27b;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
 
+#view_420 > div > a:hover.kn-link.kn-link-8.kn-button {
+	background-color: #308965;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+		
+}
 
 /* Aftersales Reporting Pre-Call Section */
 
