@@ -464,6 +464,23 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
+#view_417 > div > a.kn-link.kn-link-8.kn-button {
+	background-color: #2ab27b;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_417 > div > a:hover.kn-link.kn-link-8.kn-button {
+	background-color: #308965;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+		
+}
+
 #kn-scene_105 > div.view-group.view-group-2 > div:nth-child(1) {
 	border: 1px solid #CCCCCC;
 	border-radius: 10px;
