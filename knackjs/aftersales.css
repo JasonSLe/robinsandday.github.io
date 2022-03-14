@@ -830,3 +830,22 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-width: 2px;
   	border-color: #FFFFFF;
 }
+
+
+/* Aftersales Reporting Pre-Call Section */
+
+#view_422 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_422 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
