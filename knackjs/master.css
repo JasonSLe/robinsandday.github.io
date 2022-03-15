@@ -5979,7 +5979,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
 
 /********************************************************************Pete/Hynek iFrame Work****************************************************************/
 #knack-iframe {
-    height: calc(100vh - 73px);
+    height: calc(100vh - 65px);
     overflow-y: scroll;
 }
 @media only screen and (min-width: 768px) {
@@ -5989,12 +5989,12 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
     }
 }
 .rad-header-closed #knack-iframe {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 100px);
 }
 
 @media only screen and (min-width: 768px) {
   .rad-header-closed #knack-iframe {
-      height: calc(100vh - 150px);
+      height: calc(100vh - 100px);
   }
 }
 .kn-content:not(:last-child):not(:empty).view_2163,
