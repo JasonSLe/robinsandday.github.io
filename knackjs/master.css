@@ -6001,23 +6001,23 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
   }
 }
 .kn-content:not(:last-child):not(:empty).view_2163,
-#view_2163 {
+#view_2163, #view_4272 {
     margin-bottom: 0;
 }
-#view_2163 > .columns,
-#view_2163 > .columns > .kn-details-column > .kn-details-group {
+#view_2163, #view_4272 > .columns,
+#view_2163, #view_4272 > .columns > .kn-details-column > .kn-details-group {
     margin: 0;
 }
 
-#view_2163 .column.kn-details-column .kn-details-group-column,
-#view_2163 .column:only-child {
+#view_2163, #view_4272 .column.kn-details-column .kn-details-group-column,
+#view_2163, #view_4272 .column:only-child {
     padding: 0;
 }
-.view_2163 .kn-scenes.kn-section {
+.view_2163, #view_4272 .kn-scenes.kn-section {
     padding-top: 0;
     padding-bottom: 0;
 }
-.view_2163 .kn-content .column.kn-details-group-column {
+.view_2163, #view_4272 .kn-content .column.kn-details-group-column {
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
