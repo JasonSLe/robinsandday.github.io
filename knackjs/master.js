@@ -314,12 +314,14 @@ var toggleHeaderVisibility = function(toWhatState = null) {
     console.log('toWhatState',toWhatState)
     if (toWhatState === 'hidden'){
         $(headerElement).slideUp(350, function(){
+          document.body.classList.remove('rad-header-open');
           document.body.classList.add('rad-header-closed');
           toggleButton.innerHTML = "<b>Show Header</b>";
         })
     } else {
       $(headerElement).slideToggle(350, function() {
           if (headerElement.style.display === 'none') {
+              document.body.classList.remove('rad-header-open');
               document.body.classList.add('rad-header-closed');
               toggleButton.innerHTML = "<b>Show Header</b>";
               console.log('hide header')
@@ -328,6 +330,7 @@ var toggleHeaderVisibility = function(toWhatState = null) {
           }
           console.log('show header')
           document.body.classList.remove('rad-header-closed');
+          document.body.classList.add('rad-header-open');
           toggleButton.innerHTML = "<b>Hide Header</b>";
       });
     }
