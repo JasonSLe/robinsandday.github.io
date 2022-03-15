@@ -5984,17 +5984,17 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
 }
 @media only screen and (min-width: 768px) {
     #knack-iframe {
-        height: calc(100vh - 237px);
+        height: calc(100vh - 65px);
         overflow-y: scroll;
     }
 }
 .rad-header-closed #knack-iframe {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 90px);
 }
 
 @media only screen and (min-width: 768px) {
   .rad-header-closed #knack-iframe {
-      height: calc(100vh - 100px);
+      height: calc(100vh - 90px);
   }
 }
 .kn-content:not(:last-child):not(:empty).view_2163,
