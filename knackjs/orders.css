@@ -4978,6 +4978,63 @@ font-size:12px;
   	box-shadow:         3px 3px #ccc;	
 }
 
+/*Dealership Franchise Page Buttons*/
+
+#view_4356 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4356 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+#view_4356 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4356 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+#view_4356 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4356 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+
 /*Future Orders Table Filters*/
 
 #view_4308> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
