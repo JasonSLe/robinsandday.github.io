@@ -5980,7 +5980,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
 
 /************************ USED DEAL FILE CONSOLIDATED HANDOVER PACK **************************/
 
-/***** USED VEHICLE INVOICE FORMATTING *****/
+/***** HANDOVER PACK - USED VEHICLE INVOICE FORMATTING *****/
 
 #view_4798 {font-size: 11px;}
 
@@ -6024,7 +6024,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
   border-color: #FFFFFF;
 }
 
-/***** PART EXCHANGE PURCHASE INVOICE *****/
+/***** HANDOVER PACK - PART EXCHANGE PURCHASE INVOICE *****/
 
 #view_5322 {font-size: 12px;}
 #view_5322 .kn-detail-label {background-color: transparent;}
@@ -6050,6 +6050,12 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
   border-bottom-color: #6E6F71;
   padding-bottom: 10px;
 }
+
+
+/********* HANDOVER PACK - CUSTOMER SATISFACTION SURVEY PAGE *********/
+
+#view_4824 .kn-detail-label {background-color: transparent;}
+
 
 
 
