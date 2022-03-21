@@ -5977,6 +5977,56 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
 }
 
 
+
+/************************ USED DEAL FILE CONSOLIDATED HANDOVER PACK **************************/
+
+/***** USED VEHICLE INVOICE FORMATTING *****/
+
+#view_4798 {font-size: 11px;}
+
+#view_4799 {font-size: 11px; font-weight: bold;}
+#view_4799 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div > h3 {font-size: 11px; font-weight: bold;}
+#view_4799 > section > div > div > div:nth-child(3) > div > div:nth-child(1) > div > h3 {font-size: 11px; font-weight: bold;}
+
+#view_4800 {font-size: 12px;}
+#view_4800 tr {line-height: 10px;}
+
+#view_4801 .kn-detail-label {background-color: transparent;}
+#view_4801 {font-size: 11px;}
+
+#view_4802 tr {line-height: 10px; font-size: 12px}
+
+#view_4803 .kn-detail-label {background-color: transparent;}
+#view_4803 > section > div > div:nth-child(1) {font-size: 11px;}
+#view_4803 tr {line-height: 10px;}
+#view_4803 > section > div > div:nth-child(2) {font-size: 12px;}
+
+#view_4804 .kn-detail-label {background-color: transparent;}
+#view_4804 {font-size: 11px;}
+#view_4804 > section > div > div:nth-child(3) > div > div > div > div > h3 {font-size: 11px;}
+
+/* Terms and Conditions Link */
+#view_4815 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4815 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+
+
+
 /********************************************************************Pete/Hynek iFrame Work****************************************************************/
 #knack-iframe {
     height: calc(100vh - 237px);
