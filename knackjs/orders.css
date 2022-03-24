@@ -4482,6 +4482,76 @@ color: #19365e;
 /******* CSI Survey Page *********/
 #view_4401 .kn-detail-label {background-color: transparent;}
 
+/*CSS for PCD Survey out of 10 fields*/ 
+#view_4402-field_6481 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4402-field_6481 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4402-field_6481 > option {
+  background:#eee;
+  color:black;
+}
+
+#view_4402-field_6482 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4402-field_6482 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4402-field_6482 > option {
+  background:#eee;
+  color:black;
+}
+
+/*CSS for VX Survey out of 10 fields*/ 
+#view_4403-field_6481 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4403-field_6481 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4403-field_6481 > option {
+  background:#eee;
+  color:black;
+}
+
+#view_4403-field_6482 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4403-field_6482 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4403-field_6482 > option {
+  background:#eee;
+  color:black;
+}
+
 
 
 
