@@ -4443,6 +4443,33 @@ color: #19365e;
   border-color: #FFFFFF;
 }
 
+/******** CUSTOMER PART EXCHANGE PURCHASE INVOICE *********/
+
+#view_4392 {font-size: 12px;}
+#view_4392 .kn-detail-label {background-color: transparent;}
+
+#view_4390 .kn-detail-label {background-color: transparent;}
+
+#view_4390 > section > div > div.kn-details-group.column-1.columns {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #6E6F71;
+  padding-top: 20px;
+}
+
+#view_4391 > form > ul:nth-child(1) {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6F71;
+  padding-bottom: 10px;
+}
+
+#view_4391 > form > ul:nth-child(4) {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6F71;
+  padding-bottom: 10px;
+}
 
 
 
