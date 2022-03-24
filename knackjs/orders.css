@@ -4395,6 +4395,57 @@ color: #19365e;
 	overflow-x: hidden;
 }
 
+/************************* CONSOLIDATED HANDOVER PACK CSS ****************************/
+
+/************* NEW VEHICLE INVOICE **************/
+
+#view_4375 {font-size: 11px;}
+#view_4375 > section > div > div > div:nth-child(3) > div {font-size: 11px;}
+
+#view_4376 {font-size: 11px; font-weight: bold;}
+#view_4376 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div > h3 {font-size: 11px; font-weight: bold;}
+#view_4376 > section > div > div > div:nth-child(3) > div > div:nth-child(1) > div > h3 {font-size: 11px; font-weight: bold;}
+
+#view_4377 {font-size: 12px;}
+#view_4377 tr {line-height: 10px;}
+
+#view_4378 .kn-detail-label {background-color: transparent;}
+#view_4378 {font-size: 11px;}
+
+#view_4379 tr {line-height: 10px; font-size: 12px}
+
+#view_4380 .kn-detail-label {background-color: transparent;}
+#view_4380 > section > div > div:nth-child(1) {font-size: 11px;}
+#view_4380 tr {line-height: 10px;}
+#view_4380 > section > div > div:nth-child(2) {font-size: 12px;}
+
+#view_4381 .kn-detail-label {background-color: transparent;}
+#view_4381 {font-size: 11px;}
+#view_4381 > section > div > div:nth-child(3) > div > div > div > div > h3 {font-size: 11px;}
+
+/* Link to view Terms and Conditions */
+
+#view_4384 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4384 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+
+
+
 
 /***************** NEW VEHICLE REPORTING *******************/
 
