@@ -195,7 +195,7 @@ step: '15'		// Dropdown Interval every 15 mins
 
 $(document).on('knack-record-update.view_2854', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 16000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
   
   alert("Please wait while we fetch the Order, Customer & P/X Details from Autoline. Click 'OK' & this page will refresh in a few moments...");
 
@@ -207,7 +207,7 @@ $(document).on('knack-record-update.view_2854', function(event, view, data) {
 
 $(document).on('knack-record-update.view_2855', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 16000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
   
   alert("Please wait while we fetch the Invoice from Autoline. Click 'OK' & this page will refresh in a few moments...");
 
@@ -285,6 +285,59 @@ $(document).on('knack-record-update.view_3836', function(event, view, data) {
 $(document).on('knack-record-create.view_3949', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 2000);
+
+  Knack.showSpinner();
+  
+});
+
+
+//************************** CONSOLIDATED HANDOVER PACK ***************************//
+
+//****************** Refresh Handover Pack after Vehicle Invoice ****************//
+
+$(document).on('knack-record-update.view_4383', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Handover Checklist ****************//
+
+$(document).on('knack-record-update.view_4396', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Service Schedule ****************//
+
+$(document).on('knack-record-update.view_4399', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after PCD Satisfaction Survey ****************//
+
+$(document).on('knack-record-update.view_4402', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Vauxhall Satisfaction Survey ****************//
+
+$(document).on('knack-record-update.view_4403', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
 
   Knack.showSpinner();
   
