@@ -2772,6 +2772,12 @@ $(document).on('knack-form-submit.view_3324', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/3umnr247redycud7ind5l6xbge6lhq4k", {"Record ID":data.id , "Form":"Used Deal Files - View Additional Product Certificates Uploaded"},"Used Deal Files - View Additional Product Certificates Uploaded")
 });
 
+//*********** Consolidated HANDOVER PACK *************//
+// Used Deal File - Customer Signed Consolidated Handover Pack - Update Documents and Trigger PDF Capture
+$(document).on('knack-form-submit.view_5326', function(event, view, data) { 
+  callPostHttpRequest("https://hook.integromat.com/a7it4j5b5uxjwthdhk64bif7adrfp4az",{"Record ID":data.id},"Used Deal File - Customer Signed Consolidated Handover Pack - Update Documents and Trigger PDF Capture");  
+});
+
 
 /*
   Checks data acording to refreshData structure and updates views
