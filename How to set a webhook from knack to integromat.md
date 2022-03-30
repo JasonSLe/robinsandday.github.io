@@ -23,10 +23,10 @@ $(document).on('knack-form-submit.view_3324', function(event, view, data) {
 
 //Please use the code bellow if there will be an empty field as there is code to deal with blank fields
 
-$(document).on('knack-form-submit.view_4857', function(event, view, data) { 
+$(document).on('knack-form-submit.view_4857', function(event, view, data) {
 
     try{
-
+    
             let commandURL = "https://hook.integromat.com/n04o2rpxiiodil3pf91sn2b6khppbjlx" ;
             var createData = ({"Record ID":data.id,"Reg No":data.field_2694_raw, "Stock ID":data.field_5713_raw, 
                                              "Peugeot Dealer ID":data.field_4161_raw, "Citroen Dealer ID":data.field_4162_raw, 
@@ -52,23 +52,8 @@ $(document).on('knack-form-submit.view_4857', function(event, view, data) {
                 async: false
             }).responseText;
                        
-
+    
     }catch(exception){
-        console.log("error");
-        var today = new Date();
-        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-        var dateTime = date+' '+time;
-
-        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
-        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Scenario DESCRIPTION for webhook",
-        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
-        var rData = $.ajax({
-           url: commandURL,
-           type: 'POST',
-           contentType: 'application/json',
-           data: dataToSend,
-           async: false
-        }).responseText;
+        sendErrorToIntegromat(exception, "Scenario DESCRIPTION what for the error webhook");
     }
     });
