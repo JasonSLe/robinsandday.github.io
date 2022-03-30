@@ -2510,3 +2510,25 @@ $(document).on('knack-form-submit.view_4314', function(event, view, data) {
 });
 
 
+
+//**New Deal File - Customer Signed Consolidated Handover Pack - Update Documents and Trigger PDF Capture
+$(document).on('knack-form-submit.view_4406', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.integromat.com/3ih7yd1o9ajo23arn5v72zar3nd5m22p";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "New Deal File - Customer Signed Consolidated Handover Pack - Update Documents and Trigger PDF Capture");
+    }
+});
+
+
