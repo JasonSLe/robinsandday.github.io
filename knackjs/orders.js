@@ -2531,7 +2531,7 @@ $(document).on('knack-form-submit.view_4406', function(event, view, data) {
     }
 });
 
-// NEW DEAL FILE – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION FROM CUSTOMER HANDOVER PACK
+// NEW DEAL FILE CUSTOMER SATISFACTION SURVEY PCD – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION FROM CUSTOMER HANDOVER PACK
 $(document).on('knack-form-submit.view_4402', function(event, view, data) { 
 	let commandURL = "https://hook.integromat.com/lnunp83lom13c9swu0vgabmurbjxj5x6" ;
   let dataToSend = JSON.stringify({"recordid":data.id,"field_6481_raw":data.field_6481_raw,"typeOfCustomerSurvey":"NEW","ConnectedDealer":data.field_6476_raw,"SalesAdvisor":data.field_6488_raw,"MaserAppDealerID":data.field_6678_raw})
@@ -2547,4 +2547,44 @@ $(document).on('knack-form-submit.view_4402', function(event, view, data) {
   console.log(rData);
 });
 
+// NEW DEAL FILE CUSTOMER SATISFACTION SURVEY VAUXHALL – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION FROM CUSTOMER HANDOVER PACK
+$(document).on('knack-form-submit.view_4403', function(event, view, data) { 
+    
+    
+    try{
+        
+
+      if(data.field_6485_raw !== null && data.field_6485_raw !== undefined){
+
+            let commandURL = "https://hook.integromat.com/lnunp83lom13c9swu0vgabmurbjxj5x6";
+            let dataToSend = JSON.stringify({"recordid":data.id,"field_6481_raw":data.field_6481_raw,"typeOfCustomerSurvey":"NEW","ConnectedDealer":data.field_6476_raw,"SalesAdvisor":data.field_6488_raw,"MaserAppDealerID":data.field_6678_raw});
+
+             var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+              }).responseText;
+
+      }
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "NEW DEAL FILE CUSTOMER SATISFACTION SURVEY VAUXHALL – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION FROM CUSTOMER HANDOVER PACK",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;  
+    }
+});
 
