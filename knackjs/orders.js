@@ -2509,7 +2509,7 @@ $(document).on('knack-form-submit.view_4314', function(event, view, data) {
     }
 });
 
-
+// ****************** CUSTOMER HANDOVER PACK TRIGGERS ********************
 
 //**New Deal File - Customer Signed Consolidated Handover Pack - Update Documents and Trigger PDF Capture
 $(document).on('knack-form-submit.view_4406', function(event, view, data) { 
@@ -2529,6 +2529,22 @@ $(document).on('knack-form-submit.view_4406', function(event, view, data) {
     }catch(exception){
         sendErrorToIntegromat(exception, "New Deal File - Customer Signed Consolidated Handover Pack - Update Documents and Trigger PDF Capture");
     }
+});
+
+// NEW DEAL FILE – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION FROM CUSTOMER HANDOVER PACK
+$(document).on('knack-form-submit.view_4402', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/lnunp83lom13c9swu0vgabmurbjxj5x6" ;
+  let dataToSend = JSON.stringify({"recordid":data.id,"field_6481_raw":data.field_6481_raw,"typeOfCustomerSurvey":"NEW","ConnectedDealer":data.field_6476_raw,"SalesAdvisor":data.field_6488_raw,"MaserAppDealerID":data.field_6678_raw})
+  //or theoretically to have all data from form 
+  //let dataToSend = Object.assign(data,{"typeOfCustomerSurvey":"NEW"}); 
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
 });
 
 
