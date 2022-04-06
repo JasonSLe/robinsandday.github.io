@@ -1178,3 +1178,13 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-width: 2px;
   	border-color: #FFFFFF;
 }
+
+#view_359 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
