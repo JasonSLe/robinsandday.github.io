@@ -3354,6 +3354,13 @@ color: #FFFFFF;
   color: #388cf5;
 }
 
+/* Profit Sheet */
+#kn-input-field_6262 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
 
 /******* NEW DEAL FILE ADMIN AUDIT ********/
 
