@@ -270,9 +270,19 @@ $(document).on('knack-record-update.view_2767', function(event, view, data) {
   
 });
 
-//****************** Refresh Profit & Loss Sheet Page once Order Details/Settlement Submitted for Digital P&L Dealers ****************//
+//****************** Refresh Profit & Loss Sheet Page once New Vehicle and Part Exchange Info Submitted for Digital P&L Dealers ****************//
 
 $(document).on('knack-record-update.view_3836', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 2000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Profit & Loss Sheet Page once Deal Info (previously confirm order on order upload page) Submitted for Digital P&L Dealers ****************//
+
+$(document).on('knack-record-update.view_4433', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 2000);
 
