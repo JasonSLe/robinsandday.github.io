@@ -323,7 +323,7 @@ $(document).on('knack-record-update.view_4399', function(event, view, data) {
   
 });
 
-//****************** Refresh Handover Pack after PCD Satisfaction Survey ****************//
+//****************** Refresh Handover Pack after PCD Satisfaction Survey Updated ****************//
 
 $(document).on('knack-record-update.view_4402', function(event, view, data) {
   
@@ -333,9 +333,29 @@ $(document).on('knack-record-update.view_4402', function(event, view, data) {
   
 });
 
-//****************** Refresh Handover Pack after Vauxhall Satisfaction Survey ****************//
+//****************** Refresh Handover Pack after PCD Satisfaction Survey Created ****************//
+
+$(document).on('knack-record-create.view_4402', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Vauxhall Satisfaction Survey Updated ****************//
 
 $(document).on('knack-record-update.view_4403', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Vauxhall Satisfaction Survey Created ****************//
+
+$(document).on('knack-record-create.view_4403', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
 
