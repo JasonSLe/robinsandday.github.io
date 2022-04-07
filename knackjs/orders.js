@@ -363,15 +363,8 @@ $(document).on('knack-record-create.view_4403', function(event, view, data) {
   
 });
 
-//****************** Refresh Handover Pack Page after Signing ****************//
 
-$(document).on('knack-record-update.view_4406', function(event, view, data) {
-  
-  setTimeout(function () { location.hash = location.hash + "#"; }, 5000);
 
-  Knack.showSpinner();
-  
-});
 
 // ----------  Service Plan table expand or collapse groupings ----------
 
