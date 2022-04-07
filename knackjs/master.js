@@ -761,9 +761,19 @@ $(document).on('knack-record-update.view_4651', function(event, view, data) {
   
 });
 
-//****************** Refresh Handover Pack after Satisfaction Survey ****************//
+//****************** Refresh Handover Pack after Satisfaction Survey Updated ****************//
 
 $(document).on('knack-record-update.view_4652', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Satisfaction Survey Created ****************//
+
+$(document).on('knack-record-create.view_4652', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
 
