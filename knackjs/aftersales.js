@@ -852,3 +852,12 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     }
 });
 
+// ----------  refresh customer account applications table every 60 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_111', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_359").is(":visible")==true){ Knack.views["view_359"].model.fetch();recursivecall();} }, 100000);
+}
