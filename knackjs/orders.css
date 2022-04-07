@@ -2163,6 +2163,8 @@ border-left: 10px solid #DE3163 !important;
 #view_2652 {font-size: 11px;}
 #view_2652 > section > div > div:nth-child(3) > div > div > div > div > h3 {font-size: 11px;}
 
+#view_2657 .kn-detail-label {background-color: transparent;}
+
 /* Link to view Terms and Conditions */
 
 #view_2657 > section > div > div > div > div > div > div > span > a > span {
