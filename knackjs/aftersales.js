@@ -837,7 +837,7 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     try{
         
 
-        let commandURL = "https://hook.integromat.com/reyy2orzb5n7ututhmsltfcxqvkfpjmh";
+        let commandURL = "https://hook.integromat.com/wio8wmbeqg4p81kwshmegg7h7fsfawz7";
         let dataToSend = JSON.stringify({"Record ID":data.id});
 
         var rData = $.ajax({
