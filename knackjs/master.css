@@ -5015,8 +5015,15 @@ background-color:#0f2542;
 
 
 /******* CSS to make File Uploads Stand out when Files Exist *******/
-/* Manual Order */
+/* Original Order */
 #kn-input-field_5957 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Latest Order */
+#kn-input-field_7846 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
