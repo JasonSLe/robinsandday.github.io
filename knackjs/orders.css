@@ -3139,7 +3139,7 @@ color: #FFFFFF;
   color: #388cf5;
 }
 /* Latest Order Form */
-#kn-input-field_7754 > div > div.kn-asset-current > div > div > a.kn-view-asset > a {
+#kn-input-field_7754 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
