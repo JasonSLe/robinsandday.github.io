@@ -5528,7 +5528,13 @@ font-size:12px;
   margin: auto !important;
 }
 
-
+/* Manual Order Form */
+#kn-input-field_6363 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
 
 
 
