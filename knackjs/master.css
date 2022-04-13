@@ -2521,14 +2521,15 @@ visibility: visible;
   padding: 8px;
   display: inline-block;
 }
-/*
-#view_5355 .kn-list .kn-detail-body > div > div > div > div > div > div > span > a:hover {
+
+#view_5355 .kn-link-page:hover {
   color: #FFFFFF;
   background-color: #b10000;
   padding: 8px;
   display: inline-block;
 }
-*/
+
+
 /***** Auto Pricing Section *******/
 /* Disable Auto Pricing Link to Button */
 
