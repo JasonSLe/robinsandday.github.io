@@ -2513,6 +2513,22 @@ visibility: visible;
 
 #view_3281 .kn-detail-label {background-color: transparent;}
 
+/***************** AUTO PRICING V2 **************/
+
+#view_5355 .kn-detail-body > span > strong > span > a {
+  color: #FFFFFF;
+  background-color: #ff1414;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_5355 .kn-detail-body > span > strong > span > a:hover {
+  color: #FFFFFF;
+  background-color: #b10000;
+  padding: 8px;
+  display: inline-block;
+}
+
 /***** Auto Pricing Section *******/
 /* Disable Auto Pricing Link to Button */
 
