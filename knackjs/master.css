@@ -2515,14 +2515,28 @@ visibility: visible;
 
 /***************** AUTO PRICING V2 **************/
 
-#view_5355 .kn-detail-body > span > strong > span > a {
+#view_5355 .kn-details .kn-detail-body > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
   background-color: #ff1414;
   padding: 8px;
   display: inline-block;
 }
 
-#view_5355 .kn-detail-body > span > strong > span > a:hover {
+#view_5355 .kn-details .kn-detail-body > div > div > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  background-color: #b10000;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_5355 .kn-detail-body > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  background-color: #ff1414;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_5355 .kn-detail-body > div > div > div > div > div > div > span > a:hover {
   color: #FFFFFF;
   background-color: #b10000;
   padding: 8px;
