@@ -2515,6 +2515,8 @@ visibility: visible;
 
 /***************** AUTO PRICING V2 **************/
 
+/*** REQUEST TO CONTROL PRICING BUTTON ***/
+
 #view_5355 .kn-link-page {
   color: #FFFFFF;
   background-color: #ff1414;
@@ -2525,6 +2527,22 @@ visibility: visible;
 #view_5355 .kn-link-page:hover {
   color: #FFFFFF;
   background-color: #b10000;
+  padding: 8px;
+  display: inline-block;
+}
+
+/*** REMOVE PRICE CONTROL AND REINSTATE AUTO PRICE BUTTON ***/
+
+#view_5360 .kn-link-page {
+  color: #FFFFFF;
+  background-color: #00CC66;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_5360 .kn-link-page:hover {
+  color: #FFFFFF;
+  background-color: #32936F;
   padding: 8px;
   display: inline-block;
 }
