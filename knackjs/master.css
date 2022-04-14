@@ -2551,6 +2551,24 @@ visibility: visible;
 
 #view_5369 .kn-detail-label {background-color: transparent;}
 
+/*** Link to view Pricing and Advert Performance ***/
+
+#view_5369 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 12px;
+  display: inline-block;
+}
+
+#view_5369 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 12px;
+  display: inline-block;
+}
+
 /***** Auto Pricing Section *******/
 /* Disable Auto Pricing Link to Button */
 
