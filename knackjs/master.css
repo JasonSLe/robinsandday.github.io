@@ -2547,6 +2547,9 @@ visibility: visible;
   display: inline-block;
 }
 
+/*** Manage Price Control Requests Dashboard ***/
+
+#view_5369 .kn-detail-label {background-color: transparent;}
 
 /***** Auto Pricing Section *******/
 /* Disable Auto Pricing Link to Button */
