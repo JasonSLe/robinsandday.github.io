@@ -837,7 +837,7 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     try{
         
 
-        let commandURL = "https://hook.integromat.com/reyy2orzb5n7ututhmsltfcxqvkfpjmh";
+        let commandURL = "https://hook.integromat.com/wio8wmbeqg4p81kwshmegg7h7fsfawz7";
         let dataToSend = JSON.stringify({"Record ID":data.id});
 
         var rData = $.ajax({
@@ -852,3 +852,12 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     }
 });
 
+// ----------  refresh customer account applications table every 60 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_111', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_359").is(":visible")==true){ Knack.views["view_359"].model.fetch();recursivecall();} }, 100000);
+}

@@ -195,7 +195,7 @@ step: '15'		// Dropdown Interval every 15 mins
 
 $(document).on('knack-record-update.view_2854', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 16000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
   
   alert("Please wait while we fetch the Order, Customer & P/X Details from Autoline. Click 'OK' & this page will refresh in a few moments...");
 
@@ -207,7 +207,7 @@ $(document).on('knack-record-update.view_2854', function(event, view, data) {
 
 $(document).on('knack-record-update.view_2855', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 16000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
   
   alert("Please wait while we fetch the Invoice from Autoline. Click 'OK' & this page will refresh in a few moments...");
 
@@ -270,9 +270,19 @@ $(document).on('knack-record-update.view_2767', function(event, view, data) {
   
 });
 
-//****************** Refresh Profit & Loss Sheet Page once Order Details/Settlement Submitted for Digital P&L Dealers ****************//
+//****************** Refresh Profit & Loss Sheet Page once New Vehicle and Part Exchange Info Submitted for Digital P&L Dealers ****************//
 
 $(document).on('knack-record-update.view_3836', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 2000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Profit & Loss Sheet Page once Deal Info (previously confirm order on order upload page) Submitted for Digital P&L Dealers ****************//
+
+$(document).on('knack-record-update.view_4433', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 2000);
 
@@ -289,6 +299,82 @@ $(document).on('knack-record-create.view_3949', function(event, view, data) {
   Knack.showSpinner();
   
 });
+
+
+//************************** CONSOLIDATED HANDOVER PACK ***************************//
+
+//****************** Refresh Handover Pack after Vehicle Invoice ****************//
+
+$(document).on('knack-record-update.view_4383', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Handover Checklist ****************//
+
+$(document).on('knack-record-update.view_4396', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Service Schedule ****************//
+
+$(document).on('knack-record-update.view_4399', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after PCD Satisfaction Survey Updated ****************//
+
+$(document).on('knack-record-update.view_4402', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after PCD Satisfaction Survey Created ****************//
+
+$(document).on('knack-record-create.view_4402', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Vauxhall Satisfaction Survey Updated ****************//
+
+$(document).on('knack-record-update.view_4403', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Vauxhall Satisfaction Survey Created ****************//
+
+$(document).on('knack-record-create.view_4403', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+
+
 
 // ----------  Service Plan table expand or collapse groupings ----------
 
@@ -2456,4 +2542,82 @@ $(document).on('knack-form-submit.view_4314', function(event, view, data) {
     }
 });
 
+// ****************** CUSTOMER HANDOVER PACK TRIGGERS ********************
+
+//**New Deal File - Customer Signed Consolidated Handover Pack - Update Documents and Trigger PDF Capture
+$(document).on('knack-form-submit.view_4406', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.integromat.com/3ih7yd1o9ajo23arn5v72zar3nd5m22p";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "New Deal File - Customer Signed Consolidated Handover Pack - Update Documents and Trigger PDF Capture");
+    }
+});
+
+// NEW DEAL FILE CUSTOMER SATISFACTION SURVEY PCD – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION FROM CUSTOMER HANDOVER PACK
+$(document).on('knack-form-submit.view_4402', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/lnunp83lom13c9swu0vgabmurbjxj5x6" ;
+  let dataToSend = JSON.stringify({"recordid":data.id,"field_6481_raw":data.field_6481_raw,"typeOfCustomerSurvey":"NEW","ConnectedDealer":data.field_6476_raw,"SalesAdvisor":data.field_6488_raw,"MaserAppDealerID":data.field_6678_raw})
+  //or theoretically to have all data from form 
+  //let dataToSend = Object.assign(data,{"typeOfCustomerSurvey":"NEW"}); 
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
+
+// NEW DEAL FILE CUSTOMER SATISFACTION SURVEY VAUXHALL – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION FROM CUSTOMER HANDOVER PACK
+$(document).on('knack-form-submit.view_4403', function(event, view, data) { 
+    
+    
+    try{
+        
+
+      if(data.field_6485_raw !== null && data.field_6485_raw !== undefined){
+
+            let commandURL = "https://hook.integromat.com/lnunp83lom13c9swu0vgabmurbjxj5x6";
+            let dataToSend = JSON.stringify({"recordid":data.id,"field_6481_raw":data.field_6481_raw,"typeOfCustomerSurvey":"NEW","ConnectedDealer":data.field_6476_raw,"SalesAdvisor":data.field_6488_raw,"MaserAppDealerID":data.field_6678_raw});
+
+             var rData = $.ajax({
+                url: commandURL,
+                type: 'POST',
+                contentType: 'application/json',
+                data: dataToSend,
+                async: false
+              }).responseText;
+
+      }
+    }catch(exception){
+        console.log("error");
+        var today = new Date();
+        var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date+' '+time;
+
+        let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+        let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "NEW DEAL FILE CUSTOMER SATISFACTION SURVEY VAUXHALL – TRIGGER INTEGROMAT UPON CUSTOMER SURVEY FORM COMPLETION FROM CUSTOMER HANDOVER PACK",
+        "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+        var rData = $.ajax({
+           url: commandURL,
+           type: 'POST',
+           contentType: 'application/json',
+           data: dataToSend,
+           async: false
+        }).responseText;  
+    }
+});
 

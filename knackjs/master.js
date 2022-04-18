@@ -669,7 +669,7 @@ $(document).on('knack-view-render.view_2548', function(event, view) {
 
 $(document).on('knack-record-update.view_2520', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 16000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
   
   alert("Please wait while we fetch the Order, Customer & P/X Details from Autoline. Click 'OK' & this page will refresh in a few moments...");
 
@@ -682,7 +682,7 @@ $(document).on('knack-record-update.view_2520', function(event, view, data) {
 
 $(document).on('knack-record-update.view_2548', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 16000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
   
   alert("Please wait while we fetch the Vehicle Invoice from Autoline. Click 'OK' & this page will refresh in a few moments...");
 
@@ -728,6 +728,59 @@ $(document).on('knack-record-update.view_2807', function(event, view, data) {
   setTimeout(function () { location.hash = location.hash + "#"; }, 10000);
   
   alert("Please wait while we search for a Completed Digital Part Exchange Appraisal. Click 'OK' & this page will refresh in a few moments...");
+
+  Knack.showSpinner();
+  
+});
+
+
+//************************** CONSOLIDATED HANDOVER PACK ***************************//
+
+//****************** Refresh Handover Pack after Vehicle Invoice ****************//
+
+$(document).on('knack-record-update.view_4657', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Handover Checklist ****************//
+
+$(document).on('knack-record-update.view_4650', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Service Schedule ****************//
+
+$(document).on('knack-record-update.view_4651', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Satisfaction Survey Updated ****************//
+
+$(document).on('knack-record-update.view_4652', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Satisfaction Survey Created ****************//
+
+$(document).on('knack-record-create.view_4652', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
 
   Knack.showSpinner();
   
@@ -2732,6 +2785,12 @@ $(document).on('knack-form-submit.view_3321', function(event, view, data) {
 //**Used Deal Files - View Additional Product Certificates Uploaded
 $(document).on('knack-form-submit.view_3324', function(event, view, data) { 
   callPostHttpRequest("https://hook.integromat.com/3umnr247redycud7ind5l6xbge6lhq4k", {"Record ID":data.id , "Form":"Used Deal Files - View Additional Product Certificates Uploaded"},"Used Deal Files - View Additional Product Certificates Uploaded")
+});
+
+//*********** Consolidated HANDOVER PACK *************//
+// Used Deal File - Customer Signed Consolidated Handover Pack - Update Documents and Trigger PDF Capture
+$(document).on('knack-form-submit.view_5326', function(event, view, data) { 
+  callPostHttpRequest("https://hook.integromat.com/a7it4j5b5uxjwthdhk64bif7adrfp4az",{"Record ID":data.id},"Used Deal File - Customer Signed Consolidated Handover Pack - Update Documents and Trigger PDF Capture");  
 });
 
 

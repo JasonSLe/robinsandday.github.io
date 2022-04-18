@@ -2163,6 +2163,8 @@ border-left: 10px solid #DE3163 !important;
 #view_2652 {font-size: 11px;}
 #view_2652 > section > div > div:nth-child(3) > div > div > div > div > h3 {font-size: 11px;}
 
+#view_2657 .kn-detail-label {background-color: transparent;}
+
 /* Link to view Terms and Conditions */
 
 #view_2657 > section > div > div > div > div > div > div > span > a > span {
@@ -2228,7 +2230,7 @@ border-left: 10px solid #DE3163 !important;
 /* DEAL FILE OVERVIEW to change CSS */
 
 /* Border & Height Setting of each view - When you add a new view, add the New View Number below */
-#view_2569, #view_2571, #view_2588, #view_2597, #view_2601, #view_2603, #view_2606, #view_2608, #view_2627, #view_2629, #view_2631, #view_2637, #view_2642, #view_2644, #view_2660, #view_2677, #view_2685, #view_2697, #view_2699, #view_2702, #view_2704, #view_2707, #view_2710, #view_2712, #view_2716, #view_2717, #view_2719, #view_2720, #view_2722, #view_2723, #view_2725, #view_2726, #view_2728, #view_2732, #view_2734, #view_2742, #view_2743, #view_2749, #view_2750, #view_2752, #view_2753, #view_2768, #view_2769, #view_2770, #view_2772, #view_2818, #view_3516, #view_3517, #view_3548, #view_3551 {
+#view_2569, #view_2571, #view_2588, #view_2597, #view_2601, #view_2603, #view_2606, #view_2608, #view_2627, #view_2629, #view_2631, #view_2637, #view_2642, #view_2644, #view_2660, #view_2677, #view_2685, #view_2697, #view_2699, #view_2702, #view_2704, #view_2707, #view_2710, #view_2712, #view_2716, #view_2717, #view_2719, #view_2720, #view_2722, #view_2723, #view_2725, #view_2726, #view_2728, #view_2732, #view_2734, #view_2742, #view_2743, #view_2749, #view_2750, #view_2752, #view_2753, #view_2768, #view_2769, #view_2770, #view_2772, #view_2818, #view_3516, #view_3517, #view_3548, #view_3551, #view_4371, #view_4438, #view_4439 {
   border: 1px solid #CCCCCC;
   text-align: center;
   padding: 10px;
@@ -2239,7 +2241,7 @@ border-left: 10px solid #DE3163 !important;
 }
 
 /* Set Heading Colour & Text Align for Each View When you add a new view, add the New View Number below */
-#view_2497 h3, #view_2494 h3, #view_2569 h3, #view_2571 h3, #view_2588 h3, #view_2597 h3, #view_2601 h3, #view_2603 h3, #view_2606 h3, #view_2608 h3, #view_2627 h3, #view_2629 h3, #view_2631 h3, #view_2637 h3, #view_2642 h3, #view_2644 h3, #view_2660 h3, #view_2677 h3, #view_2685 h3, #view_2697 h3, #view_2699 h3, #view_2702 h3, #view_2704 h3, #view_2707 h3, #view_2710 h3, #view_2712 h3, #view_2716 h3, #view_2717 h3, #view_2719 h3, #view_2720 h3, #view_2722 h3, #view_2723 h3, #view_2725 h3, #view_2726 h3, #view_2728 h3, #view_2732 h3, #view_2734 h3, #view_2742 h3, #view_2743 h3, #view_2749 h3, #view_2750 h3, #view_2752 h3, #view_2753 h3, #view_2768 h3, #view_2769 h3, #view_2770 h3, #view_2772 h3, #view_2818 h3, #view_2856 h3, #view_2857 h3, #view_3516 h3, #view_3517 h3, #view_3548 h3, #view_3551 h3 {
+#view_2497 h3, #view_2494 h3, #view_2569 h3, #view_2571 h3, #view_2588 h3, #view_2597 h3, #view_2601 h3, #view_2603 h3, #view_2606 h3, #view_2608 h3, #view_2627 h3, #view_2629 h3, #view_2631 h3, #view_2637 h3, #view_2642 h3, #view_2644 h3, #view_2660 h3, #view_2677 h3, #view_2685 h3, #view_2697 h3, #view_2699 h3, #view_2702 h3, #view_2704 h3, #view_2707 h3, #view_2710 h3, #view_2712 h3, #view_2716 h3, #view_2717 h3, #view_2719 h3, #view_2720 h3, #view_2722 h3, #view_2723 h3, #view_2725 h3, #view_2726 h3, #view_2728 h3, #view_2732 h3, #view_2734 h3, #view_2742 h3, #view_2743 h3, #view_2749 h3, #view_2750 h3, #view_2752 h3, #view_2753 h3, #view_2768 h3, #view_2769 h3, #view_2770 h3, #view_2772 h3, #view_2818 h3, #view_2856 h3, #view_2857 h3, #view_3516 h3, #view_3517 h3, #view_3548 h3, #view_3551 h3, #view_4371 h3, #view_4438 h3, #view_4439 h3 {
   color: #19365e;
   text-align: center;
   padding-right: 10px;
@@ -2446,6 +2448,30 @@ color: #FFFFFF;
   transition-duration: .3s;
   border-width: 2px;
   border-color: #FFFFFF;
+}
+
+/******* Green for Handover Pack - Sales Advisor Action ******/
+
+#kn-scene_961 .kn-detail-body a.kn-link-page .handover-pack {
+  color: #FFFFFF;
+  background-color: #00CC66;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
+
+#kn-scene_961 .kn-detail-body a:hover.kn-link-page .handover-pack {
+  color: #FFFFFF;
+  background-color: #32936F;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+  border-left: 10px solid #32a1ce;
 }
 
 
@@ -3083,6 +3109,7 @@ color: #FFFFFF;
   text-decoration-color: #388cf5;
   color: #388cf5;
 }
+
 /* P&L */
 #kn-input-field_6262 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
@@ -3098,16 +3125,27 @@ color: #FFFFFF;
   text-decoration-color: #388cf5;
   color: #388cf5;
 }
-
 #view_3569 > section > div > div > div:nth-child(3) > div > div:nth-child(2) > div > span > span > a {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
   color: #388cf5;
 }
-
-/* Manual Order Form */
-#kn-input-field_6363 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+/* Original Order Form */
+#kn-input-field_6363 > div > div.kn-asset-current > div > div > a.kn-view-asset, #kn-input-field_6363 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Latest Order Form */
+#kn-input-field_7754 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+#kn-input-field_7754 > a {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
@@ -3353,7 +3391,6 @@ color: #FFFFFF;
   text-decoration-color: #388cf5;
   color: #388cf5;
 }
-
 
 /******* NEW DEAL FILE ADMIN AUDIT ********/
 
@@ -4395,6 +4432,173 @@ color: #19365e;
 	overflow-x: hidden;
 }
 
+/************************* CONSOLIDATED HANDOVER PACK CSS ****************************/
+
+/************* NEW VEHICLE INVOICE **************/
+
+#view_4375 {font-size: 11px;}
+#view_4375 > section > div > div > div:nth-child(3) > div {font-size: 11px;}
+
+#view_4376 {font-size: 11px; font-weight: bold;}
+#view_4376 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div > h3 {font-size: 11px; font-weight: bold;}
+#view_4376 > section > div > div > div:nth-child(3) > div > div:nth-child(1) > div > h3 {font-size: 11px; font-weight: bold;}
+
+#view_4377 {font-size: 12px;}
+#view_4377 tr {line-height: 10px;}
+
+#view_4378 .kn-detail-label {background-color: transparent;}
+#view_4378 {font-size: 11px;}
+
+#view_4379 tr {line-height: 10px; font-size: 12px}
+
+#view_4380 .kn-detail-label {background-color: transparent;}
+#view_4380 > section > div > div:nth-child(1) {font-size: 11px;}
+#view_4380 tr {line-height: 10px;}
+#view_4380 > section > div > div:nth-child(2) {font-size: 12px;}
+
+#view_4381 .kn-detail-label {background-color: transparent;}
+#view_4381 {font-size: 11px;}
+#view_4381 > section > div > div:nth-child(3) > div > div > div > div > h3 {font-size: 11px;}
+
+/* Link to view Terms and Conditions */
+
+#view_4384 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4384 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/******** CUSTOMER PART EXCHANGE PURCHASE INVOICE *********/
+
+#view_4392 {font-size: 12px;}
+#view_4392 .kn-detail-label {background-color: transparent;}
+
+#view_4390 .kn-detail-label {background-color: transparent;}
+
+#view_4390 > section > div > div.kn-details-group.column-1.columns {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #6E6F71;
+  padding-top: 20px;
+}
+
+#view_4391 > form > ul:nth-child(1) {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6F71;
+  padding-bottom: 10px;
+}
+
+#view_4391 > form > ul:nth-child(4) {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6F71;
+  padding-bottom: 10px;
+}
+
+/******** Handover Checklist Page CSS **********/
+
+#view_4395 .kn-detail-label {background-color: transparent;}
+
+/******** SERVICE SCHEDULE **********/
+
+#view_4398 .kn-detail-label {background-color: transparent;}
+
+/******* CSI Survey Page *********/
+#view_4401 .kn-detail-label {background-color: transparent;}
+
+/*CSS for PCD Survey out of 10 fields*/ 
+#view_4402-field_6481 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4402-field_6481 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4402-field_6481 > option {
+  background:#eee;
+  color:black;
+}
+
+#view_4402-field_6482 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4402-field_6482 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4402-field_6482 > option {
+  background:#eee;
+  color:black;
+}
+
+/*CSS for VX Survey out of 10 fields*/ 
+#view_4403-field_6481 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4403-field_6481 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4403-field_6481 > option {
+  background:#eee;
+  color:black;
+}
+
+#view_4403-field_6482 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4403-field_6482 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4403-field_6482 > option {
+  background:#eee;
+  color:black;
+}
+
+#view_4408 .kn-detail-label {background-color: transparent;}
+#view_4411 .kn-detail-label {background-color: transparent;}
+#view_4412 .kn-detail-label {background-color: transparent;}
+#view_4413 .kn-detail-label {background-color: transparent;}
+#view_4414 .kn-detail-label {background-color: transparent;}
+#view_4431 .kn-detail-label {background-color: transparent;}
+
+
+
+
 
 /***************** NEW VEHICLE REPORTING *******************/
 
@@ -4479,6 +4683,27 @@ font-size:12px;
     color: #008000;
     font-size: 14px;
 }
+
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_7239{
+    color: #008000;
+    font-size: 14px;
+}
+
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_7240{
+    color: #008000;
+    font-size: 14px;
+}
+
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_6500{
+    color: #008000;
+    font-size: 14px;
+}
+
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_6838{
+    color: #008000;
+    font-size: 14px;
+}
+
 
 
 #view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6855{
@@ -4668,11 +4893,7 @@ font-size:12px;
 #view_4117 .kn-detail-label {background-color: transparent;}
 #view_4152 .kn-detail-label {background-color: transparent;}
 #view_4170 .kn-detail-label {background-color: transparent;}
-#view_4175 .kn-detail-label {background-color: transparent;}
-#view_4179 .kn-detail-label {background-color: transparent;}
-#view_4180 .kn-detail-label {background-color: transparent;}
-
-
+#view_4358 .kn-detail-label {background-color: transparent;}
 
 /*Change Details View Size*/
 
@@ -4825,6 +5046,105 @@ font-size:12px;
   	font-weight: bold;
 }
 
+/*Dealer Franchise DOC or Profit Sheets Table Filters*/
+
+#view_4354 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4354 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4354 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4354 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4354 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4362 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+
 
 /*Set Average Discount Colour Red*/
 
@@ -4880,6 +5200,63 @@ font-size:12px;
   	box-shadow:         3px 3px #ccc;	
 }
 
+/*Dealership Franchise Page Buttons*/
+
+#view_4356 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4356 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+#view_4356 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4356 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+#view_4361 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4361 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+
 /*Future Orders Table Filters*/
 
 #view_4308> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -4895,6 +5272,38 @@ font-size:12px;
 }
 
 #view_4308> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/*Future Order Bank Table Filters (GROUP PAGE)*/
+
+#kn-report-view_4329-1> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_4329-1> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_4329-1> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_4329-1> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_4329-1> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -5129,7 +5538,6 @@ font-size:12px;
 {
   margin: auto !important;
 }
-
 
 
 

@@ -441,7 +441,7 @@ body {
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(15) > a {
-	background-color: #495057;
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
 }
@@ -2513,6 +2513,62 @@ visibility: visible;
 
 #view_3281 .kn-detail-label {background-color: transparent;}
 
+/***************** AUTO PRICING V2 **************/
+
+/*** REQUEST TO CONTROL PRICING BUTTON ***/
+
+#view_5355 .kn-link-page {
+  color: #FFFFFF;
+  background-color: #ff1414;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_5355 .kn-link-page:hover {
+  color: #FFFFFF;
+  background-color: #b10000;
+  padding: 8px;
+  display: inline-block;
+}
+
+/*** REMOVE PRICE CONTROL AND REINSTATE AUTO PRICE BUTTON ***/
+
+#view_5360 .kn-link-page {
+  color: #FFFFFF;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_5360 .kn-link-page:hover {
+  color: #FFFFFF;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
+/*** Manage Price Control Requests Dashboard ***/
+
+#view_5369 .kn-detail-label {background-color: transparent;}
+
+/*** Link to view Pricing and Advert Performance ***/
+
+#view_5369 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #00CC66;
+  padding: 12px;
+  display: inline-block;
+}
+
+#view_5369 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a:hover {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #32936F;
+  padding: 12px;
+  display: inline-block;
+}
+
 /***** Auto Pricing Section *******/
 /* Disable Auto Pricing Link to Button */
 
@@ -3720,7 +3776,7 @@ visibility: visible;
 }
 
 /* Border & Height Setting of each view - When you add a new view, add the New View Number below - ALWAYS LEAVE VIEW_2769 AT END OF VIEW LIST, INSERT NEW VIEWS BEFORE THIS (TO GET AROUND BUG WITH LAST VIEW IN LIST) */
-#view_2584, #view_2585, #view_2586, #view_2587, #view_2588, #view_2760, #view_2789, #view_2790, #view_2816, #view_2818, #view_2821, #view_2823, #view_2851, #view_2852, #view_2886, #view_2888, #view_2909, #view_2910, #view_2912, #view_2914, #view_2920, #view_2922, #view_2933, #view_2935, #view_2936, #view_2939, #view_2944, #view_2946, #view_2948, #view_2950, #view_2960, #view_2961, #view_3109, #view_3107, #view_3333, #view_3335, #view_3336, #view_3344, #view_3346, #view_3349, #view_3350, #view_3354, #view_3355, #view_3359, #view_3374, #view_3376, #view_3419, #view_3423, #view_3469, #view_3471, #view_3489, #view_3490, #view_4112, #view_4133, #view_4137, #view_4139, #view_4140, #view_4144, #view_4145, #view_4147, #view_4148, #view_4150, #view_4165, #view_4168, #view_4169, #view_4170, #view_4915, #view_4916, #view_2769 .kn-details-group {
+#view_2584, #view_2585, #view_2586, #view_2587, #view_2588, #view_2760, #view_2789, #view_2790, #view_2816, #view_2818, #view_2821, #view_2823, #view_2851, #view_2852, #view_2886, #view_2888, #view_2909, #view_2910, #view_2912, #view_2914, #view_2920, #view_2922, #view_2933, #view_2935, #view_2936, #view_2939, #view_2944, #view_2946, #view_2948, #view_2950, #view_2960, #view_2961, #view_3109, #view_3107, #view_3333, #view_3335, #view_3336, #view_3344, #view_3346, #view_3349, #view_3350, #view_3354, #view_3355, #view_3359, #view_3374, #view_3376, #view_3419, #view_3423, #view_3469, #view_3471, #view_3489, #view_3490, #view_4112, #view_4133, #view_4137, #view_4139, #view_4140, #view_4144, #view_4145, #view_4147, #view_4148, #view_4150, #view_4165, #view_4168, #view_4169, #view_4170, #view_4915, #view_4916, #view_4527, #view_2769 .kn-details-group {
   border: 1px solid #CCCCCC;
   text-align: center;
   padding: 10px;
@@ -3730,7 +3786,7 @@ visibility: visible;
 
 
 /* Set Heading Colour & Text Align for Each View When you add a new view, add the New View Number below - ALWAYS LEAVE VIEW_2769 AT END OF VIEW LIST, INSERT NEW VIEWS BEFORE THIS (TO GET AROUND BUG WITH LAST VIEW IN LIST) */
-#view_2584 h3, #view_2585 h3, #view_2586 h3, #view_2587 h3, #view_2588 h3, #view_2760 h3, #view_2789 h3, #view_2790 h3, #view_2816 h3, #view_2818 h3, #view_2821 h3, #view_2823 h3, #view_2851 h3, #view_2852 h3, #view_2886 h3, #view_2888 h3, #view_2909 h3, #view_2910 h3, #view_2912 h3, #view_2914 h3, #view_2920 h3, #view_2922 h3, #view_2933 h3, #view_2935 h3, #view_2936 h3, #view_2939 h3, #view_2944 h3, #view_2946 h3, #view_2948 h3, #view_2950 h3, #view_2960 h3, #view_2961 h3, #view_3107 h3, #view_3109 h3, #view_3333 h3, #view_3335 h3, #view_3336 h3, #view_3344 h3, #view_3346 h3, #view_3349 h3, #view_3350 h3, #view_3354 h3, #view_3355 h3, #view_3359 h3, #view_3374 h3, #view_3376 h3, #view_3419 h3, #view_3423 h3, #view_3469 h3, #view_3471 h3, #view_3489 h3, #view_3490 h3, #view_4112 h3, #view_4133 h3, #view_4137 h3, #view_4139 h3, #view_4140 h3, #view_4144 h3, #view_4145 h3, #view_4147 h3, #view_4148 h3, #view_4150 h3, #view_4165 h3, #view_4168 h3, #view_4169 h3, #view_4170 h3, #view_4915 h3, #view_4916 h3, #view_2769 h3 {
+#view_2584 h3, #view_2585 h3, #view_2586 h3, #view_2587 h3, #view_2588 h3, #view_2760 h3, #view_2789 h3, #view_2790 h3, #view_2816 h3, #view_2818 h3, #view_2821 h3, #view_2823 h3, #view_2851 h3, #view_2852 h3, #view_2886 h3, #view_2888 h3, #view_2909 h3, #view_2910 h3, #view_2912 h3, #view_2914 h3, #view_2920 h3, #view_2922 h3, #view_2933 h3, #view_2935 h3, #view_2936 h3, #view_2939 h3, #view_2944 h3, #view_2946 h3, #view_2948 h3, #view_2950 h3, #view_2960 h3, #view_2961 h3, #view_3107 h3, #view_3109 h3, #view_3333 h3, #view_3335 h3, #view_3336 h3, #view_3344 h3, #view_3346 h3, #view_3349 h3, #view_3350 h3, #view_3354 h3, #view_3355 h3, #view_3359 h3, #view_3374 h3, #view_3376 h3, #view_3419 h3, #view_3423 h3, #view_3469 h3, #view_3471 h3, #view_3489 h3, #view_3490 h3, #view_4112 h3, #view_4133 h3, #view_4137 h3, #view_4139 h3, #view_4140 h3, #view_4144 h3, #view_4145 h3, #view_4147 h3, #view_4148 h3, #view_4150 h3, #view_4165 h3, #view_4168 h3, #view_4169 h3, #view_4170 h3, #view_4915 h3, #view_4916 h3, #view_4527 h3, #view_2769 h3 {
   color: #19365e;
   text-align: center;
   padding-right: 10px;
@@ -3931,6 +3987,28 @@ color: #FFFFFF;
   padding: 8px;
   width: 250px;
   display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+}
+
+/***** Green for Consolidated Handover Pack - Sales Task *****/
+
+#kn-scene_997 .kn-detail-body a.kn-link-page .handover-pack {
+  color: #FFFFFF;
+  background-color: #00CC66;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
+}
+
+#kn-scene_997 .kn-detail-body a:hover.kn-link-page .handover-pack {
+  color: #FFFFFF;
+  background-color: #32936F;
+  padding: 8px;
+  width: 250px;
+  display: inline-block;
+  border-left: 10px solid #32a1ce;
   transition-property: color;
   transition-duration: .3s;
 }
@@ -4993,8 +5071,27 @@ background-color:#0f2542;
 
 
 /******* CSS to make File Uploads Stand out when Files Exist *******/
-/* Manual Order */
+/* Original Order */
 #kn-input-field_5957 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+#kn-input-field_5957 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Latest Order */
+#kn-input-field_7846 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+#kn-input-field_7846 > a {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
@@ -5975,6 +6072,144 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {display:none;}
   padding: 8px;
   display: inline-block;
 }
+
+
+
+/************************ USED DEAL FILE CONSOLIDATED HANDOVER PACK **************************/
+
+#view_5353 .kn-detail-label {background-color: transparent;}
+
+/***** HANDOVER PACK - USED VEHICLE INVOICE *****/
+
+#view_4798 {font-size: 11px;}
+
+#view_4799 {font-size: 11px; font-weight: bold;}
+#view_4799 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div > h3 {font-size: 11px; font-weight: bold;}
+#view_4799 > section > div > div > div:nth-child(3) > div > div:nth-child(1) > div > h3 {font-size: 11px; font-weight: bold;}
+
+#view_4800 {font-size: 12px;}
+#view_4800 tr {line-height: 10px;}
+
+#view_4801 .kn-detail-label {background-color: transparent;}
+#view_4801 {font-size: 11px;}
+
+#view_4802 tr {line-height: 10px; font-size: 12px}
+
+#view_4803 .kn-detail-label {background-color: transparent;}
+#view_4803 > section > div > div:nth-child(1) {font-size: 11px;}
+#view_4803 tr {line-height: 10px;}
+#view_4803 > section > div > div:nth-child(2) {font-size: 12px;}
+
+#view_4804 .kn-detail-label {background-color: transparent;}
+#view_4804 {font-size: 11px;}
+#view_4804 > section > div > div:nth-child(3) > div > div > div > div > h3 {font-size: 11px;}
+
+/* Terms and Conditions Link */
+#view_4815 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  background-color: #19365e;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4815 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  background-color: #0f2542;
+  padding: 8px;
+  display: inline-block;
+  transition-property: color;
+  transition-duration: .3s;
+  border-width: 2px;
+  border-color: #FFFFFF;
+}
+
+/***** HANDOVER PACK - PART EXCHANGE PURCHASE INVOICE *****/
+
+#view_5322 {font-size: 12px;}
+#view_5322 .kn-detail-label {background-color: transparent;}
+
+#view_5323 .kn-detail-label {background-color: transparent;}
+#view_5323 > section > div > div.kn-details-group.column-1.columns {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #6E6F71;
+  padding-top: 20px;
+}
+
+#view_5324 > form > ul:nth-child(1) {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6F71;
+  padding-bottom: 10px;
+}
+
+#view_5324 > form > ul:nth-child(4) {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #6E6F71;
+  padding-bottom: 10px;
+}
+
+
+/********* HANDOVER PACK - HANDOVER CHECKLIST *********/
+
+#view_4823 .kn-detail-label {background-color: transparent;}
+
+
+/********* HANDOVER PACK - SERVICE SCHEDULE *********/
+
+#view_4795 .kn-detail-label {background-color: transparent;}
+
+
+/********* HANDOVER PACK - CUSTOMER SATISFACTION SURVEY PAGE *********/
+
+#view_4824 .kn-detail-label {background-color: transparent;}
+
+#view_4652-field_5976 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4652-field_5976 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4652-field_5976 > option {
+  background:#eee;
+  color:#000;
+}
+
+/********* second select box recomend to family or friends*********/
+
+#view_4652-field_5655 > option:nth-child(2){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4652-field_5655 > option:nth-child(3){
+  background-color:#23d160;
+  color:#fafafa;
+  font-size:16px;
+}
+
+#view_4652-field_5655 > option {
+  background:#eee;
+  color:#000;
+}
+
+#view_5330 .kn-detail-label {background-color: transparent;}
+
+#view_5333 .kn-detail-label {background-color: transparent;}
+
+#view_5334 .kn-detail-label {background-color: transparent;}
+
+#view_5335 .kn-detail-label {background-color: transparent;}
+
+
 
 
 /********************************************************************Pete/Hynek iFrame Work****************************************************************/
