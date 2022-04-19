@@ -5097,6 +5097,13 @@ background-color:#0f2542;
   text-decoration-color: #388cf5;
   color: #388cf5;
 }
+/* Supplementary Order */
+#kn-input-field_6554 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
 /* Manual Invoice */
 #kn-input-field_6223 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
