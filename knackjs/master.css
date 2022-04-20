@@ -2855,7 +2855,12 @@ visibility: visible;
 
 #view_2480 .kn-detail-label {background-color: transparent;}
 
+/************** DISPOSAL ROUTE SELECTION PAGE FOR CHECK IN *********************/
+
+#view_2301 .kn-detail-label {background-color: transparent;}
 #view_2298 .kn-detail-label {background-color: transparent;}
+#view_2299 .kn-detail-label {background-color: transparent;}
+#view_3586 .kn-detail-label {background-color: transparent;}
 
 /****** Retail Check In Details ********/
 
@@ -5092,6 +5097,13 @@ background-color:#0f2542;
   color: #388cf5;
 }
 #kn-input-field_7846 > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+/* Supplementary Order */
+#kn-input-field_6554 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
