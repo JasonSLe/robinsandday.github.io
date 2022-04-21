@@ -3227,7 +3227,8 @@ visibility: visible;
 
 /************ USED VEHICLE ADMIN - Credit Note Requests Table Filters ***********/
 
-#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
+#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
