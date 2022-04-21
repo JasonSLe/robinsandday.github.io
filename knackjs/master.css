@@ -3227,13 +3227,13 @@ visibility: visible;
 
 /************ USED VEHICLE ADMIN - Credit Note Requests Table Filters ***********/
 
-#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+/*#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -3243,7 +3243,7 @@ visibility: visible;
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
-}
+}*/
 
 /* Confirm Credit Note Raised by Admin */
 
