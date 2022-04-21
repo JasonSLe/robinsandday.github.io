@@ -3141,7 +3141,7 @@ visibility: visible;
   	font-weight: bold;
 }
 
-/************ USED VEHICLE ADMIN - HANDOVER APPOINTMENTS CONFIRMATION Table Filters ***********/
+/************ USED VEHICLE ADMIN - HANDOVER APPOINTMENTS CONFIRMATION Table Filters **********
 
 #view_3310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
   	background-color: #FFA100;
@@ -3177,7 +3177,7 @@ visibility: visible;
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
-}
+} */
 
 /************ USED VEHICLE ADMIN - VEHICLES CHECKED IN REQUIRING AUTOLINE UPDATES Table Filters ***********/
 
