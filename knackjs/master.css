@@ -363,7 +363,7 @@ body {
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-	background-color: #00CC66;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
@@ -387,7 +387,7 @@ body {
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-	background-color: #00CC66;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
@@ -441,19 +441,19 @@ body {
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(15) > a {
-	background-color: #00CC66;
+	background-color: #495057;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(16) > a {
-	background-color: #495057;
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(17) > a {
-	background-color: #495057;
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
 }
@@ -490,6 +490,24 @@ body {
 
 #view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(23) > a {
 	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(24) > a {
+	background-color: #495057;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(25) > a {
+	background-color: #00CC66;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(26) > a {
+	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
 }
@@ -3123,7 +3141,7 @@ visibility: visible;
   	font-weight: bold;
 }
 
-/************ USED VEHICLE ADMIN - HANDOVER APPOINTMENTS CONFIRMATION Table Filters ***********/
+/************ USED VEHICLE ADMIN - HANDOVER APPOINTMENTS CONFIRMATION Table Filters **********
 
 #view_3310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
   	background-color: #FFA100;
@@ -3159,7 +3177,7 @@ visibility: visible;
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
-}
+} */
 
 /************ USED VEHICLE ADMIN - VEHICLES CHECKED IN REQUIRING AUTOLINE UPDATES Table Filters ***********/
 
@@ -3209,13 +3227,14 @@ visibility: visible;
 
 /************ USED VEHICLE ADMIN - Credit Note Requests Table Filters ***********/
 
-#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+/*#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -3225,7 +3244,7 @@ visibility: visible;
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
-}
+}*/
 
 /* Confirm Credit Note Raised by Admin */
 

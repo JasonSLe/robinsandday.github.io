@@ -2621,3 +2621,22 @@ $(document).on('knack-form-submit.view_4403', function(event, view, data) {
     }
 });
 
+
+// FLEET PROJECT
+// ATTACH BROKER TO ORDER - TRIGGER INTEGROMAT TO ATTACH BROKER ACCOUNT
+
+$(document).on('knack-form-submit.view_4460', function(event, view, data) { 
+	let commandURL = "https://hook.integromat.com/6qso0xkjtnf1kdy37qs7t8fdsvjgkr3q" ;
+  let dataToSend = JSON.stringify({"recordid":data.id,"Connected Broker":data.field_7792_raw})
+  //or theoretically to have all data from form 
+  //let dataToSend = Object.assign(data,{"typeOfCustomerSurvey":"NEW"}); 
+  var rData = $.ajax({
+    url: commandURL,
+    type: 'POST',
+    contentType: 'application/json',
+    data: dataToSend,
+    async: false
+  }).responseText;
+  console.log(rData);
+});
+
