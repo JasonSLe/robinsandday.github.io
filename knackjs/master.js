@@ -299,6 +299,11 @@ $(document).on('knack-view-render.view_5388', function(event, view, data) {
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#perpetual-stock-take-reports?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+$(document).on('knack-view-render.view_5398', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-credit-note-register" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 function openTab(url) {
   // Create link in memory
   var a = window.document.createElement("a");
@@ -374,7 +379,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 
     //MASTER/SLAVE CONNECT - add scene of master page
     // Always hide/collapse the header when rendering scene in IFRAME, add other scenes if necessary
-    if (scene.key === 'scene_860' || scene.key === 'scene_1269' || scene.key === 'scene_1271' || scene.key === 'scene_1273' || scene.key === 'scene_1279' || scene.key === 'scene_1339' || scene.key == 'scene_1362' || scene.key == 'scene_1412' || scene.key == 'scene_1497' || scene.key == 'scene_1505'|| scene.key === 'scene_1510' || scene.key === 'scene_1523' || scene.key === 'scene_1616'  || scene.key === 'scene_1631' || scene.key === 'scene_1636' || scene.key === 'scene_1644') {
+    if (scene.key === 'scene_860' || scene.key === 'scene_1269' || scene.key === 'scene_1271' || scene.key === 'scene_1273' || scene.key === 'scene_1279' || scene.key === 'scene_1339' || scene.key == 'scene_1362' || scene.key == 'scene_1412' || scene.key == 'scene_1497' || scene.key == 'scene_1505'|| scene.key === 'scene_1510' || scene.key === 'scene_1523' || scene.key === 'scene_1616'  || scene.key === 'scene_1631' || scene.key === 'scene_1636' || scene.key === 'scene_1644' || scene.key === 'scene_1651') {
       document.body.style.overflow = "hidden"
         if (window.matchMedia('(min-width: 768px)').matches !== false) {
             toggleHeaderVisibility('hidden');
