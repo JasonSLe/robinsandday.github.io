@@ -7716,6 +7716,45 @@ padding-bottom: 0px;
 
 /*********Used Historic Doc*********/
 
+/*Navigation Buttons*/
+
+#view_5399 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_5399 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+#view_5400> div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_5400 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+
 /*Dealer Performance (Individual) Page*/
 
 #view_5165
@@ -7727,7 +7766,6 @@ padding-bottom: 0px;
 {
   font-size: 17px;
 }
-
 
 #view_5142 .kn-detail-label {background-color: transparent;}
 #view_5143 .kn-detail-label {background-color: transparent;}
