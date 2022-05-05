@@ -9039,12 +9039,6 @@ overflow: hidden !important;
 /*button glow effect END*/ 
 
 /*button shine effect START*/ 
-#kn-report-view_4580-1 .js-filter-menu > ul > li > a
-{
-    background-color: #002bff;
-}
-
-
   #kn-report-view_4580-1 .js-filter-menu > ul > li > a {
     text-decoration: none;
     border: 1px solid rgb(146, 148, 248);
@@ -9066,7 +9060,7 @@ overflow: hidden !important;
     background: linear-gradient(
       120deg,
       transparent,
-      rgba(159, 161, 231, 0.4),
+      rgba(246, 246, 248, 0.4),
       transparent
     );
     transition: all 650ms;
