@@ -9037,3 +9037,8 @@ overflow: hidden !important;
 }
 
 /*button glow effect END*/ 
+
+#view_4567 .kn-records-nav .control > a
+{
+    background-color: #002bff;
+}
