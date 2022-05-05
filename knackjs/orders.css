@@ -5321,14 +5321,14 @@ font-size:12px;
 /*Navigation Buttons*/
 
 #view_4488 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #00CC66;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_4488 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #FFA100;
+	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
@@ -5339,14 +5339,14 @@ font-size:12px;
 }
 
 #view_4487 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #00CC66;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_4487 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #FFA100;
+	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
