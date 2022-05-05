@@ -9041,14 +9041,10 @@ overflow: hidden !important;
 /*button shine effect START*/ 
   #kn-report-view_4580-1 .js-filter-menu > ul > li > a {
     text-decoration: none;
-    border: 1px solid rgb(146, 148, 248);
     position: relative;
     overflow: hidden;
   }
   
-  #kn-report-view_4580-1 .js-filter-menu > ul > li > a {
-    box-shadow: 1px 1px 25px 10px rgba(217, 217, 219, 0.993);
-  }
   
   #kn-report-view_4580-1 .js-filter-menu > ul > li > a:before {
     content: "";
@@ -9060,7 +9056,7 @@ overflow: hidden !important;
     background: linear-gradient(
       120deg,
       transparent,
-      rgba(246, 246, 248, 0.4),
+      rgba(167, 167, 173, 0.4),
       transparent
     );
     transition: all 650ms;
