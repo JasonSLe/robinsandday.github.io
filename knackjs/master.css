@@ -9039,13 +9039,12 @@ overflow: hidden !important;
 /*button glow effect END*/ 
 
 /*button shine effect START*/ 
-#kn-report-view_4580-1 .js-filter-menu > ul > li > a {
-    font-size: 1.5rem;
-    padding: 1rem 3rem;
-    color: #f4f4f4;
-    text-transform: uppercase;
-  }
-  
+#kn-report-view_4580-1 .js-filter-menu > ul > li > a
+{
+    background-color: #002bff;
+}
+
+
   #kn-report-view_4580-1 .js-filter-menu > ul > li > a {
     text-decoration: none;
     border: 1px solid rgb(146, 148, 248);
@@ -9054,7 +9053,7 @@ overflow: hidden !important;
   }
   
   #kn-report-view_4580-1 .js-filter-menu > ul > li > a {
-    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+    box-shadow: 1px 1px 25px 10px rgba(217, 217, 219, 0.993);
   }
   
   #kn-report-view_4580-1 .js-filter-menu > ul > li > a:before {
@@ -9067,7 +9066,7 @@ overflow: hidden !important;
     background: linear-gradient(
       120deg,
       transparent,
-      rgba(146, 148, 248, 0.4),
+      rgba(159, 161, 231, 0.4),
       transparent
     );
     transition: all 650ms;
