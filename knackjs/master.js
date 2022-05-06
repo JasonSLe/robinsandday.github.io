@@ -2965,7 +2965,7 @@ $(document).on('knack-form-submit.view_5048', function(event, view, data) {
 });
 
 // Used Stock Management - "Update Advert" details form
-$(document).on('knack-form-submit.view_3208', function(event, view, data) { 
+$(document).on('knack-form-submit.view_3280', function(event, view, data) { 
   callPostHttpRequest("https://hook.integromat.com/p2wmxq4dqix476cf4npkqij9k7cos4vi", {"Record ID":data.id},"Used Stock Management - Update Advert details form")
 });
 
