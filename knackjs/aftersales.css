@@ -1341,29 +1341,29 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 /* Aftersales Post Visit - Toggle between FOCUS and Follow up */
 
 #view_643 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #FFA100;
+	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
 }
 
 #view_643 > div > a:hover.kn-link.kn-link-1.kn-button {
-	background-color: #D18400;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
-  	border-width: 2px;
-  	border-color: #FFFFFF;
 	
 }
 
-#view_643 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_643 > div > a:hover.kn-link.kn-link-2.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_643 > div > a:hover.kn-link.kn-link-2.kn-button {
+#view_643 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1373,3 +1373,40 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 	
 }
+
+/* Aftersales Post Visit - Toggle between FOLLOW UP and FOCUS */
+
+#view_644 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_644 > div > a:hover.kn-link.kn-link-1.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+	
+}
+
+#view_644 > div > a:hover.kn-link.kn-link-2.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_644 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+	
+}
+
