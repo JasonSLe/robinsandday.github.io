@@ -1412,12 +1412,6 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 /* Aftersales Follow UP - Toggle between Pending and Awaiting */
 
-#view_632 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-	background-color: #877d6c;
-  	color: #D18400;
-  	font-weight: bold;
-}
-
 #view_632 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #D18400;
   	color: #FFFFFF;
