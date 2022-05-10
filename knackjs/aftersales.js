@@ -916,7 +916,7 @@ $(document).on('knack-form-submit.view_654', function(event, view, data) {
 try{
 
     let commandURL = "https://hook.integromat.com/s8j9klwniouvc81742i1hy8yxtc822ut";
-    let dataToSend = JSON.stringify({"Record ID":data.id, "Manager's Notes":data.field_1015_raw});
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Manager's Notes":data.field_1015_raw, "userName": Knack.getUserAttributes().name});
 
     var rData = $.ajax({
         url: commandURL,
