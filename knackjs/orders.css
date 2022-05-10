@@ -5318,7 +5318,45 @@ font-size:12px;
 
 /***************** New Historic DOC Formatting ******************/
 
-/*DOC Orange Button (Dealer)*/
+/*Navigation Buttons*/
+
+#view_4488 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4488 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+#view_4487 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_4487 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;	
+}
+
+/*DOC Green Button (Dealer)*/
 
 #view_4188 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #00CC66;
@@ -5375,7 +5413,7 @@ font-size:12px;
   	box-shadow:         3px 3px #ccc;	
 }
 
-/*DOC Orange Button (Group and Region)*/
+/*DOC Green Button (Group and Region)*/
 
 #view_4323 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #00CC66;

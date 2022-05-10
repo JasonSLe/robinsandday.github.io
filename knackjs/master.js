@@ -2969,6 +2969,16 @@ $(document).on('knack-form-submit.view_5048', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/vigtgktsw7fh3meswwm37ybgie0fc8p8", {"Record ID":data.id},"Used Stock Management - Update Autorola Trade Price")
 });
 
+// Used Stock Management - "Update Advert" details form
+$(document).on('knack-form-submit.view_3280', function(event, view, data) { 
+  callPostHttpRequest("https://hook.integromat.com/p2wmxq4dqix476cf4npkqij9k7cos4vi", {"Record ID":data.id},"Used Stock Management - Update Advert details form")
+});
+
+// Used Stock Management - Auto Price Settings Updated - Update Advert Price
+$(document).on('knack-form-submit.view_5354', function(event, view, data) { 
+  callPostHttpRequest("https://hook.integromat.com/bn722cnc3pyfuhbfxug1v8hbyozs2rzd", {"Record ID":data.id},"Used Stock Management - Auto Price Settings Updated - Update Advert Price")
+});
+
 /*Collapse purchasing MFL service Table 
 $(document).on('view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242', function(event, view, data){
     addGroupExpandCollapse(view);
