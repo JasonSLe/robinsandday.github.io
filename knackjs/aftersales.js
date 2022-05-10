@@ -944,3 +944,15 @@ try{
     }).responseText;
 }
 });
+
+// ----------  refresh status of tarot upload ----------
+
+$(document).on('knack-scene-render.scene_224', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_638").is(":visible")==true){ Knack.views["view_638"].model.fetch();recursivecall();} }, 10000);
+}
+
+
