@@ -862,6 +862,17 @@ function recursivecall(){
  setTimeout(function () { if($("#view_359").is(":visible")==true){ Knack.views["view_359"].model.fetch();recursivecall();} }, 100000);
 }
 
+// ----------  efresh customer account applications report every 60 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_111', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_634").is(":visible")==true){ Knack.views["view_634"].model.fetch();recursivecall();} }, 10000);
+}
+
+
 //trigger Tarot API
 $(document).on('knack-form-submit.view_618', function(event, view, data) {
 
