@@ -1403,7 +1403,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 /* Aftersales Post Visit Reporting - Follow up call button */
 
 #view_661 > div > a {
-	background-color: #D18400;
+	background-color: #478ba8;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
@@ -1412,14 +1412,28 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
+#view_661 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+	
+}
+
 /* Aftersales Post Visit Reporting - FOCUS button */
 
 #view_706 > div > a {
-	background-color: #D18400;
+	background-color: #478ba8;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
   	transition-duration: .3s;
   	border-width: 2px;
   	border-color: #FFFFFF;
+}
+
+#view_706 > div > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+	
 }
