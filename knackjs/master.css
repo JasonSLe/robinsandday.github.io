@@ -408,8 +408,6 @@ body {
   font-weight: bold;
 }
 
-
-
 /* Auto Pricing Dashboard Filters */
 
 #view_4025 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
@@ -418,18 +416,208 @@ body {
   font-weight: bold;
 }
 
-
 /* Used Vehicle Deal File Reg No. */
 
 /********** Stock Search Button to DS Imagery Page ***********/
-#view_3271 > div > a {
+#view_3271 > div > a,
+#view_793 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_777 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_809 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_810 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_811 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_812 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4776 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5399 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5400 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4811 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3591 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3591 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_3591 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_3604 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_3604 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_3604 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_4878 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4890 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5210 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5403 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_755 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_768 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_789 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_757 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_769 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_788 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_758 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_770 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_764 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_790 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_765 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_791 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_766 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_792 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_767 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3625 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3627 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3629 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3631 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3643 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3643 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_3645 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4229 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_776 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_776 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_776 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_776 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_776 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_3895 > div > a,
+#view_2927 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3633 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3576 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3578 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3580 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3582 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3584 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3593 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3595 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3598 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3600 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3602 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3604 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3606 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3608 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3610 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3621 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3623 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1368 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1368 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_1368 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_1496 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1496 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1551 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1554 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1554 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1556 > div > a,
+#view_3149 > div > a,
+#view_4983 > div > a,
+#view_3184 > div > a,
+#view_3193 > div > a,
+#view_3194 > div > a,
+#view_3228 > div > a,
+#view_4314 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4314 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4314 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_4314 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_1171 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1171 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1171 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_630 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_909 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_909 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_909 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1368 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
   background-color: #ffa100;
   color: #ffffff;
   font-weight: bold;
   box-shadow: 3px 3px #ccc;
 }
 
-#view_3271 > div > a:hover {
+#view_3271 > div > a:hover,
+#view_811 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_812 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4776 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5399 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5400 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4811 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3591 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3591 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_3591 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_3604 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_3604 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_3604 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_4878 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4890 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5210 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5403 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_789 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_757 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_769 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_788 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_758 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_770 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_764 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_790 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_765 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_791 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_766 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_792 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_767 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_793 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-buttony,
+#view_777 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_809 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_810 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3627 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3629 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3631 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3643 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3643 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_3645 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4229 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_776 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_776 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_776 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_776 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_776 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_755 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_768 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_2927 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3633 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3576 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3578 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3580 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3582 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3584 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3593 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3595 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3598 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3600 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3602 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3604 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3606 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3608 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3610 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3621 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3623 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3625 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3149 > div > a:hover,
+#view_4983 > div > a:hover,
+#view_3184 > div > a:hover,
+#view_3193 > div > a:hover,
+#view_3194 > div > a:hover,
+#view_3228 > div > a:hover,
+#view_3895 > div > a:hover,
+#view_2919 > form > div > button:hover,
+#view_2807 > form > div > button:hover,
+#view_2819 > form > div > button:hover,
+#view_2824 > form > div > button:hover,
+#view_2867 > form > div > button:hover,
+#view_2901 > form > div > button:hover,
+#view_2925 > form > div > button:hover,
+#view_1171 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1171 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1171 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_630 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_909 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_909 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_909 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1368 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1368 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1368 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_1368 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_1496 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1496 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1551 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1554 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1554 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1556 > div > a:hover {
   background-color: #d18400;
   color: #ffffff;
   font-weight: bold;
@@ -442,636 +630,105 @@ body {
 
 /* Change Button Colour to Orange & add Hover Animation */
 
-#view_1171 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1171 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1171 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1171 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1171 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1171 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_630 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_630 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_909 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_909 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_909 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_909 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_909 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_909 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-
-#view_1368 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1368 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1368 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1368 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1368 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1368 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1368 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1368 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1496 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1496 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1496 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1496 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1551 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1551 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1554 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1554 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1554 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1554 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1556 > div > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1556 > div > a:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1544 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1544 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1544 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1544 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1544 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1544 > div > a.kn-link.kn-link-6.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1651 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1651 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
+#view_1544 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5219 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_4526 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_4547 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_4556 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_2806 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_5154 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_5278 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_5279 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_2262 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_2262 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_2262 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_2262 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_2583 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_2583 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3136 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3135 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3124 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_4602 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_4310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_2200 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_2200 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_2200 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_2200 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_2311 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_2311 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_2311 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_2311 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_2312 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#view_2312 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3186 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#view_3186 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a,
+#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3171 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_3171 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_3171 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_3171 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_1651 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_1651 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_3071 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#view_3071 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a,
+#view_3071 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a,
+#view_1674 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#view_1674 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a,
+#view_1674 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a,
+#kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
+#kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a,
+#view_1544 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1544 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1544 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_1544 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_1544 > div > a.kn-link.kn-link-6.kn-link-page.kn-buttony,
+#view_1651 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1651 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_1651 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1651 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1651 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3149 > div > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3149 > div > a:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4983 > div > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4983 > div > a:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3071 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3071 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3071 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Cancelled or Transferred Orders Filter Buttons */
-
-#view_1674 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1674 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_1674 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Appraisals Dashboard Filter Buttons & Hiding Column Summaries */
-
-#kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-3 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_593-4 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2499-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
   background-color: #ffa100;
   color: #ffffff;
   font-weight: bold;
@@ -1085,152 +742,7 @@ body {
   visibility: hidden;
 }
 
-#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_2507-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/*************************************************** USED VEHICLE REPORTING ****************************************************/
-/*USED DIVISIONAL OVERVIEW BUTTON */
-
-#view_3184 > div > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3184 > div > a:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3193 > div > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3193 > div > a:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3194 > div > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3194 > div > a:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* DEALER BY DEALER BUTTON FROM DIVISIONAL OVERVIEW PAGE */
-
-#view_3228 > div > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3228 > div > a:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* USED VEHICLE REPORTING MENU TABS */
-#view_3171 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3171 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3171 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3171 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 /****** REGIONAL USED Stock Profiling Buttons ******/
-
-#view_4314 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
 
 #view_4314 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #d18400;
@@ -1240,13 +752,6 @@ body {
   transition-duration: 0.3s;
   border-width: 2px;
   border-color: #ffffff;
-}
-
-#view_4314 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
 }
 
 #view_4314 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
@@ -1259,13 +764,6 @@ body {
   border-color: #ffffff;
 }
 
-#view_4314 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
 #view_4314 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
@@ -1274,13 +772,6 @@ body {
   transition-duration: 0.3s;
   border-width: 2px;
   border-color: #ffffff;
-}
-
-#view_4314 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
 }
 
 #view_4314 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
@@ -1309,570 +800,6 @@ body {
   background-color: #d18400 !important;
   color: #ffffff !important;
   font-weight: bold !important;
-}
-
-/* Retail Stock vs Retail Stock Prep Clocked On Pivot */
-
-#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3283-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Retail Stock NOT Advertised Chart */
-
-#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3195-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Trade Check In Usage Filter Button */
-
-#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3178-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Used Vehicle Check In - Retail Vehicle Filter Buttons */
-
-#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Used Vehicle Check In - Trade Vehicle Filter Buttons */
-
-#view_2312 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2312 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2312 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2312 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Used Retail Stock "On Sale" Filter Buttons */
-
-#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2522 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/********** Used Vehicle Preparation Filter Button Colours *************/
-/* Days Until Retail Vehicles Have Been Through Workshop */
-
-#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3174-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3186 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3186 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3186 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Used Vehicle Process Reporting */
-
-#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3180 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3175-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Retail Vehicles In Stock Over 7 Days NOT gone in to Workshop */
-
-#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3172-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3170-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Total Retail Stock with Recon > £0 Prepped by Day 3, Day 5 & Day 10 */
-#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3177-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/*** PART EXCHANGE PROCESS REPORTING ***/
-
-#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#kn-report-view_3181-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Retail Stock NOT Advertised Table */
-
-#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3207 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 /************************* Stock Search CSS Script Start ******************************8/
@@ -2296,12 +1223,6 @@ visibility: visible;
 
 /* Used Vehicle Check In Page Tab CSS */
 
-#view_2200 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 #view_2200 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
@@ -2310,12 +1231,6 @@ visibility: visible;
   transition-duration: 0.3s;
   border-width: 2px;
   border-color: #ffffff;
-}
-
-#view_2200 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 #view_2200 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
@@ -2328,12 +1243,6 @@ visibility: visible;
   border-color: #ffffff;
 }
 
-#view_2200 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 #view_2200 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
@@ -2342,12 +1251,6 @@ visibility: visible;
   transition-duration: 0.3s;
   border-width: 2px;
   border-color: #ffffff;
-}
-
-#view_2200 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 #view_2200 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
@@ -2360,12 +1263,6 @@ visibility: visible;
   border-color: #ffffff;
 }
 
-#view_2311 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 #view_2311 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
@@ -2374,12 +1271,6 @@ visibility: visible;
   transition-duration: 0.3s;
   border-width: 2px;
   border-color: #ffffff;
-}
-
-#view_2311 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 #view_2311 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
@@ -2392,12 +1283,6 @@ visibility: visible;
   border-color: #ffffff;
 }
 
-#view_2311 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 #view_2311 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
@@ -2406,12 +1291,6 @@ visibility: visible;
   transition-duration: 0.3s;
   border-width: 2px;
   border-color: #ffffff;
-}
-
-#view_2311 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 #view_2311 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
@@ -2440,12 +1319,6 @@ visibility: visible;
   border-color: #ffffff;
 }
 
-#view_2262 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 #view_2262 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
@@ -2454,12 +1327,6 @@ visibility: visible;
   transition-duration: 0.3s;
   border-width: 2px;
   border-color: #ffffff;
-}
-
-#view_2262 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 #view_2262 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
@@ -2472,12 +1339,6 @@ visibility: visible;
   border-color: #ffffff;
 }
 
-#view_2262 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 #view_2262 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
@@ -2486,12 +1347,6 @@ visibility: visible;
   transition-duration: 0.3s;
   border-width: 2px;
   border-color: #ffffff;
-}
-
-#view_2262 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 #view_2262 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
@@ -2506,12 +1361,6 @@ visibility: visible;
 
 /* Trade Transfers In/Out Tabs CSS */
 
-#view_2583 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 #view_2583 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
@@ -2520,12 +1369,6 @@ visibility: visible;
   transition-duration: 0.3s;
   border-width: 2px;
   border-color: #ffffff;
-}
-
-#view_2583 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 #view_2583 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
@@ -2565,203 +1408,9 @@ visibility: visible;
 
 /************************************************************************ USED VEHICLE DEAL FILE ************************************************************************/
 
-/********* USED DEAL FILES PAGE *********/
-
-/* Deal File Table Fitlers */
-
-#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(14) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_2955 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(15) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 /******* USED DEAL FILES ADMIN VIEW *********/
 
-/************ USED VEHICLE ADMIN - DEAL FILE CHECKLIST Table Filters ***********/
-
-#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3659 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/************ USED VEHICLE ADMIN - VEHICLE PURCHASE INVOICE & V5 Table Filters ***********/
-
-#view_3136 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3136 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3136 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3136 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 /************ USED VEHICLE ADMIN - VEHICLE FINANCE SETTLEMENT Table Filters ***********/
-
-#view_3135 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3135 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3135 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3135 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
 
 /************ USED VEHICLE ADMIN - HANDOVER APPOINTMENTS CONFIRMATION Table Filters **********
 
@@ -2801,58 +1450,9 @@ visibility: visible;
   	font-weight: bold;
 } */
 
-/************ USED VEHICLE ADMIN - VEHICLES CHECKED IN REQUIRING AUTOLINE UPDATES Table Filters ***********/
-
-#view_3124 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3124 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3124 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 /************* Hide Form Submit from Admin Confirm Vehicle Check In Prep Pushed Page ************/
 #view_3126 > form > div > button {
   display: none;
-}
-
-/************ USED VEHICLE ADMIN - Deal File Admin Audit Status Table Filters ***********/
-
-#view_4602 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4602 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4602 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/************ USED VEHICLE ADMIN - Credit Note Requests Table Filters ***********/
-
-#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
-#view_3310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 /*#view_5232 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
@@ -2868,124 +1468,6 @@ visibility: visible;
 }*/
 
 /***************************** DEAL FILE MANAGER VIEW ********************************/
-
-/************ Enquiry Max Confirmed Orders Where Signed Orders Need Uploading and Profit Sheets Completing ***********/
-
-#view_4310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4310 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/************ Credit Note Requests ***********/
-
-#view_5219 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5219 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5219 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/************ Vehicles that Require Finance to be Paid Table Filters ***********/
-
-#view_4526 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4526 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4526 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4526 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/************ List of Vehicle's Delivered Table Filters ***********/
-
-#view_4547 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4547 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4547 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4547 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4547 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4547 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/************ Used Deal Files - Manager Audit Status Table Filters ***********/
-
-#view_4556 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4556 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4556 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
 
 /************************************** SHOWROOM ORDER **************************************************/
 
@@ -3277,30 +1759,10 @@ visibility: visible;
   text-align: center;
 }
 
-
-
 /******** Button to Email ZIP Folder of Customer Documents *********/
 
 #view_3895 .control {
   text-align: center;
-}
-
-#view_3895 > div > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3895 > div > a:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
 }
 
 /**** Retrieve/Update Order Form FORM ****/
@@ -3821,17 +2283,6 @@ visibility: visible;
   font-weight: bold;
 }
 
-#view_2919 > form > div > button:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 /* Vehicle - Part Ex Valuation Link */
 
 #view_2585 > section > div > div > div > div > div.field_5054 > div > span > span > a {
@@ -3865,12 +2316,6 @@ visibility: visible;
 
 /* Start New Appraisal Button when Appraisal NOT Complete */
 
-#view_2806 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 #view_2806 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
@@ -3889,34 +2334,12 @@ visibility: visible;
   font-weight: bold;
 }
 
-#view_2807 > form > div > button:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 /********* FCA DEMANDS & NEEDS PAGE *********/
 
 #view_2819 > form > div > button {
   background-color: #ffa100 !important;
   color: #ffffff;
   font-weight: bold;
-}
-
-#view_2819 > form > div > button:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
 }
 
 /********* PROFIT & LOSS PAGE *******/
@@ -3931,17 +2354,6 @@ visibility: visible;
   background-color: #ffa100 !important;
   color: #ffffff;
   font-weight: bold;
-}
-
-#view_2824 > form > div > button:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
 }
 
 /**Digital P&L Overview PAGE V2**/
@@ -3988,17 +2400,6 @@ visibility: visible;
   font-weight: bold;
 }
 
-#view_2867 > form > div > button:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 /* Resize Text on Details for Customer View */
 
 #view_2905 > section > div > div:nth-child(5) > div > div > div > div > h3 {
@@ -4013,34 +2414,12 @@ visibility: visible;
   font-weight: bold;
 }
 
-#view_2901 > form > div > button:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 /* Update Handover Appointment Button Colour */
 
 #view_2925 > form > div > button {
   background-color: #ffa100 !important;
   color: #ffffff;
   font-weight: bold;
-}
-
-#view_2925 > form > div > button:hover {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
 }
 
 /********* CUSTOMER HANDOVER DIARY *********/
@@ -4241,28 +2620,6 @@ visibility: visible;
 #view_2940-field_5655 > option {
   background: #eee;
   color: #000;
-}
-
-/********* CUSTOMER PORTAL VIEWS *********/
-
-/* Account Settings Page */
-
-#view_2927 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_2927 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
 }
 
 /***** Colour Code CSS for Deal File Audit Page *****/
@@ -4950,462 +3307,9 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   color: #000;
 }
 
-/*************** Help / Tutorial Button CSS for Used Deal File ***************/
-
-#view_3633 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3633 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3576 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3576 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3578 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3578 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3580 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3580 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3582 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3582 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3584 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3584 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3593 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3593 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3595 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3595 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3598 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3598 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3600 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3600 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3602 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3602 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3604 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3604 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3606 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3606 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3608 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3608 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3610 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3610 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3621 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3621 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3623 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3623 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3625 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3625 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3627 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3627 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3629 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3629 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3631 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3631 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3643 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3643 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3643 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3643 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3645 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3645 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4229 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4229 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 /*************** Enquiry Max Links ***************/
 
 /*** Deal File Overview Page ***/
-
 
 #view_5131 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
   color: #ffffff;
@@ -5417,7 +3321,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
 /*** Order Form Page ***/
 
-
 #view_2767 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
   color: #ffffff;
   font-weight: bold;
@@ -5427,7 +3330,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 }
 
 /*** TCF Pre Sale Pack Page ***/
-
 
 #view_5068 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
   color: #ffffff;
@@ -5439,7 +3341,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
 /*** TCF Post Sale Pack Page ***/
 
-
 #view_5067 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
   color: #ffffff;
   font-weight: bold;
@@ -5449,7 +3350,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 }
 
 /*** Warranty and Add On Page ***/
-
 
 #view_5065 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
   color: #ffffff;
@@ -5869,91 +3769,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   background-color: #ffffff;
 }
 
-#view_776 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_776 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_776 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_776 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_776 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_776 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_776 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_776 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_776 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_776 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 /* Department Overview Panels */
 
 /* NEW LIST VIEW */
@@ -5991,58 +3806,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   margin-bottom: 5px;
 }
 
-/* Change Button Colour */
-#view_755 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_755 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_768 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_768 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_789 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_789 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 /* USED LIST VIEW */
 
 #\35 abcc5cbd644d629638dd926 > section > div > div:nth-child(1) > div:nth-child(1) {
@@ -6068,56 +3831,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 }
 
 /* Change Button Colour */
-#view_757 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_757 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_769 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_769 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_788 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_788 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
 
 /* FLEET LIST VIEW */
 
@@ -6152,281 +3865,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   background-color: #ffffff;
   margin-right: 20px;
   margin-bottom: 5px;
-}
-
-/* Change Button Colour */
-#view_758 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_758 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_770 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_770 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* SERVICE LIST VIEW */
-
-/* Change Button Colour */
-#view_764 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_764 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_790 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_790 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* PARTS LIST VIEW */
-
-/* Change Button Colour */
-#view_765 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_765 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_791 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_791 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* MARKETING LIST VIEW */
-
-/* Change Button Colour */
-#view_766 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_766 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_792 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_792 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* HR LIST VIEW */
-
-/* Change Button Colour */
-#view_767 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_767 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_793 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_793 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* DEALERSHIP OVERVIEW */
-/* Change Button Colour */
-#view_777 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_777 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* REGIONAL OVERVIEWS */
-/* Change Button Colour Region 1 */
-#view_809 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_809 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* Change Button Colour Region 2 */
-#view_810 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_810 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* Change Button Colour Region 3 */
-#view_811 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_811 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* Change Button Colour Region 4 */
-#view_812 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-#view_812 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
 }
 
 /*Camera app shared CSS*/
@@ -6947,24 +4385,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
 /* Customer Address Map */
 
-#view_4776 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4776 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 #view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a > span {
   color: #ffffff;
   background-color: #19365e;
@@ -6983,125 +4403,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   border-color: #ffffff;
 }
 
-/* Dealer DOC or Profit Sheets Table Filters */
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_4698 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 /*********Used Historic Doc*********/
-
-/*Navigation Buttons*/
-
-#view_5399 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5399 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5400 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5400 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
 
 /*Dealer Performance (Individual) Page*/
 
@@ -7162,163 +4464,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   font-size: 15px;
 }
 
-
-
-/**Orange Filter Buttons on Dealer DOC Table**/
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(8) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(9) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5163 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(13) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/**Orange Date Filters on Historic DOC Table**/
-
-#view_5154 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5154 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5154 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5278 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5278 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5278 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5279 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5279 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_5279 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/**"add valet" button on valet to do page*/
-#view_4811 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4811 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 /**"Valeter Instructions" button on valet to do page*/
 #view_4811 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
   background-color: #ffafcc;
@@ -7375,114 +4520,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   box-shadow: 3px 3px #ccc;
 }
 
-/**"AT Retail Metrics Explained" button on Used Checked in Awaiting Action page*/
-#view_3591 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3591 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-/**"Booking a Used Vehicle Check-in Valet Help" button on Used Checked in Awaiting Action page*/
-#view_3591 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3591 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-/**"Send Valet Instructions" button on Used Checked in Awaiting Action page*/
-#view_3591 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3591 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-/**"Book a Used Handover Valet help & Support" button on Used deal book Handover*/
-#view_3604 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3604 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-/**"Valeter's Login Details" button on Used deal book Handover*/
-#view_3604 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3604 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-/**"Send Valet Instructions" button on Used deal book Handover*/
-#view_3604 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_3604 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
 /**"Begin Valeting" button on Valeter's Instructions */
 #view_4791 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #ffafcc;
@@ -7715,68 +4752,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   box-shadow: 3px 3px #ccc;
 }
 
-/**Used DOC Help Button Colour**/
-
-#view_4878 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4878 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/**Group Level Map Button Colour**/
-
-#view_4890 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4890 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 /****************** AUDIT TEAM *********************/
-
-/*** Physical Stock Audit ***/
-
-#view_5210 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5210 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
 
 /* TOOLTIP CSS*/
 [data-tooltip] {
@@ -8241,25 +5217,4 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5076 .kn-records-nav .control > a:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
-}
-/*3d button END*/
-
-/*********Used Historic Doc*********/
-
-#view_5403 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffa100;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5403 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
 }
