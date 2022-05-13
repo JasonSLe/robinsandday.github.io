@@ -384,7 +384,8 @@ body {
 
 /* Link to Pricing and Advert Performance History from Sales Channel Page */
 
-#view_4937 > section > div > div > div > div > div > div > span > a {
+#view_4937 > section > div > div > div > div > div > div > span > a,
+#view_5369 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a {
   color: #ffffff;
   font-weight: bold;
   background-color: #00cc66;
@@ -402,14 +403,8 @@ body {
 
 /****** Used Stock Management Filters *******/
 
-#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
-  background-color: #495057;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Auto Pricing Dashboard Filters */
-
+#view_1149 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
 #view_4025 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
   background-color: #495057;
   color: #ffffff;
@@ -734,17 +729,32 @@ body {
   font-weight: bold;
 }
 
-#kn-report-view_2507-1 > div.kn-report-rendered > table > tbody > tr.kn-table_summary.even > td:nth-child(3) {
-  visibility: hidden;
-}
-
+#kn-report-view_2507-1 > div.kn-report-rendered > table > tbody > tr.kn-table_summary.even > td:nth-child(3),
 #kn-report-view_2507-1 > div.kn-report-rendered > table > tbody > tr.kn-table_summary.even > td:nth-child(5) {
   visibility: hidden;
 }
 
 /****** REGIONAL USED Stock Profiling Buttons ******/
 
-#view_4314 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_4314 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4314 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4314 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_4314 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_2200 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_2200 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_2200 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_2200 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_2311 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_2311 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_2311 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_2311 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_2262 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_2262 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_2262 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_2262 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_2583 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_2583 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_2806 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
   font-weight: bold;
@@ -754,48 +764,8 @@ body {
   border-color: #ffffff;
 }
 
-#view_4314 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_4314 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_4314 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_3171 > div > a.kn-link.kn-link-1.kn-link-page.is-primary.kn-button {
-  background-color: #d18400 !important;
-  color: #ffffff !important;
-  font-weight: bold !important;
-}
-
-#view_3171 > div > a.kn-link.kn-link-2.kn-link-page.is-primary.kn-button {
-  background-color: #d18400 !important;
-  color: #ffffff !important;
-  font-weight: bold !important;
-}
-
+#view_3171 > div > a.kn-link.kn-link-1.kn-link-page.is-primary.kn-button,
+#view_3171 > div > a.kn-link.kn-link-2.kn-link-page.is-primary.kn-button,
 #view_3171 > div > a.kn-link.kn-link-3.kn-link-page.is-primary.kn-button {
   background-color: #d18400 !important;
   color: #ffffff !important;
@@ -879,38 +849,12 @@ body {
 
 /* Re-size Options box on Order Tracking 'In Progress' Detail View */
 
-#view_1542 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(2) > div > div > div.kn-detail.field_4004 {
-  box-sizing: border-box;
-  max-height: 110px;
-}
-
-#view_1549 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div {
-  box-sizing: border-box;
-  max-height: 110px;
-}
-
-#view_1547 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div {
-  box-sizing: border-box;
-  max-height: 110px;
-}
-
-/* Re-size Options box on Order Tracking 'In Progress' Detail View */
-
-#view_1657 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(2) > div > div > div.kn-detail.field_4004 {
-  box-sizing: border-box;
-  max-height: 110px;
-}
-
-#view_1654 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div {
-  box-sizing: border-box;
-  max-height: 110px;
-}
-
-#view_1655 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div {
-  box-sizing: border-box;
-  max-height: 110px;
-}
-/* D9V8 Page */
+#view_1542 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(2) > div > div > div.kn-detail.field_4004,
+#view_1549 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div,
+#view_1547 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div,
+#view_1657 > section > div.kn-details-column.first.column.is-horizontal > div:nth-child(2) > div > div > div.kn-detail.field_4004,
+#view_1654 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div,
+#view_1655 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div,
 #view_1666 > section > div > div > div:nth-child(1) > div > div:nth-child(8) > div {
   box-sizing: border-box;
   max-height: 110px;
@@ -1145,14 +1089,18 @@ visibility: visible;
 
 /*** REQUEST TO CONTROL PRICING BUTTON ***/
 
-#view_5355 .kn-link-page {
+#view_5355 .kn-link-page,
+#view_3870 > section > div > div > div > div > div > div > span > a,
+#view_5215 > section > div > div > div > div > div > div > span > a {
   color: #ffffff;
   background-color: #ff1414;
   padding: 8px;
   display: inline-block;
 }
 
-#view_5355 .kn-link-page:hover {
+#view_5355 .kn-link-page:hover,
+#view_3870 > section > div > div > div > div > div > div > span > a:hover,
+#view_5215 > section > div > div > div > div > div > div > span > a:hover {
   color: #ffffff;
   background-color: #b10000;
   padding: 8px;
@@ -1161,7 +1109,8 @@ visibility: visible;
 
 /*** REMOVE PRICE CONTROL AND REINSTATE AUTO PRICE BUTTON ***/
 
-#view_5360 .kn-link-page {
+#view_5360 .kn-link-page,
+#view_2779 > section > div > div > div > div > div > div > span > a > span {
   color: #ffffff;
   background-color: #ffa100;
   padding: 8px;
@@ -1177,36 +1126,11 @@ visibility: visible;
 
 /*** Link to view Pricing and Advert Performance ***/
 
-#view_5369 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #00cc66;
-  padding: 12px;
-  display: inline-block;
-}
-
 #view_5369 > section > div > div.kn-details-group.column-1.columns > div > div > div > div > span > a:hover {
   color: #ffffff;
   font-weight: bold;
   background-color: #32936f;
   padding: 12px;
-  display: inline-block;
-}
-
-/***** Auto Pricing Section *******/
-/* Disable Auto Pricing Link to Button */
-
-#view_3870 > section > div > div > div > div > div > div > span > a {
-  color: #ffffff;
-  background-color: #ff1414;
-  padding: 8px;
-  display: inline-block;
-}
-
-#view_3870 > section > div > div > div > div > div > div > span > a:hover {
-  color: #ffffff;
-  background-color: #b10000;
-  padding: 8px;
   display: inline-block;
 }
 
@@ -1223,86 +1147,6 @@ visibility: visible;
 
 /* Used Vehicle Check In Page Tab CSS */
 
-#view_2200 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2200 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2200 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2200 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2311 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2311 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2311 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2311 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
 #view_2311 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
   background-color: #ea9191;
   color: #ffffff;
@@ -1311,68 +1155,6 @@ visibility: visible;
 
 #view_2311 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
   background-color: #e05454;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2262 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2262 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2262 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2262 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-/* Trade Transfers In/Out Tabs CSS */
-
-#view_2583 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-#view_2583 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400;
   color: #ffffff;
   font-weight: bold;
   transition-property: color;
@@ -1557,14 +1339,20 @@ visibility: visible;
 
 /********** Link to View Agreed to Terms & Conditions *********/
 
-#view_2767 > section > div > div > div > div > div > div > span > a > span {
+#view_2767 > section > div > div > div > div > div > div > span > a > span,
+#view_2781 > section > div > div > div > div > div > div > span > a > span,
+#view_4815 > section > div > div > div > div > div > div > span > a > span,
+#view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a > span {
   color: #ffffff;
   background-color: #19365e;
   padding: 8px;
   display: inline-block;
 }
 
-#view_2767 > section > div > div > div > div > div > div > span > a:hover > span {
+#view_2767 > section > div > div > div > div > div > div > span > a:hover > span,
+#view_2781 > section > div > div > div > div > div > div > span > a:hover > span,
+#view_4815 > section > div > div > div > div > div > div > span > a:hover > span,
+#view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a:hover > span {
   color: #ffffff;
   background-color: #0f2542;
   padding: 8px;
@@ -1583,15 +1371,9 @@ visibility: visible;
   font-size: 11px;
 }
 
-#view_2550 {
-  font-size: 11px;
-  font-weight: bold;
-}
+#view_2550,
+#view_2550 > section > div > div > div:nth-child(3) > div > div:nth-child(1) > div > h3,
 #view_2550 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div > h3 {
-  font-size: 11px;
-  font-weight: bold;
-}
-#view_2550 > section > div > div > div:nth-child(3) > div > div:nth-child(1) > div > h3 {
   font-size: 11px;
   font-weight: bold;
 }
@@ -1645,36 +1427,9 @@ visibility: visible;
 
 /********** Link to Agree to Terms & Conditions *********/
 
-#view_2779 > section > div > div > div > div > div > div > span > a > span {
-  color: #ffffff;
-  background-color: #ffa100;
-  padding: 8px;
-  display: inline-block;
-}
-
 #view_2779 > section > div > div > div > div > div > div > span > a:hover > span {
   color: #ffffff;
   background-color: #d18400;
-  padding: 8px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-/********** Link to View Agreed to Terms & Conditions *********/
-
-#view_2781 > section > div > div > div > div > div > div > span > a > span {
-  color: #ffffff;
-  background-color: #19365e;
-  padding: 8px;
-  display: inline-block;
-}
-
-#view_2781 > section > div > div > div > div > div > div > span > a:hover > span {
-  color: #ffffff;
-  background-color: #0f2542;
   padding: 8px;
   display: inline-block;
   transition-property: color;
@@ -1695,7 +1450,10 @@ visibility: visible;
 /******* Links to Update Delivery and Deal File Contents Status *******/
 /**** Link from Deal File ****/
 
-#view_4069 > section > div > div:nth-child(1) > div > div > div > div > span > a {
+#view_4069 > section > div > div:nth-child(1) > div > div > div > div > span > a,
+#view_4082 > section > div > div:nth-child(1) > div > div > div > div > span > a,
+#view_4892 > section > div > div:nth-child(1) > div > div > div > div > span > a,
+#view_4193 > section > div > div:nth-child(1) > div > div > div > div > span > a {
   color: #ffffff;
   font-weight: bold;
   background-color: #00cc66;
@@ -1704,47 +1462,10 @@ visibility: visible;
   border-left: 10px solid #32a1ce;
 }
 
-#view_4069 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #32936f;
-  padding: 8px;
-  display: inline-block;
-  border-left: 10px solid #32a1ce;
-}
-
-/**** Link from Handover Docs ****/
-
-#view_4082 > section > div > div:nth-child(1) > div > div > div > div > span > a {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #00cc66;
-  padding: 8px;
-  display: inline-block;
-  border-left: 10px solid #32a1ce;
-}
-
-#view_4082 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #32936f;
-  padding: 8px;
-  display: inline-block;
-  border-left: 10px solid #32a1ce;
-}
-
-/* Link from Email ZIP Folder Page */
-
-#view_4892 > section > div > div:nth-child(1) > div > div > div > div > span > a {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #00cc66;
-  padding: 8px;
-  display: inline-block;
-  border-left: 10px solid #32a1ce;
-}
-
-#view_4892 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
+#view_4069 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover,
+#view_4082 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover,
+#view_4892 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover,
+#view_4193 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
   color: #ffffff;
   font-weight: bold;
   background-color: #32936f;
@@ -1755,37 +1476,27 @@ visibility: visible;
 
 /***** Handover Documents Button Format on Used Vehicle Deal File Page ******/
 
-#view_2564 .control {
+#view_2564 .control,
+#view_3895 .control,
+#kn-input-section-1575466918654 > div > h3,
+#kn-input-section-1575466918654 > div > p,
+#view_2520 > form > div,
+#kn-input-section-1575466994787 > div > h3,
+#kn-input-section-1575466994787 > div > p,
+#view_2548 > form > div {
   text-align: center;
 }
 
-/******** Button to Email ZIP Folder of Customer Documents *********/
-
-#view_3895 .control {
-  text-align: center;
-}
-
-/**** Retrieve/Update Order Form FORM ****/
-#kn-input-section-1575466918654 > div > h3 {
-  text-align: center;
-}
-
-#kn-input-section-1575466918654 > div > p {
-  text-align: center;
-}
-
-#view_2520 > form > div {
-  text-align: center;
-}
-
-#view_2520 > form > div > button {
+#view_2520 > form > div > button,
+#view_2548 > form > div > button {
   background-color: #8d8e8e !important;
   color: #ffffff;
   font-weight: bold;
   border-left: 10px solid #de3163 !important;
 }
 
-#view_2520 > form > div > button:hover {
+#view_2520 > form > div > button:hover,
+#view_2548 > form > div > button:hover {
   background-color: #463f3a;
   color: #ffffff;
   font-weight: bold;
@@ -1801,35 +1512,6 @@ visibility: visible;
 }
 
 /**** Retrieve/Update Invoice FORM ****/
-
-#kn-input-section-1575466994787 > div > h3 {
-  text-align: center;
-}
-
-#kn-input-section-1575466994787 > div > p {
-  text-align: center;
-}
-
-#view_2548 > form > div {
-  text-align: center;
-}
-
-#view_2548 > form > div > button {
-  background-color: #8d8e8e !important;
-  color: #ffffff;
-  font-weight: bold;
-  border-left: 10px solid #de3163 !important;
-}
-
-#view_2548 > form > div > button:hover {
-  background-color: #463f3a;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
 
 #view_2548 {
   border: 4px solid #cccccc;
@@ -2014,7 +1696,9 @@ visibility: visible;
 
 /***** Blue for Completed Actions *****/
 
-#kn-scene_990 .kn-detail-body a.kn-link-page .completed {
+#kn-scene_990 .kn-detail-body a.kn-link-page .completed,
+#kn-scene_997 .kn-detail-body a.kn-link-page .completed,
+#view_2585 > section > div > div > div > div > div.field_5054 > div > span > span > a {
   color: #ffffff;
   background-color: #19365e;
   padding: 8px;
@@ -2022,7 +1706,9 @@ visibility: visible;
   display: inline-block;
 }
 
-#kn-scene_990 .kn-detail-body a:hover.kn-link-page .completed {
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .completed,
+#kn-scene_997 .kn-detail-body a:hover.kn-link-page .completed,
+#view_2585 > section > div > div > div > div > div.field_5054 > div > span > span > a:hover {
   color: #ffffff;
   background-color: #0f2542;
   padding: 8px;
@@ -2036,7 +1722,8 @@ visibility: visible;
 
 /***** Orange and pink for Admin outstanding action *****/
 
-#kn-scene_990 .kn-detail-body a.kn-link-page .admin-task {
+#kn-scene_990 .kn-detail-body a.kn-link-page .admin-task,
+#kn-scene_997 .kn-detail-body a.kn-link-page .admin-task {
   color: #ffffff;
   background-color: #ffa100;
   padding: 8px;
@@ -2045,7 +1732,12 @@ visibility: visible;
   border-left: 10px solid #de3163;
 }
 
-#kn-scene_990 .kn-detail-body a:hover.kn-link-page .admin-task {
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .admin-task,
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .sale-task,
+#kn-scene_990 .kn-detail-body a:hover.kn-link-page .both-task,
+#kn-scene_997 .kn-detail-body a:hover.kn-link-page .admin-task,
+#kn-scene_997 .kn-detail-body a:hover.kn-link-page .sale-task,
+#kn-scene_997 .kn-detail-body a:hover.kn-link-page .both-task {
   color: #ffffff;
   background-color: #d18400;
   padding: 8px;
@@ -2057,7 +1749,8 @@ visibility: visible;
 
 /***** Orange and pink for Sales Advisor outstanding action *****/
 
-#kn-scene_990 .kn-detail-body a.kn-link-page .sale-task {
+#kn-scene_990 .kn-detail-body a.kn-link-page .sale-task,
+#kn-scene_997 .kn-detail-body a.kn-link-page .sale-task {
   color: #ffffff;
   background-color: #ffa100;
   padding: 8px;
@@ -2066,19 +1759,10 @@ visibility: visible;
   border-left: 10px solid #32a1ce;
 }
 
-#kn-scene_990 .kn-detail-body a:hover.kn-link-page .sale-task {
-  color: #ffffff;
-  background-color: #d18400;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
-}
-
 /***** Orange and pink/blue for Sales Advisor/Admin outstanding action *****/
 
-#kn-scene_990 .kn-detail-body a.kn-link-page .both-task {
+#kn-scene_990 .kn-detail-body a.kn-link-page .both-task,
+#kn-scene_997 .kn-detail-body a.kn-link-page .both-task {
   color: #ffffff;
   background-color: #ffa100;
   padding: 8px;
@@ -2088,16 +1772,6 @@ visibility: visible;
   transition-duration: 0.3s;
   border-left: 10px solid #de3163;
   border-right: 10px solid #32a1ce;
-}
-
-#kn-scene_990 .kn-detail-body a:hover.kn-link-page .both-task {
-  color: #ffffff;
-  background-color: #d18400;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
 }
 
 /***** Orange for Incomplete Actions on Remote Customer Signing View *****/
@@ -2166,46 +1840,6 @@ visibility: visible;
   border-color: #ffffff;
 }
 
-#kn-scene_997 .kn-detail-body a.kn-link-page .completed {
-  color: #ffffff;
-  background-color: #19365e;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-}
-
-#kn-scene_997 .kn-detail-body a:hover.kn-link-page .completed {
-  color: #ffffff;
-  background-color: #0f2542;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-/***** Handover Orange and pink for Admin outstanding action  *****/
-#kn-scene_997 .kn-detail-body a.kn-link-page .admin-task {
-  color: #ffffff;
-  background-color: #ffa100;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  border-left: 10px solid #de3163;
-}
-
-#kn-scene_997 .kn-detail-body a:hover.kn-link-page .admin-task {
-  color: #ffffff;
-  background-color: #d18400;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
-}
-
 /***** Green for Consolidated Handover Pack - Sales Task *****/
 
 #kn-scene_997 .kn-detail-body a.kn-link-page .handover-pack {
@@ -2228,48 +1862,7 @@ visibility: visible;
   transition-duration: 0.3s;
 }
 
-/***** Handover Orange and blue for Sale Advisor outstanding action  *****/
-#kn-scene_997 .kn-detail-body a.kn-link-page .sale-task {
-  color: #ffffff;
-  background-color: #ffa100;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  border-left: 10px solid #32a1ce;
-}
-
-#kn-scene_997 .kn-detail-body a:hover.kn-link-page .sale-task {
-  color: #ffffff;
-  background-color: #d18400;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
-}
-
 /***** Handover Orange pink/blue for Admin/Sale Advisor outstanding action  *****/
-#kn-scene_997 .kn-detail-body a.kn-link-page .both-task {
-  color: #ffffff;
-  background-color: #ffa100;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-left: 10px solid #de3163;
-  border-right: 10px solid #32a1ce;
-}
-
-#kn-scene_997 .kn-detail-body a:hover.kn-link-page .both-task {
-  color: #ffffff;
-  background-color: #d18400;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
-}
 
 #view_2585 > section > div > div > div > div > div.field_5054 > div > span > span > a {
   text-decoration: none !important;
@@ -2277,32 +1870,16 @@ visibility: visible;
 
 /* HPI Check Page - Re-do HPI Check once Finance Settled */
 
-#view_2919 > form > div > button {
+#view_2919 > form > div > button,
+#view_2807 > form > div > button,
+#view_2819 > form > div > button,
+#view_2824 > form > div > button,
+#view_2867 > form > div > button,
+#view_2901 > form > div > button,
+#view_2925 > form > div > button {
   background-color: #ffa100 !important;
   color: #ffffff;
   font-weight: bold;
-}
-
-/* Vehicle - Part Ex Valuation Link */
-
-#view_2585 > section > div > div > div > div > div.field_5054 > div > span > span > a {
-  color: #ffffff;
-  background-color: #19365e;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-}
-
-#view_2585 > section > div > div > div > div > div.field_5054 > div > span > span > a:hover {
-  color: #ffffff;
-  background-color: #0f2542;
-  padding: 8px;
-  width: 250px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
 }
 
 /* Vehicle - No Part Ex Text */
@@ -2314,65 +1891,13 @@ visibility: visible;
   padding: 8px;
 }
 
-/* Start New Appraisal Button when Appraisal NOT Complete */
-
-#view_2806 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #d18400;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
-/* Re-Check for Completed Customer Part Exchange Appraisal */
-
-#view_2807 > form > div > button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/********* FCA DEMANDS & NEEDS PAGE *********/
-
-#view_2819 > form > div > button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 /********* PROFIT & LOSS PAGE *******/
 
 #view_4013 th span {
   margin: auto !important;
 }
 
-/********* PROFIT & LOSS OVERVIEW PAGE *******/
-
-#view_2824 > form > div > button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 /**Digital P&L Overview PAGE V2**/
-
-/* No SIV Found - Link to Clear Franchise Selection */
-
-#view_5215 > section > div > div > div > div > div > div > span > a {
-  color: #ffffff;
-  background-color: #ff1414;
-  padding: 8px;
-  display: inline-block;
-}
-
-#view_5215 > section > div > div > div > div > div > div > span > a:hover {
-  color: #ffffff;
-  background-color: #b10000;
-  padding: 8px;
-  display: inline-block;
-}
 
 /**Back to Overview page button**/
 
@@ -2392,34 +1917,10 @@ visibility: visible;
   border-radius: 6px;
 }
 
-/******** RECEIPT OF DEPOSIT PAGE *******/
-
-#view_2867 > form > div > button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 /* Resize Text on Details for Customer View */
 
 #view_2905 > section > div > div:nth-child(5) > div > div > div > div > h3 {
   font-size: 14px;
-}
-
-/* Add Handover Appointment Button Colour */
-
-#view_2901 > form > div > button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-/* Update Handover Appointment Button Colour */
-
-#view_2925 > form > div > button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
 }
 
 /********* CUSTOMER HANDOVER DIARY *********/
@@ -2449,14 +1950,10 @@ visibility: visible;
   font-size: 12px;
 }
 
-#view_3463 > form > ul:nth-child(1) {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #6e6f71;
-  padding-bottom: 10px;
-}
-
-#view_3463 > form > ul:nth-child(4) {
+#view_3463 > form > ul:nth-child(1),
+#view_3463 > form > ul:nth-child(4),
+#view_3466 > section > div > div:nth-child(2),
+#view_3466 > section > div > div:nth-child(5) {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #6e6f71;
@@ -2472,79 +1969,18 @@ visibility: visible;
 
 /* Completed Part Ex Purchase Details */
 
-#view_3466 > section > div > div:nth-child(1) > div > div > div > div > h3 {
-  font-size: 16px;
-}
-
+#view_3466 > section > div > div:nth-child(1) > div > div > div > div > h3,
 #view_3466 > section > div > div:nth-child(3) > div > div > div:nth-child(2) > div > h3 {
   font-size: 16px;
 }
 
-#view_3466 > section > div > div:nth-child(2) {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #6e6f71;
-  padding-bottom: 10px;
-}
-
-#view_3466 > section > div > div:nth-child(5) {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #6e6f71;
-  padding-bottom: 10px;
-}
-
-/********* CUSTOMER SATISFACTION SURVEY PAGE *********/
-
-#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-  background-color: #495057;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-  background-color: #495057;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-  background-color: #495057;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-  background-color: #495057;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-#view_3889 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-  background-color: #495057;
-  color: #ffffff;
-  font-weight: bold;
-}
-
 /**LEV Reporting Center Table Headings**/
 
+#view_5241 th span,
+#view_5236 th span,
+#view_5243 th span,
+#view_5238 th span,
 #view_5241 th span {
-  margin: auto !important;
-}
-
-#view_5236 th span {
-  margin: auto !important;
-}
-
-#view_5241 th span {
-  margin: auto !important;
-}
-
-#view_5238 th span {
-  margin: auto !important;
-}
-
-#view_5243 th span {
   margin: auto !important;
 }
 
@@ -2586,38 +2022,29 @@ visibility: visible;
 
 /********* First select box rating car buying experience *********/
 
-#view_2940-field_5976 > option:nth-child(2) {
+#view_2940-field_5976 > option:nth-child(2),
+#view_2940-field_5976 > option:nth-child(3),
+#view_2940-field_5655 > option:nth-child(2),
+#view_2940-field_5655 > option:nth-child(3),
+#view_4149-field_5976 > option:nth-child(2),
+#view_4149-field_5976 > option:nth-child(3),
+#view_4149-field_5655 > option:nth-child(2),
+#view_4149-field_5655 > option:nth-child(3),
+#view_4652-field_5976 > option:nth-child(2),
+#view_4652-field_5976 > option:nth-child(3),
+#view_4652-field_5655 > option:nth-child(2),
+#view_4652-field_5655 > option:nth-child(3) {
   background-color: #23d160;
   color: #fafafa;
   font-size: 16px;
 }
 
-#view_2940-field_5976 > option:nth-child(3) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_2940-field_5976 > option {
-  background: #eee;
-  color: #000;
-}
-
-/********* second select box recomend to family or friends*********/
-
-#view_2940-field_5655 > option:nth-child(2) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_2940-field_5655 > option:nth-child(3) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_2940-field_5655 > option {
+#view_2940-field_5976 > option,
+#view_2940-field_5655 > option,
+#view_4149-field_5976 > option,
+#view_4149-field_5655 > option,
+#view_4652-field_5976 > option,
+#view_4652-field_5655 > option {
   background: #eee;
   color: #000;
 }
@@ -2627,91 +2054,23 @@ visibility: visible;
 /*** Manager Docs to Review ***/
 
 /* TCF Pre Sale Pack */
-#view_4155 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5588 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* TCF Pre Sale Pack Not Required */
-#view_4155 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6092 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* TCF Post Sale Pack */
-#view_4155 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5626 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* TCF Post Sale Pack Not Required */
-#view_4155 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6452 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Receipt of Deposit*/
-#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5590 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Confirm No Receipt of Deposit */
-#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6224 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Receipt of Balance */
-#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6012 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Confirm No Receipt of Balance */
-#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6013 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Confirmation of Bank Transfer */
-#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6368 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Confirmation of Finance Payout */
-#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6370 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Satisfaction Survey NOT Complete */
-#view_4155 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5672 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Customer P/X Settlement */
-#view_4155 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6115 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Customer P/XAppraisal 1 */
-#view_4155 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5556 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Customer P/XAppraisal 2 */
-#view_4155 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5559 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Customer P/XAppraisal 3 */
-#view_4155 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5562 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Part Exxchange Appraisal Link */
-#view_4155 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5959 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Satisfaction Survey */
-#view_4522 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6267 > div.kn-detail-label {
-  border-left: 10px solid #32a1ce;
-}
-
-/* Manual Satisfaction Survey */
+#view_4155 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5588 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6092 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5626 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6452 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5590 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6224 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6012 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6013 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6368 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6370 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5672 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6115 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5556 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5559 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(6) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5562 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5959 > div.kn-detail-label,
+#view_4522 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6267 > div.kn-detail-label,
 #view_4522 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6006 > div.kn-detail-label {
   border-left: 10px solid #32a1ce;
 }
@@ -2719,91 +2078,23 @@ visibility: visible;
 /*** Admin DOCs to Review ***/
 
 /* V5 Doc */
-#view_4155 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5988 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Vehicle Purchase Invoice */
-#view_4155 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5685 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Settlement Confirmation */
-#view_4155 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5959 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Vehicle Invoice */
-#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6263 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Manual Vehicle Invoice */
-#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6223 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Supplementary Invoice */
-#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6369 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Trade Confirmation of Sale */
-#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6109 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Additional Warranty */
-#view_4155 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5662 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Total Loss Cover Conf */
-#view_4155 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6096 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* CRI Conf */
-#view_4155 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6433 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Supaguard/Protect Conf */
-#view_4155 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6112 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Service Plan Confirmation */
-#view_4155 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5667 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* No Service Plan Reason */
-#view_4155 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6242 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Credit Note 1 */
-#view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6248 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Credit Note 2 */
-#view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6250 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Credit Note 3 */
-#view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6251 > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Service Schedule */
-#view_4519 > section > div > div > div:nth-child(1) > div > div > div.kn-detail-label {
-  border-left: 10px solid #de3163;
-}
-
-/* Customer P/X Invoice and V5 */
+#view_4155 > section > div > div:nth-child(8) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5988 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5685 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(10) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5959 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6263 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6223 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6369 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(11) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6109 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5662 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6096 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6433 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(12) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6112 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_5667 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6242 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6248 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6250 > div.kn-detail-label,
+#view_4155 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_6251 > div.kn-detail-label,
+#view_4519 > section > div > div > div:nth-child(1) > div > div > div.kn-detail-label,
 #view_4521 {
   border-left: 10px solid #de3163;
 }
@@ -2811,12 +2102,7 @@ visibility: visible;
 /*** ADMIN & MANAGER TO REVIEW ***/
 
 /* Handover Checklist */
-#view_4520 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6264 > div.kn-detail-label {
-  border-right: 10px solid #de3163;
-  border-left: 10px solid #32a1ce;
-}
-
-/* Manual Handover Checklist */
+#view_4520 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6264 > div.kn-detail-label,
 #view_4520 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6003 > div.kn-detail-label {
   border-right: 10px solid #de3163;
   border-left: 10px solid #32a1ce;
@@ -2849,26 +2135,7 @@ visibility: visible;
 
 /* Links to Audit Page from Deal File and Handover Docs */
 
-#view_4296 > section > div > div > div > div > div > div > span > a {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #00cc66;
-  padding: 8px;
-  display: inline-block;
-  border-left: 10px solid #de3163;
-  border-right: 10px solid #32a1ce;
-}
-
-#view_4296 > section > div > div > div > div > div > div > span > a:hover {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #32936f;
-  padding: 8px;
-  display: inline-block;
-  border-left: 10px solid #de3163;
-  border-right: 10px solid #32a1ce;
-}
-
+#view_4296 > section > div > div > div > div > div > div > span > a,
 #view_4297 > section > div > div > div > div > div > div > span > a {
   color: #ffffff;
   font-weight: bold;
@@ -2879,6 +2146,7 @@ visibility: visible;
   border-right: 10px solid #32a1ce;
 }
 
+#view_4296 > section > div > div > div > div > div > div > span > a:hover,
 #view_4297 > section > div > div > div > div > div > div > span > a:hover {
   color: #ffffff;
   font-weight: bold;
@@ -2891,344 +2159,55 @@ visibility: visible;
 
 /******* CSS to make File Uploads Stand out when Files Exist *******/
 /* Original Order */
-#kn-input-field_5957 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-#kn-input-field_5957 > a {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Latest Order */
-#kn-input-field_7846 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-#kn-input-field_7846 > a {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Supplementary Order */
-#kn-input-field_6554 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Manual Invoice */
-#kn-input-field_6223 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* V5 Doc */
-#kn-input-field_5988 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Demands & Needs */
-#kn-input-field_5588 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Profit & Loss */
-#kn-input-field_5589 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* P/X Finance Settlement */
-#kn-input-field_6115 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Deposit Receipt */
+#kn-input-field_5957 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5960 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5962 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5964 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6248 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6250 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6251 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6014 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6026 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6109 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6003 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6006 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6239 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5588 > a,
+#kn-input-field_6263 > a,
+#kn-input-field_6266 > a,
+#kn-input-field_6265 > a,
+#kn-input-field_6264 > a,
+#kn-input-field_5626 > a,
+#kn-input-field_5996 > a,
+#kn-input-field_6012 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5959 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5626 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5628 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5643 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6805 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5662 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_7396 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6096 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6433 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6112 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5667 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5685 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5990 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5996 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5957 > a,
+#kn-input-field_7846 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_7846 > a,
+#kn-input-field_6554 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6223 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5988 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5588 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_5589 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6115 > div > div.kn-asset-current > div > div > a.kn-view-asset,
 #kn-input-field_5590 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
   color: #388cf5;
-}
-/* Balance Receipt */
-#kn-input-field_6012 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Stock Vehicle Finance Settlement */
-#kn-input-field_5959 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* FCA Finance */
-#kn-input-field_5626 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* FCA Insurance */
-#kn-input-field_5628 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Finance Quote */
-#kn-input-field_5643 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Finance Acceptance/Situation */
-#kn-input-field_6805 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Warranty and Assistance */
-#kn-input-field_5662 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Extended Warranty (Spoticar Only) */
-#kn-input-field_7396 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* GAP / FSI */
-#kn-input-field_6096 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* CRI */
-#kn-input-field_6433 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Supaguard */
-#kn-input-field_6112 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Service Plan Confirmation */
-#kn-input-field_5667 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Vehicle Purchase Invoice */
-#kn-input-field_5685 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Tax Confirmation */
-#kn-input-field_5990 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Test Drive */
-#kn-input-field_5996 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Misc 1 */
-#kn-input-field_5960 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Misc 2 */
-#kn-input-field_5962 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Misc 3 */
-#kn-input-field_5964 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Credit Note 1 */
-#kn-input-field_6248 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Credit Note 2 */
-#kn-input-field_6250 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Credit Note 3 */
-#kn-input-field_6251 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Conformity */
-#kn-input-field_6014 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* DVLA New Keeper Dec */
-#kn-input-field_6026 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Trade Cofnirmation of Sale */
-#kn-input-field_6109 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Manual Handover Checklist */
-#kn-input-field_6003 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Manual CSI Survey */
-#kn-input-field_6006 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-/* Part Ex V5 Document */
-#kn-input-field_6239 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-
-/* Pre Sale Pack Read Only Document */
-#kn-input-field_5588 > a {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-
-/* PDF of Invoice Read Only Document */
-#kn-input-field_6263 > a {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-
-/* PDF of Part Ex Invoice Read Only Document */
-#kn-input-field_6266 > a {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-
-/* PDF of Service Schedule Read Only Document */
-#kn-input-field_6265 > a {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-
-/* PDF of Handover Checklist Read Only Document */
-#kn-input-field_6264 > a {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-
-/* Post Sale Pack Read Only Document */
-#kn-input-field_5626 > a {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-
-/* Test Drive Confirmation Read Only Document */
-#kn-input-field_5996 > a {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-
-/*************** SIGN ONLINE ACTIVATION AND DEALER VIEW **************/
-
-#view_4193 > section > div > div:nth-child(1) > div > div > div > div > span > a {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #00cc66;
-  padding: 8px;
-  display: inline-block;
-  border-left: 10px solid #32a1ce;
-}
-
-#view_4193 > section > div > div:nth-child(1) > div > div > div > div > span > a:hover {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #32936f;
-  padding: 8px;
-  display: inline-block;
-  border-left: 10px solid #32a1ce;
 }
 
 /* Pull Delivery Status Button and Sign Online Button Side by Side */
@@ -3250,7 +2229,12 @@ visibility: visible;
   display: inline-block;
 }
 
-#\36 036159d004821075460cbf1 > td.kn-table-link > span > a:hover {
+#\36 036159d004821075460cbf1 > td.kn-table-link > span > a:hover,
+#view_5131 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover,
+#view_2767 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover,
+#view_5068 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover,
+#view_5067 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover,
+#view_5065 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
   color: #ffffff;
   font-weight: bold;
   background-color: #d18400;
@@ -3271,93 +2255,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 /******** Remote Customer Satisfaction Survey *********/
 /********* First select box rating car buying experience *********/
 
-#view_4149-field_5976 > option:nth-child(2) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_4149-field_5976 > option:nth-child(3) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_4149-field_5976 > option {
-  background: #eee;
-  color: #000;
-}
-
-/********* second select box recomend to family or friends*********/
-
-#view_4149-field_5655 > option:nth-child(2) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_4149-field_5655 > option:nth-child(3) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_4149-field_5655 > option {
-  background: #eee;
-  color: #000;
-}
-
 /*************** Enquiry Max Links ***************/
-
-/*** Deal File Overview Page ***/
-
-#view_5131 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #d18400;
-  padding: 8px;
-  display: inline-block;
-}
-
-/*** Order Form Page ***/
-
-#view_2767 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #d18400;
-  padding: 8px;
-  display: inline-block;
-}
-
-/*** TCF Pre Sale Pack Page ***/
-
-#view_5068 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #d18400;
-  padding: 8px;
-  display: inline-block;
-}
-
-/*** TCF Post Sale Pack Page ***/
-
-#view_5067 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #d18400;
-  padding: 8px;
-  display: inline-block;
-}
-
-/*** Warranty and Add On Page ***/
-
-#view_5065 > section > div > div > div > div > div.kn-label-none.field_7447 > div > span > span > a:hover {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #d18400;
-  padding: 8px;
-  display: inline-block;
-}
 
 /************************ USED DEAL FILE CONSOLIDATED HANDOVER PACK **************************/
 
@@ -3367,14 +2265,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   font-size: 11px;
 }
 
-#view_4799 {
-  font-size: 11px;
-  font-weight: bold;
-}
-#view_4799 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div > h3 {
-  font-size: 11px;
-  font-weight: bold;
-}
+#view_4799,
+#view_4799 > section > div > div > div:nth-child(1) > div > div:nth-child(1) > div > h3,
 #view_4799 > section > div > div > div:nth-child(3) > div > div:nth-child(1) > div > h3 {
   font-size: 11px;
   font-weight: bold;
@@ -3413,25 +2305,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   font-size: 11px;
 }
 
-/* Terms and Conditions Link */
-#view_4815 > section > div > div > div > div > div > div > span > a > span {
-  color: #ffffff;
-  background-color: #19365e;
-  padding: 8px;
-  display: inline-block;
-}
-
-#view_4815 > section > div > div > div > div > div > div > span > a:hover > span {
-  color: #ffffff;
-  background-color: #0f2542;
-  padding: 8px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
 /***** HANDOVER PACK - PART EXCHANGE PURCHASE INVOICE *****/
 
 #view_5322 {
@@ -3445,13 +2318,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   padding-top: 20px;
 }
 
-#view_5324 > form > ul:nth-child(1) {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #6e6f71;
-  padding-bottom: 10px;
-}
-
+#view_5324 > form > ul:nth-child(1),
 #view_5324 > form > ul:nth-child(4) {
   border-bottom-style: solid;
   border-bottom-width: 2px;
@@ -3462,42 +2329,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 /********* HANDOVER PACK - HANDOVER CHECKLIST *********/
 
 /********* HANDOVER PACK - CUSTOMER SATISFACTION SURVEY PAGE *********/
-
-#view_4652-field_5976 > option:nth-child(2) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_4652-field_5976 > option:nth-child(3) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_4652-field_5976 > option {
-  background: #eee;
-  color: #000;
-}
-
-/********* second select box recomend to family or friends*********/
-
-#view_4652-field_5655 > option:nth-child(2) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_4652-field_5655 > option:nth-child(3) {
-  background-color: #23d160;
-  color: #fafafa;
-  font-size: 16px;
-}
-
-#view_4652-field_5655 > option {
-  background: #eee;
-  color: #000;
-}
 
 /********************************************************************Pete/Hynek iFrame Work****************************************************************/
 #knack-iframe {
@@ -4289,33 +3120,26 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 /* Centre Table Headers and Change Font for Used DOC.*/
 /**Group and Region Performance Page**/
 
-#view_4690 th span {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_4690 {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_4891 th span {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_4891 {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-/*Group Budget Table*/
-#view_4839 th span {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_4839 {
+#view_4690 th span,
+#view_4690,
+#view_4891 th span,
+#view_4891,
+#view_4839 th span,
+#view_4839,
+#view_4750,
+#view_4694 th span,
+#view_4694,
+#view_4696 th span,
+#view_4696,
+#view_4751,
+#view_5154 th span,
+#view_5154,
+#view_5134 th span,
+#view_5134,
+#view_5278 th span,
+#view_5278,
+#view_5279 th span,
+#view_5279 {
   margin: auto !important;
   font-size: 15px;
 }
@@ -4326,40 +3150,10 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   margin: auto !important;
 }
 
-#view_4750 {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_4694 th span {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_4694 {
-  margin: auto !important;
-  font-size: 15px;
-}
-
 /**Dealers in that Region Page**/
-
-#view_4696 th span {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_4696 {
-  margin: auto !important;
-  font-size: 15px;
-}
 
 #view_4751 th span {
   margin: auto !important;
-}
-
-#view_4751 {
-  margin: auto !important;
-  font-size: 15px;
 }
 
 /**Used Doc - Dealer Performance (Individual) Page**/
@@ -4383,26 +3177,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   font-size: 17px;
 }
 
-/* Customer Address Map */
-
-#view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a > span {
-  color: #ffffff;
-  background-color: #19365e;
-  padding: 8px;
-  display: inline-block;
-}
-
-#view_4767 > section > div.kn-details-column.first.column.is-horizontal.kn-details-group-column-empty > div > div > div > div > div > span > a:hover > span {
-  color: #ffffff;
-  background-color: #0f2542;
-  padding: 8px;
-  display: inline-block;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-}
-
 /*********Used Historic Doc*********/
 
 /*Dealer Performance (Individual) Page*/
@@ -4422,318 +3196,21 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   font-size: 17px;
 }
 
-/**Center Table Headings**/
-
-#view_5154 th span {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_5154 {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_5134 th span {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_5134 {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_5278 th span {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_5278 {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_5279 th span {
-  margin: auto !important;
-  font-size: 15px;
-}
-
-#view_5279 {
-  margin: auto !important;
-  font-size: 15px;
-}
-
 /**"Valeter Instructions" button on valet to do page*/
-#view_4811 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4811 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-/**"Send Valeter Instructions" button on valet to do page*/
-#view_4811 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4811 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/**"Bugs & Improvements" button on Stock Management page*/
-#view_1368 > div > a.kn-link.kn-link-6.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_1368 > div > a:hover.kn-link.kn-link-6.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/**"Begin Valeting" button on Valeter's Instructions */
-#view_4791 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4791 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-/**"Send Valet Instructions" button on Valeter's Instructions */
-#view_4791 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4791 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-/**"Begin Valeting" button on Valeter's Instructions */
-#view_4784 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4784 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-/**"Send Valet Instructions" button on Valeter's Instructions */
-#view_4784 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4784 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/**Pitch Review Valet - Change Valeter's instructions buttons to Pink**/
-
-#view_4852 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4852 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/**Pitch Review Valet - Change E-mail Valeter's Instructions buttons to Pink**/
-
-#view_4852 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4852 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/**Used car Handover - Change How To Book a Used Handover Valet buttons to Pink**/
-
-#view_4850 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4850 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/**Used car Handover - Change Valeter's Instructions buttons to Pink**/
-
-#view_4850 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4850 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/**Used car Handover - Change E-mail Valeter's Instructions buttons to Pink**/
-
-#view_4850 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4850 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-/**Used car Check-in - Change How to book a used car check in Valet buttons to Pink**/
-
-#view_4853 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4853 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/**Used car Check-in - Change Valeter Instructions buttons to Pink**/
-
-#view_4853 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffafcc;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_4853 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ff5c98;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/**Used car Check-in - Email Valeters Instructions buttons to Pink**/
-
+#view_4811 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4811 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1368 > div > a.kn-link.kn-link-6.kn-link-page.kn-button,
+#view_4791 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4791 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4784 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4784 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4852 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4852 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4850 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4850 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4850 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_4853 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4853 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_4853 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
   background-color: #ffafcc;
   color: #ffffff;
@@ -4741,6 +3218,20 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   box-shadow: 3px 3px #ccc;
 }
 
+#view_4811 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4811 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1368 > div > a:hover.kn-link.kn-link-6.kn-link-page.kn-button,
+#view_4791 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4791 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4784 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4784 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4852 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4852 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4850 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4850 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_4850 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_4853 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_4853 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_4853 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
   background-color: #ff5c98;
   color: #ffffff;
@@ -4941,75 +3432,16 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 }
 
 /* make purchasing main page button for retail metrics */
-#view_5004 .kn-label-none.field_7403 > div > span {
-  color: #ffffff !important;
-  font-weight: bold;
-  background-color: #ffa100;
-  padding: 8px;
-  display: inline-block;
-  border-radius: 12px;
-}
-
-#view_5004 .kn-label-none.field_7403 > div > span a:hover {
-  color: #ffffff !important;
-  font-weight: bold;
-  background-color: #ffa100;
-  padding: 8px;
-  display: inline-block;
-  border-radius: 12px;
-}
-
-/* Make view auction link as a button*/
-#view_5004 .kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span {
-  color: #ffffff !important;
-  font-weight: bold;
-  background-color: #ffa100;
-  padding: 8px;
-  display: inline-block;
-  border-radius: 12px;
-}
-
-#view_5004 .kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span a:hover {
-  color: #ffffff !important;
-  font-weight: bold;
-  background-color: #ffa100;
-  padding: 8px;
-  display: inline-block;
-  border-radius: 12px;
-}
-
-/*purchasing main page make auction a button */
-
-/*link to view retail check*/
-#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7403 > div > span > span {
-  color: #ffffff !important;
-  font-weight: bold;
-  background-color: #ffa100;
-  padding: 8px;
-  display: inline-block;
-  border-radius: 12px;
-}
-
-#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7403 > div > span > span a:hover {
-  color: #ffffff !important;
-  font-weight: bold;
-  background-color: #ffa100;
-  padding: 8px;
-  display: inline-block;
-  border-radius: 12px;
-}
-
-/* Link to similar vehicles */
-#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7404 > div > span > span {
-  color: #ffffff !important;
-  font-weight: bold;
-  background-color: #ffa100;
-  padding: 8px;
-  display: inline-block;
-  border-radius: 12px;
-}
-
-#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7404 > div > span > span a:hover {
+#view_5004 .kn-label-none.field_7403 > div > span,
+#view_5004 .kn-label-none.field_7403 > div > span a:hover,
+#view_5004 .kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span,
+#view_5004 .kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > strong > span a:hover,
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7403 > div > span > span,
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7403 > div > span > span a:hover,
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7404 > div > span > span,
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7404 > div > span > span a:hover,
+#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7422 > div > span > span,
+#view_5028 > section > div > div:nth-child(12) > div:nth-child(2) > div > div > div > span {
   color: #ffffff !important;
   font-weight: bold;
   background-color: #ffa100;
@@ -5019,14 +3451,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 }
 
 /* View inspection report*/
-#view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7422 > div > span > span {
-  color: #ffffff !important;
-  font-weight: bold;
-  background-color: #ffa100;
-  padding: 8px;
-  display: inline-block;
-  border-radius: 12px;
-}
 
 #view_5028 > section > div > div:nth-child(10) > div > div > div.kn-label-none.field_7422 > div > span > span a:hover {
   color: #ffffff !important;
@@ -5037,14 +3461,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   border-radius: 12px;
 }
 /*link to view auction */
-#view_5028 > section > div > div:nth-child(12) > div:nth-child(2) > div > div > div > span {
-  color: #ffffff !important;
-  font-weight: bold;
-  background-color: #ffa100;
-  padding: 8px;
-  display: inline-block;
-  border-radius: 12px;
-}
+
 #view_5028 > section > div > div:nth-child(12) > div:nth-child(2) > div > div > div > span a:hover {
   color: #ffffff !important;
   font-weight: bold;
