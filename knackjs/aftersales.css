@@ -1378,28 +1378,6 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 
-/* Aftersales Follow UP - Toggle between Pending and Awaiting */
-
-#view_632 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-	background-color: #D18400;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
-  	border-width: 2px;
-  	border-color: #FFFFFF;
-}
-
-#view_632 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-	background-color: #D18400;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
-  	border-width: 2px;
-  	border-color: #FFFFFF;
-}
-
 /* Aftersales Post Visit Reporting - Follow up call button */
 
 #view_661 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
