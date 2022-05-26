@@ -70,6 +70,24 @@ $(document).on('knack-view-render.any', function (event, view, data) {
   });
 });
 
+// function to create the weeb hooks for knack
+function callPostHttpRequest(url, payloadObject, callName){
+  try{
+    let commandURL = url ;
+    let dataToSend = JSON.stringify(payloadObject) ;
+    var rData = $.ajax({
+      url: commandURL,
+      type: 'POST',
+      contentType: 'application/json',
+      data: dataToSend,
+      async: false
+    }).responseText;
+    return rData;
+  } catch(exception) {
+    sendErrorToIntegromat(exception, callName);
+  }
+}
+
 /*
   Checks data acording to refreshData structure and updates views
   This is structure describing the page, consisting of different views, updated with different background processes
