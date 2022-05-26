@@ -3440,6 +3440,9 @@ color: #FFFFFF;
 /* Receipt of Balance */
 #view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6405 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
+/* No Receipt of Balance */
+#view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_7807 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
+
 /* Confirm Payment Method */
 #view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6406 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
