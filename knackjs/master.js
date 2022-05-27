@@ -3079,7 +3079,11 @@ $(document).on('knack-scene-render.scene_960', function (event, view, data) {
   $('[class="kn-mobile-account-name"]').text((iH?'H':(iH===null?'N':'B'))+' - '+$('[class="kn-mobile-account-name"]').text())
 });
 
-
+//Submit form for GDPR preferences update in Check-in process
+$(document).on('knack-form-submit.view_732', function(event, view, data) { 
+  callPostHttpRequest("https://hook.integromat.com/iovfpyqnj3d9pihhmhm1wcgtu5dosv0b", {"Record ID":data.id, "Service GDPR PHONE":data.field_1048_raw, "Service GDPR EMAIL":data.field_1050_raw,
+  "Service GDPR SMS":data.field_1052_raw, "Sales GDPR PHONE":data.field_1054_raw, "Sales GDPR EMAIL":data.field_1055_raw,"Sales GDPR POST":data.field_1056_raw, "Sales GDPR SMS":data.field_1057_raw},"Submit form for GDPR preferences update in Check-in process")
+});
 
 
 
