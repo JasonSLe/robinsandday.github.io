@@ -975,7 +975,7 @@ function recursivecall(){
 
 // Trigger Customer Incident Form
 
-$(document).on('knack-form-submit.view_841 knack-form-submit.view_843 knack-form-submit.view_839', function(event, view, data) {
+$(document).on('knack-form-submit.view_852 knack-form-submit.view_854 knack-form-submit.view_856 knack-form-submit.view_857 knack-form-submit.view_860 knack-form-submit.view_861 knack-form-submit.view_865', function(event, view, data) {
 	console.log("Test2");
   callPostHttpRequest("https://hook.integromat.com/gmtkedwe7nxktiqm6qi4rg5apeno73an", {"Record ID":data.id},"Pre Visit Digital Customer Incident Form")
 });
