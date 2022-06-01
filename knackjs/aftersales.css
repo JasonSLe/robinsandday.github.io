@@ -1566,10 +1566,11 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   }
 
 #view_375 .kn-detail-label {
-    width: 80px !important;
+    min-width: 80px;
+    max-width: 80px;
 }
 
 
-#view_375 .kn-special-title > h {
-    font-size: 15px;
+#view_375 .kn-special-title > h3 {
+    font-size: 15px ;
 }
