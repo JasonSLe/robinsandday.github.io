@@ -989,7 +989,8 @@ $(document).on('knack-form-submit.view_732', function(event, view, data) {
 
 //change the color based on input
 $(document).on('knack-view-render.view_375', function(event, view, data) {
-  console.log("Test3")
+  console.log("Test4");
+  console.log($("#view_375 field_1048").val());
   $("#view_375 field_1048").each(function() {
 	  console.log("Trigger change color")
     // #ff0000 is red and the #1c631f is green
