@@ -1520,7 +1520,5 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 /* Center a submit button*/
 #view_732 > form > .kn-submit{
-    justify-content: center;
     text-align: center;
-    margin: auto;
   }
