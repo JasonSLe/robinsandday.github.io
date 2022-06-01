@@ -1519,6 +1519,8 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 /* End of cod for cool radio buttons */
 
 
-#view_732 > form > li > .option > label > input {
+#view_732 > form > li > .option > input {
     background-color: red;
+    color: #40e0d0;
+    font-size: 20px;
 }
