@@ -987,3 +987,11 @@ $(document).on('knack-form-submit.view_732', function(event, view, data) {
   "Service GDPR SMS":data.field_1052_raw, "Sales GDPR PHONE":data.field_1054_raw, "Sales GDPR EMAIL":data.field_1055_raw,"Sales GDPR POST":data.field_1056_raw, "Sales GDPR SMS":data.field_1057_raw, "Customer Magic Number":data.field_1006_raw.replace(/[^0-9]/g,'')},"Submit form for GDPR preferences update in Check-in process")
 });
 
+//change the color based on input
+
+const onLoad = () => {
+    const checkValue = $("#view_375 .kn-detail-body").value
+    console.log(checkValue)
+}
+
+$(document).ready(onLoad)
