@@ -1564,3 +1564,12 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #view_732 > form > .kn-submit{
     text-align: center;
   }
+
+#view_375 .kn-detail-label {
+    width: 140px;;
+}
+
+
+#view_375 .kn-special-title {
+    font-size: 15px;
+}
