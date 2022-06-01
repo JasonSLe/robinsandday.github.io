@@ -1440,7 +1440,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 
 /* Start of Code for cool radio buttons */
-#view_732 > form > li > .option > input {
+#view_732 > form > ul >li > .kn-input > .kn-radio > .control > .option > input {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -1464,13 +1464,13 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
     position: relative;
     z-index: 1000;
   }
-  #view_732 > form > li > .option > input:hover {
+  #view_732 > form > ul >li > .kn-input > .kn-radio > .control > .option > input:hover {
     background: #9faab7;
   }
-  #view_732 > form > li > .option > input:checked {
+  #view_732 > form > ul >li > .kn-input > .kn-radio > .control > .option > input:checked {
     background: #40e0d0;
   }
-  #view_732 > form > li > .option > input:checked::before {
+  #view_732 > form > ul >li > .kn-input > .kn-radio > .control > .option > input:checked::before {
     width: 40px;
     height: 40px;
     display:flex;
@@ -1482,7 +1482,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
     justify-content:center;
     font-family:'Font Awesome 5 Free';
   }
-  #view_732 > form > li > .option > input:checked::after {
+  #view_732 > form > ul >li > .kn-input > .kn-radio > .control > .option > input:checked::after {
     -webkit-animation: click-wave 0.65s;
     -moz-animation: click-wave 0.65s;
     animation: click-wave 0.65s;
@@ -1492,10 +1492,10 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
     position: relative;
     z-index: 100;
   }
-  #view_732 > form > li > .radio > input {
+  #view_732 > form > ul >li > .kn-input > .kn-radio > .control > .radio > input {
     border-radius: 50%;
   }
-  #view_732 > form > li > .radio > input::after {
+  #view_732 > form > ul >li > .kn-input > .kn-radio > .control > .radio > input::after {
     border-radius: 50%;
   }
   #view_732 {    
@@ -1517,9 +1517,3 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 /* End of cod for cool radio buttons */
-
-#view_732 > form > ul >li {
-    background-color: aquamarine;
-    color: #40e0d0;
-    font-size: 20px;
-}
