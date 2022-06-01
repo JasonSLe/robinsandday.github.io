@@ -994,7 +994,7 @@ $(document).on('knack-view-render.view_375', function(event, view, data) {
   $("#view_375 .field_1048 .kn-detail-body span").each(function() {
 	  console.log("Trigger change color")
     // #ff0000 is red and the #1c631f is green
-    var textColor = ($(this).find("span").text().trim() == "No") ? "#ff0000" : "#1c631f";
+    var textColor = ($(this).find("span").text().trim() == "No") ? "#7CFC00" : "#1c631f";
 	  console.log(`The color is: ${textColor}`)
     $(this).css("color", textColor);
     })
