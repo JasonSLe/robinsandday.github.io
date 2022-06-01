@@ -990,9 +990,10 @@ $(document).on('knack-form-submit.view_732', function(event, view, data) {
 //change the color based on input
 
 const onLoad = () => {
-  console.log("Test3");
+  console.log(checkValue);
     const checkValue = $("#view_375 .kn-detail-body").val();
     console.log(checkValue);
+    console.log(window.location);
 }
 
-$(view_375).ready(onLoad)
+$(document).ready(onLoad)
