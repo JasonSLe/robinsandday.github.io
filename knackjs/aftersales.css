@@ -1468,7 +1468,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
     background: #9faab7;
   }
   #view_732 > form > ul >li > .kn-input > .kn-radio > .control > .option > input:checked {
-    background: #40e0d0;
+    background: #fb8500;
   }
   #view_732 > form > ul >li > .kn-input > .kn-radio > .control > .option > input:checked::before {
     width: 30px;
@@ -1486,7 +1486,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
     -webkit-animation: click-wave 0.65s;
     -moz-animation: click-wave 0.65s;
     animation: click-wave 0.65s;
-    background: #40e0d0;
+    background: #fb8500;
     content: '';
     display: block;
     position: relative;
