@@ -995,4 +995,4 @@ const onLoad = () => {
     console.log(checkValue);
 }
 
-$(document).ready(onLoad)
+$(view_375).ready(onLoad)
