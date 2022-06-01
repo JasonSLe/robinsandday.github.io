@@ -1498,7 +1498,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   #view_732 > form > ul >li > .kn-input > .kn-radio > .control > .radio > input::after {
     border-radius: 50%;
   }
-  #view_732 {    
+   
   @keyframes click-wave {
     0% {
       height: 40px;
@@ -1514,6 +1514,6 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
       opacity: 0;
     }
   }
-}
+
 
 /* End of cod for cool radio buttons*/
