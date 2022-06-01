@@ -989,10 +989,12 @@ $(document).on('knack-form-submit.view_732', function(event, view, data) {
 
 //change the color based on input
 $(document).on('knack-view-render.view_375', function(event, view, data) {
-  console.log("First Test")
+  console.log("Test2")
   $("#view_375 td.field_1048").each(function() {
+	  console.log("Trigger change color")
     // #ff0000 is red and the #1c631f is green
     var textColor = ($(this).find("span").text().trim() == "No") ? "#ff0000" : "#1c631f";
+	  console.log(`The color is: ${textColor}`)
     $(this).css("color", textColor);
     })
 });
