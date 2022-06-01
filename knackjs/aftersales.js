@@ -989,14 +989,14 @@ $(document).on('knack-form-submit.view_732', function(event, view, data) {
 
 //change the color based on input
 $(document).on('knack-view-render.view_375', function(event, view, data) {
-  console.log("Test5");
+  console.log("Test6");
   console.log($("#view_375 field_1048").val());
   $("#view_375 .field_1048 .kn-detail-body span").each(function() {
 	  console.log("Trigger change color")
     // #ff0000 is red and the #1c631f is green
     var textColor = ($(this).find("span").text().trim() == "No") ? "#7CFC00" : "#1c631f";
 	  console.log(`The color is: ${textColor}`)
-    $(this).css("color", textColor);
+    $(this).css("background-color", textColor);
     })
 });
 
