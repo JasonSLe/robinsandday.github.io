@@ -991,7 +991,7 @@ $(document).on('knack-form-submit.view_732', function(event, view, data) {
 
 const onLoad = () => {
   console.log(checkValue);
-    const checkValue = $("#view_375 .kn-detail-body").value;
+    const checkValue = $("#view_375 .kn-detail-body").val();
     console.log(checkValue);
 }
 
