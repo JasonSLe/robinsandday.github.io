@@ -991,7 +991,7 @@ $(document).on('knack-form-submit.view_732', function(event, view, data) {
 $(document).on('knack-view-render.view_375', function(event, view, data) {
   console.log("Test2");
   console.log($("#view_375 field_1048").val());
-  $("#view_375 .kn-label-none .kn-detail-body span").each(function() {
+  $("#view_375 .kn-label-none.kn-table.is-unbordered .kn-detail-body span span").each(function() {
 	  console.log("Trigger change color")
     // #ff0000 is red and the #1c631f is green
     const textColor = ($(this).find("span").text().trim() == "No") ? "#228B22" : "#228B22";
