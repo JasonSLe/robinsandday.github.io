@@ -997,8 +997,8 @@ $(document).on('knack-view-render.view_375', function(event, view, data) {
     const textColor = ($(this).find("span").text().trim() == "No") ? "#228B22" : "#228B22";
 	  console.log(`The color is: ${textColor}`)
     const greenStyle = {
-      color: "",
-      textshadow: "0 0 7px #fff,  0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa"
+      color: "#fff",
+      textShadow: "0 0 7px #fff,  0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa"
     }
     $(this).css("color", greenStyle);
     //$(this).css("text-shadow", textShadow);
