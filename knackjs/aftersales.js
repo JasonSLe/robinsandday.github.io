@@ -987,11 +987,12 @@ $(document).on('knack-form-submit.view_732', function(event, view, data) {
   "Service GDPR SMS":data.field_1052_raw, "Sales GDPR PHONE":data.field_1054_raw, "Sales GDPR EMAIL":data.field_1055_raw,"Sales GDPR POST":data.field_1056_raw, "Sales GDPR SMS":data.field_1057_raw, "Customer Magic Number":data.field_1006_raw.replace(/[^0-9]/g,'')},"Submit form for GDPR preferences update in Check-in process")
 });
 
+
 //change the color based on input
 $(document).on('knack-view-render.view_375', function(event, view, data) {
-  console.log("Test3");
+  console.log("Test4");
   console.log($("#view_375 field_1048").val());
-  $("#view_375 .kn-details-group-column > .kn-label-none.kn-table.is-unbordered .kn-detail-body span span").each(function() {
+  $("#view_375 .column-2 > .kn-label-none .kn-detail-body span span").each(function() {
 	  console.log("Trigger change color")
     // #ff0000 is red and the #1c631f is green
     const textColor = ($(this).find("span").text().trim() == "No") ? "#228B22" : "#228B22";
@@ -1001,4 +1002,3 @@ $(document).on('knack-view-render.view_375', function(event, view, data) {
     //$(this).css("text-shadow", textShadow);
     })
 });
-
