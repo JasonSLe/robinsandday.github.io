@@ -1004,9 +1004,10 @@ $(document).on('knack-view-render.view_375', function(event, view, data) {
         }
     //choose color style based on input
     let textColor = ($(this).find("span").text().trim() === "No") ? redStyle : greenStyle;
+    console.log($(this).find("span").text().trim())
+    console.log(textColor)
 	  //apply the css changes
     $(this).css(textColor);
     
     })
 });
-
