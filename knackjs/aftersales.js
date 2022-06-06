@@ -990,17 +990,22 @@ $(document).on('knack-form-submit.view_732', function(event, view, data) {
 
 //change the color based on input
 $(document).on('knack-view-render.view_375', function(event, view, data) {
-  console.log($("#view_375 field_1048").val());
+
   $("#view_375 .kn-details-group.column-2.columns .kn-detail-body span span").each(function() {
-	  console.log("Trigger change color")
-    // #ff0000 is red and the #1c631f is green
-    const textColor = ($(this).find("span").text().trim() == "No") ? "#228B22" : "#228B22";
-	  console.log(`The color is: ${textColor}`)
-    const greenStyle = {
-      color: "#228B22",
-      textShadow: "0 0 7px #fff,  0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa"
-    }
-    $(this).css(greenStyle);
-    //$(this).css("text-shadow", textShadow);
+	      //green color style
+        const greenStyle = {
+          color: "#228B22",
+          textShadow: "0 0 7px #fff,  0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa"
+        }
+        //red color style
+        const redStyle = {
+          color: "#cc0000",
+          textShadow: "0 0 7px #fff,  0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ffcccc, 0 0 82px #ffcccc, 0 0 92px #ffcccc, 0 0 102px #ffcccc, 0 0 151px #ffcccc"
+        }
+    //choose color style based on input
+    const textColor = ($(this).find("span").text().trim() === "No") ? redStyle : greenStyle;
+	  //apply the css changes
+    $(this).css(textColor);
+    
     })
 });
