@@ -1003,11 +1003,7 @@ $(document).on('knack-view-render.view_375', function(event, view, data) {
           textShadow: "0 0 7px #fff,  0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ffcccc, 0 0 82px #ffcccc, 0 0 92px #ffcccc, 0 0 102px #ffcccc, 0 0 151px #ffcccc"
         }
     //choose color style based on input
-    let textColor = ($(this).find("span").text().trim() === "No") ? redStyle : greenStyle;
-    console.log("testing this")
-    console.log($(this).find("span span").text().trim())
-    console.log($(this).text().trim())
-    console.log(textColor)
+    let textColor = ($(this).text().trim() === "No") ? redStyle : greenStyle;
 	  //apply the css changes
     $(this).css(textColor);
     
