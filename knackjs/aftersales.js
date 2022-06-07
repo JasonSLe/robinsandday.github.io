@@ -97,7 +97,7 @@ $(document).on('knack-view-render.any', function (event, view, data) {
 function callPostHttpRequest(url, payloadObject, callName){
   try{
     let commandURL = url ;
-    let dataToSend = JSON.stringify(payloadObject) ;
+    let dataToSend = JSON.stringify(deleteEmpty(payloadObject)) ;
     var rData = $.ajax({
       url: commandURL,
       type: 'POST',
