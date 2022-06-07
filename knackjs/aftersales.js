@@ -1009,3 +1009,8 @@ $(document).on('knack-view-render.view_375', function(event, view, data) {
     
     })
 });
+
+//Submit form for Vehicle Check-in
+$(document).on('knack-form-submit.view_736', function(event, view, data) { 
+  callPostHttpRequest("https://hook.integromat.com/5xbv62mdvtypta1q34k7evubw60c68db", {"Record ID":data.id},"Submit form for Vehicle Check-in")
+});
