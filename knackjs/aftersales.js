@@ -1035,5 +1035,14 @@ $(document).on('knack-view-render.view_375', function(event, view, data) {
 
 //Submit form for Vehicle Check-in
 $(document).on('knack-form-submit.view_736', function(event, view, data) { 
-  callPostHttpRequest("https://hook.integromat.com/5xbv62mdvtypta1q34k7evubw60c68db", {"Record ID":data.id},"Submit form for Vehicle Check-in")
+  callPostHttpRequest("https://hook.integromat.com/5xbv62mdvtypta1q34k7evubw60c68db", {"Record ID":data.id, "Summary Of Work That Has Been Booked In": data.field_1116_raw,
+ "Date / Time Collection Time agreed With Customer At Check in":data.field_1117_raw, "Parking Bay That Customer Vehicle Is Currently Parked In":data.field_1118_raw,
+ "Alternative Mobile Phone Number To Use whilst vehicle is with us Instead Of Stored Contact numbers": data.field_1119_raw, "Would Customer Like Us To Make This New Number The Default For Future Communication": data.field_1120_raw,
+  "Would Customer Like Us To Make This New Number The Default For Future":data.field_1122_raw},"Submit form for Vehicle Check-in")
+  console.log(`Summary Of Work That Has Been Booked In: ${data.field_1116_raw}`)
+  console.log(`Date / Time Collection Time agreed With Customer At Check in: ${data.field_1117_raw}`)
+  console.log(`Parking Bay That Customer Vehicle Is Currently Parked In: ${data.field_1118_raw}`)
+  console.log(`Alternative Mobile Phone Number To Use whilst vehicle is with us Instead Of Stored Contact numbers: ${data.field_1119_raw}`)
+  console.log(`Would Customer Like Us To Make This New Number The Default For Future Communication: ${data.field_1120_raw}`)
+  console.log(`Would Customer Like Us To Make This New Number The Default For Future: ${data.field_1122_raw}`)
 });
