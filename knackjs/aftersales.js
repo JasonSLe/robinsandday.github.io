@@ -1042,17 +1042,4 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
   "Customer Signature At Check in":data.field_1122_raw, "Labour Summary":data.field_432_raw, "Customer & Advisor Job Card Notes":data.field_446_raw, "Autoline - customer email":data.field_277_raw,
   "Use Autoline - Customer Phone 1":data.field_782_raw, "Use Autoline - Customer Phone 2":data.field_783_raw, "Use Autoline - Customer Phone 3":data.field_784_raw, "Use Autoline - Customer Phone 3":data.field_785_raw},"Submit form for Vehicle Check-in")
 
-  console.log(`Summary Of Work That Has Been Booked In: ${data.field_1116_raw}`)
-  console.log(`Date / Time Collection Time agreed With Customer At Check in: ${data.field_1117_raw}`)
-  console.log(`Parking Bay That Customer Vehicle Is Currently Parked In: ${data.field_1118_raw}`)
-  console.log(`Alternative Mobile Phone Number To Use whilst vehicle is with us Instead Of Stored Contact numbers: ${data.field_1119_raw}`)
-  console.log(`Would Customer Like Us To Make This New Number The Default For Future Communication: ${data.field_1120_raw}`)
-  console.log(`Customer Signature At Check in: ${data.field_1122_raw}`)
-  console.log(`Labour Summary: ${data.field_432_raw}`)
-  console.log(`Customer & Advisor Job Card Notes: ${data.field_446_raw}`)
-  console.log(`Autoline - customer email: ${data.field_277_raw}`)
-  console.log(`Use Autoline - Customer Phone 1: ${data.field_782_raw}`)
-  console.log(`Use Autoline - Customer Phone 2: ${data.field_783_raw}`)
-  console.log(`Use Autoline - Customer Phone 4: ${data.field_784_raw}`)
-  console.log(`Use Autoline - Customer Phone 5: ${data.field_785_raw}`)
 });
