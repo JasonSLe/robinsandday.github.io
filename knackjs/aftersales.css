@@ -1576,30 +1576,16 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 /* Aftersales Pre Visit - Customer Incident Form Table */
 
-#view_868 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a {
+#view_868 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_868 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-	background-color: #D18400;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
-  	border-width: 2px;
-  	border-color: #FFFFFF;
-}
-
 #view_868 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-	background-color: #D18400;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
-  	border-width: 2px;
-  	border-color: #FFFFFF;
 }
 
 /* Hide Crumbtrail At Top Of Page */
@@ -1607,4 +1593,3 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 .kn-crumbtrail {
   visibility: hidden;
 }
-
