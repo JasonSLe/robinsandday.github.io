@@ -1602,3 +1602,9 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
+/* Hide Crumbtrail At Top Of Page */
+
+.kn-crumbtrail {
+  visibility: hidden;
+}
+
