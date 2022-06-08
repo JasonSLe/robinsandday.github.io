@@ -1043,3 +1043,14 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
   "Use Autoline - Customer Phone 1":data.field_782_raw, "Use Autoline - Customer Phone 2":data.field_783_raw, "Use Autoline - Customer Phone 3":data.field_784_raw, "Use Autoline - Customer Phone 3":data.field_785_raw},"Submit form for Vehicle Check-in")
 
 });
+
+// ----------  Refresh Customer Incidetn Form table every 60 seconds (But Not The Page)  ----------
+
+$(document).on('knack-scene-render.scene_91', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_868").is(":visible")==true){ Knack.views["view_359"].model.fetch();recursivecall();} }, 100000);
+}
+
