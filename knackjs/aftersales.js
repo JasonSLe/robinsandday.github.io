@@ -1044,4 +1044,13 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 
 });
 
+  //Wip Management hover over descriptions 
+  $(document).on('knack-view-render.view_596', function (event, view, data) {
+
+
+    //This part is for column headers
+    //Column headers
+    $('th[class="field_1108"]').attr('title','F = First Clocked Date'<br>'L = Last Clocked Date');
+    $('th[class="field_982"]').attr('data-tooltip','Medkit = CCDIAG'<br>'Truck = CCRECOV');
+  });
 
