@@ -1044,13 +1044,4 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 
 });
 
-// ----------  Refresh Customer Incident Form Table Every 60 Seconds (But Not The Page)  ----------
-
-$(document).on('knack-scene-render.scene_91', function(event, scene) {
- recursivecall();
-});
-
-function recursivecall(){
- setTimeout(function () { if($("#view_868").is(":visible")==true){ Knack.views["view_868"].model.fetch();recursivecall();} }, 100000);
-}
 
