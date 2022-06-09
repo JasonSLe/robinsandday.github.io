@@ -1052,4 +1052,6 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
     $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
     $('th[class="field_982"]').attr('data-tooltip','Medkit = CCDIAG Truck = CCRECOV');
     $('th[class="field_982"]').addClass('tooltip-bottom')
+ $('th[class="field_1022"]').attr('title','Time Allowed For jobs NOT Completed');
+	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
   });
