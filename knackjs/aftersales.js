@@ -1055,3 +1055,14 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
  $('th[class="field_1022"]').attr('title','Time Allowed For jobs NOT Completed');
 	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
   });
+
+// ----------  Refresh Customer Incident Form table every 60 seconds but not the page itself  ---------- //
+
+$(document).on('knack-scene-render.scene_91', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_871").is(":visible")==true){ Knack.views["view_871"].model.fetch();recursivecall();} }, 100000);
+}
+
