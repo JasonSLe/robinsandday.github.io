@@ -1068,6 +1068,6 @@ function recursivecall(){
 
 
 /* Change Keyword Search Placeholder Text for Wip Management Search */
-$(document).on('knack-scene-render.scene_1497', function(event, scene) {
+$(document).on('#view_596 > div:nth-child(2) > div:nth-child(2) > form > p > input', function(event, scene) {
   $("input[name='keyword']").attr("placeholder", "Type Reg Number")
 });
