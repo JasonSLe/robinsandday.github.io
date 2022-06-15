@@ -1068,6 +1068,7 @@ function recursivecall(){
 
 
 /* Change Keyword Search Placeholder Text for Wip Management Search */
-$document.on('knack-view-render.kn-scene_152 #view_596 > .kn-records-nav > .level .control > input'), function(event, scene) {
-  $("input[name='keyword']").attr("placeholder", "Type Reg Number")
+
+$(document).on('knack-view-render.scene_152 #view_596 > .kn-records-nav > .level .control > input', function(event, scene) {
+  $("input[name='keyword']").attr("placeholder", "Type Dealer Name,Reg etc.")
 });
