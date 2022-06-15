@@ -1066,3 +1066,8 @@ function recursivecall(){
  setTimeout(function () { if($("#view_871").is(":visible")==true){ Knack.views["view_871"].model.fetch();recursivecall();} }, 100000);
 }
 
+
+/* Change Keyword Search Placeholder Text for Wip Management Search */
+$(document).on('knack-scene-render.scene_1497', function(event, scene) {
+  $("input[name='keyword']").attr("placeholder", "Type Reg Number")
+});
