@@ -1070,5 +1070,5 @@ function recursivecall(){
 
 /* Change Keyword Search Placeholder Text for Wip Management Search */
 $(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function(event, scene) {
-  $("input[name='keyword']").attr("placeholder", "Type Wip, Reg")
+  $("input[name='keyword']").attr("placeholder", "Type Wip, Reg, Dealer Address")
 });
