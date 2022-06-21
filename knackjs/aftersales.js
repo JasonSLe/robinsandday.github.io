@@ -1076,13 +1076,14 @@ $(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function
 
 
 
-const triggerRecord = () => {
+const triggerRecord = (event) => {
   console.log("Click")
+  console.log(event)
 }
 
 // --- Hide Robins & Day Logo on Customer Order Tracker View ---
-$(document).on('knack-view-render.view_735 thead', function(event, view) {
-  console.log("testing2")
+$(document).on('knack-view-render.view_735 .kn-table', function(event, view) {
+  console.log("testing3")
   $(".fa-sign-in").on("click",triggerRecord)
  
  });
