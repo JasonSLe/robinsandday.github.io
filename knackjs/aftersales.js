@@ -1083,5 +1083,6 @@ const triggerRecord = (event) => {
 
 // --- Aftersales vehicle chekc-in ---
 $(document).on('knack-view-render.view_735', function(event, view) {
+   console.log("testing8")
   $(".fa-sign-in").on("click",triggerRecord)
  });
