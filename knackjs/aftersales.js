@@ -1075,14 +1075,18 @@ $(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function
 
 
 
-// --- Aftersales vehicle chekc-in ---
-const triggerRecord = (event) => {
+const triggerRecord = (event, data) => {
+  console.log("Click")
   console.log(event.view)
+  console.log(data)
   callPostHttpRequest("https://hook.integromat.com/iyuup4141sa84l4rtaridhle76lrofo7", {"Record ID":event.view.app_id },"Aftersales- will triger during vehicle check-in");
+  
 }
 
 // --- Aftersales vehicle chekc-in ---
-$(document).on('knack-view-render.view_735', function(event, view) {
-   console.log("testing8")
+$(document).on('knack-view-render.view_735', function(event, view, data) {
+  console.log("testing9")
+
   $(".fa-sign-in").on("click",triggerRecord)
+ 
  });
