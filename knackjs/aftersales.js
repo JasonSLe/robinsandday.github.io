@@ -1072,3 +1072,16 @@ function recursivecall(){
 $(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function(event, scene) {
   $("input[name='keyword']").attr("placeholder", "Type Wip, Reg, Dealer Address")
 });
+
+
+
+const triggerRecord = () => {
+  console.log("Click")
+}
+
+// --- Hide Robins & Day Logo on Customer Order Tracker View ---
+$(document).on('knack-view-render.view_735', function(event, view) {
+  console.log("testing")
+  $(".fa-sign-in").on("click",triggerRecord)
+ 
+ });
