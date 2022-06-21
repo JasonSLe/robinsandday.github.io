@@ -1076,9 +1076,9 @@ $(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function
 
 // --- Aftersales vehicle chekc-in ---
 $(document).on('knack-view-render.view_735', function(event, view) {
-  console.log("testing18")
-  console.log($(".col-2").val())
+  console.log("testing20")
   console.log($(".col-2").text())
+  console.log($(".field_73 > span").text())
 
   const vinNumber = $(".field_73 > span").val()
 
