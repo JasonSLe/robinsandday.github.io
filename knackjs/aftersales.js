@@ -1077,7 +1077,7 @@ $(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function
 
 // --- Aftersales vehicle chekc-in ---
 const triggerRecord = (event) => {
-  console.log(event.view.Kanck)
+  console.log(event.view)
   callPostHttpRequest("https://hook.integromat.com/iyuup4141sa84l4rtaridhle76lrofo7", {"Record ID":event.view.app_id },"Aftersales- will triger during vehicle check-in");
 }
 
