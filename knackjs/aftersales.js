@@ -1074,20 +1074,23 @@ $(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function
 });
 
 
-
-const triggerRecord = (event) => {
-  console.log("Click")
-  console.log(event)
-  console.log(event.view)
-
-  callPostHttpRequest("https://hook.integromat.com/iyuup4141sa84l4rtaridhle76lrofo7", {"Record ID":event.view.app_id },"Aftersales- will triger during vehicle check-in");
-  
-}
-
 // --- Aftersales vehicle chekc-in ---
 $(document).on('knack-view-render.view_735', function(event, view) {
-  console.log("testing11")
+  console.log("testing15")
+  console.log($(".field_73").val())
+
+  const vinNumber = $(".field_73").val()
+
+  const triggerRecord = (event) => {
+    console.log("Click")
+    console.log(event)
+    console.log(event.view)
   
-  $(".fa-sign-in").on("click",triggerRecord)
+    callPostHttpRequest("https://hook.integromat.com/iyuup4141sa84l4rtaridhle76lrofo7", {"Record ID":event.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
+    
+  }
+  
+  $(".fa-sign-in").on("click",triggerRecord ())
  
  });
+
