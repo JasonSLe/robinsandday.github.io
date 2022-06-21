@@ -1075,10 +1075,11 @@ $(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function
 
 
 
-const triggerRecord = (event) => {
+const triggerRecord = (event, value) => {
   console.log("Click")
   console.log(event)
   console.log(event.view)
+  console.log(`the vin is: ${value}`)
 
   callPostHttpRequest("https://hook.integromat.com/iyuup4141sa84l4rtaridhle76lrofo7", {"Record ID":event.view.app_id },"Aftersales- will triger during vehicle check-in");
   
@@ -1086,9 +1087,13 @@ const triggerRecord = (event) => {
 
 // --- Aftersales vehicle chekc-in ---
 $(document).on('knack-view-render.view_735', function(event, view) {
-  console.log("testing11")
+  console.log("testing12")
+  console.log($(".field_73").val())
+
+  const vinNumber = $(".field_73").val()
+
   
-  $(".fa-sign-in").on("click",triggerRecord)
+  $(".fa-sign-in").on("click",triggerRecord (event, vinNumber ))
  
  });
 
