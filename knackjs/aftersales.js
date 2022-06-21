@@ -1080,12 +1080,13 @@ const triggerRecord = (event) => {
   console.log("Click")
   console.log(event)
   console.log(event.altKey)
+  console.log(event.view.app_id)
   
 }
 
 // --- Hide Robins & Day Logo on Customer Order Tracker View ---
 $(document).on('knack-view-render.view_735', function(event, view) {
-  console.log("testing5")
+  console.log("testing6")
   $(".fa-sign-in").on("click",triggerRecord)
  
  });
