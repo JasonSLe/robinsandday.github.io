@@ -1076,7 +1076,7 @@ $(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function
 
 // --- Aftersales vehicle chekc-in ---
 $(document).on('knack-view-render.view_735', function(event, view) {
-  console.log("testing15")
+  console.log("testing16")
   console.log($(".field_73").val())
 
   const vinNumber = $(".field_73").val()
@@ -1090,7 +1090,7 @@ $(document).on('knack-view-render.view_735', function(event, view) {
     
   }
   
-  $(".fa-sign-in").on("click",triggerRecord ())
+  $(".fa-sign-in").on("click",triggerRecord)
  
  });
 
