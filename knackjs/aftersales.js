@@ -1068,7 +1068,7 @@ function recursivecall(){
 }
 
 
-// --- Aftersales vehicle chekc-in ---
+// --- Aftersales vehicle check-in ---
 $(document).on('knack-view-render.view_735', function(event, view) {
    //get the vin value from the table
   const vinNumber = $(".col-2").text().trim()
