@@ -1068,27 +1068,15 @@ function recursivecall(){
 }
 
 
-/* Change Keyword Search Placeholder Text for Wip Management Search */
-$(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function(event, scene) {
-  $("input[name='keyword']").attr("placeholder", "Type Wip, Reg, Dealer Address")
-});
-
-
 // --- Aftersales vehicle chekc-in ---
 $(document).on('knack-view-render.view_735', function(event, view) {
    //get the vin value from the table
-  const vinNumber = $(".col-2").text()
+  const vinNumber = $(".col-2").text().trim()
   //send a http request with the vin an record id
   const triggerRecord = (event) => {
-    console.log("Click")
-    console.log(event)
-    console.log(event.view)
-  
     callPostHttpRequest("https://hook.integromat.com/iyuup4141sa84l4rtaridhle76lrofo7", {"Record ID":event.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
-    
   }
   //add an event listner to the arrow table element
   $(".fa-sign-in").on("click",triggerRecord)
- 
  });
 
