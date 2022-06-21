@@ -1075,18 +1075,16 @@ $(document).on('knack-view-render.view_596 > .kn-records-nav > .level', function
 
 
 
-
 const triggerRecord = (event) => {
   console.log("Click")
-  console.log(event)
-  console.log(event.altKey)
   console.log(event.view.app_id)
+  callPostHttpRequest("https://hook.integromat.com/3a7d6avwzo86miynac55zdsrrgy7pwjs", {"Record ID":event.view.app_id },"Aftersales- will triger during vehicle check-in");
   
 }
 
 // --- Hide Robins & Day Logo on Customer Order Tracker View ---
 $(document).on('knack-view-render.view_735', function(event, view) {
-  console.log("testing6")
+  console.log("testing7")
   $(".fa-sign-in").on("click",triggerRecord)
  
  });
