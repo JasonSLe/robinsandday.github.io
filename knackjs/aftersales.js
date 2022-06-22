@@ -1047,8 +1047,10 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
   //Wip Management hover over descriptions 
   $(document).on('knack-view-render.view_596', function (event, view, data) {
 
+	  //hide VIN from table
+	   $('div[class="field_73"]').hide();
     //This part is for column headers
-    //Column headers
+    //Column header
     $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
     $('th[class="field_982"]').attr('data-tooltip','Medkit = CCDIAG Truck = CCRECOV');
     $('th[class="field_982"]').addClass('tooltip-bottom')
