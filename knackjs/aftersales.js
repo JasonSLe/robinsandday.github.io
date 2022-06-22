@@ -1048,7 +1048,8 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
   $(document).on('knack-view-render.view_596', function (event, view, data) {
 
 	  //hide VIN from table
-	   $('th[class="field_73"]').hide();
+	    $('th[class="field_73"]').hide();
+    $('td[class*="field_73"]').hide();
     //This part is for column headers
     //Column header
     $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
