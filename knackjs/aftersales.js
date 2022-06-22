@@ -1050,6 +1050,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	  //hide VIN from table
 	    $('th[class="field_73"]').hide();
     $('td[class*="field_73"]').hide();
+	  
     //This part is for column headers
     //Column header
     $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
@@ -1063,7 +1064,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
   $(document).on('knack-view-render.view_244', function (event, view, data) {
 	    $('th[class="field_622"]').hide();
     $('td[class*="field_622"]').hide();
-
+});
 // ----------  Refresh Customer Incident Form table every 60 seconds but not the page itself  ---------- //
 
 $(document).on('knack-scene-render.scene_91', function(event, scene) {
