@@ -1059,6 +1059,10 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
 	  $('th[class="field_1111"]').attr('title','No of Days Since Checked In');
   });
+//hide vin from last clocked vs invoice table
+  $(document).on('knack-view-render.view_244', function (event, view, data) {
+	    $('th[class="field_622"]').hide();
+    $('td[class*="field_622"]').hide();
 
 // ----------  Refresh Customer Incident Form table every 60 seconds but not the page itself  ---------- //
 
