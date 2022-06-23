@@ -1064,6 +1064,15 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
   $(document).on('knack-view-render.view_244', function (event, view, data) {
 	    $('th[class="field_622"]').hide();
     $('td[class*="field_622"]').hide();
+	  //hide reg
+	  $('th[class="field_31"]').hide();
+    $('td[class*="field_31"]').hide();
+	  //hide wip num
+	  $('th[class="field_441"]').hide();
+    $('td[class*="field_441"]').hide();
+	  //hide account num
+	  $('th[class="field_756"]').hide();
+    $('td[class*="field_756"]').hide();
 });
 // ----------  Refresh Customer Incident Form table every 60 seconds but not the page itself  ---------- //
 
