@@ -1106,12 +1106,15 @@ $(document).on('knack-view-render.view_735', function(event, view) {
   //get the vin value from the table
  const vinNumber = $(".col-2").text().trim()
  //send a http request with the vin an record id
- const triggerRecord = async (event) => {
-   console.log("Test91")
+ const triggerRecord = (event) => {
+   console.log("Test93")
    console.log(event)
    console.log(event.view)
    console.log(event.view.Knack)
-   const knackId3 = async () => await event.view.Knack.hash_id
+   const knackId3 = async () => {
+     const data = await event.view.Knack.hash_id
+     return data
+   }
 
    console.log(knackId3)
    
