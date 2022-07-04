@@ -1112,3 +1112,15 @@ $(document).on('knack-view-render.view_735', async function(event, view) {
   $(".fa-sign-in").on("click",triggerRecord)
  });
 
+//David's spinner
+
+$(document).on("knack-scene-render.scene_267", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_1189', //recall-recheck
+          views:['905']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
+
