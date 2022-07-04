@@ -1094,7 +1094,7 @@ $(document).on('knack-view-render.view_735', function(event, view) {
   const vinNumber = $(".col-2").text().trim()
   //send a http request with the vin an record id
   const triggerRecord = (event) => {
-    callPostHttpRequest("https://hook.integromat.com/iyuup4141sa84l4rtaridhle76lrofo7", {"Record ID":event.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
+    callPostHttpRequest("https://hook.integromat.com/sp402xbep1ae24s9edipuywro6wg9hk1", {"Record ID":event.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
   }
   //add an event listner to the arrow table element
   $(".fa-sign-in").on("click",triggerRecord)
