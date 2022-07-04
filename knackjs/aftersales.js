@@ -1089,17 +1089,22 @@ function recursivecall(){
 
 
 // --- Aftersales vehicle check-in ---
-$(document).on('knack-view-render.view_735', function(event, view) {
+$(document).on('knack-view-render.view_735', async function(event, view) {
    //get the vin value from the table
   const vinNumber = $(".col-2").text().trim()
   //send a http request with the vin an record id
   const triggerRecord = (event) => {
-    console.log("Test7")
+    console.log("Test9")
     console.log(event)
     console.log(event.view)
     console.log(event.view.Knack)
-    console.log(event.view.Knack.hash_parts)
-    console.log(event.view.Knack.hash_parts[3])
+    const knackId1 = await event.view.Knack.hash_parts[3]
+
+    const knackId2 = await event.view.Knack.hash_id
+
+    console.log("Test9")
+    console.log(knackId1)
+    console.log(knackId2)
     
     callPostHttpRequest("https://hook.integromat.com/sp402xbep1ae24s9edipuywro6wg9hk1", {"Record ID":event.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
   }
