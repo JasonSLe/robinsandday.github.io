@@ -1779,6 +1779,13 @@ color: #FFFFFF;
 	
 }
 
+#view_4060 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
+	background-color: #00CC66;
+  	color: #FFFFFF;
+  	font-weight: bold;
+	
+}
+
 /* Center Headings*/
 
 #view_4060 th span
