@@ -1108,7 +1108,7 @@ $(document).on('knack-view-render.view_735', function(event, view) {
  //send a http request with the vin an record id
 
  const triggerRecord = (event2) => {
-  console.log("Test105")
+  console.log("Test106")
    console.log(event2)
    console.log(event2.view.app_id)
    console.log(event2.view.Knack)
