@@ -1115,6 +1115,7 @@ $(document).on('knack-view-render.view_735', function(event, view) {
    let k = Object.assign({},event2.view.Knack);
    console.log(event2.view.Knack.hash_parts)
    console.log(k.hash_parts)
+   console.log(event2.view.Knack.scene_hash)
    console.log(event2.view.Knack.google_loading)
    console.log(event2.view.Knack.domain)
   
