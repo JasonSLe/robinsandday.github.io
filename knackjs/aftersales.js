@@ -1109,7 +1109,6 @@ $(document).on('knack-view-render.view_735', function(event, view) {
 
  const triggerRecord = (event2) => {
   console.log("Test106")
-   console.log(event2.currentTarget.parent)
    console.log(event2.view.app_id)
    console.log(event2.view.Knack)
    let k = Object.assign({},event2.view.Knack);
