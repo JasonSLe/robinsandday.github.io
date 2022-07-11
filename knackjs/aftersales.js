@@ -1108,7 +1108,7 @@ $(document).on('knack-view-render.view_735', function(event, view) {
  //send a http request with the vin an record id
   console.log('here it works');
 
-  
+  console.log(event)
   console.log(view);
   console.log(view.Knack.hash_id)
 
