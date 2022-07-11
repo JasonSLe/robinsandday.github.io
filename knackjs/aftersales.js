@@ -1112,13 +1112,12 @@ $(document).on('knack-view-render.view_735', function(event, view) {
    console.log(event)
    console.log(event.view.app_id)
    console.log(event.view.Knack)
-   console.log(event.view.Knack["hash_id"])
+   let k = event.view.Knack;
+   console.log(event.view.Knack.hash_parts)
+   console.log(k.hash_parts)
    console.log(event.view.Knack.google_loading)
    console.log(event.view.Knack.domain)
-	 console.log('test4');
-   console.log(event.data.hash_id)
   
-   
    callPostHttpRequest("https://hook.integromat.com/sp402xbep1ae24s9edipuywro6wg9hk1", {"Record ID":event.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
  }
  //add an event listner to the arrow table element
