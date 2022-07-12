@@ -1123,3 +1123,15 @@ $(document).on('knack-view-render.view_735', function(event, view) {
  //add an event listner to the arrow table element
  $(".fa-sign-in").on("click", triggerRecord)
 });
+
+// ----------  Refresh Aftersales Customer Exit Survey Results table every 60 seconds but not the page itself  ---------- //
+
+$(document).on('knack-scene-render.scene_148', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_423").is(":visible")==true){ Knack.views["view_423"].model.fetch();recursivecall();} }, 100000);
+}
+
+
