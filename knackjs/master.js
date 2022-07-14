@@ -3079,7 +3079,3 @@ $(document).on('knack-scene-render.scene_960', function (event, view, data) {
   $('[class="kn-mobile-account-name"]').text((iH?'H':(iH===null?'N':'B'))+' - '+$('[class="kn-mobile-account-name"]').text())
 });
 
-
-//Jason testing account can make changes
-
-
