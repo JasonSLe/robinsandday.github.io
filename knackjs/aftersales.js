@@ -1079,7 +1079,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 });
 
 
-  //No Parts Costs/No Labour time Taken TABLE Hide fields below 
+  //WIP Management - No Parts Costs/No Labour time Taken TABLE Hide fields below 
   $(document).on('knack-view-render.view_928', function (event, view, data) {
 
 	  //hide VIN from table
