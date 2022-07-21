@@ -2812,25 +2812,86 @@ function bindToUpdate1(selector_view_name){
   });
 });
 
-  $(document).on('knack-view-render.view_3404', function (event, view, data) {
+  $(document).on('knack-view-render.view_5435', function (event, view, data) {
 
     $('th[class="field_7996"]').hide();
     $('td[class*="field_7996"]').hide();
-    $('div[id="view_3404"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_8010"]').attr('data-tooltip',getFieldForRowID('view_3404','field_7996',$(this).attr('id')));
+    $('div[id="view_5435"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_8010"]').attr('data-tooltip',getFieldForRowID('view_5435','field_7996',$(this).attr('id')));
       $(this).find('td[data-field-key="field_8010"]').addClass('tooltip-left');
   });
 });
 
-  $(document).on('knack-view-render.view_3404', function (event, view, data) {
+  $(document).on('knack-view-render.view_5435', function (event, view, data) {
 
     $('th[class="field_7998"]').hide();
     $('td[class*="field_7998"]').hide();
-    $('div[id="view_3404"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_8011"]').attr('data-tooltip',getFieldForRowID('view_3404','field_7998',$(this).attr('id')));
+    $('div[id="view_5435"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_8011"]').attr('data-tooltip',getFieldForRowID('view_5435','field_7998',$(this).attr('id')));
       $(this).find('td[data-field-key="field_8011"]').addClass('tooltip-left');
   });
 });
+
+  $(document).on('knack-view-render.view_3405', function (event, view, data) {
+
+    $('th[class="field_7995"]').hide();
+    $('td[class*="field_7995"]').hide();
+    $('div[id="view_3405"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_8008"]').attr('data-tooltip',getFieldForRowID('view_3405','field_7995',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_8008"]').addClass('tooltip-left');
+  });
+});
+
+  $(document).on('knack-view-render.view_3405', function (event, view, data) {
+
+    $('th[class="field_8001"]').hide();
+    $('td[class*="field_8001"]').hide();
+    $('div[id="view_3405"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_8009"]').attr('data-tooltip',getFieldForRowID('view_3405','field_8001',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_8009"]').addClass('tooltip-left');
+  });
+});
+
+ $(document).on('knack-view-render.view_3407', function (event, view, data) {
+
+    $('th[class="field_7995"]').hide();
+    $('td[class*="field_7995"]').hide();
+    $('div[id="view_3407"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_8008"]').attr('data-tooltip',getFieldForRowID('view_3407','field_7995',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_8008"]').addClass('tooltip-left');
+  });
+});
+
+  $(document).on('knack-view-render.view_3407', function (event, view, data) {
+
+    $('th[class="field_8001"]').hide();
+    $('td[class*="field_8001"]').hide();
+    $('div[id="view_3407"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_8009"]').attr('data-tooltip',getFieldForRowID('view_3407','field_8001',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_8009"]').addClass('tooltip-left');
+  });
+});
+
+ $(document).on('knack-view-render.view_3408', function (event, view, data) {
+
+    $('th[class="field_7994"]').hide();
+    $('td[class*="field_7994"]').hide();
+    $('div[id="view_3408"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_8003"]').attr('data-tooltip',getFieldForRowID('view_3408','field_7994',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_8003"]').addClass('tooltip-left');
+  });
+});
+
+  $(document).on('knack-view-render.view_3408', function (event, view, data) {
+
+    $('th[class="field_8004"]').hide();
+    $('td[class*="field_8004"]').hide();
+    $('div[id="view_3408"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_8005"]').attr('data-tooltip',getFieldForRowID('view_3408','field_8004',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_8005"]').addClass('tooltip-left');
+  });
+});
+
 
 //**Used Deal Files - Submit Additional Product Certificates Uploaded
 $(document).on('knack-form-submit.view_3321', function(event, view, data) { 
