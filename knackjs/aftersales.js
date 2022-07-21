@@ -1140,3 +1140,12 @@ $(document).on('knack-form-submit.view_307', function(event, view, data) {
     let createData = {"Record ID":data.id};
     callPostHttpRequest("https://hook.integromat.com/a7w9c122du5khow3a9ufyoezq7zdnh0x",deleteEmpty(createData),"Aftersales - Exit Survey Email from Tablet");    
   });
+
+// ------------ Refresh Aftersales Wip Management Table every 20 mins but not the page itself -----------------------//
+$(document).on('knack-scene-render.scene_152', function(event, scene) {
+ recursivecall();
+});
+
+function recursivecall(){
+ setTimeout(function () { if($("#view_596").is(":visible")==true){ Knack.views["view_596"].model.fetch();recursivecall();} }, 1200000);
+}
