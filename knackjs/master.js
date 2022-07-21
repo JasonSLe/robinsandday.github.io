@@ -2802,8 +2802,8 @@ function bindToUpdate1(selector_view_name){
     $('th[class="field_7996"]').hide();
     $('td[class*="field_7996"]').hide();
     $('div[id="view_3392"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_7997"]').attr('data-tooltip',getFieldForRowID('view_3392','field_7996',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_7997"]').addClass('tooltip-bottom');
+      $(this).find('td[data-field-key="field_8010"]').attr('data-tooltip',getFieldForRowID('view_3392','field_7996',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_8010"]').addClass('tooltip-bottom');
   });
 });
 
@@ -2817,8 +2817,8 @@ function bindToUpdate1(selector_view_name){
     $('th[class="field_7998"]').hide();
     $('td[class*="field_7998"]').hide();
     $('div[id="view_3392"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_7998"]').attr('data-tooltip',getFieldForRowID('view_3392','field_7999',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_7998"]').addClass('tooltip-bottom');
+      $(this).find('td[data-field-key="field_8011"]').attr('data-tooltip',getFieldForRowID('view_3392','field_7998',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_8011"]').addClass('tooltip-bottom');
   });
 });
 
