@@ -2794,11 +2794,6 @@ function bindToUpdate1(selector_view_name){
 
   $(document).on('knack-view-render.view_3392', function (event, view, data) {
 
-    //This part is for tooltip of another field above field in list
-    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
-    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
-    //start
-	  //this code works for hover message without inline editing
     $('th[class="field_7996"]').hide();
     $('td[class*="field_7996"]').hide();
     $('div[id="view_3392"] table>tbody>tr').each(function(){
@@ -2809,11 +2804,6 @@ function bindToUpdate1(selector_view_name){
 
   $(document).on('knack-view-render.view_3392', function (event, view, data) {
 
-    //This part is for tooltip of another field above field in list
-    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
-    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
-    //start
-	  //this code works for hover message without inline editing
     $('th[class="field_7998"]').hide();
     $('td[class*="field_7998"]').hide();
     $('div[id="view_3392"] table>tbody>tr').each(function(){
@@ -2822,6 +2812,25 @@ function bindToUpdate1(selector_view_name){
   });
 });
 
+  $(document).on('knack-view-render.view_3404', function (event, view, data) {
+
+    $('th[class="field_7996"]').hide();
+    $('td[class*="field_7996"]').hide();
+    $('div[id="view_3404"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_8010"]').attr('data-tooltip',getFieldForRowID('view_3404','field_7996',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_8010"]').addClass('tooltip-left');
+  });
+});
+
+  $(document).on('knack-view-render.view_3404', function (event, view, data) {
+
+    $('th[class="field_7998"]').hide();
+    $('td[class*="field_7998"]').hide();
+    $('div[id="view_3404"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_8011"]').attr('data-tooltip',getFieldForRowID('view_3404','field_7998',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_8011"]').addClass('tooltip-left');
+  });
+});
 
 //**Used Deal Files - Submit Additional Product Certificates Uploaded
 $(document).on('knack-form-submit.view_3321', function(event, view, data) { 
