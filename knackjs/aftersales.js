@@ -1136,7 +1136,7 @@ function recursivecall(){
 }
 
 // Exit Survey E-mails webhook to trigger – 
-$(document).on('knack-form-submit.view_310', function(event, view, data) { 
+$(document).on('knack-form-submit.view_307', function(event, view, data) { 
     let createData = {"Record ID":data.id};
     callPostHttpRequest("https://hook.integromat.com/a7w9c122du5khow3a9ufyoezq7zdnh0x",deleteEmpty(createData),"Aftersales - Exit Survey Email from Tablet");    
   });
