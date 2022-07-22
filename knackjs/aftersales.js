@@ -1149,3 +1149,12 @@ $(document).on('knack-scene-render.scene_152', function(event, scene) {
 function recursivecall(){
  setTimeout(function () { if($("#view_596").is(":visible")==true){ Knack.views["view_596"].model.fetch();recursivecall();} }, 1200000);
 }
+
+// Refresh the Parts Hubs Pre Pick List         
+$(document).on('knack-scene-render.scene_91', function(event, scene) {
+ recursivecallWallePage();
+});
+
+function recursivecallWallePage(){
+ setTimeout(function () { if($("#view_943").is(":visible")==true){ Knack.views["view_943"].model.fetch();recursivecallWallePage();} }, 6000);
+}
