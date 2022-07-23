@@ -309,6 +309,11 @@ $(document).on('knack-view-render.view_5415', function(event, view, data) {
   $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#tarot2?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+$(document).on('knack-view-render.view_5443', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales#parts-pre-pick?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 function openTab(url) {
   // Create link in memory
   var a = window.document.createElement("a");
