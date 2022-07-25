@@ -915,6 +915,28 @@ $(document).on('knack-form-submit.view_646', function(event, view, data) {
     }
 });
 
+//**Trigger Aftersales - Exit Survey Email From Insecure (Customer Phone)
+$(document).on('knack-form-submit.view_646', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.integromat.com/8k4weh9vuci1ffkk2ber72azmqjhmbvv";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Aftersales - Exit Survey Email from Insecure (customer phone)");
+    }
+});
+
+
 // ----------  refresh customer account applications table every 60 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_111', function(event, scene) {
