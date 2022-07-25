@@ -893,6 +893,50 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     }
 });
 
+
+//**Trigger Aftersales - Follow Up call - Text. 
+$(document).on('knack-form-submit.view_646', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.integromat.com/vkginb5nf78dhi268ujtexqrctayfuab";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Aftersales - Follow Up Call Email");
+    }
+});
+
+//**Trigger Aftersales - Exit Survey Email From Insecure (Customer Phone)
+$(document).on('knack-form-submit.view_310', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.integromat.com/8k4weh9vuci1ffkk2ber72azmqjhmbvv";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Aftersales - Exit Survey Email from Insecure (customer phone)");
+    }
+});
+
+
 // ----------  refresh customer account applications table every 60 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_111', function(event, scene) {
@@ -1151,10 +1195,10 @@ function recursivecall(){
 }
 
 // Refresh the Parts Hubs Pre Pick List         
-$(document).on('knack-scene-render.scene_91', function(event, scene) {
+$(document).on('knack-scene-render.scene_340', function(event, scene) {
  recursivecallWallePage();
 });
 
 function recursivecallWallePage(){
- setTimeout(function () { if($("#view_943").is(":visible")==true){ Knack.views["view_943"].model.fetch();recursivecallWallePage();} }, 500);
+ setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallWallePage();} }, 3000);
 }
