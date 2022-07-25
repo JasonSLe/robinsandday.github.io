@@ -1200,5 +1200,5 @@ $(document).on('knack-scene-render.scene_340', function(event, scene) {
 });
 
 function recursivecallWallePage(){
- setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallWallePage();} }, 500);
+ setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallWallePage();} }, 3000);
 }
