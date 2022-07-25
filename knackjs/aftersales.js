@@ -1195,10 +1195,10 @@ function recursivecall(){
 }
 
 // Refresh the Parts Hubs Pre Pick List         
-$(document).on('knack-scene-render.scene_91', function(event, scene) {
+$(document).on('knack-scene-render.scene_340', function(event, scene) {
  recursivecallWallePage();
 });
 
 function recursivecallWallePage(){
- setTimeout(function () { if($("#view_943").is(":visible")==true){ Knack.views["view_943"].model.fetch();recursivecallWallePage();} }, 500);
+ setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallWallePage();} }, 500);
 }
