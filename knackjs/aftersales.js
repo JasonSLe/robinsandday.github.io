@@ -916,7 +916,7 @@ $(document).on('knack-form-submit.view_646', function(event, view, data) {
 });
 
 //**Trigger Aftersales - Exit Survey Email From Insecure (Customer Phone)
-$(document).on('knack-form-submit.view_646', function(event, view, data) { 
+$(document).on('knack-form-submit.view_310', function(event, view, data) { 
     
     try{
         
