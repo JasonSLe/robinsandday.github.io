@@ -1625,3 +1625,11 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 .kn-crumbtrail {
   visibility: hidden;
 }
+
+/*Centre Table Headers*/
+
+#view_935 th span,
+#view_935 {
+  margin: auto !important;
+  font-size: 15px;
+}
