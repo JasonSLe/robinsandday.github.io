@@ -81,7 +81,7 @@ body {
 
 /* Part-Ex Reg No CSS to look like Reg */
 
-#view_5029 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div,
+#view_5029 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div.kn-label-none.field_7225 > div > span > strong > span,
 #view_481 > section > div > div > div:nth-child(1) > div > div > div > span > strong > span,
 #view_488 > section > div > div > div:nth-child(1) > div > div > div > span > strong > span,
 #view_493 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div > div > span > strong > span,
