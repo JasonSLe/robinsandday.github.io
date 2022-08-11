@@ -3623,10 +3623,12 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   transform: translateY(2px);
 }
 
-/*testing scroll bar for AT options */ 
+/*testing scroll bar for AT options 
 
  #view_2281 .kn-input-field_7464 > div {[ 
-   /* custom scrollbar*/ 
+
+*/
+   /* custom scrollbar
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -3645,5 +3647,5 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
 }
-]} 
+]} */
   
