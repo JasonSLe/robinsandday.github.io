@@ -1088,7 +1088,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 
 });
 
-  //Wip Management hover over descriptions 
+  //Wip Management hide values from view
   $(document).on('knack-view-render.view_596', function (event, view, data) {
 
 	  //hide VIN from table
@@ -1105,6 +1105,26 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	  //hide account num
 	  $('th[class="field_756"]').hide();
     $('td[class*="field_756"]').hide();
+	  
+	  
+  //Wip Management - Customer No Show 
+  $(document).on('knack-view-render.view_973', function (event, view, data) {
+
+	  //hide VIN from table
+	    $('th[class="field_73"]').hide();
+    $('td[class*="field_73"]').hide();
+	  	  //hide reg
+	  $('th[class="field_31"]').hide();
+    $('td[class*="field_31"]').hide();
+	  
+	  //hide wip num
+	  $('th[class="field_441"]').hide();
+    $('td[class*="field_441"]').hide();
+	  
+	  //hide account num
+	  $('th[class="field_756"]').hide();
+    $('td[class*="field_756"]').hide();	  
+	  
 	  
     //This part is for column headers
     //Column header
