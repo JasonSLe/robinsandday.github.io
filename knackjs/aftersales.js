@@ -1123,6 +1123,29 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
     $('td[class*="field_622"]').hide();
 });
 
+  //Wip Management - Customer No Show 
+  $(document).on('knack-view-render.view_973', function (event, view, data) {
+
+	  //hide VIN from table
+	    $('th[class="field_73"]').hide();
+    $('td[class*="field_73"]').hide();
+	  	  //hide reg
+	  $('th[class="field_31"]').hide();
+    $('td[class*="field_31"]').hide();
+	  
+	  //hide wip num
+	  $('th[class="field_441"]').hide();
+    $('td[class*="field_441"]').hide();
+	  
+	  //hide account num
+	  $('th[class="field_756"]').hide();
+    $('td[class*="field_756"]').hide();	  
+	
+	
+   });
+
+
+
 // ----------  Refresh Customer Incident Form table every 60 seconds but not the page itself  ---------- //
 
 $(document).on('knack-scene-render.scene_91', function(event, scene) {
