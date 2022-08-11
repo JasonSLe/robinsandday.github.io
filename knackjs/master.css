@@ -3627,7 +3627,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
  #view_2281 > form > ul:nth-child(6) > li {[
    
-   /* custom scrollbar */
+   /* custom scrollbar 
 ::-webkit-scrollbar {
   width: 20px;
 }
@@ -3646,6 +3646,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
    
-]} 
+]} */
 
   
