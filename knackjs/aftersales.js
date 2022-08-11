@@ -1107,25 +1107,6 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
     $('td[class*="field_756"]').hide();
 	  
 	  
-  //Wip Management - Customer No Show 
-  $(document).on('knack-view-render.view_973', function (event, view, data) {
-
-	  //hide VIN from table
-	    $('th[class="field_73"]').hide();
-    $('td[class*="field_73"]').hide();
-	  	  //hide reg
-	  $('th[class="field_31"]').hide();
-    $('td[class*="field_31"]').hide();
-	  
-	  //hide wip num
-	  $('th[class="field_441"]').hide();
-    $('td[class*="field_441"]').hide();
-	  
-	  //hide account num
-	  $('th[class="field_756"]').hide();
-    $('td[class*="field_756"]').hide();	  
-	  
-	  
     //This part is for column headers
     //Column header
     $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
