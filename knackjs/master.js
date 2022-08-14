@@ -2766,6 +2766,7 @@ function bindToUpdate1(selector_view_name){
   });
 }
 
+//FUNCTION FOR ADDING TOOLTIP HOVER TO TABLES
 //General function, needs to be copied to other apps JS files if needed
   function getFieldForRowID(view, field, id){
     try {
@@ -2807,15 +2808,6 @@ function bindToUpdate1(selector_view_name){
   });
 });
 
-  $(document).on('knack-view-render.view_3392', function (event, view, data) {
-
-    $('th[class="field_7998"]').hide();
-    $('td[class*="field_7998"]').hide();
-    $('div[id="view_3392"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_8011"]').attr('data-tooltip',getFieldForRowID('view_3392','field_7998',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_8011"]').addClass('tooltip-left');
-  });
-});
 
   $(document).on('knack-view-render.view_5435', function (event, view, data) {
 
@@ -2827,15 +2819,6 @@ function bindToUpdate1(selector_view_name){
   });
 });
 
-  $(document).on('knack-view-render.view_5435', function (event, view, data) {
-
-    $('th[class="field_7998"]').hide();
-    $('td[class*="field_7998"]').hide();
-    $('div[id="view_5435"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_8011"]').attr('data-tooltip',getFieldForRowID('view_5435','field_7998',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_8011"]').addClass('tooltip-left');
-  });
-});
 
   $(document).on('knack-view-render.view_3405', function (event, view, data) {
 
@@ -2847,15 +2830,6 @@ function bindToUpdate1(selector_view_name){
   });
 });
 
-  $(document).on('knack-view-render.view_3405', function (event, view, data) {
-
-    $('th[class="field_8001"]').hide();
-    $('td[class*="field_8001"]').hide();
-    $('div[id="view_3405"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_8009"]').attr('data-tooltip',getFieldForRowID('view_3405','field_8001',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_8009"]').addClass('tooltip-left');
-  });
-});
 
  $(document).on('knack-view-render.view_3407', function (event, view, data) {
 
@@ -2867,15 +2841,6 @@ function bindToUpdate1(selector_view_name){
   });
 });
 
-  $(document).on('knack-view-render.view_3407', function (event, view, data) {
-
-    $('th[class="field_8001"]').hide();
-    $('td[class*="field_8001"]').hide();
-    $('div[id="view_3407"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_8009"]').attr('data-tooltip',getFieldForRowID('view_3407','field_8001',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_8009"]').addClass('tooltip-left');
-  });
-});
 
  $(document).on('knack-view-render.view_3408', function (event, view, data) {
 
@@ -2887,15 +2852,6 @@ function bindToUpdate1(selector_view_name){
   });
 });
 
-  $(document).on('knack-view-render.view_3408', function (event, view, data) {
-
-    $('th[class="field_8004"]').hide();
-    $('td[class*="field_8004"]').hide();
-    $('div[id="view_3408"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_8005"]').attr('data-tooltip',getFieldForRowID('view_3408','field_8004',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_8005"]').addClass('tooltip-left');
-  });
-});
 
 
 //**Used Deal Files - Submit Additional Product Certificates Uploaded

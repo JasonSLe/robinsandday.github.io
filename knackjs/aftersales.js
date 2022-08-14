@@ -1042,7 +1042,7 @@ function recursivecall(){
 
 // Trigger Customer Incident Form
 
-$(document).on('knack-form-submit.view_852 knack-form-submit.view_854 knack-form-submit.view_856 knack-form-submit.view_857 knack-form-submit.view_860 knack-form-submit.view_861 knack-form-submit.view_865', function(event, view, data) {
+$(document).on('knack-form-submit.view_781', function(event, view, data) {
 	console.log("Test2");
   callPostHttpRequest("https://hook.integromat.com/gmtkedwe7nxktiqm6qi4rg5apeno73an", {"Record ID":data.id},"Pre Visit Digital Customer Incident Form")
 });
@@ -1088,7 +1088,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 
 });
 
-  //Wip Management hover over descriptions 
+  //Wip Management hide values from view
   $(document).on('knack-view-render.view_596', function (event, view, data) {
 
 	  //hide VIN from table
@@ -1106,6 +1106,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	  $('th[class="field_756"]').hide();
     $('td[class*="field_756"]').hide();
 	  
+	  
     //This part is for column headers
     //Column header
     $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
@@ -1121,6 +1122,29 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	    $('th[class="field_622"]').hide();
     $('td[class*="field_622"]').hide();
 });
+
+  //Wip Management - Customer No Show 
+  $(document).on('knack-view-render.view_973', function (event, view, data) {
+
+	  //hide VIN from table
+	    $('th[class="field_73"]').hide();
+    $('td[class*="field_73"]').hide();
+	  	  //hide reg
+	  $('th[class="field_31"]').hide();
+    $('td[class*="field_31"]').hide();
+	  
+	  //hide wip num
+	  $('th[class="field_441"]').hide();
+    $('td[class*="field_441"]').hide();
+	  
+	  //hide account num
+	  $('th[class="field_756"]').hide();
+    $('td[class*="field_756"]').hide();	  
+	
+	
+   });
+
+
 
 // ----------  Refresh Customer Incident Form table every 60 seconds but not the page itself  ---------- //
 
@@ -1200,5 +1224,5 @@ $(document).on('knack-scene-render.scene_340', function(event, scene) {
 });
 
 function recursivecallWallePage(){
- setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallWallePage();} }, 3000);
+ setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallWallePage();} }, 10000);
 }

@@ -81,7 +81,7 @@ body {
 
 /* Part-Ex Reg No CSS to look like Reg */
 
-#view_5029 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div,
+#view_5029 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div.kn-label-none.field_7225 > div > span > strong > span,
 #view_481 > section > div > div > div:nth-child(1) > div > div > div > span > strong > span,
 #view_488 > section > div > div > div:nth-child(1) > div > div > div > span > strong > span,
 #view_493 > section > div > div.kn-details-group.column-3.columns > div:nth-child(1) > div > div > div > span > strong > span,
@@ -280,24 +280,8 @@ body {
 #view_4754 .kn-detail-label,
 #view_5143 .kn-detail-label,
 #view_5164 .kn-detail-label,
-#view_5028 > section > div > div:nth-child(3) > div:nth-child(1) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(12) > div:nth-child(1) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(3) > div:nth-child(2) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(4) > div:nth-child(2) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(5) > div:nth-child(1) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(5) > div:nth-child(2) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(6) > div:nth-child(1) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(6) > div:nth-child(2) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(7) > div:nth-child(1) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(7) > div:nth-child(2) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(5) > div:nth-child(3) > div > div:nth-child(1) > div,
-#view_5028 > section > div > div:nth-child(6) > div:nth-child(3) > div > div:nth-child(1) > div,
-#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7261 > div.kn-detail-label,
-#view_5028 > section > div > div:nth-child(11) > div:nth-child(1) > div > div:nth-child(1) > div,
-#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7234 > div.kn-detail-label,
-#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7373 > div.kn-detail-label,
-#view_5029 > section > div > div:nth-child(3) > div > div > div.kn-detail.field_7293 > div.kn-detail-label,
+#view_5028 .kn-detail-label,
+#view_5029 .kn-detail-label,
 #view_5004 section > div > div:nth-child(3) > div:nth-child(1) > div,
 #view_5004 .kn-details .kn-detail-label .kn-list .kn-detail-label {
   background-color: transparent;
@@ -3637,13 +3621,4 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5076 .kn-records-nav .control > a:active {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
-}
-
-#kn-scene_905 #outerDiv
-{ height : 200px;
-}
-
-#kn-scene_905 #connection-picker-checkbox-field_7464
-{ height     : 100%;
-  overflow-y : auto;
 }
