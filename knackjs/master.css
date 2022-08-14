@@ -3622,3 +3622,12 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+#kn-scene_905 #outerDiv
+{ height : 200px;
+}
+
+#kn-scene_905 #connection-picker-checkbox-field_7464
+{ height     : 100%;
+  overflow-y : auto;
+}
