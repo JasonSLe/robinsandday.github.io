@@ -3186,3 +3186,8 @@ $(document).on('knack-scene-render.scene_960', function (event, view, data) {
   $('[class="kn-mobile-account-name"]').text((iH?'H':(iH===null?'N':'B'))+' - '+$('[class="kn-mobile-account-name"]').text())
 });
 
+/* HTML change for scroll in checkbox */
+$(document).on('knack-scene-render.scene_905', function(event, scene) {
+  $('div[id="kn-input-field_7464"]>div[class="control"]').attr('id','outerDiv');
+});
+
