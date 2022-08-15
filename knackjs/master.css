@@ -3643,3 +3643,12 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   overflow-y : auto;
 }
 
+/* change Auto Trader optional Extra's into a Scroll rather than list (Sales channel data) */ 
+#kn-scene_1119 #outerDiv
+{ height : 200px;
+}
+
+#kn-scene_1119 #connection-picker-checkbox-field_7561
+{ height     : 100%;
+  overflow-y : auto;
+}
