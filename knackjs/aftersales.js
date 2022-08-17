@@ -959,7 +959,7 @@ function recursivecall(){
 
 
 //trigger Tarot API
-$(document).on('knack-form-submit.view_640', function(event, view, data) {
+$(document).on('knack-form-submit.view_1106', function(event, view, data) {
 
 try{
 
