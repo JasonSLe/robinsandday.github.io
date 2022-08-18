@@ -1106,6 +1106,15 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	  $('th[class="field_756"]').hide();
     $('td[class*="field_756"]').hide();
 	  
+	   //hide connected dealer
+	  $('th[class="field_411"]').hide();
+    $('td[class*="field_411"]').hide();
+	  
+	   //hide parts on V.I.C.S
+	  $('th[class="field_985"]').hide();
+    $('td[class*="field_985"]').hide();
+	  
+	  
 	  
     //This part is for column headers
     //Column header
