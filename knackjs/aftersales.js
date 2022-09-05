@@ -1235,3 +1235,12 @@ $(document).on('knack-scene-render.scene_340', function(event, scene) {
 function recursivecallWallePage(){
  setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallWallePage();} }, 10000);
 }
+
+//Trigger failed Quality check (QC) emails to workshop controller/ manager
+
+// Trigger Customer Incident Form
+
+$(document).on('knack-form-submit.view_1006', function(event, view, data) {
+	console.log("Test2");
+  callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
+});
