@@ -18,9 +18,15 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
           orderNumber = orderNumber.substring(0,orderNumber.indexOf('Order Placed:'));
           orderNumber = orderNumber.substring(orderNumber.indexOf('Order: ')+7)
           console.log('orderNumber',orderNumber);
+          let carImageUrl = $(this).find('td[data-field-key="field_5063"] img').attr('src');
+          let franchise = '';
+          if (carImageUrl.includes('peugeot')) franchise = 'Peugeot';
+          if (carImageUrl.includes('citroen')) franchise = 'Citroen';
+          if (carImageUrl.includes('vauxhall')) franchise = 'Vauxhall';
+          console.log('franchise', franchise);
           if($(this).find('div[id="dodp"]').length){
               //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
-            var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/CRONOS_'+orderNumber+'?disableRedirect=true';
+            var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/cronosAllCheck_'+franchise+'?disableRedirect=true';
           //AJAX Get for the URL - response is now just the date, so we will only print it to html page
               $.ajax({url:url, success: function(data){
                   $(this).find('div[id="dodp"]').text(data);
