@@ -3283,6 +3283,13 @@ color: #FFFFFF;
   text-decoration-color: #388cf5;
   color: #388cf5;
 }
+/* 2nd Finance Acceptance/Situation For TLC Compliance */
+#kn-input-field_7935 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
 /* Tax Confirmation */
 #kn-input-field_6426 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
