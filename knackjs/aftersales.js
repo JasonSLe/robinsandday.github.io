@@ -1251,3 +1251,10 @@ $(document).on('knack-form-submit.view_1177', function(event, view, data) {
 	console.log("Test2");
   callPostHttpRequest("https://hook.integromat.com/3b7aqxlblay6r5egi5rev56ql8qiy4g2", {"Record ID":data.id},"Aftersales VR Update")
 });
+
+// Trigger When VR (Virtual Reception) Message Manually Added From Aftersales App
+
+$(document).on('knack-form-submit.view_1180', function(event, view, data) {
+	console.log("Test2");
+  callPostHttpRequest("https://hook.integromat.com/f1k56q7sd97mlqn37v37y9s759it9ghn", {"Record ID":data.id},"Aftersales VR New Message")
+});
