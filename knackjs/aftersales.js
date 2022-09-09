@@ -1244,3 +1244,10 @@ $(document).on('knack-form-submit.view_1006', function(event, view, data) {
 	console.log("Test2");
   callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
 });
+
+// Trigger Update To VR (Virtual Reception) Status
+
+$(document).on('knack-form-submit.view_1177', function(event, view, data) {
+	console.log("Test2");
+  callPostHttpRequest("https://hook.integromat.com/3b7aqxlblay6r5egi5rev56ql8qiy4g2", {"Record ID":data.id},"Aftersales VR Update")
+});
