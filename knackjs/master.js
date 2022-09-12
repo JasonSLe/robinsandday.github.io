@@ -2727,12 +2727,14 @@ $(document).on('knack-form-submit.view_4733', function(event, view, data) {
 });
 
 // Refresh the table on WALL-E's status page         
+
+
 $(document).on('knack-scene-render.scene_1417', function(event, scene) {
- recursivecallWallePage();
+ recursivecall();
 });
 
-function recursivecallWallePage(){
- setTimeout(function () { if($("#view_4579").is(":visible")==true){ Knack.views["view_4579"].model.fetch();recursivecallWallePage();} }, 10000);
+function recursivecall(){
+ setTimeout(function () { if($("#view_4579").is(":visible")==true){ Knack.views["view_4579"].model.fetch();recursivecall();} }, 10000);
 }
 
 //Trigger Integromat to Unreserve Vehicle via Updates to Website/AutoTrader From Used Stock Management - Edit Adverts 
