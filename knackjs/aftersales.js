@@ -1258,3 +1258,39 @@ $(document).on('knack-form-submit.view_1180', function(event, view, data) {
 	console.log("Test2");
   callPostHttpRequest("https://hook.integromat.com/f1k56q7sd97mlqn37v37y9s759it9ghn", {"Record ID":data.id},"Aftersales VR New Message")
 });
+
+// Virtual Reception table on Vehicle lookup page         
+$(document).on('knack-scene-render.scene_20', function(event, scene) {
+ recursivecallWallePage();
+});
+
+function recursivecallWallePage(){
+ setTimeout(function () { if($("#view_173").is(":visible")==true){ Knack.views["view_1168"].model.fetch();recursivecallWallePage();} }, 60000);
+}
+
+// Virtual Reception table on Pre Visit Page         
+$(document).on('knack-scene-render.scene_91', function(event, scene) {
+ recursivecallWallePage();
+});
+
+function recursivecallWallePage(){
+ setTimeout(function () { if($("#view_173").is(":visible")==true){ Knack.views["view_1188"].model.fetch();recursivecallWallePage();} }, 60000);
+}
+
+// Virtual Reception table on Vehicle Checkout Page        
+$(document).on('knack-scene-render.scene_95', function(event, scene) {
+ recursivecallWallePage();
+});
+
+function recursivecallWallePage(){
+ setTimeout(function () { if($("#view_173").is(":visible")==true){ Knack.views["view_1189"].model.fetch();recursivecallWallePage();} }, 60000);
+}
+
+// Virtual Reception table on Post Visit Page         
+$(document).on('knack-scene-render.scene_90', function(event, scene) {
+ recursivecallWallePage();
+});
+
+function recursivecallWallePage(){
+ setTimeout(function () { if($("#view_173").is(":visible")==true){ Knack.views["view_1190"].model.fetch();recursivecallWallePage();} }, 60000);
+}
