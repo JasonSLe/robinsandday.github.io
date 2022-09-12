@@ -1228,12 +1228,13 @@ function recursivecall(){
 }
 
 // Refresh the Parts Hubs Pre Pick List         
+
 $(document).on('knack-scene-render.scene_340', function(event, scene) {
- recursivecallWallePage();
+ recursivecall();
 });
 
-function recursivecallWallePage(){
- setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallWallePage();} }, 10000);
+function recursivecall(){
+ setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecall();} }, 60000);
 }
 
 //Trigger failed Quality check (QC) emails to workshop controller/ manager
@@ -1260,37 +1261,42 @@ $(document).on('knack-form-submit.view_1180', function(event, view, data) {
 });
 
 //Refresh Virtual Reception table on Vehicle lookup page         
+
 $(document).on('knack-scene-render.scene_20', function(event, scene) {
- recursivecallWallePage();
+ recursivecall();
 });
 
-function recursivecallWallePage(){
- setTimeout(function () { if($("#view_1168").is(":visible")==true){ Knack.views["view_1168"].model.fetch();recursivecallWallePage();} }, 60000);
+function recursivecall(){
+ setTimeout(function () { if($("#view_1168").is(":visible")==true){ Knack.views["view_1168"].model.fetch();recursivecall();} }, 60000);
 }
 
 // Refresh Virtual Reception table on Pre Visit Page         
+
 $(document).on('knack-scene-render.scene_91', function(event, scene) {
- recursivecallWallePage();
+ recursivecall();
 });
 
-function recursivecallWallePage(){
- setTimeout(function () { if($("#view_1188").is(":visible")==true){ Knack.views["view_1188"].model.fetch();recursivecallWallePage();} }, 60000);
+function recursivecall(){
+ setTimeout(function () { if($("#view_1188").is(":visible")==true){ Knack.views["view_1188"].model.fetch();recursivecall();} }, 60000);
 }
 
 // Refresh Virtual Reception table on Vehicle Checkout Page        
+
 $(document).on('knack-scene-render.scene_95', function(event, scene) {
- recursivecallWallePage();
+ recursivecall();
 });
 
-function recursivecallWallePage(){
- setTimeout(function () { if($("#view_1189").is(":visible")==true){ Knack.views["view_1189"].model.fetch();recursivecallWallePage();} }, 60000);
+function recursivecall(){
+ setTimeout(function () { if($("#view_1189").is(":visible")==true){ Knack.views["view_1189"].model.fetch();recursivecall();} }, 60000);
 }
 
 // Refresh Virtual Reception table on Post Visit Page         
+
+
 $(document).on('knack-scene-render.scene_90', function(event, scene) {
- recursivecallWallePage();
+ recursivecall();
 });
 
-function recursivecallWallePage(){
- setTimeout(function () { if($("#view_1190").is(":visible")==true){ Knack.views["view_1190"].model.fetch();recursivecallWallePage();} }, 60000);
+function recursivecall(){
+ setTimeout(function () { if($("#view_1190").is(":visible")==true){ Knack.views["view_1190"].model.fetch();recursivecall();} }, 60000);
 }
