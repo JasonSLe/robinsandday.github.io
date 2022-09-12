@@ -1192,7 +1192,7 @@ $(document).on('knack-scene-render.scene_148', function(event, scene) {
 });
 
 function recursivecall(){
- setTimeout(function () { if($("#view_423").is(":visible")==true){ Knack.views["view_423"].model.fetch();recursivecall();} }, 100000);
+ setTimeout(function () { if($("#view_423").is(":visible")==true){ Knack.views["view_423"].model.fetch();recursivecall();} }, 25000);
 }
 
 // Exit Survey E-mails webhook to trigger – 
