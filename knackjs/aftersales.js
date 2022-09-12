@@ -1250,7 +1250,7 @@ $(document).on('knack-scene-render.scene_20', function(event, scene) {
 });
 
 function recursivecall(){
- setTimeout(function () { if($("#view_1168").is(":visible")==true){ Knack.views["view_1168"].model.fetch();recursivecall();} }, 60000);
+ setTimeout(function () { if($("#view_1168").is(":visible")==true){ Knack.views["view_1168"].model.fetch();recursivecall();} }, 6000);
 }
 
 // Refresh Virtual Reception table on Pre Visit Page         
@@ -1260,7 +1260,7 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
 });
 
 function recursivecall(){
- setTimeout(function () { if($("#view_1188").is(":visible")==true){ Knack.views["view_1188"].model.fetch();recursivecall();} }, 60000);
+ setTimeout(function () { if($("#view_1188").is(":visible")==true){ Knack.views["view_1188"].model.fetch();recursivecall();} }, 6000);
 }
 
 // Refresh Virtual Reception table on Vehicle Checkout Page        
@@ -1270,7 +1270,7 @@ $(document).on('knack-scene-render.scene_95', function(event, scene) {
 });
 
 function recursivecall(){
- setTimeout(function () { if($("#view_1189").is(":visible")==true){ Knack.views["view_1189"].model.fetch();recursivecall();} }, 60000);
+ setTimeout(function () { if($("#view_1189").is(":visible")==true){ Knack.views["view_1189"].model.fetch();recursivecall();} }, 6000);
 }
 
 // Refresh Virtual Reception table on Post Visit Page         
@@ -1281,5 +1281,5 @@ $(document).on('knack-scene-render.scene_90', function(event, scene) {
 });
 
 function recursivecall(){
- setTimeout(function () { if($("#view_1190").is(":visible")==true){ Knack.views["view_1190"].model.fetch();recursivecall();} }, 60000);
+ setTimeout(function () { if($("#view_1190").is(":visible")==true){ Knack.views["view_1190"].model.fetch();recursivecall();} }, 6000);
 }
