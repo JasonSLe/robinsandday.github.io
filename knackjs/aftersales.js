@@ -1250,7 +1250,7 @@ $(document).on('knack-view-render.view_1168', function(event, view, data) {
 
 var timeoutPeriod = 6000;
 
-setTimeout('location.reload(true);",timeoutPeriod);
+setTimeout('location.reload(true);',timeoutPeriod);
 
 });
 
