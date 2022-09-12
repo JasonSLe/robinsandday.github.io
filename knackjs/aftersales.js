@@ -921,25 +921,15 @@ $(document).on('knack-form-submit.view_310', function(event, view, data) {
 
 
 // ----------  refresh customer account applications table every 60 seconds but not the page itself  ----------
-
-$(document).on('knack-scene-render.scene_111', function(event, scene) {
- recursivecall();
-});
-
-function recursivecall(){
- setTimeout(function () { if($("#view_359").is(":visible")==true){ Knack.views["view_359"].model.fetch();recursivecall();} }, 100000);
-}
-
 // ----------  efresh customer account applications report every 60 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_111', function(event, scene) {
- recursivecall();
+ recursivecallscene_111();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_634").is(":visible")==true){ Knack.views["view_634"].model.fetch();recursivecall();} }, 10000);
+function recursivecallscene_111(){
+ setTimeout(function () { if($("#view_359").is(":visible")==true){ Knack.views["view_359"].model.fetch();}if($("#view_634").is(":visible")==true){ Knack.views["view_634"].model.fetch();}recursivecallscene_111(); }, 100000);
 }
-
 
 //trigger Tarot API
 $(document).on('knack-form-submit.view_1106', function(event, view, data) {
@@ -1016,17 +1006,16 @@ try{
 // ----------  refresh status of tarot upload ----------
 
 $(document).on('knack-scene-render.scene_224', function(event, scene) {
- recursivecall();
+ recursivecallscene_224();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_638").is(":visible")==true){ Knack.views["view_638"].model.fetch();recursivecall();} }, 30000);
+function recursivecallscene_224(){
+ setTimeout(function () { if($("#view_638").is(":visible")==true){ Knack.views["view_638"].model.fetch();recursivecallscene_224();} }, 30000);
 }
 
 // Trigger Customer Incident Form
 
 $(document).on('knack-form-submit.view_781', function(event, view, data) {
-	console.log("Test2");
   callPostHttpRequest("https://hook.integromat.com/gmtkedwe7nxktiqm6qi4rg5apeno73an", {"Record ID":data.id},"Pre Visit Digital Customer Incident Form")
 });
 
@@ -1139,13 +1128,14 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 
 
 // ----------  Refresh Customer Incident Form table every 60 seconds but not the page itself  ---------- //
+// Refresh Virtual Reception table on Pre Visit Page  
 
 $(document).on('knack-scene-render.scene_91', function(event, scene) {
- recursivecall();
+ recursivecallscene_91();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_871").is(":visible")==true){ Knack.views["view_871"].model.fetch();recursivecall();} }, 100000);
+function recursivecallscene_91(){
+ setTimeout(function () { if($("#view_871").is(":visible")==true){ Knack.views["view_871"].model.fetch()}; if($("#view_1188").is(":visible")==true){ Knack.views["view_1188"].model.fetch()};recursivecallscene_91();}, 100000);
 }
 
 
@@ -1188,11 +1178,11 @@ $(document).on('knack-view-render.view_735', function(event, view) {
 // ----------  Refresh Aftersales Customer Exit Survey Results table every 60 seconds but not the page itself  ---------- //
 
 $(document).on('knack-scene-render.scene_148', function(event, scene) {
- recursivecall();
+ recursivecallscene_148();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_423").is(":visible")==true){ Knack.views["view_423"].model.fetch();recursivecall();} }, 100000);
+function recursivecallscene_148(){
+ setTimeout(function () { if($("#view_423").is(":visible")==true){ Knack.views["view_423"].model.fetch();recursivecallscene_148();} }, 100000);
 }
 
 // Exit Survey E-mails webhook to trigger – 
@@ -1203,21 +1193,21 @@ $(document).on('knack-form-submit.view_307', function(event, view, data) {
 
 // ------------ Refresh Aftersales Wip Management Table every 20 mins but not the page itself -----------------------//
 $(document).on('knack-scene-render.scene_152', function(event, scene) {
- recursivecall();
+ recursivecallscene_152();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_596").is(":visible")==true){ Knack.views["view_596"].model.fetch();recursivecall();} }, 1200000);
+function recursivecallscene_152(){
+ setTimeout(function () { if($("#view_596").is(":visible")==true){ Knack.views["view_596"].model.fetch();recursivecallscene_152();} }, 1200000);
 }
 
 // Refresh the Parts Hubs Pre Pick List         
 
 $(document).on('knack-scene-render.scene_340', function(event, scene) {
- recursivecall();
+ recursivecallscene_340();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecall();} }, 60000);
+function recursivecallscene_340(){
+ setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallscene_340();} }, 60000);
 }
 
 //Trigger failed Quality check (QC) emails to workshop controller/ manager
@@ -1225,21 +1215,18 @@ function recursivecall(){
 // Trigger Customer Incident Form
 
 $(document).on('knack-form-submit.view_1006', function(event, view, data) {
-	console.log("Test2");
   callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
 });
 
 // Trigger Update To VR (Virtual Reception) Status
 
 $(document).on('knack-form-submit.view_1177', function(event, view, data) {
-	console.log("Test2");
   callPostHttpRequest("https://hook.integromat.com/3b7aqxlblay6r5egi5rev56ql8qiy4g2", {"Record ID":data.id},"Aftersales VR Update")
 });
 
 // Trigger When VR (Virtual Reception) Message Manually Added From Aftersales App
 
 $(document).on('knack-form-submit.view_1180', function(event, view, data) {
-	console.log("Test2");
   callPostHttpRequest("https://hook.integromat.com/f1k56q7sd97mlqn37v37y9s759it9ghn", {"Record ID":data.id},"Aftersales VR New Message")
 });
 
@@ -1255,33 +1242,24 @@ $(document).on('knack-scene-render.scene_20', function(event, scene) {
   setTimeout(function () { if($("#view_1168").is(":visible")==true){ Knack.views["view_1168"].model.fetch();recursivecallscene_20();} }, 6000);
  }
 
-// Refresh Virtual Reception table on Pre Visit Page  
-
-$(document).on('knack-scene-render.scene_91', function(event, scene) {
- recursivecall();
-});
-
-function recursivecall(){
- setTimeout(function () { if($("#view_1188").is(":visible")==true){ Knack.views["view_1188"].model.fetch();recursivecall();} }, 6000);
-}
 
 // Refresh Virtual Reception table on Vehicle Checkout Page        
 
 $(document).on('knack-scene-render.scene_95', function(event, scene) {
- recursivecall();
+ recursivecallscene_95();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_1189").is(":visible")==true){ Knack.views["view_1189"].model.fetch();recursivecall();} }, 6000);
+function recursivecallscene_95(){
+ setTimeout(function () { if($("#view_1189").is(":visible")==true){ Knack.views["view_1189"].model.fetch();recursivecallscene_95();} }, 6000);
 }
 
 // Refresh Virtual Reception table on Post Visit Page         
 
 
 $(document).on('knack-scene-render.scene_90', function(event, scene) {
- recursivecall();
+ recursivecallscene_90();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_1190").is(":visible")==true){ Knack.views["view_1190"].model.fetch();recursivecall();} }, 6000);
+function recursivecallscene_90(){
+ setTimeout(function () { if($("#view_1190").is(":visible")==true){ Knack.views["view_1190"].model.fetch();recursivecallscene_90();} }, 6000);
 }
