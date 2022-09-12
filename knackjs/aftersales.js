@@ -1245,6 +1245,13 @@ $(document).on('knack-form-submit.view_1180', function(event, view, data) {
 
 //Refresh Virtual Reception table on Vehicle lookup page         
 
+$(document).on('knack-scene-render.scene_920', function(event, scene) {
+  recursivecallscene_920();
+ });
+ 
+ function recursivecallscene_920(){
+  setTimeout(function () { if($("#view_1168").is(":visible")==true){ Knack.views["view_1168"].model.fetch();recursivecallscene_920();} }, 6000);
+ }
 
 $(document).on('knack-view-render.view_1168', function(event, view, data) {
 /*
@@ -1255,7 +1262,7 @@ setTimeout('location.reload(true);',timeoutPeriod);
 
 });
 
-// Refresh Virtual Reception table on Pre Visit Page         
+// Refresh Virtual Reception table on Pre Visit Page  
 
 $(document).on('knack-scene-render.scene_91', function(event, scene) {
  recursivecall();
