@@ -1141,51 +1141,48 @@ $(document).on('knack-view-render.view_5219', function(event, view, data) {
 // ----------  refresh Prep Centre driver pickup table every 60 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_1152', function(event, scene) {
- recursivecall();
+  recursivecallscene_1152_1();
+  recursivecallscene_1152_2();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_3435").is(":visible")==true){ Knack.views["view_3435"].model.fetch();recursivecall();} }, 100000);
+function recursivecallscene_1152_1(){
+ setTimeout(function () { if($("#view_3435").is(":visible")==true){ Knack.views["view_3435"].model.fetch();recursivecallscene_1152_1();} }, 100000);
 }
 
 // ----------  refresh Prep Centre driver drop off Table every 60 seconds but not the page itself  ----------
 
-$(document).on('knack-scene-render.scene_1152', function(event, scene) {
- recursivecall();
-});
-
-function recursivecall(){
- setTimeout(function () { if($("#view_3437").is(":visible")==true){ Knack.views["view_3437"].model.fetch();recursivecall();} }, 100000);
+function recursivecallscene_1152_2(){
+ setTimeout(function () { if($("#view_3437").is(":visible")==true){ Knack.views["view_3437"].model.fetch();recursivecallscene_1152_2l();} }, 100000);
 }
 
 // ----------  refresh Prep Centre Table every 60 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_1150', function(event, scene) {
- recursivecall();
+ recursivecallscene_1150();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_3432").is(":visible")==true){ Knack.views["view_3432"].model.fetch();recursivecall();} }, 100000);
+function recursivecallscene_1150(){
+ setTimeout(function () { if($("#view_3432").is(":visible")==true){ Knack.views["view_3432"].model.fetch();recursivecallscene_1150();} }, 100000);
 }
 
 // ----------  refresh Prep Centre Dealer View Table every 60 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_1145', function(event, scene) {
- recursivecall();
+ recursivecallscene_1145();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_3418").is(":visible")==true){ Knack.views["view_3418"].model.fetch();recursivecall();} }, 100000);
+function recursivecallscene_1145(){
+ setTimeout(function () { if($("#view_3418").is(":visible")==true){ Knack.views["view_3418"].model.fetch();recursivecallscene_1145();} }, 100000);
 }
 
 // ----------  refresh Enquiry Max Table every 5 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_146', function(event, scene) {
- recursivecall();
+ recursivecallscene_14();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_3254").is(":visible")==true){ Knack.views["view_3254"].model.fetch();recursivecall();} }, 5000);
+function recursivecallscene_14(){
+ setTimeout(function () { if($("#view_3254").is(":visible")==true){ Knack.views["view_3254"].model.fetch();recursivecallscene_14();} }, 5000);
 }
 
 function createCookie(name, value, days) {
@@ -2035,7 +2032,7 @@ $(document).on('knack-view-render.view_3910', function(event, view, data) {
 // refresh background replaced image at used vehicle check in - disposal selection page
 
 $(document).on('knack-scene-render.scene_909', function(event, scene) {
- recursivecall();
+ recursivecallscene_909();
  $('div[class="field_5038"]').hide()
  setTimeout(function(){
   refreshScene909();
@@ -2054,18 +2051,18 @@ function refreshScene909(){
 }
 
 
-function recursivecall(){
- setTimeout(function () { if($("#view_3927").is(":visible")==true){ Knack.views["view_3927"].model.fetch();recursivecall();} }, 100000);
+function recursivecallscene_909(){
+ setTimeout(function () { if($("#view_3927").is(":visible")==true){ Knack.views["view_3927"].model.fetch();recursivecallscene_909();} }, 100000);
 }
 
 // ----------  refresh Parts Hub table table every 10 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_1274', function(event, scene) {
- recursivecall();
+ recursivecallscene_1274();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_3934").is(":visible")==true){ Knack.views["view_3934"].model.fetch();recursivecall();} }, 10000);
+function recursivecallscene_1274(){
+ setTimeout(function () { if($("#view_3934").is(":visible")==true){ Knack.views["view_3934"].model.fetch();recursivecallscene_1274();} }, 10000);
 }
 
 // LZW-compress a string
@@ -2730,11 +2727,11 @@ $(document).on('knack-form-submit.view_4733', function(event, view, data) {
 
 
 $(document).on('knack-scene-render.scene_1417', function(event, scene) {
- recursivecall();
+ recursivecallscene_1417();
 });
 
-function recursivecall(){
- setTimeout(function () { if($("#view_4579").is(":visible")==true){ Knack.views["view_4579"].model.fetch();recursivecall();} }, 10000);
+function recursivecallscene_1417(){
+ setTimeout(function () { if($("#view_4579").is(":visible")==true){ Knack.views["view_4579"].model.fetch();recursivecallscene_1417();} }, 10000);
 }
 
 //Trigger Integromat to Unreserve Vehicle via Updates to Website/AutoTrader From Used Stock Management - Edit Adverts 
