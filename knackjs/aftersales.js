@@ -1246,6 +1246,7 @@ $(document).on('knack-form-submit.view_1180', function(event, view, data) {
 //Refresh Virtual Reception table on Vehicle lookup page         
 
 $(document).on('knack-scene-render.scene_920', function(event, scene) {
+  console.log('knack-scene-render.scene_920');
   recursivecallscene_920();
  });
  
