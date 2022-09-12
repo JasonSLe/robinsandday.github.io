@@ -1245,14 +1245,14 @@ $(document).on('knack-form-submit.view_1180', function(event, view, data) {
 
 //Refresh Virtual Reception table on Vehicle lookup page         
 
-$(document).on('knack-scene-render.scene_920', function(event, scene) {
-  console.log('knack-scene-render.scene_920');
-  recursivecallscene_920();
+$(document).on('knack-scene-render.scene_20', function(event, scene) {
+  console.log('knack-scene-render.scene_20');
+  recursivecallscene_20();
  });
  
- function recursivecallscene_920(){
-  console.log('recursivecallscene_920');
-  setTimeout(function () { if($("#view_1168").is(":visible")==true){ Knack.views["view_1168"].model.fetch();recursivecallscene_920();} }, 6000);
+ function recursivecallscene_20(){
+  console.log('recursivecallscene_20');
+  setTimeout(function () { if($("#view_1168").is(":visible")==true){ Knack.views["view_1168"].model.fetch();recursivecallscene_20();} }, 6000);
  }
 
 $(document).on('knack-view-render.view_1168', function(event, view, data) {
