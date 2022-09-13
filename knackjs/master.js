@@ -3178,3 +3178,25 @@ $(document).on('knack-form-submit.view_5479', function(event, view, data) {
         sendErrorToIntegromat(exception, "Physical Stock Audit - List of Vehicles for Dealer Location Submitted");
     }
 });
+
+// Refresh the table on Physical Stock Audit Page        
+
+
+$(document).on('knack-scene-render.scene_1599', function(event, scene) {
+ recursivecallscene_1599();
+});
+
+function recursivecallscene_1599(){
+ setTimeout(function () { if($("#view_5199").is(":visible")==true){ Knack.views["view_5199"].model.fetch();recursivecallscene_1599();} }, 10000);
+}
+
+// Refresh the table on Physical Stock Audit Page        
+
+
+$(document).on('knack-scene-render.scene_1601', function(event, scene) {
+ recursivecallscene_1601();
+});
+
+function recursivecallscene_1601(){
+ setTimeout(function () { if($("#view_5478").is(":visible")==true){ Knack.views["view_5478"].model.fetch();recursivecallscene_1601();} }, 10000);
+}
