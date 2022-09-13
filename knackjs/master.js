@@ -3156,3 +3156,25 @@ $(document).on('knack-scene-render.scene_909', function(event, scene) {
 $(document).on('knack-scene-render.scene_1119', function(event, scene) {
   $('div[id="kn-input-field_7561"]>div[class="control"]').attr('id','outerDiv');
 });
+
+// PHYSICAL STOCK AUDIT
+
+//**Physical Stock Audit - List of Vehicles for Dealer Location Submitted
+$(document).on('knack-form-submit.view_5479', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.integromat.com/k152r48ngxpi9a8fk98wl55g4rmoqv6b";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Physical Stock Audit - List of Vehicles for Dealer Location Submitted");
+    }
+});
