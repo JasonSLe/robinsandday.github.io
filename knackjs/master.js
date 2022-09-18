@@ -3237,7 +3237,7 @@ function printE(text) {
   console.log('printE',text);
   if (text.includes('Duration:')){
     let dT = text.substr(0,text.indexOf(','));
-    dT = dT.replace('Duration: ');
+    dT = dT.replace('Duration: ','');
     videoDuration = convertTimeToSeconds(dT);
     console.log('DDD',dT,videoDuration);
   }
