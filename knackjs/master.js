@@ -3258,12 +3258,12 @@ function ffMPEGPrepare(fieldNumber){
     console.log('transcode1');
     let reader = new FileReader();
     reader.readAsArrayBuffer(files[0]);
-    let fileX = {
-      "name": files[0].name,
-      "data": new Uint8Array(reader.result)
-    }
-    console.log(fileX);
     reader.onload = function() {
+      let fileX = {
+        "name": files[0].name,
+        "data": new Uint8Array(reader.result)
+      }
+      console.log(fileX);
       var Module = {
         print: print,
         printErr: print,
