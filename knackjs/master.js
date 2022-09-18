@@ -3232,6 +3232,9 @@ function showVideoUploadButton(fieldNumber){
 function print(text) {
   console.log('print',text);
 }
+function printE(text) {
+  console.log('printE',text);
+}
 
 function getDownloadLink(fileData, fileName) {
   var a = document.createElement('a');
@@ -3262,7 +3265,7 @@ function ffMPEGPrepare(fieldNumber){
       }
       var Module = {
         print: print,
-        printErr: print,
+        printErr: printE,
         files: [fileX] || [],
         arguments: ['-i',fileX.name,'-c:v','libx264','-vf',vfParams,'-preset','fast','-strict','-2','output.mp4'] || [],
         TOTAL_MEMORY: 268435456
