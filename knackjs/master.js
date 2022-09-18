@@ -3203,10 +3203,12 @@ function recursivecallscene_1601(){
 
 /*Video uploading and compressing */
 function showVideoUploadButton(fieldNumber){
+  console.log(fieldNumber);
   $('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-file-upload"]').hide();
   let videoFileUpload = document.createElement('input');
   videoFileUpload.setAttribute("id", "videoFileUpload-"+fieldNumber);
   videoFileUpload.setAttribute("type", "file");
+  console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').insertAfter(videoFileUpload,document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-asset-current"]'))
 }
 
