@@ -3229,11 +3229,26 @@ function showVideoUploadButton(fieldNumber){
   loadScriptWithParams('https://robinsandday.github.io/knackjs/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
 }
 
+var videoDuration = 0;
 function print(text) {
   console.log('print',text);
+  if (text.includes('Duration:')){
+    let dT = text.substr(0,text.indexOf(','));
+    dT = dT.replace('Duration: ');
+    videoDuration = convertTimeToSeconds(dT);
+    console.log('DDD',dT,videoDuration);
+  }
 }
 function printE(text) {
   console.log('printE',text);
+}
+
+function convertTimeToSeconds(timeValue){
+  let tS = timeValue.split(':');
+  if (tS.length!==3){
+    return 0;
+  }
+  return parseFloat(tS[2])+60*parseInt(tS[1])+24*60*parseInt(tS[0]);
 }
 
 function getDownloadLink(fileData, fileName) {
@@ -3250,6 +3265,9 @@ function ffMPEGPrepare(fieldNumber){
   console.log('ffMPEGPrepare')
   console.log(fieldNumber);
   const transcode = async ({ target: { files } }) => {
+    var sp = document.createElement('span');
+    sp.setAttribute("id", "videoFileUploadProgress");
+    document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(sp);
     console.log('transcode1');
     let reader = new FileReader();
     reader.readAsArrayBuffer(files[0]);
@@ -3283,8 +3301,6 @@ function ffMPEGPrepare(fieldNumber){
 
   }
   document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
-
-
 }
 
 $(document).on('knack-view-render.view_5477', function (event, view) {
