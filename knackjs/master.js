@@ -3244,8 +3244,8 @@ function printE(text) {
   if (text.includes('time=')){
     let dT = text.substr(text.lastIndexOf('time=')+5);
     dT = dT.substr(0,dT.indexOf(' '));
-    console.log('CTT',dT,convertTimeToSeconds(dT));
-    //$("#videoFileUploadProgress").text('Converting video, progress: '+Math.round(convertTimeToSeconds(dT)/videoDuration)+'%');
+    console.log('CTT',dT,convertTimeToSeconds(dT),Math.round(convertTimeToSeconds(dT)/videoDuration));
+    $("#videoFileUploadProgress").text('Converting video, progress: '+Math.round(convertTimeToSeconds(dT)/videoDuration)+'%');
   }
 }
 
