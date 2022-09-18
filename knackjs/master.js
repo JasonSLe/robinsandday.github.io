@@ -3248,7 +3248,7 @@ function ffMPEGPrepare(fieldNumber){
       var Module = {
         print: print,
         printErr: print,
-        files: reader.result || [],
+        files: [reader.result] || [],
         arguments: '-i '+files[0].name+' -vf showinfo -strict -2 output.mp4' || [],
         TOTAL_MEMORY: 268435456
       };
