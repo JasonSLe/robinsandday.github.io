@@ -3204,14 +3204,14 @@ function recursivecallscene_1601(){
 }
 
 /*Video uploading and compressing */
-function loadScriptWithParams(src, id,  callback){
+function loadScriptWithParams(src, id,  callback, param1){
   var script, scriptTag;
   script = document.createElement('script');
   script.type = 'text/javascript';
   script.id = id;
   script.src = src;
   script.onload = script.onreadystatechange = function() {
-    if (!this.readyState || this.readyState == 'complete' ){ callback(arguments[3]); }
+    if (!this.readyState || this.readyState == 'complete' ){ callback(param1); }
   };
   scriptTag = document.getElementsByTagName('script')[0];
   scriptTag.parentNode.insertBefore(script, scriptTag);
@@ -3230,6 +3230,7 @@ function showVideoUploadButton(fieldNumber){
 
 function ffMPEGPrepare(fieldNumber){
   console.log('ffMPEGPrepare')
+  console.log(fieldNumber);
   const { createFFmpeg, fetchFile } = FFmpeg;
   const ffmpeg = createFFmpeg({ log: true });
   const transcode = async ({ target: { files } }) => {
