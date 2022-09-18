@@ -3230,10 +3230,7 @@ function showVideoUploadButton(fieldNumber){
 }
 
 function print(text) {
-  postMessage({
-    'type' : 'stdout',
-    'data' : text
-  });
+  console.log('print',text);
 }
 
 function parseArguments(text) {
