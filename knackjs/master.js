@@ -3245,12 +3245,11 @@ function ffMPEGPrepare(fieldNumber){
     reader.readAsArrayBuffer(files[0]);
     reader.onload = function() {
       console.log(reader.result);
-      console.log('-i input.mov -vf showinfo -strict -2 output.mp4'.split(' '));
       var Module = {
         print: print,
         printErr: print,
         files: [reader.result] || [],
-        arguments: '-i input.mov -vf showinfo -strict -2 output21.mp4'.split(' ') || [],
+        arguments: '-i input.mov -vf showinfo -strict -2 output21544.mp4'.split(' ') || [],
         TOTAL_MEMORY: 268435456
       };
       var result = ffmpeg_run(Module);
