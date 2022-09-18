@@ -3209,7 +3209,7 @@ function showVideoUploadButton(fieldNumber){
   videoFileUpload.setAttribute("id", "videoFileUpload-"+fieldNumber);
   videoFileUpload.setAttribute("type", "file");
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
-  document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').insertAfter(videoFileUpload,document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-asset-current"]'))
+  document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').insertBefore(videoFileUpload,document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-asset-current"]'))
 }
 
 $(document).on('knack-view-render.view_5477', function (event, view) {
