@@ -2195,6 +2195,8 @@ visibility: visible;
 #kn-input-field_5588 > div > div.kn-asset-current > div > div > a.kn-view-asset,
 #kn-input-field_5589 > div > div.kn-asset-current > div > div > a.kn-view-asset,
 #kn-input-field_6115 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_8415 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#view_4571 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.kn-detail.field_8415 > div.kn-detail-body > span > span > a,
 #kn-input-field_5590 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
   text-decoration: underline;

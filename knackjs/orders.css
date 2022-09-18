@@ -1522,6 +1522,58 @@ color: #FFFFFF;
   	font-weight: bold;
 }
 
+#view_4221 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4221 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/******** PCD - Fleet Vehicles Consigned that Require Reg Number Allocation LIST ON ADMIN PAGE *********/
+
+#view_4001 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4001 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4001  > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4001  > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/******** Outstanding Admin Claims LIST ON ADMIN PAGE *********/
+
+#view_4507 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4507 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /******************************** NEW VEHICLE DIALOG ADMINISTRATION PAGE ******************************/
 
 /******** Group PSA Auto Allocated Orders To Add To Autoline (W, X, Y, C buyer types) *********/
@@ -1947,6 +1999,18 @@ color: #FFFFFF;
   	font-weight: bold;
 }
 
+#view_3994 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3994 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 #view_3394 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
@@ -1974,6 +2038,20 @@ color: #FFFFFF;
 }
 
 #view_4316 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Manager View Outstanding Dealer Claims FILTERS */
+
+#view_4506 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4506 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -3419,6 +3497,21 @@ color: #FFFFFF;
   color: #388cf5;
 }
 
+/* Dealer Claim Support Proof */
+#kn-input-field_7953 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
+#view_3925 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div.kn-detail.field_7953 > div.kn-detail-body > span > span > a {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #388cf5;
+  color: #388cf5;
+}
+
 /******* NEW DEAL FILE ADMIN AUDIT ********/
 
 #view_2953 .kn-detail-label {background-color: transparent;}
@@ -4740,6 +4833,16 @@ font-size:12px;
 }
 
 #view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_6838{
+    color: #008000;
+    font-size: 14px;
+}
+
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_7954{
+    color: #008000;
+    font-size: 14px;
+}
+
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_7953{
     color: #008000;
     font-size: 14px;
 }

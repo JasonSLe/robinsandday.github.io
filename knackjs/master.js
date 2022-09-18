@@ -3157,6 +3157,50 @@ $(document).on('knack-scene-render.scene_1119', function(event, scene) {
   $('div[id="kn-input-field_7561"]>div[class="control"]').attr('id','outerDiv');
 });
 
+// PHYSICAL STOCK AUDIT
+
+//**Physical Stock Audit - List of Vehicles for Dealer Location Submitted
+$(document).on('knack-form-submit.view_5479', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.integromat.com/k152r48ngxpi9a8fk98wl55g4rmoqv6b";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Physical Stock Audit - List of Vehicles for Dealer Location Submitted");
+    }
+});
+
+// Refresh the table on Physical Stock Audit Page        
+
+
+$(document).on('knack-scene-render.scene_1599', function(event, scene) {
+ recursivecallscene_1599();
+});
+
+function recursivecallscene_1599(){
+ setTimeout(function () { if($("#view_5199").is(":visible")==true){ Knack.views["view_5199"].model.fetch();recursivecallscene_1599();} }, 10000);
+}
+
+// Refresh the table on Physical Stock Audit Page        
+
+
+$(document).on('knack-scene-render.scene_1601', function(event, scene) {
+ recursivecallscene_1601();
+});
+
+function recursivecallscene_1601(){
+ setTimeout(function () { if($("#view_5478").is(":visible")==true){ Knack.views["view_5478"].model.fetch();recursivecallscene_1601();} }, 10000);
+}
+
 /*Video uploading and compressing */
 function showVideoUploadButton(fieldNumber){
   $('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-file-upload"]').hide();
