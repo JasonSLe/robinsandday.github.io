@@ -3300,6 +3300,7 @@ function ffMPEGPrepare(fieldNumber){
       console.log(result);
       console.log('endDate', new Date());
       console.log('duration',new Date()-startDate);
+      document.getElementById("videoFileUploadProgress").textContent('');
       result.forEach(function(file) {
         document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(getDownloadLink(file.data, file.name));
       });
