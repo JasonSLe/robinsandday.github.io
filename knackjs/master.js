@@ -3204,6 +3204,19 @@ function recursivecallscene_1601(){
 }
 
 /*Video uploading and compressing */
+function loadScriptWithParams(src, id,  callback){
+  var script, scriptTag;
+  script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.id = id;
+  script.src = src;
+  script.onload = script.onreadystatechange = function() {
+    if (!this.readyState || this.readyState == 'complete' ){ callback(arguments[3]); }
+  };
+  scriptTag = document.getElementsByTagName('script')[0];
+  scriptTag.parentNode.insertBefore(script, scriptTag);
+}
+
 function showVideoUploadButton(fieldNumber){
   console.log(fieldNumber);
   $('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-file-upload"]').hide();
@@ -3212,11 +3225,10 @@ function showVideoUploadButton(fieldNumber){
   videoFileUpload.setAttribute("type", "file");
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
-  loadScript('https://unpkg.com/@ffmpeg/ffmpeg@0.9.3/dist/ffmpeg.min.js','ffmpegJS', ffMPEGPrepare);
-  
+  loadScriptWithParams('https://unpkg.com/@ffmpeg/ffmpeg@0.9.3/dist/ffmpeg.min.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
 }
 
-function ffMPEGPrepare(){
+function ffMPEGPrepare(fieldNumber){
   console.log('ffMPEGPrepare')
   const { createFFmpeg, fetchFile } = FFmpeg;
   const ffmpeg = createFFmpeg({ log: true });
