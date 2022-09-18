@@ -3229,22 +3229,30 @@ function showVideoUploadButton(fieldNumber){
   loadScriptWithParams('https://raw.githubusercontent.com/bgrins/videoconverter.js/master/build/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
 }
 
+function print(text) {
+  postMessage({
+    'type' : 'stdout',
+    'data' : text
+  });
+}
+
 function ffMPEGPrepare(fieldNumber){
   console.log('ffMPEGPrepare')
   console.log(fieldNumber);
-  /*const { createFFmpeg, fetchFile } = FFmpeg;
-  const ffmpeg = createFFmpeg({ log: true });
   const transcode = async ({ target: { files } }) => {
     const { name } = files[0];
-    await ffmpeg.load();
-    ffmpeg.FS('writeFile', name, await fetchFile(files[0]));
-    await ffmpeg.run('-i', name,  'output.mp4');
-    const data = ffmpeg.FS('readFile', 'output.mp4');
-    console.log('finished');
-    //const video = document.getElementById('player');
-    //video.src = URL.createObjectURL(new Blob([data.buffer], { type: 'video/mp4' }));
+    var Module = {
+      print: print,
+      printErr: print,
+      files: files || [],
+      arguments: arguments || [],
+      TOTAL_MEMORY: 268435456
+    };
+    var result = ffmpeg_run(Module);
   }
-  document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);*/
+  document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
+
+
 }
 
 $(document).on('knack-view-render.view_5477', function (event, view) {
