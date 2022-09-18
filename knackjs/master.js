@@ -3234,7 +3234,7 @@ function print(text) {
   console.log('print',text);
 }
 function printE(text) {
-  console.log('printE',text);
+  //console.log('printE',text);
   if (text.includes('Duration:')){
     let dT = text.substr(0,text.indexOf(','));
     dT = dT.replace('Duration: ','');
