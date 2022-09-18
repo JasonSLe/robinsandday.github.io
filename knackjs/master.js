@@ -3242,7 +3242,7 @@ function printE(text) {
     console.log('DDD',dT,videoDuration);
   }
   if (text.includes('time=')){
-    let dT = text.substr(text.indexOf('time=')+5);
+    let dT = text.substr(text.lastIndexOf('time=')+5);
     dT = dT.substr(0,dT.indexOf(' '));
     console.log('CTT',dT,convertTimeToSeconds(dT));
     $("#videoFileUploadProgress").text('Converting video, progress: '+Math.round(convertTimeToSeconds(dT)/videoDuration)+'%');
