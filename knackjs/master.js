@@ -3156,3 +3156,17 @@ $(document).on('knack-scene-render.scene_909', function(event, scene) {
 $(document).on('knack-scene-render.scene_1119', function(event, scene) {
   $('div[id="kn-input-field_7561"]>div[class="control"]').attr('id','outerDiv');
 });
+
+/*Video uploading and compressing */
+function showVideoUploadButton(fieldNumber){
+  $('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-file-upload"]').hide();
+  let videoFileUpload = document.createElement('input');
+  videoFileUpload.setAttribute("id", "videoFileUpload-"+fieldNumber);
+  videoFileUpload.setAttribute("type", "file");
+  document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').insertAfter(videoFileUpload,document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-asset-current"]'))
+}
+
+$(document).on('knack-view-render.view_5477', function (event, view) {
+  console.log('knack-view-render.view_54771')
+  showVideoUploadButton('field_8366');
+});
