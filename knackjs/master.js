@@ -3250,6 +3250,7 @@ function ffMPEGPrepare(fieldNumber){
       TOTAL_MEMORY: 268435456
     };
     var result = ffmpeg_run(Module);
+    console.log(result);
   }
   document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
 
