@@ -3258,14 +3258,16 @@ function ffMPEGPrepare(fieldNumber){
     console.log('transcode1');
     let reader = new FileReader();
     reader.readAsArrayBuffer(files[0]);
+    let fileX = {
+      "name": files[0].name,
+      "data": new Uint8Array(reader.result)
+    }
+    console.log(fileX);
     reader.onload = function() {
       var Module = {
         print: print,
         printErr: print,
-        files: [{
-          "name": files[0].name,
-          "data": new Uint8Array(reader.result)
-        }] || [],
+        files: [fileX] || [],
         arguments: ['-i '+files[0].name,'-vf showinfo','output.mp4'] || [],
         TOTAL_MEMORY: 268435456
       };
