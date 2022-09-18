@@ -3226,7 +3226,7 @@ function showVideoUploadButton(fieldNumber){
   videoFileUpload.setAttribute("type", "file");
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
-  loadScriptWithParams('ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
+  loadScriptWithParams('https://robinsandday.github.io/knackjs/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
 }
 
 function print(text) {
