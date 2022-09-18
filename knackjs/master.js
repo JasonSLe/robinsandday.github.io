@@ -3240,6 +3240,7 @@ function ffMPEGPrepare(fieldNumber){
   console.log('ffMPEGPrepare')
   console.log(fieldNumber);
   const transcode = async ({ target: { files } }) => {
+    console.log('transcode');
     const { name } = files[0];
     var Module = {
       print: print,
