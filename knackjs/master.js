@@ -1217,6 +1217,22 @@ function eraseCookie(name) {
 }
 
 //DOCUMENT SCAN APP
+
+function loadScript(src, id,  callback){
+  var script, scriptTag;
+  script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.id = id;
+  script.src = src;
+  script.onload = script.onreadystatechange = function() {
+    if (!this.readyState || this.readyState == 'complete' ){ callback(); }
+  };
+  scriptTag = document.getElementsByTagName('script')[0];
+  scriptTag.parentNode.insertBefore(script, scriptTag);
+}
+
+function emptyCallback() { }
+
 var scanAppHTML = '';
 function embedScanApp(){
   let scanApp = document.getElementById('scanApp');
@@ -1249,20 +1265,6 @@ function embedScanApp(){
     document.getElementsByTagName( 'head' )[0].appendChild( style )
   }
 
-  function emptyCallback() { }
-
-  function loadScript(src, id,  callback){
-    var script, scriptTag;
-    script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.id = id;
-    script.src = src;
-    script.onload = script.onreadystatechange = function() {
-      if (!this.readyState || this.readyState == 'complete' ){ callback(); }
-    };
-    scriptTag = document.getElementsByTagName('script')[0];
-    scriptTag.parentNode.insertBefore(script, scriptTag);
-  }
   if ($('#scanAppJS').length===0){
     loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS', emptyCallback);
   }
@@ -3209,7 +3211,8 @@ function showVideoUploadButton(fieldNumber){
   videoFileUpload.setAttribute("id", "videoFileUpload-"+fieldNumber);
   videoFileUpload.setAttribute("type", "file");
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
-  document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload)
+  document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
+  loadScript('https://unpkg.com/@ffmpeg/ffmpeg@0.9.3/dist/ffmpeg.min.js','ffmpegJS', emptyCallback);
 }
 
 $(document).on('knack-view-render.view_5477', function (event, view) {
