@@ -3213,6 +3213,19 @@ function showVideoUploadButton(fieldNumber){
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
   loadScript('https://unpkg.com/@ffmpeg/ffmpeg@0.9.3/dist/ffmpeg.min.js','ffmpegJS', emptyCallback);
+  const { createFFmpeg, fetchFile } = FFmpeg;
+    const ffmpeg = createFFmpeg({ log: true });
+    const transcode = async ({ target: { files } }) => {
+      const { name } = files[0];
+      await ffmpeg.load();
+      ffmpeg.FS('writeFile', name, await fetchFile(files[0]));
+      await ffmpeg.run('-i', name,  'output.mp4');
+      const data = ffmpeg.FS('readFile', 'output.mp4');
+      console.log('finished');
+      //const video = document.getElementById('player');
+      //video.src = URL.createObjectURL(new Blob([data.buffer], { type: 'video/mp4' }));
+    }
+  document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
 }
 
 $(document).on('knack-view-render.view_5477', function (event, view) {
