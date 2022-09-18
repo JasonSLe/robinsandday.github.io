@@ -3204,6 +3204,7 @@ function recursivecallscene_1601(){
 }
 
 /*Video uploading and compressing */
+/*
 function loadScriptWithParams(src, id,  callback, param1){
   var script, scriptTag;
   script = document.createElement('script');
@@ -3250,3 +3251,4 @@ $(document).on('knack-view-render.view_5477', function (event, view) {
   console.log('knack-view-render.view_54771')
   showVideoUploadButton('field_8366');
 });
+*/
