@@ -3253,9 +3253,12 @@ function ffMPEGPrepare(fieldNumber){
         arguments: ['-i',fileX.name,'-c:v','libx264','-vf','showinfo','-strict','-2','output.mp4'] || [],
         TOTAL_MEMORY: 268435456
       };
+      let startDate = new Date();
+      console.log('startDate',startDate);
       var result = ffmpeg_run(Module);
       console.log(result);
-      
+      console.log('endDate', new Date());
+      console.log('duration',new Date()-startDate);
     };
 
   }
