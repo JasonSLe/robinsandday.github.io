@@ -3236,6 +3236,21 @@ function print(text) {
   });
 }
 
+function parseArguments(text) {
+  text = text.replace(/\s+/g, ' ');
+  var args = [];
+  // Allow double quotes to not split args.
+  text.split('"').forEach(function(t, i) {
+    t = t.trim();
+    if ((i % 2) === 1) {
+      args.push(t);
+    } else {
+      args = args.concat(t.split(" "));
+    }
+  });
+  return args;
+}
+
 function ffMPEGPrepare(fieldNumber){
   console.log('ffMPEGPrepare')
   console.log(fieldNumber);
@@ -3247,8 +3262,8 @@ function ffMPEGPrepare(fieldNumber){
       var Module = {
         print: print,
         printErr: print,
-        files: [reader.result] || [],
-        arguments: ['-i',files[0].name,'-vf','showinfo','-strict','-2','output.mp4'] || [],
+        files: [new Uint8Array(reader.result)] || [],
+        arguments: parseArguments('-i '+files[0].name+' -vf showinfo -strict -2 output.mp4') || [],
         TOTAL_MEMORY: 268435456
       };
       var result = ffmpeg_run(Module);
