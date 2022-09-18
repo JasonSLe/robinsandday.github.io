@@ -3242,17 +3242,21 @@ function ffMPEGPrepare(fieldNumber){
   const transcode = async ({ target: { files } }) => {
     console.log('transcode1');
     let reader = new FileReader();
-    let fileC = await reader.readAsArrayBuffer(files[0]);
-    console.log(fileC.length);
-    var Module = {
-      print: print,
-      printErr: print,
-      files: fileC || [],
-      arguments: '-i '+files[0].name+' -vf showinfo -strict -2 output.mp4' || [],
-      TOTAL_MEMORY: 268435456
+    reader.readAsArrayBuffer(files[0]);
+    reader.onload = function() {
+      console.log(reader.result);
+      var Module = {
+        print: print,
+        printErr: print,
+        files: reader.result || [],
+        arguments: '-i '+files[0].name+' -vf showinfo -strict -2 output.mp4' || [],
+        TOTAL_MEMORY: 268435456
+      };
+      var result = ffmpeg_run(Module);
+      console.log(result);
+      
     };
-    var result = ffmpeg_run(Module);
-    console.log(result);
+
   }
   document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
 
