@@ -3233,6 +3233,16 @@ function print(text) {
   console.log('print',text);
 }
 
+function getDownloadLink(fileData, fileName) {
+  var a = document.createElement('a');
+  a.download = fileName;
+  var blob = new Blob([fileData]);
+  var src = window.URL.createObjectURL(blob);
+  a.href = src;
+  a.textContent = 'Click here to download ' + fileName + "!";
+  return a;
+}
+
 function ffMPEGPrepare(fieldNumber){
   console.log('ffMPEGPrepare')
   console.log(fieldNumber);
@@ -3259,6 +3269,9 @@ function ffMPEGPrepare(fieldNumber){
       console.log(result);
       console.log('endDate', new Date());
       console.log('duration',new Date()-startDate);
+      result.forEach(function(file) {
+        document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(getDownloadLink(file.data, file.name));
+      });
     };
 
   }
