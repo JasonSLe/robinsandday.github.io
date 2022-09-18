@@ -3242,10 +3242,12 @@ function ffMPEGPrepare(fieldNumber){
   const transcode = async ({ target: { files } }) => {
     console.log('transcode');
     const { name } = files[0];
+    let reader = new FileReaderSync();
+    let fileC = reader.readAsArrayBuffer(name);
     var Module = {
       print: print,
       printErr: print,
-      files: files || [],
+      files: fileC || [],
       arguments: '-i '+name+' -vf showinfo -strict -2 output.mp4' || [],
       TOTAL_MEMORY: 268435456
     };
