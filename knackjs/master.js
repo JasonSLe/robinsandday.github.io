@@ -3204,7 +3204,7 @@ function recursivecallscene_1601(){
 }
 
 /*Video uploading and compressing */
-/*
+
 function loadScriptWithParams(src, id,  callback, param1){
   var script, scriptTag;
   script = document.createElement('script');
@@ -3226,13 +3226,13 @@ function showVideoUploadButton(fieldNumber){
   videoFileUpload.setAttribute("type", "file");
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
-  loadScriptWithParams('https://unpkg.com/@ffmpeg/ffmpeg@0.9.3/dist/ffmpeg.min.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
+  loadScriptWithParams('https://raw.githubusercontent.com/bgrins/videoconverter.js/master/build/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
 }
 
 function ffMPEGPrepare(fieldNumber){
   console.log('ffMPEGPrepare')
   console.log(fieldNumber);
-  const { createFFmpeg, fetchFile } = FFmpeg;
+  /*const { createFFmpeg, fetchFile } = FFmpeg;
   const ffmpeg = createFFmpeg({ log: true });
   const transcode = async ({ target: { files } }) => {
     const { name } = files[0];
@@ -3244,11 +3244,10 @@ function ffMPEGPrepare(fieldNumber){
     //const video = document.getElementById('player');
     //video.src = URL.createObjectURL(new Blob([data.buffer], { type: 'video/mp4' }));
   }
-  document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
+  document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);*/
 }
 
 $(document).on('knack-view-render.view_5477', function (event, view) {
   console.log('knack-view-render.view_54771')
   showVideoUploadButton('field_8366');
 });
-*/
