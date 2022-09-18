@@ -3238,6 +3238,11 @@ function print(text) {
     videoDuration = convertTimeToSeconds(dT);
     console.log('DDD',dT,videoDuration);
   }
+  if (text.includes('time=')){
+    let dT = text.substr(text.indexOf('time=')+5);
+    dT = dT.substr(0,' ');
+    console.log('CTT',dT,convertTimeToSeconds(dT));
+  }
 }
 function printE(text) {
   console.log('printE',text);
