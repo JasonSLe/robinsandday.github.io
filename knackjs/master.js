@@ -3264,7 +3264,7 @@ function ffMPEGPrepare(fieldNumber){
         printErr: print,
         files: [{
           "name": files[0].name,
-          "data": new Uint8Array(reader.result)
+          "data": reader.result
         }] || [],
         arguments: parseArguments('-i '+files[0].name+' -vf showinfo -strict -2 output.mp4') || [],
         TOTAL_MEMORY: 268435456
