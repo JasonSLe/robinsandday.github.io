@@ -3267,7 +3267,7 @@ function ffMPEGPrepare(fieldNumber){
         print: print,
         printErr: printE,
         files: [fileX] || [],
-        arguments: ['-i',fileX.name,'-c:v','libx264','-vf',vfParams,'-preset','fast','-strict','-2','output.mp4'] || [],
+        arguments: ['-i',fileX.name,'-c:v','libx264','-vf',vfParams,'-preset','ultrafast','-strict','-2','output.mp4'] || [],
         TOTAL_MEMORY: 268435456
       };
       let startDate = new Date();
