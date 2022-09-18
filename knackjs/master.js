@@ -3244,7 +3244,7 @@ function ffMPEGPrepare(fieldNumber){
     const { name } = files[0];
     console.log(name);
     let reader = new FileReader();
-    let fileC = await reader.readAsArrayBuffer(name);
+    let fileC = await reader.readAsText(name);
     console.log(fileC.length);
     var Module = {
       print: print,
