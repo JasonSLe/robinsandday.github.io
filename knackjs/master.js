@@ -3243,7 +3243,7 @@ function printE(text) {
   }
   if (text.includes('time=')){
     let dT = text.substr(text.indexOf('time=')+5);
-    dT = dT.substr(0,' ');
+    dT = dT.substr(0,dT.indexOf(' '));
     console.log('CTT',dT,convertTimeToSeconds(dT));
   }
 }
