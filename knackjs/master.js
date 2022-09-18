@@ -3245,6 +3245,7 @@ function ffMPEGPrepare(fieldNumber){
     reader.readAsArrayBuffer(files[0]);
     reader.onload = function() {
       console.log(reader.result);
+      console.log('-i input.mov -vf showinfo -strict -2 output.mp4'.split(' '));
       var Module = {
         print: print,
         printErr: print,
