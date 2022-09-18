@@ -3257,7 +3257,7 @@ function ffMPEGPrepare(fieldNumber){
       }
       console.log(fileX);
       let vfParams = 'scale=320:-1';
-      if (fileX.name.incudes('.mov')){
+      if (fileX.name.includes('.mov')){
         vfParams = 'showinfo';
       }
       var Module = {
