@@ -3256,11 +3256,15 @@ function ffMPEGPrepare(fieldNumber){
         "data": new Uint8Array(reader.result)
       }
       console.log(fileX);
+      let vfParams = 'scale=320:-1';
+      if (fileX.name.incudes('.mov')){
+        vfParams = 'showinfo';
+      }
       var Module = {
         print: print,
         printErr: print,
         files: [fileX] || [],
-        arguments: ['-i',fileX.name,'-c:v','libx264','-vf','scale=320:-1','-preset','fast','-strict','-2','output.mp4'] || [],
+        arguments: ['-i',fileX.name,'-c:v','libx264','-vf',vfParams,'-preset','fast','-strict','-2','output.mp4'] || [],
         TOTAL_MEMORY: 268435456
       };
       let startDate = new Date();
