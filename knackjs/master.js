@@ -3241,10 +3241,8 @@ function ffMPEGPrepare(fieldNumber){
   console.log(fieldNumber);
   const transcode = async ({ target: { files } }) => {
     console.log('transcode1');
-    const { name } = files[0];
-    console.log(name);
     let reader = new FileReader();
-    let fileC = await reader.readAsText(name);
+    let fileC = await reader.readAsArrayBuffer(files[0]);
     console.log(fileC.length);
     var Module = {
       print: print,
