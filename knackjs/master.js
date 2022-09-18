@@ -3219,7 +3219,7 @@ function loadScriptWithParams(src, id,  callback, param1){
 }
 
 function showVideoUploadButton(fieldNumber){
-  console.log(fieldNumber);
+  console.log(fieldNumber+'aaa');
   $('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-file-upload"]').hide();
   let videoFileUpload = document.createElement('input');
   videoFileUpload.setAttribute("id", "videoFileUpload-"+fieldNumber);
