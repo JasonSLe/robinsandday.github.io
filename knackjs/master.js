@@ -3277,7 +3277,7 @@ function ffMPEGPrepare(fieldNumber){
     console.log('transcode1');
     let reader = new FileReader();
     reader.readAsArrayBuffer(files[0]);
-    reader.onload = function() {
+    reader.onload = async function() {
       let fileX = {
         "name": files[0].name,
         "data": new Uint8Array(reader.result)
@@ -3290,14 +3290,14 @@ function ffMPEGPrepare(fieldNumber){
   document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
 }
 
-async function processFile(fileX){
+async function processFile(fileX, fieldNumber){
   let vfParams = 'scale=320:-1';
   if (fileX.name.includes('.mov')){
     vfParams = 'showinfo';
   }
   var Module = {
-    //print: print,
-    //printErr: printE,
+    print: print,
+    printErr: printE,
     files: [fileX] || [],
     arguments: ['-i',fileX.name,'-c:v','libx264','-vf',vfParams,'-preset','fast','-strict','-2','output.mp4'] || [],
     TOTAL_MEMORY: 268435456
