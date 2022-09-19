@@ -3291,11 +3291,11 @@ function ffMPEGPrepare(fieldNumber){
     console.log('with promisA', fileResult,'rf',readdFile);
     let fileX = {
       "name": files[0].name,
-      "data": new Uint8Array(fileResult)
+      "data": new Uint8Array(readdFile)
     }
     console.log(fileX);
     processFile(fileX, fieldNumber);
-    
+
     console.log('behind process file');
   }
   document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
