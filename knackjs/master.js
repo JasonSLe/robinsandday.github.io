@@ -3295,6 +3295,7 @@ function ffMPEGPrepare(fieldNumber){
     }
     console.log(fileX);
     processFile(fileX, fieldNumber);
+    
     console.log('behind process file');
   }
   document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
