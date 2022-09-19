@@ -3283,7 +3283,8 @@ function ffMPEGPrepare(fieldNumber){
         "data": new Uint8Array(reader.result)
       }
       console.log(fileX);
-      processFile(fileX, fieldNumber)
+      processFile(fileX, fieldNumber);
+      console.log('behind process file');
     };
 
   }
