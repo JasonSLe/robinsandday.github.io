@@ -3283,30 +3283,34 @@ function ffMPEGPrepare(fieldNumber){
         "data": new Uint8Array(reader.result)
       }
       console.log(fileX);
-      let vfParams = 'scale=320:-1';
-      if (fileX.name.includes('.mov')){
-        vfParams = 'showinfo';
-      }
-      var Module = {
-        print: print,
-        printErr: printE,
-        files: [fileX] || [],
-        arguments: ['-i',fileX.name,'-c:v','libx264','-vf',vfParams,'-preset','fast','-strict','-2','output.mp4'] || [],
-        TOTAL_MEMORY: 268435456
-      };
-      let startDate = new Date();
-      console.log('startDate',startDate);
-      var result = ffmpeg_run(Module);
-      console.log(result);
-      console.log('endDate', new Date());
-      console.log('duration',new Date()-startDate);
-      result.forEach(function(file) {
-        document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(getDownloadLink(file.data, file.name));
-      });
+      processFile(fileX, fieldNumber)
     };
 
   }
   document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
+}
+
+function processFile(fileX){
+  let vfParams = 'scale=320:-1';
+  if (fileX.name.includes('.mov')){
+    vfParams = 'showinfo';
+  }
+  var Module = {
+    print: print,
+    printErr: printE,
+    files: [fileX] || [],
+    arguments: ['-i',fileX.name,'-c:v','libx264','-vf',vfParams,'-preset','fast','-strict','-2','output.mp4'] || [],
+    TOTAL_MEMORY: 268435456
+  };
+  let startDate = new Date();
+  console.log('startDate',startDate);
+  var result = ffmpeg_run(Module);
+  console.log(result);
+  console.log('endDate', new Date());
+  console.log('duration',new Date()-startDate);
+  result.forEach(function(file) {
+    document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(getDownloadLink(file.data, file.name));
+  });
 }
 
 $(document).on('knack-view-render.view_5477', function (event, view) {
