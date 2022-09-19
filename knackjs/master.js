@@ -3296,8 +3296,8 @@ async function processFile(fileX){
     vfParams = 'showinfo';
   }
   var Module = {
-    print: print,
-    printErr: printE,
+    //print: print,
+    //printErr: printE,
     files: [fileX] || [],
     arguments: ['-i',fileX.name,'-c:v','libx264','-vf',vfParams,'-preset','fast','-strict','-2','output.mp4'] || [],
     TOTAL_MEMORY: 268435456
