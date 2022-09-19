@@ -3290,7 +3290,7 @@ function ffMPEGPrepare(fieldNumber){
   document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
 }
 
-function processFile(fileX){
+async function processFile(fileX){
   let vfParams = 'scale=320:-1';
   if (fileX.name.includes('.mov')){
     vfParams = 'showinfo';
