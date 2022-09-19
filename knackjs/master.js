@@ -3275,20 +3275,22 @@ function ffMPEGPrepare(fieldNumber){
     sp.setAttribute("id", "videoFileUploadProgress");
     document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(sp);
     console.log('transcode1');
-    return new Promise((resolve, reject) => {
+    let files = new Promise((resolve, reject) => {
       let reader = new FileReader();
       reader.readAsArrayBuffer(files[0]);
       reader.onload = async function() {
-        let fileX = {
-          "name": files[0].name,
-          "data": new Uint8Array(reader.result)
-        }
-        console.log(fileX);
-        processFile(fileX, fieldNumber);
-        console.log('behind process file');
-        resolve(true)
+        resolve(files)
       };
     });
+    console.log('with promis')
+    await Promise.resolve(files);
+    let fileX = {
+      "name": files[0].name,
+      "data": new Uint8Array(reader.result)
+    }
+    console.log(fileX);
+    processFile(fileX, fieldNumber);
+    console.log('behind process file');
   }
   document.getElementById("videoFileUpload-"+fieldNumber).addEventListener('change', transcode);
 }
