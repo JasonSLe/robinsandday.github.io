@@ -3279,6 +3279,7 @@ function ffMPEGPrepare(fieldNumber){
       let reader = new FileReader();
       reader.readAsArrayBuffer(files[0]);
       reader.onload = async function() {
+        console.log('reading done',reader.result)
         resolve(reader.result)
       };
     });
