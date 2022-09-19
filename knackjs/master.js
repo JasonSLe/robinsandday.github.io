@@ -3267,6 +3267,8 @@ function getDownloadLink(fileData, fileName) {
   return a;
 }
 
+var readdFile = '';
+
 function ffMPEGPrepare(fieldNumber){
   console.log('ffMPEGPrepare')
   console.log(fieldNumber);
@@ -3280,11 +3282,13 @@ function ffMPEGPrepare(fieldNumber){
       reader.readAsArrayBuffer(files[0]);
       reader.onload = async function() {
         console.log('reading done',reader.result)
+        readdFile = reader.result;
         resolve(reader.result)
       };
     });
-    console.log('with promis')
+    console.log('with promis', fileResult,'rf',readdFile);
     await Promise.resolve(fileResult);
+    console.log('with promisA', fileResult,'rf',readdFile);
     let fileX = {
       "name": files[0].name,
       "data": new Uint8Array(fileResult)
