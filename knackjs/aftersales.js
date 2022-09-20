@@ -1020,7 +1020,7 @@ $(document).on('knack-view-render.view_1175', function(event, view) {
    console.log(event2.view.Knack.google_loading)
    console.log(event2.view.Knack.domain)
   
-   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id},"Aftersales- trigger refresh individual WIP");
+   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":data.id,"Aftersales- trigger refresh individual WIP");
  }
 
 
