@@ -1004,25 +1004,24 @@ try{
 });
 
 //Trigger refresh individual wip on live job card view
-$(document).on('knack-form-submit.view_1175', function(event, view, data) { 
-    
-    try{
-        
 
-        let commandURL = "https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8";
-        let dataToSend = JSON.stringify({"Record ID":data.id});
 
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        sendErrorToIntegromat(exception, "Trigger update individual wip");
-    }
-});
+$(document).on('knack-view-render.view_1175', function(event, view) {
+ //send a http request with the vin an record id
+
+ const triggerRecord = (event2) => {
+  console.log("Test106")
+   console.log(event2.view.app_id)
+   console.log(event2.view.Knack)
+   let k = Object.assign({},event2.view.Knack);
+   console.log(event2.view.Knack.hash_parts)
+   console.log(k.hash_parts)
+   console.log(event2.view.Knack.scene_hash)
+   console.log(event2.view.Knack.google_loading)
+   console.log(event2.view.Knack.domain)
+  
+   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id},"Aftersales- trigger refresh individual WIP");
+ }
 
 
 
