@@ -647,7 +647,7 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
   var refreshList = [];
 
   function refreshWithData(viewID, notifTitle, notifText, field, data = null){
-    //console.log('refreshWithData', viewID, 'data',data,'field',field,Knack.views["view_"+viewID].model.data.models[0].attributes);
+    console.log('refreshWithData', viewID, 'data',data,'field',field,Knack.views["view_"+viewID].model.data.models[0].attributes);
     //askNotifications();
     if (Knack.views["view_"+viewID]){
       if (data===null){
@@ -658,7 +658,7 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
         refreshList.push(viewID);
         data = {'value':Knack.views["view_"+viewID].model.data.models[0].attributes[field]};
       } else {
-        //console.log(Knack.views["view_"+viewID].model.data);
+        console.log(Knack.views["view_"+viewID].model.data);
         if (data.value<Knack.views["view_"+viewID].model.data.models[0].attributes[field]){
           console.log('change up');
           showNotification('Virtual reception','','New Aftersales Virtual Reception Message')
