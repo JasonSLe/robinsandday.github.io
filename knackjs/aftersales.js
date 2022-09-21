@@ -1268,12 +1268,8 @@ $(document).on('knack-scene-render.scene_20', function(event, scene) {
 // Refresh Virtual Reception table on Vehicle Checkout Page        
 
 $(document).on('knack-scene-render.scene_95', function(event, scene) {
- recursivecallscene_95();
+  refreshWithData('1189', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
-
-function recursivecallscene_95(){
- setTimeout(function () { if($("#view_1189").is(":visible")==true){ Knack.views["view_1189"].model.fetch();recursivecallscene_95();} }, 6000);
-}
 
 // Refresh Virtual Reception table on Post Visit Page         
 
