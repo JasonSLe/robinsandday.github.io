@@ -659,12 +659,12 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
         data = {'value':Knack.views["view_"+viewID].model.data.models[0].attributes[field]};
       } else {
         console.log(Knack.views["view_"+viewID].model.data);
-        if (data.value<Knack.views["view_"+viewID].model.data.models[0].attributes[fields]){
+        if (data.value<Knack.views["view_"+viewID].model.data.models[0].attributes[field]){
           console.log('change up');
           showNotification('more calls')
         }
       }
-      data.value = Knack.views["view_"+viewID].model.data.models[0].attributes[fields];
+      data.value = Knack.views["view_"+viewID].model.data.models[0].attributes[field];
     }
     setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){viewFetchWithData(viewID, notifTitle, notifText, field, data);} }, 6000);
    }
