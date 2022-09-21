@@ -1267,7 +1267,7 @@ $(document).on('knack-form-submit.view_1180', function(event, view, data) {
 $(document).on('knack-scene-render.scene_20', function(event, scene) {
   //console.log('knack-scene-render.scene_20');
   //recursivecallscene_20();
-  refreshWithData('1168', 'TITLE', 'TEXT $field_351', 'field_1519');
+  refreshWithData('1168', 'TITLE', 'TEXT $field_351', 'field_1518');
  });
  
  function recursivecallscene_20(){
