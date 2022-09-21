@@ -1273,7 +1273,6 @@ $(document).on('knack-scene-render.scene_95', function(event, scene) {
 
 // Refresh Virtual Reception table on Post Visit Page         
 
-
 $(document).on('knack-scene-render.scene_90', function(event, scene) {
   refreshWithData('1190', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
