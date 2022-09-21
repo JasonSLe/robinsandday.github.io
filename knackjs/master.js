@@ -3323,7 +3323,10 @@ $(document).on('knack-scene-render.scene_1694', function(event, scene) {
 
 function askNotifications(){
   if (Notification.permission !== 'granted') Notification.requestPermission();
-  if (Notification.permission === 'denied') alert('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F');
+  if (Notification.permission === 'denied'){
+    alert('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F');
+    $('div[id="view_5522"] p').text('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F')
+  }
   if (Notification.permission === 'granted') $('div[id="view_5522"] p').text('You have notifications enabled. You can continue using the app as normal.')
   console.log(Notification.permission);
  }
