@@ -658,7 +658,7 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
         refreshList.push(viewID);
         data = {};
       } else {
-        console.log(Knack.views["view_"+viewID].model.data.total_records);
+        console.log(Knack.views["view_"+viewID].model.data);
         if (data.total_records!== Knack.views["view_"+viewID].model.data.total_records){
           console.log('NEW RECORD');
           let newRec = Knack.views["view_"+viewID].model.data.models.filter(function(el){
@@ -679,7 +679,7 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
       data.total_records = Knack.views["view_"+viewID].model.data.total_records;
       data.records = Knack.views["view_"+viewID].model.data.models.map(function(el){ return el.id});
     }
-    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){viewFetch(viewID, notifTitle, notifText, data);} }, 15000);
+    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){viewFetch(viewID, notifTitle, notifText, data);} }, 6000);
    }
 
   function refresh(viewID, notifTitle, notifText, data = null){
