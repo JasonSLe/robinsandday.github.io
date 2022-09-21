@@ -707,7 +707,7 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
 
   function viewFetchWithData(viewID, notifTitle, notifText, field, data = null){
     Knack.views["view_"+viewID].model.fetch();
-    setTimeout(function () { refresh(viewID, notifTitle, notifText, field, data); }, 500);
+    setTimeout(function () { refreshWithData(viewID, notifTitle, notifText, field, data); }, 500);
    }
 
    function viewFetch(viewID, notifTitle, notifText, data = null){
