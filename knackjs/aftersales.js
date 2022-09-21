@@ -646,43 +646,27 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
   // 151 is the view number, and in text you can use any fields in the view with $
   var refreshList = [];
 
-  function refreshWithData(viewID, notifTitle, notifText, data = null){
+  function refreshWithData(viewID, notifTitle, notifText,field, data = null){
     console.log('refreshWithData', viewID);
     askNotifications();
     if (Knack.views["view_"+viewID]){
-      console.log('AAA')
-      console.log(Knack.views["view_"+viewID].model.data);
       if (data===null){
         if (refreshList.find(el => el === viewID)){
           console.log('already registered');
           return;
         }
         refreshList.push(viewID);
-        data = {};
+        data = {'value':Knack.views["view_"+viewID].model.data.models[0].attributes[field]};
       } else {
-        console.log('AAA')
         console.log(Knack.views["view_"+viewID].model.data);
-        if (data.total_records!== Knack.views["view_"+viewID].model.data.total_records){
-          console.log('NEW RECORD');
-          let newRec = Knack.views["view_"+viewID].model.data.models.filter(function(el){
-            return data.records.filter(function(el2){
-              return el2 === el.id;
-            }).length===0
-          })
-          console.log('newRec', newRec)
-          if (newRec.length>0){
-            for (newRecOne of newRec){
-              showNotification(notifTitle,'',fillTextFromData(notifText, newRecOne.attributes))
-            }
-          } else {
-            showNotification(notifTitle,'','Detail not on current list page')
-          }
+        if (data.value<Knack.views["view_"+viewID].model.data.models[0].attributes[fields]){
+          console.log('change up');
+          showNotification('more calls')
         }
       }
-      data.total_records = Knack.views["view_"+viewID].model.data.total_records;
-      data.records = Knack.views["view_"+viewID].model.data.models.map(function(el){ return el.id});
+      data.value = Knack.views["view_"+viewID].model.data.models[0].attributes[fields];
     }
-    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){viewFetch(viewID, notifTitle, notifText, data);} }, 6000);
+    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){viewFetchWithData(viewID, notifTitle, notifText, field, data);} }, 6000);
    }
 
   function refresh(viewID, notifTitle, notifText, data = null){
@@ -719,6 +703,11 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
       data.records = Knack.views["view_"+viewID].model.data.models.map(function(el){ return el.id});
     }
     setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){viewFetch(viewID, notifTitle, notifText, data);} }, 15000);
+   }
+
+  function viewFetchWithData(viewID, notifTitle, notifText, field, data = null){
+    Knack.views["view_"+viewID].model.fetch();
+    setTimeout(function () { refresh(viewID, notifTitle, notifText, field, data); }, 500);
    }
 
    function viewFetch(viewID, notifTitle, notifText, data = null){
