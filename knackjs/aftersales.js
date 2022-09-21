@@ -1159,12 +1159,8 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 // Refresh Virtual Reception table on Pre Visit Page  
 
 $(document).on('knack-scene-render.scene_91', function(event, scene) {
- recursivecallscene_91();
+  refreshWithData('1188', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
-
-function recursivecallscene_91(){
- setTimeout(function () { if($("#view_871").is(":visible")==true){ Knack.views["view_871"].model.fetch()}; if($("#view_1188").is(":visible")==true){ Knack.views["view_1188"].model.fetch()};recursivecallscene_91();}, 100000);
-}
 
 
 //David's spinner
@@ -1265,15 +1261,8 @@ $(document).on('knack-form-submit.view_1180', function(event, view, data) {
 //Refresh Virtual Reception table on Vehicle lookup page         
 
 $(document).on('knack-scene-render.scene_20', function(event, scene) {
-  //console.log('knack-scene-render.scene_20');
-  //recursivecallscene_20();
   refreshWithData('1168', 'TITLE', 'TEXT $field_351', 'field_1518');
  });
- 
- function recursivecallscene_20(){
-  //console.log('recursivecallscene_20');
-  setTimeout(function () { if($("#view_1168").is(":visible")==true){ Knack.views["view_1168"].model.fetch();recursivecallscene_20();} }, 6000);
- }
 
 
 // Refresh Virtual Reception table on Vehicle Checkout Page        
