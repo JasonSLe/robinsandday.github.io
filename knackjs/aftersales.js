@@ -1275,9 +1275,5 @@ $(document).on('knack-scene-render.scene_95', function(event, scene) {
 
 
 $(document).on('knack-scene-render.scene_90', function(event, scene) {
- recursivecallscene_90();
+  refreshWithData('1190', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
-
-function recursivecallscene_90(){
- setTimeout(function () { if($("#view_1190").is(":visible")==true){ Knack.views["view_1190"].model.fetch();recursivecallscene_90();} }, 6000);
-}
