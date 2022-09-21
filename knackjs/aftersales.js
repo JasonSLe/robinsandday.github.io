@@ -661,7 +661,7 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
         console.log(Knack.views["view_"+viewID].model.data);
         if (data.value<Knack.views["view_"+viewID].model.data.models[0].attributes[field]){
           console.log('change up');
-          showNotification('Virtual reception','',)
+          showNotification('Virtual reception','','There is '+Knack.views["view_"+viewID].model.data.models[0].attributes[field]+' calls outstanding.')
         }
       }
       data.value = Knack.views["view_"+viewID].model.data.models[0].attributes[field];
