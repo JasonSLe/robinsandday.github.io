@@ -647,7 +647,7 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
   var refreshList = [];
 
   function refreshWithData(viewID, notifTitle, notifText,field, data = null){
-    console.log('refreshWithData', viewID);
+    console.log('refreshWithData', viewID, 'data',data);
     askNotifications();
     if (Knack.views["view_"+viewID]){
       if (data===null){
