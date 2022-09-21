@@ -650,6 +650,8 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
     console.log('refreshWithData', viewID);
     askNotifications();
     if (Knack.views["view_"+viewID]){
+      console.log('AAA')
+      console.log(Knack.views["view_"+viewID].model.data);
       if (data===null){
         if (refreshList.find(el => el === viewID)){
           console.log('already registered');
