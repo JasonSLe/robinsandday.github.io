@@ -1213,10 +1213,14 @@ function recursivecallscene_340(){
 
 //Trigger failed Quality check (QC) emails to workshop controller/ manager
 
-// Trigger Customer Incident Form
-
 $(document).on('knack-form-submit.view_1006', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
+});
+
+//Trigger Aftersales - update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4
+
+$(document).on('knack-form-submit.view_1208', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":data.id},"Aftersales - update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4")
 });
 
 // Trigger Update To VR (Virtual Reception) Status
