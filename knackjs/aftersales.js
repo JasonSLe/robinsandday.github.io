@@ -646,7 +646,7 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
   // 151 is the view number, and in text you can use any fields in the view with $
   var refreshList = [];
 
-  function refreshWithData(viewID, notifTitle, notifText,field, data = null){
+  function refreshWithData(viewID, notifTitle, notifText, field, data = null){
     console.log('refreshWithData', viewID, 'data',data,'field',field,Knack.views["view_"+viewID].model.data.models[0].attributes);
     askNotifications();
     if (Knack.views["view_"+viewID]){
@@ -1267,7 +1267,7 @@ $(document).on('knack-form-submit.view_1180', function(event, view, data) {
 $(document).on('knack-scene-render.scene_20', function(event, scene) {
   //console.log('knack-scene-render.scene_20');
   //recursivecallscene_20();
-  refreshWithData('1168', 'TITLE', 'TEXT $field_351');
+  refreshWithData('1168', 'TITLE', 'TEXT $field_351', 'field_1519');
  });
  
  function recursivecallscene_20(){
