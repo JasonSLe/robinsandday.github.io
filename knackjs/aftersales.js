@@ -658,6 +658,7 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
         refreshList.push(viewID);
         data = {};
       } else {
+        console.log('AAA')
         console.log(Knack.views["view_"+viewID].model.data);
         if (data.total_records!== Knack.views["view_"+viewID].model.data.total_records){
           console.log('NEW RECORD');
