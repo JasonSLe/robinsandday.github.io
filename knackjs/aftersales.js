@@ -646,6 +646,42 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
   // 151 is the view number, and in text you can use any fields in the view with $
   var refreshList = [];
 
+  function refreshWithData(viewID, notifTitle, notifText, data = null){
+    console.log('refreshWithData', viewID);
+    askNotifications();
+    if (Knack.views["view_"+viewID]){
+      if (data===null){
+        if (refreshList.find(el => el === viewID)){
+          console.log('already registered');
+          return;
+        }
+        refreshList.push(viewID);
+        data = {};
+      } else {
+        console.log(Knack.views["view_"+viewID].model.data.total_records);
+        if (data.total_records!== Knack.views["view_"+viewID].model.data.total_records){
+          console.log('NEW RECORD');
+          let newRec = Knack.views["view_"+viewID].model.data.models.filter(function(el){
+            return data.records.filter(function(el2){
+              return el2 === el.id;
+            }).length===0
+          })
+          console.log('newRec', newRec)
+          if (newRec.length>0){
+            for (newRecOne of newRec){
+              showNotification(notifTitle,'',fillTextFromData(notifText, newRecOne.attributes))
+            }
+          } else {
+            showNotification(notifTitle,'','Detail not on current list page')
+          }
+        }
+      }
+      data.total_records = Knack.views["view_"+viewID].model.data.total_records;
+      data.records = Knack.views["view_"+viewID].model.data.models.map(function(el){ return el.id});
+    }
+    setTimeout(function () { if($("#view_"+viewID).is(":visible")==true){viewFetch(viewID, notifTitle, notifText, data);} }, 15000);
+   }
+
   function refresh(viewID, notifTitle, notifText, data = null){
     console.log('refresh', viewID);
     askNotifications();
@@ -701,7 +737,6 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
       body: body,
       requireInteraction: true
      });
-     
      notification.onclick = function() {
       notification.close();
      };
@@ -1234,7 +1269,8 @@ $(document).on('knack-form-submit.view_1180', function(event, view, data) {
 
 $(document).on('knack-scene-render.scene_20', function(event, scene) {
   //console.log('knack-scene-render.scene_20');
-  recursivecallscene_20();
+  //recursivecallscene_20();
+  refreshWithData('1168', 'TITLE', 'TEXT $field_351');
  });
  
  function recursivecallscene_20(){
