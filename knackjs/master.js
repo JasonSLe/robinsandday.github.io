@@ -3316,3 +3316,13 @@ $(document).on('knack-view-render.view_5477', function (event, view) {
   console.log('knack-view-render.view_54771')
   showVideoUploadButton('field_8366');
 });
+
+$(document).on('knack-scene-render.scene_1694', function(event, scene) {
+  askNotifications();
+});
+
+function askNotifications(){
+  if (Notification.permission !== 'granted') Notification.requestPermission();
+  if (Notification.permission === 'denied') alert('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F');
+  console.log(Notification.permission);
+ }
