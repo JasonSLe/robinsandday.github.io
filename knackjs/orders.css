@@ -3498,14 +3498,7 @@ color: #FFFFFF;
 }
 
 /* Dealer Claim Support Proof */
-#kn-input-field_7953 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-
-#view_3925 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div.kn-detail.field_7953 > div.kn-detail-body > span > span > a {
+#kn-input-field_7977 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
