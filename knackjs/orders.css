@@ -3126,7 +3126,7 @@ color: #FFFFFF;
 }
 
 /* Add DEALER Support Claim (P&L Completion Stage) */
-#view_4535 > section > div > div > div > div > div > div > span > a > span {
+#view_4535 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #FFA100;
@@ -3134,7 +3134,7 @@ color: #FFFFFF;
   display: inline-block;
 }
 
-#view_4535 > section > div > div > div > div > div > div > span > a:hover > span {
+#view_4535 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #D18400;
