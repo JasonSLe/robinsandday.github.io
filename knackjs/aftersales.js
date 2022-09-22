@@ -1276,3 +1276,16 @@ $(document).on('knack-scene-render.scene_95', function(event, scene) {
 $(document).on('knack-scene-render.scene_90', function(event, scene) {
   refreshWithData('1190', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
+
+
+//****************** Show Alert & Refresh Digital LIVE JOB CARD Page 12 seconds after refresh individual button is submitted  ****************//
+
+$(document).on('knack-record-update.view_1208', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
+  
+  alert("Please wait while we update the live job card details. Click 'OK' & this page will refresh in a few moments...");
+
+  Knack.showSpinner();
+  
+});
