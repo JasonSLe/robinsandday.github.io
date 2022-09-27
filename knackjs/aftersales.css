@@ -1803,7 +1803,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	font-weight: bold;
 }
 
-/* Customer Advisor Pre Visit - Customer Call List */
+/* Customer Advisor Pre Visit Operations - Customer Call List */
 
 #view_321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
@@ -1848,4 +1848,18 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-width: 2px;
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
+}
+
+/* Aftersales Pre Visit Reporting - Workshop Pre Visit Job Card Check */
+
+#kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a > span,
+#kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a > span,
+#kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a > span,
+#kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a > span,
+#kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a > span,
+#kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a > span,
+#kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a > span {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
 }
