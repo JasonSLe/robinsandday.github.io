@@ -1850,10 +1850,16 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	box-shadow:         3px 3px #ccc;
 }
 
-/* Aftersales Pre Visit Reporting - Workshop Pre Visit Job Card Check */
+/* Aftersales Pre Visit Reporting */
 
 #kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
-#kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
+#kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_1196-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active, 
+#kn-report-view_1196-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_281-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#kn-report-view_281-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_598-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#kn-report-view_598-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
