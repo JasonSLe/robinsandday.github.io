@@ -1852,6 +1852,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 /* Aftersales Pre Visit Reporting - Workshop Pre Visit Job Card Check */
 
+#kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
 #kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a > span {
 	background-color: #FFA100;
   	color: #FFFFFF;
