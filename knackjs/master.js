@@ -3192,6 +3192,16 @@ function recursivecallscene_1601(){
  setTimeout(function () { if($("#view_5478").is(":visible")==true){ Knack.views["view_5478"].model.fetch();recursivecallscene_1601();} }, 10000);
 }
 
+//****************** Refresh Location and Video Page Upon Form Submission ****************//
+
+$(document).on('knack-record-create.view_5477', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
 /*Video uploading and compressing */
 
 function loadScriptWithParams(src, id,  callback, param1){
