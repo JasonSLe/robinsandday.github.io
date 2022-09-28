@@ -3340,3 +3340,13 @@ function askNotifications(){
   if (Notification.permission === 'granted') $('div[id="view_5522"] p').text('You have notifications enabled. You can continue using the app as normal.')
   console.log(Notification.permission);
  }
+
+//****************** Refresh Profit & Loss Sheet Page once Part Exchange Settlement Uploaded ****************//
+
+$(document).on('knack-record-update.view_4092', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 2000);
+
+  Knack.showSpinner();
+  
+});
