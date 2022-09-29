@@ -3327,6 +3327,6 @@ function askNotifications(){
     alert('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F');
     $('div[id="view_5522"] p').text('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F')
   }
-  if (Notification.permission === 'granted') $('div[id="view_5522"] p').text('You have notifications enabled. You can continue using the app as normal.')
+  if (Notification.permission === 'granted') $('div[id="view_5522"] p').html('You have notifications enabled. You can continue using the app as normal.<br />If you want to disable the notification, you need to do it manually in your browser.<br />Chrome: <a href="https://support.google.com/chrome/answer/3220216?hl=en&co=GENIE.Platform%3DDesktop" target="_blank" >https://support.google.com/chrome/answer/3220216?hl=en&co=GENIE.Platform%3DDesktop</a>')
   console.log(Notification.permission);
  }
