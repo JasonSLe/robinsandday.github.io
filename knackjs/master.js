@@ -3334,10 +3334,10 @@ $(document).on('knack-scene-render.scene_1694', function(event, scene) {
 function askNotifications(){
   if (Notification.permission !== 'granted') Notification.requestPermission();
   if (Notification.permission === 'denied'){
-    alert('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F');
-    $('div[id="view_5522"] p').text('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F')
+    //alert('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F');
+    $('div[id="view_5522"] p').html('<b>NOTIFICATION DENIED, enable notification for this site</b>, <a href="chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F">chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F</a>')
   }
-  if (Notification.permission === 'granted') $('div[id="view_5522"] p').html('You have notifications enabled. You can continue using the app as normal.<br />If you want to disable the notification, you need to do it manually in your browser.<br />Chrome: <a href="https://support.google.com/chrome/answer/3220216?hl=en&co=GENIE.Platform%3DDesktop" target="_blank" >https://support.google.com/chrome/answer/3220216?hl=en&co=GENIE.Platform%3DDesktop</a>')
+  if (Notification.permission === 'granted') $('div[id="view_5522"] p').html('<b>You have notifications enabled.</b> You can continue using the app as normal.<br /><br />If you want to disable the notification, you need to do it manually in your browser.<br />Chrome: <a href="https://support.google.com/chrome/answer/3220216?hl=en&co=GENIE.Platform%3DDesktop" target="_blank" >https://support.google.com/chrome/answer/3220216?hl=en&co=GENIE.Platform%3DDesktop</a>')
   console.log(Notification.permission);
  }
 
