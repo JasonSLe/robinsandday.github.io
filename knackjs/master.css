@@ -344,7 +344,8 @@ body {
 #view_4776 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5277 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5230 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5510 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_5510 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5526 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #00cc66;
   color: #ffffff;
   font-weight: bold;
@@ -359,7 +360,8 @@ body {
 #view_4776 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5277 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5230 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5510 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_5510 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5526 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #32936f;
   color: #ffffff;
   font-weight: bold;
@@ -497,7 +499,9 @@ body {
 #view_909 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_909 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_909 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_1368 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_1368 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5545 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5544 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #ffa100;
   color: #ffffff;
   font-weight: bold;
@@ -602,7 +606,9 @@ body {
 #view_1551 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_1554 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_1554 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_1556 > div > a:hover {
+#view_1556 > div > a:hover,
+#view_5545 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5544 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
   font-weight: bold;
@@ -708,6 +714,7 @@ body {
 #view_1674 > div:nth-child(2) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a,
 #kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active > a,
 #kn-report-view_593-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a,
+#view_5521 > div > a,
 #view_1544 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_1544 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_1544 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,

@@ -1562,13 +1562,13 @@ color: #FFFFFF;
 
 /******** Outstanding Admin Claims LIST ON ADMIN PAGE *********/
 
-#view_4507 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+#view_4534 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_4507 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+#view_4534 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -2045,13 +2045,13 @@ color: #FFFFFF;
 
 /* Manager View Outstanding Dealer Claims FILTERS */
 
-#view_4506 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+#view_4537 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_4506 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+#view_4537 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -3125,6 +3125,40 @@ color: #FFFFFF;
   display: inline-block;
 }
 
+/* Add DEALER Support Claim (P&L Completion Stage) */
+#view_4535 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4535 > section > div > div > div > div > div > div > span > a {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
+/* Add Support Claim */
+#view_4533 > section > div > div > div > div > div > div > span > a > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #FFA100;
+  padding: 8px;
+  display: inline-block;
+}
+
+#view_4533 > section > div > div > div > div > div > div > span > a:hover > span {
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #D18400;
+  padding: 8px;
+  display: inline-block;
+}
+
 /* Detail Labels on P&L Overview */
 
 #view_4037 .kn-detail-label {background-color: transparent;}
@@ -3498,14 +3532,7 @@ color: #FFFFFF;
 }
 
 /* Dealer Claim Support Proof */
-#kn-input-field_7953 > div > div.kn-asset-current > div > div > a.kn-view-asset {
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #388cf5;
-  color: #388cf5;
-}
-
-#view_3925 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div.kn-detail.field_7953 > div.kn-detail-body > span > span > a {
+#kn-input-field_7977 > div > div.kn-asset-current > div > div > a.kn-view-asset {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
@@ -4817,12 +4844,12 @@ font-size:12px;
     font-size: 14px;
 }
 
-#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_6500{
+#view_3907 div.kn-details-group.column-3.columns div.kn-detail.field_6500{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_7824{
+#view_3907 div.kn-details-group.column-3.columns div.kn-detail.field_7824{
     color: #008000;
     font-size: 14px;
 }
@@ -4837,12 +4864,12 @@ font-size:12px;
     font-size: 14px;
 }
 
-#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_7954{
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_7976{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_7953{
+#view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_7977{
     color: #008000;
     font-size: 14px;
 }
