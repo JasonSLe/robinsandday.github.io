@@ -1243,7 +1243,7 @@ $(document).on('knack-form-submit.view_1006', function(event, view, data) {
 //Trigger Aftersales - update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4
 
 $(document).on('knack-form-submit.view_1208', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":data.id},"Aftersales - update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4")
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":data.id, "Scenario":"refresh button" },"Aftersales - update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4")
 });
 
 // Trigger Update To VR (Virtual Reception) Status
@@ -1308,7 +1308,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
    console.log(event2.view.Knack.google_loading)
    console.log(event2.view.Knack.domain)
   
-   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
  }
  //add an event listner to the arrow table element
  $(".fa-search").on("click", triggerRecord)
