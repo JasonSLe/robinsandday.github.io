@@ -1313,6 +1313,11 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
  //add an event listner to the arrow table element
  $(".fa-search").on("click", triggerRecord)
 	});
-	 $('th[class="field_1601"]').hide();
+//hide record id from vehicle look up table 
+ $(document).on('knack-view-render.view_1223', function (event, view, data) {
+	  
+	    $('th[class="field_1601"]').hide();
     $('td[class*="field_1601"]').hide();
+});
+
 
