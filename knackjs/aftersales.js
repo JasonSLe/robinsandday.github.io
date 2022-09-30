@@ -1294,7 +1294,7 @@ $(document).on('knack-record-update.view_1208', function(event, view, data) {
   // --- Aftersales vehicle look up 'vehicle on site' ---
 $(document).on('knack-view-render.view_1223', function(event, view) {
   //get the vin value from the table
- const vinNumber = $(".col-6").text().trim()
+ const vinNumber = $(".col-5").text().trim()
  //send a http request with the vin an record id
 
  const triggerRecord = (event2) => {
