@@ -1290,8 +1290,11 @@ $(document).on('knack-record-update.view_1208', function(event, view, data) {
   
 });
 
+
   // --- Aftersales vehicle look up 'vehicle on site' ---
 $(document).on('knack-view-render.view_1223', function(event, view) {
+  //get the vin value from the table
+ const vinNumber = $(".col-2").text().trim()
  //send a http request with the vin an record id
 
  const triggerRecord = (event2) => {
@@ -1305,8 +1308,8 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
    console.log(event2.view.Knack.google_loading)
    console.log(event2.view.Knack.domain)
   
-   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id},"Aftersales- update  individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
  }
  //add an event listner to the arrow table element
- $(".Customer and Vehicle Summary").on("click", triggerRecord)
+ $(".fa-search").on("click", triggerRecord)
 });
