@@ -1243,9 +1243,9 @@ function embedVideoApp(){
   }
 }
 
-function showVideoApp(button){
-  //$('#videoApp').show();
-  //$('.kn-content').hide();
+function showVideoApp(divName){
+  $('#'+divName).innerHTML = videoAppHTML;
+  $('.kn-content').hide();
 }
 
 
@@ -3271,7 +3271,10 @@ function showVideoUploadButton(fieldNumber){
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
   //loadScriptWithParams('https://robinsandday.github.io/knackjs/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
   embedVideoApp();
-  showVideoApp();
+  let videoDiv = document.createElement('div');
+  videoDiv.setAttribute("id", "videoDiv-"+fieldNumber);
+  document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoDiv);
+  showVideoApp("videoDiv-"+fieldNumber);
 }
 
 var videoDuration = 0;
