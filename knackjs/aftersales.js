@@ -463,7 +463,7 @@ function refreshScene24(){
       mainField : 'field_325', //Autoline - service visits tooltips
       views:['380'],
       runAfter : serviceVisitsTooltips
-    },{
+    },{	    
       name : 'Recalls',
       mainField : 'field_70', //Recalls Oustanding
       views:['329','332']
@@ -1163,7 +1163,7 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
 });
 
 
-//David's spinner
+//Recall Recheck Spinner on Vehicle Checkin
 
 $(document).on("knack-scene-render.scene_267", function(event, scene, data) {
     let refreshData = [
@@ -1320,4 +1320,21 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
     $('td[class*="field_1601"]').hide();
 });
 
+//WIP Refresh Spinner upon search
 
+$(document).on("knack-scene-render.scene_105", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_900', //Autoline WIP Details
+          views:['1175']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
+
+
+// jason testing Trigger from a trigger point VR vehicle on site look up 
+//$(document).on('knack-form-submit.view_1223', function(event, view, data) {
+//	$(“#view_1223 .kn-action-link”).trigger(“click”);
+ // callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":data.id},"trigger update live individual wip")
+//});
