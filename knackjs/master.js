@@ -1244,8 +1244,8 @@ function embedVideoApp(){
 }
 
 function showVideoApp(button){
-  $('#videoApp').show();
-  $('.kn-content').hide();
+  //$('#videoApp').show();
+  //$('.kn-content').hide();
 }
 
 
