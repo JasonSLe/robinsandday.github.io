@@ -1205,6 +1205,45 @@ function eraseCookie(name) {
     createCookie(name, "", -1);
 }
 
+//VIDEO APP
+var videoAppHTML = '';
+function embedVideoApp(){
+  let videoApp = document.getElementById('videoApp');
+  if (!videoApp){
+    if (videoAppHTML===''){
+      videoAppHTML = $.ajax({
+          type: "GET",
+          url: 'https://robinsandday.github.io/photoTakeApp/video.html',
+          cache: false,
+          async: false
+      }).responseText;
+    }
+    videoApp = document.createElement('div');
+    videoApp.innerHTML = videoAppHTML;
+    videoApp.id = 'videoApp';
+    videoApp.style="display: none;"
+    document.body.appendChild(videoApp);
+  } else {
+    videoApp.innerHTML = videoAppHTML;
+  }
+
+  var nowS = Date.now().toString();
+
+  if ($('#videoAppCss').length===0){
+    var style = document.createElement('link');
+    style.id = "scanAppCss";
+    style.rel = 'stylesheet';
+    style.type = 'text/css';
+    style.href = 'https://robinsandday.github.io/knackjs/videoApp.css?'+nowS;
+    document.getElementsByTagName( 'head' )[0].appendChild( style )
+  }
+
+  if ($('#videoAppJS').length===0){
+    loadScript("https://robinsandday.github.io/knackjs/videoApp.js?"+nowS,'videoAppJS', emptyCallback);
+  }
+}
+
+
 //DOCUMENT SCAN APP
 
 function loadScript(src, id,  callback){
@@ -3225,7 +3264,7 @@ function showVideoUploadButton(fieldNumber){
   videoFileUpload.setAttribute("type", "file");
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
-  loadScriptWithParams('https://robinsandday.github.io/knackjs/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
+  //loadScriptWithParams('https://robinsandday.github.io/knackjs/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
 }
 
 var videoDuration = 0;
@@ -3326,6 +3365,11 @@ $(document).on('knack-view-render.view_5477', function (event, view) {
   console.log('knack-view-render.view_54771')
   showVideoUploadButton('field_8366');
 });
+
+
+
+
+//NOTIFICATIONS CODE //
 
 $(document).on('knack-scene-render.scene_1694', function(event, scene) {
   askNotifications();
