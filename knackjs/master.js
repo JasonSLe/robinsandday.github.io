@@ -1231,7 +1231,7 @@ function embedVideoApp(){
 
   if ($('#videoAppCss').length===0){
     var style = document.createElement('link');
-    style.id = "scanAppCss";
+    style.id = "videoAppCss";
     style.rel = 'stylesheet';
     style.type = 'text/css';
     style.href = 'https://robinsandday.github.io/knackjs/videoApp.css?'+nowS;
@@ -1241,6 +1241,11 @@ function embedVideoApp(){
   if ($('#videoAppJS').length===0){
     loadScript("https://robinsandday.github.io/knackjs/videoApp.js?"+nowS,'videoAppJS', emptyCallback);
   }
+}
+
+function showVideoApp(button){
+  $('#videoApp').show();
+  $('.kn-content').hide();
 }
 
 
@@ -3265,6 +3270,7 @@ function showVideoUploadButton(fieldNumber){
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
   //loadScriptWithParams('https://robinsandday.github.io/knackjs/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
+  showVideoApp();
 }
 
 var videoDuration = 0;
