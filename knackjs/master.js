@@ -3294,7 +3294,7 @@ var playSelectedFile = function (event) {
   if (canPlay === '') canPlay = 'no'
   var message = 'Can play type "' + type + '": ' + canPlay
   var isError = canPlay === 'no'
-  displayMessage(message, isError)
+  console.log(message, isError)
 
   if (isError) {
     return
