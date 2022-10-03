@@ -3277,12 +3277,31 @@ function showVideoUploadButton(fieldNumber){
   videoFileUpload.setAttribute("type", "file");
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
+  videoFileUpload.addEventListener('change', playSelectedFile, false)
   //loadScriptWithParams('https://robinsandday.github.io/knackjs/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
   embedVideoApp();
   let videoDiv = document.createElement('div');
   videoDiv.setAttribute("id", "videoDiv-"+fieldNumber);
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoDiv);
   showVideoApp("videoDiv-"+fieldNumber);
+}
+
+var playSelectedFile = function (event) {
+  var file = this.files[0]
+  var type = file.type
+  var videoNode = document.querySelector('video')
+  var canPlay = videoNode.canPlayType(type)
+  if (canPlay === '') canPlay = 'no'
+  var message = 'Can play type "' + type + '": ' + canPlay
+  var isError = canPlay === 'no'
+  displayMessage(message, isError)
+
+  if (isError) {
+    return
+  }
+
+  var fileURL = URL.createObjectURL(file)
+  videoNode.src = fileURL
 }
 
 var videoDuration = 0;
