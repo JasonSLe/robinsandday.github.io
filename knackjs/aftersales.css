@@ -71,6 +71,19 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	text-align: center;
 }
 
+/* Make Reg number look like REG on vehicle lookup status update*/
+
+#view_1223-search > div > div > ul > li > span.value > input {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 24px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+
 #kn-scene_24 > div.view-group.view-group-1 > div:nth-child(1) {
 	border: 1px solid #CCCCCC;
 	border-radius: 10px; 
@@ -1854,8 +1867,10 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 #kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
 #kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
-#kn-report-view_1196-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active, 
-#kn-report-view_1196-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_1215-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active, 
+#kn-report-view_1215-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#kn-report-view_1215-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
+#kn-report-view_1215-2 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
 #kn-report-view_281-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
 #kn-report-view_281-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
 #kn-report-view_598-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
