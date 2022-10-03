@@ -1334,8 +1334,7 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
 
 
 // jason testing Trigger from a trigger point VR vehicle on site look up 
-
-$(document).on('knack-form-submit.view_1223', function(event, view, data) {
-	$(“#view_1223 .kn-action-link”).trigger(“click”);
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":data.id},"trigger update live individual wip")
-});
+//$(document).on('knack-form-submit.view_1223', function(event, view, data) {
+//	$(“#view_1223 .kn-action-link”).trigger(“click”);
+ // callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":data.id},"trigger update live individual wip")
+//});
