@@ -3296,9 +3296,9 @@ var playSelectedFile = function (event) {
   var isError = canPlay === 'no'
   console.log(message, isError)
 
-  if (isError) {
+  /*if (isError) {
     return
-  }
+  }*/
 
   var fileURL = URL.createObjectURL(file)
   videoNode.src = fileURL
