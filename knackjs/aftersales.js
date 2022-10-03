@@ -1298,7 +1298,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
  //send a http request with the vin an record id
 
  const triggerRecord = (event2) => {
-  console.log(event2.data);
+  console.log(event2.taget);
   console.log("Test106")
    console.log(event2.view.app_id)
    console.log(event2.view.Knack)
@@ -1312,7 +1312,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
    callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
  }
     //add an event listner to the arrow table element
-    $(".fa-search").on("click", this, triggerRecord)
+    $(".fa-search").on("click", triggerRecord)
 	});
 
 
