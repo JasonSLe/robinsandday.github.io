@@ -463,6 +463,9 @@ function refreshScene24(){
       mainField : 'field_325', //Autoline - service visits tooltips
       views:['380'],
       runAfter : serviceVisitsTooltips
+    },{	    
+      mainField : 'field_900', //WIP data refresh if view is visible
+      views:['1175']
     },{
       name : 'Recalls',
       mainField : 'field_70', //Recalls Oustanding
@@ -1163,7 +1166,7 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
 });
 
 
-//David's spinner
+//Recall Recheck Spinner on Vehicle Checkin
 
 $(document).on("knack-scene-render.scene_267", function(event, scene, data) {
     let refreshData = [
