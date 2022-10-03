@@ -464,9 +464,6 @@ function refreshScene24(){
       views:['380'],
       runAfter : serviceVisitsTooltips
     },{	    
-      mainField : 'field_900', //WIP data refresh if view is visible
-      views:['1175']
-    },{
       name : 'Recalls',
       mainField : 'field_70', //Recalls Oustanding
       views:['329','332']
