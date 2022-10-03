@@ -1297,8 +1297,8 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
  const vinNumber = $(".col-5").text().trim()
  //send a http request with the vin an record id
 
- const triggerRecord = (event2) => {
-  /*console.log(event2.taget);
+ /*const triggerRecord = (event2) => {
+  console.log(event2.taget);
   console.log("Test106")
    console.log(event2.view.app_id)
    console.log(event2.view.Knack)
