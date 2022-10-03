@@ -1208,7 +1208,15 @@ function eraseCookie(name) {
 //VIDEO APP
 var videoAppHTML = '';
 function embedVideoApp(){
-  let videoApp = document.getElementById('videoApp');
+  if (videoAppHTML===''){
+    videoAppHTML = $.ajax({
+      type: "GET",
+      url: 'https://robinsandday.github.io/photoTakeApp/video.html',
+      cache: false,
+      async: false
+    }).responseText;
+  }
+  /*let videoApp = document.getElementById('videoApp');
   if (!videoApp){
     if (videoAppHTML===''){
       videoAppHTML = $.ajax({
@@ -1223,9 +1231,10 @@ function embedVideoApp(){
     videoApp.id = 'videoApp';
     videoApp.style="display: none;"
     document.body.appendChild(videoApp);
+    
   } else {
     videoApp.innerHTML = videoAppHTML;
-  }
+  }*/
 
   var nowS = Date.now().toString();
 
@@ -1244,7 +1253,7 @@ function embedVideoApp(){
 }
 
 function showVideoApp(divName){
-  $('#'+divName).innerHTML = videoAppHTML;
+  $('#'+divName).html(videoAppHTML);
 }
 
 
