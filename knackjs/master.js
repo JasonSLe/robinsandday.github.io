@@ -1253,6 +1253,7 @@ function embedVideoApp(){
 }
 
 function showVideoApp(divName){
+  embedVideoApp();
   $('#'+divName).html(videoAppHTML);
 }
 
@@ -3279,7 +3280,6 @@ function showVideoUploadButton(fieldNumber){
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
   videoFileUpload.addEventListener('change', playSelectedFile, false)
   //loadScriptWithParams('https://robinsandday.github.io/knackjs/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
-  embedVideoApp();
   let videoDiv = document.createElement('div');
   videoDiv.setAttribute("id", "videoDiv");
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoDiv);
