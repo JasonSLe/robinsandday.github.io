@@ -1316,7 +1316,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
 
     if ($('div[class="kn-view kn-table view_1223"]')){
       let rows = $('div[class="kn-view kn-table view_1223"] table tr');
-      for (i = 0; i < rows.length; i++) {
+      for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
         const createClickHandler = function(row) {
           return function() {
@@ -1324,7 +1324,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
             console.log('cell',cell);
           };
         };
-        currentRow.onclick = createClickHandler(currentRow);
+        currentRow.children[6].onclick = createClickHandler(currentRow);
       }
     }
 	});
