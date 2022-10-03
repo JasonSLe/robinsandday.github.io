@@ -1245,7 +1245,6 @@ function embedVideoApp(){
 
 function showVideoApp(divName){
   $('#'+divName).innerHTML = videoAppHTML;
-  $('.kn-content').hide();
 }
 
 
