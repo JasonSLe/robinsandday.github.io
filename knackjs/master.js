@@ -3431,3 +3431,9 @@ $(document).on('knack-record-update.view_4092', function(event, view, data) {
   Knack.showSpinner();
   
 });
+
+
+//** Update individual Wip for VR lookup "Reg & Status Lookup For Vehicles Onsite"
+$(document).on('knack-form-submit.view_1223', function(event, view, data) { 
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":data.id},"Reg & Status Lookup For Vehicles Onsite");
+});
