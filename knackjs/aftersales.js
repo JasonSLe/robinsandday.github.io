@@ -1360,17 +1360,34 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
  const vinNumber = $(".col-8").text().trim()
  //send a http request with the vin an record id
 
- const triggerRecord = (event2) => {
-  console.log(event2.taget);
-  console.log("Test106")
-   console.log(event2.view.app_id)
-   console.log(event2.view.Knack)
-   let k = Object.assign({},event2.view.Knack);
-   console.log(event2.view.Knack.hash_parts)
-   console.log(k.hash_parts)
-   console.log(event2.view.Knack.scene_hash)
-   console.log(event2.view.Knack.google_loading)
-   console.log(event2.view.Knack.domain)
+ //const triggerRecord = (event2) => {
+  //console.log(event2.taget);
+  //console.log("Test106")
+   //console.log(event2.view.app_id)
+   //console.log(event2.view.Knack)
+   //let k = Object.assign({},event2.view.Knack);
+   //console.log(event2.view.Knack.hash_parts)
+   //console.log(k.hash_parts)
+   //console.log(event2.view.Knack.scene_hash)
+   //console.log(event2.view.Knack.google_loading)
+   //console.log(event2.view.Knack.domain)
   
-   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
- }
+  // callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+ //}
+ 
+ 
+    if ($('div[class="kn-view kn-table view_1169"]')){
+      let rows = $('div[class="kn-view kn-table view_1169"] table tr');
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+          };
+        };
+        currentRow.children[5].onclick = createClickHandler(currentRow);
+      }
+    }
+	});
