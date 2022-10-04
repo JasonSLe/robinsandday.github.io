@@ -1314,6 +1314,9 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
     //add an event listner to the arrow table element
     $(".fa-search").on("click", triggerRecord);*/
 
+ 
+ // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
+
     if ($('div[class="kn-view kn-table view_1223"]')){
       let rows = $('div[class="kn-view kn-table view_1223"] table tr');
       for (i = 1; i < rows.length; i++) {
