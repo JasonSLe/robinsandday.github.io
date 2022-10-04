@@ -1354,3 +1354,23 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
   });
 
 
+  // --- Aftersales Virtual reception update job card ---
+$(document).on('knack-view-render.view_1169', function(event, view) {
+  //get the vin value from the table
+ const vinNumber = $(".col-8").text().trim()
+ //send a http request with the vin an record id
+
+ const triggerRecord = (event2) => {
+  console.log(event2.taget);
+  console.log("Test106")
+   console.log(event2.view.app_id)
+   console.log(event2.view.Knack)
+   let k = Object.assign({},event2.view.Knack);
+   console.log(event2.view.Knack.hash_parts)
+   console.log(k.hash_parts)
+   console.log(event2.view.Knack.scene_hash)
+   console.log(event2.view.Knack.google_loading)
+   console.log(event2.view.Knack.domain)
+  
+   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+ }
