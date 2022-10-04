@@ -1391,3 +1391,9 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
      // }
    // }
 	//});
+//hide Record id in Virtual table
+$(document).on('knack-view-render.view_1169', function (event, view, data) {
+	  
+	    $('th[class="field_1601"]').hide();
+    $('td[class*="field_1601"]').hide();
+});
