@@ -501,7 +501,8 @@ body {
 #view_909 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_1368 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5545 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5544 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_5544 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5598 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #ffa100;
   color: #ffffff;
   font-weight: bold;
@@ -608,7 +609,8 @@ body {
 #view_1554 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_1556 > div > a:hover,
 #view_5545 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5544 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_5544 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5598 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #d18400;
   color: #ffffff;
   font-weight: bold;
