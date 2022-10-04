@@ -1328,7 +1328,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
             callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
           };
         };
-        currentRow.children[6].onclick = createClickHandler(currentRow);
+        currentRow.children[5].onclick = createClickHandler(currentRow);
       }
     }
 	});
