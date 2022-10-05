@@ -1405,4 +1405,24 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
 	}); */
 
 
+//trigger update live wip from VR 
+//**Trigger Aftersales - Exit Survey Email From Insecure (Customer Phone)
+$(document).on('knack-form-submit.view_1229', function(event, view, data) { 
+    
+    try{
+        
 
+        let commandURL = "https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Aftersales - trigger update live wip from VR");
+    }
+});
