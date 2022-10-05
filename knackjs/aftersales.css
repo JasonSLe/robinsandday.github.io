@@ -1897,6 +1897,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #view_1175 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(1) > div,
 #view_1225 > section > div > div > div > div > div.kn-detail.field_382 > div.kn-detail-label,
 #view_1225 > section > div > div > div > div > div.kn-detail.field_354 > div.kn-detail-label,
+#view_324 > section > div > div > div > div > div.kn-detail.field_303 > div.kn-detail-label,
 #view_1175 > section > div > div.kn-details-group.column-1.columns > div > div > div:nth-child(1) > div {
   background-color: transparent;
 }
