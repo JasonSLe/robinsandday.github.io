@@ -1900,3 +1900,9 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #view_1175 > section > div > div.kn-details-group.column-1.columns > div > div > div:nth-child(1) > div {
   background-color: transparent;
 }
+
+/*make Last update time red */
+#view_1175 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(2) > div- {
+	color: #920000;
+}
+	
