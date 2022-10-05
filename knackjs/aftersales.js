@@ -1114,6 +1114,9 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	  $('th[class="field_985"]').hide();
     $('td[class*="field_985"]').hide();
 	  
+	  //hide record id
+	  $('th[class="field_1601"]').hide();
+    $('td[class*="field_1601"]').hide();
 	  
 	  
     //This part is for column headers
