@@ -1357,7 +1357,7 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
   // --- Aftersales Virtual reception update job card ---
 $(document).on('knack-view-render.view_1169', function(event, view) {
   //get the vin value from the table
- const vinNumber = $(".col-8").text().trim()
+ const vinNumber = $(".col-9").text().trim()
  //send a http request with the vin an record id
 
  const triggerRecord = (event2) => {
