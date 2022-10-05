@@ -1402,7 +1402,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
 	}); */
 
 
-  --- Aftersales wip management ---
+ // --- Aftersales wip management ---
 $(document).on('knack-view-render.view_4272', function(event, view) {
   //get the vin value from the table
  const vinNumber = $(".col-21").text().trim()
