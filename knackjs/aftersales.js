@@ -1358,7 +1358,23 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
 $(document).on('knack-view-render.view_1169', function(event, view) {
   //get the vin value from the table
  const vinNumber = $(".col-9").text().trim()
- //send a http request with the vin an record id
+ 
+     if ($('div[class="kn-view kn-table view_1169"]')){
+      let rows = $('div[class="kn-view kn-table view_1169"] table tr');
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+          };
+        };
+        currentRow.children[5].onclick = createClickHandler(currentRow);
+      }
+    }
+	});
+ /*//send a http request with the vin an record id
 
  const triggerRecord = (event2) => {
   console.log(event2.taget);
@@ -1377,7 +1393,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
     //add an event listner to the arrow table element
     $(".fa-search").on("click", triggerRecord);
 	
-/*hide Record id in Virtual table
+hide Record id in Virtual table
 $(document).on('knack-view-render.view_1169', function (event, view, data) {
 	  
 	    $('th[class="field_1601"]').hide();
