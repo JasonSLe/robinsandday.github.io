@@ -1356,6 +1356,10 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
 
   // --- Aftersales Virtual reception update job card ---
 $(document).on('knack-view-render.view_1169', function(event, view) {
+	//hide record id
+	  $('th[class="field_1601"]').hide();
+    $('td[class*="field_1601"]').hide();
+	
   //get the vin value from the table
  const vinNumber = $(".col-8").text().trim()
  
@@ -1393,11 +1397,5 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
    callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
  }
     //add an event listner to the arrow table element
-    $(".td.field_441 > span > a").on("click", triggerRecord);
+    $(".span > a").on("click", triggerRecord);
 	
-//hide Record id in Virtual table
-$(document).on('knack-view-render.view_1169', function (event, view, data) {
-	  
-	    $('th[class="field_1601"]').hide();
-    $('td[class*="field_1601"]').hide();
-});
