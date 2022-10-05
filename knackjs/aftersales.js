@@ -1357,7 +1357,7 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
   // --- Aftersales Virtual reception update job card ---
 $(document).on('knack-view-render.view_1169', function(event, view) {
   //get the vin value from the table
- const vinNumber = $(".col-8").text().trim()
+/* const vinNumber = $(".col-8").text().trim()
  //send a http request with the vin an record id
 
  const triggerRecord = (event2) => {
@@ -1375,22 +1375,22 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
    callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
  }
    //add an event listner to the arrow table element
-    $(".span").on("click", triggerRecord);
+    $(".span").on("click", triggerRecord); */
  
-   // if ($('div[class="kn-view kn-table view_1169"]')){
-     // let rows = $('div[class="kn-view kn-table view_1169"] table tr');
-      //for (i = 1; i < rows.length; i++) {
-      //  let currentRow = rows[i];
-        //const createClickHandler = function(row) {
-       //   return function() {
-       //     var cell = row.id;
-         //   console.log('cell',cell);
-       //     callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
-       //   };
-      //  };
-      //  currentRow.children[5].onclick = createClickHandler(currentRow);
-     // }
-   // }
+    if ($('div[class="kn-view kn-table view_1169"]')){
+     let rows = $('div[class="kn-view kn-table view_1169"] table tr');
+     for (i = 1; i < rows.length; i++) {
+     let currentRow = rows[i];
+     const createClickHandler = function(row) {
+       return function() {
+      var cell = row.id;
+       console.log('cell',cell);
+       callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+        };
+       };
+       currentRow.children[5].onclick = createClickHandler(currentRow);
+      }
+    }
 	//});
 //hide Record id in Virtual table
 $(document).on('knack-view-render.view_1169', function (event, view, data) {
