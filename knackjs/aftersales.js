@@ -1422,6 +1422,6 @@ $(document).on('knack-view-render.view_4272', function(event, view) {
    callPostHttpRequest("https://hook.integromat.com/sp402xbep1ae24s9edipuywro6wg9hk1", {"Record ID":event2.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
  }
  //add an event listner to the arrow table element
- $(".td:nth-child(2) > span > a").on("click", triggerRecord1)
+ $(".span > a").on("click", triggerRecord1)
 });
 
