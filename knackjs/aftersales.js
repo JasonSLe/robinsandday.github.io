@@ -1377,7 +1377,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
     //add an event listner to the arrow table element
     $(".fa-search").on("click", triggerRecord);
 	
-//hide Record id in Virtual table
+/*hide Record id in Virtual table
 $(document).on('knack-view-render.view_1169', function (event, view, data) {
 	  
 	    $('th[class="field_1601"]').hide();
