@@ -1400,3 +1400,27 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
     //add an event listner to the arrow table element
     $(".span > a").on("click", triggerRecord); 
 	}); */
+
+
+ // --- Aftersales wip management ---
+$(document).on('knack-view-render.view_4272', function(event, view) {
+  //get the vin value from the table
+ const vinNumber = $(".col-2").text().trim()
+ //send a http request with the vin an record id
+
+ const triggerRecord = (event2) => {
+  console.log("Test106")
+   console.log(event2.view.app_id)
+   console.log(event2.view.Knack)
+   let k = Object.assign({},event2.view.Knack);
+   console.log(event2.view.Knack.hash_parts)
+   console.log(k.hash_parts)
+   console.log(event2.view.Knack.scene_hash)
+   console.log(event2.view.Knack.google_loading)
+   console.log(event2.view.Knack.domain)
+  
+   callPostHttpRequest("https://hook.integromat.com/sp402xbep1ae24s9edipuywro6wg9hk1", {"Record ID":event2.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
+ }
+ //add an event listner to the arrow table element
+ $(".span > a").on("click", triggerRecord)
+});
