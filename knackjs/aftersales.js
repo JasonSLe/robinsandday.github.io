@@ -1402,7 +1402,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
 	}); */
 
 
- // --- Aftersales wip management ---
+ /* --- Aftersales wip management ---
 $(document).on('knack-view-render.view_4272', function(event, view) {
   //get the vin value from the table
  const vinNumber = $(".col-2").text().trim()
@@ -1424,3 +1424,4 @@ $(document).on('knack-view-render.view_4272', function(event, view) {
  //add an event listner to the arrow table element
  $(".td:nth-child(2) > span > a").on("click", triggerRecord)
 });
+*/
