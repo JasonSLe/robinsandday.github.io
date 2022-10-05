@@ -1398,4 +1398,4 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
  }
     //add an event listner to the arrow table element
     $(".span > a").on("click", triggerRecord);
-	
+	});
