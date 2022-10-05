@@ -1886,4 +1886,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	font-weight: bold;
 }
 
-
+/*live job card making fields transparent*/
+#view_1225 > section > div > div > div > div > div.kn-label-top.field_897 > div {
+  background-color: transparent;
+}
