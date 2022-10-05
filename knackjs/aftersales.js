@@ -1124,6 +1124,23 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
  $('th[class="field_1022"]').attr('title','Time Allowed For jobs NOT Completed');
 	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
 	  $('th[class="field_1111"]').attr('title','No of Days Since Checked In');
+
+    if ($('div[class="kn-table kn-view view_596"]')){
+      let rows = $('div[class="kn-table kn-view view_596"] table tr');
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[1].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
   });
 //hide vin from last clocked vs invoice table
   $(document).on('knack-view-render.view_244', function (event, view, data) {
