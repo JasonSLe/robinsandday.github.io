@@ -1359,7 +1359,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
   //get the vin value from the table
  const vinNumber = $(".col-8").text().trim()
  
-     if ($('div[class="kn-view kn-table view_1169"]')){
+  /*   if ($('div[class="kn-view kn-table view_1169"]')){
       let rows = $('div[class="kn-view kn-table view_1169"] table tr');
       for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
@@ -1374,7 +1374,9 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
       }
     }
 	});
- /*//send a http request with the vin an record id
+ */
+ 
+ //send a http request with the vin an record id
 
  const triggerRecord = (event2) => {
   console.log(event2.taget);
@@ -1391,9 +1393,9 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
    callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
  }
     //add an event listner to the arrow table element
-    $(".fa-search").on("click", triggerRecord);
+    $(".td.field_441 > span > a").on("click", triggerRecord);
 	
-hide Record id in Virtual table
+//hide Record id in Virtual table
 $(document).on('knack-view-render.view_1169', function (event, view, data) {
 	  
 	    $('th[class="field_1601"]').hide();
