@@ -1902,7 +1902,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 /*make Last update time red */
-#view_1175 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(2) > div- {
+#view_1175 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(2) > div > span > strong > em > span {
 	color: #920000;
 }
 	
