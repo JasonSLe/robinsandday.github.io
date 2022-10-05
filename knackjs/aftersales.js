@@ -1361,7 +1361,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
     $('td[class*="field_1601"]').hide();
 	
   //get the vin value from the table
- const vinNumber = $(".col-8").text().trim()
+/* const vinNumber = $(".col-8").text().trim()
  
      if ($('div[class="kn-view kn-table view_1169"]')){
       let rows = $('div[class="kn-view kn-table view_1169"] table tr');
@@ -1377,6 +1377,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
         currentRow.children[5].onclick = createClickHandler(currentRow);
       }
     }
+    */
 	});
  
  
