@@ -1130,6 +1130,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 
     if ($('div[class="kn-table kn-view view_596"]')){
       let rows = $('div[class="kn-table kn-view view_596"] table tr');
+      console.log('rows',rows.length);
       for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
         const createClickHandler = function(row) {
@@ -1140,7 +1141,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
           };
         };
         if (currentRow.id!==''){
-          currentRow.children[3].onclick = createClickHandler(currentRow);
+          currentRow.children[2].onclick = createClickHandler(currentRow);
         }
       }
     }
