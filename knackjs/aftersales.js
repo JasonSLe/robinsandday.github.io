@@ -1471,9 +1471,9 @@ $(document).on('knack-view-render.view_569', function(event, view) {
 
 $(document).on('knack-view-render.view_569', function(event, view) {
   //get the vin value from the table
- const vinNumber = $(".col-22").text().trim()
+ const vinNumber = $(".col-20").text().trim()
  
-   /*  if ($('div[class="kn-view kn-table view_569"]')){
+     if ($('div[class="kn-view kn-table view_569"]')){
       let rows = $('div[class="kn-view kn-table view_569"] table tr');
       for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
@@ -1487,9 +1487,9 @@ $(document).on('knack-view-render.view_569', function(event, view) {
         currentRow.children[3].onclick = createClickHandler(currentRow);
       }
     }
-    }); */
+    }); 
  
-    const triggerRecord1 = (event2) => {
+   /* const triggerRecord1 = (event2) => {
   console.log("Test106")
    console.log(event2.view.app_id)
    console.log(event2.view.Knack)
@@ -1504,7 +1504,7 @@ $(document).on('knack-view-render.view_569', function(event, view) {
  }
     //add an event listner to the arrow table element
     $(".fa-search").on("click", triggerRecord1); 
-	}); 
+	}); */
 	
 //WIP Refresh Spinner upon search
 
