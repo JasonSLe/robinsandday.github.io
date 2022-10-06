@@ -1140,7 +1140,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
           };
         };
         if (currentRow.id!==''){
-          currentRow.children[1].onclick = createClickHandler(currentRow);
+          currentRow.children[3].onclick = createClickHandler(currentRow);
         }
       }
     }
@@ -1469,7 +1469,7 @@ $(document).on('knack-form-submit.view_1229', function(event, view, data) {
 
 //********TEST*************trigger update inidividual live wip from wip management table
 
-$(document).on('knack-view-render.view_596', function(event, view) {
+/*$(document).on('knack-view-render.view_596', function(event, view) {
   //get the vin value from the table
  const vinNumber = $(".col-20").text().trim()
  
@@ -1487,7 +1487,7 @@ $(document).on('knack-view-render.view_596', function(event, view) {
         currentRow.children[3].onclick = createClickHandler(currentRow);
       }
     }
-    }); 
+    }); */
 
 
  /*  const triggerRecord1 = (event2) => {
