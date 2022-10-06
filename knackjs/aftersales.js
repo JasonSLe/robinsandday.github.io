@@ -1361,18 +1361,6 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
     $('td[class*="field_1601"]').hide();
 });
 
-//WIP Refresh Spinner upon search
-
-$(document).on("knack-scene-render.scene_105", function(event, scene, data) {
-    let refreshData = [
-      {
-          mainField : 'field_900', //Autoline WIP Details
-          views:['1175']
-      }
-    ]
-    sceneRefresh(refreshData);
-  });
-
 
   // --- Aftersales Virtual reception update job card ---
 $(document).on('knack-view-render.view_1169', function(event, view) {
@@ -1464,3 +1452,14 @@ $(document).on('knack-view-render.view_569', function(event, view) {
       }
     }
 	});
+//WIP Refresh Spinner upon search
+
+$(document).on("knack-scene-render.scene_105", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_900', //Autoline WIP Details
+          views:['1175']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
