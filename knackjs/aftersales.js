@@ -1446,7 +1446,7 @@ $(document).on('knack-form-submit.view_1229', function(event, view, data) {
 
 //trigger update inidividual live wip from wip management table
 
-$(document).on('knack-view-render.view_569', function(event, view) {
+/*$(document).on('knack-view-render.view_569', function(event, view) {
   //get the vin value from the table
  const vinNumber = $(".col-21").text().trim()
  
@@ -1464,17 +1464,17 @@ $(document).on('knack-view-render.view_569', function(event, view) {
         currentRow.children[2].onclick = createClickHandler(currentRow);
       }
     }
-	});
+	});*/
 
 
 //********TEST*************trigger update inidividual live wip from wip management table
 
-$(document).on('knack-view-render.view_569', function(event, view) {
+$(document).on('knack-view-render.view_596', function(event, view) {
   //get the vin value from the table
  const vinNumber = $(".col-20").text().trim()
  
-     if ($('div[class="kn-view kn-table view_569"]')){
-      let rows = $('div[class="kn-view kn-table view_569"] table tr');
+     if ($('div[class="kn-view kn-table view_596"]')){
+      let rows = $('div[class="kn-view kn-table view_596"] table tr');
       for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
         const createClickHandler = function(row) {
