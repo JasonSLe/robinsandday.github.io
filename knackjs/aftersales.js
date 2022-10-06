@@ -1489,8 +1489,7 @@ $(document).on('knack-view-render.view_569', function(event, view) {
     }
     }); */
  
-    const triggerRecord = (event2) => {
-  console.log(event2.taget);
+    const triggerRecord1 = (event2) => {
   console.log("Test106")
    console.log(event2.view.app_id)
    console.log(event2.view.Knack)
@@ -1504,7 +1503,7 @@ $(document).on('knack-view-render.view_569', function(event, view) {
    callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
  }
     //add an event listner to the arrow table element
-    $("fa fa-search").on("click", triggerRecord); 
+    $(".fa-search").on("click", triggerRecord1); 
 	}); 
 	
 //WIP Refresh Spinner upon search
