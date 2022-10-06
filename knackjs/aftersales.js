@@ -1465,6 +1465,29 @@ $(document).on('knack-view-render.view_569', function(event, view) {
       }
     }
 	});
+
+
+//********TEST*************trigger update inidividual live wip from wip management table
+
+$(document).on('knack-view-render.view_569', function(event, view) {
+  //get the vin value from the table
+ const vinNumber = $(".col-21").text().trim()
+ 
+     if ($('div[class="kn-view kn-table view_569"]')){
+      let rows = $('div[class="kn-view kn-table view_569"] table tr');
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+          };
+        };
+        currentRow.children[21].onclick = createClickHandler(currentRow);
+      }
+    }
+	});
 //WIP Refresh Spinner upon search
 
 $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
