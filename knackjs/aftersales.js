@@ -1470,7 +1470,7 @@ $(document).on('knack-view-render.view_569', function(event, view) {
 $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
     let refreshData = [
       {
-          mainField : 'field_900', //Autoline WIP Details
+          mainField : 'field_987', //Autoline WIP Details
           views:['1175']
       }
     ]
