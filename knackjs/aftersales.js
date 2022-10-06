@@ -1471,7 +1471,7 @@ $(document).on('knack-view-render.view_569', function(event, view) {
 
 $(document).on('knack-view-render.view_569', function(event, view) {
   //get the vin value from the table
- const vinNumber = $(".col-21").text().trim()
+ const vinNumber = $(".col-22").text().trim()
  
      if ($('div[class="kn-view kn-table view_569"]')){
       let rows = $('div[class="kn-view kn-table view_569"] table tr');
