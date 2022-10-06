@@ -1504,7 +1504,7 @@ $(document).on('knack-view-render.view_596', function(event, view) {
  }
     //add an event listner to the arrow table element
     $(".fa.fa-search").on("click", triggerRecord1); 
-	}); */
+	}); 
 	
 //WIP Refresh Spinner upon search
 
