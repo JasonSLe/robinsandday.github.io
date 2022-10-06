@@ -1423,7 +1423,6 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
 
 
 //trigger update live wip from VR 
-//**Trigger Aftersales - Exit Survey Email From Insecure (Customer Phone)
 $(document).on('knack-form-submit.view_1229', function(event, view, data) { 
     
     try{
@@ -1443,3 +1442,25 @@ $(document).on('knack-form-submit.view_1229', function(event, view, data) {
         sendErrorToIntegromat(exception, "Aftersales - trigger update live wip from VR");
     }
 });
+
+//trigger update inidividual live wip from wip management table
+
+$(document).on('knack-view-render.view_569', function(event, view) {
+  //get the vin value from the table
+ const vinNumber = $(".col-21").text().trim()
+ 
+     if ($('div[class="kn-view kn-table view_569"]')){
+      let rows = $('div[class="kn-view kn-table view_569"] table tr');
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+          };
+        };
+        currentRow.children[2].onclick = createClickHandler(currentRow);
+      }
+    }
+	});
