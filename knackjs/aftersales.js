@@ -1402,26 +1402,6 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
     */
 	});
  
- 
- //send a http request with the vin an record id
-
- /*const triggerRecord = (event2) => {
-  console.log(event2.taget);
-  console.log("Test106")
-   console.log(event2.view.app_id)
-   console.log(event2.view.Knack)
-   let k = Object.assign({},event2.view.Knack);
-   console.log(event2.view.Knack.hash_parts)
-   console.log(k.hash_parts)
-   console.log(event2.view.Knack.scene_hash)
-   console.log(event2.view.Knack.google_loading)
-   console.log(event2.view.Knack.domain)
-  
-   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
- }
-    //add an event listner to the arrow table element
-    $(".span > a").on("click", triggerRecord); 
-	}); */
 
 
 //trigger update live wip from VR 
@@ -1445,70 +1425,6 @@ $(document).on('knack-form-submit.view_1229', function(event, view, data) {
     }
 });
 
-//trigger update inidividual live wip from wip management table
-
-/*$(document).on('knack-view-render.view_569', function(event, view) {
-  //get the vin value from the table
- const vinNumber = $(".col-21").text().trim()
- 
-     if ($('div[class="kn-view kn-table view_569"]')){
-      let rows = $('div[class="kn-view kn-table view_569"] table tr');
-      for (i = 1; i < rows.length; i++) {
-        let currentRow = rows[i];
-        const createClickHandler = function(row) {
-          return function() {
-            var cell = row.id;
-            console.log('cell',cell);
-            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
-          };
-        };
-        currentRow.children[2].onclick = createClickHandler(currentRow);
-      }
-    }
-	});*/
-
-
-//********TEST*************trigger update inidividual live wip from wip management table
-
-/*$(document).on('knack-view-render.view_596', function(event, view) {
-  //get the vin value from the table
- const vinNumber = $(".col-20").text().trim()
- 
-    if ($('div[class="kn-view kn-table view_596"]')){
-      let rows = $('div[class="kn-view kn-table view_596"] table tr');
-      for (i = 1; i < rows.length; i++) {
-        let currentRow = rows[i];
-        const createClickHandler = function(row) {
-          return function() {
-            var cell = row.id;
-            console.log('cell',cell);
-            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
-          };
-        };
-        currentRow.children[3].onclick = createClickHandler(currentRow);
-      }
-    }
-    }); */
-
-
- /*  const triggerRecord1 = (event2) => {
-  console.log(event2.taget);
-  console.log("Test106")
-   console.log(event2.view.app_id)
-   console.log(event2.view.Knack)
-   let k = Object.assign({},event2.view.Knack);
-   console.log(event2.view.Knack.hash_parts)
-   console.log(k.hash_parts)
-   console.log(event2.view.Knack.scene_hash)
-   console.log(event2.view.Knack.google_loading)
-   console.log(event2.view.Knack.domain)
-  
-   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
- }
-    //add an event listner to the arrow table element
-    $(".col-3").on("click", triggerRecord1); 
-	}); 
-	*/
 //WIP Refresh Spinner upon search
 
 $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
