@@ -775,24 +775,20 @@ $(document).on('knack-view-render.view_4506', function(event, view, data) {
 });
 
 // ADMIN VEHICLE ORDER ADMINISTRATION PAGE
-$(document).on('knack-view-render.view_2390', function(event, view, data) {
-  console.log('view2390');
-  Knack.fn.hideExpand("view_2390");
-});
 
 $(document).on('knack-view-render.view_2391', function(event, view, data) {
   console.log('view2391');
   Knack.fn.hideExpand("view_2391");
 });
 
-$(document).on('knack-view-render.view_2392', function(event, view, data) {
-  console.log('view2392');
-  Knack.fn.hideExpand("view_2392");
+$(document).on('knack-view-render.view_4326', function(event, view, data) {
+  console.log('view4326');
+  Knack.fn.hideExpand("view_4326");
 });
 
-$(document).on('knack-view-render.view_2393', function(event, view, data) {
-  console.log('view2393');
-  Knack.fn.hideExpand("view_2393");
+$(document).on('knack-view-render.view_4542', function(event, view, data) {
+  console.log('view4542');
+  Knack.fn.hideExpand("view_4542");
 });
 
 $(document).on('knack-view-render.view_2394', function(event, view, data) {
