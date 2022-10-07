@@ -1274,12 +1274,6 @@ $(document).on('knack-form-submit.view_1182', function(event, view, data) {
 });
 
 
-//Trigger Aftersales - update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4
-
-$(document).on('knack-form-submit.view_1208', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":data.id, "Scenario":"refresh button" },"Aftersales - update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4")
-});
-
 // Trigger Update To VR (Virtual Reception) Status
 
 $(document).on('knack-form-submit.view_1177', function(event, view, data) {
@@ -1311,18 +1305,6 @@ $(document).on('knack-scene-render.scene_90', function(event, scene) {
   refreshWithData('1190', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
 
-
-//****************** Show Alert & Refresh Digital LIVE JOB CARD Page 12 seconds after refresh individual button is submitted  ****************//
-
-$(document).on('knack-record-update.view_1208', function(event, view, data) {
-  
-  setTimeout(function () { location.hash = location.hash + "#"; }, 12000);
-  
-  alert("Please wait while we update the live job card details. Click 'OK' & this page will refresh in a few moments...");
-
-  Knack.showSpinner();
-  
-});
 
 
   // --- Aftersales vehicle look up 'vehicle on site' ---
