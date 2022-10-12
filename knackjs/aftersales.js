@@ -1151,6 +1151,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
       let rows = $('div[class="kn-table kn-view view_596"] table>tbody>tr[id]');
       for (i = 0; i < rows.length; i++) {
         $('div[id="view_596"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_596"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]').parent())
+        $('div[id="view_596"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]>a').appendTo($('div[id="view_596"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]').parent())
       }
     }
   });
