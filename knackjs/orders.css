@@ -1576,32 +1576,6 @@ color: #FFFFFF;
 
 /******************************** NEW VEHICLE DIALOG ADMINISTRATION PAGE ******************************/
 
-/******** Group PSA Auto Allocated Orders To Add To Autoline (W, X, Y, C buyer types) *********/
-
-#view_2390 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2390 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2390 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2390 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
 /******** All Other New Orders (NOT W, X, Y, C buyer types) *********/
 
 #view_2391 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -1628,65 +1602,13 @@ color: #FFFFFF;
   	font-weight: bold;
 }
 
-/******** Newly Created VIN's Linked To An Order *********/
-
-#view_2392 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+#view_2391 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_2392 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2392 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2392 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-/******** Transferred Out Orders (for the Last 31 Days) *********/
-
-#view_2393 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2393 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2393 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2393 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_2393 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-/******** Cancelled Orders (for the last 31 Days) *********/
+/******** Cancelled OR Transferred Orders (for the last 31 Days) *********/
 
 #view_2394 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
@@ -1713,6 +1635,12 @@ color: #FFFFFF;
 }
 
 #view_2394 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2394 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1745,6 +1673,76 @@ color: #FFFFFF;
 }
 
 #view_2395 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/******** Fleet & Other New Orders Awaiting Autoline Update *********/
+
+#view_4326 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4326 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4326 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4326 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4326 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/******** Unregistered Vehicles at Risk *********/
+
+#view_4542 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4542 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4542 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4542 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4542 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4542 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
