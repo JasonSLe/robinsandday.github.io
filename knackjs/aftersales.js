@@ -1145,6 +1145,14 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
         }
       }
     }
+
+    //move icons
+    if ($('div[class="kn-table kn-view view_596"]')){
+      let rows = $('div[class="kn-table kn-view view_596"] table>tbody>tr[id]');
+      for (i = 1; i < rows.length; i++) {
+        $('div[id="view_596"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_596"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]').parent())
+      }
+    }
   });
 //hide vin from last clocked vs invoice table
   $(document).on('knack-view-render.view_244', function (event, view, data) {
