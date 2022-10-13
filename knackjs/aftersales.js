@@ -1141,7 +1141,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
           };
         };
         if (currentRow.id!==''){
-          currentRow.children[3].onclick = createClickHandler(currentRow);
+          currentRow.children[4].onclick = createClickHandler(currentRow);
         }
       }
     }
