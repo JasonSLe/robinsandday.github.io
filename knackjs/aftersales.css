@@ -9,6 +9,12 @@
 	visibility: hidden;
   }
 
+#knack-body,
+.kn-content--embedded-with-fonts { 
+    overflow-x:initial !important;
+    overflow-y:auto !important;
+}
+
 #kn-scene_22 .kn-detail-label {color:#a8aaac; font-size: 0.9rem; background-color: #ffffff; font-weight: normal; padding-top: 0px;}
 
 #kn-scene_22 .kn-detail-body {color:#37517e;font-size: 0.95rem; padding-top: 0px; padding-bottom: 0px;margin-top: -7px;margin-bottom: 7px}
