@@ -1446,4 +1446,14 @@ $(document).on('knack-view-render.view_1212', function (event, view, data) {
       }
     }
 	});
-	
+
+//refresh MOT Details in VR piece
+$(document).on("knack-scene-render.scene_105", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_1646', //Autoline WIP Details
+          views:['1175']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
