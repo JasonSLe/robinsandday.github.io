@@ -11,6 +11,11 @@ This removes white spaces from all table headers*/
   visibility: hidden;
 }
 
+#knack-body,
+.kn-content--embedded-with-fonts { 
+    overflow-x:initial !important;
+    overflow-y:auto !important;
+}
 
 /*   *******************************************************************************************
 ****************** PLEASE ADD ALL CODE FOR BUTTON COLOUR CHANGES HERE***************************
