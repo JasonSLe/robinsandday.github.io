@@ -3694,7 +3694,8 @@ color: #FFFFFF;
 /* Manual Handover Checklist */
 #view_3973 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6470 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
 
-
+/* GAP/TLC Registration */
+#view_3973 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6537 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
 
 /* Links to New Deal File Admin Audit */
 
