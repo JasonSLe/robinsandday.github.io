@@ -1457,3 +1457,9 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
     ]
     sceneRefresh(refreshData);
   });
+
+//manually trigger hub to hub swap
+
+$(document).on('knack-form-submit.view_1244', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/311tdiov4qlsg7g84pvialsggdawolta", {"Record ID":data.id},"hub to hub")
+});
