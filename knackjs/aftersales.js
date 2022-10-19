@@ -1476,4 +1476,4 @@ $(document).on('knack-view-render.view_1248', function(event, view) {
    callPostHttpRequest("https://hook.eu1.make.celonis.com/311tdiov4qlsg7g84pvialsggdawolta", {"Record ID":event2.view.app_id, "Scenario":"Hub to hub transfer"},"Hub to hub transfer v2");
  }
     //add an event listner to the arrow table element
-    $(".fa-exchange").on("click", triggerRecord2);*/
+    $(".fa-exchange").on("click", triggerRecord2);
