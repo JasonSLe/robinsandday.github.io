@@ -1461,7 +1461,7 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
 //manually trigger hub to hub swap
 $(document).on('knack-view-render.view_1248', function(event, view) {
 
- const triggerRecord = (event2) => {
+ const triggerRecord2 = (event2) => {
   console.log(event2.taget);
   console.log("Test106")
    console.log(event2.view.app_id)
@@ -1473,7 +1473,7 @@ $(document).on('knack-view-render.view_1248', function(event, view) {
    console.log(event2.view.Knack.google_loading)
    console.log(event2.view.Knack.domain)
   
-   callPostHttpRequest("https://hook.eu1.make.celonis.com/311tdiov4qlsg7g84pvialsggdawolta", {"Record ID":event2.view.app_id, "Scenario":"Hub to hub transfer" },"Hub to hub transfer v2");
+   callPostHttpRequest("https://hook.eu1.make.celonis.com/311tdiov4qlsg7g84pvialsggdawolta", {"Record ID":event2.view.app_id, "Scenario":"Hub to hub transfer"},"Hub to hub transfer v2");
  }
     //add an event listner to the arrow table element
-    $(".fa-exchange").on("click", triggerRecord);*/
+    $(".fa-exchange").on("click", triggerRecord2);*/
