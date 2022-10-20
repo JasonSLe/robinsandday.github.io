@@ -1481,3 +1481,12 @@ $(document).on('knack-view-render.view_1248', function(event, view) {
  //add an event listner to the arrow table element
  $(".fa-exchange").on("click", triggerRecord2)
 });
+
+// ------------ Refresh Hub to Hub transfer every 2 mins but not the page itself -----------------------//
+$(document).on('knack-scene-render.scene_439', function(event, scene) {
+ recursivecallscene_439();
+});
+
+function recursivecallscene_439(){
+ setTimeout(function () { if($("#view_1248").is(":visible")==true){ Knack.views["view_1248"].model.fetch();recursivecallscene_439();} }, 120000);
+}
