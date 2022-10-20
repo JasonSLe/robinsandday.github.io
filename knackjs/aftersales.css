@@ -1917,3 +1917,13 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #view_1175 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(2) > div > span > strong > em > span {
 	color: #920000;
 }
+
+/*Make Virtual reception VHC link as a button*/
+
+#view_1175 > section > div > div.kn-details-group.column-1.columns > div > div > div.kn-label-none.field_1655 > div > span > span > a {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #ffa100;
+  padding: 8px;
+  display: inline-block;
+}
