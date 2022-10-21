@@ -3284,9 +3284,12 @@ function showVideoUploadButton(fieldNumber){
   videoDiv.setAttribute("id", "videoDiv");
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoDiv);
   showVideoApp("videoDiv");
+  videoDiv.style.visibility='hidden';
 }
 
 var playSelectedFile = function (event) {
+  let videoDiv = document.querySelector('[id="videoDiv"]');
+  videoDiv.style.visibility='visible';
   var file = this.files[0]
   var type = file.type
   var videoNode = document.querySelector('video')
