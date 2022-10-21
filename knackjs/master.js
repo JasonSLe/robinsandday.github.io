@@ -3278,7 +3278,6 @@ function showVideoUploadButton(fieldNumber){
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
   videoFileUpload.addEventListener('change', playSelectedFile, false);
-  embedVideoApp();
   createVideoViewer(fieldNumber);
 }
 
@@ -3287,6 +3286,7 @@ function createVideoViewer(fieldNumber){
   videoDiv.setAttribute("id", "videoDiv");
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoDiv);
   videoDiv.style.visibility='hidden';
+  embedVideoApp();
 }
 
 function showVideoViewer(){
