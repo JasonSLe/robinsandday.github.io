@@ -11,6 +11,11 @@ This removes white spaces from all table headers*/
   visibility: hidden;
 }
 
+#knack-body,
+.kn-content--embedded-with-fonts { 
+    overflow-x:initial !important;
+    overflow-y:auto !important;
+}
 
 /*   *******************************************************************************************
 ****************** PLEASE ADD ALL CODE FOR BUTTON COLOUR CHANGES HERE***************************
@@ -1336,6 +1341,12 @@ This removes white spaces from all table headers*/
 }
 
 #view_2874 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(10) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2874 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -3641,9 +3652,6 @@ color: #FFFFFF;
 /* Additional Warranty Not Required */
 #view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6539 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
-/* TLC Confirmation */
-#view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6537 > div.kn-detail-label {border-left: 10px solid #DE3163;}
-
 /* CRI Confirmation */
 #view_3655 > section > div > div:nth-child(9) > div:nth-child(1) > div > div.kn-detail.field_6757 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
@@ -3689,7 +3697,8 @@ color: #FFFFFF;
 /* Manual Handover Checklist */
 #view_3973 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6470 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
 
-
+/* GAP/TLC Registration */
+#view_3655 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6537 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
 
 /* Links to New Deal File Admin Audit */
 
@@ -4872,73 +4881,82 @@ font-size:12px;
     font-size: 14px;
 }
 
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.field_6855{
+    color: #008000;
+    font-size: 14px;
+} 
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6855{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(2) > div > div.kn-label-none.field_6859{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6859{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.field_6860{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6860{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(2) > div > div.kn-label-none.field_6862{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6862{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.field_6861{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6861{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(2) > div > div.kn-label-none.field_6863{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6863{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.field_6989{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6989{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(2) > div > div.kn-label-none.field_6991{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6991{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-detail.field_6990{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6990{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(2) > div > div.kn-label-none.field_6992{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_6992{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-label-none.field_7158{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_7158{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-label-none.field_7159{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_7159{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-label-none.field_7248{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_7248{
+#view_3907 > section > div > div:nth-child(5) > div:nth-child(1) > div > div.kn-label-none.field_7252{
     color: #008000;
     font-size: 14px;
 }
 
-#view_3907 div.kn-details-group.column-3.columns div.kn-label-left.kn-table.is-unbordered div.field_7252{
+#view_3907 > section > div > div:nth-child(6) > div:nth-child(2) > div > div.kn-detail.field_7824{
+    color: #008000;
+    font-size: 14px;
+}
+
+#view_3907 > section > div > div:nth-child(6) > div:nth-child(2) > div > div.kn-detail.field_7825{
     color: #008000;
     font-size: 14px;
 }

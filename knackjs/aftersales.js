@@ -1446,4 +1446,47 @@ $(document).on('knack-view-render.view_1212', function (event, view, data) {
       }
     }
 	});
-	
+
+//refresh MOT Details in VR piece
+$(document).on("knack-scene-render.scene_105", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_1646', //Autoline WIP Details
+          views:['1175']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
+
+//manually trigger hub to hub swap
+$(document).on('knack-view-render.view_1248', function(event, view) {
+
+	  //get the vin value from the table
+ const vinNumber = $(".col-2").text().trim()
+ //send a http request with the vin an record id
+
+ const triggerRecord2 = (event2) => {
+  console.log("Test106")
+   console.log(event2.view.app_id)
+   console.log(event2.view.Knack)
+   let k = Object.assign({},event2.view.Knack);
+   console.log(event2.view.Knack.hash_parts)
+   console.log(k.hash_parts)
+   console.log(event2.view.Knack.scene_hash)
+   console.log(event2.view.Knack.google_loading)
+   console.log(event2.view.Knack.domain)
+  
+   callPostHttpRequest("https://hook.eu1.make.celonis.com/311tdiov4qlsg7g84pvialsggdawolta", {"Record ID":event2.view.app_id, "VIN": vinNumber },"Parts - Hub to hub v2");
+ }
+ //add an event listner to the arrow table element
+ $(".fa-exchange").on("click", triggerRecord2)
+});
+
+// ------------ Refresh Hub to Hub transfer every 2 mins but not the page itself -----------------------//
+$(document).on('knack-scene-render.scene_439', function(event, scene) {
+ recursivecallscene_439();
+});
+
+function recursivecallscene_439(){
+ setTimeout(function () { if($("#view_1248").is(":visible")==true){ Knack.views["view_1248"].model.fetch();recursivecallscene_439();} }, 120000);
+}
