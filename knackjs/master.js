@@ -3368,7 +3368,8 @@ var playSelectedFile = function (event) {
       // you can keep blob or save blob to another position
       const blob = new Blob([fr.result])
 
-      uploadFileOnly('591eae59e0d2123f23235769',blob, file.name,)
+      $('#'+infoElementId).text('Preparing upload ...');
+      uploadFileOnly('591eae59e0d2123f23235769',blob, file.name,'infoText');
   }
 }
 
