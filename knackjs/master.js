@@ -3398,8 +3398,8 @@ async function processFile(fileX, fieldNumber){
   });
 }
 
-$(document).on('knack-view-render.view_5477', function (event, view) {
-  console.log('knack-view-render.view_54771')
+$(document).on('knack-view-render.view_5611', function (event, view) {
+  console.log('knack-view-render.view_5611')
   showVideoUploadButton('field_8366');
 });
 
