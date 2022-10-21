@@ -1253,7 +1253,6 @@ function embedVideoApp(){
 }
 
 function showVideoApp(divName){
-  embedVideoApp();
   $('#'+divName).html(videoAppHTML);
 }
 
@@ -3278,18 +3277,26 @@ function showVideoUploadButton(fieldNumber){
   videoFileUpload.setAttribute("type", "file");
   console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
-  videoFileUpload.addEventListener('change', playSelectedFile, false)
-  //loadScriptWithParams('https://robinsandday.github.io/knackjs/ffmpeg-all-codecs.js','ffmpegJS', ffMPEGPrepare, fieldNumber);
+  videoFileUpload.addEventListener('change', playSelectedFile, false);
+  embedVideoApp();
+  createVideoViewer(fieldNumber);
+}
+
+function createVideoViewer(fieldNumber){
   let videoDiv = document.createElement('div');
   videoDiv.setAttribute("id", "videoDiv");
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoDiv);
-  showVideoApp("videoDiv");
   videoDiv.style.visibility='hidden';
 }
 
-var playSelectedFile = function (event) {
+function showVideoViewer(){
+  showVideoApp("videoDiv");
   let videoDiv = document.querySelector('[id="videoDiv"]');
   videoDiv.style.visibility='visible';
+}
+
+var playSelectedFile = function (event) {
+  showVideoViewer();
   var file = this.files[0]
   var type = file.type
   var videoNode = document.querySelector('video')
