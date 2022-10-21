@@ -3330,6 +3330,7 @@ function showVideoUploadButton(fieldNumber){
   document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
   videoFileUpload.addEventListener('change', playSelectedFile, false);
   createVideoViewer(fieldNumber);
+  $('[id="kn-input-field_8366"]').next().attr('id','infoText');
 }
 
 function createVideoViewer(fieldNumber){
@@ -3357,12 +3358,18 @@ var playSelectedFile = function (event) {
   var isError = canPlay === 'no'
   console.log(message, isError)
 
-  /*if (isError) {
-    return
-  }*/
-
   var fileURL = URL.createObjectURL(file)
   videoNode.src = fileURL
+
+  const fr = new FileReader()
+
+  fr.readAsArrayBuffer(file)
+  fr.onload = function() {
+      // you can keep blob or save blob to another position
+      const blob = new Blob([fr.result])
+
+      uploadFileOnly('591eae59e0d2123f23235769',blob, file.name,)
+  }
 }
 
 var videoDuration = 0;
