@@ -1482,7 +1482,7 @@ if (document.exitFullscreen) {
         $('#'+infoElementId).text('File upload finished.');
         try {
           if (typeof rData === 'string'){ rData = JSON.parse(rData);};
-          $('#'+infoElementId).text('Upload succesfull, returning to app.');
+          $('#'+infoElementId).text('Upload succesfull ...');
           $('#kn-loading-spinner').hide();
 
           //rData.id
