@@ -1444,6 +1444,57 @@ if (document.exitFullscreen) {
       });
   }
 
+  //Uploads given fileBlob to given app_id file store
+  //and then calls the fillDataToKnack of master.js to fill coresponding data
+  async function uploadFileOnly(app_id, fileBlob, fileName, infoElementId) {
+    var url = 'https://api.rd.knack.com/v1/applications/'+app_id+'/assets/file/upload';
+    var form = new FormData();
+    var headers = {
+      'X-Knack-Application-ID': app_id,
+      'X-Knack-REST-API-Key': 'knack',
+    };
+
+    form.append('files', fileBlob, fileName);
+
+    try {
+      $('#'+infoElementId).text('File upload started.');
+      $.ajax({
+        //this takes care about the progress reporting on infoElementId
+        xhr: function() {
+          var xhr = new window.XMLHttpRequest();
+          xhr.upload.addEventListener("progress", function(evt) {
+              if (evt.lengthComputable) {
+                  var percentComplete = (evt.loaded / evt.total) * 100;
+                  //Do something with upload progress here
+                  $('#'+infoElementId).text('File upload progress: ' + parseInt(percentComplete)+'%');
+              }
+         }, false);
+         return xhr;
+        },
+        url: url,
+        type: 'POST',
+        headers: headers,
+        processData: false,
+        contentType: false,
+        mimeType: 'multipart/form-data',
+        data: form
+      }).then(rData => {
+        $('#'+infoElementId).text('File upload finished.');
+        try {
+          if (typeof rData === 'string'){ rData = JSON.parse(rData);};
+          $('#'+infoElementId).text('Upload succesfull, returning to app.');
+          $('#kn-loading-spinner').hide();
+        } catch (e) {
+          alert('File upload was not succesfull.')
+          alert(e);
+        }
+      })
+    } catch (ex){
+      alert('File upload was not succesfull.')
+      alert(ex);
+    }
+  }
+
   function getTokenFromApify() {
     var token = $.ajax({
       url: 'https://api.apify.com/v2/key-value-stores/2qbFRKmJ2qME8tYAD/records/photoapi1_token_open?disableRedirect=true',
