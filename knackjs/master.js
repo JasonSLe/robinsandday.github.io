@@ -3371,6 +3371,7 @@ var playSelectedFile = function (event) {
       console.log('file readed');
 
       $('#'+infoElementId).text('Preparing upload ...');
+      
       uploadFileOnly('591eae59e0d2123f23235769',blob, file.name,'infoText');
   }
 }
