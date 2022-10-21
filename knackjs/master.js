@@ -1446,7 +1446,7 @@ if (document.exitFullscreen) {
 
   //Uploads given fileBlob to given app_id file store
   //and then calls the fillDataToKnack of master.js to fill coresponding data
-  async function uploadFileOnly(app_id, fileBlob, fileName, infoElementId) {
+  async function uploadFileOnly(app_id, fileBlob, fileName, infoElementId, fieldName) {
     var url = 'https://api.rd.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
     var headers = {
@@ -1485,7 +1485,10 @@ if (document.exitFullscreen) {
           $('#'+infoElementId).text('Upload succesfull ...');
           $('#kn-loading-spinner').hide();
 
-          //rData.id
+          let message = {'event':'uploadVideo','status':'ok','pdfAssetField':fieldName,'pdfAssetId':rData.id, 'fileName':fileName}
+
+          //function from master.js to fill return data to Knack
+          fillDataToKnack(message);
         } catch (e) {
           alert('File upload was not succesfull.')
           alert(e);
@@ -3374,7 +3377,7 @@ var playSelectedFile = function (event) {
 
       $('#infoText').text('Preparing upload ...');
 
-      uploadFileOnly('591eae59e0d2123f23235769',blob, file.name,'infoText');
+      uploadFileOnly('591eae59e0d2123f23235769',blob, file.name,'infoText','field_8366');
   }
 }
 
