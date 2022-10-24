@@ -1424,7 +1424,7 @@ if (document.exitFullscreen) {
 
   //Uploads given fileBlob to given app_id file store
   //and then calls the fillDataToKnack of master.js to fill coresponding data
-  async function uploadFileOnly(app_id, fileBlob, fileName, infoElementId, fieldName) {
+  async function uploadFileOnly(app_id, fileBlob, fileName, infoElementId, fieldName, statusFieldName, recordId) {
     var url = 'https://api.rd.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
     var headers = {
@@ -1436,6 +1436,7 @@ if (document.exitFullscreen) {
 
     try {
       $('#'+infoElementId).text('File upload started.');
+      uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'File upload started.' }, recordId);
       $.ajax({
         //this takes care about the progress reporting on infoElementId
         xhr: function() {
@@ -1462,49 +1463,18 @@ if (document.exitFullscreen) {
           if (typeof rData === 'string'){ rData = JSON.parse(rData);};
           $('#'+infoElementId).text('Upload succesfull ...');
           $('#kn-loading-spinner').hide();
-/*
-          setTimeout(function(){
-            uploadImage(app_id, imgUrl)
-            .then(function(resp) {
-              if (!resp || resp.status !== 'ok') {
-                alert('Upload of image failed.');
-                return;
-              }
-              var imageId = resp.id;
-              var token = getTokenFromApify();
-              if (token === '') {
-                alert('Authorizing problem.');
-                return;
-              }
-              var updatingRecordId = getRecordIdFromHref(location.href);
-              var resp2 = saveImageLinkToKnack(imageFieldOnKnack, imageId, app_id, token, updatingRecordId, imageViewOnKnack)
-              if (resp2.status !== 'ok') {
-                alert('IMAGE NOT SAVED.');
-              } 
-      
-              //EXIT FULL SCREEN MODE
-              exitFullscreen();
-      
-              Knack.hideSpinner();
-      
-              setTimeout(function() {
-                window.location = backUrl;
-              }, 100);
-      
-            });
-          }, 100);
 
-          let message = {'event':'uploadVideo','status':'ok','pdfAssetField':fieldName,'pdfAssetId':rData.id, 'fileName':fileName}
+          let message = {'event':'videoUploadedSuccesfully','fieldName':fieldName,'assetId':rData.id, 'fileName':fileName};
+          uploadVideoUploadStatusInKnack(message, recordId);
 
-          //function from master.js to fill return data to Knack
-          fillDataToKnack(message);
-          */
         } catch (e) {
+          uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'File upload failed.' }, recordId);
           alert('File upload was not succesfull.')
           alert(e);
         }
       })
     } catch (ex){
+      uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'File upload failed.' }, recordId);
       alert('File upload was not succesfull.')
       alert(ex);
     }
@@ -1523,6 +1493,33 @@ if (document.exitFullscreen) {
 
   function saveImageLinkToKnack(fieldName, imageId, app_id, token, updatingRecordId, knackSceneView) {
     var dataF = '{"' + fieldName + '": "' + imageId + '"}'
+    var headersForSecureView = {
+      'X-Knack-Application-ID': app_id,
+      'Authorization': token
+    };
+
+    var rData2 = $.ajax({
+      url: 'https://api.rd.knack.com/v1/pages/' + knackSceneView + '/records/' + updatingRecordId,
+      type: 'PUT',
+      headers: headersForSecureView,
+      contentType: 'application/json',
+      data: dataF,
+      async: false
+    }).responseText;
+
+    try {
+      var rData2P = JSON.parse(rData2);
+      if (rData2P.record) {
+        return {'status': 'ok'}
+      }
+    } catch (e) {
+      alert(rData2)
+      return {'status': 'fail'};
+    }
+  }
+
+  function saveDataToKnack(fieldName, fieldValue, app_id, token, updatingRecordId, knackSceneView) {
+    var dataF = '{"' + fieldName + '": "' + fieldValue + '"}'
     var headersForSecureView = {
       'X-Knack-Application-ID': app_id,
       'Authorization': token
@@ -3385,7 +3382,25 @@ var playSelectedFile = function (event) {
 
       $('#infoText').text('Preparing upload ...');
 
-      uploadFileOnly('591eae59e0d2123f23235769',blob, file.name,'infoText','field_8366');
+      uploadFileOnly('591eae59e0d2123f23235769',blob, file.name,'infoText','field_8366','field_8565', $('[class="kn-submit"]>input[name="id"]').attr('value'));
+  }
+}
+
+function uploadVideoUploadStatusInKnack(message, recordId){
+  var token = getTokenFromApify();
+  switch (message.event){
+    case 'videoUploadStatus':
+        var resp2 = saveDataToKnack(message.fieldName, message.value, '591eae59e0d2123f23235769', token, recordId, 'scene_1712/views/view_5615')
+        if (resp2.status !== 'ok') {
+          console.log(resp2.status);
+        } 
+      break;
+    case 'videoUploadedSuccesfully':
+      var resp2 = saveDataToKnack(message.fieldName, message.assetId, '591eae59e0d2123f23235769', token, recordId, 'scene_1712/views/view_5615')
+      if (resp2.status !== 'ok') {
+        console.log(resp2.status);
+      } 
+      break;
   }
 }
 
