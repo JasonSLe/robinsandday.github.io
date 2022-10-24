@@ -801,6 +801,11 @@ $(document).on('knack-view-render.view_2395', function(event, view, data) {
   Knack.fn.hideExpand("view_2395");
 });
 
+$(document).on('knack-view-render.view_4534', function(event, view, data) {
+  console.log('view4534');
+  Knack.fn.hideExpand("view_4534");
+});
+
 // END OF HIDE AND EXPAND CODE
 
 
