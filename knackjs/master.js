@@ -1216,7 +1216,7 @@ function embedVideoApp(){
       async: false
     }).responseText;
   }
-  let videoApp = document.getElementById('videoApp');
+  let videoApp = document.getElementById('videoDiv');
   videoApp.innerHTML = videoAppHTML;
 
   var nowS = Date.now().toString();
