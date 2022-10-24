@@ -1463,6 +1463,7 @@ if (document.exitFullscreen) {
           if (typeof rData === 'string'){ rData = JSON.parse(rData);};
           $('#'+infoElementId).text('Upload succesfull ...');
           $('#kn-loading-spinner').hide();
+          console.log(rData);
 
           let message = {'event':'videoUploadedSuccesfully','fieldName':fieldName,'assetId':rData.id, 'fileName':fileName};
           uploadVideoUploadStatusInKnack(message, recordId);
