@@ -3344,7 +3344,6 @@ function showVideoUploadButton(fieldNumber){
   document.querySelector('div[class*="field_8366"]>div').appendChild(videoFileUpload);
   videoFileUpload.addEventListener('change', playSelectedFile, false);
   createVideoViewer(fieldNumber);
-  $('div[class*="field_8366"]').next().attr('id','infoText');
 }
 
 function createVideoViewer(fieldNumber){
@@ -3409,6 +3408,7 @@ function uploadVideoUploadStatusInKnack(message, recordId){
 
 $(document).on('knack-view-render.view_5612', function (event, view) {
   console.log('knack-view-render.view_5612z');
+  $('div[class*="field_8565"]').attr('id','infoText');
   if ($('div[class*="field_8366"] a[class="kn-view-asset"]').length===0){
     if ($('[id="infoText"]').text().trim()!==''){
       $('h3:contains("Video of location")').next().text('Video is being uploaded in another window/device.')
@@ -3417,7 +3417,6 @@ $(document).on('knack-view-render.view_5612', function (event, view) {
     }
   } else {
     $('h3:contains("Video of location")').next().text('');
-    $('[id="infoText"]').text('');
     createVideoViewer('field_8366');
     showVideoViewer();
     var videoNode = document.querySelector('video')
