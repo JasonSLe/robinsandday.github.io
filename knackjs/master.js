@@ -3412,7 +3412,6 @@ function uploadVideoUploadStatusInKnack(message, recordId){
 $(document).on('knack-view-render.view_5612', function (event, view) {
   console.log('knack-view-render.view_5612z');
   if ($('div[class*="field_8366"]>div').length===0){
-    console.log('NIC2');
     return;
   }
   $('div[class*="field_8565"]').attr('id','infoText');
