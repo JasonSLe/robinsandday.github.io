@@ -3407,8 +3407,14 @@ function uploadVideoUploadStatusInKnack(message, recordId){
 
 $(document).on('knack-view-render.view_5612', function (event, view) {
   console.log('knack-view-render.view_5612');
-
-  showVideoUploadButton('field_8366');
+  if ($('div[class*="field_8366"] a[class="kn-view-asset"]').length===0){
+    showVideoUploadButton('field_8366');
+  } else {
+    createVideoViewer(fieldNumber);
+    showVideoViewer();
+    var videoNode = document.querySelector('video')
+    videoNode.src = $('div[class*="field_8366"] a[class="kn-view-asset"]').attr('href');
+  }
 });
 
 //NOTIFICATIONS CODE //
