@@ -1466,7 +1466,7 @@ if (document.exitFullscreen) {
 
           let message = {'event':'videoUploadedSuccesfully','fieldName':fieldName,'assetId':rData.id, 'fileName':fileName};
           uploadVideoUploadStatusInKnack(message, recordId);
-          uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'File upload finished.' }, recordId);
+          uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'' }, recordId);
 
         } catch (e) {
           uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'File upload failed.' }, recordId);
