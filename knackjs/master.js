@@ -3416,6 +3416,8 @@ $(document).on('knack-view-render.view_5612', function (event, view) {
       showVideoUploadButton('field_8366');
     }
   } else {
+    $('h3:contains("Video of location")').next().text('');
+    $('[id="infoText"]').text('');
     createVideoViewer('field_8366');
     showVideoViewer();
     var videoNode = document.querySelector('video')
