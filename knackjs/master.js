@@ -1216,25 +1216,8 @@ function embedVideoApp(){
       async: false
     }).responseText;
   }
-  /*let videoApp = document.getElementById('videoApp');
-  if (!videoApp){
-    if (videoAppHTML===''){
-      videoAppHTML = $.ajax({
-          type: "GET",
-          url: 'https://robinsandday.github.io/photoTakeApp/video.html',
-          cache: false,
-          async: false
-      }).responseText;
-    }
-    videoApp = document.createElement('div');
-    videoApp.innerHTML = videoAppHTML;
-    videoApp.id = 'videoApp';
-    videoApp.style="display: none;"
-    document.body.appendChild(videoApp);
-    
-  } else {
-    videoApp.innerHTML = videoAppHTML;
-  }*/
+  let videoApp = document.getElementById('videoApp');
+  videoApp.innerHTML = videoAppHTML;
 
   var nowS = Date.now().toString();
 
@@ -1251,11 +1234,6 @@ function embedVideoApp(){
     loadScript("https://robinsandday.github.io/knackjs/videoApp.js?"+nowS,'videoAppJS', emptyCallback);
   }
 }
-
-function showVideoApp(divName){
-  $('#'+divName).html(videoAppHTML);
-}
-
 
 //DOCUMENT SCAN APP
 
@@ -3342,11 +3320,10 @@ function createVideoViewer(fieldNumber){
   videoDiv.setAttribute("id", "videoDiv");
   document.querySelector('div[class*="field_8366"]>div').appendChild(videoDiv);
   videoDiv.style.visibility='hidden';
-  embedVideoApp();
 }
 
 function showVideoViewer(){
-  showVideoApp("videoDiv");
+  embedVideoApp();
   let videoDiv = document.querySelector('[id="videoDiv"]');
   videoDiv.style.visibility='visible';
 }
