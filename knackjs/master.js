@@ -1435,8 +1435,8 @@ if (document.exitFullscreen) {
     form.append('files', fileBlob, fileName);
 
     try {
-      $('#'+infoElementId).text('File upload started.');
-      uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'File upload started.' }, recordId);
+      $('#'+infoElementId).text('Video upload started.');
+      uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'Video upload started.' }, recordId);
       $.ajax({
         //this takes care about the progress reporting on infoElementId
         xhr: function() {
@@ -1445,7 +1445,7 @@ if (document.exitFullscreen) {
               if (evt.lengthComputable) {
                   var percentComplete = (evt.loaded / evt.total) * 100;
                   //Do something with upload progress here
-                  $('#'+infoElementId).text('File upload progress: ' + parseInt(percentComplete)+'%');
+                  $('#'+infoElementId).text('Video upload progress: ' + parseInt(percentComplete)+'%');
               }
          }, false);
          return xhr;
@@ -1466,17 +1466,18 @@ if (document.exitFullscreen) {
           console.log(rData);
 
           let message = {'event':'videoUploadedSuccesfully','fieldName':fieldName,'assetId':rData.id, 'fileName':fileName};
+
           uploadVideoUploadStatusInKnack(message, recordId);
-          uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'' }, recordId);
+          uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'Video saved.' }, recordId);
 
         } catch (e) {
-          uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'File upload failed.' }, recordId);
+          uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'Video upload failed.' }, recordId);
           alert('File upload was not succesfull.')
           alert(e);
         }
       })
     } catch (ex){
-      uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'File upload failed.' }, recordId);
+      uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'Video upload failed.' }, recordId);
       alert('File upload was not succesfull.')
       alert(ex);
     }
