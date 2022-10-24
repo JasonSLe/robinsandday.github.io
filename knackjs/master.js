@@ -3420,7 +3420,7 @@ $(document).on('knack-view-render.view_5612', function (event, view) {
     showVideoViewer();
     var videoNode = document.querySelector('video')
     console.log($('div[class*="field_8366"] a[class="kn-view-asset"]').attr('href'));
-    videoNode.src = $('div[class*="field_8366"] a[class="kn-view-asset"]').attr('href');
+    videoNode.src = 'https://api.rd.knack.com/v1/applications/591eae59e0d2123f23235769/download/asset/'+$('div[class*="field_8366"] a[class="kn-view-asset"]').attr('data-asset-id')+'/'+$('div[class*="field_8366"] a[class="kn-view-asset"]').attr('data-file-name');
   }
 });
 
