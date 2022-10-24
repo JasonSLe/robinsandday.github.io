@@ -3337,6 +3337,9 @@ function loadScriptWithParams(src, id,  callback, param1){
 
 function showVideoUploadButton(fieldNumber){
   //$('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-file-upload"]').hide();
+  if ($('[id="videoFileUpload-"'+fieldNumber+']').length!==0){
+    return;
+  }
   let videoFileUpload = document.createElement('input');
   videoFileUpload.setAttribute("id", "videoFileUpload-"+fieldNumber);
   videoFileUpload.setAttribute("type", "file");
