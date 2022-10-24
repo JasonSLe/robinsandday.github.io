@@ -3310,7 +3310,7 @@ function recursivecallscene_1601(){
 
 //****************** Refresh Location and Video Page Upon Form Submission ****************//
 
-$(document).on('knack-record-create.view_5477', function(event, view, data) {
+$(document).on('knack-record-create.view_5609', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
 
@@ -3408,7 +3408,11 @@ function uploadVideoUploadStatusInKnack(message, recordId){
 $(document).on('knack-view-render.view_5612', function (event, view) {
   console.log('knack-view-render.view_5612z');
   if ($('div[class*="field_8366"] a[class="kn-view-asset"]').length===0){
-    showVideoUploadButton('field_8366');
+    if ($('[id="infoText"]').text().trim()!==''){
+      $('h3:contains("Video of location")').next().text('Video is being uploaded in another window/device.')
+    } else {
+      showVideoUploadButton('field_8366');
+    }
   } else {
     createVideoViewer('field_8366');
     showVideoViewer();
