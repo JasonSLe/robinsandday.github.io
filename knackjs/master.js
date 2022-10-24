@@ -1462,11 +1462,43 @@ if (document.exitFullscreen) {
           if (typeof rData === 'string'){ rData = JSON.parse(rData);};
           $('#'+infoElementId).text('Upload succesfull ...');
           $('#kn-loading-spinner').hide();
+/*
+          setTimeout(function(){
+            uploadImage(app_id, imgUrl)
+            .then(function(resp) {
+              if (!resp || resp.status !== 'ok') {
+                alert('Upload of image failed.');
+                return;
+              }
+              var imageId = resp.id;
+              var token = getTokenFromApify();
+              if (token === '') {
+                alert('Authorizing problem.');
+                return;
+              }
+              var updatingRecordId = getRecordIdFromHref(location.href);
+              var resp2 = saveImageLinkToKnack(imageFieldOnKnack, imageId, app_id, token, updatingRecordId, imageViewOnKnack)
+              if (resp2.status !== 'ok') {
+                alert('IMAGE NOT SAVED.');
+              } 
+      
+              //EXIT FULL SCREEN MODE
+              exitFullscreen();
+      
+              Knack.hideSpinner();
+      
+              setTimeout(function() {
+                window.location = backUrl;
+              }, 100);
+      
+            });
+          }, 100);
 
           let message = {'event':'uploadVideo','status':'ok','pdfAssetField':fieldName,'pdfAssetId':rData.id, 'fileName':fileName}
 
           //function from master.js to fill return data to Knack
           fillDataToKnack(message);
+          */
         } catch (e) {
           alert('File upload was not succesfull.')
           alert(e);
