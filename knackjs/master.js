@@ -3326,22 +3326,21 @@ function loadScriptWithParams(src, id,  callback, param1){
 }
 
 function showVideoUploadButton(fieldNumber){
-  console.log(fieldNumber+'aaa');
-  $('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-file-upload"]').hide();
+  //$('div[id="kn-input-'+fieldNumber+'"]>div>div[class="kn-file-upload"]').hide();
   let videoFileUpload = document.createElement('input');
   videoFileUpload.setAttribute("id", "videoFileUpload-"+fieldNumber);
   videoFileUpload.setAttribute("type", "file");
-  console.log(document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div'));
-  document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoFileUpload);
+  console.log(document.querySelector('div[class*="field_8366"]>div'));
+  document.querySelector('div[class*="field_8366"]>div').appendChild(videoFileUpload);
   videoFileUpload.addEventListener('change', playSelectedFile, false);
   createVideoViewer(fieldNumber);
-  $('[id="kn-input-field_8366"]').next().attr('id','infoText');
+  $('div[class*="field_8366"]').next().attr('id','infoText');
 }
 
 function createVideoViewer(fieldNumber){
   let videoDiv = document.createElement('div');
   videoDiv.setAttribute("id", "videoDiv");
-  document.querySelector('div[id="kn-input-'+fieldNumber+'"]>div').appendChild(videoDiv);
+  document.querySelector('div[class*="field_8366"]>div').appendChild(videoDiv);
   videoDiv.style.visibility='hidden';
   embedVideoApp();
 }
@@ -3475,13 +3474,10 @@ async function processFile(fileX, fieldNumber){
   });
 }
 
-$(document).on('knack-view-render.view_5611', function (event, view) {
-  console.log('knack-view-render.view_5611')
+$(document).on('knack-view-render.view_5612', function (event, view) {
+  console.log('knack-view-render.view_5612')
   showVideoUploadButton('field_8366');
 });
-
-
-
 
 //NOTIFICATIONS CODE //
 
