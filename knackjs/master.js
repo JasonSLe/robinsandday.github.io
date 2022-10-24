@@ -3406,7 +3406,7 @@ function uploadVideoUploadStatusInKnack(message, recordId){
 }
 
 $(document).on('knack-view-render.view_5612', function (event, view) {
-  console.log('knack-view-render.view_5612');
+  console.log('knack-view-render.view_5612x');
   if ($('div[class*="field_8366"] a[class="kn-view-asset"]').length===0){
     showVideoUploadButton('field_8366');
   } else {
