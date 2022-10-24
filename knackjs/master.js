@@ -3410,7 +3410,7 @@ $(document).on('knack-view-render.view_5612', function (event, view) {
   if ($('div[class*="field_8366"] a[class="kn-view-asset"]').length===0){
     showVideoUploadButton('field_8366');
   } else {
-    createVideoViewer(fieldNumber);
+    createVideoViewer('field_8366');
     showVideoViewer();
     var videoNode = document.querySelector('video')
     videoNode.src = $('div[class*="field_8366"] a[class="kn-view-asset"]').attr('href');
