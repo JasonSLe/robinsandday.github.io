@@ -3413,6 +3413,7 @@ $(document).on('knack-view-render.view_5612', function (event, view) {
     createVideoViewer('field_8366');
     showVideoViewer();
     var videoNode = document.querySelector('video')
+    console.log($('div[class*="field_8366"] a[class="kn-view-asset"]').attr('href'));
     videoNode.src = $('div[class*="field_8366"] a[class="kn-view-asset"]').attr('href');
   }
 });
