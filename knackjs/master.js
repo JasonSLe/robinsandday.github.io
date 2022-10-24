@@ -1466,6 +1466,7 @@ if (document.exitFullscreen) {
 
           let message = {'event':'videoUploadedSuccesfully','fieldName':fieldName,'assetId':rData.id, 'fileName':fileName};
           uploadVideoUploadStatusInKnack(message, recordId);
+          uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'File upload finished.' }, recordId);
 
         } catch (e) {
           uploadVideoUploadStatusInKnack({'event':'videoUploadStatus', 'fieldName':statusFieldName,'value':'File upload failed.' }, recordId);
@@ -3405,7 +3406,8 @@ function uploadVideoUploadStatusInKnack(message, recordId){
 }
 
 $(document).on('knack-view-render.view_5612', function (event, view) {
-  console.log('knack-view-render.view_5612')
+  console.log('knack-view-render.view_5612');
+
   showVideoUploadButton('field_8366');
 });
 
