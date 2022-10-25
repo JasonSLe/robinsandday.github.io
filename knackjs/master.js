@@ -3269,7 +3269,7 @@ $(document).on('knack-scene-render.scene_1119', function(event, scene) {
 // PHYSICAL STOCK AUDIT
 
 //**Physical Stock Audit - List of Vehicles for Dealer Location Submitted
-$(document).on('knack-form-submit.view_5479', function(event, view, data) { 
+$(document).on('knack-form-submit.view_5613', function(event, view, data) { 
     
     try{
         
