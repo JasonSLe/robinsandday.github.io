@@ -774,6 +774,11 @@ $(document).on('knack-view-render.view_4506', function(event, view, data) {
   Knack.fn.hideExpand("view_4506");
 });
 
+$(document).on('knack-view-render.view_4557', function(event, view, data) {
+  console.log('view4557');
+  Knack.fn.hideExpand("view_4557");
+});
+
 // ADMIN VEHICLE ORDER ADMINISTRATION PAGE
 
 $(document).on('knack-view-render.view_2391', function(event, view, data) {
@@ -804,16 +809,6 @@ $(document).on('knack-view-render.view_2395', function(event, view, data) {
 $(document).on('knack-view-render.view_4534', function(event, view, data) {
   console.log('view4534');
   Knack.fn.hideExpand("view_4534");
-});
-
-$(document).on('knack-view-render.view_4503', function(event, view, data) {
-  console.log('view4503');
-  Knack.fn.hideExpand("view_4503");
-});
-
-$(document).on('knack-view-render.view_4557', function(event, view, data) {
-  console.log('view4557');
-  Knack.fn.hideExpand("view_4557");
 });
 
 // END OF HIDE AND EXPAND CODE
