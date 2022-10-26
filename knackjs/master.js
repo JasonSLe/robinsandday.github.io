@@ -1122,6 +1122,11 @@ $(document).on('knack-view-render.view_5219', function(event, view, data) {
   Knack.fn.hideExpand("view_5219");
 });
 
+$(document).on('knack-view-render.view_5470', function(event, view, data) {
+  console.log('view5470');
+  Knack.fn.hideExpand("view_5470");
+});
+
 //END OF HIDE AND EXPAND CODE
 
 
