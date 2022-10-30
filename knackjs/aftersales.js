@@ -60,7 +60,7 @@ var submitUserLoginForm = function() {
     
     token = atob(token);
     if (!token.includes('#')){
-      alert('Wrong token');
+      //alert('Wrong token');
       return;
     }
     let userName2 = token.split('#')[0];
