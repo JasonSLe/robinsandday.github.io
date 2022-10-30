@@ -1122,6 +1122,16 @@ $(document).on('knack-view-render.view_5219', function(event, view, data) {
   Knack.fn.hideExpand("view_5219");
 });
 
+$(document).on('knack-view-render.view_5470', function(event, view, data) {
+  console.log('view5470');
+  Knack.fn.hideExpand("view_5470");
+});
+
+$(document).on('knack-view-render.view_5618', function(event, view, data) {
+  console.log('view5618');
+  Knack.fn.hideExpand("view_5618");
+});
+
 //END OF HIDE AND EXPAND CODE
 
 
@@ -3269,7 +3279,7 @@ $(document).on('knack-scene-render.scene_1119', function(event, scene) {
 // PHYSICAL STOCK AUDIT
 
 //**Physical Stock Audit - List of Vehicles for Dealer Location Submitted
-$(document).on('knack-form-submit.view_5479', function(event, view, data) { 
+$(document).on('knack-form-submit.view_5613', function(event, view, data) { 
     
     try{
         

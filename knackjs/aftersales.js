@@ -1118,6 +1118,57 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	  $('th[class="field_1601"]').hide();
     $('td[class*="field_1601"]').hide();
 	  
+	    //hide labour not invoiced
+	  $('th[class="field_1150"]').hide();
+    $('td[class*="field_1150"]').hide();
+	  
+	    //hide prepick
+	  $('th[class="field_914"]').hide();
+    $('td[class*="field_914"]').hide();
+	  
+	    //hide ccrecov + Diag
+	  $('th[class="field_1046"]').hide();
+    $('td[class*="field_1046"]').hide();
+	  
+	    //hide ccrecov
+	  $('th[class="field_896"]').hide();
+    $('td[class*="field_896"]').hide();
+	  
+	    //hide ccdiag
+	  $('th[class="field_983"]').hide();
+    $('td[class*="field_983"]').hide();
+	  
+	    //hide blue light
+	  $('th[class="field_984"]').hide();
+    $('td[class*="field_984"]').hide();
+	  
+	    //hide back order status
+	  $('th[class="field_1472"]').hide();
+    $('td[class*="field_1472"]').hide();
+	  
+	    //hide repeat repair
+	  $('th[class="field_1140"]').hide();
+    $('td[class*="field_1140"]').hide();
+	  
+	    //hide c/d
+	  $('th[class="field_1139"]').hide();
+    $('td[class*="field_1139"]').hide();
+
+	    //hide courtesy car
+	  $('th[class="field_1137"]').hide();
+    $('td[class*="field_1137"]').hide();
+	  
+	    //hide Customer Waiting
+	  $('th[class="field_1136"]').hide();
+    $('td[class*="field_1136"]').hide();
+	  
+	    //hide road test
+	  $('th[class="field_447"]').hide();
+    $('td[class*="field_447"]').hide();
+	  
+	    //hide loan car status
+	  $('th[class="field_1158"]').hide();
+    $('td[class*="field_1158"]').hide();
 	  
     //This part is for column headers
     //Column header
@@ -1272,16 +1323,21 @@ $(document).on('knack-form-submit.view_1006', function(event, view, data) {
 
 //Trigger failed Quality check (QC) emails to workshop controller/ manager
 
-$(document).on('knack-form-submit.view_1138', function(event, view, data) {
+$(document).on('knack-form-submit.view_1182', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
 });
 
 //Trigger failed Quality check (QC) emails to workshop controller/ manager
 
-$(document).on('knack-form-submit.view_1182', function(event, view, data) {
+$(document).on('knack-form-submit.view_1260', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
 });
 
+//Trigger failed Quality check (QC) emails to workshop controller/ manager
+
+$(document).on('knack-form-submit.view_1261', function(event, view, data) {
+  callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
+});
 
 // Trigger Update To VR (Virtual Reception) Status
 
