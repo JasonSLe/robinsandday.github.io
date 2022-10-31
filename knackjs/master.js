@@ -3474,7 +3474,7 @@ $(document).on('knack-record-update.view_4092', function(event, view, data) {
 function dropdownMenuItem(recordId, route, iconName, linkName) {
   return (
     `<li class="kn-button">\
-      <a href="https://www.robinsandday.co.uk/digital">\
+      <a href="https://www.robinsandday.co.uk/digital#new-vehicle-deal-files/">\
         <span class="icon is-small"> \
           <i class="fa ${iconName}" /> \
         </span>\
@@ -3490,7 +3490,7 @@ $(document).on('knack-view-render.view_5644', function(event, view, record) {
     <ul id="tia-menu-list">\
       <li class="tia-dropdown-menu kn-dropdown-menu kn-button">\
         <a href="https://www.robinsandday.co.uk/digital" data-kn-slug="#new-vehicle-deal-files/">\
-          <span class="nav-dropdown-link">Case Management</span>\
+          <span class="nav-dropdown-link">New Deal Files</span>\
           <span class="kn-dropdown-icon fa fa-caret-down" />\
         </a>\
         <ul class="kn-dropdown-menu-list tia-dropdown-menu-list" style="min-width: 152px; margin: 0;">\
