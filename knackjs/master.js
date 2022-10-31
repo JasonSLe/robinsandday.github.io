@@ -3474,7 +3474,7 @@ $(document).on('knack-record-update.view_4092', function(event, view, data) {
 function dropdownMenuItem(recordId, route, iconName, linkName) {
   return (
     `<li class="kn-button">\
-      <a href="https://www.robinsandday.co.uk/digital/">\
+      <a href="https://www.robinsandday.co.uk/digital">\
         <span class="icon is-small"> \
           <i class="fa ${iconName}" /> \
         </span>\
@@ -3487,20 +3487,21 @@ $(document).on('knack-view-render.view_5644', function(event, view, record) {
   var recordId = view.scene.scene_id;
 
   $(`<div class="details-dropdown-menu tabs">\
-    <ul id="newvehicle-menu-list">\
+    <ul id="tia-menu-list">\
       <li class="tia-dropdown-menu kn-dropdown-menu kn-button">\
-      <a href="https://www.robinsandday.co.uk/digital/" data-kn-slug="new-vehicle-deal-files/">\
-          <span class="nav-dropdown-link">New Deal File</span>\
+        <a href="https://www.robinsandday.co.uk/digital" data-kn-slug="#new-vehicle-deal-files/">\
+          <span class="nav-dropdown-link">Case Management</span>\
           <span class="kn-dropdown-icon fa fa-caret-down" />\
         </a>\
         <ul class="kn-dropdown-menu-list tia-dropdown-menu-list" style="min-width: 152px; margin: 0;">\
-          ${dropdownMenuItem("used-vehicle-deal-files", "fa-archive", "Used Deal Files")}\
-          ${dropdownMenuItem("new-deal-file-manager-view", "fa-file-text-o", "Manager View")}\
-          ${dropdownMenuItem("new-deal-file-admin", "fa-medium", "Admin View")}\
+          ${dropdownMenuItem(recordId, "used-vehicle-deal-files", "fa-archive", "Used Deal File")}\
+          ${dropdownMenuItem(recordId, "tia-mitigation-details", "fa-file-text-o", "Mitigations")}\
+          ${dropdownMenuItem(recordId, "memo-builder", "fa-medium", "Memo Builder")}\
+          ${dropdownMenuItem(recordId, "tia-case-log", "fa-briefcase", "Case Log")}\
         </ul>\
       </li>\
       <li class="tia-dropdown-menu kn-dropdown-menu kn-button">\
-        <a href="#tia-requests/tia-case-details/${recordId}/edit-tia-case-details/${recordId}" data-kn-slug="#used-vehicle-operations">\
+        <a href="#tia-requests/tia-case-details/${recordId}/edit-tia-case-details/${recordId}" data-kn-slug="#update-case-details">\
           <span class="nav-dropdown-link">Update Case Details</span>\
           <span class="kn-dropdown-icon fa fa-caret-down" /> \
         </a>\
@@ -3516,4 +3517,3 @@ $(document).on('knack-view-render.view_5644', function(event, view, record) {
     </ul>\
   </div>`).appendTo("#view_5644")
 })
-
