@@ -3474,7 +3474,7 @@ $(document).on('knack-record-update.view_4092', function(event, view, data) {
 function dropdownMenuItem(recordId, route, iconName, linkName) {
   return (
     `<li class="kn-button">\
-      <a href="https://salesjourney.knack.com/digital#home/">\
+      <a href="https://www.robinsandday.co.uk/digital/">\
         <span class="icon is-small"> \
           <i class="fa ${iconName}" /> \
         </span>\
