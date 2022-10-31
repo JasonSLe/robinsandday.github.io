@@ -3694,6 +3694,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 }
 
 #view_5641,
-#view_5641 > div.view-header {
+#view_5641 > div.view-header,
+#view_5641 > div.view-header > h2 {
   margin: auto !important;
 }
