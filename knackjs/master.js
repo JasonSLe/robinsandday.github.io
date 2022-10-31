@@ -3489,13 +3489,14 @@ $(document).on('knack-view-render.view_5644', function(event, view, record) {
   $(`<div class="details-dropdown-menu tabs">\
     <ul id="newvehicle-menu-list">\
       <li class="tia-dropdown-menu kn-dropdown-menu kn-button">\
-          <span class="nav-dropdown-link">New Vehicle Operations</span>\
+      <a href="https://www.robinsandday.co.uk/digital/" data-kn-slug="#new-digital-deal-file">\
+          <span class="nav-dropdown-link">New Deal File</span>\
           <span class="kn-dropdown-icon fa fa-caret-down" />\
         </a>\
         <ul class="kn-dropdown-menu-list tia-dropdown-menu-list" style="min-width: 152px; margin: 0;">\
-          ${dropdownMenuItem(recordId, "new-digital-deal-file", "fa-archive", "New Deal Files")}\
-          ${dropdownMenuItem(recordId, "new-deal-file-manager-view", "fa-file-text-o", "Manager View")}\
-          ${dropdownMenuItem(recordId, "new-deal-file-admin", "fa-medium", "Admin View")}\
+          ${dropdownMenuItem("used-vehicle-deal-files", "fa-archive", "Used Deal Files")}\
+          ${dropdownMenuItem("new-deal-file-manager-view", "fa-file-text-o", "Manager View")}\
+          ${dropdownMenuItem("new-deal-file-admin", "fa-medium", "Admin View")}\
         </ul>\
       </li>\
       <li class="tia-dropdown-menu kn-dropdown-menu kn-button">\
