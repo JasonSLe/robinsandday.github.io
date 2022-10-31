@@ -3467,3 +3467,53 @@ $(document).on('knack-record-update.view_4092', function(event, view, data) {
   
 });
 
+/****************************************/
+/*** Dropdown Menu Buttons Navigation ***/
+/****************************************/
+
+function dropdownMenuItem(recordId, route, iconName, linkName) {
+  return (
+    `<li class="kn-button">\
+      <a href="https://salesjourney.knack.com/digital#home/">\
+        <span class="icon is-small"> \
+          <i class="fa ${iconName}" /> \
+        </span>\
+        <span>${linkName}</span>\
+      </a>\
+    </li>`)
+}
+
+$(document).on('knack-view-render.view_5644', function(event, view, record) {
+  var recordId = view.scene.scene_id;
+
+  $(`<div class="details-dropdown-menu tabs">\
+    <ul id="newvehicle-menu-list">\
+      <li class="tia-dropdown-menu kn-dropdown-menu kn-button">\
+        <a href="https://salesjourney.rd.knack.com/digital-deal-file-orders#new-digital-deal-file" data-kn-slug="#new-digital-deal-file">\
+          <span class="nav-dropdown-link">New Vehicle Operations</span>\
+          <span class="kn-dropdown-icon fa fa-caret-down" />\
+        </a>\
+        <ul class="kn-dropdown-menu-list tia-dropdown-menu-list" style="min-width: 152px; margin: 0;">\
+          ${dropdownMenuItem(recordId, "new-digital-deal-file", "fa-archive", "New Deal Files")}\
+          ${dropdownMenuItem(recordId, "new-deal-file-manager-view", "fa-file-text-o", "Manager View")}\
+          ${dropdownMenuItem(recordId, "new-deal-file-admin", "fa-medium", "Admin View")}\
+        </ul>\
+      </li>\
+      <li class="tia-dropdown-menu kn-dropdown-menu kn-button">\
+        <a href="#tia-requests/tia-case-details/${recordId}/edit-tia-case-details/${recordId}" data-kn-slug="#used-vehicle-operations">\
+          <span class="nav-dropdown-link">Update Case Details</span>\
+          <span class="kn-dropdown-icon fa fa-caret-down" /> \
+        </a>\
+        <ul class="kn-dropdown-menu-list tia-dropdown-menu-list" style="min-width: 152px; margin: 0;">\
+          ${dropdownMenuItem(recordId, "edit-tia-case-details", "fa-edit", "Edit Case Details & Notes")}\
+          ${dropdownMenuItem(recordId, "assign-case-reviewers", "fa-users", "Assign Case Reviewers")}\
+          ${dropdownMenuItem(recordId, "change-tia-case-status", "fa-retweet", "Approve or Change Case Status")}\
+          ${dropdownMenuItem(recordId, "connected-cases", "fa-link", "Connect Cases")}\
+        </ul>\
+      </li>\
+      ${dropdownMenuItem(recordId, "edit-tia-fee-status-reviewer", "fa-dollar", "Fees")}\
+      ${dropdownMenuItem(recordId, "add-tia-communication", "fa-plus-circle", "Communication")}\
+    </ul>\
+  </div>`).appendTo("#view_5644")
+})
+
