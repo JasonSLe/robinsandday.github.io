@@ -3489,7 +3489,7 @@ $(document).on('knack-view-render.view_5644', function(event, view, record) {
   $(`<div class="details-dropdown-menu tabs">\
     <ul id="newvehicle-menu-list">\
       <li class="tia-dropdown-menu kn-dropdown-menu kn-button">\
-      <a href="https://www.robinsandday.co.uk/digital/" data-kn-slug="#new-digital-deal-file">\
+      <a href="https://www.robinsandday.co.uk/digital/" data-kn-slug="new-vehicle-deal-files/">\
           <span class="nav-dropdown-link">New Deal File</span>\
           <span class="kn-dropdown-icon fa fa-caret-down" />\
         </a>\
