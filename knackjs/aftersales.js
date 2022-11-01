@@ -1550,3 +1550,11 @@ $(document).on('knack-scene-render.scene_439', function(event, scene) {
 function recursivecallscene_439(){
  setTimeout(function () { if($("#view_1248").is(":visible")==true){ Knack.views["view_1248"].model.fetch();recursivecallscene_439();} }, 120000);
 }
+
+
+
+// Trigger WIP MAnagement reporting
+
+$(document).on('knack-form-submit.view_1277', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nzhvtegja68yi2tk5nc2wovsvdbll29o", {"Record ID":data.id},"Wip management reporting")
+});
