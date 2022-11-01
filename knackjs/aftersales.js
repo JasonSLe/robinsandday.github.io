@@ -1558,3 +1558,12 @@ function recursivecallscene_439(){
 $(document).on('knack-form-submit.view_1283', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/nzhvtegja68yi2tk5nc2wovsvdbll29o", {"Record ID":data.id},"Wip management reporting")
 });
+
+// ------------ Refresh WIP Reporting status but not the page itself -----------------------//
+$(document).on('knack-scene-render.scene_152', function(event, scene) {
+ recursivecallscene_152();
+});
+
+function recursivecallscene_152(){
+ setTimeout(function () { if($("#view_1285").is(":visible")==true){ Knack.views["view_1285"].model.fetch();recursivecallscene_439();} }, 120000);
+}
