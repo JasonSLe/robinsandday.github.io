@@ -2595,7 +2595,10 @@ color: #FFFFFF;
 
 /**** Vehicle Image Details View On Deal File Home Page****/
 
-#view_2543 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div > div.kn-detail.field_4714 > div.kn-detail-body {background-color: transparent;}
+#view_2543 > section > div > div.kn-details-group.column-3.columns > div:nth-child(2) > div,
+#view_2543 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) {
+   background-color: transparent;
+}	
 
 /**** Enquiry Max Link on Deal File Overview Page****/
 
