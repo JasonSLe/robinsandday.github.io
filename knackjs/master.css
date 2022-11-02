@@ -292,7 +292,8 @@ body {
 #view_5513 .kn-detail-label,
 #view_5612 .kn-detail-label,
 #view_5004 section > div > div:nth-child(3) > div:nth-child(1) > div,
-#view_5004 .kn-details .kn-detail-label .kn-list .kn-detail-label {
+#view_5004 .kn-details .kn-detail-label .kn-list .kn-detail-label,
+#view_5662 > section > div > div > div > div > div > div.kn-detail-label {
   background-color: transparent;
 }
 
