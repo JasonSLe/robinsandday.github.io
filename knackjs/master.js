@@ -3441,6 +3441,13 @@ $(document).on('knack-view-render.view_5612', function (event, view) {
   }
 });
 
+// PURCHASE ORDERS //
+
+//Purchase Orders - Submit Request for Approval
+$(document).on('knack-form-submit.view_5652', function(event, view, data) { 
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/aeh75rrj0mn2rchkm0j5cvohi3h5oigk", {"Record ID":data.id},"Purchase Orders - Submit Request for Approval");  
+});
+
 //NOTIFICATIONS CODE //
 
 $(document).on('knack-scene-render.scene_1694', function(event, scene) {
