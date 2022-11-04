@@ -3720,7 +3720,8 @@ font-size: 12px;
    text-align: center;
    width: 60% !important;
    margin-bottom: 15px;
-   down: 20px;
+   position: relative;
+  left: 20px;
 }
 
 @media (max-width: 800px) {
