@@ -3705,6 +3705,13 @@ font-size: 12px;
   font-weight: bold !important;
 }
 
+#view_5653 a.kn-button > div.control,
+#view_5666 a.kn-button > div.control,
+#view_5667 a.kn-button > div.control {
+   margin-left: 10%;
+}
+   
+
 #view_5653 a.kn-button,
 #view_5666 a.kn-button,
 #view_5667 a.kn-button {
@@ -3713,7 +3720,7 @@ font-size: 12px;
    text-align: center;
    width: 60% !important;
    margin-bottom: 15px;
-   down: 10px;
+   down: 20px;
 }
 
 @media (max-width: 800px) {
