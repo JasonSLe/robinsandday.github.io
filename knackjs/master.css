@@ -3700,7 +3700,7 @@ font-size: 12px;
 }
 
 #view_5653 > div.control { 
-    margin-left:   35%;
+    margin: auto !important;   
 }
 #view_5653 a.kn-button {
     padding:       10px 5px !important;
@@ -3715,5 +3715,14 @@ font-size: 12px;
     #view_5664 a.kn-button {
         font:           normal 600 20px/1 "Calibri", sans-serif;
     }
+}
+
+#view_5641 a.kn-button {
+ padding: 2px !important;
+ background-color: #ffa100 !important;
+ color: white !important;
+ font-size: 10px !important;
+ font-weight: bold !important;
+ margin: auto !important;
 }
 
