@@ -3685,18 +3685,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
 /* Digital Portal Page */ 
 
-#view_5641 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5641 > div.control > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5641 > div.control > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_5641 > div.control > a.kn-link.kn-link-4.kn-link-page.kn-button,
-#view_5641 > div.control > a.kn-link.kn-link-5.kn-link-page.kn-button {
- padding: 2px !important;
- background-color: #ffa100 !important;
- color: white !important;
- font-size: 10px !important;
- font-weight: bold !important;
-}
-
 #view_5641,
 #view_5641 > div.view-header,
 #view_5641 > div.view-header > h2 {
@@ -3724,7 +3712,13 @@ font-size: 12px;
     padding:       25px 5px !important;
     font:          normal 600 36px/1 "Calibri", sans-serif;
     text-align:    center;
-    width:         60% !important;
+    width:         90% !important;
     margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+    #view_5653 a.kn-button {
+        font:           normal 600 20px/1 "Calibri", sans-serif;
+    }
 }
 
