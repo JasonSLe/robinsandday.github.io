@@ -3703,6 +3703,8 @@ font-size: 12px;
   background-color: #ffa100 !important;
   color: white !important;
   font-weight: bold !important;
+  position: relative;
+  left: 100px;
 }
 
 #view_5653 a.kn-button,
@@ -3722,9 +3724,4 @@ font-size: 12px;
     #view_5664 a.kn-button {
         font: normal 600 20px/1 "Calibri", sans-serif;
     }
-}
-
-#view_5662 > section > div > div > div:nth-child(2) > div > div > div > span > span > img {
-   position: relative;
-   margin-right: 1000px;
 }
