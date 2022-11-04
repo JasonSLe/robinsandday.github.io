@@ -3730,3 +3730,8 @@ font-size: 12px;
         font: normal 600 20px/1 "Calibri", sans-serif;
     }
 }
+
+#view_5662 > section > div > div > div:nth-child(2) > div > div > div > span > span > img {
+   position: relative;
+   margin-right: 40%;
+}
