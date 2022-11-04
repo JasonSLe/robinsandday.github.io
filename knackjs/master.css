@@ -3685,6 +3685,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
 /* Digital Portal Page */ 
 
+
+
 #view_5662 > section > div > div > div > div > div > div.kn-detail-label {
  position: relative;
  left: 1px;
@@ -3699,13 +3701,11 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 font-size: 12px;
 }
 
-#view_5653 > div.control,
-#view_5664 > div.control { 
+#view_5653 > div.control { 
     margin-left:   10%;
 }
-#view_5653 a.kn-button,
-#view_5664 a.kn-button {
-    padding:       25px 5px !important;
+#view_5653 a.kn-button {
+    padding:       20px 5px !important;
     font:          normal 600 36px/1 "Calibri", sans-serif;
     text-align:    center;
     width:         90% !important;
