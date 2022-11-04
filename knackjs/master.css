@@ -3700,14 +3700,14 @@ font-size: 12px;
 }
 
 #view_5653 > div.control { 
-    margin-left:   20%;
+    margin-left:   35%;
 }
 #view_5653 a.kn-button {
     padding:       10px 5px !important;
     font:          normal 600 26px/1 "Calibri", sans-serif;
     text-align:    center;
     width:         50% !important;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 @media (max-width: 800px) {
