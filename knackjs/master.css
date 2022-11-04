@@ -3681,7 +3681,9 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   overflow-y : auto;
 }
 
-/*********Favourite Pages - UX*********/
+/*********Robins & Day Digital UX*********/
+
+/* Digital Portal Page */ 
 
 #view_5641 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-2.kn-link-page.kn-button,
@@ -3713,5 +3715,16 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
 #view_5662 {
 font-size: 12px;
+}
+
+#view_5653 > div.control {
+    margin-left:   10%;
+}
+#view_5653 a.kn-button {
+    padding:       25px 5px !important;
+    font:          normal 600 36px/1 "Calibri", sans-serif;
+    text-align:    center;
+    width:         90% !important;
+    margin-bottom: 20px;
 }
 
