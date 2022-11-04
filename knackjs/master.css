@@ -3714,7 +3714,7 @@ font-size: 12px;
    width: 60% !important;
    margin-bottom: 15px;
    position: relative;
-   left: 110px;
+   left: 120px;
 }
 
 @media (max-width: 800px) {
@@ -3726,5 +3726,5 @@ font-size: 12px;
 
 #view_5662 > section > div > div > div:nth-child(2) > div > div > div > span > span > img {
    position: relative;
-   margin-right: 100px;
+   margin-right: 300px;
 }
