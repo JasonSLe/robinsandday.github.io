@@ -3699,30 +3699,28 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 font-size: 12px;
 }
 
+#view_5641 a.kn-button {
+  background-color: #ffa100 !important;
+  color: white !important;
+  font-weight: bold !important;
+  margin-left: 40%;
+	
+}
+
 #view_5653 > div.control { 
-    margin: auto !important;   
+      margin-left: 40%;
 }
 #view_5653 a.kn-button {
-    padding:       10px 5px !important;
-    font:          normal 600 26px/1 "Calibri", sans-serif;
-    text-align:    center;
-    width:         50% !important;
-    margin-bottom: 15px;
+   padding: 10px 5px !important;
+   font: normal 600 26px/1 "Calibri", sans-serif;
+   text-align: center;
+   width: 50% !important;
+   margin-bottom: 15px;
 }
 
 @media (max-width: 800px) {
     #view_5653 a.kn-button,
     #view_5664 a.kn-button {
-        font:           normal 600 20px/1 "Calibri", sans-serif;
+        font: normal 600 20px/1 "Calibri", sans-serif;
     }
 }
-
-#view_5641 a.kn-button {
- padding: 2px !important;
- background-color: #ffa100 !important;
- color: white !important;
- font-size: 10px !important;
- font-weight: bold !important;
- margin: auto !important;
-}
-
