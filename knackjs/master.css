@@ -3722,6 +3722,12 @@ font-size: 12px;
    left: 110px;
 }
 
+#view_5667 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+  background-color: #76df77 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+	
 @media (max-width: 800px) {
     #view_5653 a.kn-button,
     #view_5664 a.kn-button {
