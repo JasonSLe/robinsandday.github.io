@@ -3705,11 +3705,10 @@ font-size: 12px;
   font-weight: bold !important;
 }
 
-#view_5653 > div.control { 
-      margin-left: 30%;
-}
-#view_5653 a.kn-button {
-   padding: 10px 5px !important;
+#view_5653 a.kn-button,
+#view_5666 a.kn-button,
+#view_5667 a.kn-button {
+   padding: 25px 5px !important;
    font: normal 600 20px/1 "Calibri", sans-serif;
    text-align: center;
    width: 50% !important;
