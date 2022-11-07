@@ -3742,20 +3742,10 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
     }
 }
 
-#view_5653 > div.view-header {
-  position: relative;
-  left: 175px;
-  bottom: 50px;
-}
-
-#view_5666 > div.view-header {
-  position: relative;
-  left: 175px;
-  bottom: 50px;
-}
-
+#view_5653 > div.view-header,
+#view_5666 > div.view-header,
 #view_5667 > div.view-header {
   position: relative;
-  left: 175px;
+  left: 150px;
   bottom: 50px;
 }
