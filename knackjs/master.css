@@ -3738,9 +3738,13 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
    text-align: center;
    width: 60% !important;
    margin-bottom: 15px;
-   background-color: #ffa100;
+   background-color: #d18400;
    color: #ffffff;
    font-weight: bold;
+   transition-property: color;
+   transition-duration: 0.3s;
+   border-width: 2px;
+   border-color: #ffffff;
    box-shadow: 3px 3px #ccc;
 }	
 	
