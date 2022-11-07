@@ -3695,12 +3695,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
  right: 5px;
 }
 
-#view_5662 {
- font-size: 12px;
- position: relative;
- left: 490px;
-}
-
 #view_5641 a.kn-button {
   background-color: #ffa100 !important;
   color: white !important;
@@ -3711,11 +3705,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   background-color: #76df77 !important;
 }
 
-#view_5641  {
-  position: relative;
-  left: 110px;
-}
-
 #view_5653 a.kn-button,
 #view_5666 a.kn-button,
 #view_5667 a.kn-button {
@@ -3724,14 +3713,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
    text-align: center;
    width: 60% !important;
    margin-bottom: 15px;
-   position: relative;
-   left: 110px;
-   bottom: 40px;
-}
-
-#view_5676  {
-  position: relative;
-  left: 60px;
 }
 	
 @media (max-width: 800px) {
@@ -3739,22 +3720,4 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
     #view_5664 a.kn-button {
         font: normal 600 20px/1 "Calibri", sans-serif;
     }
-}
-
-#view_5653 > div.view-header {
-  position: relative;
-  left: 160px;
-  bottom: 50px;
-}
-
-#view_5666 > div.view-header {
-  position: relative;
-  left: 165px;
-  bottom: 50px;
-}
-
-#view_5667 > div.view-header {
-  position: relative;
-  left: 145px;
-  bottom: 50px;
 }
