@@ -3689,20 +3689,37 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
 /* Digital Portal Page */ 
 
-#view_5662 > section > div > div > div > div > div > div.kn-detail-label {
-  margin-left: 0px !important;
-}
-
-#view_5641 a.kn-button {
+#view_5641 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5641 > div.control > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5641 > div.control > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5641 > div.control > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5641 > div.control > a.kn-link.kn-link-5.kn-link-page.kn-button {
+  padding: 10px 1px !important;	
   background-color: #ffa100 !important;
   color: white !important;
   font-weight: bold !important;
 }
 
-#view_5667 > div.control > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  color: #339933 !important;
-}
-
+#view_5641 > div.control > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5641 > div.control > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5641 > div.control > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5641 > div.control > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5641 > div.control > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
+  padding: 10px 1px !important;
+  font: normal 600 22px/1 "Calibri", sans-serif;
+  text-align: center;
+  width: 60% !important;
+  margin-bottom: 15px;
+  background-color: #d18400;
+  color: #ffffff;
+  font-weight: bold;
+  transition-property: color;
+  transition-duration: 0.3s;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-shadow: 3px 3px #ccc;
+}	
+	
 #view_5653 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5653 > div.control > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5653 > div.control > a.kn-link.kn-link-3.kn-link-page.kn-button,
@@ -3740,19 +3757,19 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5683 > div.control > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5684 > div.control > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5684 > div.control > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-   padding: 20px 2px !important;
-   font: normal 600 22px/1 "Calibri", sans-serif;
-   text-align: center;
-   width: 60% !important;
-   margin-bottom: 15px;
-   background-color: #d18400;
-   color: #ffffff;
-   font-weight: bold;
-   transition-property: color;
-   transition-duration: 0.3s;
-   border-width: 2px;
-   border-color: #ffffff;
-   box-shadow: 3px 3px #ccc;
+  padding: 20px 2px !important;
+  font: normal 600 22px/1 "Calibri", sans-serif;
+  text-align: center;
+  width: 60% !important;
+  margin-bottom: 15px;
+  background-color: #d18400;
+  color: #ffffff;
+  font-weight: bold;
+  transition-property: color;
+  transition-duration: 0.3s;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-shadow: 3px 3px #ccc;
 }	
 	
 @media (max-width: 800px) {
