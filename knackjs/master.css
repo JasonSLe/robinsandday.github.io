@@ -3696,7 +3696,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a.kn-link.kn-link-5.kn-link-page.kn-button {
   padding: 20px 1px !important;	
   font: normal 600 22px/1 "Calibri", sans-serif;	
-  width: 10% !important;	
+  width: 15% !important;	
   background-color: #005F80 !important;
   color: white !important;
   font-weight: bold !important;
@@ -3710,9 +3710,9 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   padding: 20px 1px !important;
   font: normal 600 22px/1 "Calibri", sans-serif;
   text-align: center;
-  width: 10% !important;
+  width: 15% !important;
   margin-bottom: 15px;
-  background-color: #333;
+  background-color: #333 !important;
   color: #ffffff;
   font-weight: bold;
   transition-property: color;
