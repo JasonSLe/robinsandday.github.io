@@ -3776,7 +3776,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 	
 @media (max-width: 800px) {
     #view_5653 a.kn-button,
-    #view_5664 a.kn-button {
+    #view_5664 a.kn-button,
+    #view_5641 a.kn-button {
         font: normal 600 20px/1 "Calibri", sans-serif;
     }
 }
