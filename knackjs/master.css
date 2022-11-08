@@ -3715,7 +3715,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   transition-duration: 0.3s;
   border-width: 2px;
   border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
+  box-shadow: 2px 2px #ccc;
 }	
 	
 #view_5653 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
@@ -3731,7 +3731,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5683 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5684 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5684 > div.control > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  padding: 15px 2px !important;
+  padding: 10px 2px !important;
   font: 1.5em "Calibri", sans-serif;
   text-align: center;
   width: 60% !important;
@@ -3755,7 +3755,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5683 > div.control > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5684 > div.control > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5684 > div.control > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  padding: 15px 2px !important;
+  padding: 10px 2px !important;
   font: 1.5em "Calibri", sans-serif;
   text-align: center;
   width: 60% !important;
