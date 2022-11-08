@@ -3709,12 +3709,9 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   font-size: 1.17em;
   font: "Calibri", sans-serif;
   text-align: center;
-  margin-bottom: 15px;
   background-color: #014157 !important;
   color: #ffffff;
   font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
 }	
 	
 #view_5653 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
