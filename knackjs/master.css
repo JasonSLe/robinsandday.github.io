@@ -3690,7 +3690,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 /* Digital Portal Page */ 
 
 #view_5662 {
-  font-size: 1.33em;
+  font-size: .83em;
 }
 
 #view_5641 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
@@ -3698,7 +3698,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-5.kn-link-page.kn-button {
-  font-size: 1.33em;
+  font-size: .83em;
   font: "Calibri", sans-serif;		
   background-color: #005F80 !important;
   color: white !important;
@@ -3710,7 +3710,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_5641 > div.control > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5641 > div.control > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
-  font-size: 1.33em;
+  font-size: .83em;
   font: "Calibri", sans-serif;
   text-align: center;
   margin-bottom: 15px;
@@ -3735,7 +3735,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5684 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5684 > div.control > a.kn-link.kn-link-2.kn-link-page.kn-button {
   padding: 8px 2px !important;
-  font-size: 1.33em;
+  font-size: .83em;
   font: "Calibri", sans-serif;
   text-align: center;
   width: 60% !important;
@@ -3760,7 +3760,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5684 > div.control > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5684 > div.control > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
   padding: 8px 2px !important;
-  font-size: 1.33em;
+  font-size: .83em;
   font: "Calibri", sans-serif;
   text-align: center;
   width: 60% !important;
