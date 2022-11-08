@@ -3694,7 +3694,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-5.kn-link-page.kn-button {
-  font: normal 600 19px/1 "Calibri", sans-serif;		
+  font: 1.5em "Calibri", sans-serif;		
   background-color: #005F80 !important;
   color: white !important;
   font-weight: bold !important;
@@ -3705,7 +3705,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_5641 > div.control > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5641 > div.control > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
-  font: normal 600 19px/1 "Calibri", sans-serif;
+  font: 1.5em "Calibri", sans-serif;
   text-align: center;
   margin-bottom: 15px;
   background-color: #014157 !important;
