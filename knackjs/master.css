@@ -3694,7 +3694,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-5.kn-link-page.kn-button {
-  font: 1.33em "Calibri", sans-serif;		
+  font-size: 1.33em;
+  font: "Calibri", sans-serif;		
   background-color: #005F80 !important;
   color: white !important;
   font-weight: bold !important;
@@ -3705,7 +3706,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_5641 > div.control > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5641 > div.control > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
-  font: 1.33em "Calibri", sans-serif;
+  font-size: 1.33em;
+  font: "Calibri", sans-serif;
   text-align: center;
   margin-bottom: 15px;
   background-color: #014157 !important;
@@ -3729,7 +3731,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5684 > div.control > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5684 > div.control > a.kn-link.kn-link-2.kn-link-page.kn-button {
   padding: 8px 2px !important;
-  font: 1.33em "Calibri", sans-serif;
+  font-size: 1.33em;
+  font: "Calibri", sans-serif;
   text-align: center;
   width: 60% !important;
   margin-bottom: 15px;
@@ -3753,7 +3756,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5684 > div.control > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5684 > div.control > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
   padding: 8px 2px !important;
-  font: 1.33em "Calibri", sans-serif;
+  font-size: 1.33em;
+  font: "Calibri", sans-serif;
   text-align: center;
   width: 60% !important;
   margin-bottom: 15px;
