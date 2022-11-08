@@ -1576,3 +1576,12 @@ $(document).on('knack-view-render.view_1276', function (event, view, data) {
   sound.src      = $('div[class*="field_1687"]>div[class="kn-detail-body"]>span').text();
   document.querySelector('div[class*="field_1687"]').appendChild(sound);
 })
+
+$(document).on('knack-view-render.view_1297', function (event, view, data) {
+  $('div[class*="field_1687"]>div[class="kn-detail-body"]>span').hide();
+  var sound      = document.createElement('audio');
+  sound.id       = 'audio-player';
+  sound.controls = 'controls';
+  sound.src      = $('div[class*="field_1687"]>div[class="kn-detail-body"]>span').text();
+  document.querySelector('div[class*="field_1687"]').appendChild(sound);
+})
