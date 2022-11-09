@@ -3762,7 +3762,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   box-shadow: 3px 3px #ccc;
 }	
 
-#view_5688,
 #view_5662 {
   margin: 10px;
 }
@@ -3800,6 +3799,10 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 }	
 
 /* Used Car Operations and Reporting Pages */ 
+
+#view_5688 {
+  margin: 10px;
+}
 
 #view_5693 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5701 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
@@ -3860,6 +3863,64 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5697 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5697 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_5697 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button {
+  background-color: #014157;
+  color: #ffffff;
+  font-weight: bold;
+  transition-property: color;
+  transition-duration: 0.3s;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-shadow: 3px 3px #ccc;
+}
+
+/* New Car Operations and Reporting Pages */ 
+
+#view_5702 {
+  margin: 10px;
+}
+
+#view_5703 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5708 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+  background-color: #2ab27b;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 3px 3px #ccc;
+}
+
+#view_5703 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5708 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+  background-color: #308965;
+  color: #ffffff;
+  font-weight: bold;
+  transition-property: color;
+  transition-duration: 0.3s;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-shadow: 3px 3px #ccc;
+}
+
+
+#view_5704 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5704 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5704 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5704 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5705 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5706 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5706 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+  background-color: #005F80;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 3px 3px #ccc;
+}
+
+
+#view_5704 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5704 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5704 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5704 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5705 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5706 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5704 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
   background-color: #014157;
   color: #ffffff;
   font-weight: bold;
