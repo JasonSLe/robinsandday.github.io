@@ -1869,6 +1869,12 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	box-shadow:         3px 3px #ccc;
 }
 
+/*Virtual Reception Messages List*/
+
+#view_1169 th span {
+  margin: auto !important;
+}
+
 /* Aftersales Reporting */
 
 #kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
