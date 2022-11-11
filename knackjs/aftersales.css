@@ -1875,6 +1875,12 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   margin: auto !important;
 }
 
+#view_1169 > div.kn-table-wrapper > table > thead > tr > th.field_1657.sorted-asc > span > a > span:nth-child(1) > i {
+	font-weight: normal; 
+}
+
+
+
 /* Aftersales Reporting */
 
 #kn-report-view_502-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
