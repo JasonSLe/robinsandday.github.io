@@ -3489,3 +3489,10 @@ $(document).on('knack-record-update.view_4092', function(event, view, data) {
   Knack.showSpinner();
   
 });
+
+//  ---------Auto Lowecase Autoline Username input-------------
+$(document).on('knack-view-render.any', function (event, view, data) {
+  $('input#field_7974').keyup(function() {
+      this.value = this.value.toLowerCase().replace(new RegExp(' ','g'),'').replace(new RegExp('	','g'),''); 
+  });
+});
