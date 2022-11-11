@@ -1872,7 +1872,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 /*Virtual Reception Messages List*/
 
 #view_1169 th span {
-  margin: auto !important;
+        text-align: center;
 }
 
 #view_1169 > div.kn-table-wrapper > table > thead > tr > th.field_1657 > span > a > span > i {
