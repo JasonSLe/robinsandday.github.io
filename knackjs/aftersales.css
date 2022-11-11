@@ -1873,6 +1873,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 #view_1169 th span {
         text-align: center;
+	margin: auto !important;
 }
 
 #view_1169 > div.kn-table-wrapper > table > thead > tr > th.field_1657 > span > a > span > i {
