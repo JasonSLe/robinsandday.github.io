@@ -3796,12 +3796,32 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   border-width: 2px;
   border-color: #ffffff;
   box-shadow: 3px 3px #ccc;
-}	
+}
 
 /* Used Car Operations and Reporting Pages */ 
 
 #view_5688 {
   margin: 10px;
+}
+
+#view_5693 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5701 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+  background-color: #ffa100 !important;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 3px 3px #ccc;
+}
+
+#view_5693 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5701 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+  background-color: #d18400 !important;
+  color: #ffffff;
+  font-weight: bold;
+  transition-property: color;
+  transition-duration: 0.3s;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-shadow: 3px 3px #ccc;
 }
 
 #view_5693 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
