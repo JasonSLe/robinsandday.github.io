@@ -344,7 +344,8 @@ $(document).on('knack-view-render.view_5753', function(event, view, data) {
 });
 
 var aftersalesConnectView = [{view:'view_5733',url:'#after-sales-vehicle-lookup/'},
-{view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'}]; ///add scene numbers as necessary
+{view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
+{view:'view_5735',url:'#after-sales-vehicle-lookup/check-in/'}]; ///add scene numbers as necessary
 
 aftersalesConnectView.forEach(aftersalesConnectViewFunction);
 
