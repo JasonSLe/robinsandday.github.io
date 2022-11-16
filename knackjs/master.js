@@ -346,7 +346,18 @@ $(document).on('knack-view-render.view_5753', function(event, view, data) {
 var aftersalesConnectView = [{view:'view_5733',url:'#after-sales-vehicle-lookup/'},
 {view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
 {view:'view_5735',url:'#after-sales-vehicle-lookup/check-in/'},
-{view:'view_5736',url:'#after-sales-vehicle-lookup/vehicle-onsite/'}]; ///add scene numbers as necessary
+{view:'view_5736',url:'#after-sales-vehicle-lookup/vehicle-onsite/'},
+{view:'view_5737',url:'#after-sales-vehicle-lookup/check-out/'},
+{view:'view_5738',url:'#after-sales-vehicle-lookup/post-visit/'},
+{view:'view_5739',url:'#aftersales-service-reporting/'},
+{view:'view_5740',url:'#aftersales-service-reporting/wip-reporting/'},
+{view:'view_5741',url:'#aftersales-service-reporting/exit-survey-reporting/'},
+{view:'view_5742',url:'#aftersales-service-reporting/on-site-reporting/'},
+{view:'view_5743',url:'#aftersales-service-reporting/post-visit-reporting/'},
+{view:'view_5744',url:'#aftersales-service-reporting/post-visit-invoice-reporting/'},
+{view:'view_5745',url:'#aftersales-service-reporting/digital-adoption/'},
+{view:'view_5746',url:'#aftersales-service-reporting/virtual-reception/'},
+{view:'view_5747',url:'#aftersales-service-reporting/regional-aftersales-reporting/'}]; ///add scene numbers as necessary
 
 aftersalesConnectView.forEach(aftersalesConnectViewFunction);
 
