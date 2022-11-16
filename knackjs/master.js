@@ -305,12 +305,12 @@ $(document).on('knack-view-render.view_5443', function(event, view, data) {
 
 $(document).on('knack-view-render.view_5720', function(event, view, data) {
   var token = Knack.getUserAttributes().values["field_6440"];
-  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/pcd-dealer-monthly-registrations-according-to-dialog/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+  $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/pcd-dealer-monthly-registrations-according-to-dialog/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 $(document).on('knack-view-render.view_5721', function(event, view, data) {
   var token = Knack.getUserAttributes().values["field_6440"];
-  $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/vauxhall-dealer-monthly-registrations/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+  $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/vauxhall-dealer-monthly-registrations/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 function openTab(url) {
