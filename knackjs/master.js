@@ -343,7 +343,8 @@ $(document).on('knack-view-render.view_5753', function(event, view, data) {
   $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/new-vehicle-order-take-from-enquiry-max/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
-var aftersalesConnectView = [{view:'view_5733',url:'#after-sales-vehicle-lookup/'}]; ///add scene numbers as necessary
+var aftersalesConnectView = [{view:'view_5733',url:'#after-sales-vehicle-lookup/'},
+{view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'}]; ///add scene numbers as necessary
 
 aftersalesConnectView.forEach(aftersalesConnectViewFunction);
 
