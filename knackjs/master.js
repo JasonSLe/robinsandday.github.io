@@ -325,7 +325,22 @@ $(document).on('knack-view-render.view_5723', function(event, view, data) {
 
 $(document).on('knack-view-render.view_5724', function(event, view, data) {
   var token = Knack.getUserAttributes().values["field_6440"];
-  $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/arrived-vs-checked-in/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+  $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/composite-statistics/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
+$(document).on('knack-view-render.view_5725', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/deal-file-reporting-order-and-profit-sheet/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
+$(document).on('knack-view-render.view_5726', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/new-vehicle-consignment-estimations-based-on-prediction-data/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
+$(document).on('knack-view-render.view_5753', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/new-vehicle-order-take-from-enquiry-max/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
 function openTab(url) {
