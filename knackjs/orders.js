@@ -49,6 +49,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
 $(document).on('knack-view-render.any', function (event, view, data) {
 	$('[class="kn-container"]').hide();
 	$('[class="kn-info kn-container"]').hide();
+  submitUserLoginForm();
 });
 
 hashCode = function(elem) {
@@ -100,7 +101,7 @@ $(document).on("knack-view-render.view_2146", function (event, view) {
 
 //MASTER/SLAVE CONNECT
 //Scenes where the App is accessed from the Master App and needs to login
-var loginSceneNames = ["scene_917","scene_989","scene_883","scene_1074","scene_1113","scene_1115","scene_1190","scene_1249","scene_1272","scene_1287","scene_1081","scene_1164"]; ///add scene numbers as necessary
+/*var loginSceneNames = ["scene_917","scene_989","scene_883","scene_1074","scene_1113","scene_1115","scene_1190","scene_1249","scene_1272","scene_1287","scene_1081","scene_1164","scene_1079"]; ///add scene numbers as necessary
 
 loginSceneNames.forEach(functionName);
 function functionName(selector_scene){
@@ -108,7 +109,7 @@ function functionName(selector_scene){
     console.log(selector_scene)
     submitUserLoginForm();
   });
-}
+}*/
 
 //this code is for checking the right user in the Customer portal, if logged in user is not the same as car connected user it redirects
 checkUser = function(data) {
