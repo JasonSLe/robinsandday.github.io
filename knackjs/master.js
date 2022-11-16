@@ -318,6 +318,11 @@ $(document).on('knack-view-render.view_5722', function(event, view, data) {
   $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/registered-not-invoiced/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+$(document).on('knack-view-render.view_5723', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/arrived-vs-checked-in/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 function openTab(url) {
   // Create link in memory
   var a = window.document.createElement("a");
@@ -393,12 +398,16 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 
     //MASTER/SLAVE CONNECT - add scene of master page
     // Always hide/collapse the header when rendering scene in IFRAME, add other scenes if necessary
-    if (scene.key === 'scene_860' || scene.key === 'scene_1269' || scene.key === 'scene_1271' || scene.key === 'scene_1273' || scene.key === 'scene_1279' || scene.key === 'scene_1339' || scene.key == 'scene_1362' || scene.key == 'scene_1412' || scene.key == 'scene_1497' || scene.key == 'scene_1505'|| scene.key === 'scene_1510' || scene.key === 'scene_1523' || scene.key === 'scene_1616'  || scene.key === 'scene_1631' || scene.key === 'scene_1636' || scene.key === 'scene_1644' || scene.key === 'scene_1651' || scene.key === 'scene_1656' || scene.key === 'scene_1665' || scene.key === 'scene_1757' || scene.key === 'scene_1758' || scene.key === 'scene_1759') {
+    let hideScenes = ['scene_860','scene_1269','scene_1271','scene_1273','scene_1279','scene_1339','scene_1362','scene_1412','scene_1497','scene_1505','scene_1510','scene_1523','scene_1616','scene_1631','scene_1636','scene_1644', 'scene_1651', 'scene_1656', 'scene_1665', 'scene_1757', 'scene_1758', 'scene_1759'];
+    if (hideScenes.find(el => el === scene.key)){
       document.body.style.overflow = "hidden"
         if (window.matchMedia('(min-width: 768px)').matches !== false) {
             toggleHeaderVisibility('hidden');
         }
     }
+    /*if (scene.key === 'scene_860' || scene.key === 'scene_1269' || scene.key === 'scene_1271' || scene.key === 'scene_1273' || scene.key === 'scene_1279' || scene.key === 'scene_1339' || scene.key == 'scene_1362' || scene.key == 'scene_1412' || scene.key == 'scene_1497' || scene.key == 'scene_1505'|| scene.key === 'scene_1510' || scene.key === 'scene_1523' || scene.key === 'scene_1616'  || scene.key === 'scene_1631' || scene.key === 'scene_1636' || scene.key === 'scene_1644' || scene.key === 'scene_1651' || scene.key === 'scene_1656' || scene.key === 'scene_1665' || scene.key === 'scene_1757' || scene.key === 'scene_1758' || scene.key === 'scene_1759') {
+
+    }*/
   
  //**************************************************************************************************************
 //****** Hynek's Code to check version on user Browser with what is stored in Apify. If version is different, 
