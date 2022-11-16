@@ -95,9 +95,9 @@ var submitUserLoginForm = function() {
 };
 
 //on the login page
-$(document).on("knack-view-render.view_2146", function (event, view) {
+/*$(document).on("knack-view-render.view_2146", function (event, view) {
   submitUserLoginForm();
-});
+});*/
 
 //MASTER/SLAVE CONNECT
 //Scenes where the App is accessed from the Master App and needs to login
