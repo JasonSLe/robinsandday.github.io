@@ -313,6 +313,11 @@ $(document).on('knack-view-render.view_5721', function(event, view, data) {
   $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/vauxhall-dealer-monthly-registrations/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+$(document).on('knack-view-render.view_5722', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/digital-orders?token='+encodeURIComponent(token) + '#new-vehicle-reporting/registered-not-invoiced/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 function openTab(url) {
   // Create link in memory
   var a = window.document.createElement("a");
@@ -388,7 +393,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 
     //MASTER/SLAVE CONNECT - add scene of master page
     // Always hide/collapse the header when rendering scene in IFRAME, add other scenes if necessary
-    if (scene.key === 'scene_860' || scene.key === 'scene_1269' || scene.key === 'scene_1271' || scene.key === 'scene_1273' || scene.key === 'scene_1279' || scene.key === 'scene_1339' || scene.key == 'scene_1362' || scene.key == 'scene_1412' || scene.key == 'scene_1497' || scene.key == 'scene_1505'|| scene.key === 'scene_1510' || scene.key === 'scene_1523' || scene.key === 'scene_1616'  || scene.key === 'scene_1631' || scene.key === 'scene_1636' || scene.key === 'scene_1644' || scene.key === 'scene_1651' || scene.key === 'scene_1656' || scene.key === 'scene_1665' || scene.key === 'scene_1757' || scene.key === 'scene_1758') {
+    if (scene.key === 'scene_860' || scene.key === 'scene_1269' || scene.key === 'scene_1271' || scene.key === 'scene_1273' || scene.key === 'scene_1279' || scene.key === 'scene_1339' || scene.key == 'scene_1362' || scene.key == 'scene_1412' || scene.key == 'scene_1497' || scene.key == 'scene_1505'|| scene.key === 'scene_1510' || scene.key === 'scene_1523' || scene.key === 'scene_1616'  || scene.key === 'scene_1631' || scene.key === 'scene_1636' || scene.key === 'scene_1644' || scene.key === 'scene_1651' || scene.key === 'scene_1656' || scene.key === 'scene_1665' || scene.key === 'scene_1757' || scene.key === 'scene_1758' || scene.key === 'scene_1759') {
       document.body.style.overflow = "hidden"
         if (window.matchMedia('(min-width: 768px)').matches !== false) {
             toggleHeaderVisibility('hidden');
