@@ -354,7 +354,7 @@ function aftersalesConnectViewFunction(selector_view){
   $(document).on("knack-view-render." + selector_view.view, function(event, scene, data) {
     console.log(selector_view)
     var token = Knack.getUserAttributes().values["field_6440"];
-    $('div[class="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales'+selector_view.url+'?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+    $('div[class*="field_3"]').html('<iframe src="https://www.robinsandday.co.uk/aftersales'+selector_view.url+'?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
   });
 }
 
