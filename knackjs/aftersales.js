@@ -25,6 +25,7 @@ return objectA
 $(document).on('knack-view-render.any', function (event, view, data) {
 	$('[class="kn-container"]').hide();
 	$('[class="kn-info kn-container"]').hide();
+  submitUserLoginForm();
 });
 
 hashCode = function(elem) {
@@ -74,7 +75,7 @@ var submitUserLoginForm = function() {
     $('input[type="submit"]').click();
 };
 
-//MASTER/SLAVE CONNECT
+/*//MASTER/SLAVE CONNECT
 //Scenes where the App is accessed from the Master App and needs to login
 var loginSceneNames = ["scene_20","scene_32","scene_38","scene_44","scene_52","scene_57","scene_111","scene_73","scene_74","scene_224","scene_340"]; ///add scene numbers as necessary
 
@@ -84,7 +85,7 @@ function functionName(selector_scene){
     //console.log(selector_scene)
     submitUserLoginForm();
   });
-}
+}*/
 
 $(document).on('knack-view-render.any', function (event, view, data) {
   //  ---------Auto Capitalise Regestration input-------------
