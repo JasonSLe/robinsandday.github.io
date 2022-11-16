@@ -925,6 +925,22 @@ $(document).on('knack-scene-render.scene_1314', function (event, view, data) {
 	$('[class="kn-info kn-container"]').hide();
 });
 
+$(document).on('knack-scene-render.scene_1719', function(event, scene) {
+  $(".kn-crumbtrail").hide();
+});
+
+$(document).on('knack-scene-render.scene_1736', function(event, scene) {
+  $(".kn-crumbtrail").hide();
+});
+
+$(document).on('knack-scene-render.scene_1737', function(event, scene) {
+  $(".kn-crumbtrail").hide();
+});
+
+$(document).on('knack-scene-render.scene_1739', function(event, scene) {
+  $(".kn-crumbtrail").hide();
+});
+
 // ----------  hide blank Enquiry Max table on New Vehicle P/X appraisal    ----------
 
 //$(document).on('knack-view-render.view_3254', function (event, view, data) {
@@ -3477,4 +3493,11 @@ $(document).on('knack-record-update.view_4092', function(event, view, data) {
 
   Knack.showSpinner();
   
+});
+
+//  ---------Auto Lowecase Autoline Username input-------------
+$(document).on('knack-view-render.any', function (event, view, data) {
+  $('input#field_7974').keyup(function() {
+      this.value = this.value.toLowerCase().replace(new RegExp(' ','g'),'').replace(new RegExp('	','g'),''); 
+  });
 });

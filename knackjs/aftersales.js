@@ -993,6 +993,42 @@ try{
 }
 });
 
+//Trigger tarot v2 (Second column)
+$(document).on('knack-form-submit.view_1298', function(event, view, data) {
+
+try{
+
+    let commandURL = "https://hook.eu1.make.celonis.com/a45crmnl4nnfws8iww60ro6teti10t7g";
+    let dataToSend = JSON.stringify({"Record ID":data.id});
+
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;    
+}catch(exception){
+    console.log("error");
+    var today = new Date();
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
+    let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+    let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Scenario DESCRIPTION what for the error webhook",
+    "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+    var rData = $.ajax({
+       url: commandURL,
+       type: 'POST',
+       contentType: 'application/json',
+       data: dataToSend,
+       async: false
+    }).responseText;
+}
+});
+
+
 
 //trigger aftersales - wip management notes to update
 
@@ -1568,7 +1604,7 @@ function recursivecallscene_152(){
  setTimeout(function () { if($("#view_1285").is(":visible")==true){ Knack.views["view_1285"].model.fetch();recursivecallscene_439();} }, 120000);
 }
 
-$(document).on('knack-view-render.view_1276', function (event, view, data) {
+$(document).on('knack-view-render.view_1297', function (event, view, data) {
   $('div[class*="field_1687"]>div[class="kn-detail-body"]>span').hide();
   var sound      = document.createElement('audio');
   sound.id       = 'audio-player';
