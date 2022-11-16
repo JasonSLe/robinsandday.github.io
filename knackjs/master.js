@@ -418,7 +418,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 
     //MASTER/SLAVE CONNECT - add scene of master page
     // Always hide/collapse the header when rendering scene in IFRAME, add other scenes if necessary
-    let hideScenes = ['scene_860','scene_1269','scene_1271','scene_1273','scene_1279','scene_1339','scene_1362','scene_1412','scene_1497','scene_1505','scene_1510','scene_1523','scene_1616','scene_1631','scene_1636','scene_1644', 'scene_1651', 'scene_1656', 'scene_1665', 'scene_1757', 'scene_1758', 'scene_1759', 'scene_1760', 'scene_1762',, 'scene_1763',, 'scene_1764',, 'scene_1770'];
+    let hideScenes = ['scene_860','scene_1269','scene_1271','scene_1273','scene_1279','scene_1339','scene_1362','scene_1412','scene_1497','scene_1505','scene_1510','scene_1523','scene_1616','scene_1631','scene_1636','scene_1644', 'scene_1651', 'scene_1656', 'scene_1665', 'scene_1757', 'scene_1758', 'scene_1759', 'scene_1760', 'scene_1762', 'scene_1763', 'scene_1764', 'scene_1770', 'scene_1771', 'scene_1772', 'scene_1773', 'scene_1774', 'scene_1775', 'scene_1776', 'scene_1777', 'scene_1778', 'scene_1779', 'scene_1780', 'scene_1781', 'scene_1782', 'scene_1783', 'scene_1784', 'scene_1785'];
     if (hideScenes.find(el => el === scene.key)){
       document.body.style.overflow = "hidden"
         if (window.matchMedia('(min-width: 768px)').matches !== false) {
