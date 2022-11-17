@@ -584,6 +584,24 @@ This removes white spaces from all table headers*/
   	box-shadow:         3px 3px #ccc;
 }
 
+#view_2875 > div > a.kn-link.kn-link-5.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_2875 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
 /*Change Button 'New Vehicle Handover Valet Help & Support' in New Deal Customer Handover*/ 
 #view_2913 > div > a.kn-link.kn-link-2.kn-button {
     background-color: #FFA100;
