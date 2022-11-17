@@ -1945,8 +1945,8 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	color: #FFFFFF; !important
   	font-weight: bold; !important
   	box-shadow:         3px 3px #ccc;
-	padding: 8px;
-	display: inline-block;
+	padding: 8px; !important
+	display: inline-block; !important
 }
 
 
