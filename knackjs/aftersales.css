@@ -1944,16 +1944,16 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 	background-color: #ebaf48;
   	color: #FFFFFF; !important
   	font-weight: bold;
-  	box-shadow:         3px 3px #ccc;
+  	box-shadow:         5px 5px #ccc;
 }
 
-#view_1305 > section > div > div > div > div > div.kn-details-link > div > span {
+#view_1305 > section > div > div > div > div > div.kn-details-link > div > span a:hover {
 	background-color: #ebaf48;
   	color: #FFFFFF; !important
   	font-weight: bold;
   	transition-property: color;
   	transition-duration: .3s;
-  	border-width: 2px;
+  	border-width: 5px;
   	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
+  	box-shadow:         5px 5px #ccc;
 }
