@@ -1942,14 +1942,14 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 #view_1305 > section > div > div > div > div > div.kn-details-link > div > span {
 	background-color: #ebaf48;
-  	color: #FFFFFF;
+  	color: #FFFFFF; !important
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_117 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #ebaf48;
-  	color: #FFFFFF;
+  	color: #FFFFFF; !important
   	font-weight: bold;
   	transition-property: color;
   	transition-duration: .3s;
