@@ -1946,7 +1946,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   background-color: #FFA100;
   padding: 8px;
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 0.35em;
 }
 
 #view_1305 > section > div > div > div > div > div.kn-details-link > div > span a:hover {
@@ -1955,6 +1955,6 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   background-color: #D18400;
   padding: 8px;
   display: inline-block;
-  border-radius: 25px;
+  border-radius: 0.35em;
 }
 
