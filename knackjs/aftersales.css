@@ -1941,14 +1941,14 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 /**** Action auto reminders to Button ****/
 
 #view_1305 > section > div > div > div > div > div.kn-details-link > div > span {
-	background-color: #00CC66;
+	background-color: #ebaf48;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_117 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #32936F;
+	background-color: #ebaf48;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
