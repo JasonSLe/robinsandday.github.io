@@ -1940,7 +1940,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 /**** Action auto reminders to Button ****/
 
-#view_1305 > section > div > div > div > div > div.kn-details-link > div {
+#view_1305 > section > div > div > div > div > div.kn-details-link > div > span {
 	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
