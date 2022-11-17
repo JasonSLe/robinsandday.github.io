@@ -1937,3 +1937,13 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   padding: 8px;
   display: inline-block;
 }
+
+/**** Part Exchange Link to Button ****/
+
+#view_1305 > section > div > div > div > div > div.kn-details-link > div {
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #ffa100;
+  padding: 8px;
+  display: inline-block;
+}
