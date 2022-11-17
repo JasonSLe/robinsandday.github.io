@@ -3693,7 +3693,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-4.kn-link-page.kn-button,
-#view_5641 > div.control > a.kn-link.kn-link-5.kn-link-page.kn-button {
+#view_5641 > div.control > a.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_5641 > div.control > a.kn-link.kn-link-6.kn-link-page.kn-button{
   font-size: 1.17em;
   font: "Calibri", sans-serif;		
   background-color: #ffa100 !important;
@@ -3800,7 +3801,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
 /* Used Car Operations and Reporting Pages */ 
 
-#view_5688 {
+#view_5688,
+#view_5695 {
   margin: 10px;
 }
 
@@ -3895,7 +3897,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
 /* New Car Operations and Reporting Pages */ 
 
-#view_5702 {
+#view_5702,
+#view_5709 {
   margin: 10px;
 }
 
@@ -3946,7 +3949,15 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5704 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5705 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5706 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5706 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_5706 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5710 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5710 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5710 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5710 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5754 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5754 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5755 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5711 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #005F80;
   color: #ffffff;
   font-weight: bold;
@@ -3960,7 +3971,15 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5704 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5705 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5706 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5704 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_5704 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5710 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5710 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5710 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5710 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5754 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5754 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5755 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5711 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #014157;
   color: #ffffff;
   font-weight: bold;
@@ -3970,3 +3989,98 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   border-color: #ffffff;
   box-shadow: 3px 3px #ccc;
 }
+
+/* Service Operations and Reporting Pages */ 
+
+#view_5756,
+#view_5760 {
+  margin: 10px;
+}
+
+#view_5757 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5761 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+  background-color: #2ab27b;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 3px 3px #ccc;
+}
+
+#view_5757 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5761 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+  background-color: #308965;
+  color: #ffffff;
+  font-weight: bold;
+  transition-property: color;
+  transition-duration: 0.3s;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-shadow: 3px 3px #ccc;
+}
+
+#view_5757 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5761 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+  background-color: #ffa100 !important;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 3px 3px #ccc;
+}
+
+#view_5757 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5761 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+  background-color: #d18400 !important;
+  color: #ffffff;
+  font-weight: bold;
+  transition-property: color;
+  transition-duration: 0.3s;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-shadow: 3px 3px #ccc;
+}
+
+#view_5759 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5758 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5758 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5758 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5758 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5758 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_5762 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5762 > div > a.kn-link.kn-link-2.kn-link-page.kn-button, 
+#view_5762 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5762 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5762 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_5762 > div > a.kn-link.kn-link-6.kn-link-page.kn-button,
+#view_5763 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5763 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5763 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+  background-color: #005F80;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 3px 3px #ccc;
+}
+
+
+#view_5759 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5758 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5758 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5758 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5758 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5758 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_5762 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5762 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5762 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5762 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5762 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_5762 > div > a:hover.kn-link.kn-link-6.kn-link-page.kn-button,
+#view_5763 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5763 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5763 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+  background-color: #014157;
+  color: #ffffff;
+  font-weight: bold;
+  transition-property: color;
+  transition-duration: 0.3s;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-shadow: 3px 3px #ccc;
+}
+
