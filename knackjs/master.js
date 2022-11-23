@@ -3567,3 +3567,8 @@ $(document).on('knack-view-render.any', function (event, view, data) {
       this.value = this.value.toLowerCase().replace(new RegExp(' ','g'),'').replace(new RegExp('	','g'),''); 
   });
 });
+
+
+$(document).on('knack-view-render.view_2283', function (event, view, data) {
+  console.log('recordId',$('input[name="id"]').attr('value'));
+});
