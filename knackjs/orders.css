@@ -5786,7 +5786,9 @@ font-size:12px;
   margin: auto !important;
 }
 
-#view_3767 th {position:sticky;top:0; height:40px;}
+#view_3767 th span {
+
+position:sticky;top:0; height:40px;}
 
 
 
