@@ -4451,6 +4451,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5815 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5815 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
 #view_5815 > div > a.kn-link.kn-link-6.kn-link-page.kn-button,
+#view_5815 > div > a.kn-link.kn-link-7.kn-link-page.kn-button,
 #view_5816 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5816 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5817 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
@@ -4478,6 +4479,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5815 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5815 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button,
 #view_5815 > div > a:hover.kn-link.kn-link-6.kn-link-page.kn-button,
+#view_5815 > div > a:hover.kn-link.kn-link-7.kn-link-page.kn-button,
 #view_5816 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5816 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5817 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
@@ -4750,6 +4752,10 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   border-width: 2px;
   border-color: #ffffff;
   box-shadow: 3px 3px #ccc;
+}
+
+#view_5641 {
+  margin: 5px;
 }
 
 
