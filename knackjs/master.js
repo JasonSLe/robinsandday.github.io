@@ -3573,7 +3573,24 @@ $(document).on('knack-view-render.any', function (event, view, data) {
 $(document).on('knack-view-render.view_2283', function (event, view, data) {
   console.log('image',$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery'));
   if ($('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery')){
-    let resp = callPostHttpRequest('https://7rhnwcwqj9ap.runs.apify.net/sightengine',{imageUrl:$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery')},'sightengine');
-    console.log('resp',resp)
+    try{
+      $.ajax({
+        url: 'https://7rhnwcwqj9ap.runs.apify.net/sightengine',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({imageUrl:$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery')}),
+      }).then(function(resp) {
+        let jsR = JSON.parse(resp);
+        if (jsR.status==='success'){
+          if (jsR.sharpness>=0.98 && jsR.brightness>=0.33 && jsR.brightness<=0.7 && jsR.contrast>=0.8){
+            console.log('SUCCESS');
+          } else {
+            console.log('FAIL');
+          }
+        }
+      });
+    } catch(exception) {
+      console.log(exception);
+    }
   }
 });
