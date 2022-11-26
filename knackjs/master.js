@@ -3582,7 +3582,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
       }).then(function(resp) {
         let jsR = JSON.parse(resp);
         if (jsR.status==='success'){
-          if (jsR.sharpness>=0.98 && jsR.brightness>=0.33 && jsR.brightness<=0.7 && jsR.contrast>=0.8){
+          if (jsR.sharpness<0.98 && jsR.brightness>0.33 && jsR.brightness<0.7 && jsR.contrast>0.8){
             console.log('SUCCESS');
           } else {
             console.log('FAIL');
