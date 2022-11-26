@@ -3701,7 +3701,9 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a.kn-link.kn-link-6.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-7.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-8.kn-link-page.kn-button,
-#view_5641 > div.control > a.kn-link.kn-link-9.kn-link-page.kn-button {
+#view_5641 > div.control > a.kn-link.kn-link-9.kn-link-page.kn-button,
+#view_5641 > div.control > a.kn-link.kn-link-10.kn-link-page.kn-button,
+#view_5641 > div.control > a.kn-link.kn-link-11.kn-link-page.kn-button {
   font-size: 1.17em;
   font: "Calibri", sans-serif;		
   background-color: #ffa100 !important;
@@ -3717,7 +3719,9 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a:hover.kn-link.kn-link-6.kn-link-page.kn-button,
 #view_5641 > div.control > a:hover.kn-link.kn-link-7.kn-link-page.kn-button,
 #view_5641 > div.control > a:hover.kn-link.kn-link-8.kn-link-page.kn-button,
-#view_5641 > div.control > a:hover.kn-link.kn-link-9.kn-link-page.kn-button {
+#view_5641 > div.control > a:hover.kn-link.kn-link-9.kn-link-page.kn-button,
+#view_5641 > div.control > a:hover.kn-link.kn-link-10.kn-link-page.kn-button,
+#view_5641 > div.control > a:hover.kn-link.kn-link-11.kn-link-page.kn-button {
   font-size: 1.17em;
   font: "Calibri", sans-serif;
   text-align: center;
@@ -4451,6 +4455,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5815 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5815 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
 #view_5815 > div > a.kn-link.kn-link-6.kn-link-page.kn-button,
+#view_5815 > div > a.kn-link.kn-link-7.kn-link-page.kn-button,
 #view_5816 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5816 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5817 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
@@ -4478,6 +4483,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5815 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5815 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button,
 #view_5815 > div > a:hover.kn-link.kn-link-6.kn-link-page.kn-button,
+#view_5815 > div > a:hover.kn-link.kn-link-7.kn-link-page.kn-button,
 #view_5816 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5816 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5817 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
@@ -4751,18 +4757,3 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   border-color: #ffffff;
   box-shadow: 3px 3px #ccc;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
