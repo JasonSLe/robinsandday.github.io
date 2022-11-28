@@ -3585,6 +3585,16 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
           if (jsR.sharpness<0.98 && jsR.brightness>0.33 && jsR.brightness<0.7 && jsR.contrast>0.8){
             console.log('SUCCESS');
           } else {
+
+            const para = document.createElement("p");
+            para.classList.add('label');
+            para.classList.add('kn-label');
+            para.style = 'color:red;';
+            const node = document.createTextNode("The photo did not pass the automatic photo quality check, you need to retake it.");
+            para.appendChild(node);
+            const element = document.querySelector("div[class='kn-submit']");
+            element.appendChild(para);
+
             console.log('FAIL');
             console.log(resp);
           }
