@@ -3586,6 +3586,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
             console.log('SUCCESS');
           } else {
             console.log('FAIL');
+            console.log(resp);
           }
         }
       });
