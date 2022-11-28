@@ -3600,6 +3600,15 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
           }
         }
       });
+      $.ajax({
+        url: 'https://7rhnwcwqj9ap.runs.apify.net/detectron2',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({imageUrl:$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery')}),
+      }).then(function(resp) {
+        console.log('detecton2 resp');
+        console.log(resp);
+      });
     } catch(exception) {
       console.log(exception);
     }
