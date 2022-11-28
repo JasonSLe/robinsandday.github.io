@@ -3600,7 +3600,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
           }
         }
       });
-      $.ajax({
+      /*$.ajax({
         url: 'https://7rhnwcwqj9ap.runs.apify.net/detectron2',
         type: 'POST',
         contentType: 'application/json',
@@ -3609,7 +3609,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         console.log('detecton2 resp');
         console.log(resp);
       });
-      console.log('both')
+      console.log('both')*/
     } catch(exception) {
       console.log(exception);
     }
