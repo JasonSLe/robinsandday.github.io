@@ -3609,6 +3609,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         console.log('detecton2 resp');
         console.log(resp);
       });
+      console.log('both')
     } catch(exception) {
       console.log(exception);
     }
