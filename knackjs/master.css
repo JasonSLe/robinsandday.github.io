@@ -3705,7 +3705,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a.kn-link.kn-link-10.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-11.kn-link-page.kn-button,
 #view_5641 > div.control > a.kn-link.kn-link-12.kn-link-page.kn-button,
-#view_5641 > div.control > a.kn-link.kn-link-13.kn-link-page.kn-button {
+#view_5641 > div.control > a.kn-link.kn-link-13.kn-link-page.kn-button,
+#view_5641 > div.control > a.kn-link.kn-link-14.kn-link-page.kn-button{
   font-size: 1em;
   font: "Calibri", sans-serif;		
   background-color: #ffa100 !important;
@@ -3725,7 +3726,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5641 > div.control > a:hover.kn-link.kn-link-10.kn-link-page.kn-button,
 #view_5641 > div.control > a:hover.kn-link.kn-link-11.kn-link-page.kn-button,
 #view_5641 > div.control > a:hover.kn-link.kn-link-12.kn-link-page.kn-button,
-#view_5641 > div.control > a:hover.kn-link.kn-link-13.kn-link-page.kn-button {
+#view_5641 > div.control > a:hover.kn-link.kn-link-13.kn-link-page.kn-button,
+#view_5641 > div.control > a:hover.kn-link.kn-link-14.kn-link-page.kn-button,{
   font-size: 1em;
   font: "Calibri", sans-serif;
   text-align: center;
@@ -3825,8 +3827,6 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   border-color: #ffffff;
   box-shadow: 3px 3px #ccc;
 }
-
-/* CODE FOR PAGES V2 */ 
 
 /* Used Car Operations and Reporting Pages */ 
 
