@@ -426,9 +426,9 @@ $(document).on('knack-scene-render.any', function(event, scene) {
         $('li[class*="is-active"]').removeClass('is-active');
         console.log('show menu');
         setTimeout(() => {
-          $("#kn-mobile-menu").show();
+          $("#kn-mobile-menu").addClass('is-visible');
           console.log("show menu 21");
-        }, 500)
+        }, 100)
       });
     });
 
