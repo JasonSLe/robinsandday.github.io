@@ -1866,7 +1866,7 @@ color: #FFFFFF;
 	
 }
 
-/*** Future Handover Appointments ***/
+/*** Your Team's Handovers ***/
 
 #view_4557 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
 	background-color: #FFA100;
@@ -1875,6 +1875,18 @@ color: #FFFFFF;
 }
 
 #view_4557 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4557 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4557 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
