@@ -420,6 +420,10 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     //Menu change cursor on unclicable items
     $('a[class="kn-root-dropdown"]:not([href])').each(function(){
       $(this).attr('style','cursor:default;');
+      $(this).bind("click", function() {
+        $("#kn-mobile-menu").show();
+        console.log('show menu2');
+      })
     });
 
     $('li[class="kn-dropdown-menu"]').each(function(){$(this).bind("click", function() {
