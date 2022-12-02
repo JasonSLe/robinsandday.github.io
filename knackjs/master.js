@@ -420,16 +420,18 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     //Menu change cursor on unclicable items
     $('a[class="kn-root-dropdown"]:not([href])').each(function(){
       $(this).attr('style','cursor:default;');
-    });
-
-    $('li[class="kn-dropdown-menu"]').each(function(){$(this).bind("click", function() {
-        $('li[class*="is-active"]').removeClass('is-active');
+      $(this).bind("click", function() {
         console.log('show menu');
         $("#kn-mobile-menu").addClass('is-visible');
         /*setTimeout(() => {
           $("#kn-mobile-menu").addClass('is-visible');
           console.log("show menu 21");
         }, 100)*/
+      });
+    });
+
+    $('li[class="kn-dropdown-menu"]').each(function(){$(this).bind("click", function() {
+        $('li[class*="is-active"]').removeClass('is-active');
       });
     });
 
