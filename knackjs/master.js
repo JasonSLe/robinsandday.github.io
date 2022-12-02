@@ -421,11 +421,10 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     $('a[class="kn-root-dropdown"]:not([href])').each(function(){
       $(this).attr('style','cursor:default;');
       $(this).bind("click", function() {
-        console.log('show menuV3');
+        console.log('show menuV4');
         setTimeout(() => {
-          console.log("Delayed for 1 second.");
           $("#kn-mobile-menu").addClass('is-visible');
-        }, 200)
+        }, 50)
       });
     });
 
