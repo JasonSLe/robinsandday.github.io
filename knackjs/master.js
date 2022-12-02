@@ -416,6 +416,10 @@ var toggleHeaderVisibility = function(toWhatState = null) {
 
 $(document).on('knack-scene-render.any', function(event, scene) {
   console.log('knack-scene-render.any')
+  
+    //Menu change cursor on unclicable items
+    $('a[class="kn-root-dropdown"]:not([href])').each(function(){$(this).attr('style','cursor:default;')});
+
     var userBar = document.querySelector('.kn-info-bar .kn-current_user');
     toggleButton = document.createElement('span');
     toggleButton.classList.add('rad-toggle-header');
