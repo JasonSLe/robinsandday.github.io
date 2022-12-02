@@ -423,10 +423,6 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       $(this).bind("click", function() {
         console.log('show menu');
         $("#kn-mobile-menu").addClass('is-visible');
-        /*setTimeout(() => {
-          $("#kn-mobile-menu").addClass('is-visible');
-          console.log("show menu 21");
-        }, 100)*/
       });
     });
 
