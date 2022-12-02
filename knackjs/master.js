@@ -421,7 +421,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     $('a[class="kn-root-dropdown"]:not([href])').each(function(){
       $(this).attr('style','cursor:default;');
       $(this).bind("click", function() {
-        console.log('show menu');
+        console.log('show menuX');
         $("#kn-mobile-menu").addClass('is-visible');
       });
     });
