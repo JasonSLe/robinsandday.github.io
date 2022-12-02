@@ -427,8 +427,8 @@ $(document).on('knack-scene-render.any', function(event, scene) {
         console.log('show menu');
         setTimeout(() => {
           $("#kn-mobile-menu").show();
-          console.log("show menu 2");
-        }, "100")
+          console.log("show menu 21");
+        }, 500)
       });
     });
 
