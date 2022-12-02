@@ -431,6 +431,14 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       });
     });
 
+    $('li[class="kn-dropdown-menu"]>a[class="kn-root-dropdown"]:not([href])').each(function(){$(this).bind("click", function() {
+      $(this).bind("click", function() {
+        console.log('show menuV');
+        $("#kn-mobile-menu").addClass('is-visible');
+      });
+    });
+  });
+
     var userBar = document.querySelector('.kn-info-bar .kn-current_user');
     toggleButton = document.createElement('span');
     toggleButton.classList.add('rad-toggle-header');
