@@ -420,7 +420,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     //Menu change cursor on unclicable items
     $('a[class="kn-root-dropdown"]:not([href])').each(function(){$(this).attr('style','cursor:default;')});
     $('li[class="kn-dropdown-menu"]').each(function(){$(this).bind( "click", function() {
-        $('li[class*="kn-dropdown-menu is-active"]').removeClass('is-active');
+        $('li[class*="is-active"]').removeClass('is-active');
       });
     });
 
