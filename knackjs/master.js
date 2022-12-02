@@ -420,6 +420,13 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     //Menu change cursor on unclicable items
     $('a[class="kn-root-dropdown"]:not([href])').each(function(){
       $(this).attr('style','cursor:default;');
+      $(this).bind("click", function() {
+        console.log('show menuV3');
+        setTimeout(() => {
+          console.log("Delayed for 1 second.");
+          $("#kn-mobile-menu").addClass('is-visible');
+        }, 200)
+      });
     });
 
     //menu work
@@ -428,12 +435,12 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       });
     });
 
-    $('li[class="kn-dropdown-menu"]:has(a[class="kn-root-dropdown"]:not([href]))').each(function(){
+    /*$('li[class="kn-dropdown-menu"]:has(a[class="kn-root-dropdown"]:not([href]))').each(function(){
       $(this).bind("click", function() {
         console.log('show menuV2');
         $("#kn-mobile-menu").addClass('is-visible');
       });
-    });
+    });*/
 
     var userBar = document.querySelector('.kn-info-bar .kn-current_user');
     toggleButton = document.createElement('span');
