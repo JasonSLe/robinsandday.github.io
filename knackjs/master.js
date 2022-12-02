@@ -422,6 +422,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       $(this).attr('style','cursor:default;');
     });
 
+    //menu work
     $('li[class="kn-dropdown-menu"]').each(function(){$(this).bind("click", function() {
         $('li[class*="is-active"]').removeClass('is-active');
       });
