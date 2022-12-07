@@ -3592,6 +3592,17 @@ var photoRejectedButtonFunction = function() {
   $('button[type="submit"]').removeAttr('disabled');
 }
 
+function createPhotoRejectedButton(element){
+  const butt = document.createElement("button");
+  butt.setAttribute("id", "photoRejectedButton");
+  butt.setAttribute("type","button");
+  butt.innerHTML = "Upload photo as is";
+  butt.classList.add('kn-button');
+  butt.classList.add('is-primary');
+  butt.addEventListener('click', photoRejectedButtonFunction);
+  element.appendChild(butt);
+}
+
 $(document).on('knack-view-render.view_2283', function (event, view, data) {
   console.log('image',$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery'));
   if ($('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery')){
@@ -3617,14 +3628,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
             const element = document.querySelector("div[class='kn-submit']");
             element.appendChild(para);
 
-            const butt = document.createElement("button");
-            butt.setAttribute("id", "photoRejectedButton");
-            butt.setAttribute("type","button");
-            butt.innerHTML = "Upload photo as is";
-            butt.classList.add('kn-button');
-            butt.classList.add('is-primary');
-            butt.addEventListener('click', photoRejectedButtonFunction);
-            element.appendChild(butt);
+            createPhotoRejectedButton(element);
 
             $('button[type="submit"]').attr('disabled','disabled')
 
@@ -3646,7 +3650,23 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         let d2J = JSON.parse(resp.detectron2);
 
         if (d2J.scores.length===0) {
-          console.log('no car detected');
+          const para = document.createElement("p");
+          para.classList.add('label');
+          para.classList.add('kn-label');
+          para.style = 'color:red;';
+          para.setAttribute("id", "photoRejectedD2");
+          para.innerHTML = "Photo rejected.<br />AI Photo Check<br />No car detected in the image";
+
+          const checkB = document.querySelector('button[id="photoRejectedButton"]');
+          if (checkB){
+            checkB.insertBefore(para);
+          } else {
+            const element = document.querySelector("div[class='kn-submit']");
+            element.appendChild(para);
+
+            createPhotoRejectedButton(element)
+          }
+
           return;
         }
         if (d2J.scores[0]<0.999){
