@@ -3587,6 +3587,10 @@ $(document).on('knack-view-render.any', function (event, view, data) {
   });
 });
 
+var photoRejectedButtonFunction = function() {
+  $('#photoRejectedButton').hide();
+  $('button[type="submit"]').removeAttr('disabled');
+}
 
 $(document).on('knack-view-render.view_2283', function (event, view, data) {
   console.log('image',$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery'));
@@ -3608,11 +3612,18 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
             para.classList.add('label');
             para.classList.add('kn-label');
             para.style = 'color:red;';
+            para.setAttribute("id", "photoRejected");
             para.innerHTML = "Photo rejected.<br />Automated Quality Check Results<br />Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)<br />Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)<br />Contrast: "+jsR.contrast+" (0.8 upwards OK)";
-            //const node = document.createTextNode("Photo rejected.<br />Automated Quality Check Results<br />Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)<br />Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)<br />Contrast: "+jsR.contrast+" (0.8 upwards OK)");
-            //para.appendChild(node);
             const element = document.querySelector("div[class='kn-submit']");
             element.appendChild(para);
+
+            const butt = document.createElement("button");
+            butt.setAttribute("id", "photoRejectedButton");
+            butt.innerHTML = "Upload photo as is";
+            butt.addEventListener('click', photoRejectedButtonFunction);
+            element.appendChild(butt);
+
+            $('button[type="submit"]').attr('disabled','disabled')
 
             console.log('FAIL');
             console.log(resp);
