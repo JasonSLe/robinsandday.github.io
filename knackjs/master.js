@@ -3675,10 +3675,12 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         }
         if (d2J.scores[0]<0.999){
           if (d2J.scores[0]<0.97){
+            insertBadPhotoMessageD2("Photo rejected.<br />AI Photo Check<br />The car detected on image is wrong.")
             console.log('only bad car');
             return;
           } else {
             if (d2J.bbox[0][0]===0 || d2J.bbox[0][1]===0 || d2J.bbox[0][2]===dimJ.width || d2J.bbox[0][3]===dimJ.height){
+              insertBadPhotoMessageD2("Photo rejected.<br />AI Photo Check<br />The car detected on image is going to some edge of photo.")
               console.log('car to some end');
               return;
             }
