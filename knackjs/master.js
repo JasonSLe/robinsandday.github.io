@@ -3636,7 +3636,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
       }).then(function(resp) {
         let jsR = JSON.parse(resp);
         if (jsR.status==='success'){
-          if (jsR.sharpness>=0.98 && jsR.brightness>=0.33 && jsR.brightness<0.7 && jsR.contrast>=0.8){
+          if (jsR.sharpness>=0.98 && jsR.brightness>=0.33 && jsR.brightness<=0.75 && jsR.contrast>=0.8){
             console.log('SUCCESS');
           } else {
             insertBadPhotoMessage("Photo rejected.<br />Automated Quality Check Results<br />Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)<br />Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)<br />Contrast: "+jsR.contrast+" (0.8 upwards OK)","photoRejected")
