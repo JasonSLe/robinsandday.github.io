@@ -3619,8 +3619,10 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
 
             const butt = document.createElement("button");
             butt.setAttribute("id", "photoRejectedButton");
+            butt.setAttribute("type","button");
             butt.innerHTML = "Upload photo as is";
             butt.classList.add('kn-button');
+            butt.classList.add('is-primary');
             butt.addEventListener('click', photoRejectedButtonFunction);
             element.appendChild(butt);
 
