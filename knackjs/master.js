@@ -3641,6 +3641,26 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
       }).then(function(resp) {
         console.log('detecton2 resp');
         console.log(resp);
+
+        let dimJ = resp.dimensions;
+        let d2J = JSON.parse(resp.detectron2);
+
+        if (d2J.scores.length===0) {
+          console.log('no car detected');
+          return;
+        }
+        if (d2J.scores[0]<0.999){
+          if (d2J.scores[0]<0.97){
+            console.log('only bad car');
+            return;
+          } else {
+            if (d2J.bbox[0][0]===0 || d2J.bbox[0][1]===0 || d2J.bbox[0][2]===dimJ.width || d2J.bbox[0][3]===dimJ.height){
+              console.log('car to some end');
+              return;
+            }
+          }
+        }
+        console.log('car good');
       });
       console.log('both')
     } catch(exception) {
