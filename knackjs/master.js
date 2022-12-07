@@ -3593,12 +3593,12 @@ var photoRejectedButtonFunction = function() {
 }
 
 
-function insertBadPhotoMessageD2(message){
+function insertBadPhotoMessage(message, nodeName){
   const para = document.createElement("p");
   para.classList.add('label');
   para.classList.add('kn-label');
   para.style = 'color:red;';
-  para.setAttribute("id", "photoRejectedD2");
+  para.setAttribute("id", nodeName);
   para.innerHTML = message;
 
   const element = document.querySelector("div[class='kn-submit']");
@@ -3638,15 +3638,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
           if (jsR.sharpness<=0.98 && jsR.brightness>=0.33 && jsR.brightness<0.7 && jsR.contrast>=0.8){
             console.log('SUCCESS');
           } else {
-
-            const para = document.createElement("p");
-            para.classList.add('label');
-            para.classList.add('kn-label');
-            para.style = 'color:red;';
-            para.setAttribute("id", "photoRejected");
-            para.innerHTML = "Photo rejected.<br />Automated Quality Check Results<br />Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)<br />Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)<br />Contrast: "+jsR.contrast+" (0.8 upwards OK)";
-            const element = document.querySelector("div[class='kn-submit']");
-            element.appendChild(para);
+            insertBadPhotoMessage("Photo rejected.<br />Automated Quality Check Results<br />Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)<br />Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)<br />Contrast: "+jsR.contrast+" (0.8 upwards OK)","photoRejected")
 
             createPhotoRejectedButton(element);
 
@@ -3670,17 +3662,17 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         let d2J = JSON.parse(resp.detectron2);
 
         if (d2J.scores.length===0) {
-          insertBadPhotoMessageD2("Photo rejected.<br />AI Photo Check<br />No car detected in the image")
+          insertBadPhotoMessage("Photo rejected.<br />AI Photo Check<br />No car detected in the image","photoRejectedD2")
           return;
         }
         if (d2J.scores[0]<0.999){
           if (d2J.scores[0]<0.97){
-            insertBadPhotoMessageD2("Photo rejected.<br />AI Photo Check<br />The car detected on image is wrong.")
+            insertBadPhotoMessage("Photo rejected.<br />AI Photo Check<br />The car detected on image is wrong.","photoRejectedD2")
             console.log('only bad car');
             return;
           } else {
             if (d2J.bbox[0][0]===0 || d2J.bbox[0][1]===0 || d2J.bbox[0][2]===dimJ.width || d2J.bbox[0][3]===dimJ.height){
-              insertBadPhotoMessageD2("Photo rejected.<br />AI Photo Check<br />The car detected on image is going to some edge of photo.")
+              insertBadPhotoMessage("Photo rejected.<br />AI Photo Check<br />The car detected on image is going to some edge of photo.","photoRejectedD2")
               console.log('car to some end');
               return;
             }
