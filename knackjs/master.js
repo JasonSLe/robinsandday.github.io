@@ -3608,7 +3608,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
             para.classList.add('label');
             para.classList.add('kn-label');
             para.style = 'color:red;';
-            const node = document.createTextNode("The photo did not pass the automatic photo quality check, you need to retake it.");
+            const node = document.createTextNode("Photo rejected.<br />Automated Quality Check Results<br />Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)<br />Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)<br />Contrast: "+jsR.contrast+" (0.8 upwards OK)");
             para.appendChild(node);
             const element = document.querySelector("div[class='kn-submit']");
             element.appendChild(para);
