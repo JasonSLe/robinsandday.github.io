@@ -3592,6 +3592,26 @@ var photoRejectedButtonFunction = function() {
   $('button[type="submit"]').removeAttr('disabled');
 }
 
+
+function insertBadPhotoMessageD2(message){
+  const para = document.createElement("p");
+  para.classList.add('label');
+  para.classList.add('kn-label');
+  para.style = 'color:red;';
+  para.setAttribute("id", "photoRejectedD2");
+  para.innerHTML = message;
+
+  const checkB = document.querySelector('button[id="photoRejectedButton"]');
+  if (checkB){
+    checkB.insertBefore(para);
+  } else {
+    const element = document.querySelector("div[class='kn-submit']");
+    element.appendChild(para);
+
+    createPhotoRejectedButton(element)
+  }
+}
+
 function createPhotoRejectedButton(element){
   const butt = document.createElement("button");
   butt.setAttribute("id", "photoRejectedButton");
@@ -3650,23 +3670,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         let d2J = JSON.parse(resp.detectron2);
 
         if (d2J.scores.length===0) {
-          const para = document.createElement("p");
-          para.classList.add('label');
-          para.classList.add('kn-label');
-          para.style = 'color:red;';
-          para.setAttribute("id", "photoRejectedD2");
-          para.innerHTML = "Photo rejected.<br />AI Photo Check<br />No car detected in the image";
-
-          const checkB = document.querySelector('button[id="photoRejectedButton"]');
-          if (checkB){
-            checkB.insertBefore(para);
-          } else {
-            const element = document.querySelector("div[class='kn-submit']");
-            element.appendChild(para);
-
-            createPhotoRejectedButton(element)
-          }
-
+          insertBadPhotoMessageD2("Photo rejected.<br />AI Photo Check<br />No car detected in the image")
           return;
         }
         if (d2J.scores[0]<0.999){
