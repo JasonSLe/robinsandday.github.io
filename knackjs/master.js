@@ -3601,11 +3601,11 @@ function insertBadPhotoMessageD2(message){
   para.setAttribute("id", "photoRejectedD2");
   para.innerHTML = message;
 
+  const element = document.querySelector("div[class='kn-submit']");
   const checkB = document.querySelector('button[id="photoRejectedButton"]');
   if (checkB){
-    checkB.insertBefore(para);
+    element.insertBefore(para, checkB);
   } else {
-    const element = document.querySelector("div[class='kn-submit']");
     element.appendChild(para);
 
     createPhotoRejectedButton(element)
