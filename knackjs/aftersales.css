@@ -1940,8 +1940,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 
 /*Make Virtual reception Supporting documents as a button*/
-#view_1175 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-details-link > div > span
-{
+#view_1175 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-details-link > div > span > a {
   color: #ffffff; !important
   font-weight: bold;
   background-color: #ffa100;
