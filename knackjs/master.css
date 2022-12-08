@@ -3830,15 +3830,35 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   box-shadow: 3px 3px #ccc;
 }
 
-/* Used Car Operations and Reporting Pages */ 
+/*********** NEW APP LAYOUT AS OF NOVEMBER 2022 ***********/
+
+/* OPERATION AND REPORTING PAGES */ 
 
 #view_5798,
-#view_5804 {
+#view_5804,
+#view_5813,
+#view_5821,
+#view_5829,
+#view_5837,
+#view_5843,
+#view_5861,
+#view_5853,
+#view_5864,
+#view_5880 {
   margin: 10px;
 }
 
 #view_5799 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5805 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_5805 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5814 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5822 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5830 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5838 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5844 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5862 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5854 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5865 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5882 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #2ab27b;
   color: #ffffff;
   font-weight: bold;
@@ -3846,7 +3866,16 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 }
 
 #view_5799 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5805 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_5805 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5814 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5822 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5830 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5838 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5844 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5862 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5854 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5865 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5882 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #308965;
   color: #ffffff;
   font-weight: bold;
@@ -3858,7 +3887,16 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 }
 
 #view_5799 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5805 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_5805 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5814 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5822 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5830 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5838 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5844 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5862 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5854 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5865 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5882 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
   background-color: #ffa100 !important;
   color: #ffffff;
   font-weight: bold;
@@ -3866,7 +3904,16 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 }
 
 #view_5799 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5805 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_5805 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5814 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5822 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5830 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5838 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5844 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5862 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5854 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5865 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5882 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
   background-color: #d18400 !important;
   color: #ffffff;
   font-weight: bold;
@@ -3907,7 +3954,62 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5807 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5807 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
 #view_5807 > div > a.kn-link.kn-link-6.kn-link-page.kn-button,
-#view_5808 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_5808 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5815 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5815 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5815 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5815 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5815 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_5815 > div > a.kn-link.kn-link-6.kn-link-page.kn-button,
+#view_5815 > div > a.kn-link.kn-link-7.kn-link-page.kn-button,
+#view_5816 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5816 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5817 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5817 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5823 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5823 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5823 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5823 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5824 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5824 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5825 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5825 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5826 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5826 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5831 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5832 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5832 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5832 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5832 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5832 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_5839 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5839 > div > a.kn-link.kn-link-2.kn-link-page.kn-button, 
+#view_5839 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5839 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
+#view_5839 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
+#view_5839 > div > a.kn-link.kn-link-6.kn-link-page.kn-button,
+#view_5840 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5840 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5840 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5845 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5845 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5846 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5846 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5846 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5863 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5863 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5863 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5863 > div > a.kn-link.kn-link-4.kn-button,
+#view_5855 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5855 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5855 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5856 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5856 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5866 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5881 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_5881 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_5881 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_5881 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
   background-color: #005F80;
   color: #ffffff;
   font-weight: bold;
@@ -3945,93 +4047,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5807 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_5807 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button,
 #view_5807 > div > a:hover.kn-link.kn-link-6.kn-link-page.kn-button,
-#view_5808 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #014157;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* New Car Operations and Reporting Pages */ 
-
-#view_5813,
-#view_5821 {
-  margin: 10px;
-}
-
-#view_5814 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5822 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #2ab27b;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5814 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5822 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #308965;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5814 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5822 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5814 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5822 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400 !important;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-
-#view_5815 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5815 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5815 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_5815 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
-#view_5815 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
-#view_5815 > div > a.kn-link.kn-link-6.kn-link-page.kn-button,
-#view_5815 > div > a.kn-link.kn-link-7.kn-link-page.kn-button,
-#view_5816 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5816 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5817 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5817 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5823 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5823 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5823 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_5823 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
-#view_5824 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5824 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5825 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5825 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5826 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5826 > div > a.kn-link.kn-link-2.kn-link-page.kn-button{
-  background-color: #005F80;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-
+#view_5808 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5815 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5815 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5815 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
@@ -4052,86 +4068,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5825 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5825 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5826 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5826 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #014157;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* Service Operations and Reporting Pages */ 
-
-#view_5829,
-#view_5837 {
-  margin: 10px;
-}
-
-#view_5830 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5838 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #2ab27b;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5830 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5838 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #308965;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5830 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5838 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5830 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5838 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400 !important;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5831 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5832 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5832 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5832 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_5832 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
-#view_5832 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
-#view_5839 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5839 > div > a.kn-link.kn-link-2.kn-link-page.kn-button, 
-#view_5839 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_5839 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
-#view_5839 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
-#view_5839 > div > a.kn-link.kn-link-6.kn-link-page.kn-button,
-#view_5840 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5840 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5840 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #005F80;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-
+#view_5826 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5831 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5832 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5832 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
@@ -4146,79 +4083,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5839 > div > a:hover.kn-link.kn-link-6.kn-link-page.kn-button,
 #view_5840 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5840 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5840 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
-  background-color: #014157;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* Parts Operations and Reporting Pages */ 
-
-#view_5843,
-#view_5861 {
-  margin: 10px;
-}
-
-#view_5844 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5862 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #2ab27b;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5844 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5862 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #308965;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5844 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5862 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5844 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5862 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400 !important;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5845 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5845 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5846 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5846 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5846 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_5863 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5863 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5863 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_5863 > div > a.kn-link.kn-link-4.kn-button {
-  background-color: #005F80;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
+#view_5840 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_5845 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5845 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5846 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
@@ -4227,144 +4092,13 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_5863 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5863 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5863 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_5863 > div > a:hover.kn-link.kn-link-3.kn-button {
-  background-color: #014157;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* Preparation Centre Operations and Reporting Pages */ 
-
-#view_5853,
-#view_5864 {
-  margin: 10px;
-}
-
-#view_5854 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5865 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #2ab27b;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5854 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5865 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #308965;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5854 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5865 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5854 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5865 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400 !important;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5855 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5855 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5855 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_5856 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5856 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5866 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #005F80;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
+#view_5863 > div > a:hover.kn-link.kn-link-3.kn-button,
 #view_5855 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5855 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5855 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
 #view_5856 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5856 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5866 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #014157;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-/* Dealer Standards Pages */ 
-
-#view_5880 {
-  margin: 10px;
-}
-
-#view_5882 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #2ab27b;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5882 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-  background-color: #308965;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5882 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #ffa100 !important;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5882 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
-  background-color: #d18400 !important;
-  color: #ffffff;
-  font-weight: bold;
-  transition-property: color;
-  transition-duration: 0.3s;
-  border-width: 2px;
-  border-color: #ffffff;
-  box-shadow: 3px 3px #ccc;
-}
-
-#view_5881 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5881 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
-#view_5881 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_5881 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-  background-color: #005F80;
-  color: #ffffff;
-  font-weight: bold;
-  box-shadow: 3px 3px #ccc;
-}
-
+#view_5866 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5881 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_5881 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_5881 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
@@ -4378,3 +4112,4 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
   border-color: #ffffff;
   box-shadow: 3px 3px #ccc;
 }
+
