@@ -3642,11 +3642,11 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         let jsR = JSON.parse(resp);
         if (jsR.status==='success'){
           if (jsR.sharpness>=0.98 && jsR.brightness>=0.3 && jsR.brightness<=0.75 && jsR.contrast>=0.8){
-            console.log('SUCCESS');
+            console.log('SUCCESS', new Date());
           } else {
             insertBadPhotoMessage("Photo rejected.<br />Automated Quality Check Results<br />Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)<br />Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)<br />Contrast: "+jsR.contrast+" (0.8 upwards OK)","photoRejected")
 
-            console.log('FAIL');
+            console.log('FAIL', new Date());
             console.log(resp);
           }
         }
@@ -3657,7 +3657,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         contentType: 'application/json',
         data: JSON.stringify({imageUrl:$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery')}),
       }).then(function(resp) {
-        console.log('detecton2 resp');
+        console.log('detecton2 resp', new Date());
         console.log(resp);
 
         let dimJ = resp.dimensions;
@@ -3682,7 +3682,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         }
         console.log('car good');
       });
-      console.log('both')
+      console.log('both', new Date())
     } catch(exception) {
       console.log(exception);
     }
