@@ -3664,17 +3664,17 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         let d2J = JSON.parse(resp.detectron2);
 
         if (d2J.scores.length===0) {
-          insertBadPhotoMessage("Photo rejected.<br />AI Photo Check<br />No car detected in the image","photoRejectedD2")
+          insertBadPhotoMessage("Photo Rejected due to the Automated Photo Check being unable to detect a vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.","photoRejectedD2")
           return;
         }
         if (d2J.scores[0]<0.999){
           if (d2J.scores[0]<0.97){
-            insertBadPhotoMessage("Photo rejected.<br />AI Photo Check<br />The car detected on image is wrong.","photoRejectedD2")
+            insertBadPhotoMessage("Photo Rejected due to the Automated Photo Check identifying an issue with the vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.","photoRejectedD2")
             console.log('only bad car');
             return;
           } else {
             if (d2J.bbox[0][0]===0 || d2J.bbox[0][1]===0 || d2J.bbox[0][2]===dimJ.width || d2J.bbox[0][3]===dimJ.height){
-              insertBadPhotoMessage("Photo rejected.<br />AI Photo Check<br />The car detected on image is going to some edge of photo.","photoRejectedD2")
+              insertBadPhotoMessage("Photo Rejected due to the Automated Photo Check identifying the vehicle is not in the centre of the shot.<br />If you believe this is incorrect, please raise a bug report via the app","photoRejectedD2")
               console.log('car to some end');
               return;
             }
