@@ -1604,6 +1604,60 @@ color: #FFFFFF;
   	font-weight: bold;
 }
 
+/*********** NEW DEAL FILES GM and DA REVIEW PAGE ***********/
+
+/* Deal Files Review Status */
+
+#view_4571 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4571 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4571 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4571 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+/* Deal Files Review Stats - Pivot Table */
+
+#kn-report-view_4572-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_4572-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_4572-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#kn-report-view_4572-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /******************************** NEW VEHICLE DIALOG ADMINISTRATION PAGE ******************************/
 
 /******** All Other New Orders (NOT W, X, Y, C buyer types) *********/
