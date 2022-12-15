@@ -3618,10 +3618,15 @@ function insertBadPhotoMessage(message, nodeName){
 }
 
 function createPhotoRejectedButton(element){
+  const para = document.createElement("p");
+  para.classList.add('label');
+  para.classList.add('kn-label');
+  para.innerHTML = 'If you wish to proceed with a REJECTED photo, please click below to confirm, which will enable the check in form for completio';
+  element.appendChild(para);
   const butt = document.createElement("button");
   butt.setAttribute("id", "photoRejectedButton");
   butt.setAttribute("type","button");
-  butt.innerHTML = "Upload photo as is";
+  butt.innerHTML = "Proceed with REJECTED Photo";
   butt.classList.add('kn-button');
   butt.classList.add('is-primary');
   butt.addEventListener('click', photoRejectedButtonFunction);
@@ -3644,7 +3649,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
           if (jsR.sharpness>=0.98 && jsR.brightness>=0.3 && jsR.brightness<=0.75 && jsR.contrast>=0.8){
             console.log('SUCCESS', new Date());
           } else {
-            insertBadPhotoMessage("Photo rejected.<br />Automated Quality Check Results<br />Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)<br />Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)<br />Contrast: "+jsR.contrast+" (0.8 upwards OK)","photoRejected")
+            insertBadPhotoMessage("Photo Quality Check Status – REJECTED<br />Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)<br />Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)<br />Contrast: "+jsR.contrast+" (0.8 upwards OK)","photoRejected")
 
             console.log('FAIL', new Date());
             console.log(resp);
@@ -3664,17 +3669,17 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         let d2J = JSON.parse(resp.detectron2);
 
         if (d2J.scores.length===0) {
-          insertBadPhotoMessage("Photo Rejected due to the Automated Photo Check being unable to detect a vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.","photoRejectedD2")
+          insertBadPhotoMessage("AI Photo Content Check Status – REJECTED<br />Unable to detect a vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.","photoRejectedD2")
           return;
         }
         if (d2J.scores[0]<0.999){
           if (d2J.scores[0]<0.97){
-            insertBadPhotoMessage("Photo Rejected due to the Automated Photo Check identifying an issue with the vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.","photoRejectedD2")
+            insertBadPhotoMessage("AI Photo Content Check Status – REJECTED<br />Issue identified with the vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.","photoRejectedD2")
             console.log('only bad car');
             return;
           } else {
             if (d2J.bbox[0][0]===0 || d2J.bbox[0][1]===0 || d2J.bbox[0][2]===dimJ.width || d2J.bbox[0][3]===dimJ.height){
-              insertBadPhotoMessage("Photo Rejected due to the Automated Photo Check identifying the vehicle is not in the centre of the shot.<br />If you believe this is incorrect, please raise a bug report via the app","photoRejectedD2")
+              insertBadPhotoMessage("AI Photo Content Check Status – REJECTED<br />Vehicle not aligned in the centre of the shot.<br />If you believe this is incorrect, please raise a bug report via the app","photoRejectedD2")
               console.log('car to some end');
               return;
             }
