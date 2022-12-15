@@ -3650,7 +3650,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
           if (jsR.sharpness>=0.98 && jsR.brightness>=0.3 && jsR.brightness<=0.75 && jsR.contrast>=0.8){
             console.log('SUCCESS', new Date());
           } else {
-            insertBadPhotoMessage("<font color='red'>Photo Quality Check Status – REJECTED</font><br />"+(jsR.sharpness<0.98?"<font color='red'>":"")+"Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)"+(jsR.sharpness<0.98?"</font>":"")+"<br />"+(jsR.brightness<0.3 || jsR.brightness>0.75?"<font color='red'>":"")+"Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)"+(jsR.brightness<0.3 || jsR.brightness>0.75?"</font>":"")+"<br />Contrast: "+jsR.contrast+" (0.8 upwards OK)","photoRejected")
+            insertBadPhotoMessage("<font color='red'>Photo Quality Check Status – REJECTED</font><br />"+(jsR.sharpness<0.98?"<font color='red'>":"")+"Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)"+(jsR.sharpness<0.98?"</font>":"")+"<br />"+(jsR.brightness<0.3 || jsR.brightness>0.75?"<font color='red'>":"")+"Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)"+(jsR.brightness<0.3 || jsR.brightness>0.75?"</font>":"")+"<br />"+(jsR.contrast<0.8?"<font color='red'>":"")+"Contrast: "+jsR.contrast+" (0.8 upwards OK)"+(jsR.contrast<0.8?"</font>":"")+"","photoRejected")
 
             console.log('FAIL', new Date());
             console.log(resp);
