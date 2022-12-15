@@ -1309,20 +1309,10 @@ $(document).on('knack-view-render.view_735', function(event, view) {
  //send a http request with the vin an record id
 
  const triggerRecord = (event2) => {
-  console.log("Test106")
-   console.log(event2.view.app_id)
-   console.log(event2.view.Knack)
-   let k = Object.assign({},event2.view.Knack);
-   console.log(event2.view.Knack.hash_parts)
-   console.log(k.hash_parts)
-   console.log(event2.view.Knack.scene_hash)
-   console.log(event2.view.Knack.google_loading)
-   console.log(event2.view.Knack.domain)
-  
    callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":event2.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
  }
  //add an event listner to the arrow table element
- $(".fa-sign-in").on("click", triggerRecord)
+ $(".fa-wrench").on("click", triggerRecord)
 });
 
 // ----------  Refresh Aftersales Customer Exit Survey Results table every 60 seconds but not the page itself  ---------- //
