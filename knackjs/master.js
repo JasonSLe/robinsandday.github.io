@@ -3622,7 +3622,7 @@ function createPhotoRejectedButton(element){
   para.classList.add('label');
   para.classList.add('kn-label');
   para.setAttribute("id", "photoRejectedText");
-  para.innerHTML = 'If you wish to proceed with a REJECTED photo, please click below to confirm, which will enable the check in form for completio';
+  para.innerHTML = 'If you wish to proceed with a REJECTED photo, please click below to confirm, which will enable the check in form for completion';
   element.appendChild(para);
   const butt = document.createElement("button");
   butt.setAttribute("id", "photoRejectedButton");
