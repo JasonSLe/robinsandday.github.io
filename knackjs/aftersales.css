@@ -1971,6 +1971,11 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 
 /* make column stand out*/
-#kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(11) {
-	background-color: #D18400;
+#kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(11),
+#kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(11),
+#kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(11),
+#kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(11),
+#kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(11),
+#kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(6) > td:nth-child(11) {
+	background-color: #FFA100;
 }
