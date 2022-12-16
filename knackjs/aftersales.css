@@ -2062,7 +2062,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(15),
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(15),
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(15) {
-	background-color: #D6FFEC
+	background-color: #D6FFEC;
 	color: #FFFFFF; !important
 	font-weight: bold; !important
 }
