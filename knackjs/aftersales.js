@@ -1302,6 +1302,7 @@ $(document).on("knack-scene-render.scene_267", function(event, scene, data) {
   });
 
 
+// AFTERSALERS CHECK IN PROCESS
   // --- Aftersales vehicle check-in ---
 $(document).on('knack-view-render.view_735', function(event, view) {
   //get the vin value from the table
@@ -1314,6 +1315,19 @@ $(document).on('knack-view-render.view_735', function(event, view) {
  }
  //add an event listner to the arrow table element
  $(".fa-wrench").on("click", triggerRecord)
+});
+
+//******* Live Character Count on Aftersales Vehicle Check In for WIP Notes Tab *******
+$(document).on("knack-view-render.view_736", function(event, view, data) {
+$( document ).ready(function() {
+$(".kn-form.kn-view.view_736 form #field_1766")
+.after( "<p class='typed-chars'>0 out of 120 Characters</p>" );
+
+$(".kn-form.kn-view.view_736 form #field_1766").on('input',function(e){
+var $input = $(this);
+$input.siblings('.typed-chars').text($input.val().length + " out of 120 Characters");
+});
+});
 });
 
 // ----------  Refresh Aftersales Customer Exit Survey Results table every 60 seconds but not the page itself  ---------- //
