@@ -1330,6 +1330,17 @@ $input.siblings('.typed-chars').text($input.val().length + " out of 120 Characte
 });
 });
 
+// Refresh the Vehicle Check In Status Table       
+
+
+$(document).on('knack-scene-render.scene_94', function(event, scene) {
+ recursivecallscene_94();
+});
+
+function recursivecallscene_94(){
+ setTimeout(function () { if($("#view_1337").is(":visible")==true){ Knack.views["view_1337"].model.fetch();recursivecallscene_94();} }, 10000);
+}
+
 // ----------  Refresh Aftersales Customer Exit Survey Results table every 60 seconds but not the page itself  ---------- //
 
 $(document).on('knack-scene-render.scene_148', function(event, scene) {
