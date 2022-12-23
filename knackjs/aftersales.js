@@ -1211,9 +1211,17 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	  $('th[class="field_1681"]').hide();
     $('td[class*="field_1681"]').hide();
 	  
-	  	  //hide parts time intially in stock
+	  //hide parts time intially in stock
 	  $('th[class="field_1243"]').hide();
     $('td[class*="field_1243"]').hide();
+	  
+	   //hide parts/labour complete
+	  $('th[class="field_1717"]').hide();
+    $('td[class*="field_1717"]').hide();
+	  
+	   //hide parts ave, labour incomplete
+	  $('th[class="field_1791"]').hide();
+    $('td[class*="field_1791"]').hide();
 	  
     //This part is for column headers
     //Column header
