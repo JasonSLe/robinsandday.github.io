@@ -1211,9 +1211,17 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	  $('th[class="field_1681"]').hide();
     $('td[class*="field_1681"]').hide();
 	  
-	  	  //hide parts time intially in stock
+	  //hide parts time intially in stock
 	  $('th[class="field_1243"]').hide();
     $('td[class*="field_1243"]').hide();
+	  
+	   //hide parts/labour complete
+	  $('th[class="field_1717"]').hide();
+    $('td[class*="field_1717"]').hide();
+	  
+	   //hide parts ave, labour incomplete
+	  $('th[class="field_1791"]').hide();
+    $('td[class*="field_1791"]').hide();
 	  
     //This part is for column headers
     //Column header
@@ -1302,6 +1310,7 @@ $(document).on("knack-scene-render.scene_267", function(event, scene, data) {
   });
 
 
+// AFTERSALERS CHECK IN PROCESS
   // --- Aftersales vehicle check-in ---
 $(document).on('knack-view-render.view_735', function(event, view) {
   //get the vin value from the table
@@ -1310,7 +1319,7 @@ $(document).on('knack-view-render.view_735', function(event, view) {
 /*
  const triggerRecord = (event2) => {
   console.log('webhook call',event2.view.app_id,vinNumber)
-   callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":event2.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
+   callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
  }
  //add an event listner to the arrow table element
  $(".fa-wrench").on("click", triggerRecord);
@@ -1331,6 +1340,30 @@ $(document).on('knack-view-render.view_735', function(event, view) {
   }
 }
 });
+
+//******* Live Character Count on Aftersales Vehicle Check In for WIP Notes Tab *******
+$(document).on("knack-view-render.view_736", function(event, view, data) {
+$( document ).ready(function() {
+$(".kn-form.kn-view.view_736 form #field_1766")
+.after( "<p class='typed-chars'>0 out of 120 Characters</p>" );
+
+$(".kn-form.kn-view.view_736 form #field_1766").on('input',function(e){
+var $input = $(this);
+$input.siblings('.typed-chars').text($input.val().length + " out of 120 Characters");
+});
+});
+});
+
+// Refresh the Vehicle Check In Status Table       
+
+
+$(document).on('knack-scene-render.scene_94', function(event, scene) {
+ recursivecallscene_94();
+});
+
+function recursivecallscene_94(){
+ setTimeout(function () { if($("#view_1337").is(":visible")==true){ Knack.views["view_1337"].model.fetch();recursivecallscene_94();} }, 10000);
+}
 
 // ----------  Refresh Aftersales Customer Exit Survey Results table every 60 seconds but not the page itself  ---------- //
 
