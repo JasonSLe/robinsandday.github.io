@@ -1331,7 +1331,7 @@ $(document).on('knack-view-render.view_735', function(event, view) {
     const createClickHandler = function(row) {
       return function() {
         var cell = row.id;
-        let vin = row.find(".col-2").text().trim();
+        let vin = row.querySelector('.col-2').innerText;
         console.log('rowId',cell, 'vin',vin);
         callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":cell, "VIN": vin},"Aftersales- will triger during vehicle check-in");
       };
