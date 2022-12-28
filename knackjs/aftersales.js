@@ -1305,15 +1305,31 @@ $(document).on("knack-scene-render.scene_267", function(event, scene, data) {
   // --- Aftersales vehicle check-in ---
 $(document).on('knack-view-render.view_735', function(event, view) {
   //get the vin value from the table
- const vinNumber = $(".col-2").text().trim()
+ //const vinNumber = $(".col-2").text().trim()
  //send a http request with the vin an record id
-
+/*
  const triggerRecord = (event2) => {
   console.log('webhook call',event2.view.app_id,vinNumber)
    callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":event2.view.app_id, "VIN": vinNumber },"Aftersales- will triger during vehicle check-in");
  }
  //add an event listner to the arrow table element
- $(".fa-wrench").on("click", triggerRecord)
+ $(".fa-wrench").on("click", triggerRecord);
+*/
+ if ($('div[class="kn-view kn-table view_735"]')){
+  let rows = $('div[class="kn-view kn-table view_735"] table tr');
+  for (i = 1; i < rows.length; i++) {
+    let currentRow = rows[i];
+    const createClickHandler = function(row) {
+      return function() {
+        var cell = row.id;
+        let vin = row.find(".col-2").text().trim();
+        console.log('rowId',cell, 'vin',vin);
+        callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":cell, "VIN": vin},"Aftersales- will triger during vehicle check-in");
+      };
+    };
+    currentRow.children[6].onclick = createClickHandler(currentRow);
+  }
+}
 });
 
 // ----------  Refresh Aftersales Customer Exit Survey Results table every 60 seconds but not the page itself  ---------- //
