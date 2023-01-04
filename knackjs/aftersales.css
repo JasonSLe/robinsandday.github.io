@@ -1977,9 +1977,9 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(11),
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(11),
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(6) > td:nth-child(11) {
+	font-weight: bold !important;
 	background-color: #6E55DD;
 	color: #FFFFFF; !important
-	font-weight: 700; !important
 }
 
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(2),
@@ -2052,8 +2052,8 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(14),
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(6) > td:nth-child(14)  {
 	background-color: #985d6e;
+	font-weight: bold !important;
 	color: #FFFFFF; !important
-	font-weight: 700; !important
 	
 }
 
@@ -2065,6 +2065,6 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(15),
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(6) > td:nth-child(15) {
 	background-color: #2fc65f;
+	font-weight: bold !important;
 	color: #FFFFFF; !important
-	font-weight: 700; !important
 }
