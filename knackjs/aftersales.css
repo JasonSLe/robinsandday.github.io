@@ -1979,7 +1979,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(6) > td:nth-child(11) {
 	background-color: #6E55DD;
 	color: #FFFFFF; !important
-	font-weight: bold !important;
+	font-weight: bold; !important
 }
 
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(2),
@@ -2053,7 +2053,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(6) > td:nth-child(14)  {
 	background-color: #985d6e;
 	color: #FFFFFF; !important
-	font-weight: bold !important;
+	font-weight: bold; !important
 	
 }
 
@@ -2066,5 +2066,5 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #kn-report-view_208-1 > div.kn-report-rendered > table > tbody > tr:nth-child(6) > td:nth-child(15) {
 	background-color: #2fc65f;
 	color: #FFFFFF; !important
-	font-weight: bold !important;
+	font-weight: bold; !important
 }
