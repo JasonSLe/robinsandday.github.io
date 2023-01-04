@@ -2068,3 +2068,102 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 	font-weight: bold !important;
 	color: #FFFFFF; !important
 }
+
+/* make PARTS SALES column stand out for choose your own filter pivot*/
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(11),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(11),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(11),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(11),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(11),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(6) > td:nth-child(11) {
+	background-color: #6E55DD;
+	color: #FFFFFF; !important
+	font-weight: bold; !important
+}
+
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(2),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(3),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(4),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(5),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(6),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(7),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(8),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(9),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(10),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(2),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(3),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(4),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(5),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(6),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(7),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(8),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(9),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(10),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(2),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(3),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(4),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(5),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(6),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(7),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(8),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(9),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(10),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(2),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(3),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(4),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(5),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(6),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(7),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(8),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(9),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(10),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(2),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(3),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(4),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(5),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(6),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(7),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(8),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(9),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(10) {
+	background-color: #D3CCF5;
+	font-weight: bold; !important
+}
+
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(12),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(13),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(12),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(13),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(12),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(13),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(12),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(13),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(12),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(13) {
+	background-color: #c9a6b0;
+	font-weight: bold; !important
+}
+
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(14),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(14),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(14),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(14),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(14),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(6) > td:nth-child(14)  {
+	background-color: #985d6e;
+	color: #FFFFFF; !important
+	font-weight: bold; !important
+	
+}
+
+
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(1) > td:nth-child(15),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(2) > td:nth-child(15),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(3) > td:nth-child(15),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(4) > td:nth-child(15),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(5) > td:nth-child(15),
+#kn-report-view_1344-1 > div.kn-report-rendered > table > tbody > tr:nth-child(6) > td:nth-child(15) {
+	background-color: #2fc65f;
+	color: #FFFFFF; !important
+	font-weight: bold; !important
+}
