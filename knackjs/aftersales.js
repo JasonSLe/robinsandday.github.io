@@ -1661,5 +1661,5 @@ $(document).on('knack-view-render.view_1297', function (event, view, data) {
 //Submit form for Sending Message
 
 $(document).on('knack-form-submit.view_1359', function(event, view, data) { 
- callPostHttpRequest("https://hook.eu1.make.celonis.com/kaid77zft8p4td8t40lw2n1nm1m8119u", {"Record ID":data.id,"Connected Job Card Record ID":data.field_1510_raw)
+ callPostHttpRequest("https://hook.eu1.make.celonis.com/leftcpmbp6wnrpved7fjrv7gyjjpos2d", {"Record ID":data.id,"Connected Job Card Record ID":data.field_1510_raw)
 });
