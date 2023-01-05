@@ -1657,9 +1657,3 @@ $(document).on('knack-view-render.view_1297', function (event, view, data) {
   sound.src      = $('div[class*="field_1687"]>div[class="kn-detail-body"]>span').text();
   document.querySelector('div[class*="field_1687"]').appendChild(sound);
 })
-
-//Submit form for Sending Message
-
-$(document).on('knack-form-submit.view_1359', function(event, view, data) { 
- callPostHttpRequest("https://hook.eu1.make.celonis.com/leftcpmbp6wnrpved7fjrv7gyjjpos2d", {"Record ID":data.id,"Connected Job Card Record ID":data.field_1510_raw)
-});
