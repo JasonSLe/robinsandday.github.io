@@ -1657,3 +1657,9 @@ $(document).on('knack-view-render.view_1297', function (event, view, data) {
   sound.src      = $('div[class*="field_1687"]>div[class="kn-detail-body"]>span').text();
   document.querySelector('div[class*="field_1687"]').appendChild(sound);
 })
+
+//Submit form for Sending Message
+
+$(document).on('knack-form-submit.view_1359', function(event, view, data) { 
+ callPostHttpRequest("https://hook.eu1.make.celonis.com/kaid77zft8p4td8t40lw2n1nm1m8119u", {"Record ID":data.id},"Outbound Message")
+});
