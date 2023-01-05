@@ -1084,6 +1084,11 @@ $(document).on('knack-form-submit.view_781', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/gmtkedwe7nxktiqm6qi4rg5apeno73an", {"Record ID":data.id},"Pre Visit Digital Customer Incident Form")
 });
 
+//Submit form for Sending Message
+
+$(document).on('knack-form-submit.view_1359', function(event, view, data) { 
+ callPostHttpRequest("https://hook.eu1.make.celonis.com/leftcpmbp6wnrpved7fjrv7gyjjpos2d", {"Record ID":data.id,"Connected Job Card Record ID":data.field_1510_raw)
+});
 
 //Submit form for GDPR preferences update in Check-in process
 $(document).on('knack-form-submit.view_732', function(event, view, data) { 
