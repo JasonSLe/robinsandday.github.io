@@ -3710,17 +3710,17 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         let d2J = JSON.parse(resp.detectron2);
 
         if (d2J.scores.length===0) {
-          insertUpdatePhotoMessage("<font color='red'>AI Photo Content Check Status – REJECTED<br />Unable to detect a vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>",'photoDetectronMessage',true)
+          insertUpdatePhotoMessage("<font color='red'>Vehicle Position Check Status – REJECTED<br />Unable to detect a vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>",'photoDetectronMessage',true)
           return;
         }
         if (d2J.scores[0]<0.999){
           if (d2J.scores[0]<0.97){
-            insertUpdatePhotoMessage("<font color='red'>AI Photo Content Check Status – REJECTED<br />Issue identified with the vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>",'photoDetectronMessage',true)
+            insertUpdatePhotoMessage("<font color='red'>Vehicle Position Check Status – REJECTED<br />Issue identified with the vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>",'photoDetectronMessage',true)
             console.log('only bad car');
             return;
           } else {
             if (d2J.bbox[0][0]===0 || d2J.bbox[0][1]===0 || d2J.bbox[0][2]===dimJ.width || d2J.bbox[0][3]===dimJ.height){
-              insertUpdatePhotoMessage("<font color='red'>AI Photo Content Check Status – REJECTED<br />Vehicle not aligned in the centre of the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>",'photoDetectronMessage',true)
+              insertUpdatePhotoMessage("<font color='red'>Vehicle Position Check Status – REJECTED<br />Vehicle not aligned in the centre of the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>",'photoDetectronMessage',true)
               console.log('car to some end');
               return;
             }
