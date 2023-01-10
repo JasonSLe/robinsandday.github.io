@@ -1714,9 +1714,9 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     }
   
   //version check every day
-  var versionRefreshTime = readCookie('RDDigitalVersionRefreshTime');
+  var versionRefreshTime = readCookie('RDDigitalAftersalesVersionRefreshTime');
   if (!versionRefreshTime){
-    createCookie('RDDigitalVersionRefreshTime',Date.now(),1);
+    createCookie('RDDigitalAftersalesVersionRefreshTime',Date.now(),1);
   } else {
     var todayS = new Date(Date.now());
     todayS = todayS.toDateString();
@@ -1724,7 +1724,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     versionRefreshTimeS = versionRefreshTimeS.toDateString();
     if (todayS!==versionRefreshTimeS){
       console.log('first day');
-      createCookie('RDDigitalVersionRefreshTime',Date.now(),1);
+      createCookie('RDDigitalAftersalesVersionRefreshTime',Date.now(),1);
       window.location.reload(false);
     }
   }
