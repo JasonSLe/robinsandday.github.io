@@ -1694,21 +1694,21 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 //Browser will refresh and add new version to Cookies. Added 01/12/2020 ******************************************
 
   	//version check on Apify
-  	var versionTimeCheck = readCookie('RDDigitalVersionTime');
-  	var versionC = readCookie('RDDigitalVersion');
+  	var versionTimeCheck = readCookie('RDDigitalAftersalesVersionTime');
+  	var versionC = readCookie('RDDigitalAftersalesVersion');
   	console.log('versionC',versionC);
     if (!versionC){
       	console.log('set cookie');
-      	createCookie('RDDigitalVersion',appVersionID,365);
+      	createCookie('RDDigitalAftersalesVersion',appVersionID,365);
     }
     
    	if (!versionTimeCheck || (Date.now()-versionTimeCheck)>600000){ 
-      createCookie('RDDigitalVersionTime',Date.now(),365);
+      createCookie('RDDigitalAftersalesVersionTime',Date.now(),365);
       console.log('check version');
       var appVersionID = getVersionFromApify();
       if (versionC!==appVersionID && appVersionID!==''){
           console.log('not same');
-          createCookie('RDDigitalVersion',appVersionID,365);
+          createCookie('RDDigitalAftersalesVersion',appVersionID,365);
           window.location.reload(false);
       }
     }
