@@ -2199,7 +2199,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
-#view_947 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a:active {
+#view_947 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active {
 	background-color: #e73b3b;
   	color: #FFFFFF;
   	font-weight: bold;
