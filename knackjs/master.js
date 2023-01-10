@@ -3618,6 +3618,7 @@ function insertBadPhotoMessage(message, nodeName){
 
 function insertUpdatePhotoMessage(message, nodeName, isBad = false){
   const m = document.querySelector('[id="'+nodeName+'"]');
+  console.log('m',m);
   if (m){
     m.innerHTML = message;
   } else {
@@ -3627,14 +3628,14 @@ function insertUpdatePhotoMessage(message, nodeName, isBad = false){
     //para.style = 'color:red;';
     para.setAttribute("id", nodeName);
     para.innerHTML = message;
-  }
-
-  const element = document.querySelector("div[class='kn-submit']");
-  const checkB = document.querySelector('[id="photoRejectedText"]');
-  if (checkB){
-    element.insertBefore(para, checkB);
-  } else {
-    element.appendChild(para);
+  
+    const element = document.querySelector("div[class='kn-submit']");
+    const checkB = document.querySelector('[id="photoRejectedText"]');
+    if (checkB){
+      element.insertBefore(para, checkB);
+    } else {
+      element.appendChild(para);
+    }
   }
 
   if (isBad){
