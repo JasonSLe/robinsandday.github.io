@@ -3664,7 +3664,9 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
   console.log('image',$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery'));
   if ($('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery')){
     try{
-      insertUpdatePhotoMessage('Photo Quality Check Status – PROCESSING','photoQualityMessage',false);
+      window.setTimeout(function() {
+        insertUpdatePhotoMessage('Photo Quality Check Status – PROCESSING','photoQualityMessage',false);
+      }, 200);
       $.ajax({
         url: 'https://7rhnwcwqj9ap.runs.apify.net/sightengine',
         type: 'POST',
