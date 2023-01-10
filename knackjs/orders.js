@@ -2621,3 +2621,75 @@ $(document).on('knack-form-submit.view_4460', function(event, view, data) {
   console.log(rData);
 });
 
+function createCookie(name, value, days) {
+  var expires;
+
+  if (days) {
+      var date = new Date();
+      date.setDate(date.getDate() + days); 
+      date.setHours(0);
+      expires = "; expires=" + date.toGMTString();
+  } else {
+      expires = "";
+  }
+  document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/";
+}
+
+function readCookie(name) {
+  var nameEQ = encodeURIComponent(name) + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) === ' ')
+          c = c.substring(1, c.length);
+      if (c.indexOf(nameEQ) === 0)
+          return decodeURIComponent(c.substring(nameEQ.length, c.length));
+  }
+  return null;
+}
+
+function eraseCookie(name) {
+  createCookie(name, "", -1);
+}
+
+$(document).on('knack-scene-render.any', function(event, scene) {
+   //**************************************************************************************************************
+//****** Hynek's Code to check version on user Browser with what is stored in Apify. If version is different, 
+//Browser will refresh and add new version to Cookies. Added 01/12/2020 ******************************************
+
+  	//version check on Apify
+  	var versionTimeCheck = readCookie('RDDigitalOrdersVersionTime');
+  	var versionC = readCookie('RDDigitalOrdersVersion');
+  	console.log('versionC',versionC);
+    if (!versionC){
+      	console.log('set cookie');
+      	createCookie('RDDigitalOrdersVersion',appVersionID,365);
+    }
+    
+   	if (!versionTimeCheck || (Date.now()-versionTimeCheck)>600000){ 
+      createCookie('RDDigitalOrdersVersionTime',Date.now(),365);
+      console.log('check version');
+      var appVersionID = getVersionFromApify();
+      if (versionC!==appVersionID && appVersionID!==''){
+          console.log('not same');
+          createCookie('RDDigitalOrdersVersion',appVersionID,365);
+          window.location.reload(false);
+      }
+    }
+  
+  //version check every day
+  var versionRefreshTime = readCookie('RDDigitalOrdersVersionRefreshTime');
+  if (!versionRefreshTime){
+    createCookie('RDDigitalOrdersVersionRefreshTime',Date.now(),1);
+  } else {
+    var todayS = new Date(Date.now());
+    todayS = todayS.toDateString();
+    var versionRefreshTimeS = new Date(parseInt(versionRefreshTime));
+    versionRefreshTimeS = versionRefreshTimeS.toDateString();
+    if (todayS!==versionRefreshTimeS){
+      console.log('first day');
+      createCookie('RDDigitalOrdersVersionRefreshTime',Date.now(),1);
+      window.location.reload(false);
+    }
+  }
+});
