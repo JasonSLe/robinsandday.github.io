@@ -1084,7 +1084,6 @@ $(document).on('knack-form-submit.view_781', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/gmtkedwe7nxktiqm6qi4rg5apeno73an", {"Record ID":data.id},"Pre Visit Digital Customer Incident Form")
 });
 
-
 //Submit form for GDPR preferences update in Check-in process
 $(document).on('knack-form-submit.view_732', function(event, view, data) { 
   callPostHttpRequest("https://hook.integromat.com/iovfpyqnj3d9pihhmhm1wcgtu5dosv0b", {"Record ID":data.id, "Service GDPR PHONE":data.field_1048_raw, "Service GDPR EMAIL":data.field_1050_raw, "Service GDPR POST":data.field_1051_raw,

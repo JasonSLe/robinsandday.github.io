@@ -3789,6 +3789,9 @@ color: #FFFFFF;
 /* Credit Note 3 */
 #view_3655 > section > div > div:nth-child(13) > div:nth-child(1) > div > div.kn-detail.field_6619 > div.kn-detail-label {border-left: 10px solid #DE3163;}
 
+/* Reg Consent Doc */
+#view_3655 > section > div > div:nth-child(17) > div:nth-child(1) > div > div.kn-detail.field_6409 > div.kn-detail-label {border-left: 10px solid #DE3163;}
+
 /* Customer P/X Invoice and V5 */
 #view_3972 {border-left: 10px solid #DE3163;}
 
