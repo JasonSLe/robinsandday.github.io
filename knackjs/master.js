@@ -3643,6 +3643,10 @@ function insertUpdatePhotoMessage(message, nodeName, isBad = false){
 }
 
 function createPhotoRejectedButton(){
+  const bE = document.querySelector("[id='photoRejectedButton']");
+  if (bE){
+    return;
+  }
   const element = document.querySelector("div[class='kn-submit']");
 
   const para = document.createElement("p");
