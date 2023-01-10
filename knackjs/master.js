@@ -3690,6 +3690,9 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
           insertUpdatePhotoMessage('Photo Quality Check Status – ERROR - photo not checked','photoQualityMessage',false);
         }
       });
+      window.setTimeout(function() {
+        insertUpdatePhotoMessage('Vehicle Position Check Status – PROCESSING','photoDetectronMessage',false);
+      }, 200);
       $.ajax({
         url: 'https://7rhnwcwqj9ap.runs.apify.net/detectron2',
         type: 'POST',
@@ -3703,22 +3706,23 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         let d2J = JSON.parse(resp.detectron2);
 
         if (d2J.scores.length===0) {
-          insertBadPhotoMessage("<font color='red'>AI Photo Content Check Status – REJECTED<br />Unable to detect a vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>","photoRejectedD2")
+          insertUpdatePhotoMessage("<font color='red'>AI Photo Content Check Status – REJECTED<br />Unable to detect a vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>",'photoDetectronMessage',true)
           return;
         }
         if (d2J.scores[0]<0.999){
           if (d2J.scores[0]<0.97){
-            insertBadPhotoMessage("<font color='red'>AI Photo Content Check Status – REJECTED<br />Issue identified with the vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>","photoRejectedD2")
+            insertUpdatePhotoMessage("<font color='red'>AI Photo Content Check Status – REJECTED<br />Issue identified with the vehicle in the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>",'photoDetectronMessage',true)
             console.log('only bad car');
             return;
           } else {
             if (d2J.bbox[0][0]===0 || d2J.bbox[0][1]===0 || d2J.bbox[0][2]===dimJ.width || d2J.bbox[0][3]===dimJ.height){
-              insertBadPhotoMessage("<font color='red'>AI Photo Content Check Status – REJECTED<br />Vehicle not aligned in the centre of the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>","photoRejectedD2")
+              insertUpdatePhotoMessage("<font color='red'>AI Photo Content Check Status – REJECTED<br />Vehicle not aligned in the centre of the shot.<br />If you believe this is incorrect, please raise a bug report via the app.</font>",'photoDetectronMessage',true)
               console.log('car to some end');
               return;
             }
           }
         }
+        insertUpdatePhotoMessage("<font color='green'>Vehicle Position Check Status – APPROVED</font>",'photoDetectronMessage',false);
         console.log('car good');
       });
       console.log('both', new Date())
