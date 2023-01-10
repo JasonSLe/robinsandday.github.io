@@ -3618,7 +3618,6 @@ function insertBadPhotoMessage(message, nodeName){
 
 function insertUpdatePhotoMessage(message, nodeName, isBad = false){
   const m = document.querySelector('[id="'+nodeName+'"]');
-  let element = null;
   if (m){
     m.innerHTML = message;
   } else {
@@ -3629,7 +3628,7 @@ function insertUpdatePhotoMessage(message, nodeName, isBad = false){
     para.setAttribute("id", nodeName);
     para.innerHTML = message;
   
-    element = document.querySelector("div[class='kn-submit']");
+    const element = document.querySelector("div[class='kn-submit']");
     const checkB = document.querySelector('[id="photoRejectedText"]');
     if (checkB){
       element.insertBefore(para, checkB);
@@ -3639,11 +3638,13 @@ function insertUpdatePhotoMessage(message, nodeName, isBad = false){
   }
 
   if (isBad){
-      createPhotoRejectedButton(element)
+      createPhotoRejectedButton()
   }
 }
 
-function createPhotoRejectedButton(element){
+function createPhotoRejectedButton(){
+  const element = document.querySelector("div[class='kn-submit']");
+
   const para = document.createElement("p");
   para.classList.add('label');
   para.classList.add('kn-label');
