@@ -3672,7 +3672,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
     try{
       window.setTimeout(function() {
         insertUpdatePhotoMessage('Photo Quality Check Status – PROCESSING','photoQualityMessage',false);
-      }, 200);
+      }, 500);
       $.ajax({
         url: 'https://7rhnwcwqj9ap.runs.apify.net/sightengine',
         type: 'POST',
@@ -3696,7 +3696,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
       });
       window.setTimeout(function() {
         insertUpdatePhotoMessage('Vehicle Position Check Status – PROCESSING','photoDetectronMessage',false);
-      }, 200);
+      }, 500);
       $.ajax({
         url: 'https://7rhnwcwqj9ap.runs.apify.net/detectron2',
         type: 'POST',
