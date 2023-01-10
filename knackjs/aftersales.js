@@ -1656,3 +1656,45 @@ $(document).on('knack-view-render.view_1297', function (event, view, data) {
   sound.src      = $('div[class*="field_1687"]>div[class="kn-detail-body"]>span').text();
   document.querySelector('div[class*="field_1687"]').appendChild(sound);
 })
+
+$(document).on('knack-scene-render.any', function(event, scene) {
+   //**************************************************************************************************************
+//****** Hynek's Code to check version on user Browser with what is stored in Apify. If version is different, 
+//Browser will refresh and add new version to Cookies. Added 01/12/2020 ******************************************
+
+  	//version check on Apify
+  	var versionTimeCheck = readCookie('RDDigitalVersionTime');
+  	var versionC = readCookie('RDDigitalVersion');
+  	console.log('versionC',versionC);
+    if (!versionC){
+      	console.log('set cookie');
+      	createCookie('RDDigitalVersion',appVersionID,365);
+    }
+    
+   	if (!versionTimeCheck || (Date.now()-versionTimeCheck)>600000){ 
+      createCookie('RDDigitalVersionTime',Date.now(),365);
+      console.log('check version');
+      var appVersionID = getVersionFromApify();
+      if (versionC!==appVersionID && appVersionID!==''){
+          console.log('not same');
+          createCookie('RDDigitalVersion',appVersionID,365);
+          window.location.reload(false);
+      }
+    }
+  
+  //version check every day
+  var versionRefreshTime = readCookie('RDDigitalVersionRefreshTime');
+  if (!versionRefreshTime){
+    createCookie('RDDigitalVersionRefreshTime',Date.now(),1);
+  } else {
+    var todayS = new Date(Date.now());
+    todayS = todayS.toDateString();
+    var versionRefreshTimeS = new Date(parseInt(versionRefreshTime));
+    versionRefreshTimeS = versionRefreshTimeS.toDateString();
+    if (todayS!==versionRefreshTimeS){
+      console.log('first day');
+      createCookie('RDDigitalVersionRefreshTime',Date.now(),1);
+      window.location.reload(false);
+    }
+  }
+});
