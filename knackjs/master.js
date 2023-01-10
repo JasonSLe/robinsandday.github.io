@@ -3597,7 +3597,6 @@ var photoRejectedButtonFunction = function() {
   $('button[type="submit"]').removeAttr('disabled');
 }
 
-
 function insertBadPhotoMessage(message, nodeName){
   const para = document.createElement("p");
   para.classList.add('label');
@@ -3614,6 +3613,32 @@ function insertBadPhotoMessage(message, nodeName){
     element.appendChild(para);
 
     createPhotoRejectedButton(element)
+  }
+}
+
+function insertUpdatePhotoMessage(message, nodeName, isBad = false){
+  const m = document.querySelector('[id="'+nodeName+'"]');
+  if (m){
+    m.innerHTML = message;
+  } else {
+    const para = document.createElement("p");
+    para.classList.add('label');
+    para.classList.add('kn-label');
+    //para.style = 'color:red;';
+    para.setAttribute("id", nodeName);
+    para.innerHTML = message;
+  }
+
+  const element = document.querySelector("div[class='kn-submit']");
+  const checkB = document.querySelector('[id="photoRejectedText"]');
+  if (checkB){
+    element.insertBefore(para, checkB);
+  } else {
+    element.appendChild(para);
+  }
+
+  if (isBad){
+      createPhotoRejectedButton(element)
   }
 }
 
@@ -3639,6 +3664,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
   console.log('image',$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery'));
   if ($('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery')){
     try{
+      insertUpdatePhotoMessage('Photo Quality Check Status – PROCESSING','photoQualityMessage',false);
       $.ajax({
         url: 'https://7rhnwcwqj9ap.runs.apify.net/sightengine',
         type: 'POST',
@@ -3649,12 +3675,15 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
         if (jsR.status==='success'){
           if (jsR.sharpness>=0.98 && jsR.brightness>=0.3 && jsR.brightness<=0.75 && jsR.contrast>=0.8){
             console.log('SUCCESS', new Date());
+            insertUpdatePhotoMessage("<font color='green'>Photo Quality Check Status – APPROVED</font>",'photoQualityMessage',false);
           } else {
-            insertBadPhotoMessage("<font color='red'>Photo Quality Check Status – REJECTED</font><br />"+(jsR.sharpness<0.98?"<font color='red'>":"")+"Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)"+(jsR.sharpness<0.98?"</font>":"")+"<br />"+(jsR.brightness<0.3 || jsR.brightness>0.75?"<font color='red'>":"")+"Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)"+(jsR.brightness<0.3 || jsR.brightness>0.75?"</font>":"")+"<br />"+(jsR.contrast<0.8?"<font color='red'>":"")+"Contrast: "+jsR.contrast+" (0.8 upwards OK)"+(jsR.contrast<0.8?"</font>":"")+"","photoRejected")
+            insertUpdatePhotoMessage("<font color='red'>Photo Quality Check Status – REJECTED</font><br />"+(jsR.sharpness<0.98?"<font color='red'>":"")+"Sharpness: "+jsR.sharpness+" (0.98 & 0.99 OK)"+(jsR.sharpness<0.98?"</font>":"")+"<br />"+(jsR.brightness<0.3 || jsR.brightness>0.75?"<font color='red'>":"")+"Brightness: "+jsR.brightness+" (0.3 to 0.75 OK)"+(jsR.brightness<0.3 || jsR.brightness>0.75?"</font>":"")+"<br />"+(jsR.contrast<0.8?"<font color='red'>":"")+"Contrast: "+jsR.contrast+" (0.8 upwards OK)"+(jsR.contrast<0.8?"</font>":"")+"",'photoQualityMessage',true)
 
             console.log('FAIL', new Date());
             console.log(resp);
           }
+        } else {
+          insertUpdatePhotoMessage('Photo Quality Check Status – ERROR - photo not checked','photoQualityMessage',false);
         }
       });
       $.ajax({
