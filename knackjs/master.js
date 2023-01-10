@@ -3618,7 +3618,7 @@ function insertBadPhotoMessage(message, nodeName){
 
 function insertUpdatePhotoMessage(message, nodeName, isBad = false){
   const m = document.querySelector('[id="'+nodeName+'"]');
-  console.log('m',m);
+  let element = null;
   if (m){
     m.innerHTML = message;
   } else {
@@ -3629,7 +3629,7 @@ function insertUpdatePhotoMessage(message, nodeName, isBad = false){
     para.setAttribute("id", nodeName);
     para.innerHTML = message;
   
-    const element = document.querySelector("div[class='kn-submit']");
+    element = document.querySelector("div[class='kn-submit']");
     const checkB = document.querySelector('[id="photoRejectedText"]');
     if (checkB){
       element.insertBefore(para, checkB);
