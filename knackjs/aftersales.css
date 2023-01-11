@@ -1943,6 +1943,10 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   background-color: transparent;
 }
 
+/* AFTERSALES CHECK IN */
+#view_1225 > section > div > div.kn-detail-label {
+  background-color: transparent;
+}
 
 /*make Last update time red */
 #view_1175 > section > div > div.kn-details-group.column-3.columns > div:nth-child(3) > div > div:nth-child(2) > div > span > strong > em > span {
