@@ -1944,7 +1944,8 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 /* AFTERSALES CHECK IN */
-#view_1225 > section > div > div.kn-detail-label {
+#view_1225 .kn-detail-label,
+#view_1153 .kn-detail-label {
   background-color: transparent;
 }
 
