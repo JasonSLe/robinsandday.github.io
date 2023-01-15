@@ -3378,7 +3378,7 @@ $(document).on('knack-scene-render.scene_905', function(event, scene) {
   var js = document.createElement("script");
 
   js.type = "text/javascript";
-  js.src = "./inline-console.min.js";
+  js.src = "https://robinsandday.github.io/knackjs/inline-console.min.js";
 
   const element = document.querySelector("head")
 
