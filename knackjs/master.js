@@ -3381,7 +3381,6 @@ $(document).on('knack-scene-render.scene_905', function(event, scene) {
   js.src = "https://robinsandday.github.io/knackjs/inline-console.min.js";
 
   const element = document.querySelector("head")
-
   element.appendChild(js);
 });
 
