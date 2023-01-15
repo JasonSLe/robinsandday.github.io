@@ -3380,7 +3380,9 @@ $(document).on('knack-scene-render.scene_905', function(event, scene) {
   js.type = "text/javascript";
   js.src = "./inline-console.min.js";
 
-  document.body.appendChild(js);
+  const element = document.querySelector("head")
+
+  element.appendChild(js);
 });
 
 /* HTML change for scrollbar instead of  checkbox in (select route of disposal) */
