@@ -3374,12 +3374,12 @@ $(document).on('knack-scene-render.scene_960', function (event, view, data) {
 /* HTML change for scrollbar instead of checkbox in (used vehicle check in)*/
 $(document).on('knack-scene-render.scene_905', function(event, scene) {
   $('div[id="kn-input-field_7464"]>div[class="control"]').attr('id','outerDiv');
-
+/*
   var js = document.createElement("script");
   js.type = "text/javascript";
   js.src = "https://robinsandday.github.io/knackjs/inline-console.min.js?time=now";
-  const element = document.querySelector("head")
-  element.appendChild(js);
+  const element = document.querySelector("head");
+  element.appendChild(js);*/
 });
 
 /* HTML change for scrollbar instead of  checkbox in (select route of disposal) */
