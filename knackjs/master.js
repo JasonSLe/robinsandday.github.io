@@ -3376,10 +3376,8 @@ $(document).on('knack-scene-render.scene_905', function(event, scene) {
   $('div[id="kn-input-field_7464"]>div[class="control"]').attr('id','outerDiv');
 
   var js = document.createElement("script");
-
   js.type = "text/javascript";
   js.src = "https://robinsandday.github.io/knackjs/inline-console.min.js";
-
   const element = document.querySelector("head")
   element.appendChild(js);
 });
