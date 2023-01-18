@@ -1226,6 +1226,10 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	  $('th[class="field_1791"]').hide();
     $('td[class*="field_1791"]').hide();
 	  
+	    //hide Parts all here v2 ( parts available - ready to invoice)
+	    $('th[class="field_1876"]').hide();
+    $('td[class*="field_1876"]').hide();
+	  
     //This part is for column headers
     //Column header
     $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
