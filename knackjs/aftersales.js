@@ -1226,6 +1226,10 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	  $('th[class="field_1791"]').hide();
     $('td[class*="field_1791"]').hide();
 	  
+	    //hide Parts all here v2 ( parts available - ready to invoice)
+	    $('th[class="field_1876"]').hide();
+    $('td[class*="field_1876"]').hide();
+	  
     //This part is for column headers
     //Column header
     $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
@@ -1497,7 +1501,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
             callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
           };
         };
-        currentRow.children[4].onclick = createClickHandler(currentRow);
+        currentRow.children[5].onclick = createClickHandler(currentRow);
       }
     }
 	});
