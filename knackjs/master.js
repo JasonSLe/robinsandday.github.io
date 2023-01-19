@@ -3572,6 +3572,7 @@ $(document).on('knack-scene-render.scene_1694', function(event, scene) {
 });
 
 function askNotifications(){
+  console.log('AskNotfications')
   if (Notification.permission !== 'granted') Notification.requestPermission();
   if (Notification.permission === 'denied'){
     //alert('NOTIFICATION DENIED, enable notification for this site, chrome://settings/content/siteDetails?site=https%3A%2F%2Fwww.robinsandday.co.uk%2F');
