@@ -70,7 +70,7 @@ var submitUserLoginForm = function() {
   }
 
     var url = window.location.toString();
-    if (!url.indexOf('https://www.robinsandday.co.uk/digital-orders?') === 0) {
+    if (!url.indexOf('https://www.stellantisandyou.co.uk/digital-orders?') === 0) {
         //alert("Invalid URL");
         console.log('Different URL')
         return;
