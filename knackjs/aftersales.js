@@ -1372,6 +1372,27 @@ function recursivecallscene_94(){
  setTimeout(function () { if($("#view_1337").is(":visible")==true){ Knack.views["view_1337"].model.fetch();recursivecallscene_94();} }, 10000);
 }
 
+//SERVICE CHECK IN
+//Restrict Available Times for DUE OUT to 8am - 6pm
+
+var view_names = ["view_736"]; ///add view numbers as necessary
+
+view_names.forEach(bindToUpdate1);
+
+function bindToUpdate1(selector_view_name){
+$(document).on('knack-view-render.' + selector_view_name, function(event, view, data) {
+
+$(document).ready(function(){
+$('.ui-timepicker-input').timepicker({
+minTime: '08:00:00',     //  8:00 AM,  Change as necessary
+maxTime: '18:00:00',        //  6:00 PM,  Change as necessary
+step: '30'		// Dropdown Interval every 30 mins
+
+});
+});
+});
+
+
 // ----------  Refresh Aftersales Customer Exit Survey Results table every 60 seconds but not the page itself  ---------- //
 
 $(document).on('knack-scene-render.scene_148', function(event, scene) {
