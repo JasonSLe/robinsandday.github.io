@@ -1449,6 +1449,20 @@ $(document).on('knack-scene-render.scene_20', function(event, scene) {
   refreshWithData('1168', 'TITLE', 'TEXT $field_351', 'field_1518');
  });
 
+ $(document).on('knack-view-render.view_1168', function(event, view) {
+  if (Notification.permission !== 'granted') {
+    const para = document.createElement("p");
+    para.classList.add('label');
+    para.classList.add('kn-label');
+    para.style = 'color:red;';
+    para.setAttribute("id", nodeName);
+    para.innerHTML = "To enable Desktop Pop-Up Notifications when new VR Messages appear, please go to your Account Settings and click “Allow” Notifications";
+
+    const element = document.querySelector("div[id='view_1168']");
+    element.appendChild(para);
+  }
+ });
+
 
 // Refresh Virtual Reception table on Vehicle Checkout Page        
 
@@ -1694,6 +1708,26 @@ function readCookie(name) {
 
 function eraseCookie(name) {
   createCookie(name, "", -1);
+}
+
+function getVersionFromApify(){
+  try {
+    var token = $.ajax({
+      url: 'https://api.apify.com/v2/key-value-stores/60ues2gA9nwF71pzK/records/KNACKVERSION?disableRedirect=true',
+      type: 'GET',
+      async: false,
+      timeout: 1000
+    }).responseText;
+
+    if (!token) return '';
+
+    token = token.replace('"', '').replace('"', '');
+
+    return token;
+  } catch (ex){
+    console.log(ex);
+    return '';
+  }
 }
 
 $(document).on('knack-scene-render.any', function(event, scene) {

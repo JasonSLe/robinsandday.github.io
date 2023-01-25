@@ -2652,6 +2652,26 @@ function eraseCookie(name) {
   createCookie(name, "", -1);
 }
 
+function getVersionFromApify(){
+  try {
+    var token = $.ajax({
+      url: 'https://api.apify.com/v2/key-value-stores/60ues2gA9nwF71pzK/records/KNACKVERSION?disableRedirect=true',
+      type: 'GET',
+      async: false,
+      timeout: 1000
+    }).responseText;
+
+    if (!token) return '';
+
+    token = token.replace('"', '').replace('"', '');
+
+    return token;
+  } catch (ex){
+    console.log(ex);
+    return '';
+  }
+}
+
 $(document).on('knack-scene-render.any', function(event, scene) {
    //**************************************************************************************************************
 //****** Hynek's Code to check version on user Browser with what is stored in Apify. If version is different, 
