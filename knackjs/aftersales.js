@@ -1455,7 +1455,7 @@ $(document).on('knack-scene-render.scene_20', function(event, scene) {
     para.classList.add('label');
     para.classList.add('kn-label');
     para.style = 'color:red;';
-    para.setAttribute("id", nodeName);
+    para.setAttribute("id", "enableDesktopNotif");
     para.innerHTML = "To enable Desktop Pop-Up Notifications when new VR Messages appear, please go to your Account Settings and click “Allow” Notifications";
 
     const element = document.querySelector("div[id='view_1168']");
