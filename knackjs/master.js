@@ -1753,7 +1753,7 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
     
         track.applyConstraints(constraints);
     
-        if (OperatingSystem.Android()) {
+        if (!OperatingSystem.iOS()) {
           imageCapture = new ImageCapture(track);
         }
     
