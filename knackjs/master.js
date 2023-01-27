@@ -2043,7 +2043,18 @@ takePhotoButton.onclick = function () {
     // DISABLE TAKEPHOTO BUTTON
     $("#takePhoto").hide();
 
-    if (OperatingSystem.Android()) {
+    if (OperatingSystem.iOS()) {
+      var c = document.createElement('canvas');
+       c.width = video.videoWidth;
+      c.height = video.videoHeight;
+      var ctx = c.getContext('2d');
+      ctx.drawImage(video, 0, 0);
+      ctx.canvas.toBlob((blob) => {
+        img.style.visibility = 'visible';
+        img.src = URL.createObjectURL(blob);
+        imageBeforeResize.src = img.src; //c.toDataURL('image/webp');
+      }, 'image/jpeg', 1);
+    } else /*if (OperatingSystem.Android()) */{
       imageCapture.takePhoto().then(function(blob) {
         //console.log('Photo taken:', blob);
         //so I use the blob to the shown image but also for the imageBeforeResize, which when is loaded updates the shown image with smaller image
@@ -2054,20 +2065,9 @@ takePhotoButton.onclick = function () {
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
       });
-    } else if (OperatingSystem.iOS()) {
-      	var c = document.createElement('canvas');
- 		    c.width = video.videoWidth;
-		    c.height = video.videoHeight;
-	    	var ctx = c.getContext('2d');
-	    	ctx.drawImage(video, 0, 0);
-	      ctx.canvas.toBlob((blob) => {
-		      img.style.visibility = 'visible';
-          img.src = URL.createObjectURL(blob);
-          imageBeforeResize.src = img.src; //c.toDataURL('image/webp');
-	      }, 'image/jpeg', 1);
-    } else {
+    } /*else {
       alert('Your web browser is not supported, detection shows not Android, not Safari on Apple. Please check, if you do not have "Desktop site" on in Chrome settings. Please report your user agent: '+navigator.userAgent); 
-    }
+    }*/
   }
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
