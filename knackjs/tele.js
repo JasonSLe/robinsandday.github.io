@@ -775,6 +775,6 @@ var OperatingSystem = {
   
   //end of shared camera app code
 
-  $(document).on('knack-view-render.view_4', function(event, view, data) {
+  $(document).on('knack-view-render.view_10', function(event, view, data) {
 	prepareCameraView(location.origin+"/digital#used-vehicle-check-in/used-vehicle-check-in-2/"+getRecordIdFromHref(location.href)+"/used-vehicle-check-in-3/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_4944','scene_1543/views/view_5014');
 });
