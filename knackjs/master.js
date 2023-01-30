@@ -3415,6 +3415,26 @@ $(document).on('knack-form-submit.view_5613', function(event, view, data) {
     }
 });
 
+//**Physical Stock Audit - Mark Audit Complete Awaiting Review - Trigger Check for Previous Audit Comments
+$(document).on('knack-form-submit.view_5231', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.eu1.make.celonis.com/t20x3g4rrr0macltptj5jhbpuv7cbblk";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Physical Stock Audit - Mark Audit Complete Awaiting Review - Trigger Check for Previous Audit Comments");
+    }
+});
+
 // Refresh the table on Physical Stock Audit Page        
 
 
