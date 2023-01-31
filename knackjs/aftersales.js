@@ -1773,7 +1773,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 });
 
 //change bar chart colours on wip reporting bar charts
-$(document).on(‘knack-scene-render.scene_485’, function (event, scene) {
+$(document).on(‘knack-scene-render.view_1416’, function (event, view) {
 var ored = “#ed1c2c”;
 var oblu = “#86BBD8”;
 var colors1 = [oblu, ored, oblu, ored, oblu, ored, oblu, ored, oblu, ored];
