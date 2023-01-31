@@ -775,9 +775,9 @@ var OperatingSystem = {
   
   //end of shared camera app code
 
-  $(document).on('knack-view-render.view_10', function(event, view, data) {
+  $(document).on('knack-view-render.view_13', function(event, view, data) {
     $('[class="kn-view kn-back-link"]').hide();
     $('[id="kn-app-header"]').hide();
     $('[class="kn-info-bar"]').hide();
-	prepareCameraView(location.origin+"/digital#used-vehicle-check-in/used-vehicle-check-in-2/"+getRecordIdFromHref(location.href)+"/used-vehicle-check-in-3/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_4944','scene_1543/views/view_5014');
+	prepareCameraView(location.origin+"/silny#nov-tele/nove-tele-foto/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_4944','scene_1543/views/view_5014');
 });
