@@ -1775,7 +1775,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 //change bar chart colours on wip reporting bar charts
 $(document).on(‘knack-scene-render.scene_485’, function (event, scene) {
 var ored = “#ed1c2c”;
-var colors1 = [oblu];
+var colors1 = [ored];
 var index = $(".highcharts-container").data(‘highchartsChart’);
 
     var legends = $(".highcharts-container").find(".highcharts-legend-item");
@@ -1791,5 +1791,5 @@ var index = $(".highcharts-container").data(‘highchartsChart’);
         });
         series.redraw();
         $(legends[x]).trigger("click");
-        $(legends[x]).trigger("click");
+ 
     }
