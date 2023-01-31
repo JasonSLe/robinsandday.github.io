@@ -1794,3 +1794,4 @@ var index = $(".highcharts-container").data(‘highchartsChart’);
         $(legends[x]).trigger("click");
         $(legends[x]).trigger("click");
     }
+});
