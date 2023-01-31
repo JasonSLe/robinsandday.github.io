@@ -2312,6 +2312,6 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	font-weight: bold;
 }
 
-#kn-report-view_1461-1 g.highcharts-series.highcharts-series-0.highcharts-tracker rect {
+#kn-report-view_1461-1 > g.highcharts-series.highcharts-series-0.highcharts-tracker > rect {
 fill: rgb(100,200,100)
 }
