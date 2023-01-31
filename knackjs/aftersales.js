@@ -1772,26 +1772,3 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   }
 });
 
-//change bar chart colours on wip reporting bar charts
-$(document).on(‘knack-scene-render.view_1416’, function (event, view) {
-var ored = “#ed1c2c”;
-var oblu = “#86BBD8”;
-var colors1 = [oblu, ored, oblu, ored, oblu, ored, oblu, ored, oblu, ored];
-var index = $(".highcharts-container").data(‘highchartsChart’);
-
-    var legends = $(".highcharts-container").find(".highcharts-series highcharts-series-0 highcharts-tracker");
-
-    var chart = Highcharts.charts;
-
-    for (var x = 0; x < chart[0].series.length; x++) {
-        var series = chart[0].series[x];
-
-        $.each(series.data, function (i, point) {
-            point.color = colors1[x];
-            point.series.color = colors1[x];
-        });
-        series.redraw();
-        $(legends[x]).trigger("click");
-        $(legends[x]).trigger("click");
-    }
-});
