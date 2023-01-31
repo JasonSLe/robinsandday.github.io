@@ -382,7 +382,7 @@ var OperatingSystem = {
     }
   
     if(window.innerWidth > window.innerHeight){ // if landscape
-      $("#cameraCalibrate").show();
+      $("#cameraCalibrate").hide();
         $("#takePhoto").show();
         $("#cameraRotate").hide();
         $(go);
@@ -489,7 +489,7 @@ var OperatingSystem = {
       isLandscape = false;
     }
     else if(window.orientation == 90 || window.orientation == 270){ // Landscape
-      $("#cameraCalibrate").show();
+      $("#cameraCalibrate").hide();
       $("#cameraRotate").hide();
       if (!isInCalibrationMode){
         $("#takePhoto").show();
@@ -636,7 +636,7 @@ var OperatingSystem = {
   
       // SHOW LEVEL LINE
       lineVisible = true;
-      $("#cameraCalibrate").show();
+      $("#cameraCalibrate").hide();
   
       //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
       $('video').show();
