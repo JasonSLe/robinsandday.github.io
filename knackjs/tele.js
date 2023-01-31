@@ -734,5 +734,5 @@ var OperatingSystem = {
     $('[class="kn-view kn-back-link"]').hide();
     $('[id="kn-app-header"]').hide();
     $('[class="kn-info-bar"]').hide();
-	prepareCameraView(location.origin+"/silny#nov-tele/nove-tele-foto/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_4944','scene_1543/views/view_5014');
+	prepareCameraView(location.origin+"/silny#nov-tele/nove-tele-foto/"+getRecordIdFromHref(location.href)+"/","63cab2b7e3debb0736a74047",'field_9','scene_21/views/view_25');
 });
