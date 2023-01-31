@@ -527,7 +527,7 @@ var OperatingSystem = {
       $(stop);
   
       //DISPLAY COMPARISION CONTENT
-      $("#cameraCompare").show();
+      $("#cameraCompare").hide();
       $("#cameraText").show();
   
      //SHOW RETAKLE AND CONFIORM BUTTON
