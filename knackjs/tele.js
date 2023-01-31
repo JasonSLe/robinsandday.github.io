@@ -474,52 +474,7 @@ var OperatingSystem = {
    var lineVisible = true;
    var canTakePhoto = false;
    function handleOrientation(event) {
-    var absolute = event.absolute;
-    var alpha    = event.alpha;
-    var beta     = event.beta;
-    var gamma    = event.gamma;
-    //console.log(beta);
-    let origBeta = beta;
-  
-    //if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
-      if (gamma>0){
-        if (beta>0){
-          beta = 180 - beta;
-        } else {
-          beta = Math.abs(beta) - 180;
-        }
-      }
-    //}
-  
-    lastBeta = beta;
-    let betaComp = beta - (calibrationValue?calibrationValue:0);
-  
-    if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
-      if (isInCalibrationMode){
-        //$('#infoText').html('b:'+beta+'<br />g:'+gamma+'<br />ob:'+origBeta);
-      }
-    }
-  
-    if (isLandscape && beta && lineVisible) {
-      $("#cameraLine").show();
-    } else {
-      $("#cameraLine").hide();
-    }
-  
-    if(betaComp <=2 && betaComp >= -2 && gamma <= -80)
-    {
-      line.style.backgroundColor = 'green';
-      if (!OperatingSystem.iOS() && !canTakePhoto && lineVisible) window.navigator.vibrate(50);
-      canTakePhoto = true;
-    }
-    else
-    {
-      line.style.backgroundColor = 'red';
-      if (!OperatingSystem.iOS() && canTakePhoto && lineVisible) window.navigator.vibrate(50);
-      canTakePhoto = false;
-    }
-    line.style.transform = 'rotate(' + (-betaComp).toString() + 'deg)';
-    permissionForOrientation = 'none'
+    $("#cameraLine").hide();
   }
   
     //IF THE USER CHANGES SCREEN ORIENTATION
