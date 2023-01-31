@@ -1779,7 +1779,7 @@ var oblu = “#86BBD8”;
 var colors1 = [oblu, ored, oblu, ored, oblu, ored, oblu, ored, oblu, ored];
 var index = $(".highcharts-container").data(‘highchartsChart’);
 
-    var legends = $(".highcharts-container").find(".highcharts-legend-item");
+    var legends = $(".highcharts-container").find(".highcharts-series highcharts-series-0 highcharts-tracker");
 
     var chart = Highcharts.charts;
 
