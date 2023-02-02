@@ -1404,7 +1404,7 @@ $(document).on('knack-scene-render.scene_340', function(event, scene) {
 });
 
 function recursivecallscene_340(){
- setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallscene_340();} }, 60000);
+ setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallscene_340();} }, 300000);
 }
 
 //Trigger failed Quality check (QC) emails to workshop controller/ manager
