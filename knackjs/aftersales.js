@@ -1851,3 +1851,18 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   }
 });
 
+//HIDE DATA FROM TYRE LOOK UP 
+  $(document).on('knack-view-render.view_1474', function (event, view, data) {
+
+	  //hide REG from table
+	    $('#kn-input-field_31').hide();
+    $('#kn-input-field_31"]').hide();
+	   //hide POS from table
+	    $('#kn-input-field_443').hide();
+    $('#kn-input-field_443').hide();
+	   //hide DEALER from table
+	    $('#kn-input-field_411').hide();
+    $('#kn-input-field_411').hide();
+	 
+	     });
+	  
