@@ -916,7 +916,7 @@ $(document).on('knack-form-submit.view_1474', function(event, view, data) {
     try{
         
 
-        let commandURL = "https://hook.eu1.make.celonis.com/95g8pth4f57ytmkkh6i4cei4ks9df5a8";
+        let commandURL = "https://hook.eu1.make.celonis.com/f3xcida5tqk6fybgpkga8p9gn7ek6e7o";
         let dataToSend = JSON.stringify({"Record ID":data.id, "REG":data.field_31, "POS":data.field_443});
 
         var rData = $.ajax({
