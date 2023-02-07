@@ -809,7 +809,7 @@ try{
 }
 });
 
-//trigger Aftersales Tyre dealer Stock Lookup
+/*trigger Aftersales Tyre dealer Stock Lookup
 
 $(document).on('knack-form-submit.view_230', function(event, view, data) {
 
@@ -852,7 +852,7 @@ try{
     }).responseText;
 }
 });
-
+*/
 //auto reload Clear tyres in customer & vehicle look up /precalls
 $(document).on('knack-record-update.view_243', function(event, view, data) {
   
