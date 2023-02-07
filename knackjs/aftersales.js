@@ -487,6 +487,16 @@ $(document).on("knack-scene-render.scene_118", function(event, scene, data) {
   sceneRefresh(refreshData);
 });
 
+$(document).on("knack-scene-render.scene_508", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_250', //Tyres
+          views:['374'],
+          runAfter : generateTyres 
+      }
+    ]
+    sceneRefresh(refreshData);
+
 $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
     let refreshData = [
       {
