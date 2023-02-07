@@ -491,7 +491,7 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
     let refreshData = [
       {
           mainField : 'field_250', //Tyres
-          views:['374'],
+          views:['1477'],
           runAfter : generateTyres 
       }
     ]
