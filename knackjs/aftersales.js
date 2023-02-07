@@ -1859,10 +1859,10 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     $('#kn-input-field_31"]').hide();
 	   //hide POS from table
 	    $('#kn-input-field_443').hide();
-    $('#kn-input-field_443"]').hide();
+    $('#kn-input-field_443').hide();
 	   //hide DEALER from table
 	    $('#kn-input-field_411').hide();    
-	  $('#kn-input-field_411"]').hide();
+	  $('#kn-input-field_411').hide();
 	 
 	     });
 	  
