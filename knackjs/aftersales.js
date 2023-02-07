@@ -883,12 +883,12 @@ try{
         async: false
     }).responseText;    
 
-    let refreshData = [
-      {
-          mainField : 'field_605', //Tyres
-          views:['229']
-      }
-    ]
+    //let refreshData = [
+   //   {
+    //      mainField : 'field_605', //Tyres
+   //       views:['229']
+   //  }
+   // ]
     sceneRefresh(refreshData);
 }catch(exception){
     console.log("error");
