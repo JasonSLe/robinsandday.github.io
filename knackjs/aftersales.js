@@ -496,6 +496,7 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
       }
     ]
     sceneRefresh(refreshData);
+});
 
 $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
     let refreshData = [
