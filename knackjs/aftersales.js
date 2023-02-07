@@ -298,7 +298,29 @@ function generateTyres(){
         remainderOfRecords = remainderOfRecords - 1;
       }
     }
-    
+	  
+    let jsonPosition = 0;
+    for (let i = 0;i<outputTables.length;i++){
+      outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
+      for (let j = jsonPosition;j<jsonPosition + (outputTables[i].count<5?outputTables[i].count:5);j++){
+        outputTables[i].text += '<tr title="Available: '+tyresJSON[j]['a:AvailableQuantity'][0]+'; SOR: '+tyresJSON[j]['a:SORQuantity'][0]+'; Delivery date: '+formatDateGB(new Date(tyresJSON[j]['a:DeliveryDate'][0]))+'"><td bgcolor="'+tyreRowColor(tyresJSON[j]['a:AvailableQuantity'][0],tyresJSON[j]['a:SORQuantity'][0])+'">'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:TotalFittedRetailPriceIncVAT'][0]+'</td></tr>';
+      }
+      jsonPosition += outputTables[i].count;
+      outputTables[i].text += '</table>';
+    }
+    let output = '<table><tr>';
+    for (let i =0;i<outputTables.length;i++){
+      output += '<td>' + outputTables[i].name + '<br />'+outputTables[i].text+'</td>';
+    }
+    output += '</tr></table>';
+
+    $('div[class*="field_250"]').html(output);
+    $('div[class*="field_250"]').show();
+  } catch (e){
+    console.log('Error Generating tires',e);
+  }
+}
+
 function generateTyres1(){
   try {
     console.log('GenerateTyres1');
@@ -339,9 +361,11 @@ function generateTyres1(){
     $('div[class*="field_250"]').html(output);
     $('div[class*="field_250"]').show();
   } catch (e){
-    console.log('Error Generating tires',e);
+    console.log('Error Generating tyres',e);
   }
 }
+
+
 
 function tyreRowColor(stockCount, SORCount){
   if (SORCount>=4){
