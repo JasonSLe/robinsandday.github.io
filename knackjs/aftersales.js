@@ -868,7 +868,7 @@ try{
 
 //trigger Aftersales Tyre dealer Stock Lookup
 
-$(document).on('knack-form-submit.view_1474', function(event, view, data) {
+/*$(document).on('knack-form-submit.view_1474', function(event, view, data) {
 
 try{
 
@@ -908,6 +908,27 @@ try{
        async: false
     }).responseText;
 }
+}); */
+
+//trigger get tyres and prices from customer job card
+$(document).on('knack-form-submit.view_1474', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/95g8pth4f57ytmkkh6i4cei4ks9df5a8";
+        let dataToSend = JSON.stringify({"Record ID":data.id,"REG":data.field_31, "POS":data.field_443});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger get tyres and prices from customer job card");
+    }
 });
 
 //auto reload Clear tyres in customer & vehicle look up /precalls
