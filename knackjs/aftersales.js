@@ -299,6 +299,28 @@ function generateTyres(){
       }
     }
     
+function generateTyres1(){
+  try {
+    console.log('GenerateTyres1');
+    let tyresJSON = JSON.parse(Knack.views['view_1477'].model.attributes['field_250']);
+    tyresJSON = tyresJSON.filter(function(el){
+      return el['a:StockPolicy'][0] === 'ACTIVE' && el['a:Winter'][0] === 'N'
+    })
+    console.log('tyresJSON.length filtered',tyresJSON.length);
+    tyresJSON = tyresJSON.sort(function(a,b){
+      return (a['a:TotalFittedRetailPriceIncVAT'][0] > b['a:TotalFittedRetailPriceIncVAT'][0]?1:(a['a:TotalFittedRetailPriceIncVAT'][0] < b['a:TotalFittedRetailPriceIncVAT'][0]?-1:0));
+    })
+    let outputTables = [{name:'Budget'},{name:'Medium'},{name:'Premium'}];
+    let recordsPerTableWhole = Math.floor(tyresJSON.length/outputTables.length);
+    let remainderOfRecords = tyresJSON.length % outputTables.length;
+    for (let i = 0;i<outputTables.length;i++){
+      outputTables[i].count = recordsPerTableWhole;
+      if (remainderOfRecords>0) {
+        outputTables[i].count += 1;
+        remainderOfRecords = remainderOfRecords - 1;
+      }
+    }	  
+	  
     let jsonPosition = 0;
     for (let i = 0;i<outputTables.length;i++){
       outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
@@ -492,7 +514,7 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
       {
           mainField : 'field_250', //Tyres
           views:['1477'],
-          runAfter : generateTyres 
+          runAfter : generateTyres1 
       }
     ]
     sceneRefresh(refreshData);
