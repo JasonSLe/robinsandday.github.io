@@ -811,7 +811,7 @@ try{
 
 //trigger Aftersales Tyre dealer Stock Lookup
 
-$(document).on('#view_117 > div > a.kn-link.kn-link-2.kn-link-page.kn-button', function(event, view, data) {
+$(document).on('knack-form-submit.view_1474', function(event, view, data) {
 
 try{
 
