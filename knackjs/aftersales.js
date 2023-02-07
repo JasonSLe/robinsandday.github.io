@@ -809,13 +809,13 @@ try{
 }
 });
 
-/*trigger Aftersales Tyre dealer Stock Lookup
+//trigger Aftersales Tyre dealer Stock Lookup
 
-$(document).on('knack-form-submit.view_230', function(event, view, data) {
+$(document).on('#view_117 > div > a.kn-link.kn-link-2.kn-link-page.kn-button', function(event, view, data) {
 
 try{
 
-    let commandURL = "https://hook.integromat.com/tjsfrxojnnvd3byqy1fr3qobk8pflvkf";
+    let commandURL = "https://hook.eu1.make.celonis.com/95g8pth4f57ytmkkh6i4cei4ks9df5a8";
     let dataToSend = JSON.stringify({"Record ID":data.id});
 
     var rData = $.ajax({
@@ -852,7 +852,7 @@ try{
     }).responseText;
 }
 });
-*/
+
 //auto reload Clear tyres in customer & vehicle look up /precalls
 $(document).on('knack-record-update.view_243', function(event, view, data) {
   
