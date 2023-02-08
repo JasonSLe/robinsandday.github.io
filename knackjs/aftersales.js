@@ -1917,3 +1917,13 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 	  
 	  });
 
+$(document).on("knack-scene-render.scene_508", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_575', //Autoline Tyre Stock For Dealer
+          views:['1475']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
+
