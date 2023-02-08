@@ -1216,14 +1216,6 @@ $(document).on('knack-form-submit.view_867', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Other Pre Visit Digital Customer Incident Form")
 });
 
-$(document).on('knack-form-submit.view_1394', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/e681sgmbzwk1hgugd3ph4kr34addh61o", {"Record ID":data.id,"Origin":data.field_1815},"Pre Visit Digital Customer Incident Form DEV")
-});
-
-$(document).on('knack-form-submit.view_834', function(event, view, data) {
-  callPostHttpRequest("https://hook.integromat.com/gmtkedwe7nxktiqm6qi4rg5apeno73an", {"Record ID":data.id},"Pre Visit Digital Customer Incident Form")
-});
-
 //Submit form for GDPR preferences update in Check-in process
 $(document).on('knack-form-submit.view_732', function(event, view, data) { 
   callPostHttpRequest("https://hook.integromat.com/iovfpyqnj3d9pihhmhm1wcgtu5dosv0b", {"Record ID":data.id, "Service GDPR PHONE":data.field_1048_raw, "Service GDPR EMAIL":data.field_1050_raw, "Service GDPR POST":data.field_1051_raw,
