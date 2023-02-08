@@ -946,7 +946,10 @@ $(document).on('knack-form-submit.view_1484', function(event, view, data) {
           views:['1475']
       }
     ]
-
+    
+      $('#view_1484 > div').hide();
+    $('#view_1484 > div').hide();
+	    
         var rData = $.ajax({
             url: commandURL,
             type: 'POST',
