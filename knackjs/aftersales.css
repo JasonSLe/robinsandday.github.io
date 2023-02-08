@@ -2313,14 +2313,14 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 /*Make tyres & prices green*/
-#view_1474 > form > div > button > a {
+#view_1474 .kn-view input[type=submit], .kn-button.is-primary {
 	background-color: #00CC66;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_1474 > form > div > button > a {
+#view_1474 .kn-view input[type=submit], .kn-button.is-primary {
 	background-color: #32936F;
   	color: #FFFFFF;
   	font-weight: bold;
