@@ -1862,7 +1862,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   $(document).on('knack-view-render.view_1474', function (event, view, data) {
 
 	  //hide pos from table
-	    $('#kn-input-field_443').hide();
-    $('#kn-input-field_443"]').hide();
+	    $('#view_1474 > form > ul').hide();
+    $('#view_1474 > form > ul').hide();
 	  });
 	  
