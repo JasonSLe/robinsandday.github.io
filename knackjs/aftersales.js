@@ -1445,6 +1445,9 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
   refreshWithData('1188', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
 
+$(document).on('knack-scene-render.scene_91', function(event, scene) {
+  refreshWithData('871','field_1950');
+});
 
 //Recall Recheck Spinner on Vehicle Checkin
 
