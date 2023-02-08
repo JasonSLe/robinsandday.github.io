@@ -939,6 +939,13 @@ $(document).on('knack-form-submit.view_1484', function(event, view, data) {
 
         let commandURL = "https://hook.eu1.make.celonis.com/osrisywv6fufmcdbf7ih8bc1yfrlvpq8";
         let dataToSend = JSON.stringify({"Record ID":data.id, "Selected Dealer":data.field_1964});
+	    
+    let refreshData = [
+      {
+          mainField : 'field_575', //Autoline Tyre Stock For Dealer
+          views:['1475']
+      }
+    ]
 
         var rData = $.ajax({
             url: commandURL,
@@ -1909,13 +1916,4 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     $('#kn-input-field_411').hide();
 	  
 	  });
-//spinning icon for selected dealers	  
-$(document).on("knack-scene-render.scene_508", function(event, scene, data) {
-    let refreshData = [
-      {
-          mainField : 'field_575', //Autoline Tyre Stock For Dealer
-          views:['1475']
-      }
-    ]
-    sceneRefresh(refreshData);
-  });
+
