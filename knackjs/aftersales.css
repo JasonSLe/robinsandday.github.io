@@ -1842,6 +1842,12 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	font-weight: bold;
 }
 
+/* Aftersales Pre Visit - Customer Incident Form - Messages Table */
+
+#view_1388 th span {
+  margin: auto !important;
+}
+
 /* Customer Advisor Pre Visit Operations - Customer Call List */
 
 #view_321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
