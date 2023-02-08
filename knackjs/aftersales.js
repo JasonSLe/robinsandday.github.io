@@ -1858,7 +1858,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 	    $('#kn-input-field_31').hide();
     $('#kn-input-field_31"]').hide();
 	   //hide POS from table
-	    $('#kn-input-field_443').hide();
-    $('#kn-input-field_443').hide();
+	    $('document.querySelector("#kn-input-field_443")').hide();
+    $('document.querySelector("#kn-input-field_443")').hide();
 	     });
 	  
