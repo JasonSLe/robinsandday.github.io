@@ -1857,12 +1857,9 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 	  //hide REG from table
 	    $('#kn-input-field_31').hide();
     $('#kn-input-field_31"]').hide();
-	  });
-	//HIDE DATA FROM TYRE LOOK UP 
-  $(document).on('knack-view-render.view_1474', function (event, view, data) {
 
 	  //hide pos from table
-	    $('#view_1474 > form > ul').hide();
-    $('#view_1474 > form > ul').hide();
+	    $('#kn-input-field_443 > label').hide();
+    $('#kn-input-field_443 > label').hide();
 	  });
 	  
