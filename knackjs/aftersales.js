@@ -1188,6 +1188,34 @@ $(document).on('knack-form-submit.view_834', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Engine Pre Visit Digital Customer Incident Form")
 });
 
+$(document).on('knack-form-submit.view_845', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Steering Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_846', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Gearbox Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_859', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Suspension Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_1092', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Brakes Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_864', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Software Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_863', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Warning Light Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_867', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Other Pre Visit Digital Customer Incident Form")
+});
+
 $(document).on('knack-form-submit.view_1394', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/e681sgmbzwk1hgugd3ph4kr34addh61o", {"Record ID":data.id,"Origin":data.field_1815},"Pre Visit Digital Customer Incident Form DEV")
 });
