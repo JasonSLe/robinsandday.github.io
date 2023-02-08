@@ -1859,7 +1859,12 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     $('#kn-input-field_31"]').hide();
 
 	  //hide pos from table
-	    $('#view_1474').hide();
-    $('#view_1474').hide();
+	  $('th[class="field_443"]').hide();
+    $('td[class*="field_443"]').hide();
+	  
+	      //hide connected dealer
+	  $('th[class="field_411"]').hide();
+    $('td[class*="field_411"]').hide();
+	  
 	  });
 	  
