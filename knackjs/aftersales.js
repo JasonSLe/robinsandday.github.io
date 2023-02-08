@@ -1855,16 +1855,16 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   $(document).on('knack-view-render.view_1474', function (event, view, data) {
 
 	  //hide REG from table
-	    $('#kn-input-field_443').hide();
-    $('#kn-input-field_443"]').hide();
+	    $('#kn-input-field_31').hide();
+    $('#kn-input-field_31"]').hide();
 
 	  //hide pos from table
-	  $('th[class="field_31"]').hide();
-    $('td[class*="field_31"]').hide();
+    $('#kn-input-field_443').hide();
+    $('#kn-input-field_443"]').hide();
 	  
 	      //hide connected dealer
-	  $('th[class="field_411"]').hide();
-    $('td[class*="field_411"]').hide();
+	      $('#kn-input-field_411').hide();
+    $('#kn-input-field_411"]').hide();
 	  
 	  });
 	  
