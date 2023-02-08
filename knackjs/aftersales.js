@@ -1859,7 +1859,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     $('#kn-input-field_31"]').hide();
 
 	  //hide pos from table
-	    $('#view_1474 > form > ul:nth-child(1)').hide();
-    $('#view_1474 > form > ul:nth-child(1)').hide();
+	    $('#view_1474').hide();
+    $('#view_1474').hide();
 	  });
 	  
