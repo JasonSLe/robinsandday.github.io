@@ -931,6 +931,28 @@ $(document).on('knack-form-submit.view_1474', function(event, view, data) {
     }
 });
 
+//trigger get tyres and prices for a selected dealer
+$(document).on('knack-form-submit.view_1484', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/osrisywv6fufmcdbf7ih8bc1yfrlvpq8";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Selected Dealer":data.field_1964);
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger get selected dealer tyres");
+    }
+});
+
+
 //auto reload Clear tyres in customer & vehicle look up /precalls
 $(document).on('knack-record-update.view_243', function(event, view, data) {
   
