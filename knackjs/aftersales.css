@@ -2320,7 +2320,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	box-shadow:         3px 3px #ccc;
 }
 
-#view_1474 > form > div > a:hover button  {
+#view_1474 > form > div > a:hover.button  {
 	background-color: #32936F !important;
   	color: #FFFFFF !important;
   	font-weight: bold;
