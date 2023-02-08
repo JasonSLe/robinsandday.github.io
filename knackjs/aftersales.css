@@ -2314,15 +2314,15 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 /*Make tyres & prices green*/
 #view_1474 > form > div > button {
-	background-color: #00CC66;
-  	color: #FFFFFF;
+	background-color: #00CC66; !important
+  	color: #FFFFFF; !important
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_1474 > form > div > a:hover button  {
-	background-color: #32936F;
-  	color: #FFFFFF;
+	background-color: #32936F; !important
+  	color: #FFFFFF; !important
   	font-weight: bold;
   	transition-property: color;
   	transition-duration: .3s;
