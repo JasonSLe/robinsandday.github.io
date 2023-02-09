@@ -1901,7 +1901,7 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
           };
         };
         if (currentRow.id!==''){
-          currentRow.children[5].onclick = createClickHandler(currentRow);
+          currentRow.children[4].onclick = createClickHandler(currentRow);
         }
       }
     }
