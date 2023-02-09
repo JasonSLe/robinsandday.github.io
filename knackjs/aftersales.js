@@ -1269,105 +1269,6 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 
   //Wip Management hide values from view
   $(document).on('knack-view-render.view_596', function (event, view, data) {
-
-	  //hide VIN from table
-	    $('th[class="field_73"]').hide();
-    $('td[class*="field_73"]').hide();
-	  	  //hide reg
-	  $('th[class="field_31"]').hide();
-    $('td[class*="field_31"]').hide();
-	  
-	  //hide wip num
-	  $('th[class="field_441"]').hide();
-    $('td[class*="field_441"]').hide();
-	  
-	  //hide account num
-	  $('th[class="field_756"]').hide();
-    $('td[class*="field_756"]').hide();
-	  
-	   //hide connected dealer
-	  $('th[class="field_411"]').hide();
-    $('td[class*="field_411"]').hide();
-	  
-	   //hide parts on V.I.C.S
-	  $('th[class="field_985"]').hide();
-    $('td[class*="field_985"]').hide();
-	  
-	  //hide record id
-	  $('th[class="field_1601"]').hide();
-    $('td[class*="field_1601"]').hide();
-	  
-	    //hide labour not invoiced
-	  $('th[class="field_1150"]').hide();
-    $('td[class*="field_1150"]').hide();
-	  
-	    //hide prepick
-	  $('th[class="field_914"]').hide();
-    $('td[class*="field_914"]').hide();
-	  
-	    //hide ccrecov + Diag
-	  $('th[class="field_1046"]').hide();
-    $('td[class*="field_1046"]').hide();
-	  
-	    //hide ccrecov
-	  $('th[class="field_896"]').hide();
-    $('td[class*="field_896"]').hide();
-	  
-	    //hide ccdiag
-	  $('th[class="field_983"]').hide();
-    $('td[class*="field_983"]').hide();
-	  
-	    //hide blue light
-	  $('th[class="field_984"]').hide();
-    $('td[class*="field_984"]').hide();
-	  
-	    //hide back order status
-	  $('th[class="field_1472"]').hide();
-    $('td[class*="field_1472"]').hide();
-	  
-	    //hide repeat repair
-	  $('th[class="field_1140"]').hide();
-    $('td[class*="field_1140"]').hide();
-	  
-	    //hide c/d
-	  $('th[class="field_1139"]').hide();
-    $('td[class*="field_1139"]').hide();
-
-	    //hide courtesy car
-	  $('th[class="field_1137"]').hide();
-    $('td[class*="field_1137"]').hide();
-	  
-	    //hide Customer Waiting
-	  $('th[class="field_1136"]').hide();
-    $('td[class*="field_1136"]').hide();
-	  
-	    //hide road test
-	  $('th[class="field_447"]').hide();
-    $('td[class*="field_447"]').hide();
-	  
-	    //hide loan car status
-	  $('th[class="field_1158"]').hide();
-    $('td[class*="field_1158"]').hide();
-	  
-	  //hide Labour complete
-	  $('th[class="field_1681"]').hide();
-    $('td[class*="field_1681"]').hide();
-	  
-	  //hide parts time intially in stock
-	  $('th[class="field_1243"]').hide();
-    $('td[class*="field_1243"]').hide();
-	  
-	   //hide parts/labour complete
-	  $('th[class="field_1717"]').hide();
-    $('td[class*="field_1717"]').hide();
-	  
-	   //hide parts ave, labour incomplete
-	  $('th[class="field_1791"]').hide();
-    $('td[class*="field_1791"]').hide();
-	  
-	    //hide Parts all here v2 ( parts available - ready to invoice)
-	    $('th[class="field_1876"]').hide();
-    $('td[class*="field_1876"]').hide();
 	  
     //This part is for column headers
     //Column header
@@ -1934,3 +1835,83 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
     sceneRefresh(refreshData);
   });
 
+  //Wip Management tigger for vehicle on site
+  $(document).on('knack-view-render.view_1512', function (event, view, data) {
+	  
+    //This part is for column headers
+    //Column header
+    $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
+    $('th[class="field_982"]').attr('data-tooltip','Medkit = CCDIAG Truck = CCRECOV');
+    $('th[class="field_982"]').addClass('tooltip-bottom')
+ $('th[class="field_1022"]').attr('title','Time Allowed For jobs NOT Completed');
+	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
+	  $('th[class="field_1111"]').attr('title','No of Days Since Checked In');
+
+    if ($('div[class="kn-table kn-view view_1512"]')){
+      let rows = $('div[class="kn-table kn-view view_1512"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[4].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+
+    //move icons
+    if ($('div[class="kn-table kn-view view_1512"]')){
+      let rows = $('div[class="kn-table kn-view view_1512"] table>tbody>tr[id]');
+      for (i = 0; i < rows.length; i++) {
+        $('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]').parent())
+        $('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]').parent())
+      }
+    }
+  });
+
+
+  //Wip Management trigger from vehicle off site
+  $(document).on('knack-view-render.view_1506', function (event, view, data) {
+	  
+    //This part is for column headers
+    //Column header
+    $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
+    $('th[class="field_982"]').attr('data-tooltip','Medkit = CCDIAG Truck = CCRECOV');
+    $('th[class="field_982"]').addClass('tooltip-bottom')
+ $('th[class="field_1022"]').attr('title','Time Allowed For jobs NOT Completed');
+	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
+	  $('th[class="field_1111"]').attr('title','No of Days Since Checked In');
+
+    if ($('div[class="kn-table kn-view view_1506"]')){
+      let rows = $('div[class="kn-table kn-view view_1506"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[5].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+
+    //move icons
+    if ($('div[class="kn-table kn-view view_1506"]')){
+      let rows = $('div[class="kn-table kn-view view_1506"] table>tbody>tr[id]');
+      for (i = 0; i < rows.length; i++) {
+        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]').parent())
+        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]').parent())
+      }
+    }
+  });
