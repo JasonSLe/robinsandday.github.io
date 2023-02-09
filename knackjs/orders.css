@@ -3495,7 +3495,8 @@ color: #FFFFFF;
   color: #388cf5;
 }
 /* Finance Quote */
-#kn-input-field_6424 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+#kn-input-field_6424 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6424 > a {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
