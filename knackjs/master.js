@@ -3270,11 +3270,21 @@ $(document).on('knack-form-submit.view_5354', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/bn722cnc3pyfuhbfxug1v8hbyozs2rzd", {"Record ID":data.id},"Used Stock Management - Auto Price Settings Updated - Update Advert Price")
 });
 
+
+/***** THIRD PARTY PURCHASING TOOL *****/
+
+// Used Stock Sourcing - Trigger Instant MFL Direct Auto Purchase
+$(document).on('knack-form-submit.view_5980', function(event, view, data) { 
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/aolgci2dl045n87pjtii2flslckiid54", {"Record ID":data.id},"Used Stock Sourcing - Trigger Instant MFL Direct Auto Purchase")
+});
+
 /*Collapse purchasing MFL service Table 
 $(document).on('view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242', function(event, view, data){
     addGroupExpandCollapse(view);
 })
-*/ 
+*/
+
+
 
 /* testing autotrader multiple choice check box in table*/
 // Function that adds checkboxes
