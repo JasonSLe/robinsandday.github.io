@@ -932,7 +932,7 @@ $(document).on('knack-form-submit.view_1474', function(event, view, data) {
 });
 
 //trigger get tyres and prices for a selected dealer
-$(document).on('knack-form-submit.view_1484', function(event, view, data) { 
+$(document).on('knack-form-submit.view_1474', function(event, view, data) { 
     
     try{
         
