@@ -1915,3 +1915,7 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
       }
     }
   });
+
+$(document).on('knack-form-submit.view_1530', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/0b8ieu2989jnwrdjsvb8r77l499o4cyd", {"Record ID":data.id},"Send Outbound Virtual Reception Text Message")
+});
