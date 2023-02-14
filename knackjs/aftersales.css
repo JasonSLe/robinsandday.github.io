@@ -2352,3 +2352,28 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
   	box-shadow:         3px 3px #ccc;
 }
+
+.speech-bubble {
+  position: relative;
+  background: #00aabb;
+  border-radius: .4em;
+  width:300px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  color:white;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: #00aabb;
+  border-bottom: 0;
+  margin-left: -20px;
+  margin-bottom: -20px;
+}
