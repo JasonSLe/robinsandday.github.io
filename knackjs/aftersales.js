@@ -959,6 +959,16 @@ $(document).on('knack-form-submit.view_1474', function(event, view, data) {
     }
 });
 
+//refresh tyre on modal pop up 
+$(document).on("knack-scene-render.scene_508", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_247', //Tyres Front
+          views:['1475']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
 
 //auto reload Clear tyres in customer & vehicle look up /precalls
 $(document).on('knack-record-update.view_243', function(event, view, data) {
