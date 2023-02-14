@@ -2364,7 +2364,7 @@ p.speech-bubble-outbound {
   align-items:center;
   color:white;
   padding:1%;
-  margin:1px;
+  margin:1px !important;
 } 
 p.speech-bubble-inbound {
   position: relative;
@@ -2376,5 +2376,5 @@ p.speech-bubble-inbound {
   align-items:center;
   color:white;
   padding:1%;
-  margin:1px;
+  margin:1px !important;
 } 
