@@ -2370,14 +2370,17 @@ p.speech-bubble-outbound {
 } 
 
 p.speech-bubble-outbound:after {
-      content: "";
-      position: absolute;
-      border: 0 solid transparent;
-      border-top: 9px solid #f5f5f5;
-      border-radius: 0 20px 0;
-      width: 15px;
-      height: 30px;
-      transform: rotate(145deg);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: #00aabb;
+  border-bottom: 0;
+  margin-left: -20px;
+  margin-bottom: -20px;
 }
 
 p.speech-bubble-inbound {
@@ -2393,6 +2396,16 @@ p.speech-bubble-inbound {
   margin:1px !important;
 } 
 
- p.speech-bubble-outbound.alt:after {
-      transform: rotate(45deg) scaleY(-1);
+p.speech-bubble-inbound:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: #00aabb;
+  border-bottom: 0;
+  margin-left: -20px;
+  margin-bottom: -20px;
 }
