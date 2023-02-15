@@ -2404,6 +2404,6 @@ p.speech-bubble-inbound:before {
   border-right: 10px solid transparent;
   border-top: 10px solid #00aabb;
   border-bottom: 10px solid transparent;
-  right: -20px;
-  top: 6px;
+  left: 19px;
+  bottom: -19px;
 }
