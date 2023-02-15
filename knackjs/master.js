@@ -2747,12 +2747,12 @@ $(document).on('knack-form-submit.view_2548', function(event, view, data) {
 $(document).on('knack-form-submit.view_2548', function(event, view, data) {
   if(data.field_5842_raw !== undefined &&  data.field_5842_raw !== null){
     var createData = {"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw,
-              "Dealer":handlAll(data.field_4943_raw, "0", "identifier"), "Date in Stock":handlDate(data.field_5842_raw, "date_formatted"), "Source Of Payload" : "knack direct"};
+              "Dealer":handlAll(data.field_4943_raw, "0", "identifier"), "Date in Stock":handlDate(data.field_5842_raw, "date_formatted"), "Internal Admin Invoice":data.field_8642_raw, "Source Of Payload" : "knack direct"};
     callPostHttpRequest("https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf",deleteEmpty(createData) ,"Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File}");
-    callPostHttpRequest("https://hook.integromat.com/tbljhas7u4i6f2qh5s5xi57bs4a6p85j",{"Record ID":data.id, "Form":"Used Service Quote", "Source Of Payload" : "knack direct"} ,"Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File}");
+    callPostHttpRequest("https://hook.integromat.com/tbljhas7u4i6f2qh5s5xi57bs4a6p85j",{"Record ID":data.id, "Form":"Used Service Quote", "VSB Location":data.field_5389_raw, "Source Of Payload" : "knack direct"} ,"Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File}");
   }else{
     var createData = {"KnackID":data.id, "Registration Number":data.field_4941_raw, "Stockbook Number":data.field_5388_raw, "VSB Location":data.field_5389_raw,
-              "Dealer":handlAll(data.field_4943_raw, "0", "identifier"), "Source Of Payload" : "knack direct"};
+              "Dealer":handlAll(data.field_4943_raw, "0", "identifier"), "Internal Admin Invoice":data.field_8642_raw, "Source Of Payload" : "knack direct"};
     callPostHttpRequest("https://hook.integromat.com/2ta4u1ek35jqd5z2xhw4ql19m48edbgf",deleteEmpty(createData) ,"Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File}");
     callPostHttpRequest("https://hook.integromat.com/tbljhas7u4i6f2qh5s5xi57bs4a6p85j",{"Record ID":data.id, "Form":"Used Service Quote", "Source Of Payload" : "knack direct"} ,"Used Deal File TRIGGER INTEGROMAT UPON – *Instant Trigger to GET Used Vehicle Invoice from Autoline {(Deal File) Used Vehicle Deal File}");
   }
@@ -3275,11 +3275,21 @@ $(document).on('knack-form-submit.view_5354', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/bn722cnc3pyfuhbfxug1v8hbyozs2rzd", {"Record ID":data.id},"Used Stock Management - Auto Price Settings Updated - Update Advert Price")
 });
 
+
+/***** THIRD PARTY PURCHASING TOOL *****/
+
+// Used Stock Sourcing - Trigger Instant MFL Direct Auto Purchase
+$(document).on('knack-form-submit.view_5980', function(event, view, data) { 
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/aolgci2dl045n87pjtii2flslckiid54", {"Record ID":data.id},"Used Stock Sourcing - Trigger Instant MFL Direct Auto Purchase")
+});
+
 /*Collapse purchasing MFL service Table 
 $(document).on('view_5029 > section > div > div:nth-child(3) > div > div > div.kn-label-none.field_7242', function(event, view, data){
     addGroupExpandCollapse(view);
 })
-*/ 
+*/
+
+
 
 /* testing autotrader multiple choice check box in table*/
 // Function that adds checkboxes

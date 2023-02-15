@@ -512,12 +512,28 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 #view_300 > div > a.kn-link.kn-link-8.kn-button {
-	background-color: #2ab27b;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_300 > div > a:hover.kn-link.kn-link-8.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_300 > div > a.kn-link.kn-link-9.kn-button {
+	background-color: #2ab27b;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_300 > div > a:hover.kn-link.kn-link-9.kn-button {
 	background-color: #308965;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1842,6 +1858,12 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	font-weight: bold;
 }
 
+/* Aftersales Pre Visit - Customer Incident Form - Messages Table */
+
+#view_1388 th span {
+  margin: auto !important;
+}
+
 /* Customer Advisor Pre Visit Operations - Customer Call List */
 
 #view_321 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -2312,3 +2334,76 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	font-weight: bold;
 }
 
+/*Make tyres & prices green*/
+#view_1474 > form > div > button {
+	background-color: #00CC66 !important;
+  	color: #FFFFFF !important;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_1474 > form > div > a:hover.button  {
+	background-color: #32936F !important;
+  	color: #FFFFFF !important;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
+
+/* Two Way Messaging For Virtual Reception Messages */
+
+p.speech-bubble-outbound {
+  position: relative;
+  left: 50%;
+  background: #25D366;
+  border-radius: .4em;
+  width:40%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  color:white;
+  padding:1%;
+  margin:1px !important;
+} 
+
+p.speech-bubble-outbound:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #25D366;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #25D366;
+  border-bottom: 10px solid transparent;
+  right: -19px;
+  top: 6px;
+}
+
+p.speech-bubble-inbound {
+  position: relative;
+  background: #00aabb;
+  border-radius: .4em;
+  width:40%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  color:white;
+  padding:1%;
+  margin:1px !important;
+} 
+
+p.speech-bubble-inbound:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #00aabb;
+  border-top: 10px solid #00aabb;
+  border-bottom: 10px solid transparent;
+  left: -19px;
+  top: 6px;
+}

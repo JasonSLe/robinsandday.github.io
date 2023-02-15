@@ -298,7 +298,7 @@ function generateTyres(){
         remainderOfRecords = remainderOfRecords - 1;
       }
     }
-    
+	  
     let jsonPosition = 0;
     for (let i = 0;i<outputTables.length;i++){
       outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
@@ -320,6 +320,52 @@ function generateTyres(){
     console.log('Error Generating tires',e);
   }
 }
+
+function generateTyres1(){
+  try {
+    console.log('GenerateTyres1');
+    let tyresJSON = JSON.parse(Knack.views['view_1477'].model.attributes['field_250']);
+    tyresJSON = tyresJSON.filter(function(el){
+      return el['a:StockPolicy'][0] === 'ACTIVE' && el['a:Winter'][0] === 'N'
+    })
+    console.log('tyresJSON.length filtered',tyresJSON.length);
+    tyresJSON = tyresJSON.sort(function(a,b){
+      return (a['a:TotalFittedRetailPriceIncVAT'][0] > b['a:TotalFittedRetailPriceIncVAT'][0]?1:(a['a:TotalFittedRetailPriceIncVAT'][0] < b['a:TotalFittedRetailPriceIncVAT'][0]?-1:0));
+    })
+    let outputTables = [{name:'Budget'},{name:'Medium'},{name:'Premium'}];
+    let recordsPerTableWhole = Math.floor(tyresJSON.length/outputTables.length);
+    let remainderOfRecords = tyresJSON.length % outputTables.length;
+    for (let i = 0;i<outputTables.length;i++){
+      outputTables[i].count = recordsPerTableWhole;
+      if (remainderOfRecords>0) {
+        outputTables[i].count += 1;
+        remainderOfRecords = remainderOfRecords - 1;
+      }
+    }	  
+	  
+    let jsonPosition = 0;
+    for (let i = 0;i<outputTables.length;i++){
+      outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
+      for (let j = jsonPosition;j<jsonPosition + (outputTables[i].count<5?outputTables[i].count:5);j++){
+        outputTables[i].text += '<tr title="Available: '+tyresJSON[j]['a:AvailableQuantity'][0]+'; SOR: '+tyresJSON[j]['a:SORQuantity'][0]+'; Delivery date: '+formatDateGB(new Date(tyresJSON[j]['a:DeliveryDate'][0]))+'"><td bgcolor="'+tyreRowColor(tyresJSON[j]['a:AvailableQuantity'][0],tyresJSON[j]['a:SORQuantity'][0])+'">'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:TotalFittedRetailPriceIncVAT'][0]+'</td></tr>';
+      }
+      jsonPosition += outputTables[i].count;
+      outputTables[i].text += '</table>';
+    }
+    let output = '<table><tr>';
+    for (let i =0;i<outputTables.length;i++){
+      output += '<td>' + outputTables[i].name + '<br />'+outputTables[i].text+'</td>';
+    }
+    output += '</tr></table>';
+
+    $('div[class*="field_250"]').html(output);
+    $('div[class*="field_250"]').show();
+  } catch (e){
+    console.log('Error Generating tyres',e);
+  }
+}
+
+
 
 function tyreRowColor(stockCount, SORCount){
   if (SORCount>=4){
@@ -485,6 +531,17 @@ $(document).on("knack-scene-render.scene_118", function(event, scene, data) {
     }
   ]
   sceneRefresh(refreshData);
+});
+
+$(document).on("knack-scene-render.scene_508", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_250', //Tyres
+          views:['1477'],
+          runAfter : generateTyres1 
+      }
+    ]
+    sceneRefresh(refreshData);
 });
 
 $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
@@ -811,12 +868,12 @@ try{
 
 //trigger Aftersales Tyre dealer Stock Lookup
 
-$(document).on('knack-form-submit.view_230', function(event, view, data) {
+/*$(document).on('knack-form-submit.view_1474', function(event, view, data) {
 
 try{
 
-    let commandURL = "https://hook.integromat.com/tjsfrxojnnvd3byqy1fr3qobk8pflvkf";
-    let dataToSend = JSON.stringify({"Record ID":data.id});
+    let commandURL = "https://hook.eu1.make.celonis.com/95g8pth4f57ytmkkh6i4cei4ks9df5a8";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "REG":data.field_31, "POS":data.field_443});
 
     var rData = $.ajax({
         url: commandURL,
@@ -826,12 +883,12 @@ try{
         async: false
     }).responseText;    
 
-    let refreshData = [
-      {
-          mainField : 'field_605', //Tyres
-          views:['229']
-      }
-    ]
+    //let refreshData = [
+   //   {
+    //      mainField : 'field_605', //Tyres
+   //       views:['229']
+   //  }
+   // ]
     sceneRefresh(refreshData);
 }catch(exception){
     console.log("error");
@@ -851,7 +908,67 @@ try{
        async: false
     }).responseText;
 }
+}); */
+
+//trigger get tyres and prices from customer job card
+$(document).on('knack-form-submit.view_1474', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/f3xcida5tqk6fybgpkga8p9gn7ek6e7o";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "REG":data.field_31, "POS":data.field_443, "Dealer":data.field_411});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger get tyres and prices from customer job card");
+    }
 });
+
+//trigger get tyres and prices for a selected dealer
+$(document).on('knack-form-submit.view_1474', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/osrisywv6fufmcdbf7ih8bc1yfrlvpq8";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Selected Dealer":data.field_411});
+	    
+    let refreshData = [
+      {
+          mainField : 'field_575', //Autoline Tyre Stock For Dealer
+          views:['1475']
+      }
+    ]
+    
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger get selected dealer tyres");
+    }
+});
+
+//refresh tyre on modal pop up 
+$(document).on("knack-scene-render.scene_508", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_247', //Tyres Front
+          views:['1475']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
 
 //auto reload Clear tyres in customer & vehicle look up /precalls
 $(document).on('knack-record-update.view_243', function(event, view, data) {
@@ -1081,16 +1198,48 @@ function recursivecallscene_224(){
 // Trigger Customer Incident Form
 
 $(document).on('knack-form-submit.view_781', function(event, view, data) {
-  callPostHttpRequest("https://hook.integromat.com/gmtkedwe7nxktiqm6qi4rg5apeno73an", {"Record ID":data.id},"Pre Visit Digital Customer Incident Form")
+  callPostHttpRequest("https://hook.integromat.com/gmtkedwe7nxktiqm6qi4rg5apeno73an", {"Record ID":data.id},"Send Pre Visit Digital Customer Incident Form")
 });
 
 $(document).on('knack-form-submit.view_1394', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/e681sgmbzwk1hgugd3ph4kr34addh61o", {"Record ID":data.id,"Origin":data.field_1815},"Pre Visit Digital Customer Incident Form DEV")
 });
 
+$(document).on('knack-form-submit.view_834', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Engine Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_845', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Steering Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_846', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Gearbox Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_859', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Suspension Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_1092', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Brakes Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_864', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Software Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_863', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Warning Light Pre Visit Digital Customer Incident Form")
+});
+
+$(document).on('knack-form-submit.view_867', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/nm7ndnq4ixrw3r5lx2slrimrxwg4g9ht", {"Record ID":data.id,"Origin":data.field_1107,"Auto Increment":data.field_1064},"Completed Other Pre Visit Digital Customer Incident Form")
+});
+
 //Submit form for GDPR preferences update in Check-in process
 $(document).on('knack-form-submit.view_732', function(event, view, data) { 
-  callPostHttpRequest("https://hook.integromat.com/iovfpyqnj3d9pihhmhm1wcgtu5dosv0b", {"Record ID":data.id, "Service GDPR PHONE":data.field_1048_raw, "Service GDPR EMAIL":data.field_1050_raw, "Service GDPR POST":data.field_1051_raw,
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/whf6h2e18t2n2iqxhmorh4s8v9lcaf9m", {"Record ID":data.id, "Service GDPR PHONE":data.field_1048_raw, "Service GDPR EMAIL":data.field_1050_raw, "Service GDPR POST":data.field_1051_raw,
   "Service GDPR SMS":data.field_1052_raw, "Sales GDPR PHONE":data.field_1054_raw, "Sales GDPR EMAIL":data.field_1055_raw,"Sales GDPR POST":data.field_1056_raw, "Sales GDPR SMS":data.field_1057_raw, "Customer Magic Number":data.field_1006_raw.replace(/[^0-9]/g,'')},"Submit form for GDPR preferences update in Check-in process")
 });
 
@@ -1130,105 +1279,6 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 
   //Wip Management hide values from view
   $(document).on('knack-view-render.view_596', function (event, view, data) {
-
-	  //hide VIN from table
-	    $('th[class="field_73"]').hide();
-    $('td[class*="field_73"]').hide();
-	  	  //hide reg
-	  $('th[class="field_31"]').hide();
-    $('td[class*="field_31"]').hide();
-	  
-	  //hide wip num
-	  $('th[class="field_441"]').hide();
-    $('td[class*="field_441"]').hide();
-	  
-	  //hide account num
-	  $('th[class="field_756"]').hide();
-    $('td[class*="field_756"]').hide();
-	  
-	   //hide connected dealer
-	  $('th[class="field_411"]').hide();
-    $('td[class*="field_411"]').hide();
-	  
-	   //hide parts on V.I.C.S
-	  $('th[class="field_985"]').hide();
-    $('td[class*="field_985"]').hide();
-	  
-	  //hide record id
-	  $('th[class="field_1601"]').hide();
-    $('td[class*="field_1601"]').hide();
-	  
-	    //hide labour not invoiced
-	  $('th[class="field_1150"]').hide();
-    $('td[class*="field_1150"]').hide();
-	  
-	    //hide prepick
-	  $('th[class="field_914"]').hide();
-    $('td[class*="field_914"]').hide();
-	  
-	    //hide ccrecov + Diag
-	  $('th[class="field_1046"]').hide();
-    $('td[class*="field_1046"]').hide();
-	  
-	    //hide ccrecov
-	  $('th[class="field_896"]').hide();
-    $('td[class*="field_896"]').hide();
-	  
-	    //hide ccdiag
-	  $('th[class="field_983"]').hide();
-    $('td[class*="field_983"]').hide();
-	  
-	    //hide blue light
-	  $('th[class="field_984"]').hide();
-    $('td[class*="field_984"]').hide();
-	  
-	    //hide back order status
-	  $('th[class="field_1472"]').hide();
-    $('td[class*="field_1472"]').hide();
-	  
-	    //hide repeat repair
-	  $('th[class="field_1140"]').hide();
-    $('td[class*="field_1140"]').hide();
-	  
-	    //hide c/d
-	  $('th[class="field_1139"]').hide();
-    $('td[class*="field_1139"]').hide();
-
-	    //hide courtesy car
-	  $('th[class="field_1137"]').hide();
-    $('td[class*="field_1137"]').hide();
-	  
-	    //hide Customer Waiting
-	  $('th[class="field_1136"]').hide();
-    $('td[class*="field_1136"]').hide();
-	  
-	    //hide road test
-	  $('th[class="field_447"]').hide();
-    $('td[class*="field_447"]').hide();
-	  
-	    //hide loan car status
-	  $('th[class="field_1158"]').hide();
-    $('td[class*="field_1158"]').hide();
-	  
-	  //hide Labour complete
-	  $('th[class="field_1681"]').hide();
-    $('td[class*="field_1681"]').hide();
-	  
-	  //hide parts time intially in stock
-	  $('th[class="field_1243"]').hide();
-    $('td[class*="field_1243"]').hide();
-	  
-	   //hide parts/labour complete
-	  $('th[class="field_1717"]').hide();
-    $('td[class*="field_1717"]').hide();
-	  
-	   //hide parts ave, labour incomplete
-	  $('th[class="field_1791"]').hide();
-    $('td[class*="field_1791"]').hide();
-	  
-	    //hide Parts all here v2 ( parts available - ready to invoice)
-	    $('th[class="field_1876"]').hide();
-    $('td[class*="field_1876"]').hide();
 	  
     //This part is for column headers
     //Column header
@@ -1303,6 +1353,9 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
   refreshWithData('1188', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
 
+$(document).on('knack-scene-render.scene_91', function(event, scene) {
+  refreshWithData('871','field_1950');
+});
 
 //Recall Recheck Spinner on Vehicle Checkin
 
@@ -1404,7 +1457,7 @@ $(document).on('knack-scene-render.scene_340', function(event, scene) {
 });
 
 function recursivecallscene_340(){
- setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallscene_340();} }, 60000);
+ setTimeout(function () { if($("#view_947").is(":visible")==true){ Knack.views["view_947"].model.fetch();recursivecallscene_340();} }, 300000);
 }
 
 //Trigger failed Quality check (QC) emails to workshop controller/ manager
@@ -1654,13 +1707,6 @@ function recursivecallscene_439(){
 }
 
 
-
-// Trigger WIP MAnagement reporting
-
-$(document).on('knack-form-submit.view_1283', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/nzhvtegja68yi2tk5nc2wovsvdbll29o", {"Record ID":data.id},"Wip management reporting")
-});
-
 // ------------ Refresh WIP Reporting status but not the page itself -----------------------//
 $(document).on('knack-scene-render.scene_152', function(event, scene) {
  recursivecallscene_152();
@@ -1770,4 +1816,116 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       window.location.reload(false);
     }
   }
+});
+
+//HIDE DATA FROM TYRE LOOK UP 
+  $(document).on('knack-view-render.view_1474', function (event, view, data) {
+
+	  //hide REG from table
+	    $('#kn-input-field_31').hide();
+    $('#kn-input-field_31').hide();
+
+	  //hide pos from table
+    $('#kn-input-field_443').hide();
+    $('#kn-input-field_443').hide();
+	  
+	      //hide connected dealer
+	      $('#kn-input-field_411').hide();
+    $('#kn-input-field_411').hide();
+	  
+	  });
+
+$(document).on("knack-scene-render.scene_508", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_575', //Autoline Tyre Stock For Dealer
+          views:['1475']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
+
+  //Wip Management tigger for vehicle on site
+  $(document).on('knack-view-render.view_1512', function (event, view, data) {
+	  
+    //This part is for column headers
+    //Column header
+    $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
+    $('th[class="field_982"]').attr('data-tooltip','Medkit = CCDIAG Truck = CCRECOV');
+    $('th[class="field_982"]').addClass('tooltip-bottom')
+ $('th[class="field_1022"]').attr('title','Time Allowed For jobs NOT Completed');
+	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
+	  $('th[class="field_1111"]').attr('title','No of Days Since Checked In');
+
+    if ($('div[class="kn-table kn-view view_1512"]')){
+      let rows = $('div[class="kn-table kn-view view_1512"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[4].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+
+    //move icons
+    if ($('div[class="kn-table kn-view view_1512"]')){
+      let rows = $('div[class="kn-table kn-view view_1512"] table>tbody>tr[id]');
+      for (i = 0; i < rows.length; i++) {
+        $('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]').parent())
+        $('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]').parent())
+      }
+    }
+  });
+
+
+  //Wip Management trigger from vehicle off site
+  $(document).on('knack-view-render.view_1506', function (event, view, data) {
+	  
+    //This part is for column headers
+    //Column header
+    $('th[class="field_1108"]').attr('title','F = First Clocked Date L = Last Clocked Date');
+    $('th[class="field_982"]').attr('data-tooltip','Medkit = CCDIAG Truck = CCRECOV');
+    $('th[class="field_982"]').addClass('tooltip-bottom')
+ $('th[class="field_1022"]').attr('title','Time Allowed For jobs NOT Completed');
+	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
+	  $('th[class="field_1111"]').attr('title','No of Days Since Checked In');
+
+    if ($('div[class="kn-table kn-view view_1506"]')){
+      let rows = $('div[class="kn-table kn-view view_1506"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[4].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+
+    //move icons
+    if ($('div[class="kn-table kn-view view_1506"]')){
+      let rows = $('div[class="kn-table kn-view view_1506"] table>tbody>tr[id]');
+      for (i = 0; i < rows.length; i++) {
+        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]').parent())
+        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]').parent())
+      }
+    }
+  });
+
+$(document).on('knack-form-submit.view_1530', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/0b8ieu2989jnwrdjsvb8r77l499o4cyd", {"Record ID":data.id},"Send Outbound Virtual Reception Text Message")
 });

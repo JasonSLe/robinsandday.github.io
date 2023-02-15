@@ -3495,7 +3495,8 @@ color: #FFFFFF;
   color: #388cf5;
 }
 /* Finance Quote */
-#kn-input-field_6424 > div > div.kn-asset-current > div > div > a.kn-view-asset {
+#kn-input-field_6424 > div > div.kn-asset-current > div > div > a.kn-view-asset,
+#kn-input-field_6424 > a {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: #388cf5;
@@ -4969,6 +4970,12 @@ font-size:12px;
     font-size: 14px;
 }
 
+
+#view_3907 div.kn-details-group.column-1.columns div.kn-detail.field_8053{
+    color: #008000;
+    font-size: 14px;
+}
+
 #view_3925 div.kn-details-group.column-3.columns div.kn-detail.field_6850{
     color: #008000;
     font-size: 14px;
@@ -5600,6 +5607,12 @@ font-size:12px;
 }
 
 #view_4308> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+  	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4308> div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
   	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
