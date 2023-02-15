@@ -2374,9 +2374,9 @@ p.speech-bubble-outbound:before {
   width: 0px;
   height: 0px;
   position: absolute;
-  border-left: 10px solid #00bfb6;
+  border-left: 10px solid #25D366;
   border-right: 10px solid transparent;
-  border-top: 10px solid #00bfb6;
+  border-top: 10px solid #25D366;
   border-bottom: 10px solid transparent;
   right: -20px;
   top: 6px;
@@ -2395,16 +2395,15 @@ p.speech-bubble-inbound {
   margin:1px !important;
 } 
 
-p.speech-bubble-inbound:after {
-  content: '';
+p.speech-bubble-inbound:before {
+  content: "";
+  width: 0px;
+  height: 0px;
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border: 20px solid transparent;
-  border-top-color: #00aabb;
-  border-bottom: 0;
-  margin-left: -20px;
-  margin-bottom: -20px;
+  border-left: 10px solid #00aabb;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #00aabb;
+  border-bottom: 10px solid transparent;
+  right: -20px;
+  top: 6px;
 }
