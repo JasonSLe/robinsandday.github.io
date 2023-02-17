@@ -1987,7 +1987,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 
 /*Make Virtual reception Supporting documents as a button*/
-#view_1175 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-details-link > div > span > a {
+#view_1175 > section > div > div:nth-child(4) > div:nth-child(1) > div > div > div > span > span > a {
   color: #ffffff; !important
   font-weight: bold;
   background-color: #ffa100;
@@ -1996,7 +1996,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 /*Make Virtual reception Clockings Summary as a button*/
-#view_1175 > section > div > div:nth-child(4) > div:nth-child(3) > div > div > div {
+#view_1175 > section > div > div:nth-child(4) > div:nth-child(3) > div > div > div > span > span > a{
   color: #ffffff; !important
   font-weight: bold;
   background-color: #ffa100;
