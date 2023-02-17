@@ -1996,7 +1996,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 /*Make Virtual reception Clockings Summary as a button*/
-#view_1175 > section > div > div:nth-child(4) > div:nth-child(3) > div > div > div > a {
+#view_1175 > section > div > div:nth-child(4) > div:nth-child(3) > div > div > div {
   color: #ffffff; !important
   font-weight: bold;
   background-color: #ffa100;
