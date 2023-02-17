@@ -1022,7 +1022,14 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
     ]
     sceneRefresh(refreshData);
   });
+//auto reload Clear tyres in customer & vehicle look up /precalls
+$(document).on('knack-record-update.view_1484', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 100);
 
+  Knack.showSpinner();
+  
+});
 
 
 //auto reload Clear tyres in customer & vehicle look up /precalls
