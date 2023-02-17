@@ -1995,6 +1995,14 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   display: inline-block;
 }
 
+/*Make Virtual reception Clockings Summary as a button*/
+#view_1175 > section > div > div:nth-child(4) > div:nth-child(3) > div > div > div > a {
+  color: #ffffff; !important
+  font-weight: bold;
+  background-color: #ffa100;
+  padding: 8px;
+  display: inline-block;
+}
 
 /**** Action auto reminders to Button ****/
 
