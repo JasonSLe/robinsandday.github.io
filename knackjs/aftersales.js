@@ -970,6 +970,47 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
     sceneRefresh(refreshData);
   });
 
+//trigger get tyres and prices for a selected dealer from modal view
+$(document).on('knack-form-submit.view_1484', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/osrisywv6fufmcdbf7ih8bc1yfrlvpq8";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Selected Dealer":data.field_411});
+	    
+    let refreshData = [
+      {
+          mainField : 'field_575', //Autoline Tyre Stock For Dealer
+          views:['1484']
+      }
+    ]
+    
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger get selected dealer tyres");
+    }
+});
+
+//refresh tyre on modal pop up 
+$(document).on("knack-scene-render.scene_508", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_247', //Tyres Front
+          views:['1484']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
+
+
+
 //auto reload Clear tyres in customer & vehicle look up /precalls
 $(document).on('knack-record-update.view_243', function(event, view, data) {
   
