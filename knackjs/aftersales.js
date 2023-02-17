@@ -1004,7 +1004,7 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
     let refreshData = [
       {
           mainField : 'field_575', //Dealer tyres
-          views:['1484']
+          views:['1475']
       }
     ]
     sceneRefresh(refreshData);
