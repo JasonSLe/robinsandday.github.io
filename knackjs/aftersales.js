@@ -931,7 +931,7 @@ $(document).on('knack-form-submit.view_1474', function(event, view, data) {
     }
 });
 
-//trigger get tyres and prices for a selected dealer
+/*trigger get tyres and prices for a selected dealer
 $(document).on('knack-form-submit.view_1474', function(event, view, data) { 
     
     try{
@@ -958,7 +958,7 @@ $(document).on('knack-form-submit.view_1474', function(event, view, data) {
         sendErrorToIntegromat(exception, "Trigger get selected dealer tyres");
     }
 });
-
+*/
 //refresh tyre on modal pop up 
 $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
     let refreshData = [
