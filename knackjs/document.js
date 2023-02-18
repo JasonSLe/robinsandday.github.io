@@ -205,16 +205,7 @@ takePhotoButton.onclick = takePhoto;
 
   function takePhoto() {
     $('#kn-loading-spinner').show();
-    if (OperatingSystem.Android()) {     
-      imageCapture.takePhoto().then(function(blob) {
-        img.classList.remove('hidden');
-        img.style.visibility = 'visible';
-        img.src = URL.createObjectURL(blob);
-      }).catch(function(error) {
-        console.log('takePhoto() error: ', error);
-        alert('Photo taking error, please reload page.');
-      });
-    } else if (OperatingSystem.iOS()) {
+    if (OperatingSystem.iOS()) {
       var c = document.createElement('canvas');
  		  c.width = video.videoWidth;
 		  c.height = video.videoHeight;
@@ -225,9 +216,18 @@ takePhotoButton.onclick = takePhoto;
         img.style.visibility = 'visible';
 	      img.src = URL.createObjectURL(blob);
 	    }, 'image/jpeg', 1);
-    } else {
+    } else /*if (OperatingSystem.Android())*/ {     
+      imageCapture.takePhoto().then(function(blob) {
+        img.classList.remove('hidden');
+        img.style.visibility = 'visible';
+        img.src = URL.createObjectURL(blob);
+      }).catch(function(error) {
+        console.log('takePhoto() error: ', error);
+        alert('Photo taking error, please reload page.');
+      });
+    } /*else {
       alert('Your web browser is not supported, detection shows not Android, not Safari on Apple. Please check, if you do not have "Desktop site" on in Chrome settings. Please report your user agent: '+navigator.userAgent); 
-    }
+    }*/
     
     sndCameraTakePhoto.play();
 
