@@ -931,7 +931,7 @@ $(document).on('knack-form-submit.view_1474', function(event, view, data) {
     }
 });
 
-//trigger get tyres and prices for a selected dealer
+/*trigger get tyres and prices for a selected dealer
 $(document).on('knack-form-submit.view_1474', function(event, view, data) { 
     
     try{
@@ -958,6 +958,59 @@ $(document).on('knack-form-submit.view_1474', function(event, view, data) {
         sendErrorToIntegromat(exception, "Trigger get selected dealer tyres");
     }
 });
+*/
+//refresh tyre on modal pop up 
+$(document).on("knack-scene-render.scene_508", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_247', //Tyres Front
+          views:['1475']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
+
+//trigger get tyres and prices for a selected dealer from modal view
+$(document).on('knack-form-submit.view_1484', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/osrisywv6fufmcdbf7ih8bc1yfrlvpq8";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Selected Dealer":data.field_411});
+	    
+//   let refreshData = [
+ //     {
+ //         mainField : 'field_575', //Autoline Tyre Stock For Dealer
+  //   views:['1475']
+   //   }
+  //  ]
+    
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger get selected dealer tyres");
+    }
+});
+
+//refresh dealer selected tyres on Modal pop up
+
+$(document).on("knack-scene-render.scene_508", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_575', //Dealer tyres
+          views:['1475']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
+
+
 
 //refresh tyre on modal pop up 
 $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
@@ -969,6 +1022,15 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
     ]
     sceneRefresh(refreshData);
   });
+//auto reload Clear tyres in customer & vehicle look up /precalls
+$(document).on('knack-record-update.view_1484', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 100);
+
+  Knack.showSpinner();
+  
+});
+
 
 //auto reload Clear tyres in customer & vehicle look up /precalls
 $(document).on('knack-record-update.view_243', function(event, view, data) {
@@ -1928,4 +1990,10 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
 
 $(document).on('knack-form-submit.view_1530', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/0b8ieu2989jnwrdjsvb8r77l499o4cyd", {"Record ID":data.id},"Send Outbound Virtual Reception Text Message")
+});
+
+// Trigger Update To VR (Virtual Reception) Status From SMS Messaging Form
+
+$(document).on('knack-form-submit.view_1530', function(event, view, data) {
+  callPostHttpRequest("https://hook.integromat.com/3b7aqxlblay6r5egi5rev56ql8qiy4g2", {"Record ID":data.id},"Aftersales VR Update SMS Two Way")
 });
