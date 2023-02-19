@@ -3802,6 +3802,11 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
       } else if (inputs.eq(i).find('input[type="text"]').length>0){
         if (!inputs.eq(i).find('input[type="text"]').eq(0).attr('id')) continue;
         inputs.eq(i).find('input[type="text"]').eq(0).attr('value',savedData.find(el => el.id === inputs.eq(i).find('input[type="text"]').eq(0).attr('id')).data);
+      } else if (inputs.eq(i).find('select').length>0){
+        if (!savedData.find(el => el.id === inputs.eq(i).find('select').eq(0).attr('id'))) continue;
+        inputs.eq(i).find('select>option[value="'+savedData.find(el => el.id === inputs.eq(i).find('select').eq(0).attr('id')).data+'"]').eq(0).attr('selected', 'selected');
+      } else if (inputs.eq(i).find('input[type="radio"]').length>0){
+        inputs.eq(i).find('input[type="radio"][value="'+savedData.find(el => el.id === inputs.eq(i).find('input[type="radio"]').eq(0).attr('id')).data+'"]').eq(0).attr('checked','checked');
       }
     }
 
@@ -3818,6 +3823,11 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
     } else if (inputs.eq(i).find('input[type="text"]').length>0){
       if (!inputs.eq(i).find('input[type="text"]').eq(0).attr('id')) continue;
       viewData.push({id:inputs.eq(i).find('input[type="text"]').eq(0).attr('id'),data:inputs.eq(i).find('input[type="text"]').eq(0).attr('value')})
+    } else if (inputs.eq(i).find('select').length>0){
+      if (inputs.eq(i).find('select>option[selected]').length<2) continue;
+      viewData.push({id:inputs.eq(i).find('select').eq(0).attr('id'),data:inputs.eq(i).find('select>option[selected]').eq(1).attr('value')})
+    } else if (inputs.eq(i).find('input[type="radio"]').length>0){
+      viewData.push({id:inputs.eq(i).find('input[type="radio"]').eq(0).attr('id'),data:inputs.eq(i).find('input[type="radio"][checked="checked"]').eq(0).attr('value')})
     }
   }
   console.log(viewData)
