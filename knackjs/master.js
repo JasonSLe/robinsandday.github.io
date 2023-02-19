@@ -3792,7 +3792,19 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
 
  function loadViewDataFromCookie(viewCode){
   let savedData = getCookie('view_'+viewCode);
-  console.log(savedData);
+  if (savedData){
+    console.log('savedData',savedData);
+    let inputs = $('[id="view_'+viewCode+'"] div[class*="kn-input"]');
+    for (let i =0;i<inputs.length;i++){
+      if (inputs.eq(i).find('textarea').length>0){
+        
+      } else if (inputs.eq(i).find('input[type="text"]').length>0){
+        inputs.eq(i).find('input[type="text"]').eq(0).attr('value',savedData.find(el => el.id === inputs.eq(i).find('input[type="text"]').eq(0).attr('id')));
+      }
+    }
+
+    setCookie('view_'+viewCode,null,1);
+  }
  }
 
  function saveViewDataToCookie(viewCode){
@@ -3802,7 +3814,7 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
     if (inputs.eq(i).find('textarea').length>0){
       viewData.push({id:inputs.eq(i).find('textarea').eq(0).attr('id'),data:inputs.eq(i).find('textarea').eq(0).text()})
     } else if (inputs.eq(i).find('input[type="text"]').length>0){
-      viewData.push({id:inputs.eq(i).find('input[type="text"]').eq(0).attr('id'),data:inputs.eq(i).find('input[type="text"]').eq(0).text()})
+      viewData.push({id:inputs.eq(i).find('input[type="text"]').eq(0).attr('id'),data:inputs.eq(i).find('input[type="text"]').eq(0).attr('value')})
     }
   }
   setCookie('view_'+viewCode,viewData,1);
