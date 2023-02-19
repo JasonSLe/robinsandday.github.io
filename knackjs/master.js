@@ -3791,7 +3791,7 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
  });
 
  function loadViewDataFromCookie(viewCode){
-  let savedData = getCookie('view_'+viewCode);
+  let savedData = getCookie($('input[name="id"]').attr('value')+'_view_'+viewCode);
   if (savedData){
     savedData = JSON.parse(savedData);
     console.log('savedData',savedData);
@@ -3809,7 +3809,7 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
         inputs.eq(i).find('input[type="radio"][value="'+savedData.find(el => el.id === inputs.eq(i).find('input[type="radio"]').eq(0).attr('name')).data+'"]').eq(0).attr('checked','checked');
       }
     }
-    setCookie('view_'+viewCode,null,1);
+    setCookie($('input[name="id"]').attr('value')+'_view_'+viewCode,null,1);
   }
  }
 
@@ -3830,5 +3830,5 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
     }
   }
   console.log(viewData)
-  setCookie('view_'+viewCode,JSON.stringify(viewData),1);
+  setCookie($('input[name="id"]').attr('value')+'_view_'+viewCode,JSON.stringify(viewData),1);
  }
