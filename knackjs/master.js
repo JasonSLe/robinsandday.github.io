@@ -3793,6 +3793,7 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
  function loadViewDataFromCookie(viewCode){
   let savedData = getCookie('view_'+viewCode);
   if (savedData){
+    savedData = JSON.parse(savedData);
     console.log('savedData',savedData);
     let inputs = $('[id="view_'+viewCode+'"] div[class*="kn-input"]');
     for (let i =0;i<inputs.length;i++){
@@ -3817,5 +3818,6 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
       viewData.push({id:inputs.eq(i).find('input[type="text"]').eq(0).attr('id'),data:inputs.eq(i).find('input[type="text"]').eq(0).attr('value')})
     }
   }
-  setCookie('view_'+viewCode,viewData,1);
+  console.log(viewData)
+  setCookie('view_'+viewCode,JSON.stringify(viewData),1);
  }
