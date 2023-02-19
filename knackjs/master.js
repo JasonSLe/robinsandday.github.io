@@ -3809,7 +3809,6 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
         inputs.eq(i).find('input[type="radio"][value="'+savedData.find(el => el.id === inputs.eq(i).find('input[type="radio"]').eq(0).attr('id')).data+'"]').eq(0).attr('checked','checked');
       }
     }
-
     setCookie('view_'+viewCode,null,1);
   }
  }
