@@ -3814,7 +3814,7 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
   let inputs = $('[id="view_'+viewCode+'"] div[class*="kn-input"]');
   for (let i =0;i<inputs.length;i++){
     if (inputs.eq(i).find('textarea').length>0){
-      viewData.push({id:inputs.eq(i).find('textarea').eq(0).attr('id'),data:inputs.eq(i).find('textarea').eq(0).text()})
+      viewData.push({id:inputs.eq(i).find('textarea').eq(0).attr('id'),data:inputs.eq(i).find('textarea').eq(0).attr('value')})
     } else if (inputs.eq(i).find('input[type="text"]').length>0){
       if (!inputs.eq(i).find('input[type="text"]').eq(0).attr('id')) continue;
       viewData.push({id:inputs.eq(i).find('input[type="text"]').eq(0).attr('id'),data:inputs.eq(i).find('input[type="text"]').eq(0).attr('value')})
