@@ -3777,3 +3777,24 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
     }
   }
 });
+
+$(document).on('knack-view-render.view_3898', function(event, view) { 
+  let photoButton = document.querySelector('div[class*="field_4939"] a')
+  photoButton.onclick = function(){
+    console.log('photoClick');
+    saveViewDataToCookie('2281');
+  }
+ });
+
+ function saveViewDataToCookie(viewCode){
+  let viewData = [];
+  let inputs = $('[id="view_'+viewCode+'"] div[class*="kn-input"]');
+  for (let i =0;i<inputs.length;i++){
+    if (inputs.eq(i).find('textarea').length>0){
+      viewData.push({id:inputs.eq(i).find('textarea').eq(0).attr('id'),data:inputs.eq(i).find('textarea').eq(0).text()})
+    } else if (inputs.eq(i).find('input[type="text"]').length>0){
+      viewData.push({id:inputs.eq(i).find('input[type="text"]').eq(0).attr('id'),data:inputs.eq(i).find('input[type="text"]').eq(0).text()})
+    }
+  }
+  setCookie('view_'+viewCode,viewData,1);
+ }
