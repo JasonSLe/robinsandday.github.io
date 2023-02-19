@@ -3800,6 +3800,7 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
       if (inputs.eq(i).find('textarea').length>0){
         inputs.eq(i).find('textarea').eq(0).text(savedData.find(el => el.id === inputs.eq(i).find('textarea').eq(0).attr('id').data))
       } else if (inputs.eq(i).find('input[type="text"]').length>0){
+        if (!inputs.eq(i).find('input[type="text"]').eq(0).attr('id')) continue;
         inputs.eq(i).find('input[type="text"]').eq(0).attr('value',savedData.find(el => el.id === inputs.eq(i).find('input[type="text"]').eq(0).attr('id').data));
       }
     }
@@ -3815,6 +3816,7 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
     if (inputs.eq(i).find('textarea').length>0){
       viewData.push({id:inputs.eq(i).find('textarea').eq(0).attr('id'),data:inputs.eq(i).find('textarea').eq(0).text()})
     } else if (inputs.eq(i).find('input[type="text"]').length>0){
+      if (!inputs.eq(i).find('input[type="text"]').eq(0).attr('id')) continue;
       viewData.push({id:inputs.eq(i).find('input[type="text"]').eq(0).attr('id'),data:inputs.eq(i).find('input[type="text"]').eq(0).attr('value')})
     }
   }
