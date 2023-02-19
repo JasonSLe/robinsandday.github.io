@@ -3806,7 +3806,7 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
         if (!savedData.find(el => el.id === inputs.eq(i).find('select').eq(0).attr('id'))) continue;
         inputs.eq(i).find('select>option[value="'+savedData.find(el => el.id === inputs.eq(i).find('select').eq(0).attr('id')).data+'"]').eq(0).attr('selected', 'selected');
       } else if (inputs.eq(i).find('input[type="radio"]').length>0){
-        inputs.eq(i).find('input[type="radio"][value="'+savedData.find(el => el.id === inputs.eq(i).find('input[type="radio"]').eq(0).attr('id')).data+'"]').eq(0).attr('checked','checked');
+        inputs.eq(i).find('input[type="radio"][value="'+savedData.find(el => el.id === inputs.eq(i).find('input[type="radio"]').eq(0).attr('name')).data+'"]').eq(0).attr('checked','checked');
       }
     }
     setCookie('view_'+viewCode,null,1);
@@ -3826,7 +3826,7 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
       if (inputs.eq(i).find('select>option[selected]').length<2) continue;
       viewData.push({id:inputs.eq(i).find('select').eq(0).attr('id'),data:inputs.eq(i).find('select>option[selected]').eq(1).attr('value')})
     } else if (inputs.eq(i).find('input[type="radio"]').length>0){
-      viewData.push({id:inputs.eq(i).find('input[type="radio"]').eq(0).attr('id'),data:inputs.eq(i).find('input[type="radio"][checked="checked"]').eq(0).attr('value')})
+      viewData.push({id:inputs.eq(i).find('input[type="radio"]').eq(0).attr('name'),data:inputs.eq(i).find('input[type="radio"][checked="checked"]').eq(0).attr('value')})
     }
   }
   console.log(viewData)
