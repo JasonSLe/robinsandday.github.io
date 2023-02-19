@@ -3787,9 +3787,13 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
  });
 
  $(document).on('knack-view-render.view_2281', function(event, view) { 
-  let savedData = getCookie('view_2281');
-  console.log(savedData);
+  loadViewDataFromCookie('2281')
  });
+
+ function loadViewDataFromCookie(viewCode){
+  let savedData = getCookie('view_'+viewCode);
+  console.log(savedData);
+ }
 
  function saveViewDataToCookie(viewCode){
   let viewData = [];
