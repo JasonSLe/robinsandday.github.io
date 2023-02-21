@@ -1192,11 +1192,6 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
-#view_4052 th span
-{
-  margin: auto !important;
-}
-
 #view_4052 
 {
   margin: auto !important;
