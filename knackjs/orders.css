@@ -1506,6 +1506,12 @@ This removes white spaces from all table headers*/
   	font-weight: bold;
 }
 
+#view_3989 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(7) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 #view_4043 > section > div > div > div > div > div > div > span > a {
   color: #FFFFFF;
   background-color: #FFA100;
