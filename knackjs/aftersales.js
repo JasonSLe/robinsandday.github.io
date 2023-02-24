@@ -572,18 +572,19 @@ $(document).on("knack-scene-render.scene_119", function(event, scene, data) {
     console.log(rData);
   });
 
-  $(document).on('knack-view-render.view_324', function (event, view, data) {
-    function showHideMoreServiceVisits(){
-      let newV = (document.querySelector('.more').style.display==="none"?"":"none");
-      document.querySelectorAll('.more').forEach(function(el) {
-         el.style.display = newV;
-      });
-      if (newV==='none'){
-        document.getElementById("showHideMoreServiceVisits").innerText = "Show more";
-      } else {
-        document.getElementById("showHideMoreServiceVisits").innerText = "Hide more";
-      }
+  function showHideMoreServiceVisits(){
+    let newV = (document.querySelector('.more').style.display==="none"?"":"none");
+    document.querySelectorAll('.more').forEach(function(el) {
+       el.style.display = newV;
+    });
+    if (newV==='none'){
+      document.getElementById("showHideMoreServiceVisits").innerText = "Show more";
+    } else {
+      document.getElementById("showHideMoreServiceVisits").innerText = "Hide more";
     }
+  }
+
+  $(document).on('knack-view-render.view_324', function (event, view, data) {
     if (document.getElementById("showHideMoreServiceVisits")){
       document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
       showHideMoreServiceVisits();

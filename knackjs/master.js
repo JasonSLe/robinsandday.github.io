@@ -3832,3 +3832,15 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
   console.log(viewData)
   setCookie($('input[name="id"]').attr('value')+'_view_'+viewCode,JSON.stringify(viewData),1);
  }
+
+ function showHideMoreServiceVisits(){
+  let newV = (document.querySelector('.more').style.display==="none"?"":"none");
+  document.querySelectorAll('.more').forEach(function(el) {
+     el.style.display = newV;
+  });
+  if (newV==='none'){
+    document.getElementById("showHideMoreServiceVisits").innerText = "Show more";
+  } else {
+    document.getElementById("showHideMoreServiceVisits").innerText = "Hide more";
+  }
+}

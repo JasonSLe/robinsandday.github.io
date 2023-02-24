@@ -2713,3 +2713,15 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     }
   }
 });
+
+function showHideMoreServiceVisits(){
+  let newV = (document.querySelector('.more').style.display==="none"?"":"none");
+  document.querySelectorAll('.more').forEach(function(el) {
+     el.style.display = newV;
+  });
+  if (newV==='none'){
+    document.getElementById("showHideMoreServiceVisits").innerText = "Show more";
+  } else {
+    document.getElementById("showHideMoreServiceVisits").innerText = "Hide more";
+  }
+}
