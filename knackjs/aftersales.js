@@ -428,19 +428,19 @@ function formatScene24(){
 }
 
 let shownTooltipId = null;
-function serviceVisitsTooltips(){
+function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
   //console.log('serviceVisitsTooltips');
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: fixed; display:none;");
   });
-  $('div[id="view_324"]').on("mouseleave", function (e) {
+  $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
     //console.log('HIDE AFTER LEAVE')
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
 
   //console.log('table',$('table[id="serviceVisitsTable"]'));
   //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
-  $('div[id="view_324"]').on("mousemove", function (e) {
+  $('div[id="view_'+viewId+'"]').on("mousemove", function (e) {
       //console.log('on move');
       let partOfTable = document.elementFromPoint(e.pageX, e.pageY - document.documentElement.scrollTop);
       let trUnderMouse = null;
@@ -463,7 +463,7 @@ function serviceVisitsTooltips(){
       }
   });
   setTimeout(function(){
-    $('div[class="field_325"]').show();
+    $('div[class="field_'+fieldId+'"]').show();
   }, 100);
 }
 

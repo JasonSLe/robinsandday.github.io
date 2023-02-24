@@ -2725,3 +2725,43 @@ function showHideMoreServiceVisits(){
     document.getElementById("showHideMoreServiceVisits").innerText = "Hide more";
   }
 }
+
+let shownTooltipId = null;
+function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
+  //console.log('serviceVisitsTooltips');
+  $('div[id*="tooltip"]').each(function(){
+    $(this).attr("style","background: white; position: fixed; display:none;");
+  });
+  $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
+    //console.log('HIDE AFTER LEAVE')
+    $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+  });
+
+  //console.log('table',$('table[id="serviceVisitsTable"]'));
+  //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
+  $('div[id="view_'+viewId+'"]').on("mousemove", function (e) {
+      //console.log('on move');
+      let partOfTable = document.elementFromPoint(e.pageX, e.pageY - document.documentElement.scrollTop);
+      let trUnderMouse = null;
+      if (partOfTable){
+        if (partOfTable.nodeName==='TD'){
+          trUnderMouse = partOfTable.parentElement;
+        }
+        if (partOfTable.nodeName==='TR'){
+          trUnderMouse = partOfTable;
+        }
+      }
+      if (trUnderMouse && trUnderMouse.id){
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
+        //$('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: document.getElementById('serviceVisitsTable').getBoundingClientRect().left-250, top: 50 + document.documentElement.scrollTop });
+        if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
+            $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+        }
+        shownTooltipId = trUnderMouse.id;
+      }
+  });
+  setTimeout(function(){
+    $('div[class="field_'+fieldId+'"]').show();
+  }, 100);
+}
