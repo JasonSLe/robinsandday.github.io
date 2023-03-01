@@ -3884,3 +3884,8 @@ function serviceVisitsTooltips(viewId = '438', fieldId = '8881'){
     $('div[class="field_'+fieldId+'"]').show();
   }, 100);
 }
+
+// Prep Centre - Trigger when Vehicle needs to go to bodyshop
+$(document).on('knack-form-submit.view_3447', function(event, view, data) { 
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/hnq9zq598srvyz2w6wuujzm7kwqpmr1p", {"Record ID":data.id},"Vehicle bodyshop trigger")
+});
