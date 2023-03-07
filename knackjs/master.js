@@ -713,12 +713,12 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
   button0.onclick = function(){
     callPostHttpRequest("https://hook.eu1.make.celonis.com/h9kk9xuetv43pd3h0t7cj11qagwuaz96", {"RecordID":$('input[name="id"]').attr('value'), "View":"2303","filename":filename },"Make Webhook Chate GPT generation");
     button0.disabled = true
+    setTimeout(function() {
+      loadFieldInEditMode(filename,'2303','5343', new Date());
+    }, 10000)
     return false;
   };
   document.getElementById('kn-input-field_5343').appendChild(button0);
-  setTimeout(function() {
-    loadFieldInEditMode(filename,'2303','5343', new Date());
-  }, 10000)
  }
 });
 
@@ -736,12 +736,12 @@ $(document).on('knack-view-render.view_3280', function(event, view) {
    button0.onclick = function(){
      callPostHttpRequest("https://hook.eu1.make.celonis.com/h9kk9xuetv43pd3h0t7cj11qagwuaz96", {"RecordID":$('input[name="id"]').attr('value'), "View":"3280","filename":filename },"Make Webhook Chate GPT generation");
      button0.disabled = true
+     setTimeout(function() {
+      loadFieldInEditMode(filename,'3280','5910', new Date());
+    }, 10000)
      return false;
    };
    document.getElementById('kn-input-field_5910').appendChild(button0);
-   setTimeout(function() {
-     loadFieldInEditMode(filename,'3280','5910', new Date());
-   }, 10000)
   }
  });
 
