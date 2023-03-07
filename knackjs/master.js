@@ -717,18 +717,18 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
   };
   document.getElementById('kn-input-field_5343').appendChild(button0);
   setTimeout(function() {
-    loadFieldInEditMode(filename,'2303','5343');
+    loadFieldInEditMode(filename,'2303','5343', new Date());
   }, 10000)
  }
 });
 
-function loadFieldInEditMode(filename, viewId, fieldId){
+function loadFieldInEditMode(filename, viewId, fieldId, startTime){
   console.log('loadFieldInEditMode', filename)
   let tmp = getHttpRequest('https://generalwebaccesible.s3.eu-west-2.amazonaws.com/'+filename);
   console.log(tmp);
   if (tmp.includes("NoSuchKey")){
     setTimeout(function() {
-      loadFieldInEditMode(filename,viewId,fieldId);
+      loadFieldInEditMode(filename,viewId,fieldId, startTime);
     }, 2500)
   } else {
     console.log('done');
