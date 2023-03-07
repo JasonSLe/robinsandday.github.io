@@ -712,6 +712,7 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
     let timestamp = (new Date()).getTime();
     let filename = $('input[name="id"]').attr('value')+"_"+timestamp.toString();
     callPostHttpRequest("https://hook.eu1.make.celonis.com/h9kk9xuetv43pd3h0t7cj11qagwuaz96", {"RecordID":$('input[name="id"]').attr('value'), "View":"2303","filename":filename },"Make Webhook Chate GPT generation");
+    button0.innerHTML = 'Please wait ... working ...';
     button0.disabled = true
     setTimeout(function() {
       loadFieldInEditMode(filename,'2303','5343', new Date());
@@ -735,6 +736,7 @@ $(document).on('knack-view-render.view_3280', function(event, view) {
     let timestamp = (new Date()).getTime();
     let filename = $('input[name="id"]').attr('value')+"_"+timestamp.toString();
      callPostHttpRequest("https://hook.eu1.make.celonis.com/h9kk9xuetv43pd3h0t7cj11qagwuaz96", {"RecordID":$('input[name="id"]').attr('value'), "View":"3280","filename":filename },"Make Webhook Chate GPT generation");
+     button0.innerHTML = 'Please wait ... working ...';
      button0.disabled = true
      setTimeout(function() {
       loadFieldInEditMode(filename,'3280','5910', new Date());
@@ -762,6 +764,7 @@ function loadFieldInEditMode(filename, viewId, fieldId, startTime){
     let tmpJ = JSON.parse(tmp);
     $('[id="field_'+fieldId+'"]').text(tmpJ.options[0]);
     $('[id="chatGPTButton-'+fieldId+'"]').removeAttr("disabled");
+    $('[id="chatGPTButton-'+fieldId+'"]').html('Regenerate Chat GPT Description');
   }
 }
 
