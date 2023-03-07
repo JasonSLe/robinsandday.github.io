@@ -718,7 +718,7 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
   document.getElementById('kn-input-field_5343').appendChild(button0);
   setTimeout(function() {
     loadFieldInEditMode(filename,'2303','5343');
-  }, 15000)
+  }, 10000)
  }
 });
 
@@ -729,7 +729,7 @@ function loadFieldInEditMode(filename, viewId, fieldId){
   if (tmp.includes("NoSuchKey")){
     setTimeout(function() {
       loadFieldInEditMode(filename,viewId,fieldId);
-    }, 3000)
+    }, 2500)
   } else {
     console.log('done');
     let tmpJ = JSON.parse(tmp);
