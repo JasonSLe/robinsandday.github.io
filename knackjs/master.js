@@ -729,6 +729,7 @@ function loadFieldInEditMode(filename, viewId, fieldId, startTime){
   if (tmp.includes("NoSuchKey")){
     if ((new Date()-startTime)>90000){
       console.log('TOO LONG, STOP');
+      return;
     }
     setTimeout(function() {
       loadFieldInEditMode(filename,viewId,fieldId, startTime);
