@@ -703,7 +703,7 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
 $(document).on('knack-view-render.view_2303', function(event, view) {
  if ($('div[id="kn-input-field_5343"]').length>0){
   let button0 = document.createElement('button');
-  button0.innerHTML = 'Generate Chat GPT Advert';
+  button0.innerHTML = 'Regenerate Chat GPT Description';
   button0.setAttribute("class", "kn-button");
   button0.onclick = function(){
     let token = getTokenFromURL(document.location.href);
