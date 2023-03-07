@@ -723,12 +723,12 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
 });
 
 function loadFieldInEditMode(filename, viewId, fieldId){
-  console.log('loadFieldInEditMode', token)
+  console.log('loadFieldInEditMode', filename)
   let tmp = getHttpRequest('https://generalwebaccesible.s3.eu-west-2.amazonaws.com/'+filename);
   console.log(tmp);
   if (tmp.includes("NoSuchKey")){
     setTimeout(function() {
-      loadFieldInEditMode(token,viewId,fieldId);
+      loadFieldInEditMode(filename,viewId,fieldId);
     }, 5000)
   } else {
     console.log('done');
