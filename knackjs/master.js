@@ -727,6 +727,9 @@ function loadFieldInEditMode(filename, viewId, fieldId, startTime){
   let tmp = getHttpRequest('https://generalwebaccesible.s3.eu-west-2.amazonaws.com/'+filename);
   console.log(tmp);
   if (tmp.includes("NoSuchKey")){
+    if ((new Date()-startTime)>90000){
+      console.log('TOO LONG, STOP');
+    }
     setTimeout(function() {
       loadFieldInEditMode(filename,viewId,fieldId, startTime);
     }, 2500)
