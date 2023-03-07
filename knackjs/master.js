@@ -708,13 +708,16 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
   button0.setAttribute("style","background-color:#ffa100;");
   button0.setAttribute("type","button");
   button0.onclick = function(){
-    let token = getTokenFromURL(document.location.href);
-    //document.location = "https://www.stellantisandyou.co.uk/aftersales#powersupply-orders/?token="+token+"&view_139_page=1&view_139_sort=field_334|desc&view_139_filters=%7B%22match%22%3A%22and%22%2C%22rules%22%3A%5B%7B%22field%22%3A%22field_342%22%2C%22operator%22%3A%22higher%20than%22%2C%22value%22%3A%220%22%2C%22field_name%22%3A%22Total%20Available%20Quantity%22%7D%5D%7D"
+    callPostHttpRequest("https://hook.eu1.make.celonis.com/h9kk9xuetv43pd3h0t7cj11qagwuaz96", {"RecordID":$('input[name="id"]').attr('value'), "View":"2303" },"Make Webhook Chate GPT generation");
     return false;
   };
   document.getElementById('kn-input-field_5343').appendChild(button0)
  }
 });
+
+function loadFieldInEditMode(){
+
+}
 
 
 //******************************** Used Vehicle Quick Edit Advert Work *****************************//
