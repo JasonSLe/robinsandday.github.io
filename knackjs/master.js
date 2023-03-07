@@ -704,11 +704,13 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
  if ($('div[id="kn-input-field_5343"]').length>0){
   let button0 = document.createElement('button');
   button0.innerHTML = 'Regenerate Chat GPT Description';
+  button0.setAttribute("id", "chatGPTButton");
   button0.setAttribute("class", "kn-button");
   button0.setAttribute("style","background-color:#ffa100;");
   button0.setAttribute("type","button");
   button0.onclick = function(){
     callPostHttpRequest("https://hook.eu1.make.celonis.com/h9kk9xuetv43pd3h0t7cj11qagwuaz96", {"RecordID":$('input[name="id"]').attr('value'), "View":"2303" },"Make Webhook Chate GPT generation");
+    button0.disabled = true
     return false;
   };
   document.getElementById('kn-input-field_5343').appendChild(button0)
