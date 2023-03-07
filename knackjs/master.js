@@ -752,8 +752,11 @@ function loadFieldInEditMode(filename, viewId, fieldId, startTime){
   let tmp = getHttpRequest('https://generalwebaccesible.s3.eu-west-2.amazonaws.com/'+filename);
   console.log(tmp);
   if (tmp.includes("NoSuchKey")){
-    if ((new Date()-startTime)>90000){
+    if ((new Date()-startTime)>120000){
       console.log('TOO LONG, STOP');
+      alert('There was a timeout in waiting for Chat GPT response, try again ...');
+      $('[id="chatGPTButton-'+fieldId+'"]').removeAttr("disabled");
+      $('[id="chatGPTButton-'+fieldId+'"]').html('Regenerate Chat GPT Description');
       return;
     }
     setTimeout(function() {
