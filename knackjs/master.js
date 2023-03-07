@@ -713,11 +713,17 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
     button0.disabled = true
     return false;
   };
-  document.getElementById('kn-input-field_5343').appendChild(button0)
+  document.getElementById('kn-input-field_5343').appendChild(button0);
+  setTimeout(function() {
+    loadFieldInEditMode($('input[name="id"]').attr('value'),'2303','5343');
+  }, 4000)
  }
 });
 
-function loadFieldInEditMode(){
+function loadFieldInEditMode(token, viewId, fieldId){
+  console.log('loadFieldInEditMode', token)
+  let tmp = getHttpRequest('https://generalwebaccesible.s3.eu-west-2.amazonaws.com/'+token);
+  console.log(tmp);
 
 }
 
@@ -3379,6 +3385,20 @@ function callPostHttpRequest(url, payloadObject, callName){
   } catch(exception) {
     console.log(exception);
     sendErrorToIntegromat(exception, callName);
+  }
+}
+
+function getHttpRequest(url){
+  try{
+    let commandURL = url ;
+    var rData = $.ajax({
+      url: commandURL,
+      type: 'GET',
+      async: false
+    }).responseText;
+    return rData;
+  } catch(exception) {
+    console.log(exception);
   }
 }
 
