@@ -722,6 +722,29 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
  }
 });
 
+// Chat GPT Integration
+$(document).on('knack-view-render.view_3280', function(event, view) {
+  if ($('div[id="kn-input-field_5910"]').length>0){
+   let timestamp = (new Date()).getTime();
+   let filename = $('input[name="id"]').attr('value')+"_"+timestamp.toString();
+   let button0 = document.createElement('button');
+   button0.innerHTML = 'Regenerate Chat GPT Description';
+   button0.setAttribute("id", "chatGPTButton-5910");
+   button0.setAttribute("class", "kn-button");
+   button0.setAttribute("style","background-color:#ffa100;");
+   button0.setAttribute("type","button");
+   button0.onclick = function(){
+     callPostHttpRequest("https://hook.eu1.make.celonis.com/h9kk9xuetv43pd3h0t7cj11qagwuaz96", {"RecordID":$('input[name="id"]').attr('value'), "View":"3280","filename":filename },"Make Webhook Chate GPT generation");
+     button0.disabled = true
+     return false;
+   };
+   document.getElementById('kn-input-field_5910').appendChild(button0);
+   setTimeout(function() {
+     loadFieldInEditMode(filename,'3280','5910', new Date());
+   }, 10000)
+  }
+ });
+
 function loadFieldInEditMode(filename, viewId, fieldId, startTime){
   console.log('loadFieldInEditMode', filename)
   let tmp = getHttpRequest('https://generalwebaccesible.s3.eu-west-2.amazonaws.com/'+filename);
