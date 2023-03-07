@@ -716,7 +716,7 @@ $(document).on('knack-view-render.view_2303', function(event, view) {
   document.getElementById('kn-input-field_5343').appendChild(button0);
   setTimeout(function() {
     loadFieldInEditMode($('input[name="id"]').attr('value'),'2303','5343');
-  }, 30000)
+  }, 20000)
  }
 });
 
@@ -724,13 +724,14 @@ function loadFieldInEditMode(token, viewId, fieldId){
   console.log('loadFieldInEditMode', token)
   let tmp = getHttpRequest('https://generalwebaccesible.s3.eu-west-2.amazonaws.com/'+token);
   console.log(tmp);
-  if (tmp.contains("NoSuchKey")){
+  if (tmp.includes("NoSuchKey")){
     setTimeout(function() {
       loadFieldInEditMode(token,viewId,fieldId);
-    }, 10000)
+    }, 5000)
   } else {
     console.log('done');
-    
+    let tmpJ = JSON.parse(tmp);
+    $('[id="field_5343"]').text(tmpJ.options[0]);
   }
 }
 
