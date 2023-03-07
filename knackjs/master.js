@@ -737,7 +737,8 @@ function loadFieldInEditMode(filename, viewId, fieldId, startTime){
   } else {
     console.log('done');
     let tmpJ = JSON.parse(tmp);
-    $('[id="field_5343"]').text(tmpJ.options[0]);
+    $('[id="field_'+fieldId+'"]').text(tmpJ.options[0]);
+    $('[id="chatGPTButton-'+fieldId+'"]').removeAttr("disabled");
   }
 }
 
