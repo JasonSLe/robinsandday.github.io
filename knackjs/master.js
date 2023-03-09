@@ -518,6 +518,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     todayS = todayS.toDateString();
     var versionRefreshTimeS = new Date(parseInt(versionRefreshTime));
     versionRefreshTimeS = versionRefreshTimeS.toDateString();
+    console.log('versionRefreshTimeS',versionRefreshTimeS,'todayS',todayS);
     if (todayS!==versionRefreshTimeS){
       console.log('first day');
       createCookie('RDDigitalVersionRefreshTime',Date.now(),1);
