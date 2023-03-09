@@ -512,6 +512,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   var versionRefreshTime = readCookie('RDDigitalVersionRefreshTime');
   console.log('versionRefreshTime',versionRefreshTime);
   if (!versionRefreshTime){
+    console.log('create cookie');
     createCookie('RDDigitalVersionRefreshTime',Date.now(),1);
   } else {
     var todayS = new Date(Date.now());
