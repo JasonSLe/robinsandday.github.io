@@ -1380,7 +1380,7 @@ function createCookie(name, value, days) {
     if (days) {
         var date = new Date();
         date.setDate(date.getDate() + days); 
-        date.setHours(0);
+        date.setHours(0,0,0,0);
         expires = "; expires=" + date.toGMTString();
     } else {
         expires = "";
