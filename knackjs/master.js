@@ -510,6 +510,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   
   //version check every day
   var versionRefreshTime = readCookie('RDDigitalVersionRefreshTime');
+  console.log('versionRefreshTime',versionRefreshTime);
   if (!versionRefreshTime){
     createCookie('RDDigitalVersionRefreshTime',Date.now(),1);
   } else {
