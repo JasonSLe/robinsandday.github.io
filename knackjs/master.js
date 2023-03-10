@@ -518,8 +518,10 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   let today = new Date();
   let isToday = (today.toDateString() == dateTimeOfFirstRun.toDateString());
   if (!isToday){
+    dateTimeOfFirstRun = new Date();
     window.location.reload(false);
   }
+  /*
   var versionRefreshTime = readCookie('RDDigitalVersionRefreshTime');
   console.log('versionRefreshTime',versionRefreshTime);
   if (!versionRefreshTime){
@@ -537,7 +539,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       window.location.reload(false);
     }
   }
-  
+  */
    //***************************************************************************************************************
 //****** Hynek's Code to check Browser Is not IE. If it is, it will redirct user to different page. Added 01/12/2020 
 // *****************************************************************************************************************
