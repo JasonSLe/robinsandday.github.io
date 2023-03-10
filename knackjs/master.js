@@ -515,6 +515,11 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     dateTimeOfFirstRun = new Date();
   }
   console.log('dateTimeOfFirstRun',dateTimeOfFirstRun);
+  let today = new Date();
+  let isToday = (today.toDateString() == dateTimeOfFirstRun.toDateString());
+  if (!isToday){
+    window.location.reload(false);
+  }
   var versionRefreshTime = readCookie('RDDigitalVersionRefreshTime');
   console.log('versionRefreshTime',versionRefreshTime);
   if (!versionRefreshTime){
@@ -528,7 +533,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     console.log('versionRefreshTimeS',versionRefreshTimeS,'todayS',todayS);
     if (todayS!==versionRefreshTimeS){
       console.log('first day');
-      createCookie('RDDigitalVersionRefreshTime',Date.now(),5);
+      createCookie('RDDigitalVersionRefreshTime',Date.now(),1);
       window.location.reload(false);
     }
   }
