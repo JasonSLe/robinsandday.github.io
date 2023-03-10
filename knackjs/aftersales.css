@@ -2385,3 +2385,7 @@ p.speech-bubble-inbound:before {
   left: -19px;
   top: 6px;
 }
+
+#view_1176 th span {
+  margin: auto !important;
+}
