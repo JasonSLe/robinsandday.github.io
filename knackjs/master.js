@@ -424,6 +424,8 @@ var toggleHeaderVisibility = function(toWhatState = null) {
     }
 }
 
+var dateTimeOfFirstRun = null;
+
 $(document).on('knack-scene-render.any', function(event, scene) {
   console.log('knack-scene-render.any')
 
@@ -509,11 +511,15 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     }
   
   //version check every day
+  if (!dateTimeOfFirstRun){
+    dateTimeOfFirstRun = new Date();
+  }
+  console.log('dateTimeOfFirstRun',dateTimeOfFirstRun);
   var versionRefreshTime = readCookie('RDDigitalVersionRefreshTime');
   console.log('versionRefreshTime',versionRefreshTime);
   if (!versionRefreshTime){
     console.log('create cookie');
-    createCookie('RDDigitalVersionRefreshTime',Date.now(),5);
+    createCookie('RDDigitalVersionRefreshTime',Date.now(),1);
   } else {
     var todayS = new Date(Date.now());
     todayS = todayS.toDateString();
