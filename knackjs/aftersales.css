@@ -589,6 +589,15 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	text-align: center;
 }
 
+#view_1563 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > h2 > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 24px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
 
 /* Aftersales Customer and Vehicle Lookup Summary */
 
