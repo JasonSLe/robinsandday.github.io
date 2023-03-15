@@ -2106,7 +2106,7 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
             callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042},"trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button");
           };
         };
-        currentRow.children[4].onclick = createClickHandler(currentRow);
+        currentRow.children[3].onclick = createClickHandler(currentRow);
       }
     }
 	});
