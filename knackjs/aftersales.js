@@ -2049,3 +2049,27 @@ $(document).on('knack-form-submit.view_1556', function(event, view, data)
     }}
 });
 
+//Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_1516
+$(document).on('knack-form-submit.view_1516', function(event, view, data)
+	       { 
+    
+ if (data.field_2042 === "No")	
+ { try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556 ");
+    }}
+});
+
+
