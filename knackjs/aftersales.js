@@ -2006,7 +2006,8 @@ $(document).on('knack-form-submit.view_1530', function(event, view, data) {
 //Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556
 $(document).on('knack-form-submit.view_1556', function(event, view, data) { 
     
-    try{
+ if (data.field_2042_raw == false)	
+ { try{
         
 
         let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
@@ -2021,5 +2022,6 @@ $(document).on('knack-form-submit.view_1556', function(event, view, data) {
         }).responseText;
     }catch(exception){
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556 ");
-    }
+    }}
 });
+
