@@ -2095,8 +2095,8 @@ $(document).on('knack-form-submit.view_654', function(event, view, data) {
 //trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button
 $(document).on('knack-view-render.view_1512', function (event, view, data) {
 
-	    if ($('div[class="kn-view kn-table view_1512"]')){
-      let rows = $('div[class="kn-view kn-table view_1512"] table tr');
+	    if ($('div[class="kn-table kn-view view_1512"]')){
+      let rows = $('div[class="kn-table kn-view view_1512"] table tr');
       for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
         const createClickHandler = function(row) {
