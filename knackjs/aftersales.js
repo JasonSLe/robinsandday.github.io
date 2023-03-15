@@ -2021,7 +2021,7 @@ $(document).on('knack-form-submit.view_1564', function(event, view, data) {
             async: false
         }).responseText;
     }catch(exception){
-        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556 ");
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564");
     }}
 });
 
@@ -2065,7 +2065,7 @@ $(document).on('knack-form-submit.view_1516', function(event, view, data) {
             async: false
         }).responseText;
     }catch(exception){
-        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556 ");
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_1516");
     }}
 });
 
@@ -2088,6 +2088,6 @@ $(document).on('knack-form-submit.view_654', function(event, view, data) {
             async: false
         }).responseText;
     }catch(exception){
-        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556 ");
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654");
     }}
 });
