@@ -2002,3 +2002,24 @@ $(document).on('knack-form-submit.view_1530', function(event, view, data) {
 $(document).on('knack-form-submit.view_1530', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/3b7aqxlblay6r5egi5rev56ql8qiy4g2", {"Record ID":data.id},"Aftersales VR Update SMS Two Way")
 });
+
+//Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556
+$(document).on('knack-form-submit.view_1556', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556 ");
+    }
+});
