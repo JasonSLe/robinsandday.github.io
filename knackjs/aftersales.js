@@ -2006,12 +2006,12 @@ $(document).on('knack-form-submit.view_1530', function(event, view, data) {
 //Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556
 $(document).on('knack-form-submit.view_1556', function(event, view, data) { 
     
- if (data.field_2042.raw != true)	
+ if (data.field_2042_raw != true)	
  { try{
         
 
         let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
-        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042});
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042_raw});
 
         var rData = $.ajax({
             url: commandURL,
