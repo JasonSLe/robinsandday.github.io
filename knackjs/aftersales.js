@@ -2091,3 +2091,22 @@ $(document).on('knack-form-submit.view_654', function(event, view, data) {
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654");
     }}
 });
+
+//trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button
+$(document).on('knack-view-render.view_1512', function (event, view, data) {
+
+	    if ($('div[class="kn-view kn-table view_1512"]')){
+      let rows = $('div[class="kn-view kn-table view_1512"] table tr');
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042},"trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button");
+          };
+        };
+        currentRow.children[5].onclick = createClickHandler(currentRow);
+      }
+    }
+	});
