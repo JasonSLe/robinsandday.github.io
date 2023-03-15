@@ -2006,7 +2006,7 @@ $(document).on('knack-form-submit.view_1530', function(event, view, data) {
 //Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556
 $(document).on('knack-form-submit.view_1556', function(event, view, data) { 
     
- if (data.field_2042 != true)	
+ if (data.field_2042.raw != true)	
  { try{
         
 
