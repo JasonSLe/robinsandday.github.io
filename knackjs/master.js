@@ -793,7 +793,7 @@ function loadFieldInEditMode(filename, viewId, fieldId, startTime){
       sel0.onchange = function(){
         let dropdown = document.getElementById("chatGPTSelect-"+fieldId);
         let selectedIndex = dropdown.selectedIndex;
-        $('[id="field_'+fieldId+'"]').text(dropdown.options[selectedIndex].text);
+        $('[id="field_'+fieldId+'"]').text(dropdown.options[selectedIndex].value);
       }
       document.getElementById('kn-input-field_'+fieldId).appendChild(sel0);
     }
