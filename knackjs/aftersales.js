@@ -2002,3 +2002,124 @@ $(document).on('knack-form-submit.view_1530', function(event, view, data) {
 $(document).on('knack-form-submit.view_1530', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/3b7aqxlblay6r5egi5rev56ql8qiy4g2", {"Record ID":data.id},"Aftersales VR Update SMS Two Way")
 });
+
+//Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564
+$(document).on('knack-form-submit.view_1564', function(event, view, data) { 
+    
+ if (data.field_2042 === "No")	 {
+	 try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564");
+    }}
+});
+
+//Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556
+$(document).on('knack-form-submit.view_1556', function(event, view, data)  { 
+    
+ if (data.field_2042 === "No")	
+ { try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556 ");
+    }}
+});
+
+//Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_1516
+$(document).on('knack-form-submit.view_1516', function(event, view, data) { 
+    
+ if (data.field_2042 === "No")	
+ { try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_1516");
+    }}
+});
+
+
+//Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654
+$(document).on('knack-form-submit.view_654', function(event, view, data) { 
+    
+ if (data.field_2042 === "No")	
+ { try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654");
+    }}
+});
+
+/*trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button
+$(document).on('knack-view-render.view_1512', function (event, view, data) {
+
+	    if ($('div[class="kn-table kn-view view_1512"]')){
+      let rows = $('div[class="kn-table kn-view view_1512"] table tr');
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042},"trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button");
+          };
+        };
+        currentRow.children[4].onclick = createClickHandler(currentRow);
+      }
+    }
+	});
+*/
+// trigger to Send Data When Vehicle Is Checked Out From Customer Satisfaction check
+
+$(document).on('knack-form-submit.view_307', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.id, "WIP":data.field_719, "POS":data.field_720},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+});
+
+// trigger to Send Data When Vehicle Is Checked Out From Customer Satisfaction check (sms)
+
+$(document).on('knack-form-submit.view_318', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+});
+
