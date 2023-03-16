@@ -2092,7 +2092,7 @@ $(document).on('knack-form-submit.view_654', function(event, view, data) {
     }}
 });
 
-//trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button
+/*trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button
 $(document).on('knack-view-render.view_1512', function (event, view, data) {
 
 	    if ($('div[class="kn-table kn-view view_1512"]')){
@@ -2110,3 +2110,5 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
       }
     }
 	});
+*/
+
