@@ -784,6 +784,17 @@ function loadFieldInEditMode(filename, viewId, fieldId, startTime){
     $('[id="field_'+fieldId+'"]').text(tmpJ.options[0]);
     $('[id="chatGPTButton-'+fieldId+'"]').removeAttr("disabled");
     $('[id="chatGPTButton-'+fieldId+'"]').html('Regenerate Chat GPT Description');
+    if(tmpJ.options.length>1){
+      let sel0 = document.createElement('select');
+      sel0.setAttribute("id", "chatGPTSelect-"+fieldId);
+      sel0.options[sel0.options.length] = new Option('Option 1', tmpJ.options[0]);
+      sel0.options[sel0.options.length] = new Option('Option 2', tmpJ.options[1]);
+      sel0.options[sel0.options.length] = new Option('Option 3', tmpJ.options[2]);
+      sel0.onchange = function(){
+        alert('a');
+      }
+      document.getElementById('kn-input-field_'+fieldId).appendChild(sel0);
+    }
   }
 }
 
