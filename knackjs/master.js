@@ -787,11 +787,12 @@ function loadFieldInEditMode(filename, viewId, fieldId, startTime){
     if(tmpJ.options.length>1){
       let sel0 = document.createElement('select');
       sel0.setAttribute("id", "chatGPTSelect-"+fieldId);
-      sel0.options[sel0.options.length] = new Option('Option 1', tmpJ.options[0]);
-      sel0.options[sel0.options.length] = new Option('Option 2', tmpJ.options[1]);
-      sel0.options[sel0.options.length] = new Option('Option 3', tmpJ.options[2]);
+      for (let i = 0;i<tmpJ.options.length;i++){
+        sel0.options[sel0.options.length] = new Option('Option '+ (i+1), tmpJ.options[i]);
+      }
       sel0.onchange = function(){
         let dropdown = document.getElementById("chatGPTSelect-"+fieldId);
+        let selectedIndex = dropdown.selectedIndex;
         $('[id="field_'+fieldId+'"]').text(dropdown.options[selectedIndex].text);
       }
       document.getElementById('kn-input-field_'+fieldId).appendChild(sel0);
