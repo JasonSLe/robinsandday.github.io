@@ -2002,7 +2002,7 @@ $(document).on('knack-form-submit.view_1530', function(event, view, data) {
 // Trigger Update To VR (Virtual Reception) Status From SMS Messaging Form
 
 $(document).on('knack-form-submit.view_1530', function(event, view, data) {
-  callPostHttpRequest("https://hook.integromat.com/3b7aqxlblay6r5egi5rev56ql8qiy4g2", {"Record ID":data.id,"Outbound Message":data.field_1522},"Aftersales VR Update SMS Two Way")
+  callPostHttpRequest("https://hook.integromat.com/3b7aqxlblay6r5egi5rev56ql8qiy4g2", {"Record ID":data.id,"Outbound Message":data.field_2123},"Aftersales VR Update SMS Two Way")
 });
 
 //Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564
