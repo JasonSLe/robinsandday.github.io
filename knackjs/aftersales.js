@@ -1912,8 +1912,8 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
     sceneRefresh(refreshData);
   });
 
-  //Wip Management tigger for vehicle on site
-  $(document).on('knack-view-render.view_1512', function (event, view, data) {
+//Wip Management tigger for vehicle on site
+$(document).on('knack-view-render.view_1512', function (event, view, data) {
 	  
     //This part is for column headers
     //Column header
@@ -1936,8 +1936,16 @@ $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
             callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":cell, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
           };
         };
+        const createClickHandler2 = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell});
+          };
+        };
         if (currentRow.id!==''){
           currentRow.children[4].onclick = createClickHandler(currentRow);
+          currentRow.children[3].onclick = createClickHandler2(currentRow);
         }
       }
     }
