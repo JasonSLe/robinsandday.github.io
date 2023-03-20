@@ -544,6 +544,25 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 		
 }
 
+/* Manager Tour Menu */
+
+#view_1571 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_1571 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+
 #kn-scene_105 > div.view-group.view-group-4 > div:nth-child(1) {
 	border: 1px solid #CCCCCC;
 	border-radius: 10px;
