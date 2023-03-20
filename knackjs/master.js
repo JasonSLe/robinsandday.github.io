@@ -3523,6 +3523,29 @@ $(document).on('knack-scene-render.scene_1119', function(event, scene) {
   $('div[id="kn-input-field_7561"]>div[class="control"]').attr('id','outerDiv');
 });
 
+// USED STOCK WRITE DOWN
+
+//**Used Stock Write Down - CAP Clean Value Added Manually - Check IF Write Down Required
+$(document).on('knack-form-submit.view_6148', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.eu1.make.celonis.com/594r2lsfx61t7qlgh7jxq1hocdhanecs";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Used Stock Write Down - CAP Clean Value Added Manually - Check IF Write Down Required");
+    }
+});
+
+
 // PHYSICAL STOCK AUDIT
 
 //**Physical Stock Audit - List of Vehicles for Dealer Location Submitted
