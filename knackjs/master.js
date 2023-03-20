@@ -3565,6 +3565,26 @@ $(document).on('knack-form-submit.view_5231', function(event, view, data) {
     }
 });
 
+//**Physical Stock Audit - Mark Review Complete - Email GM/DA for Summary Sheet Sign Off
+$(document).on('knack-form-submit.view_5511', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.eu1.make.celonis.com/h6huoxyagtg2n1181za2woix2bxyvin3";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Physical Stock Audit - Mark Review Complete - Email GM/DA for Summary Sheet Sign Off");
+    }
+});
+
 // Refresh the table on Physical Stock Audit Page        
 
 
