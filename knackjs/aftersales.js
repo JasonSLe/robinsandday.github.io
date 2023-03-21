@@ -2167,3 +2167,35 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
    // $('th[class="field_381"]').addClass('tooltip-bottom')
   }); 
 
+//hover field for Digital Adoption QC elements
+  $(document).on('knack-view-render.view_890', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_1552"]').hide();
+    $('td[class*="field_1552"]').hide();
+    $('th[class="field_2145"]').hide();
+    $('td[class*="field_2145"]').hide(); 
+    $('th[class="field_2156"]').hide();
+    $('td[class*="field_2156"]').hide(); 	
+	  
+    $('div[id="view_890"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_2051"]').attr('data-tooltip',getFieldForRowID('view_890','field_1552',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_2051"]').addClass('tooltip-top');
+	    
+      $(this).find('td[data-field-key="field_2146"]').attr('data-tooltip',getFieldForRowID('view_890','field_2145',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_2146"]').addClass('tooltip-top');
+	    
+      $(this).find('td[data-field-key="field_2157"]').attr('data-tooltip',getFieldForRowID('view_890','field_2156',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_2157"]').addClass('tooltip-top');	    
+	    
+    });
+    //end
+
+    //This part is for column headers
+    //Column headers
+    $('th[class="field_2051"]').attr('title','QC vs Predicted');
+    $('th[class="field_2157"]').attr('title','QC Vs Invoiced Internal & Warranty Jobs')
+   // $('th[class="field_381"]').addClass('tooltip-bottom')
+  }); 
