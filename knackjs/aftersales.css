@@ -729,12 +729,28 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 #view_417 > div > a.kn-link.kn-link-8.kn-button {
-	background-color: #2ab27b;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_417 > div > a:hover.kn-link.kn-link-8.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_417 > div > a.kn-link.kn-link-9.kn-button {
+	background-color: #2ab27b;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_417 > div > a:hover.kn-link.kn-link-9.kn-button {
 	background-color: #308965;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -856,13 +872,30 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-width: 2px;
   	border-color: #FFFFFF;
 }
+
 #view_416 > div > a.kn-link.kn-link-8.kn-button {
-	background-color: #2ab27b;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_416 > div > a:hover.kn-link.kn-link-8.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_416 > div > a.kn-link.kn-link-9.kn-button {
+	background-color: #2ab27b;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_416 > div > a:hover.kn-link.kn-link-9.kn-button {
 	background-color: #308965;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -985,13 +1018,30 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-width: 2px;
   	border-color: #FFFFFF;
 }
+
 #view_419 > div > a.kn-link.kn-link-8.kn-button {
-	background-color: #2ab27b;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_419 > div > a:hover.kn-link.kn-link-8.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_419 > div > a.kn-link.kn-link-9.kn-button {
+	background-color: #2ab27b;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_419 > div > a:hover.kn-link.kn-link-9.kn-button {
 	background-color: #308965;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1001,11 +1051,6 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 		
 }
-
-
-
-
-
 
 /* Aftersales Check Out Section */
 
@@ -1119,13 +1164,30 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-width: 2px;
   	border-color: #FFFFFF;
 }
+
 #view_420 > div > a.kn-link.kn-link-8.kn-button {
-	background-color: #2ab27b;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_420 > div > a:hover.kn-link.kn-link-8.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_420 > div > a.kn-link.kn-link-9.kn-button {
+	background-color: #2ab27b;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_420 > div > a:hover.kn-link.kn-link-9.kn-button {
 	background-color: #308965;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1411,13 +1473,30 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-width: 2px;
   	border-color: #FFFFFF;
 }
+
 #view_421 > div > a.kn-link.kn-link-8.kn-button {
-	background-color: #2ab27b;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_421 > div > a:hover.kn-link.kn-link-8.kn-button {
+	background-color: #D18400;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
+#view_421 > div > a.kn-link.kn-link-9.kn-button {
+	background-color: #2ab27b;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_421 > div > a:hover.kn-link.kn-link-9.kn-button {
 	background-color: #308965;
   	color: #FFFFFF;
   	font-weight: bold;
