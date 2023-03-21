@@ -2148,10 +2148,10 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     });
     //end
 
-    /*This part is for column headers
+    //This part is for column headers
     //Column headers
-    $('th[class="field_380"]').attr('title','This is the location of the Parts Warehouse');
-    $('th[class="field_381"]').attr('data-tooltip','Quantity and part number on backorder');
-    $('th[class="field_381"]').addClass('tooltip-bottom')
-  }); */
+    $('th[class="field_2050"]').attr('title','QC vs Predicted');
+    $('th[class="field_2155"]').attr('data-tooltip','QC Vs Invoiced Internal & Warranty Jobs')
+   // $('th[class="field_381"]').addClass('tooltip-bottom')
+  }); 
 
