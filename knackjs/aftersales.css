@@ -528,25 +528,12 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 #view_300 > div > a.kn-link.kn-link-9.kn-button {
-	background-color: #2ab27b;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_300 > div > a:hover.kn-link.kn-link-9.kn-button {
-	background-color: #308965;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
-  	border-width: 2px;
-  	border-color: #FFFFFF;
-		
-}
-
-/* Manager Tour Menu */
-
-#view_1571 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -556,12 +543,22 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
-#view_1571 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #FFA100;
+#view_300 > div > a.kn-link.kn-link-10.kn-button {
+	background-color: #2ab27b;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
+#view_300 > div > a:hover.kn-link.kn-link-10.kn-button {
+	background-color: #308965;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+		
+}
 
 #kn-scene_105 > div.view-group.view-group-4 > div:nth-child(1) {
 	border: 1px solid #CCCCCC;
