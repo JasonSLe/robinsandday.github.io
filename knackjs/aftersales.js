@@ -2215,7 +2215,7 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     $('th[class="field_2162"]').hide();
     $('td[class*="field_2162"]').hide(); 	
 	  
-    $('div[id="view_890"] table>tbody>tr').each(function(){
+    $('div[id="view_924"] table>tbody>tr').each(function(){
       $(this).find('td[data-field-key="field_2141"]').attr('data-tooltip',getFieldForRowID('view_924','field_1580',$(this).attr('id')));
       $(this).find('td[data-field-key="field_2141"]').addClass('tooltip-top');
 	    
