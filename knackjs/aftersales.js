@@ -2152,7 +2152,7 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
       $(this).find('td[data-field-key="field_2050"]').addClass('tooltip-top');
 	    
       $(this).find('td[data-field-key="field_2149"]').attr('data-tooltip',getFieldForRowID('view_888','field_2150',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_2149"]').addClass('tooltip-top');
+      $(this).find('td[data-field-key="field_2149"]').addClass('tooltip-left');
 	    
       $(this).find('td[data-field-key="field_2155"]').attr('data-tooltip',getFieldForRowID('view_888','field_2154',$(this).attr('id')));
       $(this).find('td[data-field-key="field_2155"]').addClass('tooltip-top');	    
