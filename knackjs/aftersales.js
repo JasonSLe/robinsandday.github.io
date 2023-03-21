@@ -2164,7 +2164,7 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     //Column headers
     $('th[class="field_2050"]').attr('title','QC vs Predicted');
     $('th[class="field_2155"]').attr('title','QC Vs Invoiced Internal & Warranty Jobs')
-   // $('th[class="field_381"]').addClass('tooltip-bottom')
+    $('th[class="field_2149"]').attr('title','Failed Vs Total Completed')
   }); 
 
 //hover field for Digital Adoption QC elements
@@ -2197,5 +2197,6 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     //Column headers
     $('th[class="field_2051"]').attr('title','QC vs Predicted');
     $('th[class="field_2157"]').attr('title','QC Vs Invoiced Internal & Warranty Jobs')
+    $('th[class="field_2146"]').attr('title','Failed Vs Total Completed')
    // $('th[class="field_381"]').addClass('tooltip-bottom')
   }); 
