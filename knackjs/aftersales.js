@@ -2133,3 +2133,20 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
 });
 
+
+//hover field for Digital Adoption QC elements
+  $(document).on('knack-view-render.view_888', function (event, view, data) {
+    $('td[class="field_2050"]').each(function(){$(this).text($(this).text().trim().substr(0,6)+$(this).text().trim().substr(8,2));});
+
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_1566"]').hide();
+    $('td[class*="field_1566"]').hide();
+    $('div[id="view_888"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_2050"]').attr('data-tooltip',getFieldForRowID('view_888','field_2050',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_2050"]').addClass('tooltip-right');
+    });
+    //end
+	  
