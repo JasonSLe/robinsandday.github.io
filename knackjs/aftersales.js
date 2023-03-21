@@ -2142,8 +2142,8 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     //start
     $('th[class="field_1566"]').hide();
     $('td[class*="field_1566"]').hide();
-    $('th[class="field_2149"]').hide();
-    $('td[class*="field_2149"]').hide(); 
+    $('th[class="field_2150"]').hide();
+    $('td[class*="field_2150"]').hide(); 
     $('th[class="field_2154"]').hide();
     $('td[class*="field_2154"]').hide(); 	
 	  
@@ -2151,8 +2151,8 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
       $(this).find('td[data-field-key="field_2050"]').attr('data-tooltip',getFieldForRowID('view_888','field_1566',$(this).attr('id')));
       $(this).find('td[data-field-key="field_2050"]').addClass('tooltip-top');
 	    
-      $(this).find('td[data-field-key="field_2150"]').attr('data-tooltip',getFieldForRowID('view_888','field_2149',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_2150"]').addClass('tooltip-top');
+      $(this).find('td[data-field-key="field_2149"]').attr('data-tooltip',getFieldForRowID('view_888','field_2150',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_2149"]').addClass('tooltip-top');
 	    
       $(this).find('td[data-field-key="field_2155"]').attr('data-tooltip',getFieldForRowID('view_888','field_2154',$(this).attr('id')));
       $(this).find('td[data-field-key="field_2155"]').addClass('tooltip-top');	    
