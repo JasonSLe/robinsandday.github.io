@@ -2148,5 +2148,5 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
       $(this).find('td[data-field-key="field_380"]').attr('data-tooltip',getFieldForRowID('view_139','field_330',$(this).attr('id')));
       $(this).find('td[data-field-key="field_380"]').addClass('tooltip-right');
     });
-    //end
+    //end*/
 	  
