@@ -2134,7 +2134,7 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
 });
 
 
-//hover field for Digital Adoption QC elements
+/*hover field for Digital Adoption QC elements
   $(document).on('knack-view-render.view_888', function (event, view, data) {
     //$('td[class="field_334"]').each(function(){$(this).text($(this).text().trim().substr(0,6)+$(this).text().trim().substr(8,2));});
 
@@ -2149,4 +2149,5 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
       $(this).find('td[data-field-key="field_2050"]').addClass('tooltip-right');
     });
     //end
-	  
+	  */ 
+
