@@ -3523,6 +3523,29 @@ $(document).on('knack-scene-render.scene_1119', function(event, scene) {
   $('div[id="kn-input-field_7561"]>div[class="control"]').attr('id','outerDiv');
 });
 
+// USED STOCK WRITE DOWN
+
+//**Used Stock Write Down - CAP Clean Value Added Manually - Check IF Write Down Required
+$(document).on('knack-form-submit.view_6148', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.eu1.make.celonis.com/594r2lsfx61t7qlgh7jxq1hocdhanecs";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Used Stock Write Down - CAP Clean Value Added Manually - Check IF Write Down Required");
+    }
+});
+
+
 // PHYSICAL STOCK AUDIT
 
 //**Physical Stock Audit - List of Vehicles for Dealer Location Submitted
@@ -3562,6 +3585,26 @@ $(document).on('knack-form-submit.view_5231', function(event, view, data) {
         }).responseText;
     }catch(exception){
         sendErrorToIntegromat(exception, "Physical Stock Audit - Mark Audit Complete Awaiting Review - Trigger Check for Previous Audit Comments");
+    }
+});
+
+//**Physical Stock Audit - Mark Review Complete - Email GM/DA for Summary Sheet Sign Off
+$(document).on('knack-form-submit.view_5511', function(event, view, data) { 
+    
+    try{
+        
+        let commandURL = "https://hook.eu1.make.celonis.com/h6huoxyagtg2n1181za2woix2bxyvin3";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Physical Stock Audit - Mark Review Complete - Email GM/DA for Summary Sheet Sign Off");
     }
 });
 
