@@ -1940,7 +1940,7 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
           return function() {
             var cell = row.id;
             console.log('cell',cell);
-            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell});
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell,"WIP":row.querySelector('td[data-field-key="field_441"]').innerText,"POS":row.querySelector('td[data-field-key="field_443"]').innerText});
           };
         };
         if (currentRow.id!==''){
