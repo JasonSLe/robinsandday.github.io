@@ -1925,6 +1925,11 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
 	  $('th[class="field_1111"]').attr('title','No of Days Since Checked In');
 
     if ($('div[class="kn-table kn-view view_1512"]')){
+      $('td[class="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
       let rows = $('div[class="kn-table kn-view view_1512"] table tr');
       console.log('rows',rows.length);
       for (i = 1; i < rows.length; i++) {
