@@ -3991,6 +3991,13 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
   setCookie($('input[name="id"]').attr('value')+'_view_'+viewCode,JSON.stringify(viewData),1);
  }
 
+ $(document).on('knack-view-render.view_438', function (event, view, data) {
+  if (document.getElementById("showHideMoreServiceVisits")){
+    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
+    showHideMoreServiceVisits();
+  }
+});
+
  function showHideMoreServiceVisits(){
   let newV = (document.querySelector('.more').style.display==="none"?"":"none");
   document.querySelectorAll('.more').forEach(function(el) {
