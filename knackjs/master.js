@@ -3996,6 +3996,7 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
     document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
     showHideMoreServiceVisits();
   }
+  $('div[class="field_8881"]').hide();
   serviceVisitsTooltips('438','8881');
 });
 
