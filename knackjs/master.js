@@ -4024,40 +4024,6 @@ function serviceVisitsTooltips(viewId = '438', fieldId = '8881'){
     //console.log('HIDE AFTER LEAVE')
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
-
-// AUTOLINE SERVICE HISTORY HIDE/SHOW AND TOOLTIPS HOVER FUNCTION FOR USED VEHICLE CHECK IN
-
- $(document).on('knack-view-render.view_6020', function (event, view, data) {
-  if (document.getElementById("showHideMoreServiceVisits")){
-    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
-    showHideMoreServiceVisits();
-  }
-  $('div[class="field_8882"]').hide();
-  serviceVisitsTooltips('6020','8882');
-});
-
- function showHideMoreServiceVisits(){
-  let newV = (document.querySelector('.more').style.display==="none"?"":"none");
-  document.querySelectorAll('.more').forEach(function(el) {
-     el.style.display = newV;
-  });
-  if (newV==='none'){
-    document.getElementById("showHideMoreServiceVisits").innerText = "Show more";
-  } else {
-    document.getElementById("showHideMoreServiceVisits").innerText = "Hide more";
-  }
-}
-
-let shownTooltipId = null;
-function serviceVisitsTooltips(viewId = '6020', fieldId = '8882'){
-  //console.log('serviceVisitsTooltips');
-  $('div[id*="tooltip"]').each(function(){
-    $(this).attr("style","background: white; position: fixed; display:none;");
-  });
-  $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
-    //console.log('HIDE AFTER LEAVE')
-    $('div[id="tooltip_'+shownTooltipId+'"]').hide();
-  });
 	
   //console.log('table',$('table[id="serviceVisitsTable"]'));
   //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
