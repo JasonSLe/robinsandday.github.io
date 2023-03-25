@@ -3993,7 +3993,16 @@ $(document).on('knack-view-render.view_3898', function(event, view) {
 
 // AUTOLINE SERVICE HISTORY HIDE/SHOW AND TOOLTIPS HOVER FUNCTION FOR PX APPRAISALS
 
- $(document).on('knack-view-render.view_438', function (event, view, data) {
+ $(document).on('knack-view-render.view_6020', function (event, view, data) {
+  if (document.getElementById("showHideMoreServiceVisits")){
+    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
+    showHideMoreServiceVisits();
+  }
+  $('div[class="field_8882"]').hide();
+  serviceVisitsTooltips('6020','8882');
+});
+
+$(document).on('knack-view-render.view_438', function (event, view, data) {
   if (document.getElementById("showHideMoreServiceVisits")){
     document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
     showHideMoreServiceVisits();
