@@ -3887,7 +3887,7 @@ $(document).on('knack-view-render.view_2277', function (event, view, data) {
       url: 'https://7rhnwcwqj9ap.runs.apify.net/photoCheck',
       type: 'POST',
       contentType: 'application/json',
-      data: JSON.stringify({imageUrl:$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery'),recordId:$('input[name="id"]').attr('value')}),
+      data: JSON.stringify({imageUrl:$('div[class*="field_4944_thumb_100"] img').attr('data-kn-img-gallery'),recordId:$('input[name="id"]').attr('value')}),
     })
   }
 });
