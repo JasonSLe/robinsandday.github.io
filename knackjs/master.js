@@ -3894,16 +3894,17 @@ $(document).on('knack-view-render.view_2277', function (event, view, data) {
 });
 
 $(document).on('knack-view-render.view_6157', function (event, view, data) {
-  /*setTimeout(function(){
+  window.setTimeout(function(){
     keepRefeshingView('6157', true)
-  }, 1000);*/
+  }, 5000);
 });
 
-function keepRefeshingView(viewId, reload){
+function keepRefeshingView(viewId, reload, counter = 0){
+  console.log('keepRefeshingView', counter)
   refreshView(viewId, reload);
-  setTimeout(function(){
+  /*setTimeout(function(){
     keepRefeshingView(viewId, reload)
-  },1000);
+  },1000);*/
 }
 
 $(document).on('knack-view-render.view_2283', function (event, view, data) {
