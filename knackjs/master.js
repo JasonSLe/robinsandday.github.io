@@ -3895,7 +3895,7 @@ $(document).on('knack-view-render.view_2277', function (event, view, data) {
 
 $(document).on('knack-view-render.view_6157', function (event, view, data) {
   window.setTimeout(function(){
-    keepRefeshingView('6157', true)
+    keepRefeshingView('6157', false)
   }, 5000);
 });
 
