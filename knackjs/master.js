@@ -3894,9 +3894,9 @@ $(document).on('knack-view-render.view_2277', function (event, view, data) {
 });
 
 $(document).on('knack-view-render.view_6157', function (event, view, data) {
-  setTimeout(function(){
+  /*setTimeout(function(){
     keepRefeshingView('6157', true)
-  }, 1000);
+  }, 1000);*/
 });
 
 function keepRefeshingView(viewId, reload){
