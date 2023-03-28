@@ -3882,13 +3882,13 @@ function createPhotoRejectedButton(){
 
 $(document).on('knack-view-render.view_2277', function (event, view, data) {
   console.log('image',$('div[class*="field_4944_thumb_100"] img').attr('data-kn-img-gallery'));
-  console.log('recordIf',$('input[name="id"]').attr('value'));
+  console.log('recordIf',getRecordIdFromHref(location.href));
   if ($('div[class*="field_4944_thumb_100"] img').attr('data-kn-img-gallery')){
     $.ajax({
       url: 'https://7rhnwcwqj9ap.runs.apify.net/photoCheck',
       type: 'POST',
       contentType: 'application/json',
-      data: JSON.stringify({imageUrl:$('div[class*="field_4944_thumb_100"] img').attr('data-kn-img-gallery'),recordId:$('input[name="id"]').attr('value')}),
+      data: JSON.stringify({imageUrl:$('div[class*="field_4944_thumb_100"] img').attr('data-kn-img-gallery'),recordId:getRecordIdFromHref(location.href)}),
     })
   }
 });
