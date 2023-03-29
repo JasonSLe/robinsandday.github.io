@@ -3903,6 +3903,13 @@ $(document).on('knack-view-render.view_6164', function (event, view, data) {
       contentType: 'application/json',
       data: JSON.stringify({imageUrl:$('div[class*="field_4944"] img').attr('src'),recordId:getRecordIdFromHref(location.href)}),
     })
+    $('div[id="view_6166"]').show();
+  }
+});
+
+$(document).on('knack-view-render.view_6166', function (event, view, data) {
+  if (!$('div[class*="field_4944"] img').attr('src')){
+    $('div[id="view_6166"]').hide();
   }
 });
 
