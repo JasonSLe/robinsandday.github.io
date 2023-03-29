@@ -2391,7 +2391,6 @@ $('[class="kn-view kn-back-link"]').hide();
 prepareCameraView(location.origin+"/digital#used-vehicle-check-in/used-vehicle-check-in-2/"+getRecordIdFromHref(location.href)+"/used-vehicle-check-in-3/"+getRecordIdFromHref(location.href)+"/vehicle-imagery-rejected-confirm-action/"+getRecordIdFromHref(location.href)+"/","591eae59e0d2123f23235769",'field_4944','scene_1543/views/view_5014'/*scene_1262/views/view_3904*/);
 });
 
-
 // refresh background replaced image at used vehicle check in - disposal selection page
 
 $(document).on('knack-scene-render.scene_909', function(event, scene) {
