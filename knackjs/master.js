@@ -3893,6 +3893,19 @@ function createPhotoRejectedButton(){
   $('button[type="submit"]').attr('disabled','disabled')
 }
 
+$(document).on('knack-view-render.view_6164', function (event, view, data) {
+  console.log('image',$('div[class*="field_4944"] img').attr('src'));
+  console.log('recordIf',getRecordIdFromHref(location.href));
+  if ($('div[class*="field_4944"] img').attr('src')){
+    $.ajax({
+      url: 'https://7rhnwcwqj9ap.runs.apify.net/photoCheck',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({imageUrl:$('div[class*="field_4944"] img').attr('src'),recordId:getRecordIdFromHref(location.href)}),
+    })
+  }
+});
+
 $(document).on('knack-view-render.view_2277', function (event, view, data) {
   console.log('image',$('div[class*="field_4944_thumb_100"] img').attr('data-kn-img-gallery'));
   console.log('recordIf',getRecordIdFromHref(location.href));
