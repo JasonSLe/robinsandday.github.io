@@ -493,6 +493,7 @@ body {
 #view_1368 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
 #view_1368 > div > a.kn-link.kn-link-6.kn-link-page.kn-button,
 #view_1368 > div > a.kn-link.kn-link-7.kn-link-page.kn-button,
+#view_1368 > div > a.kn-link.kn-link-8.kn-link-page.kn-button,
 #view_1496 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_1496 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_1551 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
@@ -626,6 +627,7 @@ body {
 #view_1368 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button,
 #view_1368 > div > a:hover.kn-link.kn-link-6.kn-link-page.kn-button,
 #view_1368 > div > a:hover.kn-link.kn-link-7.kn-link-page.kn-button,
+#view_1368 > div > a:hover.kn-link.kn-link-8.kn-link-page.kn-button,
 #view_1496 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_1496 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_1551 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
@@ -3243,7 +3245,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 /**"Valeter Instructions" button on valet to do page*/
 #view_4811 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_4811 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_1368 > div > a.kn-link.kn-link-8.kn-link-page.kn-button,
+#view_1368 > div > a.kn-link.kn-link-9.kn-link-page.kn-button,
 #view_4791 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_4791 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_4784 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
@@ -3264,7 +3266,7 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 
 #view_4811 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_4811 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
-#view_1368 > div > a:hover.kn-link.kn-link-7.kn-link-page.kn-button,
+#view_1368 > div > a:hover.kn-link.kn-link-9.kn-link-page.kn-button,
 #view_4791 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
 #view_4791 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
 #view_4784 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
