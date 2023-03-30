@@ -1766,13 +1766,13 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 
 #view_422 > div > a.kn-link.kn-link-9.kn-button {
-	background-color: #2ab27b;
+	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_422 > div > a:hover.kn-link.kn-link-9.kn-button {
-	background-color: #308965;
+	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
@@ -1783,13 +1783,13 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 
 #view_422 > div > a.kn-link.kn-link-10.kn-button {
-	background-color: #a343c4;
+	background-color: #2ab27b;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
 #view_422 > div > a:hover.kn-link.kn-link-10.kn-button {
-	background-color: #7f3499;
+	background-color: #308965;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
