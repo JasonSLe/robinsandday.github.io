@@ -4156,3 +4156,14 @@ function serviceVisitsTooltips(viewId = '438', fieldId = '8881'){
 $(document).on('knack-form-submit.view_3447', function(event, view, data) { 
   callPostHttpRequest("https://hook.eu1.make.celonis.com/hnq9zq598srvyz2w6wuujzm7kwqpmr1p", {"Record ID":data.id},"Vehicle bodyshop trigger")
 });
+
+
+// ----------  refresh Valet worklist Table every 60 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_1387', function(event, scene) {
+ recursivecallscene_1387();
+});
+
+function recursivecallscene_1387(){
+ setTimeout(function () { if($("#view_4515").is(":visible")==true){ Knack.views["view_4515"].model.fetch();recursivecallscene_1387();} }, 100000);
+}
