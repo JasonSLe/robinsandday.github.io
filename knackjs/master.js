@@ -3911,8 +3911,10 @@ $(document).on('knack-view-render.view_6166', function (event, view, data) {
   if (!$('div[class*="field_4944"] img').attr('src')){
     $('div[id="view_6166"]').hide();
   }
-  keepRefreshingViewUntil('6166', false, '7416','PROCESSING')
-  keepRefreshingViewUntil('6163', false, '7416','PROCESSING')
+  window.setTimeout(function(){
+    keepRefreshingViewUntil('6166', false, '7416','PROCESSING')
+    keepRefreshingViewUntil('6163', false, '7416','PROCESSING')
+}, 500);
 });
 
 $(document).on('knack-view-render.view_2277', function (event, view, data) {
