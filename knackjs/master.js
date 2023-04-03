@@ -3911,6 +3911,11 @@ $(document).on('knack-view-render.view_6166', function (event, view, data) {
   if (!$('div[class*="field_4944"] img').attr('src')){
     $('div[id="view_6166"]').hide();
   }
+  if ($('div[class="field_7416"]').text().trim().includes('PROCESSING')){
+    $('div[id="view_6163"]').hide();
+  } else if ($('div[class="field_7416"]').text().trim().includes('REJECTED')) {
+    $('div[id="view_6166"]').show();
+  }
   window.setTimeout(function(){
     keepRefreshingViewUntil('6166', false, '7416','PROCESSING')
     keepRefreshingViewUntil('6163', false, '7416','PROCESSING')
