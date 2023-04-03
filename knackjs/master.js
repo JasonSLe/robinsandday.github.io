@@ -79,10 +79,10 @@ $(document).on('knack-view-render.view_1522', function(event, view) {
 });
 
 //* Change the below icons to your personalized icon links. */
-$("head").append("<link rel='apple-touch-icon-precomposed' sizes='57x57' href='https://i.postimg.cc/gkBsWtfK/Robins-Day-by-PSA-Retail-Favicon-57x57.png' />");
-$("head").append("<link rel='apple-touch-icon-precomposed' sizes='72x72' href='https://i.postimg.cc/Qd9bxkDZ/Robins-Day-by-PSA-Retail-Favicon-72x72.png' />");
-$("head").append("<link rel='apple-touch-icon-precomposed' sizes='114x114' href='https://i.postimg.cc/x1wPkJjJ/Robins-Day-by-PSA-Retail-Favicon-114x114.png' />");
-$("head").append("<link rel='apple-touch-icon-precomposed' sizes='144x144' href='https://i.postimg.cc/3w2F28WL/Robins-Day-by-PSA-Retail-Favicon-144x144.png' />");
+$("head").append("<link rel='apple-touch-icon-precomposed' sizes='57x57' href='https://i.postimg.cc/nrGKQ1BZ/Stellantis-And-You-Favicon-57x57.png' />");
+$("head").append("<link rel='apple-touch-icon-precomposed' sizes='72x72' href='https://i.postimg.cc/nV4G5n55/Stellantis-And-You-Favicon-72x72.png' />");
+$("head").append("<link rel='apple-touch-icon-precomposed' sizes='114x114' href='https://i.postimg.cc/DZsP7hzS/STELLANTIS-YOU-Favicon-114x114.png' />");
+$("head").append("<link rel='apple-touch-icon-precomposed' sizes='144x144' href='https://i.postimg.cc/vTsLBK13/STELLANTIS-YOU-Favicon-144x144.png' />");
 
 
 /* Change Keyword Search Placeholder Text for used stock management */
