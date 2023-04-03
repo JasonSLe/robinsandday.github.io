@@ -3938,7 +3938,7 @@ $(document).on('knack-view-render.view_6157', function (event, view, data) {
 function keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, counter = 0){
   console.log('keepRefeshingViewUntil', counter)
   refreshView(viewId, reload, false);
-  if ($('div[class="field_'+fieldId+'"]').text().trim().includes(containsValue) && counter < 15){
+  if (($('div[class="field_'+fieldId+'"]').text().trim().includes(containsValue) && counter < 15) || (counter<3)){
     setTimeout(function(){
       keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, counter+1)
     },10000);
