@@ -3912,6 +3912,7 @@ $(document).on('knack-view-render.view_6166', function (event, view, data) {
     $('div[id="view_6166"]').hide();
   }
   keepRefreshingViewUntil('6166', false, '7416','PROCESSING')
+  keepRefreshingViewUntil('6163', false, '7416','PROCESSING')
 });
 
 $(document).on('knack-view-render.view_2277', function (event, view, data) {
