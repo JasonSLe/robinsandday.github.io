@@ -3932,6 +3932,22 @@ $(document).on('knack-view-render.view_6157', function (event, view, data) {
   }, 15000);
 });
 
+$(document).on('knack-view-render.view_6166', function (event, view, data) {
+  window.setTimeout(function(){
+    keepRefreshingViewUntil('6166', false, '7416','PROCESSING')
+  }, 15000);
+});
+
+function keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, counter = 0){
+  console.log('keepRefeshingViewUntil', counter)
+  refreshView(viewId, reload, false);
+  if ($('div[class="field_'+fieldId+'"]').text().trim().includes(containsValue) && counter < 15){
+    setTimeout(function(){
+      keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, counter+1)
+    },10000);
+  }
+}
+
 function keepRefeshingView(viewId, reload, counter = 0){
   console.log('keepRefeshingView', counter)
   refreshView(viewId, reload, false);
