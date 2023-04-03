@@ -1377,7 +1377,7 @@ $(document).on('knack-scene-render.scene_1150', function(event, scene) {
 });
 
 function recursivecallscene_1150(){
- setTimeout(function () { if($("#view_3432").is(":visible")==true){ Knack.views["view_3432"].model.fetch();recursivecallscene_1150();} }, 100000);
+ setTimeout(function () { if($("#view_3432").is(":visible")==true){ Knack.views["view_3432"].model.fetch();recursivecallscene_1150();} }, 300000);
 }
 
 // ----------  refresh Prep Centre Dealer View Table every 60 seconds but not the page itself  ----------
