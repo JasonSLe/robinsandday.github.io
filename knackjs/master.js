@@ -3930,7 +3930,8 @@ function scene_1908_showhide(){
   if ($('div[class="field_7416"]').text().trim().includes('PROCESSING')){
     $('div[id="view_6163"]').hide();
   } else if ($('div[class="field_7416"]').text().trim().includes('REJECTED')) {
-    $('div[id="view_6166"]').show();
+    //$('div[id="view_6166"]').show();
+    refreshView('6163',true, false);
   }
 }
 
