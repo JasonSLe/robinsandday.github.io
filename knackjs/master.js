@@ -3924,15 +3924,15 @@ $(document).on('knack-scene-render.scene_1908', function(event, scene) {
 function scene_1908_showhide(){
   console.log('scene_1908_showhide');
   $('div[id="view_6168"]').hide();
-  if (!$('div[class*="field_4944"] img').attr('src')){
-    $('div[id="view_6166"]').hide();
-  }
   if ($('div[class="field_7416"]').text().trim().includes('PROCESSING')){
     $('div[id="view_6163"]').hide();
   } else if ($('div[class="field_7416"]').text().trim().includes('REJECTED')) {
     //$('div[id="view_6166"]').show();
     refreshView('6163',true, false);
     refreshView('6164',true, false);
+  }
+  if (!$('div[class*="field_4944"] img').attr('src')){
+    $('div[id="view_6166"]').hide();
   }
 }
 
