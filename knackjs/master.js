@@ -3910,7 +3910,11 @@ $(document).on('knack-view-render.view_6164', function (event, view, data) {
 });
 
 $(document).on('knack-view-render.view_6166', function (event, view, data) {
-  if (!$('div[class*="field_4944"]f img').attr('src')){
+  view_6166_showhide();
+});
+
+function view_6166_showhide(){
+  if (!$('div[class*="field_4944"] img').attr('src')){
     $('div[id="view_6166"]').hide();
   }
   if ($('div[class="field_7416"]').text().trim().includes('PROCESSING')){
@@ -3919,10 +3923,10 @@ $(document).on('knack-view-render.view_6166', function (event, view, data) {
     $('div[id="view_6166"]').show();
   }
   window.setTimeout(function(){
-    keepRefreshingViewUntil('6166', false, '7416','PROCESSING')
-    keepRefreshingViewUntil('6163', false, '7416','PROCESSING')
+    keepRefreshingViewUntil('6166', false, '7416','PROCESSING',view_6166_showhide)
+    keepRefreshingViewUntil('6163', false, '7416','PROCESSING',view_6166_showhide)
 }, 100);
-});
+}
 
 $(document).on('knack-view-render.view_2277', function (event, view, data) {
   console.log('image',$('div[class*="field_4944_thumb_100"] img').attr('data-kn-img-gallery'));
@@ -3943,13 +3947,15 @@ $(document).on('knack-view-render.view_6157', function (event, view, data) {
   }, 15000);
 });
 
-function keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, counter = 0){
+function keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callback, counter = 0){
   console.log('keepRefeshingViewUntil', counter)
   refreshView(viewId, reload, false);
   if (($('div[class="field_'+fieldId+'"]').text().trim().includes(containsValue) && counter < 15) || (counter<3)){
     setTimeout(function(){
-      keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, counter+1)
+      keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callback, counter+1)
     },5000);
+  } else {
+    callback();
   }
 }
 
