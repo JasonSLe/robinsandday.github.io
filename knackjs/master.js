@@ -3958,10 +3958,10 @@ $(document).on('knack-view-render.view_6157', function (event, view, data) {
 function keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callback, counter = 0){
   console.log('keepRefeshingViewUntil', counter)
   refreshView(viewId, reload, false);
-  if (($('div[class="field_'+fieldId+'"]').text().trim().includes(containsValue) && counter < 15) || (counter<3)){
+  if (($('div[class="field_'+fieldId+'"]').text().trim().includes(containsValue) && counter < 15) || (counter<5)){
     setTimeout(function(){
       keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callback, counter+1)
-    },(counter===0?1000:(counter<4?3000:5000)));
+    },(counter<3?500:(counter<5?1000:(counter<10?3000:5000))));
   } else {
     console.log('call callback')
     callback();
