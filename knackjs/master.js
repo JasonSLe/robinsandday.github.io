@@ -3924,6 +3924,7 @@ $(document).on('knack-scene-render.scene_1908', function(event, scene) {
 
 function scene_1908_showhide(){
   console.log('scene_1908_showhide');
+  $('div[id="view_6168"]').hide();
   if (!$('div[class*="field_4944"] img').attr('src')){
     $('div[id="view_6166"]').hide();
   }
