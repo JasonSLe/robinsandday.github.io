@@ -3910,15 +3910,19 @@ $(document).on('knack-view-render.view_6164', function (event, view, data) {
 });
 
 $(document).on('knack-view-render.view_6166', function (event, view, data) {
-  view_6166_showhide();
   window.setTimeout(function(){
-    keepRefreshingViewUntil('6166', false, '7416','PROCESSING',view_6166_showhide)
-    keepRefreshingViewUntil('6163', false, '7416','PROCESSING',view_6166_showhide)
+    keepRefreshingViewUntil('6166', false, '7416','PROCESSING',scene_1908_showhide)
+    keepRefreshingViewUntil('6163', false, '7416','PROCESSING',scene_1908_showhide)
 }, 100);
 });
 
+$(document).on('knack-scene-render.scene_1908', function(event, scene) {
+  scene_1908_showhide();
+ });
 
-function view_6166_showhide(){
+
+function scene_1908_showhide(){
+  console.log('scene_1908_showhide');
   if (!$('div[class*="field_4944"] img').attr('src')){
     $('div[id="view_6166"]').hide();
   }
