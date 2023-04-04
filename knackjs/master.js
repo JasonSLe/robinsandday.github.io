@@ -363,6 +363,7 @@ $(document).on('knack-view-render.view_6170', function(event, view, data) {
   $('div[class="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales#aftersales-service-reporting/manager-tour-reporting?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+
 var aftersalesConnectView = [{view:'view_5733',url:'#after-sales-vehicle-lookup/'},
 {view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
 {view:'view_5735',url:'#after-sales-vehicle-lookup/check-in/'},
