@@ -3953,7 +3953,7 @@ function keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callbac
   if (($('div[class="field_'+fieldId+'"]').text().trim().includes(containsValue) && counter < 15) || (counter<3)){
     setTimeout(function(){
       keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callback, counter+1)
-    },5000);
+    },(counter===0?1000:(counter<4?3000:5000)));
   } else {
     callback();
   }
