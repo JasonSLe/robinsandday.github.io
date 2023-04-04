@@ -3932,6 +3932,7 @@ function scene_1908_showhide(){
   } else if ($('div[class="field_7416"]').text().trim().includes('REJECTED')) {
     //$('div[id="view_6166"]').show();
     refreshView('6163',true, false);
+    refreshView('6164',true, false);
   }
 }
 
