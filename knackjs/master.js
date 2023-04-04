@@ -3917,7 +3917,6 @@ $(document).on('knack-scene-render.scene_1908', function(event, scene) {
   scene_1908_showhide();
   window.setTimeout(function(){
     keepRefreshingViewUntil('6166', false, '7416','PROCESSING',scene_1908_showhide)
-    keepRefreshingViewUntil('6163', false, '7416','PROCESSING',scene_1908_showhide)
 }, 100);
  });
 
