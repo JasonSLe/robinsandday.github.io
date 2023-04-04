@@ -3910,7 +3910,7 @@ $(document).on('knack-view-render.view_6164', function (event, view, data) {
 });
 
 $(document).on('knack-view-render.view_6166', function (event, view, data) {
-  if (!$('div[class*="field_4944"] img').attr('src')){
+  if (!$('div[class*="field_4944"]f img').attr('src')){
     $('div[id="view_6166"]').hide();
   }
   if ($('div[class="field_7416"]').text().trim().includes('PROCESSING')){
@@ -3921,7 +3921,7 @@ $(document).on('knack-view-render.view_6166', function (event, view, data) {
   window.setTimeout(function(){
     keepRefreshingViewUntil('6166', false, '7416','PROCESSING')
     keepRefreshingViewUntil('6163', false, '7416','PROCESSING')
-}, 500);
+}, 100);
 });
 
 $(document).on('knack-view-render.view_2277', function (event, view, data) {
@@ -3949,7 +3949,7 @@ function keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, counter
   if (($('div[class="field_'+fieldId+'"]').text().trim().includes(containsValue) && counter < 15) || (counter<3)){
     setTimeout(function(){
       keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, counter+1)
-    },10000);
+    },5000);
   }
 }
 
