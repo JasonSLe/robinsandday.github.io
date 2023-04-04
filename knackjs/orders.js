@@ -278,9 +278,19 @@ $(document).on('knack-record-update.view_4383', function(event, view, data) {
   
 });
 
-//****************** Refresh Handover Pack after Handover Checklist ****************//
+//****************** Refresh Handover Pack after Handover Checklist (Update) ****************//
 
 $(document).on('knack-record-update.view_4396', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Handover Checklist (Create) ****************//
+
+$(document).on('knack-record-create.view_4396', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
 
