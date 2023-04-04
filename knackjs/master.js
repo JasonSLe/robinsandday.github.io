@@ -3956,6 +3956,7 @@ function keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callbac
       keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callback, counter+1)
     },(counter===0?1000:(counter<4?3000:5000)));
   } else {
+    console.log('call callback')
     callback();
   }
 }
