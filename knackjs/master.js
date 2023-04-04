@@ -3911,6 +3911,10 @@ $(document).on('knack-view-render.view_6164', function (event, view, data) {
 
 $(document).on('knack-view-render.view_6166', function (event, view, data) {
   view_6166_showhide();
+  window.setTimeout(function(){
+    keepRefreshingViewUntil('6166', false, '7416','PROCESSING',view_6166_showhide)
+    keepRefreshingViewUntil('6163', false, '7416','PROCESSING',view_6166_showhide)
+}, 100);
 });
 
 function view_6166_showhide(){
@@ -3922,10 +3926,6 @@ function view_6166_showhide(){
   } else if ($('div[class="field_7416"]').text().trim().includes('REJECTED')) {
     $('div[id="view_6166"]').show();
   }
-  window.setTimeout(function(){
-    keepRefreshingViewUntil('6166', false, '7416','PROCESSING',view_6166_showhide)
-    keepRefreshingViewUntil('6163', false, '7416','PROCESSING',view_6166_showhide)
-}, 100);
 }
 
 $(document).on('knack-view-render.view_2277', function (event, view, data) {
