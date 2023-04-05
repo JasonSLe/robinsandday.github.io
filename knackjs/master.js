@@ -3951,6 +3951,7 @@ function scene_1908_showhide(){
           scene_1908_showhide();
         }, 5000);
       }
+      
     }
   }
   if (!$('div[class*="field_4944"] img').attr('src')){
