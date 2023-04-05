@@ -3959,6 +3959,7 @@ function scene_1908_showhide(){
 
     }
   } else if ($('div[class="field_7416"]').text().trim()===''){
+    $('div[id="view_6163"]').hide();
     $('div[id="view_6172"]').show();
   }
   if (!$('div[class*="field_4944"] img').attr('src')){
