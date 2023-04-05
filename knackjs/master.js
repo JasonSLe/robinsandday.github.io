@@ -3950,7 +3950,7 @@ function scene_1908_showhide(){
         window.setTimeout(function(){
           scene_1908_showhide();
           keepRefreshingViewUntil('6166', false, '7416','TO BE CHECKED',scene_1908_showhide)
-        }, 5000);
+        }, 7000);
       }
 
     }
