@@ -3930,10 +3930,26 @@ function scene_1908_showhide(){
     //$('div[id="view_6166"]').show();
     refreshView('6163',true, false);
     refreshView('6164',true, false);
+    if (!$('div[class="field_7416"]').text().trim().includes('Vehicle Position Check Status – REJECTED')){
+      $('div[id="view_6168"]').show();
+      $('[id="view_6168"] a').onclick = function(){
+        console.log('send to enhancement');
+        sendRejectedPhotoToEnhancement(getRecordIdFromHref(location.href), $('div[data-input-id="field_7437"] img').attr('src'));
+      }
+    }
   }
   if (!$('div[class*="field_4944"] img').attr('src')){
     $('div[id="view_6166"]').hide();
   }
+}
+
+function sendRejectedPhotoToEnhancement(recordId, imageUrl){
+  $.ajax({
+    url: 'https://7rhnwcwqj9ap.runs.apify.net/photoEnhancement',
+    type: 'POST',
+    contentType: 'application/json',
+    data: JSON.stringify({imageUrl:imageUrl,recordId:recordId}),
+  })
 }
 
 $(document).on('knack-view-render.view_2277', function (event, view, data) {
