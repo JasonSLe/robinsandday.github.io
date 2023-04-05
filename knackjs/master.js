@@ -3949,7 +3949,10 @@ function scene_1908_showhide(){
         sendRejectedPhotoToEnhancement(getRecordIdFromHref(location.href), $('div[data-input-id="field_7437"] img').attr('src'));
         window.setTimeout(function(){
           scene_1908_showhide();
-          keepRefreshingViewUntil('6166', false, '7416','TO BE CHECKED',scene_1908_showhide)
+          window.setTimeout(function(){
+            keepRefreshingViewUntil('6166', false, '7416','PROCESSING',scene_1908_showhide)
+            keepRefreshingViewUntil('6166', false, '7416','TO BE CHECKED',scene_1908_showhide)
+          }, 500);
         }, 7000);
       }
 
