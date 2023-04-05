@@ -3989,11 +3989,11 @@ $(document).on('knack-view-render.view_2277', function (event, view, data) {
   }
 });
 
-$(document).on('knack-view-render.view_6157', function (event, view, data) {
+/*$(document).on('knack-view-render.view_6157', function (event, view, data) {
   window.setTimeout(function(){
     keepRefeshingView('6157', false)
   }, 15000);
-});
+});*/
 
 function keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callback, counter = 0){
   console.log('keepRefeshingViewUntil', counter)
