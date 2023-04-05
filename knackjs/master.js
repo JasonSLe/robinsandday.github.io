@@ -4019,7 +4019,7 @@ function keepRefeshingView(viewId, reload, counter = 0){
 }
 
 $(document).on('knack-view-render.view_2283', function (event, view, data) {
-  console.log('image',$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery'));
+  /*console.log('image',$('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery'));
   if ($('div[class="field_4944_thumb_100"] img').attr('data-kn-img-gallery')){
     try{
       window.setTimeout(function() {
@@ -4085,7 +4085,7 @@ $(document).on('knack-view-render.view_2283', function (event, view, data) {
     } catch(exception) {
       console.log(exception);
     }
-  }
+  }*/
 });
 
 $(document).on('knack-view-render.view_3898', function(event, view) { 
