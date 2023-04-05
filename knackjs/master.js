@@ -3946,6 +3946,9 @@ function scene_1908_showhide(){
       a1.onclick = function(){
         console.log('send to enhancement');
         sendRejectedPhotoToEnhancement(getRecordIdFromHref(location.href), $('div[data-input-id="field_7437"] img').attr('src'));
+        window.setTimeout(function(){
+          scene_1908_showhide();
+        }, 5000);
       }
     }
   }
