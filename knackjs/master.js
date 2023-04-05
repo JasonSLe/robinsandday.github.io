@@ -3942,7 +3942,8 @@ function scene_1908_showhide(){
     refreshView('6164',true, false);
     if (!$('div[class="field_7416"]').text().trim().includes('Vehicle Position Check Status – REJECTED')){
       $('div[id="view_6168"]').show();
-      $('[id="view_6168"] a').onclick = function(){
+      let a1 = document.querySelector('div[id="view_6168"] a')
+      a1.onclick = function(){
         console.log('send to enhancement');
         sendRejectedPhotoToEnhancement(getRecordIdFromHref(location.href), $('div[data-input-id="field_7437"] img').attr('src'));
       }
