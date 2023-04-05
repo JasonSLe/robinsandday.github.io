@@ -278,9 +278,19 @@ $(document).on('knack-record-update.view_4383', function(event, view, data) {
   
 });
 
-//****************** Refresh Handover Pack after Handover Checklist ****************//
+//****************** Refresh Handover Pack after Handover Checklist (Update) ****************//
 
 $(document).on('knack-record-update.view_4396', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Handover Checklist (Create) ****************//
+
+$(document).on('knack-record-create.view_4396', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
 
@@ -2133,7 +2143,7 @@ $(document).on('knack-form-submit.view_2674', function(event, view, data) {
         if(data.field_6567_raw === null || data.field_6567_raw === undefined){
 
 
-            let commandURL = "https://hook.integromat.com/ue6mctvmfbukksn2battr5cqtgnx135v";
+            let commandURL = "https://hook.eu1.make.celonis.com/4dol6uz8aoiou9zoryloi8mdbnm8qq3d";
             let dataToSend = JSON.stringify({"Record ID":data.id, "Form":"Vehicle invoice", "Source Of Payload":"knack direct"});
 
 

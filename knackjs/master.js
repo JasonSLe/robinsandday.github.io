@@ -957,9 +957,19 @@ $(document).on('knack-record-update.view_4657', function(event, view, data) {
   
 });
 
-//****************** Refresh Handover Pack after Handover Checklist ****************//
+//****************** Refresh Handover Pack after Handover Checklist (Update) ****************//
 
 $(document).on('knack-record-update.view_4650', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
+//****************** Refresh Handover Pack after Handover Checklist (Create) ****************//
+
+$(document).on('knack-record-create.view_4650', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
 
