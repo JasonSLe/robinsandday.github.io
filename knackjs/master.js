@@ -3934,6 +3934,7 @@ $(document).on('knack-scene-render.scene_1908', function(event, scene) {
 function scene_1908_showhide(){
   console.log('scene_1908_showhide');
   $('div[id="view_6168"]').hide();
+  $('div[id="view_6172"]').hide();
   if ($('div[class="field_7416"]').text().trim().includes('PROCESSING')){
     $('div[id="view_6163"]').hide();
   } else if ($('div[class="field_7416"]').text().trim().includes('REJECTED')) {
@@ -3957,6 +3958,8 @@ function scene_1908_showhide(){
       }
 
     }
+  } else if ($('div[class="field_7416"]').text().trim()===''){
+    $('div[id="view_6172"]').show();
   }
   if (!$('div[class*="field_4944"] img').attr('src')){
     $('div[id="view_6166"]').hide();
