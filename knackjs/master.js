@@ -3919,8 +3919,10 @@ $(document).on('knack-view-render.view_6164', function (event, view, data) {
   }
 });
 
-$(document).on('knack-view-render.view_6166', function (event, view, data) {
-
+$(document).on('knack-view-render.view_2277', function (event, view, data) {
+  window.setTimeout(function(){
+    keepRefeshingView('2277',false);
+  }, 60000);
 });
 
 $(document).on('knack-scene-render.scene_1908', function(event, scene) {
