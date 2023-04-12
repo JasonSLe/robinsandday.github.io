@@ -2241,7 +2241,7 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
    // $('th[class="field_381"]').addClass('tooltip-bottom')
   }); 
 
-// Trigger Update To VR (Virtual Reception) Status
+// Trigger DVLA License Check Scenario When Customer Advisor Completes Pre Call
 
 $(document).on('knack-form-submit.view_341', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/y3bgw1dxy2ntnysos7usd6gxbsnmcaeg", {"Record ID":data.id,"Customer Advisor Completed Pre Call")
