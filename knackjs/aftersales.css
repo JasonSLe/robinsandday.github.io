@@ -1214,15 +1214,19 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 		
 }
 
-/* Aftersales Vehicle Onsite Customer Advisor view*/
+/* Aftersales Vehicle Onsite Customer Advisor view & workshop & Tech*/
 
-#view_1643 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_1643 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1644 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1645 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_1643 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
+#view_1643 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1644 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
+#view_1645 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1232,13 +1236,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
-#view_1643 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_1643 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1644 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1645 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_1643 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_1643 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1644 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_1645 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1248,13 +1256,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
-#view_1643 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
+#view_1643 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1644 > div > a.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1645 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_1643 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
+#view_1643 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1644 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button,
+#view_1645 > div > a:hover.kn-link.kn-link-3.kn-link-page.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1264,13 +1276,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
-#view_1643 > div > a.kn-link.kn-link-4.kn-button {
+#view_1643 > div > a.kn-link.kn-link-4.kn-button,
+#view_1644 > div > a.kn-link.kn-link-4.kn-button,
+#view_1645 > div > a.kn-link.kn-link-4.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_1643 > div > a:hover.kn-link.kn-link-4.kn-button {
+#view_1643 > div > a:hover.kn-link.kn-link-4.kn-button,
+#view_1644 > div > a:hover.kn-link.kn-link-4.kn-button,
+#view_1645 > div > a:hover.kn-link.kn-link-4.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1279,13 +1295,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-width: 2px;
   	border-color: #FFFFFF;
 }
-#view_1643 > div > a.kn-link.kn-link-5.kn-button {
+#view_1643 > div > a.kn-link.kn-link-5.kn-button,
+#view_1644 > div > a.kn-link.kn-link-5.kn-button,
+#view_1645 > div > a.kn-link.kn-link-5.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_1643 > div > a:hover.kn-link.kn-link-5.kn-button {
+#view_1643 > div > a:hover.kn-link.kn-link-5.kn-button,
+#view_1644 > div > a:hover.kn-link.kn-link-5.kn-button,
+#view_1645 > div > a:hover.kn-link.kn-link-5.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1294,13 +1314,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-width: 2px;
   	border-color: #FFFFFF;
 }
-#view_1643 > div > a.kn-link.kn-link-6.kn-button {
+#view_1643 > div > a.kn-link.kn-link-6.kn-button,
+#view_1644 > div > a.kn-link.kn-link-6.kn-button,
+#view_1645 > div > a.kn-link.kn-link-6.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_1643 > div > a:hover.kn-link.kn-link-6.kn-button {
+#view_1643 > div > a:hover.kn-link.kn-link-6.kn-button,
+#view_1644 > div > a:hover.kn-link.kn-link-6.kn-button,
+#view_1645 > div > a:hover.kn-link.kn-link-6.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1311,13 +1335,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 
 }
 
-#view_1643 > div > a.kn-link.kn-link-7.kn-button {
+#view_1643 > div > a.kn-link.kn-link-7.kn-button,
+#view_1644 > div > a.kn-link.kn-link-7.kn-button,
+#view_1645 > div > a.kn-link.kn-link-7.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_1643 > div > a:hover.kn-link.kn-link-7.kn-button {
+#view_1643 > div > a:hover.kn-link.kn-link-7.kn-button,
+#view_1644 > div > a:hover.kn-link.kn-link-7.kn-button,
+#view_1645 > div > a:hover.kn-link.kn-link-7.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1327,13 +1355,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
-#view_1643 > div > a.kn-link.kn-link-8.kn-button {
+#view_1643 > div > a.kn-link.kn-link-8.kn-button,
+#view_1644 > div > a.kn-link.kn-link-8.kn-button,
+#view_1645 > div > a.kn-link.kn-link-8.kn-button {
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_1643 > div > a:hover.kn-link.kn-link-8.kn-button {
+#view_1643 > div > a:hover.kn-link.kn-link-8.kn-button,
+#view_1644 > div > a:hover.kn-link.kn-link-8.kn-button,
+#view_1645 > div > a:hover.kn-link.kn-link-8.kn-button {
 	background-color: #D18400;
   	color: #FFFFFF;
   	font-weight: bold;
@@ -1343,13 +1375,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 
-#view_1643 > div > a.kn-link.kn-link-9.kn-button {
+#view_1643 > div > a.kn-link.kn-link-9.kn-button,
+#view_1644 > div > a.kn-link.kn-link-9.kn-button,
+#view_1645 > div > a.kn-link.kn-link-9.kn-button {
 	background-color: #2ab27b;
   	color: #FFFFFF;
   	font-weight: bold;
 }
 
-#view_1643 > div > a:hover.kn-link.kn-link-9.kn-button {
+#view_1643 > div > a:hover.kn-link.kn-link-9.kn-button,
+#view_1644 > div > a:hover.kn-link.kn-link-9.kn-button,
+#view_1645 > div > a:hover.kn-link.kn-link-9.kn-button {
 	background-color: #308965;
   	color: #FFFFFF;
   	font-weight: bold;
