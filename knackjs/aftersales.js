@@ -1529,7 +1529,7 @@ function recursivecallscene_340(){
 
 //Trigger failed Quality check (QC) emails to workshop controller/ manager
 
-$(document).on('knack-form-submit.view_1006', function(event, view, data) {
+$(document).on('knack-form-submit.view_1628', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
 });
 
