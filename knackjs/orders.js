@@ -2775,3 +2775,13 @@ function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
     $('div[class="field_'+fieldId+'"]').show();
   }, 100);
 }
+
+// ----------  refresh Fleet Bulk CRONOS Orders to Tag in Customer First table every 60 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_1313', function(event, scene) {
+ recursivecallscene_1313();
+});
+
+function recursivecallscene_1313(){
+ setTimeout(function () { if($("#view_4594").is(":visible")==true){ Knack.views["view_4594"].model.fetch();recursivecallscene_1274();} }, 60000);
+}
