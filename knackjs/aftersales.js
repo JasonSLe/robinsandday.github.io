@@ -2203,7 +2203,7 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
   }); 
 
 
-//hover field for Vehicle On-site Customer Workshop View
+/*hover field for Vehicle On-site Customer Workshop View
     $(document).on('knack-view-render.view_1880', function (event, view, data) {
     //This part is for tooltip of another field above field in list
     //This part of code hides field_330 from the list and then adds it as mouse over to field 380
@@ -2232,7 +2232,7 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
     //$('th[class="field_2146"]').attr('title','Failed Vs Total Completed')
    // $('th[class="field_381"]').addClass('tooltip-bottom')
  // }); 
-
+*/
 
 
 
