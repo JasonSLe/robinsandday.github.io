@@ -2233,3 +2233,36 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
 $(document).on('knack-form-submit.view_341', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/y3bgw1dxy2ntnysos7usd6gxbsnmcaeg", {"Record ID":data.id,"Courtesy Car Required?":data.field_1137},"Customer Advisor Completed Pre Call")
 });
+
+
+//hover field for Service On-site Workshop control view
+  $(document).on('knack-view-render.view_1880', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	
+	  
+    $('div[id="view_1880"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_763"]').attr('data-tooltip',getFieldForRowID('view_1880','field_318',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_763"]').addClass('tooltip-top');
+	    
+      $(this).find('td[data-field-key="field_899"]').attr('data-tooltip',getFieldForRowID('view_1880','field_1537',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_899"]').addClass('tooltip-top');
+	    
+  
+	    
+    });
+    //end
+
+    //This part is for column headers
+    //Column headers
+    $('th[class="field_2141"]').attr('title','QC vs Predicted');
+    $('th[class="field_2163"]').attr('title','QC Vs Invoiced Internal & Warranty Jobs')
+    $('th[class="field_2138"]').attr('title','Failed Vs Total Completed')
+   // $('th[class="field_381"]').addClass('tooltip-bottom')
+  }); 
