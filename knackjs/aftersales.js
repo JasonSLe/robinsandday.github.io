@@ -512,12 +512,8 @@ function refreshScene24(){
       runAfter : serviceVisitsTooltips
     },{	    
       name : 'Recalls',
-      mainField : 'field_70', //Recalls Oustanding
+      mainField : 'field_70', //Recalls and service shedule check Completed
       views:['329','332']
-    },{
-      name : 'Service schedule',
-      mainField : 'field_350', //Vehicle details
-      views:['332']
     }
   ]
   sceneRefresh(refreshData);
