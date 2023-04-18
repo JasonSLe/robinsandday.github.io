@@ -2203,39 +2203,31 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
   }); 
 
 
-//hover field for Digital Adoption QC Dealer Element
-  $(document).on('knack-view-render.view_924', function (event, view, data) {
+//hover field for Vehicle On-site Customer Workshop View
+  $(document).on('knack-view-render.view_1880', function (event, view, data) {
     //This part is for tooltip of another field above field in list
     //This part of code hides field_330 from the list and then adds it as mouse over to field 380
     //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
     //start
-    $('th[class="field_1580"]').hide();
-    $('td[class*="field_1580"]').hide();
-    $('th[class="field_2137"]').hide();
-    $('td[class*="field_2137"]').hide(); 
-    $('th[class="field_2162"]').hide();
-    $('td[class*="field_2162"]').hide(); 	
+    $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 	
 	  
-    $('div[id="view_924"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_2141"]').attr('data-tooltip',getFieldForRowID('view_924','field_1580',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_2141"]').addClass('tooltip-top');
+    $('div[id="view_1880"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_31"]').attr('data-tooltip',getFieldForRowID('view_1880','field_318',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_31"]').addClass('tooltip-top');
 	    
-      $(this).find('td[data-field-key="field_2138"]').attr('data-tooltip',getFieldForRowID('view_924','field_2137',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_2138"]').addClass('tooltip-top');
+      $(this).find('td[data-field-key="field_1022"]').attr('data-tooltip',getFieldForRowID('view_1880','field_1537',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_1022"]').addClass('tooltip-top');
 	    
-      $(this).find('td[data-field-key="field_2163"]').attr('data-tooltip',getFieldForRowID('view_924','field_2162',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_2163"]').addClass('tooltip-top');	    
 	    
     });
     //end
 
-    //This part is for column headers
-    //Column headers
-    $('th[class="field_2141"]').attr('title','QC vs Predicted');
-    $('th[class="field_2163"]').attr('title','QC Vs Invoiced Internal & Warranty Jobs')
-    $('th[class="field_2138"]').attr('title','Failed Vs Total Completed')
-   // $('th[class="field_381"]').addClass('tooltip-bottom')
-  }); 
+
+
+
 
 // Trigger DVLA License Check Scenario When Customer Advisor Completes Pre Call
 
