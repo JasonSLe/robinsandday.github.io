@@ -2248,11 +2248,11 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 	
 	  
     $('div[id="view_1880"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_763"]').attr('data-tooltip',getFieldForRowID('view_1880','field_318',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_763"]').addClass('tooltip-top');
+      $(this).find('td[data-field-key="field_763"]').attr('title',getFieldForRowID('view_1880','field_318',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_763"]').addClass('title');
 	    
-      $(this).find('td[data-field-key="field_899"]').attr('data-tooltip',getFieldForRowID('view_1880','field_1537',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_899"]').addClass('tooltip-top');
+      $(this).find('td[data-field-key="field_899"]').attr('title',getFieldForRowID('view_1880','field_1537',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_899"]').addClass('title');
 	    
   
 	    
