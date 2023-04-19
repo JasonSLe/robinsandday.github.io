@@ -4012,7 +4012,7 @@ $(document).on('knack-view-render.view_2277', function (event, view, data) {
 function keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callback, counter = 0){
   console.log('keepRefeshingViewUntil', counter)
   refreshView(viewId, reload, false);
-  if (($('div[class="field_'+fieldId+'"]').text().trim().includes(containsValue) && counter < 15) || (counter<5)){
+  if (($('div[class="field_'+fieldId+'"]').text().trim().includes(containsValue) && counter < 25) || (counter<5)){
     setTimeout(function(){
       keepRefreshingViewUntil(viewId, reload, fieldId, containsValue, callback, counter+1)
     },(counter<3?500:(counter<5?1000:(counter<10?3000:5000))));
