@@ -2235,7 +2235,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 });
 
 
-/*hover field for Service On-site Workshop control view
+//hover field for Service On-site Workshop control view
   $(document).on('knack-view-render.view_1880', function (event, view, data) {
     //This part is for tooltip of another field above field in list
     //This part of code hides field_330 from the list and then adds it as mouse over to field 380
@@ -2259,7 +2259,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     });
     //end
 
-    //This part is for column headers
+    /*This part is for column headers
     //Column headers
     $('th[class="field_2141"]').attr('title','QC vs Predicted');
     $('th[class="field_2163"]').attr('title','QC Vs Invoiced Internal & Warranty Jobs')
@@ -2267,4 +2267,4 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
    // $('th[class="field_381"]').addClass('tooltip-bottom')
   }); */
 
-// hover fields for customer advisor view in Vehicle on-site
+
