@@ -2267,7 +2267,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
    // $('th[class="field_381"]').addClass('tooltip-bottom')
   }); */
 
-// hover fields for customer advisor view in Vehicle on-site
+/* hover fields for customer advisor view in Vehicle on-site
   function showHideMoreVehicleDetails(){
     let newV = (document.querySelector('.more').style.display==="none"?"":"none");
     document.querySelectorAll('.more').forEach(function(el) {
@@ -2355,3 +2355,4 @@ function serviceVisitsTooltips(viewId = '1880', fieldId = '318'){
       showHideMoreVehicleDetails();
     }
   });
+  */
