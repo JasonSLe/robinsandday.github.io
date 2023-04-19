@@ -78,7 +78,6 @@ var submitUserLoginForm = function() {
 /*//MASTER/SLAVE CONNECT
 //Scenes where the App is accessed from the Master App and needs to login
 var loginSceneNames = ["scene_20","scene_32","scene_38","scene_44","scene_52","scene_57","scene_111","scene_73","scene_74","scene_224","scene_340"]; ///add scene numbers as necessary
-
 loginSceneNames.forEach(functionName);
 function functionName(selector_scene){
   $(document).on("knack-scene-render." + selector_scene, function(event, scene, data) {
@@ -120,7 +119,6 @@ function callPostHttpRequest(url, payloadObject, callName){
   Function updates all views in views property of record, if field mainField is blank, till there is some value in mainField 
   !mainField needs to be on first View in array!
   runAfter is function, which is run after the data are loaded to the view
-
   This is just example
   let refreshData = [
           //mainField needs to be on first View in array
@@ -479,11 +477,11 @@ function refreshScene24(){
     {
       name : 'Autoline - Owner',
       mainField : 'field_278', //Autoline - type of bussines - first Autoline save
-      views:['377','326','344','327']
+      views:['377','326','344']
     },{
       name : 'Autoline - Vehicle summary',
       mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
-      views:['325','375','324'],
+      views:['325','375','324','327'],
     },{
       name : 'EMAC Service plan',
       mainField : 'field_312', //EMAC - service plan Summary = Service plan
@@ -512,12 +510,8 @@ function refreshScene24(){
       runAfter : serviceVisitsTooltips
     },{	    
       name : 'Recalls',
-      mainField : 'field_70', //Recalls Oustanding
+      mainField : 'field_70', //Recalls and service shedule check Completed
       views:['329','332']
-    },{
-      name : 'Service schedule',
-      mainField : 'field_350', //Vehicle details
-      views:['332']
     }
   ]
   sceneRefresh(refreshData);
@@ -870,12 +864,9 @@ try{
 //trigger Aftersales Tyre dealer Stock Lookup
 
 /*$(document).on('knack-form-submit.view_1474', function(event, view, data) {
-
 try{
-
     let commandURL = "https://hook.eu1.make.celonis.com/95g8pth4f57ytmkkh6i4cei4ks9df5a8";
     let dataToSend = JSON.stringify({"Record ID":data.id, "REG":data.field_31, "POS":data.field_443});
-
     var rData = $.ajax({
         url: commandURL,
         type: 'POST',
@@ -883,7 +874,6 @@ try{
         data: dataToSend,
         async: false
     }).responseText;    
-
     //let refreshData = [
    //   {
     //      mainField : 'field_605', //Tyres
@@ -897,7 +887,6 @@ try{
     var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     var dateTime = date+' '+time;
-
     let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
     let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Scenario DESCRIPTION what for the error webhook",
     "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
@@ -937,7 +926,6 @@ $(document).on('knack-form-submit.view_1474', function(event, view, data) {
     
     try{
         
-
         let commandURL = "https://hook.eu1.make.celonis.com/osrisywv6fufmcdbf7ih8bc1yfrlvpq8";
         let dataToSend = JSON.stringify({"Record ID":data.id, "Selected Dealer":data.field_411});
 	    
@@ -1369,7 +1357,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
           };
         };
         if (currentRow.id!==''){
-          currentRow.children[3].onclick = createClickHandler(currentRow);
+          currentRow.children[0].onclick = createClickHandler(currentRow);
         }
       }
     }
@@ -1529,7 +1517,7 @@ function recursivecallscene_340(){
 
 //Trigger failed Quality check (QC) emails to workshop controller/ manager
 
-$(document).on('knack-form-submit.view_1006', function(event, view, data) {
+$(document).on('knack-form-submit.view_1628', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
 });
 
@@ -2109,7 +2097,6 @@ $(document).on('knack-form-submit.view_654', function(event, view, data) {
 
 /*trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button
 $(document).on('knack-view-render.view_1512', function (event, view, data) {
-
 	    if ($('div[class="kn-table kn-view view_1512"]')){
       let rows = $('div[class="kn-table kn-view view_1512"] table tr');
       for (i = 1; i < rows.length; i++) {
@@ -2229,6 +2216,45 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
 	    
       $(this).find('td[data-field-key="field_2163"]').attr('data-tooltip',getFieldForRowID('view_924','field_2162',$(this).attr('id')));
       $(this).find('td[data-field-key="field_2163"]').addClass('tooltip-top');	    
+	    
+    });
+    //end
+
+    //This part is for column headers
+    //Column headers
+    $('th[class="field_2141"]').attr('title','QC vs Predicted');
+    $('th[class="field_2163"]').attr('title','QC Vs Invoiced Internal & Warranty Jobs')
+    $('th[class="field_2138"]').attr('title','Failed Vs Total Completed')
+   // $('th[class="field_381"]').addClass('tooltip-bottom')
+  }); 
+
+// Trigger DVLA License Check Scenario When Customer Advisor Completes Pre Call
+
+$(document).on('knack-form-submit.view_341', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/y3bgw1dxy2ntnysos7usd6gxbsnmcaeg", {"Record ID":data.id,"Courtesy Car Required?":data.field_1137},"Customer Advisor Completed Pre Call")
+});
+
+
+//hover field for Service On-site Workshop control view
+  $(document).on('knack-view-render.view_1880', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	
+	  
+    $('div[id="view_1880"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_763"]').attr('title',getFieldForRowID('view_1880','field_318',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_763"]').addClass('title');
+	    
+      $(this).find('td[data-field-key="field_899"]').attr('title',getFieldForRowID('view_1880','field_1537',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_899"]').addClass('title');
+	    
+  
 	    
     });
     //end
