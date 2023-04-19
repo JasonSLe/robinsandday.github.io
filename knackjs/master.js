@@ -361,7 +361,15 @@ $(document).on('knack-view-render.view_6225', function(event, view, data) {
 $(document).on('knack-view-render.view_6215', function(event, view, data) {
   var token = Knack.getUserAttributes().values["field_6440"];
   $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/digital-orders?token='+encodeURIComponent(token) + '#marketing-new-vehicle-gdpr-preferences-following-confirmed-enquiry-max-order/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+  hideHeaderForIframe();
 });
+
+function hideHeaderForIframe(){
+  document.body.style.overflow = "hidden";
+  if (window.matchMedia('(min-width: 768px)').matches !== false) {
+    toggleHeaderVisibility('hidden');
+  }
+}
 
 var aftersalesConnectView = [{view:'view_5733',url:'#after-sales-vehicle-lookup/'},
 {view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
@@ -389,6 +397,7 @@ function aftersalesConnectViewFunction(selector_view){
     console.log(selector_view)
     var token = Knack.getUserAttributes().values["field_6440"];
     $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales'+selector_view.url+'?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+    hideHeaderForIframe();
   });
 }
 
