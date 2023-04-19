@@ -365,6 +365,7 @@ $(document).on('knack-view-render.view_6215', function(event, view, data) {
 });
 
 function hideHeaderForIframe(){
+  console.log('hideHeaderForIframe');
   document.body.style.overflow = "hidden";
   if (window.matchMedia('(min-width: 768px)').matches !== false) {
     toggleHeaderVisibility('hidden');
