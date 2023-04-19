@@ -2268,3 +2268,90 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
   }); */
 
 // hover fields for customer advisor view in Vehicle on-site
+  function showHideMoreVehicleDetails(){
+    let newV = (document.querySelector('.more').style.display==="none"?"":"none");
+    document.querySelectorAll('.more').forEach(function(el) {
+       el.style.display = newV;
+    });
+    if (newV==='none'){
+      document.getElementById("showHideMoreVehicleDetails").innerText = "Show more";
+    } else {
+      document.getElementById("showHideMoreVehicleDetails").innerText = "Hide more";
+    }
+  }
+
+  $(document).on('knack-view-render.view_1880', function (event, view, data) {
+    if (document.getElementById("showHideMoreVehicleDetails")){
+      document.getElementById("showHideMoreVehicleDetails").onclick = showHideMoreVehicleDetails;
+      showHideMoreVehicleDetails();
+    }
+  });
+  
+  function createVehicleDeailsClick(){
+  var VehicleDetailsLabel = document.getElementsByClassName('field_318')[0];
+
+  VehicleDetailsLabel.style.cursor = 'pointer';
+  VehicleDetailsLabel.onclick = function() {
+    let servS = document.getElementById("VehicleDetails");
+    if (servS.style.display === "none" || servS.style.display === ""){
+      servS.style.display = "inline";
+    } else {
+      servS.style.display = "none";
+    }
+  };
+}
+
+
+let shownTooltipId = null;
+
+function serviceVisitsTooltips(viewId = '1880', fieldId = '318'){
+  //console.log('serviceVisitsTooltips');
+  $('div[id*="tooltip"]').each(function(){
+    $(this).attr("style","background: white; position: fixed; display:none;");
+  });
+  $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
+    //console.log('HIDE AFTER LEAVE')
+    $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+  });
+
+  //console.log('table',$('table[id="serviceVisitsTable"]'));
+  //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
+  $('div[id="view_'+viewId+'"]').on("mousemove", function (e) {
+      //console.log('on move');
+      let partOfTable = document.elementFromPoint(e.pageX, e.pageY - document.documentElement.scrollTop);
+      let trUnderMouse = null;
+      if (partOfTable){
+        if (partOfTable.nodeName==='TD'){
+          trUnderMouse = partOfTable.parentElement;
+        }
+        if (partOfTable.nodeName==='TR'){
+          trUnderMouse = partOfTable;
+        }
+      }
+      if (trUnderMouse && trUnderMouse.id){
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
+        //$('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: document.getElementById('VehicleDetails').getBoundingClientRect().left-250, top: 50 + document.documentElement.scrollTop });
+        if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
+            $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+        }
+        shownTooltipId = trUnderMouse.id;
+      }
+  });
+  setTimeout(function(){
+    $('div[class="field_'+fieldId+'"]').show();
+  }, 100);
+}
+  
+  
+  
+  
+  
+  //**********************************************************************************************
+  
+    $(document).on('knack-view-render.view_1880', function (event, view, data) {
+    if (document.getElementById("showHideMoreVehicleDetails")){
+      document.getElementById("showHideMoreVehicleDetails").onclick = showHideMoreVehicleDetails;
+      showHideMoreVehicleDetails();
+    }
+  });
