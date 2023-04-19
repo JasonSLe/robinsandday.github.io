@@ -2267,7 +2267,8 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
    // $('th[class="field_381"]').addClass('tooltip-bottom')
   }); */
 
-/* hover fields for customer advisor view in Vehicle on-site
+// hover fields for customer advisor view in Vehicle on-site
+
   function showHideMoreVehicleDetails(){
     let newV = (document.querySelector('.more').style.display==="none"?"":"none");
     document.querySelectorAll('.more').forEach(function(el) {
@@ -2304,7 +2305,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 
 let shownTooltipId = null;
 
-function serviceVisitsTooltips(viewId = '1880', fieldId = '318'){
+function VehicleDetailsTooltips(viewId = '1880', fieldId = '318'){
   //console.log('serviceVisitsTooltips');
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: fixed; display:none;");
@@ -2341,18 +2342,3 @@ function serviceVisitsTooltips(viewId = '1880', fieldId = '318'){
   setTimeout(function(){
     $('div[class="field_'+fieldId+'"]').show();
   }, 100);
-}
-  
-  
-  
-  
-  
-  //**********************************************************************************************
-  
-    $(document).on('knack-view-render.view_1880', function (event, view, data) {
-    if (document.getElementById("showHideMoreVehicleDetails")){
-      document.getElementById("showHideMoreVehicleDetails").onclick = showHideMoreVehicleDetails;
-      showHideMoreVehicleDetails();
-    }
-  });
-  */
