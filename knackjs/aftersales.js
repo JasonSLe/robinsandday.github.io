@@ -425,15 +425,6 @@ function formatScene24(){
   $('div[class="field_325"]').hide();
 }
 
-$(document).on('knack-view-render.view_1880', function (event, view, data) {
-  if (document.getElementById("showHideMoreServiceVisits")){
-    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
-    showHideMoreServiceVisits();
-  }
-  $('div[class="field_325"]').hide();
-  serviceVisitsTooltips('1880','325');
-});
-
 let shownTooltipId = null;
 function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
   //console.log('serviceVisitsTooltips');
@@ -2257,6 +2248,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 	
 	  
     $('div[id="view_1880"] table>tbody>tr').each(function(){
+      console.log($(this));
       $(this).find('td[data-field-key="field_763"]').attr('title',getFieldForRowID('view_1880','field_318',$(this).attr('id')));
       $(this).find('td[data-field-key="field_763"]').addClass('title');
 	    
