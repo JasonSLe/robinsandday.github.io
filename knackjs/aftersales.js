@@ -425,6 +425,15 @@ function formatScene24(){
   $('div[class="field_325"]').hide();
 }
 
+$(document).on('knack-view-render.view_1880', function (event, view, data) {
+  if (document.getElementById("showHideMoreServiceVisits")){
+    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
+    showHideMoreServiceVisits();
+  }
+  $('div[class="field_325"]').hide();
+  serviceVisitsTooltips('1880','325');
+});
+
 let shownTooltipId = null;
 function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
   //console.log('serviceVisitsTooltips');
