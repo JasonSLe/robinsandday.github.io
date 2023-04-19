@@ -353,6 +353,16 @@ $(document).on('knack-view-render.view_6001', function(event, view, data) {
   $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales#contact-centre-feedback?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+$(document).on('knack-view-render.view_6214', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/digital-orders?token='+encodeURIComponent(token) + '#fleet-vehicle-administration/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
+$(document).on('knack-view-render.view_6215', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/digital-orders?token='+encodeURIComponent(token) + '#marketing-new-vehicle-gdpr-preferences-following-confirmed-enquiry-max-order/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 var aftersalesConnectView = [{view:'view_5733',url:'#after-sales-vehicle-lookup/'},
 {view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
 {view:'view_5735',url:'#after-sales-vehicle-lookup/check-in/'},
