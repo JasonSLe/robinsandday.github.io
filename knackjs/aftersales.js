@@ -2249,14 +2249,11 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 	  
     $('div[id="view_1880"] table>tbody>tr').each(function(){
       console.log($(this));
-      $(this).find('td[data-field-key="field_763"]').attr('title',getFieldForRowID('view_1880','field_318',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_763"]').attr('title',getTextFromHTML(getFieldForRowID('view_1880','field_318',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_763"]').addClass('title');
 	    
-      $(this).find('td[data-field-key="field_899"]').attr('title',getFieldForRowID('view_1880','field_1537',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1880','field_1537',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_899"]').addClass('title');
-	    
-  
-	    
     });
     //end
 
@@ -2268,4 +2265,49 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
    // $('th[class="field_381"]').addClass('tooltip-bottom')
   }); 
 
+  function getTextFromHTML(s) {
+    let span = document.createElement('span');
+    s = s.replace(new RegExp('<br />','g'),'\n').replace(new RegExp('</tr>','g'),'</tr>\n');
+    span.innerHTML = s;
+    return span.textContent || span.innerText;
+  };
 
+  let shownTooltipIdT = null;
+  function tooltipsTable(viewId = '438', fieldId = '8881'){
+    //console.log('serviceVisitsTooltips');
+    $('div[id*="tooltip"]').each(function(){
+      $(this).attr("style","background: white; position: fixed; display:none;");
+    });
+    $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
+      //console.log('HIDE AFTER LEAVE')
+      $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+    });
+    
+    //console.log('table',$('table[id="serviceVisitsTable"]'));
+    //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
+    $('div[id="view_'+viewId+'"]').on("mousemove", function (e) {
+        //console.log('on move');
+        let partOfTable = document.elementFromPoint(e.pageX, e.pageY - document.documentElement.scrollTop);
+        let trUnderMouse = null;
+        if (partOfTable){
+          if (partOfTable.nodeName==='TD'){
+            trUnderMouse = partOfTable.parentElement;
+          }
+          if (partOfTable.nodeName==='TR'){
+            trUnderMouse = partOfTable;
+          }
+        }
+        if (trUnderMouse && trUnderMouse.id){
+          $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
+          $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
+          //$('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: document.getElementById('serviceVisitsTable').getBoundingClientRect().left, top: document.documentElement.scrollTop });
+          if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
+              $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+          }
+          shownTooltipId = trUnderMouse.id;
+        }
+    });
+    setTimeout(function(){
+      $('div[class="field_'+fieldId+'"]').show();
+    }, 100);
+  }
