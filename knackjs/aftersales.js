@@ -2266,6 +2266,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
   }); 
 
   function getTextFromHTML(s) {
+    if (!s) return '';
     let span = document.createElement('span');
     s = s.replace(new RegExp('<br />','g'),'\n').replace(new RegExp('</tr>','g'),'</tr>\n');
     span.innerHTML = s;
