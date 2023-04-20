@@ -2274,8 +2274,9 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
   };
 
   let shownTooltipIdT = null;
-  function tooltipsTable(viewId = '438', fieldId = '8881'){
-    //console.log('serviceVisitsTooltips');
+  function tooltipsTable(viewId, tooltipFieldId, showTooltipFieldId){
+    $('th[class="'+tooltipFieldId+'"]');
+    
     $('div[id*="tooltip"]').each(function(){
       $(this).attr("style","background: white; position: fixed; display:none;");
     });
