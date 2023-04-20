@@ -3890,7 +3890,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_3633 > div > a.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_3633 > div > a.kn-link.kn-link-5.kn-link-page.kn-button,
 #view_5894 > div > a.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5894 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
+#view_5894 > div > a.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_6235 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #2ab27b;
   color: #ffffff;
   font-weight: bold;
@@ -3911,7 +3912,8 @@ div#kn-scene_1304 div.kn-view.kn-back-link > a {
 #view_3633 > div > a:hover.kn-link.kn-link-4.kn-link-page.kn-button,
 #view_3633 > div > a:hover.kn-link.kn-link-5.kn-link-page.kn-button,
 #view_5894 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button,
-#view_5894 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button, {
+#view_5894 > div > a:hover.kn-link.kn-link-2.kn-link-page.kn-button,
+#view_6235 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
   background-color: #308965;
   color: #ffffff;
   font-weight: bold;
