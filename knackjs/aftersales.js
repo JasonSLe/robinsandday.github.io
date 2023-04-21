@@ -2402,7 +2402,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $(this).find('td[data-field-key="field_1022"]').attr('title',getTextFromHTML(getFieldForRowID('view_1560','field_1537',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_1022"]').addClass('title');
 	  
-	        $(this).find('td[data-field-key="knTableColumn__link knTableColumn__link--alignCenter"]').attr('title',getTextFromHTML(getFieldForRowID('view_1560','field_1532',$(this).attr('id'))));
-      $(this).find('td[data-field-key="knTableColumn__link knTableColumn__link--alignCenter"]').addClass('title');
+	        $(this).find('td[data-field-key="col-3"]').attr('title',getTextFromHTML(getFieldForRowID('view_1560','field_1532',$(this).attr('id'))));
+      $(this).find('td[data-field-key="col-3"]').addClass('title');
     });
 	}); 
