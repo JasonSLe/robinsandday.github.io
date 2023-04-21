@@ -2259,11 +2259,11 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 
     //This part is for column headers
     //Column headers
-    $('th[class="field_2141"]').attr('title','QC vs Predicted');
-    $('th[class="field_2163"]').attr('title','QC Vs Invoiced Internal & Warranty Jobs')
-    $('th[class="field_2138"]').attr('title','Failed Vs Total Completed')
+   // $('th[class="field_2141"]').attr('title','QC vs Predicted');
+   // $('th[class="field_2163"]').attr('title','QC Vs Invoiced Internal & Warranty Jobs')
+   // $('th[class="field_2138"]').attr('title','Failed Vs Total Completed')
    // $('th[class="field_381"]').addClass('tooltip-bottom')
-  }); 
+ // }); 
 
   function getTextFromHTML(s) {
     if (!s) return '';
