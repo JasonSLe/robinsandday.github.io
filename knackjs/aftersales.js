@@ -2380,3 +2380,29 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $(this).find('td[data-field-key="field_1021"]').addClass('title');
     });
 	}); 
+
+//hover field for Service On-site Workshop control view "Parts not ave"
+  $(document).on('knack-view-render.view_1560', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	 $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	  
+    $('div[id="view_1560"] table>tbody>tr').each(function(){
+      console.log($(this));
+      $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1560','field_318',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_899"]').addClass('title');
+	    
+      $(this).find('td[data-field-key="field_1022"]').attr('title',getTextFromHTML(getFieldForRowID('view_1560','field_1537',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_1022"]').addClass('title');
+	  
+	        $(this).find('td[data-field-key="knTableColumn__link knTableColumn__link--alignCenter"]').attr('title',getTextFromHTML(getFieldForRowID('view_1560','field_1532',$(this).attr('id'))));
+      $(this).find('td[data-field-key="knTableColumn__link knTableColumn__link--alignCenter"]').addClass('title');
+    });
+	}); 
