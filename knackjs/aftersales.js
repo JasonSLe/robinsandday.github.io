@@ -1400,13 +1400,13 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
    });
 
 
-
-// ----------  Refresh Customer Incident Form table every 60 seconds but not the page itself  ---------- //
 // Refresh Virtual Reception table on Pre Visit Page  
 
 $(document).on('knack-scene-render.scene_91', function(event, scene) {
   refreshWithData('1188', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
+
+// Refresh Customer Incident Form table when new message comes through not the page itself   
 
 $(document).on('knack-scene-render.scene_91', function(event, scene) {
   refreshWithData('871','field_1950');
