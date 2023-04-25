@@ -2402,7 +2402,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 	}); 
 
 //trigger Create Service Wash From Manager's Note
-/*$(document).on('knack-form-submit.view_1899', function(event, view, data) { 
+$(document).on('knack-form-submit.view_1899', function(event, view, data) { 
     
     try{
         
@@ -2422,4 +2422,3 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     }
 });
 
-*/
