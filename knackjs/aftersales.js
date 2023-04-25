@@ -2408,7 +2408,7 @@ $(document).on('knack-form-submit.view_1899', function(event, view, data) {
         
 
         let commandURL = "https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g";
-        let dataToSend = JSON.stringify({"RecordID from Jobcard":data.id, "Service Comments":data.field_982, "userName": Knack.getUserAttributes().name});
+        let dataToSend = JSON.stringify({"RecordID from Jobcard":data.id, "Service Comments":data.field_982, "userName": Knack.getUserAttributes().name,"Manual Request":"Yes"});
 
         var rData = $.ajax({
             url: commandURL,
