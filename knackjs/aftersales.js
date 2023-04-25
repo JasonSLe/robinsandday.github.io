@@ -1406,12 +1406,6 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
   refreshWithData('1188', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
 
-// Refresh Customer Incident Form table when new message comes through not the page itself   
-
-$(document).on('knack-scene-render.scene_91', function(event, scene) {
-  refreshWithData('871','field_1950');
-});
-
 //Recall Recheck Spinner on Vehicle Checkin
 
 $(document).on("knack-scene-render.scene_267", function(event, scene, data) {
