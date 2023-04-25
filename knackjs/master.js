@@ -4260,3 +4260,25 @@ $(document).on('knack-scene-render.scene_1387', function(event, scene) {
 function recursivecallscene_1387(){
  setTimeout(function () { if($("#view_4515").is(":visible")==true){ Knack.views["view_4515"].model.fetch();recursivecallscene_1387();} }, 100000);
 }
+
+//Send Data When Valet is started for service wash
+$(document).on('knack-form-submit.view_4706', function(event, view, data) { 
+    
+ if (data.field_6778 === "<b>Service Wash</b>")	
+ { try{
+        
+
+        let commandURL = "-https://hook.eu1.make.celonis.com/xtj6x2lksaknfdci6951x5lhe2oahur7";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "TypeOfWash":data.field_6778});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Send Data When Valet is started for service wash");
+    }}
+});
