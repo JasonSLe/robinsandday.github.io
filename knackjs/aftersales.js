@@ -2402,13 +2402,13 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 	}); 
 
 //trigger Create Service Wash From Manager's Note
-/*$(document).on('knack-form-submit.view_1229', function(event, view, data) { 
+/*$(document).on('knack-form-submit.view_1899', function(event, view, data) { 
     
     try{
         
 
-        let commandURL = "https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8";
-        let dataToSend = JSON.stringify({"recordId":data.id});
+        let commandURL = "https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g";
+        let dataToSend = JSON.stringify({"recordId":data.id, "Service Comments":data.field_982});
 
         var rData = $.ajax({
             url: commandURL,
@@ -2418,7 +2418,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
             async: false
         }).responseText;
     }catch(exception){
-        sendErrorToIntegromat(exception, "Aftersales - trigger update live wip from VR");
+        sendErrorToIntegromat(exception, "Aftersales - trigger service wash from Manager's Note");
     }
 });
 
