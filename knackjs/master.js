@@ -4264,7 +4264,7 @@ function recursivecallscene_1387(){
 //Send Data When Valet is started for service wash
 $(document).on('knack-form-submit.view_4706', function(event, view, data) { 
     
- if (data.field_6778 === "<b>Service Wash</b>")	
+ if (data.field_6778 == "<b>Service Wash</b>")	
  { try{
         
 
