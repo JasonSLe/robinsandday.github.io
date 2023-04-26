@@ -2316,14 +2316,14 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('th[class="'+tooltipFieldId+'"]');
 
     let tooltipDiv = document.createElement('div');
-    tooltipDiv.setAttribute("id", "tooltipDiv");
+    tooltipDiv.setAttribute("id", "tooltipDiv_"+tooltipFieldId);
     tooltipDiv.setAttribute("style","background: white; position: fixed; display:none;");
     console.log('view div',document.querySelector('div[id="view_'+viewId+'"]'));
     document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
     
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
       //console.log('HIDE AFTER LEAVE')
-      $('div[id="tooltipDiv"]').hide();
+      $('div[id="tooltipDiv_'+tooltipFieldId+'"]').hide();
     });
     
 
@@ -2342,11 +2342,11 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
           //console.log('tdUnderMouse right column',tdUnderMouse);
           //console.log('tdUn id',tdUnderMouse.parentElement.id);
           //console.log('HTML to show',tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML)
-          $('div[id="tooltipDiv"]').html(tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML);
-          $('div[id="tooltipDiv"]').show();
-          $('div[id="tooltipDiv"]').offset({ left: e.pageX+10, top: e.pageY });
+          $('div[id="tooltipDiv_'+tooltipFieldId+'"]').html(tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML);
+          $('div[id="tooltipDiv_'+tooltipFieldId+'"]').show();
+          $('div[id="tooltipDiv_'+tooltipFieldId+'"]').offset({ left: e.pageX+10, top: e.pageY });
         } else {
-          $('div[id="tooltipDiv"]').hide();
+          $('div[id="tooltipDiv_'+tooltipFieldId+'"]').hide();
         }
     });
   }
