@@ -1400,16 +1400,10 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
    });
 
 
-
-// ----------  Refresh Customer Incident Form table every 60 seconds but not the page itself  ---------- //
 // Refresh Virtual Reception table on Pre Visit Page  
 
 $(document).on('knack-scene-render.scene_91', function(event, scene) {
   refreshWithData('1188', 'TITLE', 'TEXT $field_351', 'field_1518');
-});
-
-$(document).on('knack-scene-render.scene_91', function(event, scene) {
-  refreshWithData('871','field_1950');
 });
 
 //Recall Recheck Spinner on Vehicle Checkin
@@ -2255,17 +2249,56 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1880','field_1537',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_899"]').addClass('title');
     });
-    //end
+	  }); 
 
-    tooltipsTable('1880','field_318','field_763');
+//hover field for Service On-site Workshop control view "checked in Before Today,Not checked"
+  $(document).on('knack-view-render.view_1888', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	
+	  
+    $('div[id="view_1888"] table>tbody>tr').each(function(){
+      console.log($(this));
+      $(this).find('td[data-field-key="field_763"]').attr('title',getTextFromHTML(getFieldForRowID('view_1888','field_318',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_763"]').addClass('title');
+	    
+      $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1888','field_1537',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_899"]').addClass('title');
+    });
+	}); 
 
-    //This part is for column headers
-    //Column headers
-    $('th[class="field_2141"]').attr('title','QC vs Predicted');
-    $('th[class="field_2163"]').attr('title','QC Vs Invoiced Internal & Warranty Jobs')
-    $('th[class="field_2138"]').attr('title','Failed Vs Total Completed')
-   // $('th[class="field_381"]').addClass('tooltip-bottom')
-  }); 
+//hover field for Service On-site Workshop control view "currently clocked on"
+  $(document).on('knack-view-render.view_1559', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	  
+    $('div[id="view_1559"] table>tbody>tr').each(function(){
+      console.log($(this));
+      $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1559','field_318',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_899"]').addClass('title');
+	    
+      $(this).find('td[data-field-key="field_1022"]').attr('title',getTextFromHTML(getFieldForRowID('view_1559','field_1537',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_1022"]').addClass('title');
+	  
+      $(this).find('td[data-field-key="field_1021"]').attr('title',getTextFromHTML(getFieldForRowID('view_1559','field_1532',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_1021"]').addClass('title');
+    });
+	}); 
+
 
   function getTextFromHTML(s) {
     if (!s) return '';
@@ -2312,3 +2345,77 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
         }*/
     });
   }
+
+//hover field for Service On-site Workshop control view "Parts ave, awaiting labour"
+  $(document).on('knack-view-render.view_1558', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	 $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	  
+    $('div[id="view_1558"] table>tbody>tr').each(function(){
+      console.log($(this));
+      $(this).find('td[data-field-key="field_763"]').attr('title',getTextFromHTML(getFieldForRowID('view_1558','field_318',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_763"]').addClass('title');
+	    
+      $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1558','field_1537',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_899"]').addClass('title');
+	  
+	        $(this).find('td[data-field-key="field_1021"]').attr('title',getTextFromHTML(getFieldForRowID('view_1558','field_1532',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_1021"]').addClass('title');
+    });
+	}); 
+
+//hover field for Service On-site Workshop control view "Parts not ave"
+  $(document).on('knack-view-render.view_1560', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	 $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	  
+    $('div[id="view_1560"] table>tbody>tr').each(function(){
+      console.log($(this));
+      $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1560','field_318',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_899"]').addClass('title');
+	    
+      $(this).find('td[data-field-key="field_1022"]').attr('title',getTextFromHTML(getFieldForRowID('view_1560','field_1537',$(this).attr('id'))));
+      $(this).find('td[data-field-key="field_1022"]').addClass('title');
+	  
+	        $(this).find('td[data-field-key="col-3"]').attr('title',getTextFromHTML(getFieldForRowID('view_1560','field_1532',$(this).attr('id'))));
+      $(this).find('td[data-field-key="col-3"]').addClass('title');
+    });
+	}); 
+
+//trigger Create Service Wash From Manager's Note
+$(document).on('knack-form-submit.view_1899', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g";
+        let dataToSend = JSON.stringify({"RecordID from Jobcard":data.id, "Service Comments":data.field_982, "userName": Knack.getUserAttributes().name,"Manual Request":"Yes"});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Aftersales - trigger service wash from Manager's Note");
+    }
+});
+

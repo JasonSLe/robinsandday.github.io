@@ -3113,7 +3113,7 @@ $(document).on('knack-form-submit.view_4573', function(event, view, data) {
     
 //Valeting check in/out (Master App)
 $(document).on('knack-form-submit.view_4733', function(event, view, data) { 
-  callPostHttpRequest("https://hook.integromat.com/j5s5ksuxtqjd4jcwh41qm5gy2afujni3", {"Record ID":data.id},"Valeting check in out (Master App)")
+  callPostHttpRequest("https://hook.integromat.com/j5s5ksuxtqjd4jcwh41qm5gy2afujni3", {"Record ID":data.id,"TypeOfWash":data.field_6778, "AftersalesRecordID":data.field_6787},"Valeting check in out (Master App)")
 });
 
 // Refresh the table on WALL-E's status page         
@@ -4260,3 +4260,30 @@ $(document).on('knack-scene-render.scene_1387', function(event, scene) {
 function recursivecallscene_1387(){
  setTimeout(function () { if($("#view_4515").is(":visible")==true){ Knack.views["view_4515"].model.fetch();recursivecallscene_1387();} }, 100000);
 }
+
+//Send Data When Valet is started for service wash
+$(document).on('knack-form-submit.view_4706', function(event, view, data) { 
+	
+   // $('#kn-input-field_6778').hide();
+    //$('th["kn-input kn-read-only kn-input-short_text control"]').hide();
+
+	
+ if (data.field_6778 === "<b>Service Wash</b>")	
+ { try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/xtj6x2lksaknfdci6951x5lhe2oahur7";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "TypeOfWash":data.field_6778, "AftersalesRecordID":data.field_6787});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Send Data When Valet is started for service wash");
+    }}
+	
+});
