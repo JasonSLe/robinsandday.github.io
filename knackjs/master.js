@@ -3113,7 +3113,7 @@ $(document).on('knack-form-submit.view_4573', function(event, view, data) {
     
 //Valeting check in/out (Master App)
 $(document).on('knack-form-submit.view_4733', function(event, view, data) { 
-  callPostHttpRequest("https://hook.integromat.com/j5s5ksuxtqjd4jcwh41qm5gy2afujni3", {"Record ID":data.id},"TypeOfWash":data.field_6778, "AftersalesRecordID":data.field_6787,"Valeting check in out (Master App)")
+  callPostHttpRequest("https://hook.integromat.com/j5s5ksuxtqjd4jcwh41qm5gy2afujni3", {"Record ID":data.id,"TypeOfWash":data.field_6778, "AftersalesRecordID":data.field_6787},"Valeting check in out (Master App)")
 });
 
 // Refresh the table on WALL-E's status page         
