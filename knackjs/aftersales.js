@@ -2333,12 +2333,12 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
           if (partOfTable.nodeName==='TD'){
             tdUnderMouse = partOfTable;
           } else if (partOfTable.parentElement && partOfTable.parentElement.nodeName==='TD') {
-            trUnderMouse = partOfTable.parentElement;
+            tdUnderMouse = partOfTable.parentElement;
           }
         }
-        console.log('partOfTable',partOfTable);
-        console.log('partOfTable parent',partOfTable.parentElement);
-        console.log('parent element nodeName',partOfTable.parentElement.nodeName);
+        if (tdUnderMouse && tdUnderMouse.getAttribute('data-field-key')===showTooltipFieldId){
+          console.log('tdUnderMouse right column',tdUnderMouse);
+        }
 
         /*
         if (trUnderMouse && trUnderMouse.id){
