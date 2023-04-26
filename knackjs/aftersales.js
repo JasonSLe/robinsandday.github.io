@@ -2338,6 +2338,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
         }
         if (tdUnderMouse && tdUnderMouse.getAttribute('data-field-key')===showTooltipFieldId){
           console.log('tdUnderMouse right column',tdUnderMouse);
+          console.log('HTML to show',tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML)
         }
 
         /*
