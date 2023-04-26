@@ -2242,9 +2242,9 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 	
 	  
     $('div[id="view_1880"] table>tbody>tr').each(function(){
-      console.log($(this));
-      $(this).find('td[data-field-key="field_763"]').attr('title',getTextFromHTML(getFieldForRowID('view_1880','field_318',$(this).attr('id'))));
-      $(this).find('td[data-field-key="field_763"]').addClass('title');
+      //console.log($(this));
+      //$(this).find('td[data-field-key="field_763"]').attr('title',getTextFromHTML(getFieldForRowID('view_1880','field_318',$(this).attr('id'))));
+      //$(this).find('td[data-field-key="field_763"]').addClass('title');
 	    
       $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1880','field_1537',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_899"]').addClass('title');
@@ -2347,17 +2347,6 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
         } else {
           $('div[id="tooltipDiv"]').hide();
         }
-
-        /*
-        if (trUnderMouse && trUnderMouse.id){
-          $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
-          $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
-          //$('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: document.getElementById('serviceVisitsTable').getBoundingClientRect().left, top: document.documentElement.scrollTop });
-          if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
-              $('div[id="tooltip_'+shownTooltipId+'"]').hide();
-          }
-          shownTooltipId = trUnderMouse.id;
-        }*/
     });
   }
 
