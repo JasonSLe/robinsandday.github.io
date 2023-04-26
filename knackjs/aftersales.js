@@ -2334,7 +2334,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
             tdUnderMouse = partOfTable;
           }
         }
-        console.log('tdUnderMouse',tdUnderMouse)
+        console.log('partOfTable',tdUnderMouse)
         /*
         if (trUnderMouse && trUnderMouse.id){
           $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
