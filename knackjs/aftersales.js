@@ -2267,7 +2267,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 	
 	  
     $('div[id="view_1888"] table>tbody>tr').each(function(){
-      console.log($(this));
+      //console.log($(this));
       $(this).find('td[data-field-key="field_763"]').attr('title',getTextFromHTML(getFieldForRowID('view_1888','field_318',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_763"]').addClass('title');
 	    
@@ -2290,7 +2290,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_1532"]').hide(); 
 	  
     $('div[id="view_1559"] table>tbody>tr').each(function(){
-      console.log($(this));
+      //console.log($(this));
       $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1559','field_318',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_899"]').addClass('title');
 	    
