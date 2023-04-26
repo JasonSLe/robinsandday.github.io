@@ -2318,7 +2318,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     let tooltipDiv = document.createElement('div');
     tooltipDiv.setAttribute("id", "tooltipDiv_"+tooltipFieldId);
     tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
-    console.log('view div',document.querySelector('div[id="view_'+viewId+'"]'));
+    console.log('view div',document.querySelector('div[class="kn-scenes kn-section"]'));
     //document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
     document.querySelector('div[class="kn-scenes kn-section"]').appendChild(tooltipDiv);
     
@@ -2352,7 +2352,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     });
   }
 
-  
+
 //hover field for Service On-site Workshop control view "Parts ave, awaiting labour"
   $(document).on('knack-view-render.view_1558', function (event, view, data) {
     //This part is for tooltip of another field above field in list
