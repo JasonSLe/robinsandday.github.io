@@ -2297,6 +2297,8 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $(this).find('td[data-field-key="field_1021"]').attr('title',getTextFromHTML(getFieldForRowID('view_1559','field_1532',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_1021"]').addClass('title');
     });
+
+    tooltipsTable('1880','field_318','field_763');
 	}); 
 
 
