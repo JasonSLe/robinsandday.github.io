@@ -2313,7 +2313,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 
   let shownTooltipIdT = null;
   function tooltipsTable(sceneId, viewId, tooltipFieldId, showTooltipFieldId){
-    $('th[class="'+tooltipFieldId+'"]');
+    $('th[class="'+tooltipFieldId+'"]').hide();
     $('td[class*="'+tooltipFieldId+'"]').hide();
 
     let tooltipDiv = document.createElement('div');
