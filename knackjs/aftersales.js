@@ -2325,7 +2325,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
       //console.log('HIDE AFTER LEAVE')
-      $('div[id="tooltipDiv_'+tooltipFieldId+'"]').hide();
+      $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').hide();
     });
     
 
