@@ -4263,7 +4263,11 @@ function recursivecallscene_1387(){
 
 //Send Data When Valet is started for service wash
 $(document).on('knack-form-submit.view_4706', function(event, view, data) { 
-    
+	
+    $('th[class="label kn-label"]').hide();
+    $('th["kn-input kn-read-only kn-input-short_text control"]').hide();
+
+	
  if (data.field_6778 === "<b>Service Wash</b>")	
  { try{
         
@@ -4281,4 +4285,5 @@ $(document).on('knack-form-submit.view_4706', function(event, view, data) {
     }catch(exception){
         sendErrorToIntegromat(exception, "Send Data When Valet is started for service wash");
     }}
+	
 });
