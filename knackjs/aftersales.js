@@ -2318,9 +2318,9 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     let tooltipDiv = document.createElement('div');
     tooltipDiv.setAttribute("id", "tooltipDiv_"+tooltipFieldId);
     tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
-    console.log('view div',document.querySelector('div[class="kn-scenes kn-section"]'));
+    console.log('view div',document.querySelector('div[id="kn-scene_540"]'));
     //document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
-    console.log('aaa',document.querySelector('div[class="kn-scenes kn-section"]').appendChild(tooltipDiv));
+    console.log('aaa',document.querySelector('div[id="kn-scene_540"]').appendChild(tooltipDiv));
     
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
       //console.log('HIDE AFTER LEAVE')
