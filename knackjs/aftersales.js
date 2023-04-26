@@ -2257,6 +2257,8 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     });
     //end
 
+    tooltipsTable('1880','field_318','field_763');
+
     //This part is for column headers
     //Column headers
     $('th[class="field_2141"]').attr('title','QC vs Predicted');
@@ -2276,29 +2278,29 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
   let shownTooltipIdT = null;
   function tooltipsTable(viewId, tooltipFieldId, showTooltipFieldId){
     $('th[class="'+tooltipFieldId+'"]');
+
+    let tooltipDiv = document.createElement('div');
+    tooltipDiv.setAttribute("id", "tooltipDiv");
+    tooltipDiv.setAttribute("style","background: white; position: fixed; display:none;");
+    document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
     
-    $('div[id*="tooltip"]').each(function(){
-      $(this).attr("style","background: white; position: fixed; display:none;");
-    });
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
       //console.log('HIDE AFTER LEAVE')
-      $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+      $('div[id="tooltipDiv"]').hide();
     });
     
-    //console.log('table',$('table[id="serviceVisitsTable"]'));
-    //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
+
     $('div[id="view_'+viewId+'"]').on("mousemove", function (e) {
         //console.log('on move');
         let partOfTable = document.elementFromPoint(e.pageX, e.pageY - document.documentElement.scrollTop);
-        let trUnderMouse = null;
+        let tdUnderMouse = null;
         if (partOfTable){
           if (partOfTable.nodeName==='TD'){
-            trUnderMouse = partOfTable.parentElement;
-          }
-          if (partOfTable.nodeName==='TR'){
-            trUnderMouse = partOfTable;
+            tdUnderMouse = partOfTable;
           }
         }
+        console.log('tdUnderMouse',tdUnderMouse)
+        /*
         if (trUnderMouse && trUnderMouse.id){
           $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
           $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
@@ -2307,9 +2309,6 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
               $('div[id="tooltip_'+shownTooltipId+'"]').hide();
           }
           shownTooltipId = trUnderMouse.id;
-        }
+        }*/
     });
-    setTimeout(function(){
-      $('div[class="field_'+fieldId+'"]').show();
-    }, 100);
   }
