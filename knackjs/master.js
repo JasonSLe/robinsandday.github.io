@@ -4264,8 +4264,8 @@ function recursivecallscene_1387(){
 //Send Data When Valet is started for service wash
 $(document).on('knack-form-submit.view_4706', function(event, view, data) { 
 	
-    $('#kn-input-field_6778').hide();
-    $('th["kn-input kn-read-only kn-input-short_text control"]').hide();
+   // $('#kn-input-field_6778').hide();
+    //$('th["kn-input kn-read-only kn-input-short_text control"]').hide();
 
 	
  if (data.field_6778 === "<b>Service Wash</b>")	
