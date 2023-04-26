@@ -2249,7 +2249,10 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1880','field_1537',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_899"]').addClass('title');
     });
-	  }); 
+
+    tooltipsTable('1880','field_318','field_763');
+    tooltipsTable('1880','field_1537','field_899');
+}); 
 
 //hover field for Service On-site Workshop control view "checked in Before Today,Not checked"
   $(document).on('knack-view-render.view_1888', function (event, view, data) {
@@ -2297,8 +2300,6 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $(this).find('td[data-field-key="field_1021"]').attr('title',getTextFromHTML(getFieldForRowID('view_1559','field_1532',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_1021"]').addClass('title');
     });
-
-    tooltipsTable('1880','field_318','field_763');
 	}); 
 
 
