@@ -2235,7 +2235,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     //This part of code hides field_330 from the list and then adds it as mouse over to field 380
     //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
     //start
-    $('th[class="field_318"]').hide();
+    /*$('th[class="field_318"]').hide();
     $('td[class*="field_318"]').hide();
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
@@ -2249,7 +2249,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $(this).find('td[data-field-key="field_899"]').attr('title',getTextFromHTML(getFieldForRowID('view_1880','field_1537',$(this).attr('id'))));
       $(this).find('td[data-field-key="field_899"]').addClass('title');
     });
-
+*/
     tooltipsTable('1880','field_318','field_763');
     tooltipsTable('1880','field_1537','field_899');
 }); 
@@ -2314,6 +2314,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
   let shownTooltipIdT = null;
   function tooltipsTable(viewId, tooltipFieldId, showTooltipFieldId){
     $('th[class="'+tooltipFieldId+'"]');
+    $('td[class*="'+tooltipFieldId+'"]').hide();
 
     let tooltipDiv = document.createElement('div');
     tooltipDiv.setAttribute("id", "tooltipDiv_"+tooltipFieldId);
