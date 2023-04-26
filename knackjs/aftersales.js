@@ -2332,9 +2332,11 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
         if (partOfTable){
           if (partOfTable.nodeName==='TD'){
             tdUnderMouse = partOfTable;
+          } else if (partOfTable.parentElement && partOfTable.parentElement.nodeName==='TD') {
+            trUnderMouse = partOfTable.parentElement;
           }
         }
-        console.log('partOfTable1',tdUnderMouse)
+        console.log('partOfTable2',tdUnderMouse)
         /*
         if (trUnderMouse && trUnderMouse.id){
           $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
