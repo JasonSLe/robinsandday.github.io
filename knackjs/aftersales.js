@@ -2338,7 +2338,8 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
         }
         console.log('partOfTable',partOfTable);
         console.log('partOfTable parent',partOfTable.parentElement);
-        
+        console.log('parent element nodeName',partOfTable.parentElement.nodeName);
+
         /*
         if (trUnderMouse && trUnderMouse.id){
           $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
