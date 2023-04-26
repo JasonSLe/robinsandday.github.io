@@ -2320,7 +2320,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
     console.log('view div',document.querySelector('div[class="kn-scenes kn-section"]'));
     //document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
-    document.querySelector('div[class="kn-scenes kn-section"]').appendChild(tooltipDiv);
+    console.log(document.querySelector('div[class="kn-scenes kn-section"]').appendChild(tooltipDiv));
     
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
       //console.log('HIDE AFTER LEAVE')
