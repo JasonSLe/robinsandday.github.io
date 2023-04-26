@@ -2250,8 +2250,8 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $(this).find('td[data-field-key="field_899"]').addClass('title');
     });
 */
-    tooltipsTable('1880','field_318','field_763');
-    tooltipsTable('1880','field_1537','field_899');
+    tooltipsTable('540','1880','field_318','field_763');
+    tooltipsTable('540','1880','field_1537','field_899');
 }); 
 
 //hover field for Service On-site Workshop control view "checked in Before Today,Not checked"
@@ -2312,16 +2312,16 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
   };
 
   let shownTooltipIdT = null;
-  function tooltipsTable(viewId, tooltipFieldId, showTooltipFieldId){
+  function tooltipsTable(sceneId, viewId, tooltipFieldId, showTooltipFieldId){
     $('th[class="'+tooltipFieldId+'"]');
     $('td[class*="'+tooltipFieldId+'"]').hide();
 
     let tooltipDiv = document.createElement('div');
-    tooltipDiv.setAttribute("id", "tooltipDiv_"+tooltipFieldId);
+    tooltipDiv.setAttribute("id", "tooltipDiv_"+viewId+'_'+tooltipFieldId);
     tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
-    console.log('view div',document.querySelector('div[id="kn-scene_540"]'));
+    console.log('view div',document.querySelector('div[id="kn-scene_'+sceneId+'"]'));
     //document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
-    console.log('aaa',document.querySelector('div[id="kn-scene_540"]').appendChild(tooltipDiv));
+    console.log('aaa',document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv));
     
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
       //console.log('HIDE AFTER LEAVE')
@@ -2344,11 +2344,11 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
           //console.log('tdUnderMouse right column',tdUnderMouse);
           //console.log('tdUn id',tdUnderMouse.parentElement.id);
           //console.log('HTML to show',tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML)
-          $('div[id="tooltipDiv_'+tooltipFieldId+'"]').html(tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML);
-          $('div[id="tooltipDiv_'+tooltipFieldId+'"]').show();
-          $('div[id="tooltipDiv_'+tooltipFieldId+'"]').offset({ left: e.pageX+10, top: e.pageY });
+          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').html(tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML);
+          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').show();
+          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').offset({ left: e.pageX+10, top: e.pageY });
         } else {
-          $('div[id="tooltipDiv_'+tooltipFieldId+'"]').hide();
+          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').hide();
         }
     });
   }
