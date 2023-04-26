@@ -2317,7 +2317,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 
     let tooltipDiv = document.createElement('div');
     tooltipDiv.setAttribute("id", "tooltipDiv_"+tooltipFieldId);
-    tooltipDiv.setAttribute("style","background: white; position: fixed; display:none;");
+    tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
     console.log('view div',document.querySelector('div[id="view_'+viewId+'"]'));
     document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
     
