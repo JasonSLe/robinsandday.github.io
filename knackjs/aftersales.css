@@ -3002,6 +3002,10 @@ p.speech-bubble-inbound:before {
   	font-weight: bold;
 }
 
-div.tooltipDiv table, td, tr {
+div.tooltipDiv table, th, td, tr {
 	border: 1px solid;
+}
+
+div.tooltipDiv th {
+	background-color: #B2BEB5;
 }
