@@ -2345,7 +2345,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
           //console.log('tdUnderMouse right column',tdUnderMouse);
           //console.log('tdUn id',tdUnderMouse.parentElement.id);
           //console.log('HTML to show',tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML)
-          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').html(tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML);
+          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').html(modifyTooltipHTML(tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML));
           $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').show();
           $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').offset({ left: e.pageX+10, top: e.pageY });
         } else {
@@ -2354,6 +2354,9 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     });
   }
 
+function modifyTooltipHTML(html){
+  return html.replace('class="','data-class="');
+}
 
 //hover field for Service On-site Workshop control view "Parts ave, awaiting labour"
   $(document).on('knack-view-render.view_1558', function (event, view, data) {
