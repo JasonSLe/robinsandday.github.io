@@ -3002,6 +3002,6 @@ p.speech-bubble-inbound:before {
   	font-weight: bold;
 }
 
-div.tooltipDiv > table {
-	border: 1px;
+div.tooltipDiv table, td, tr {
+	border: 1px solid;
 }
