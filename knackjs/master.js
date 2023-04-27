@@ -3969,6 +3969,7 @@ function scene_1908_showhide(){
       a1.onclick = function(){
         console.log('send to enhancement');
         sendRejectedPhotoToEnhancement(getRecordIdFromHref(location.href), $('div[data-input-id="field_7437"] img').attr('src'));
+        $('div[id="view_6168"]').hide();
         window.setTimeout(function(){
           scene_1908_showhide();
           window.setTimeout(function(){
