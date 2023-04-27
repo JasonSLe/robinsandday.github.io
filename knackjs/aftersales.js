@@ -2355,7 +2355,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
   }
 
 function modifyTooltipHTML(html){
-  return html.replace('class="','data-class="');
+  return html.replace(new RegExp('class="','g'),'data-class="');
 }
 
 //hover field for Service On-site Workshop control view "Parts ave, awaiting labour"
