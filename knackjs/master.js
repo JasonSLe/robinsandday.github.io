@@ -3951,6 +3951,7 @@ $(document).on('knack-scene-render.scene_1908', function(event, scene) {
 }, 100);
  });
 
+var wasImageEnhancementInvoked = false; 
 
 function scene_1908_showhide(){
   console.log('scene_1908_showhide');
@@ -3963,12 +3964,13 @@ function scene_1908_showhide(){
     $('div[id="view_6163"]').show();
     refreshView('6163',true, false);
     refreshView('6164',true, false);
-    if (!$('div[class="field_7416"]').text().trim().includes('Vehicle Position Check Status – REJECTED')){
+    if (!$('div[class="field_7416"]').text().trim().includes('Vehicle Position Check Status – REJECTED') && !wasImageEnhancementInvoked){
       $('div[id="view_6168"]').show();
       let a1 = document.querySelector('div[id="view_6168"] a')
       a1.onclick = function(){
         console.log('send to enhancement');
         sendRejectedPhotoToEnhancement(getRecordIdFromHref(location.href), $('div[data-input-id="field_7437"] img').attr('src'));
+        wasImageEnhancementInvoked = true;
         $('div[id="view_6168"]').hide();
         window.setTimeout(function(){
           scene_1908_showhide();
