@@ -2250,7 +2250,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $(this).find('td[data-field-key="field_899"]').addClass('title');
     });
 */
-    tooltipsTable('540','1880','field_318','field_763');
+    tooltipsTable('540','1880','field_318','field_978');
     tooltipsTable('540','1880','field_1537','field_899');
 }); 
 
