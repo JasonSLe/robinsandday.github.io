@@ -2254,15 +2254,11 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     tooltipsTable('540','1880','field_1537','field_899');
 }); 
 
-  $(document).on('knack-view-render.view_1880', function (event, view, data) {
+  $(document).on('knack-view-render.view_1888', function (event, view, data) {
     tooltipsTable('540','1888','field_318','field_763');
     tooltipsTable('540','1888','field_1537','field_899');
 }); 
 
-  $(document).on('knack-view-render.view_1880', function (event, view, data) {
-    tooltipsTable('540','1880','field_318','field_763');
-    tooltipsTable('540','1880','field_1537','field_899');
-}); 
 
   $(document).on('knack-view-render.view_1559', function (event, view, data) {
     tooltipsTable('540','1559','field_318','field_763');
