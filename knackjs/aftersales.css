@@ -3009,3 +3009,7 @@ div.tooltipDiv table, th, td, tr {
 div.tooltipDiv th {
 	background-color: #B2BEB5;
 }
+
+div.tooltipDiv {
+	padding: 10px;
+}
