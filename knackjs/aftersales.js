@@ -2391,7 +2391,7 @@ function recursivecallscene_540(){
 // --- manual delete service wash from Workshop controller view
 $(document).on('knack-view-render.view_1898', function(event, view) {
   //get the vin value from the table
- const valRecID = $(".col-8").text().trim()
+ const valRecID = $(".col-6").text().trim()
  //send a http request with the vin an record id
 
  /*const triggerRecord = (event2) => {
