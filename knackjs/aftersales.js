@@ -2374,7 +2374,7 @@ $(document).on('knack-form-submit.view_1899', function(event, view, data) {
     }
 });
 
-$(document).on('knack-scene-render.scene_540', function(event, scene) {
+/*$(document).on('knack-scene-render.scene_540', function(event, scene) {
  recursivecallscene_540();
 	  console.log('refresh applied');
 });
@@ -2387,3 +2387,4 @@ function recursivecallscene_540(){
  setTimeout(function () { if($("#view_1560").is(":visible")==true){ Knack.views["view_1560"].model.fetch();recursivecallscene_540();} }, 30000);
  setTimeout(function () { if($("#view_1898").is(":visible")==true){ Knack.views["view_1898"].model.fetch();recursivecallscene_540();} }, 30000);
 }
+*/
