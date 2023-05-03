@@ -2388,4 +2388,45 @@ function recursivecallscene_540(){
  setTimeout(function () { if($("#view_1898").is(":visible")==true){ Knack.views["view_1898"].model.fetch();recursivecallscene_540();} }, 30000);
 }
 */
+// --- manual delete service wash from Workshop controller view
+$(document).on('knack-view-render.view_1898', function(event, view) {
+  //get the vin value from the table
+ const valRecID = $(".col-8").text().trim()
+ //send a http request with the vin an record id
+
+ /*const triggerRecord = (event2) => {
+  console.log(event2.taget);
+  console.log("Test106")
+   console.log(event2.view.app_id)
+   console.log(event2.view.Knack)
+   let k = Object.assign({},event2.view.Knack);
+   console.log(event2.view.Knack.hash_parts)
+   console.log(k.hash_parts)
+   console.log(event2.view.Knack.scene_hash)
+   console.log(event2.view.Knack.google_loading)
+   console.log(event2.view.Knack.domain)
+  
+   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+ }
+    //add an event listner to the arrow table element
+    $(".fa-search").on("click", triggerRecord);*/
+
+ 
+ // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
+
+    if ($('div[class="kn-view kn-table view_1898"]')){
+      let rows = $('div[class="kn-view kn-table view_1898"] table tr');
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/5ub561ycpj21n6eelqa4rwmfb1r0d9r5", {"recordId":cell, "ValetRecordID": valRecID, "Scenario":"Manually Delete Service Wash" },"Manually delete Service Wash");
+          };
+        };
+        currentRow.children[0].onclick = createClickHandler(currentRow);
+      }
+    }
+	});
 
