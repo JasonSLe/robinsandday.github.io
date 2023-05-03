@@ -2376,7 +2376,7 @@ $(document).on('knack-form-submit.view_1899', function(event, view, data) {
 
 $(document).on('knack-scene-render.scene_540', function(event, scene) {
  recursivecallscene_540();
-	  console.log('refresh applied')
+	  console.log('refresh applied');
 });
 
 function recursivecallscene_540(){
