@@ -3816,6 +3816,21 @@ $(document).on('knack-form-submit.view_5652', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/aeh75rrj0mn2rchkm0j5cvohi3h5oigk", {"Record ID":data.id},"Purchase Orders - Submit Request for Approval");  
 });
 
+//Purchase Orders - Approved Manually by Departmental Manager
+$(document).on('knack-form-submit.view_6186', function(event, view, data) { 
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/tux5b28q8gphbl328a7bq3tlx1quqqx6", {"Record ID":data.id},"Purchase Orders - Approved Manually by Departmental Manager");  
+});
+
+//Purchase Orders - Approved Manually by General Manager
+$(document).on('knack-form-submit.view_6187', function(event, view, data) { 
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/tux5b28q8gphbl328a7bq3tlx1quqqx6", {"Record ID":data.id},"Purchase Orders - Approved Manually by General Manager");  
+});
+
+//Purchase Orders - Approved Manually by Dealership Accountant
+$(document).on('knack-form-submit.view_6188', function(event, view, data) { 
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/tux5b28q8gphbl328a7bq3tlx1quqqx6", {"Record ID":data.id},"Purchase Orders - Approved Manually by Dealership Accountant");  
+});
+
 //NOTIFICATIONS CODE //
 
 $(document).on('knack-scene-render.scene_1694', function(event, scene) {
