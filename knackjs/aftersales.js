@@ -2414,8 +2414,8 @@ $(document).on('knack-view-render.view_1898', function(event, view) {
  
  // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
 
-    if ($('div[class="kn-view kn-table view_1898"]')){
-      let rows = $('div[class="kn-view kn-table view_1898"] table tr');
+    if ($('div[class="kn-table kn-view view_1898"]')){
+      let rows = $('div[class="kn-table kn-view view_1898"] table tr');
       for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
         const createClickHandler = function(row) {
