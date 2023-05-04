@@ -5961,6 +5961,13 @@ font-size:12px;
 /*Confirm Customer First/CRONOS Password for Ordering Table*/
 
 #view_4628 th span
+
 {
-  margin: auto !important;
+  margin: auto !important;	
+}
+
+#view_4628 > div.kn-table-wrapper > table > thead > tr > th.kn-table-action-link > span
+
+{
+  margin: auto !important;	
 }
