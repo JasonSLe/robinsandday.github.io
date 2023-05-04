@@ -2273,16 +2273,17 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
 }); 
+ 
 
   $(document).on('knack-view-render.view_1558', function (event, view, data) {
     tooltipsTable('540','1558','field_318','field_763');
     tooltipsTable('540','1558','field_1537','field_899');
+   tooltipsTable('540','1558','field_1532','field_915');
 	     $('th[class="field_318"]').hide();
     $('td[class*="field_318"]').hide();
-    $('th[class="field_1537"]').hide();
-    $('td[class*="field_1537"]').hide(); 
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
 }); 
-
 
   $(document).on('knack-view-render.view_1560', function (event, view, data) {
     tooltipsTable('540','1560','field_318','field_763');
