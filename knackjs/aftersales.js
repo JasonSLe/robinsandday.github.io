@@ -2430,3 +2430,28 @@ $(document).on('knack-view-render.view_1898', function(event, view) {
     }
 	});
 
+//Check out from Workshop controller view "Onsite Parts Ave, Await Labour"
+$(document).on('knack-view-render.view_1558', function (event, view, data) {
+
+    if ($('div[class="kn-table kn-view view_1558"]')){
+      $('td[class="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
+      let rows = $('div[class="kn-table kn-view view_1558"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell,"WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[0].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
