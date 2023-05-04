@@ -5957,3 +5957,10 @@ font-size:12px;
   	color: #FFFFFF;
   	font-weight: bold;
 }
+
+/*Confirm Customer First/CRONOS Password for Ordering Table*/
+
+#view_4628 th span
+{
+  margin: auto !important;
+}
