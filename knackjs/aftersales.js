@@ -2286,8 +2286,8 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 }); 
 
   $(document).on('knack-view-render.view_1902', function (event, view, data) {
-    tooltipsTable('540','1902','field_318','field_915');
-    tooltipsTable('540','1902','field_1537','field_899');
+    tooltipsTable('540','1902','field_318','field_899');
+    tooltipsTable('540','1902','field_1537','field_915');
   // tooltipsTable('540','1902','field_1532','field_1021');
 	     $('th[class="field_318"]').hide();
     $('td[class*="field_318"]').hide();
