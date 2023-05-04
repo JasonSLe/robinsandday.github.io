@@ -2285,6 +2285,16 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_1532"]').hide(); 
 }); 
 
+  $(document).on('knack-view-render.view_1902', function (event, view, data) {
+    tooltipsTable('540','1902','field_318','field_915');
+    tooltipsTable('540','1902','field_1537','field_899');
+  // tooltipsTable('540','1902','field_1532','field_1021');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+}); 
+
   $(document).on('knack-view-render.view_1560', function (event, view, data) {
     tooltipsTable('540','1560','field_318','field_763');
     tooltipsTable('540','1560','field_1537','field_899');
