@@ -2302,6 +2302,8 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_318"]').hide();
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
 }); 
 
   $(document).on('knack-view-render.view_1898', function (event, view, data) {
