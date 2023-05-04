@@ -2461,9 +2461,9 @@ $(document).on('knack-view-render.view_1558', function (event, view, data) {
 $(document).on('knack-view-render.view_1560', function (event, view, data) {
 
     if ($('div[class="kn-table kn-view view_1560"]')){
-      $('td[class="field_441"]').hide()
+      $('td[class*="field_441"]').hide()
       $('th[class="field_441"]').hide()
-      $('td[class="field_443"]').hide()
+      $('td[class*="field_443"]').hide()
       $('th[class="field_443"]').hide()
 
       let rows = $('div[class="kn-table kn-view view_1560"] table tr');
