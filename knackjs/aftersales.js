@@ -2341,6 +2341,21 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_915"]').hide(); 
 }); 
 
+//new Onsite Parts Ave, Await Labour
+  $(document).on('knack-view-render.view_1907', function (event, view, data) {
+    tooltipsTable('540','1907','field_318','field_2212');
+    tooltipsTable('540','1907','field_915','field_987');
+   tooltipsTable('540','1907','field_1532','field_2213');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	   $('td[class*="field_441"]').hide();
+      $('th[class="field_441"]').hide();
+      $('td[class*="field_443"]').hide();
+      $('th[class="field_443"]').hide();
+}); 
+
   function getTextFromHTML(s) {
     if (!s) return '';
     let span = document.createElement('span');
