@@ -2361,7 +2361,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 //New awaiting authority
 
   $(document).on('knack-view-render.view_1908', function (event, view, data) {
-    tooltipsTable('540','1908','field_318','field_2212');
+    tooltipsTable('540','1908','field_1537','field_2212');
     tooltipsTable('540','1908','field_915','field_987');
     tooltipsTable('540','1908','field_1532','field_2213');
 	     $('th[class="field_318"]').hide();
@@ -2374,7 +2374,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 
 //NEW On-site parts Not ave
   $(document).on('knack-view-render.view_1909', function (event, view, data) {
-    tooltipsTable('540','1909','field_318','field_2212');
+    tooltipsTable('540','1909','field_1537','field_2212');
     tooltipsTable('540','1909','field_1532','field_2213');
 	tooltipsTable('540','1909','field_915','field_987');
 	     $('th[class="field_318"]').hide();
