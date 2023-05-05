@@ -2354,6 +2354,8 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $('th[class="field_441"]').hide();
       $('td[class*="field_443"]').hide();
       $('th[class="field_443"]').hide();
+     	   $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
 }); 
 
   function getTextFromHTML(s) {
