@@ -2316,17 +2316,29 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('th[class="field_2210"]').hide();
     $('td[class*="field_2210"]').hide(); 
 }); 
-
+//new clocked in today table
   $(document).on('knack-view-render.view_1904', function (event, view, data) {
     tooltipsTable('540','1904','field_1537','field_2212');
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
 }); 
-
+//new clocked in before today not clocked
   $(document).on('knack-view-render.view_1905', function (event, view, data) {
     tooltipsTable('540','1905','field_1537','field_2212');
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
+}); 
+//New Currently clocked table
+  $(document).on('knack-view-render.view_1906', function (event, view, data) {
+    tooltipsTable('540','1906','field_318','field_2212');
+   tooltipsTable('540','1906','field_1532','field_2213');
+   tooltipsTable('540','1906','field_915','field_987');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	   $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
 }); 
 
   function getTextFromHTML(s) {
