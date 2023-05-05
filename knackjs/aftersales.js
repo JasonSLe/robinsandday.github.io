@@ -2317,7 +2317,11 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_2210"]').hide(); 
 }); 
 
-
+  $(document).on('knack-view-render.view_1904', function (event, view, data) {
+    tooltipsTable('540','1904','field_1537','field_2212');
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+}); 
 
   function getTextFromHTML(s) {
     if (!s) return '';
