@@ -2318,21 +2318,21 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 }); 
 //new clocked in today table
   $(document).on('knack-view-render.view_1904', function (event, view, data) {
-    tooltipsTable('540','1904','field_1537','field_2212');
+    tooltipsTable('642','1904','field_1537','field_2212');
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
 }); 
 //new clocked in before today not clocked
   $(document).on('knack-view-render.view_1905', function (event, view, data) {
-    tooltipsTable('540','1905','field_1537','field_2212');
+    tooltipsTable('642','1905','field_1537','field_2212');
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
 }); 
 //New Currently clocked table
   $(document).on('knack-view-render.view_1906', function (event, view, data) {
-    tooltipsTable('540','1906','field_1537','field_2212');
-   tooltipsTable('540','1906','field_1532','field_2213');
-   tooltipsTable('540','1906','field_915','field_987');
+    tooltipsTable('642','1906','field_1537','field_2212');
+   tooltipsTable('642','1906','field_1532','field_2213');
+   tooltipsTable('642','1906','field_915','field_987');
 	     $('th[class="field_318"]').hide();
     $('td[class*="field_318"]').hide();
     $('th[class="field_1532"]').hide();
@@ -2343,9 +2343,9 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 
 //new Onsite Parts Ave, Await Labour
   $(document).on('knack-view-render.view_1907', function (event, view, data) {
-    tooltipsTable('540','1907','field_1537','field_2212');
-    tooltipsTable('540','1907','field_915','field_987');
-   tooltipsTable('540','1907','field_1532','field_2213');
+    tooltipsTable('642','1907','field_1537','field_2212');
+    tooltipsTable('642','1907','field_915','field_987');
+   tooltipsTable('642','1907','field_1532','field_2213');
 	     $('th[class="field_318"]').hide();
     $('td[class*="field_318"]').hide();
     $('th[class="field_1532"]').hide();
@@ -2361,9 +2361,9 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 //New awaiting authority
 
   $(document).on('knack-view-render.view_1908', function (event, view, data) {
-    tooltipsTable('540','1908','field_1537','field_2212');
-    tooltipsTable('540','1908','field_915','field_987');
-    tooltipsTable('540','1908','field_1532','field_2213');
+    tooltipsTable('642','1908','field_1537','field_2212');
+    tooltipsTable('642','1908','field_915','field_987');
+    tooltipsTable('642','1908','field_1532','field_2213');
 	     $('th[class="field_318"]').hide();
     $('td[class*="field_318"]').hide();
     $('th[class="field_1537"]').hide();
@@ -2374,9 +2374,9 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 
 //NEW On-site parts Not ave
   $(document).on('knack-view-render.view_1909', function (event, view, data) {
-    tooltipsTable('540','1909','field_1537','field_2212');
-    tooltipsTable('540','1909','field_1532','field_2213');
-	tooltipsTable('540','1909','field_915','field_987');
+    tooltipsTable('642','1909','field_1537','field_2212');
+    tooltipsTable('642','1909','field_1532','field_2213');
+	tooltipsTable('642','1909','field_915','field_987');
 	     $('th[class="field_318"]').hide();
     $('td[class*="field_318"]').hide();
     $('th[class="field_1537"]').hide();
