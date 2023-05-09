@@ -2475,9 +2475,9 @@ $(document).on('knack-scene-render.scene_540', function(event, scene) {
 });
 
 function recursivecallscene_540(){
- //setTimeout(function () { if($("#view_1880").is(":visible")==true){ Knack.views["view_1880"].model.fetch();recursivecallscene_540();} }, 30000);
+ setTimeout(function () { if($("#view_1880").is(":visible")==true){ Knack.views["view_1880"].model.fetch();recursivecallscene_540();} }, 60000);//1 min
  //setTimeout(function () { if($("#view_1888").is(":visible")==true){ Knack.views["view_1888"].model.fetch();recursivecallscene_540();} }, 30000);
- setTimeout(function () { if($("#view_1559").is(":visible")==true){ Knack.views["view_1559"].model.fetch();recursivecallscene_540();} }, 30000);
+ setTimeout(function () { if($("#view_1559").is(":visible")==true){ Knack.views["view_1559"].model.fetch();recursivecallscene_540();} }, 30000);//30 secs
  //setTimeout(function () { if($("#view_1558").is(":visible")==true){ Knack.views["view_1558"].model.fetch();recursivecallscene_540();} }, 30000);
  //setTimeout(function () { if($("#view_1560").is(":visible")==true){ Knack.views["view_1560"].model.fetch();recursivecallscene_540();} }, 30000);
 // setTimeout(function () { if($("#view_1898").is(":visible")==true){ Knack.views["view_1898"].model.fetch();recursivecallscene_540();} }, 30000);
