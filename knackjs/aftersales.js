@@ -2580,7 +2580,7 @@ $(document).on('knack-view-render.view_1560', function (event, view, data) {
 });
 
 
-//testing moving Icons for workshop controller v2 checked in but not started today
+/*testing moving Icons for workshop controller v2 checked in but not started today
 $(document).on('knack-view-render.view_1904', function (event, view, data) {
 
  if ($('div[class="kn-table kn-view view_1904"]')){
@@ -2591,3 +2591,4 @@ $(document).on('knack-view-render.view_1904', function (event, view, data) {
       }
     }
   });
+*/
