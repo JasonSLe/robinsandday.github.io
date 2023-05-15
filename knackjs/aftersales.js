@@ -2579,3 +2579,15 @@ $(document).on('knack-view-render.view_1560', function (event, view, data) {
     }
 });
 
+
+//testing moving Icons for workshop controller v2 checked in but not started today
+$(document).on('knack-view-render.view_5740', function (event, view, data) {
+
+ if ($('div[class="kn-table kn-view view_5740"]')){
+      let rows = $('div[class="kn-table kn-view view_5740"] table>tbody>tr[id]');
+      for (i = 0; i < rows.length; i++) {
+        $('div[id="view_5740"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_5740"] table>tbody>tr[id]').eq(i).find('span[class="col-1"]').parent())
+       // $('div[id="view_5740"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]>a').appendTo($('div[id="view_5740"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]').parent())
+      }
+    }
+  });
