@@ -2593,18 +2593,18 @@ $(document).on('knack-view-render.view_1904', function (event, view, data) {
   });
 */
 //refresh scene for currently clocked on Workshop controller v2
-$(document).on('knack-record-update.view_1906', function(event, view, data) {
+$(document).on('knack-view-render.view_1906', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 10000);
  console.log('sceneRefresh_1906');
   Knack.showSpinner();
   
 });
 
 //refresh scene for checked in today, not clocked on Workshop controller v2
-$(document).on('knack-record-update.view_1904', function(event, view, data) {
+$(document).on('knack-view-render.view_1904', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 10000);
  console.log('sceneRefresh_1904');
   Knack.showSpinner();
   
