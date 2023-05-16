@@ -2265,36 +2265,131 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
 
 
   $(document).on('knack-view-render.view_1559', function (event, view, data) {
-    tooltipsTable('540','1559','field_318','field_763');
-    tooltipsTable('540','1559','field_1537','field_899');
-    tooltipsTable('540','1559','field_915','field_1532');
+    tooltipsTable('540','1559','field_318','field_899');
+    tooltipsTable('540','1559','field_1537','field_1022');
+   tooltipsTable('540','1559','field_1532','field_915');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+}); 
+ 
+
+  $(document).on('knack-view-render.view_1558', function (event, view, data) {
+    tooltipsTable('540','1558','field_318','field_763');
+    tooltipsTable('540','1558','field_1537','field_899');
+   tooltipsTable('540','1558','field_1532','field_1021');
 	     $('th[class="field_318"]').hide();
     $('td[class*="field_318"]').hide();
     $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
 }); 
 
-  $(document).on('knack-view-render.view_1558', function (event, view, data) {
-    tooltipsTable('540','1558','field_318','field_763');
-    tooltipsTable('540','1558','field_1537','field_899');
+  $(document).on('knack-view-render.view_1902', function (event, view, data) {
+    tooltipsTable('540','1902','field_318','field_899');
+    tooltipsTable('540','1902','field_1537','field_915');
+  // tooltipsTable('540','1902','field_1532','field_1021');
 	     $('th[class="field_318"]').hide();
     $('td[class*="field_318"]').hide();
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
 }); 
-
 
   $(document).on('knack-view-render.view_1560', function (event, view, data) {
-    tooltipsTable('540','1560','field_318','field_763');
-    tooltipsTable('540','1560','field_1537','field_899');
+    tooltipsTable('540','1560','field_318','field_899');
+    tooltipsTable('540','1560','field_1537','field_915');
 	     $('th[class="field_318"]').hide();
     $('td[class*="field_318"]').hide();
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
 }); 
 
+  $(document).on('knack-view-render.view_1898', function (event, view, data) {
+    tooltipsTable('540','1898','field_318','field_763');
+    tooltipsTable('540','1898','field_1537','field_1658');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+    $('th[class="field_2210"]').hide();
+    $('td[class*="field_2210"]').hide(); 
+}); 
+//new clocked in today table
+  $(document).on('knack-view-render.view_1904', function (event, view, data) {
+    tooltipsTable('642','1904','field_1537','field_2212');
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+}); 
+//new clocked in before today not clocked
+  $(document).on('knack-view-render.view_1905', function (event, view, data) {
+    tooltipsTable('642','1905','field_1537','field_2212');
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+}); 
+//New Currently clocked table
+  $(document).on('knack-view-render.view_1906', function (event, view, data) {
+    tooltipsTable('642','1906','field_1537','field_2212');
+   tooltipsTable('642','1906','field_1532','field_2213');
+   tooltipsTable('642','1906','field_915','field_987');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	   $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+}); 
 
+//new Onsite Parts Ave, Await Labour
+  $(document).on('knack-view-render.view_1907', function (event, view, data) {
+    tooltipsTable('642','1907','field_1537','field_2212');
+    tooltipsTable('642','1907','field_915','field_987');
+   tooltipsTable('642','1907','field_1532','field_2213');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	   $('td[class*="field_441"]').hide();
+      $('th[class="field_441"]').hide();
+      $('td[class*="field_443"]').hide();
+      $('th[class="field_443"]').hide();
+     	   $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+}); 
 
+//New awaiting authority
+
+  $(document).on('knack-view-render.view_1908', function (event, view, data) {
+    tooltipsTable('642','1908','field_1537','field_2212');
+    tooltipsTable('642','1908','field_915','field_987');
+    tooltipsTable('642','1908','field_1532','field_2213');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	    $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+}); 
+
+//NEW On-site parts Not ave
+  $(document).on('knack-view-render.view_1909', function (event, view, data) {
+    tooltipsTable('642','1909','field_1537','field_2212');
+    tooltipsTable('642','1909','field_1532','field_2213');
+	tooltipsTable('642','1909','field_915','field_987');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	    $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+		   $('td[class*="field_441"]').hide();
+      $('th[class="field_441"]').hide();
+      $('td[class*="field_443"]').hide();
+      $('th[class="field_443"]').hide();
+}); 
 
   function getTextFromHTML(s) {
     if (!s) return '';
@@ -2373,4 +2468,138 @@ $(document).on('knack-form-submit.view_1899', function(event, view, data) {
         sendErrorToIntegromat(exception, "Aftersales - trigger service wash from Manager's Note");
     }
 });
+//Workshop controller table refresh
+/*$(document).on('knack-scene-render.scene_540', function(event, scene) {
+ recursivecallscene_540();
+	  console.log('refresh applied');
+});
+
+function recursivecallscene_540(){
+ setTimeout(function () { if($("#view_1880").is(":visible")==true){ Knack.views["view_1880"].model.fetch();recursivecallscene_540();} }, 60000);//1 min
+ //setTimeout(function () { if($("#view_1888").is(":visible")==true){ Knack.views["view_1888"].model.fetch();recursivecallscene_540();} }, 30000);
+ setTimeout(function () { if($("#view_1559").is(":visible")==true){ Knack.views["view_1559"].model.fetch();recursivecallscene_540();} }, 30000);//30 secs
+ //setTimeout(function () { if($("#view_1558").is(":visible")==true){ Knack.views["view_1558"].model.fetch();recursivecallscene_540();} }, 30000);
+ //setTimeout(function () { if($("#view_1560").is(":visible")==true){ Knack.views["view_1560"].model.fetch();recursivecallscene_540();} }, 30000);
+// setTimeout(function () { if($("#view_1898").is(":visible")==true){ Knack.views["view_1898"].model.fetch();recursivecallscene_540();} }, 30000);
+}
+*/
+// --- manual delete service wash from Workshop controller view
+$(document).on('knack-view-render.view_1898', function(event, view) {
+  //get the vin value from the table
+ const valRecID = $(".col-7").text().trim()
+ //send a http request with the vin an record id
+
+ /*const triggerRecord = (event2) => {
+  console.log(event2.taget);
+  console.log("Test106")
+   console.log(event2.view.app_id)
+   console.log(event2.view.Knack)
+   let k = Object.assign({},event2.view.Knack);
+   console.log(event2.view.Knack.hash_parts)
+   console.log(k.hash_parts)
+   console.log(event2.view.Knack.scene_hash)
+   console.log(event2.view.Knack.google_loading)
+   console.log(event2.view.Knack.domain)
+  
+   callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+ }
+    //add an event listner to the arrow table element
+    $(".fa-search").on("click", triggerRecord);*/
+
+ 
+ // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
+
+    if ($('div[class="kn-table kn-view view_1898"]')){
+      let rows = $('div[class="kn-table kn-view view_1898"] table tr');
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/5ub561ycpj21n6eelqa4rwmfb1r0d9r5", {"recordId":cell, "ValetRecordID": valRecID, "Scenario":"Manually Delete Service Wash" },"Manually delete Service Wash");
+          };
+        };
+        currentRow.children[0].onclick = createClickHandler(currentRow);
+      }
+    }
+	});
+
+//Check out from Workshop controller view "Onsite Parts Ave, Await Labour"
+$(document).on('knack-view-render.view_1558', function (event, view, data) {
+
+    if ($('div[class="kn-table kn-view view_1558"]')){
+      $('td[class*="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class*="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
+      let rows = $('div[class="kn-table kn-view view_1558"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell,"WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[0].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+});
+
+//Check out from Workshop controller view Onsite Parts Not Ave
+$(document).on('knack-view-render.view_1560', function (event, view, data) {
+
+    if ($('div[class="kn-table kn-view view_1560"]')){
+      $('td[class*="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class*="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
+      let rows = $('div[class="kn-table kn-view view_1560"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell,"WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[0].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+});
+
+
+/*testing moving Icons for workshop controller v2 checked in but not started today
+$(document).on('knack-view-render.view_1904', function (event, view, data) {
+
+ if ($('div[class="kn-table kn-view view_1904"]')){
+      let rows = $('div[class="kn-table kn-view view_1904"] table>tbody>tr[id]');
+      for (i = 0; i < rows.length; i++) {
+        $('div[id="view_1904"] table>tbody>tr[id]').eq(i).find('span[class="col-0"]>a').appendTo($('div[id="view_1904"] table>tbody>tr[id]').eq(i).find('span[class="col-1"]').parent())
+        $('div[id="view_1904"] table>tbody>tr[id]').eq(i).find('span[class="col-1"]>a').appendTo($('div[id="view_1904"] table>tbody>tr[id]').eq(i).find('span[class="col-0"]').parent())
+      }
+    }
+  });
+*/
+//refresh scene for currently clocked on Workshop controller v2
+$(document).on('knack-view-render.view_1906', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 60000);
+ console.log('sceneRefresh_1906');
+  Knack.showSpinner();
+  
+});
+
+
 
