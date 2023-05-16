@@ -2596,7 +2596,7 @@ $(document).on('knack-view-render.view_1904', function (event, view, data) {
 $(document).on('knack-record-update.view_1906', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
-
+ console.log('sceneRefresh_1906');
   Knack.showSpinner();
   
 });
@@ -2605,7 +2605,7 @@ $(document).on('knack-record-update.view_1906', function(event, view, data) {
 $(document).on('knack-record-update.view_1904', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
-
+ console.log('sceneRefresh_1904');
   Knack.showSpinner();
   
 });
