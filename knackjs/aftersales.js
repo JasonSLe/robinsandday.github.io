@@ -2604,7 +2604,7 @@ $(document).on('knack-view-render.view_1906', function(event, view, data) {
 //trigger Create Manual Service Wash from Valeter's "add service wash"
 $(document).on('knack-view-render.view_1916', function(event, view) {
   //get the vin value from the table
- //const UID = $(".col-4").text().trim()
+ const UID = $(".col-4").text().trim()
   console.log('Webhook applied');
  // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
 
@@ -2616,7 +2616,7 @@ $(document).on('knack-view-render.view_1916', function(event, view) {
           return function() {
             var cell = row.id;
             console.log('cell',cell);
-            callPostHttpRequest("https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g", {"RecordID from Jobcard":data.id, "Service Comments":data.field_2203, "userName": Knack.getUserAttributes().name,"Manual Request":"Yes" },"");
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g", {"RecordID from Jobcard":data.field_1601, "Service Comments":data.field_2203, "userName": Knack.getUserAttributes().name,"Manual Request":"Yes" },"");
           };
         };
         currentRow.children[3].onclick = createClickHandler(currentRow);
