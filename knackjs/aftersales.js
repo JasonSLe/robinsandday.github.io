@@ -2602,14 +2602,14 @@ $(document).on('knack-view-render.view_1906', function(event, view, data) {
 });
 
 //trigger Create Manual Service Wash from Valeter's "add service wash"
-$(document).on('knack-view-render.view_1223', function(event, view) {
+$(document).on('knack-view-render.view_1916', function(event, view) {
   //get the vin value from the table
  const UID = $(".col-4").text().trim()
   console.log('Webhook applied');
  // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
 
-    if ($('div[class="kn-view kn-table view_1223"]')){
-      let rows = $('div[class="kn-view kn-table view_1223"] table tr');
+    if ($('div[class="kn-view kn-table view_1916"]')){
+      let rows = $('div[class="kn-view kn-table view_1916"] table tr');
       for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
         const createClickHandler = function(row) {
