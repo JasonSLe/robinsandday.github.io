@@ -2616,7 +2616,7 @@ $(document).on('knack-view-render.view_1916', function(event, view) {
           return function() {
             var cell = row.id;
             console.log('cell',cell);
-            callPostHttpRequest("https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g", {"RecordID from Jobcard":data.field_1601, "UID": UID, "Service Comments":data.field_2203, "userName": Knack.getUserAttributes().name,"Manual Request":"Yes" },"");
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g", {"RecordID from Jobcard":data.field_1601, "UID": UID, "Service Comments":data.field_2203, "userName": Knack.getUserAttributes().name,"Manual Request":"Yes" },"Trigger manual Service wash");
           };
         };
         currentRow.children[3].onclick = createClickHandler(currentRow);
