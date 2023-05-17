@@ -2605,7 +2605,7 @@ $(document).on('knack-view-render.view_1906', function(event, view, data) {
 $(document).on('knack-view-render.view_1916', function(event, view) {
   //get the vin value from the table
  const UID = $(".col-4").text().trim()
-  console.log('Webhook applied1');
+  console.log('Webhook applied2');
  // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
 
     if ($('div[class="kn-view kn-table view_1916"]')){
