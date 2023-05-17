@@ -2116,7 +2116,7 @@ $(document).on('knack-form-submit.view_307', function(event, view, data) {
 // trigger to Send Data When Vehicle Is Checked Out From Customer Satisfaction check (sms)
 
 $(document).on('knack-form-submit.view_318', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_2223, "WIP":data.field_441, "POS":data.field_443},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_1601, "WIP":data.field_441, "POS":data.field_443},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
 });
 
 
