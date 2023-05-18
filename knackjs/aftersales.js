@@ -2580,6 +2580,60 @@ $(document).on('knack-view-render.view_1560', function (event, view, data) {
 });
 
 
+//Check out from Workshop controller v2 view "Onsite Parts Ave, Await Labour"
+$(document).on('knack-view-render.view_1907', function (event, view, data) {
+
+    if ($('div[class="kn-table kn-view view_1907"]')){
+      $('td[class*="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class*="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
+      let rows = $('div[class="kn-table kn-view view_1907"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell, "Source": "View_1907 - triggered from workshop controller v2 view (onsite parts ave, awaiting labour)", "WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[0].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+});
+
+//Check out from Workshop controller v2 view Onsite Parts Not Ave
+$(document).on('knack-view-render.view_1909', function (event, view, data) {
+
+    if ($('div[class="kn-table kn-view view_1909"]')){
+      $('td[class*="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class*="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
+      let rows = $('div[class="kn-table kn-view view_1909"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell, "Source": "View_1909 - triggered from workshop controller view v2 (onsite parts not ave)", "WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[0].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+});
+
 /*testing moving Icons for workshop controller v2 checked in but not started today
 $(document).on('knack-view-render.view_1904', function (event, view, data) {
 
