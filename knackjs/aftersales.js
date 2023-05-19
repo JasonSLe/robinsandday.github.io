@@ -2649,7 +2649,7 @@ $(document).on('knack-view-render.view_1904', function (event, view, data) {
 //refresh scene for currently clocked on Workshop controller v2
 $(document).on('knack-view-render.view_1906', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 60000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 300000);
  console.log('sceneRefresh_1906');
   Knack.showSpinner();
   
