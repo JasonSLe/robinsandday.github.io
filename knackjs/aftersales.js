@@ -2419,6 +2419,52 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_915"]').hide(); 
 }); 
 
+//workshop control v3 Onsite Parts Ave, Await Labour 
+  $(document).on('knack-view-render.view_2189', function (event, view, data) {
+    tooltipsTable('654','2189','field_1537','field_2212');
+    tooltipsTable('654','2189','field_915','field_987');
+   tooltipsTable('654','2189','field_1532','field_2213');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	   $('td[class*="field_441"]').hide();
+      $('th[class="field_441"]').hide();
+      $('td[class*="field_443"]').hide();
+      $('th[class="field_443"]').hide();
+     	   $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+}); 
+
+//Check out from Workshop controller v3 view "Onsite Parts Ave, Await Labour"
+$(document).on('knack-view-render.view_2189', function (event, view, data) {
+
+    if ($('div[class="kn-table kn-view view_2189"]')){
+      $('td[class*="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class*="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
+      let rows = $('div[class="kn-table kn-view view_2189"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell, "Source": "View_2189 - triggered from workshop controller v2 view (onsite parts ave, awaiting labour)", "WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[0].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+});
+
+
+
   function getTextFromHTML(s) {
     if (!s) return '';
     let span = document.createElement('span');
