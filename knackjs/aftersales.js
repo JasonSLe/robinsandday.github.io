@@ -2509,6 +2509,21 @@ $(document).on('knack-view-render.view_2191', function (event, view, data) {
     }
 });
 
+//New awaiting authority workshop control v3
+
+  $(document).on('knack-view-render.view_2193', function (event, view, data) {
+    tooltipsTable('716','2193','field_1537','field_2212');
+    tooltipsTable('716','2193','field_915','field_987');
+    tooltipsTable('716','2193','field_1532','field_2213');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	    $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+}); 
+
+
   function getTextFromHTML(s) {
     if (!s) return '';
     let span = document.createElement('span');
