@@ -2316,19 +2316,19 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('th[class="field_2210"]').hide();
     $('td[class*="field_2210"]').hide(); 
 }); 
-//new clocked in today table
+//new clocked in workshop control v2 today table
   $(document).on('knack-view-render.view_1904', function (event, view, data) {
     tooltipsTable('642','1904','field_1537','field_2212');
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
 }); 
-//new clocked in before today not clocked
+//new clocked in before today not clocked workshop control v2
   $(document).on('knack-view-render.view_1905', function (event, view, data) {
     tooltipsTable('642','1905','field_1537','field_2212');
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
 }); 
-//New Currently clocked table
+//New Currently clocked table workshop control v2
   $(document).on('knack-view-render.view_1906', function (event, view, data) {
     tooltipsTable('642','1906','field_1537','field_2212');
    tooltipsTable('642','1906','field_1532','field_2213');
@@ -2341,7 +2341,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_915"]').hide(); 
 }); 
 
-//new Onsite Parts Ave, Await Labour
+//new Onsite Parts Ave, Await Labour workshop control v2
   $(document).on('knack-view-render.view_1907', function (event, view, data) {
     tooltipsTable('642','1907','field_1537','field_2212');
     tooltipsTable('642','1907','field_915','field_987');
@@ -2358,7 +2358,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_915"]').hide(); 
 }); 
 
-//New awaiting authority
+//New awaiting authority workshop control v2
 
   $(document).on('knack-view-render.view_1908', function (event, view, data) {
     tooltipsTable('642','1908','field_1537','field_2212');
@@ -2372,7 +2372,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_915"]').hide(); 
 }); 
 
-//NEW On-site parts Not ave
+//NEW On-site parts Not ave workshop control v2
   $(document).on('knack-view-render.view_1909', function (event, view, data) {
     tooltipsTable('642','1909','field_1537','field_2212');
     tooltipsTable('642','1909','field_1532','field_2213');
@@ -2390,6 +2390,22 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $('td[class*="field_443"]').hide();
       $('th[class="field_443"]').hide();
 }); 
+
+
+//workshop control v3 Checked in today not clocked table
+  $(document).on('knack-view-render.view_1925', function (event, view, data) {
+    tooltipsTable('650','1925','field_1537','field_2212');
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+}); 
+
+//workshop control v3 Checked in today not clocked table
+  $(document).on('knack-view-render.view_1929', function (event, view, data) {
+    tooltipsTable('652','1929','field_1537','field_2212');
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+}); 
+
 
   function getTextFromHTML(s) {
     if (!s) return '';
