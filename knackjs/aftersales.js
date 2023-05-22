@@ -2399,13 +2399,25 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 }); 
 
-//workshop control v3 Checked in today not clocked table
+//workshop control v3 Checked in before today not clocked table
   $(document).on('knack-view-render.view_1929', function (event, view, data) {
     tooltipsTable('652','1929','field_1537','field_2212');
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
 }); 
 
+//workshop control v2 Currently clocked table 
+  $(document).on('knack-view-render.view_1930', function (event, view, data) {
+    tooltipsTable('653','1930','field_1537','field_2212');
+   tooltipsTable('653','1930','field_1532','field_2213');
+   tooltipsTable('653','1930','field_915','field_987');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	   $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+}); 
 
   function getTextFromHTML(s) {
     if (!s) return '';
