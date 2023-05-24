@@ -2810,3 +2810,77 @@ $(document).on('knack-view-render.view_1916', function(event, view) {
       }
     }
 	});
+
+//DOCUMENT SCAN APP
+var scanAppHTML = '';
+function embedScanApp(){
+  let scanApp = document.getElementById('scanApp');
+  if (!scanApp){
+    if (scanAppHTML===''){
+      scanAppHTML = $.ajax({
+          type: "GET",
+          url: 'https://robinsandday.github.io/photoTakeApp/documentPart.html',
+          cache: false,
+          async: false
+      }).responseText;
+    }
+    scanApp = document.createElement('div');
+    scanApp.innerHTML = scanAppHTML;
+    scanApp.id = 'scanApp';
+    scanApp.style="display: none;"
+    document.body.appendChild(scanApp);
+  } else {
+    scanApp.innerHTML = scanAppHTML;
+  }
+
+  var nowS = Date.now().toString();
+
+  if ($('#scanAppCss').length===0){
+    var style = document.createElement('link');
+    style.id = "scanAppCss";
+    style.rel = 'stylesheet';
+    style.type = 'text/css';
+    style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
+    document.getElementsByTagName( 'head' )[0].appendChild( style )
+  }
+
+  function emptyCallback() { }
+
+  function loadScript(src, id,  callback){
+    var script, scriptTag;
+    script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.id = id;
+    script.src = src;
+    script.onload = script.onreadystatechange = function() {
+      if (!this.readyState || this.readyState == 'complete' ){ callback(); }
+    };
+    scriptTag = document.getElementsByTagName('script')[0];
+    scriptTag.parentNode.insertBefore(script, scriptTag);
+  }
+  if ($('#scanAppJS').length===0){
+    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS', emptyCallback);
+  }
+  if ($('#jsPDF').length===0){
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', emptyCallback)
+  }
+}
+
+function showScanApp(button){
+  afterLoad(button.getAttribute('data-app_id'), button.getAttribute('data-pdfassetfield'));
+  $('#scanApp').show();
+  $('.kn-content').hide();
+}
+
+function hideScanApp(){
+  $('#scanApp').hide();
+  $('.kn-content').show();
+}
+
+function fillDataToKnack(message){
+  hideScanApp();
+  $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
+  $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fileName);
+  $('#'+message.pdfAssetField+'_upload').hide();
+  $('.kn-file-upload').html('File uploaded successfully.');
+}
