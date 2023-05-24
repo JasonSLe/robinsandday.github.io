@@ -2884,3 +2884,19 @@ function fillDataToKnack(message){
   $('#'+message.pdfAssetField+'_upload').hide();
   $('.kn-file-upload').html('File uploaded successfully.');
 }
+
+//THIS IS ARRAY OF scenes with document scan
+var scanDocsSceneNames = ["scene_560"];
+scanDocsSceneNames.forEach(scanDocsLinkFunction);
+function scanDocsLinkFunction(selector_view){
+  $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
+    embedScanApp();
+    if ($('button[id="scanDocument"]').length>0){
+      for (let i = 0;i<$('button[id="scanDocument"]').length;i++){
+        $('button[id="scanDocument"]').eq(i).on("click",function(){
+          showScanApp(this);
+        });
+      }
+    }
+  });
+}  
