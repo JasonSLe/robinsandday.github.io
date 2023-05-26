@@ -3011,3 +3011,24 @@ try{
     }}
 
 });
+
+//**Trigger Text To Customer To Complete Exit Survey at Live job card v2
+$(document).on('knack-form-submit.view_2356', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.integromat.com/wio8wmbeqg4p81kwshmegg7h7fsfawz7";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger Text To Customer To Complete Exit Survey At live job card v2 \"Check Out\"");
+    }
+});
