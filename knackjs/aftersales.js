@@ -3032,3 +3032,8 @@ $(document).on('knack-form-submit.view_2356', function(event, view, data) {
         sendErrorToIntegromat(exception, "Trigger Text To Customer To Complete Exit Survey At live job card v2 \"Check Out\"");
     }
 });
+
+// trigger to Send Data When Vehicle Is Checked Out From Customer Satisfaction check (sms)
+$(document).on('knack-form-submit.view_2356', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_1601, "WIP":data.field_441, "POS":data.field_443, "Source": "View_318 - Satisfaction check (SMS)"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+});
