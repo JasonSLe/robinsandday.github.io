@@ -2900,3 +2900,16 @@ function scanDocsLinkFunction(selector_view){
     }
   });
 }  
+
+//Workshop Controller all in one table 
+$(document).on('knack-view-render.view_2298', function (event, view, data) {
+    tooltipsTable('753','2298','field_2240','field_2220');
+    tooltipsTable('753','2298','field_1537','field_2212');
+    tooltipsTable('753','2298','field_1537','field_2213');
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	  $('th[class="field_2213"]').hide();
+    $('td[class*="field_2213"]').hide(); 
+}); 
