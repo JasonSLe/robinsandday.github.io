@@ -2957,3 +2957,57 @@ $(document).on('knack-form-submit.view_2362', function(event, view, data) {
         sendErrorToIntegromat(exception, "Aftersales - Create service wash from Job card v2");
     }
 });
+
+//trigger aftersales - wip management notes to update + is vehicle on site
+
+$(document).on('knack-form-submit.view_2361', function(event, view, data) {
+
+try{
+
+    let commandURL = "https://hook.integromat.com/s8j9klwniouvc81742i1hy8yxtc822ut";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Manager's Notes":data.field_1015_raw, "userName": Knack.getUserAttributes().name, "NOM_WIP_REG":data.field_978_raw, "Nom_wip":data.field_558_raw});
+
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;    
+}catch(exception){
+    console.log("error");
+    var today = new Date();
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
+    let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+    let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Scenario DESCRIPTION what for the error webhook",
+    "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+    var rData = $.ajax({
+       url: commandURL,
+       type: 'POST',
+       contentType: 'application/json',
+       data: dataToSend,
+       async: false
+    }).responseText;
+}
+
+
+ if (data.field_2042 === "No")	
+ { try{
+        let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042, "Source": "View_2361 - triggered from manager's note"});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersalses job card v2- View_2361");
+    }}
+
+});
