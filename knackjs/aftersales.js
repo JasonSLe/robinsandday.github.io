@@ -2938,3 +2938,22 @@ $(document).on('knack-view-render.view_2249', function (event, view, data) {
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
 }); 
+
+//trigger Create Service Wash From Job card v2
+$(document).on('knack-form-submit.view_2362', function(event, view, data) { 
+    
+    try{
+        let commandURL = "https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g";
+        let dataToSend = JSON.stringify({"RecordID from Jobcard":data.id, "Service Comments":data.field_982, "UID":data.field_2190, "userName": Knack.getUserAttributes().name});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Aftersales - Create service wash from Job card v2");
+    }
+});
