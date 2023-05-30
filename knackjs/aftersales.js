@@ -3062,3 +3062,27 @@ $(document).on('knack-view-render.view_596', function (event, view, data) {
 	     $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
 }); 
+
+//Submit form for Vehicle Check-in JOBCARD V2
+$(document).on('knack-form-submit.view_2351', function(event, view, data) { 
+
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/jcvomnieu3i0k2a5bkce88csho75et9s", {"Record ID":data.id, "Summary Of Work That Has Been Booked In": data.field_1116_raw,
+ "Date / Time Collection Time agreed With Customer At Check in":handlAll(data.field_1117_raw, "date"), "Parking Bay That Customer Vehicle Is Currently Parked In":data.field_1118_raw,
+ "Alternative Mobile Phone Number To Use whilst vehicle is with us Instead Of Stored Contact numbers": handlAll(data.field_1119_raw, "formatted"), "Would Customer Like Us To Make This New Number The Default For Future Communication": data.field_1120_raw,
+  "Customer Signature At Check in":data.field_1122_raw, "Labour Summary":data.field_432_raw, "Customer & Advisor Job Card Notes":data.field_446_raw, "Autoline - customer email":data.field_277_raw,
+  "Use Autoline - Customer Phone 1":data.field_782_raw, "Use Autoline - Customer Phone 2":data.field_783_raw, "Use Autoline - Customer Phone 3":data.field_784_raw, "Use Autoline - Customer Phone 3":data.field_785_raw},"Submit form for Vehicle Check-in")
+
+});
+
+//******* Live Character Count on Aftersales Vehicle Check In for WIP Notes Tab JOB CARD V2 *******
+$(document).on("knack-view-render.view_2351", function(event, view, data) {
+$( document ).ready(function() {
+$(".kn-form.kn-view.view_2351 form #field_1766")
+.after( "<p class='typed-chars'>0 out of 120 Characters</p>" );
+
+$(".kn-form.kn-view.view_2351 form #field_1766").on('input',function(e){
+var $input = $(this);
+$input.siblings('.typed-chars').text($input.val().length + " out of 120 Characters");
+});
+});
+});
