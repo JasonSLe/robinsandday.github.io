@@ -3047,6 +3047,14 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
     $('td[class*="field_2240"]').hide();
 }); 
 
+//Wip reporting "off-site" page hover for operator details 
+$(document).on('knack-view-render.view_1506', function (event, view, data) {
+    tooltipsTable('510','1506','field_2240','field_2220');
+	//scene, view, field to have hover, hover info
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+}); 
+
 //Wip reporting "All jobs" hover for operator
 $(document).on('knack-view-render.view_596', function (event, view, data) {
     tooltipsTable('152','596','field_2240','field_2220');
