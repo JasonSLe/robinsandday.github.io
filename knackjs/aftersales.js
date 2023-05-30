@@ -3037,3 +3037,12 @@ $(document).on('knack-form-submit.view_2356', function(event, view, data) {
 $(document).on('knack-form-submit.view_2356', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_1601, "WIP":data.field_441, "POS":data.field_443, "Source": "View_2356 - Satisfaction check (SMS) live job card v2"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
 });
+
+
+//Wip reporting "on-site" page hover for operator details 
+$(document).on('knack-view-render.view_1512', function (event, view, data) {
+    tooltipsTable('755','1512','field_2240','field_2220');
+	//scene, view, field to have hover, hover info
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+}); 
