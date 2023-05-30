@@ -1982,8 +1982,8 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
     if ($('div[class="kn-table kn-view view_1506"]')){
       let rows = $('div[class="kn-table kn-view view_1506"] table>tbody>tr[id]');
       for (i = 0; i < rows.length; i++) {
-        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]').parent())
-        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]').parent())
+        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]').parent())
+        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]>a').appendTo($('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]').parent())
       }
     }
   });
