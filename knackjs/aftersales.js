@@ -3110,3 +3110,8 @@ $(document).on('knack-form-submit.view_2365', function(event, view, data) {
         sendErrorToIntegromat(exception, "Trigger Text To Customer To Complete Exit Survey At Workshop \"Check Out\"");
     }
 });
+
+/check out job card v2 no survey
+$(document).on('knack-form-submit.view_2367', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_2223, "WIP":data.field_719, "POS":data.field_720, "Source": "View_2367 - Satisfaction check job card v2 no survey"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+});
