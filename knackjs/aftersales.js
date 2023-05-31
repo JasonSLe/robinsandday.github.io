@@ -3012,32 +3012,6 @@ try{
 
 });
 
-//**Trigger Text To Customer To Complete Exit Survey at Live job card v2
-$(document).on('knack-form-submit.view_2356', function(event, view, data) { 
-    
-    try{
-        
-
-        let commandURL = "https://hook.integromat.com/wio8wmbeqg4p81kwshmegg7h7fsfawz7";
-        let dataToSend = JSON.stringify({"Record ID":data.id});
-
-        var rData = $.ajax({
-            url: commandURL,
-            type: 'POST',
-            contentType: 'application/json',
-            data: dataToSend,
-            async: false
-        }).responseText;
-    }catch(exception){
-        sendErrorToIntegromat(exception, "Trigger Text To Customer To Complete Exit Survey At live job card v2 \"Check Out\"");
-    }
-});
-
-// trigger to Send Data When Vehicle Is Checked Out From Customer Satisfaction check (sms)
-$(document).on('knack-form-submit.view_2356', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_1601, "WIP":data.field_441, "POS":data.field_443, "Source": "View_2356 - Satisfaction check (SMS) live job card v2"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
-});
-
 
 //Wip reporting "on-site" page hover for operator details 
 $(document).on('knack-view-render.view_1512', function (event, view, data) {
@@ -3085,4 +3059,54 @@ var $input = $(this);
 $input.siblings('.typed-chars').text($input.val().length + " out of 120 Characters");
 });
 });
+});
+
+//**Trigger Text To Customer To Complete Exit Survey At job card v2
+$(document).on('knack-form-submit.view_2365', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.integromat.com/wio8wmbeqg4p81kwshmegg7h7fsfawz7";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger Text To Customer To Complete Exit Survey At Workshop \"Check Out\"");
+    }
+});
+
+
+
+// trigger to Send Data When Vehicle Is Checked Out From Customer Satisfaction check (sms) jobcard v2
+
+$(document).on('knack-form-submit.view_2365', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_1601, "WIP":data.field_441, "POS":data.field_443, "Source": "View_2365 - Satisfaction check (SMS)"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+});
+
+//**Trigger Text To Customer To Complete Exit Survey At Workshop "Check Out" from jobcard v2
+$(document).on('knack-form-submit.view_2365', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.integromat.com/wio8wmbeqg4p81kwshmegg7h7fsfawz7";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger Text To Customer To Complete Exit Survey At Workshop \"Check Out\"");
+    }
 });
