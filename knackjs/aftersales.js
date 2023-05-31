@@ -3115,3 +3115,19 @@ $(document).on('knack-form-submit.view_2365', function(event, view, data) {
 $(document).on('knack-form-submit.view_2367', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_2223, "WIP":data.field_719, "POS":data.field_720, "Source": "View_2367 - Satisfaction check job card v2 no survey"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
 });
+
+//Job card v2 Check out via tablet hide wip, pos
+$(document).on('knack-view-render.view_2364', function (event, view, data) {
+	     $('th[class="field_720"]').hide();
+    $('td[class*="field_720"]').hide();
+	     $('th[class="field_719"]').hide();
+    $('td[class*="field_719"]').hide();
+}); 
+
+//Job card v2 Check out no survey hide wip, pos
+$(document).on('knack-view-render.view_2367', function (event, view, data) {
+	     $('th[class="field_720"]').hide();
+    $('td[class*="field_720"]').hide();
+	     $('th[class="field_719"]').hide();
+    $('td[class*="field_719"]').hide();
+}); 
