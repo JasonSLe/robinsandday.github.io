@@ -3126,8 +3126,8 @@ $(document).on('knack-view-render.view_2364', function (event, view, data) {
 
 //Job card v2 Check out no survey hide wip, pos
 $(document).on('knack-view-render.view_2367', function (event, view, data) {
-	     $('th[class="field_720"]').hide();
-    $('td[class*="field_720"]').hide();
-	     $('th[class="field_719"]').hide();
-    $('td[class*="field_719"]').hide();
+	     $('th[class="field_441"]').hide();
+    $('td[class*="field_441"]').hide();
+	     $('th[class="field_443"]').hide();
+    $('td[class*="field_443"]').hide();
 }); 
