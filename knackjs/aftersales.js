@@ -1927,7 +1927,7 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
           return function() {
             var cell = row.id;
             console.log('cell',cell);
-            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell,"WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell,"Source": "View_1512 - Wip Management Trigger for vehicle onsite", "WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
           };
         };
         if (currentRow.id!==''){
@@ -1982,8 +1982,8 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
     if ($('div[class="kn-table kn-view view_1506"]')){
       let rows = $('div[class="kn-table kn-view view_1506"] table>tbody>tr[id]');
       for (i = 0; i < rows.length; i++) {
-        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]').parent())
-        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]>a').appendTo($('div[id="view_1512"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]').parent())
+        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]>a').appendTo($('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-9"]').parent())
+        $('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]>a').appendTo($('div[id="view_1506"] table>tbody>tr[id]').eq(i).find('span[class="col-7"]').parent())
       }
     }
   });
@@ -2008,7 +2008,7 @@ $(document).on('knack-form-submit.view_1564', function(event, view, data) {
         
 
         let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
-        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042});
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042, "Source": "View_1564, When vehicle Checked out from digital"});
 
         var rData = $.ajax({
             url: commandURL,
@@ -2030,7 +2030,7 @@ $(document).on('knack-form-submit.view_1556', function(event, view, data)  {
         
 
         let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
-        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042});
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042,"Source": "View_1556 - Wip Management Trigger for vehicle onsite"});
 
         var rData = $.ajax({
             url: commandURL,
@@ -2052,7 +2052,7 @@ $(document).on('knack-form-submit.view_1516', function(event, view, data) {
         
 
         let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
-        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042});
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042, "Source": "View_1516 - triggered from manager's note"});
 
         var rData = $.ajax({
             url: commandURL,
@@ -2075,7 +2075,7 @@ $(document).on('knack-form-submit.view_654', function(event, view, data) {
         
 
         let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
-        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042});
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042, "Source": "View_654 - triggered from manager's note"});
 
         var rData = $.ajax({
             url: commandURL,
@@ -2110,13 +2110,13 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
 // trigger to Send Data When Vehicle Is Checked Out From Customer Satisfaction check
 
 $(document).on('knack-form-submit.view_307', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.id, "WIP":data.field_719, "POS":data.field_720},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_2223, "WIP":data.field_719, "POS":data.field_720, "Source": "View_307 - Satisfaction check(tablet)"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
 });
 
 // trigger to Send Data When Vehicle Is Checked Out From Customer Satisfaction check (sms)
 
 $(document).on('knack-form-submit.view_318', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_1601, "WIP":data.field_441, "POS":data.field_443, "Source": "View_318 - Satisfaction check (SMS)"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
 });
 
 
@@ -2316,19 +2316,19 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('th[class="field_2210"]').hide();
     $('td[class*="field_2210"]').hide(); 
 }); 
-//new clocked in today table
+//new clocked in workshop control v2 today table
   $(document).on('knack-view-render.view_1904', function (event, view, data) {
     tooltipsTable('642','1904','field_1537','field_2212');
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
 }); 
-//new clocked in before today not clocked
+//new clocked in before today not clocked workshop control v2
   $(document).on('knack-view-render.view_1905', function (event, view, data) {
     tooltipsTable('642','1905','field_1537','field_2212');
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
 }); 
-//New Currently clocked table
+//New Currently clocked table workshop control v2
   $(document).on('knack-view-render.view_1906', function (event, view, data) {
     tooltipsTable('642','1906','field_1537','field_2212');
    tooltipsTable('642','1906','field_1532','field_2213');
@@ -2341,7 +2341,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_915"]').hide(); 
 }); 
 
-//new Onsite Parts Ave, Await Labour
+//new Onsite Parts Ave, Await Labour workshop control v2
   $(document).on('knack-view-render.view_1907', function (event, view, data) {
     tooltipsTable('642','1907','field_1537','field_2212');
     tooltipsTable('642','1907','field_915','field_987');
@@ -2358,7 +2358,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_915"]').hide(); 
 }); 
 
-//New awaiting authority
+//New awaiting authority workshop control v2
 
   $(document).on('knack-view-render.view_1908', function (event, view, data) {
     tooltipsTable('642','1908','field_1537','field_2212');
@@ -2372,7 +2372,7 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
     $('td[class*="field_915"]').hide(); 
 }); 
 
-//NEW On-site parts Not ave
+//NEW On-site parts Not ave workshop control v2
   $(document).on('knack-view-render.view_1909', function (event, view, data) {
     tooltipsTable('642','1909','field_1537','field_2212');
     tooltipsTable('642','1909','field_1532','field_2213');
@@ -2390,6 +2390,139 @@ $(document).on('knack-form-submit.view_341', function(event, view, data) {
       $('td[class*="field_443"]').hide();
       $('th[class="field_443"]').hide();
 }); 
+
+
+//workshop control v3 Checked in today not clocked table
+  $(document).on('knack-view-render.view_1925', function (event, view, data) {
+    tooltipsTable('650','1925','field_1537','field_2212');
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+}); 
+
+//workshop control v3 Checked in before today not clocked table
+  $(document).on('knack-view-render.view_1929', function (event, view, data) {
+    tooltipsTable('652','1929','field_1537','field_2212');
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+}); 
+
+//workshop control v2 Currently clocked table 
+  $(document).on('knack-view-render.view_1930', function (event, view, data) {
+    tooltipsTable('653','1930','field_1537','field_2212');
+   tooltipsTable('653','1930','field_1532','field_2213');
+   tooltipsTable('653','1930','field_915','field_987');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	   $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+}); 
+
+//workshop control v3 Onsite Parts Ave, Await Labour 
+  $(document).on('knack-view-render.view_2189', function (event, view, data) {
+    tooltipsTable('654','2189','field_1537','field_2212');
+    tooltipsTable('654','2189','field_915','field_987');
+   tooltipsTable('654','2189','field_1532','field_2213');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	   $('td[class*="field_441"]').hide();
+      $('th[class="field_441"]').hide();
+      $('td[class*="field_443"]').hide();
+      $('th[class="field_443"]').hide();
+     	   $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+}); 
+
+//Check out from Workshop controller v3 view "Onsite Parts Ave, Await Labour"
+$(document).on('knack-view-render.view_2189', function (event, view, data) {
+
+    if ($('div[class="kn-table kn-view view_2189"]')){
+      $('td[class*="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class*="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
+      let rows = $('div[class="kn-table kn-view view_2189"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell, "Source": "View_2189 - triggered from workshop controller v2 view (onsite parts ave, awaiting labour)", "WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[0].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+});
+
+//On-site parts Not ave workshop control v3
+  $(document).on('knack-view-render.view_2191', function (event, view, data) {
+    tooltipsTable('715','2191','field_1537','field_2212');
+    tooltipsTable('715','2191','field_1532','field_2213');
+	tooltipsTable('715','2191','field_915','field_987');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+    $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	    $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+		   $('td[class*="field_441"]').hide();
+      $('th[class="field_441"]').hide();
+      $('td[class*="field_443"]').hide();
+      $('th[class="field_443"]').hide();
+}); 
+
+//Check out from Workshop controller v3 view Onsite Parts Not Ave
+$(document).on('knack-view-render.view_2191', function (event, view, data) {
+
+    if ($('div[class="kn-table kn-view view_2191"]')){
+      $('td[class*="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class*="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
+      let rows = $('div[class="kn-table kn-view view_2191"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell, "Source": "View_2191 - triggered from workshop controller view v3 (onsite parts not ave)", "WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[0].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+});
+
+//New awaiting authority workshop control v3
+
+  $(document).on('knack-view-render.view_2193', function (event, view, data) {
+    tooltipsTable('716','2193','field_1537','field_2212');
+    tooltipsTable('716','2193','field_915','field_987');
+    tooltipsTable('716','2193','field_1532','field_2213');
+	     $('th[class="field_318"]').hide();
+    $('td[class*="field_318"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	    $('th[class="field_915"]').hide();
+    $('td[class*="field_915"]').hide(); 
+}); 
+
 
   function getTextFromHTML(s) {
     if (!s) return '';
@@ -2542,7 +2675,7 @@ $(document).on('knack-view-render.view_1558', function (event, view, data) {
           return function() {
             var cell = row.id;
             console.log('cell',cell);
-            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell,"WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell, "Source": "View_1558 - triggered from workshop controller view (onsite parts ave, awaiting labour)", "WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
           };
         };
         if (currentRow.id!==''){
@@ -2569,7 +2702,7 @@ $(document).on('knack-view-render.view_1560', function (event, view, data) {
           return function() {
             var cell = row.id;
             console.log('cell',cell);
-            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell,"WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell, "Source": "View_1560 - triggered from workshop controller view (onsite parts not ave)", "WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
           };
         };
         if (currentRow.id!==''){
@@ -2579,6 +2712,60 @@ $(document).on('knack-view-render.view_1560', function (event, view, data) {
     }
 });
 
+
+//Check out from Workshop controller v2 view "Onsite Parts Ave, Await Labour"
+$(document).on('knack-view-render.view_1907', function (event, view, data) {
+
+    if ($('div[class="kn-table kn-view view_1907"]')){
+      $('td[class*="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class*="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
+      let rows = $('div[class="kn-table kn-view view_1907"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell, "Source": "View_1907 - triggered from workshop controller v2 view (onsite parts ave, awaiting labour)", "WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[0].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+});
+
+//Check out from Workshop controller v2 view Onsite Parts Not Ave
+$(document).on('knack-view-render.view_1909', function (event, view, data) {
+
+    if ($('div[class="kn-table kn-view view_1909"]')){
+      $('td[class*="field_441"]').hide()
+      $('th[class="field_441"]').hide()
+      $('td[class*="field_443"]').hide()
+      $('th[class="field_443"]').hide()
+
+      let rows = $('div[class="kn-table kn-view view_1909"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":cell, "Source": "View_1909 - triggered from workshop controller view v2 (onsite parts not ave)", "WIP":row.querySelector('td[data-field-key="field_441"]').innerText.trim(),"POS":row.querySelector('td[data-field-key="field_443"]').innerText.trim()});
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[0].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+});
 
 /*testing moving Icons for workshop controller v2 checked in but not started today
 $(document).on('knack-view-render.view_1904', function (event, view, data) {
@@ -2595,11 +2782,352 @@ $(document).on('knack-view-render.view_1904', function (event, view, data) {
 //refresh scene for currently clocked on Workshop controller v2
 $(document).on('knack-view-render.view_1906', function(event, view, data) {
   
-  setTimeout(function () { location.hash = location.hash + "#"; }, 60000);
+  setTimeout(function () { location.hash = location.hash + "#"; }, 300000);
  console.log('sceneRefresh_1906');
   Knack.showSpinner();
   
 });
 
+//trigger Create Manual Service Wash from Valeter's "add service wash"
+$(document).on('knack-view-render.view_1916', function(event, view) {
+  //get the vin value from the table
+ const UID = $(".col-4").text().trim()
+  console.log('Webhook applied5');
+ // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
+
+    if ($('div[class="kn-view kn-table view_1916"]')){
+      let rows = $('div[class="kn-view kn-table view_1916"] table tr');
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g", {"RecordID from Jobcard": cell, "Manual Request":"Yes" },"Trigger manual Service wash");
+          };
+        };
+        currentRow.children[3].onclick = createClickHandler(currentRow);
+      }
+    }
+	});
+
+//DOCUMENT SCAN APP
+var scanAppHTML = '';
+function embedScanApp(){
+  let scanApp = document.getElementById('scanApp');
+  if (!scanApp){
+    if (scanAppHTML===''){
+      scanAppHTML = $.ajax({
+          type: "GET",
+          url: 'https://robinsandday.github.io/photoTakeApp/documentPart.html',
+          cache: false,
+          async: false
+      }).responseText;
+    }
+    scanApp = document.createElement('div');
+    scanApp.innerHTML = scanAppHTML;
+    scanApp.id = 'scanApp';
+    scanApp.style="display: none;"
+    document.body.appendChild(scanApp);
+  } else {
+    scanApp.innerHTML = scanAppHTML;
+  }
+
+  var nowS = Date.now().toString();
+
+  if ($('#scanAppCss').length===0){
+    var style = document.createElement('link');
+    style.id = "scanAppCss";
+    style.rel = 'stylesheet';
+    style.type = 'text/css';
+    style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
+    document.getElementsByTagName( 'head' )[0].appendChild( style )
+  }
+
+  function emptyCallback() { }
+
+  function loadScript(src, id,  callback){
+    var script, scriptTag;
+    script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.id = id;
+    script.src = src;
+    script.onload = script.onreadystatechange = function() {
+      if (!this.readyState || this.readyState == 'complete' ){ callback(); }
+    };
+    scriptTag = document.getElementsByTagName('script')[0];
+    scriptTag.parentNode.insertBefore(script, scriptTag);
+  }
+  if ($('#scanAppJS').length===0){
+    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS', emptyCallback);
+  }
+  if ($('#jsPDF').length===0){
+    loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', emptyCallback)
+  }
+}
+
+function showScanApp(button){
+  afterLoad(button.getAttribute('data-app_id'), button.getAttribute('data-pdfassetfield'));
+  $('#scanApp').show();
+  $('.kn-content').hide();
+}
+
+function hideScanApp(){
+  $('#scanApp').hide();
+  $('.kn-content').show();
+}
+
+function fillDataToKnack(message){
+  hideScanApp();
+  $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
+  $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fileName);
+  $('#'+message.pdfAssetField+'_upload').hide();
+  $('.kn-file-upload').html('File uploaded successfully.');
+}
+
+//THIS IS ARRAY OF scenes with document scan
+var scanDocsSceneNames = ["scene_560"];
+scanDocsSceneNames.forEach(scanDocsLinkFunction);
+function scanDocsLinkFunction(selector_view){
+  $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
+    embedScanApp();
+    if ($('button[id="scanDocument"]').length>0){
+      for (let i = 0;i<$('button[id="scanDocument"]').length;i++){
+        $('button[id="scanDocument"]').eq(i).on("click",function(){
+          showScanApp(this);
+        });
+      }
+    }
+  });
+}  
+
+//Workshop Controller all in one table (all jobs)
+$(document).on('knack-view-render.view_2298', function (event, view, data) {
+    tooltipsTable('753','2298','field_2240','field_2220');
+    tooltipsTable('753','2298','field_1537','field_2212');
+	tooltipsTable('753','2298','field_1532','field_2213');
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	  $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+}); 
+//Workshop Controller all in one table (onsite jobs)
+$(document).on('knack-view-render.view_2246', function (event, view, data) {
+    tooltipsTable('761','2246','field_2240','field_2220');
+    tooltipsTable('761','2246','field_1537','field_2212');
+	tooltipsTable('761','2246','field_1532','field_2213');
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	  $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+}); 
+
+//Workshop Controller all in one table (OFFsite jobs)
+$(document).on('knack-view-render.view_2249', function (event, view, data) {
+    tooltipsTable('755','2249','field_2240','field_2220');
+    tooltipsTable('755','2249','field_1537','field_2212');
+	tooltipsTable('755','2249','field_1532','field_2213');
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	  $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+}); 
+
+//trigger Create Service Wash From Job card v2
+$(document).on('knack-form-submit.view_2362', function(event, view, data) { 
+    
+    try{
+        let commandURL = "https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g";
+        let dataToSend = JSON.stringify({"RecordID from Jobcard":data.id, "Service Comments":data.field_982, "UID":data.field_2190, "userName": Knack.getUserAttributes().name});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Aftersales - Create service wash from Job card v2");
+    }
+});
+
+//trigger aftersales - wip management notes to update + is vehicle on site
+
+$(document).on('knack-form-submit.view_2361', function(event, view, data) {
+
+try{
+
+    let commandURL = "https://hook.integromat.com/s8j9klwniouvc81742i1hy8yxtc822ut";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Manager's Notes":data.field_1015_raw, "userName": Knack.getUserAttributes().name, "NOM_WIP_REG":data.field_978_raw, "Nom_wip":data.field_558_raw});
+
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;    
+}catch(exception){
+    console.log("error");
+    var today = new Date();
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
+    let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+    let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Scenario DESCRIPTION what for the error webhook",
+    "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+    var rData = $.ajax({
+       url: commandURL,
+       type: 'POST',
+       contentType: 'application/json',
+       data: dataToSend,
+       async: false
+    }).responseText;
+}
 
 
+ if (data.field_2042 === "No")	
+ { try{
+        let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042, "Source": "View_2361 - triggered from manager's note"});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersalses job card v2- View_2361");
+    }}
+
+});
+
+
+//Wip reporting "on-site" page hover for operator details 
+$(document).on('knack-view-render.view_1512', function (event, view, data) {
+    tooltipsTable('509','1512','field_2240','field_2220');
+	//scene, view, field to have hover, hover info
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+}); 
+
+//Wip reporting "off-site" page hover for operator details 
+$(document).on('knack-view-render.view_1506', function (event, view, data) {
+    tooltipsTable('510','1506','field_2240','field_2220');
+	//scene, view, field to have hover, hover info
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+}); 
+
+//Wip reporting "All jobs" hover for operator
+$(document).on('knack-view-render.view_596', function (event, view, data) {
+    tooltipsTable('152','596','field_2240','field_2220');
+	//scene, view, field to have hover, hover info
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+}); 
+
+//Submit form for Vehicle Check-in JOBCARD V2
+$(document).on('knack-form-submit.view_2351', function(event, view, data) { 
+
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/jcvomnieu3i0k2a5bkce88csho75et9s", {"Record ID":data.id, "Summary Of Work That Has Been Booked In": data.field_1116_raw,
+ "Date / Time Collection Time agreed With Customer At Check in":handlAll(data.field_1117_raw, "date"), "Parking Bay That Customer Vehicle Is Currently Parked In":data.field_1118_raw,
+ "Alternative Mobile Phone Number To Use whilst vehicle is with us Instead Of Stored Contact numbers": handlAll(data.field_1119_raw, "formatted"), "Would Customer Like Us To Make This New Number The Default For Future Communication": data.field_1120_raw,
+  "Customer Signature At Check in":data.field_1122_raw, "Labour Summary":data.field_432_raw, "Customer & Advisor Job Card Notes":data.field_446_raw, "Autoline - customer email":data.field_277_raw,
+  "Use Autoline - Customer Phone 1":data.field_782_raw, "Use Autoline - Customer Phone 2":data.field_783_raw, "Use Autoline - Customer Phone 3":data.field_784_raw, "Use Autoline - Customer Phone 3":data.field_785_raw},"Submit form for Vehicle Check-in")
+
+});
+
+//******* Live Character Count on Aftersales Vehicle Check In for WIP Notes Tab JOB CARD V2 *******
+$(document).on("knack-view-render.view_2351", function(event, view, data) {
+$( document ).ready(function() {
+$(".kn-form.kn-view.view_2351 form #field_1766")
+.after( "<p class='typed-chars'>0 out of 120 Characters</p>" );
+
+$(".kn-form.kn-view.view_2351 form #field_1766").on('input',function(e){
+var $input = $(this);
+$input.siblings('.typed-chars').text($input.val().length + " out of 120 Characters");
+});
+});
+});
+
+//**Trigger Text To Customer To Complete Exit Survey At job card v2
+$(document).on('knack-form-submit.view_2365', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.integromat.com/wio8wmbeqg4p81kwshmegg7h7fsfawz7";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger Text To Customer To Complete Exit Survey At Workshop \"Check Out\"");
+    }
+});
+
+
+
+// trigger to Send Data When Vehicle Is Checked Out From Customer Satisfaction check (sms) jobcard v2
+
+$(document).on('knack-form-submit.view_2365', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_1601, "WIP":data.field_441, "POS":data.field_443, "Source": "View_2365 - Satisfaction check (SMS)"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+});
+
+//**Trigger Text To Customer To Complete Exit Survey At Workshop "Check Out" from jobcard v2
+$(document).on('knack-form-submit.view_2365', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.integromat.com/wio8wmbeqg4p81kwshmegg7h7fsfawz7";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger Text To Customer To Complete Exit Survey At Workshop \"Check Out\"");
+    }
+});
+
+//check out job card v2 no survey
+$(document).on('knack-form-submit.view_2367', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_2223, "WIP":data.field_719, "POS":data.field_720, "Source": "View_2367 - Satisfaction check job card v2 no survey"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+});
+
+//Job card v2 Check out via tablet hide wip, pos
+$(document).on('knack-view-render.view_2364', function (event, view, data) {
+	     $('th[class="field_720"]').hide();
+    $('td[class*="field_720"]').hide();
+	     $('th[class="field_719"]').hide();
+    $('td[class*="field_719"]').hide();
+}); 
+
+//Job card v2 Check out no survey hide wip, pos
+$(document).on('knack-view-render.view_2367', function (event, view, data) {
+	     $('th[class="field_441"]').hide();
+    $('td[class*="field_441"]').hide();
+	     $('th[class="field_443"]').hide();
+    $('td[class*="field_443"]').hide();
+}); 
