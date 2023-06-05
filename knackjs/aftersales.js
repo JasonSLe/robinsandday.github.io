@@ -3131,3 +3131,9 @@ $(document).on('knack-view-render.view_2367', function (event, view, data) {
 	     $('th[class="field_443"]').hide();
     $('td[class*="field_443"]').hide();
 }); 
+
+// Hide crumbtrail for all pages
+
+$(document).on('knack-scene-render.scene_any', function(event, scene) {
+$(".kn-crumbtrail").hide();
+});
