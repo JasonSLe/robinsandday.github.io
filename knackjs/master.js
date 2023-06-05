@@ -1162,6 +1162,10 @@ $(document).on('knack-scene-render.scene_any', function(event, scene) {
 $(".kn-crumbtrail").hide();
 });
 
+$(document).on('knack-scene-render.scene_1772', function(event, scene) {
+$(".kn-crumbtrail").hide();
+});
+
 // $(document).on('knack-scene-render.scene_1719', function(event, scene) {
 //  $(".kn-crumbtrail").hide();
 // });
