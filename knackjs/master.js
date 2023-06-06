@@ -582,6 +582,8 @@ $(document).on('knack-scene-render.any', function(event, scene) {
         window.location.href = 'https://www.stellantisandyou.co.uk/digital#browser-incompatible-user-page/';
     }, 500);
   }
+
+  
   	
 });
 
@@ -1496,6 +1498,16 @@ function embedVideoApp(){
 
   if ($('#videoAppJS').length===0){
     loadScript("https://robinsandday.github.io/knackjs/videoApp.js?"+nowS,'videoAppJS', emptyCallback);
+  }
+}
+
+function removeVideoApp(){
+  let videoApp = document.getElementById('videoDiv');
+  if (videoApp){
+    videoApp.remove();
+  }
+  if ($('#videoAppJS').length!==0){
+    $('#videoAppJS').remove();
   }
 }
 
