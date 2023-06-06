@@ -3132,3 +3132,13 @@ $(document).on('knack-view-render.view_2367', function (event, view, data) {
     $('td[class*="field_443"]').hide();
 }); 
 
+// ------------ Refresh All jobs in ONE Table (workshop/CA view)-----------------------//
+$(document).on('knack-scene-render.scene_753', function(event, scene) {
+ recursivecallscene_753();
+ console.log('sceneRefresh_753');
+ 
+});
+
+function recursivecallscene_753(){
+ setTimeout(function () { if($("#view_2298").is(":visible")==true){ Knack.views["view_2298"].model.fetch();recursivecallscene_753();} }, 300000);
+}
