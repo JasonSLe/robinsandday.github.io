@@ -3030,6 +3030,6 @@ div.tooltipDiv {
 #view_2246 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul,
 #view_2249 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul {
   background-color: #495057;
-  color: #ffffff;
+  color: #ffffff !important;
   font-weight: bold;
 }
