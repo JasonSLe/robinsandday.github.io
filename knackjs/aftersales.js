@@ -1566,6 +1566,28 @@ $(document).on('knack-scene-render.scene_20', function(event, scene) {
  });
 
 
+
+//Refresh Virtual Reception on Job's on site (workshop controller)    
+
+$(document).on('knack-scene-render.scene_761', function(event, scene) {
+  refreshWithData('2403', 'TITLE', 'TEXT $field_351', 'field_1518');
+ });
+
+ $(document).on('knack-view-render.view_2403', function(event, view) {
+  if (Notification.permission !== 'granted') {
+    const para = document.createElement("p");
+    para.classList.add('label');
+    para.classList.add('kn-label');
+    para.style = 'color:red;';
+    para.setAttribute("id", "enableDesktopNotif");
+    para.innerHTML = "To enable Desktop Pop-Up Notifications when new VR Messages appear, please go to your Account Settings and click “Allow” Notifications";
+
+    const element = document.querySelector("div[id='view_2403']");
+    element.appendChild(para);
+  }
+ });
+
+
 // Refresh Virtual Reception table on Vehicle Checkout Page        
 
 $(document).on('knack-scene-render.scene_95', function(event, scene) {
