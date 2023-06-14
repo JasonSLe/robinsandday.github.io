@@ -3171,6 +3171,7 @@ color: #FFFFFF;
 }
 
 /* Edit Profit & Loss Links to Buttons */
+
 /* Edit Vehicle Income */
 #view_3947 > section > div > div > div > div > div > div > span > a > span {
   color: #FFFFFF;
@@ -3240,7 +3241,8 @@ color: #FFFFFF;
 }
 
 /* Add DEALER Support Claim (P&L Completion Stage) */
-#view_4533 > section > div > div > div > div > div > div > span > a {
+
+#view_4676 > section > div > div > div > div > div > div > span > a > span {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #FFA100;
@@ -3248,7 +3250,7 @@ color: #FFFFFF;
   display: inline-block;
 }
 
-#view_4533 > section > div > div > div > div > div > div > span > a {
+#view_4676 > section > div > div > div > div > div > div > span > a > span {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #D18400;
@@ -3256,7 +3258,8 @@ color: #FFFFFF;
   display: inline-block;
 }
 
-/* Add Support Claim */
+/* Add Discrepancy Support Claim */
+
 #view_4533 > section > div > div > div > div > div > div > span > a > span {
   color: #FFFFFF;
   font-weight: bold;
