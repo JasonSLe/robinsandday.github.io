@@ -2974,7 +2974,7 @@ $(document).on('knack-view-render.view_2246', function (event, view, data) {
     $('td[class*="field_1532"]').hide(); 
 }); 
 
-//Workshop Controller all in one table (OFFsite jobs)
+/*Workshop Controller all in one table (OFFsite jobs)
 $(document).on('knack-view-render.view_2249', function (event, view, data) {
     tooltipsTable('755','2249','field_2240','field_2220');
     tooltipsTable('755','2249','field_1537','field_2212');
@@ -2986,7 +2986,7 @@ $(document).on('knack-view-render.view_2249', function (event, view, data) {
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
 }); 
-
+*/
 //trigger Create Service Wash From Job card v2
 $(document).on('knack-form-submit.view_2362', function(event, view, data) { 
     
@@ -3202,7 +3202,7 @@ function recursivecallscene_761(){
  setTimeout(function () { if($("#view_2246").is(":visible")==true){ Knack.views["view_2246"].model.fetch();recursivecallscene_761();} }, 300000);
 }
 
-// ------------ Refresh OFF-Site jobs in ONE Table (workshop/CA view)-----------------------//
+/*// ------------ Refresh OFF-Site jobs in ONE Table (workshop/CA view)-----------------------//
 $(document).on('knack-scene-render.scene_755', function(event, scene) {
  recursivecallscene_755();
  console.log('sceneRefresh_755');
@@ -3211,4 +3211,29 @@ $(document).on('knack-scene-render.scene_755', function(event, scene) {
 
 function recursivecallscene_755(){
  setTimeout(function () { if($("#view_2249").is(":visible")==true){ Knack.views["view_2249"].model.fetch();recursivecallscene_755();} }, 300000);
+}
+*/
+
+//Workshop Controller all Jobs in one table (OFF-site Jobs)
+$(document).on('knack-view-render.view_2478', function (event, view, data) {
+    tooltipsTable('755','2478','field_1532','field_2220');
+	tooltipsTable('755','2478','field_1537','field_2213');
+	tooltipsTable('755','2478','field_2298','field_2272');
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	  $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+}); 
+
+// ------------ Refresh Off-site jobs in ONE Table (workshop/CA view)-----------------------//
+$(document).on('knack-scene-render.scene_755', function(event, scene) {
+ recursivecallscene_755();
+ console.log('sceneRefresh_755');
+ 
+});
+
+function recursivecallscene_755(){
+ setTimeout(function () { if($("#view_2478").is(":visible")==true){ Knack.views["view_2478"].model.fetch();recursivecallscene_755();} }, 300000);
 }
