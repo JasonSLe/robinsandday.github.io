@@ -2923,7 +2923,7 @@ function scanDocsLinkFunction(selector_view){
   });
 }  
 
-//Workshop Controller all in one table (all jobs)
+/*Workshop Controller all in one table (all jobs)
 $(document).on('knack-view-render.view_2298', function (event, view, data) {
     tooltipsTable('753','2298','field_2240','field_2220');
     tooltipsTable('753','2298','field_1537','field_2212');
@@ -2934,7 +2934,33 @@ $(document).on('knack-view-render.view_2298', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
+});*/
+//Workshop Controller all Jobs in one table (ALL Jobs)
+$(document).on('knack-view-render.view_2443', function (event, view, data) {
+    tooltipsTable('753','2443','field_1532','field_2220');
+	tooltipsTable('753','2443','field_1537','field_2213');
+	tooltipsTable('753','2443','field_2298','field_2272');
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	  $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
 }); 
+
+
+
+// ------------ Refresh ALL jobs in ONE Table (workshop/CA view)-----------------------//
+$(document).on('knack-scene-render.scene_753', function(event, scene) {
+ recursivecallscene_753();
+ console.log('sceneRefresh_753');
+ 
+});
+
+function recursivecallscene_753(){
+ setTimeout(function () { if($("#view_2443").is(":visible")==true){ Knack.views["view_2443"].model.fetch();recursivecallscene_753();} }, 300000);
+}
+
 //Workshop Controller all in one table (onsite jobs)
 $(document).on('knack-view-render.view_2246', function (event, view, data) {
     tooltipsTable('761','2246','field_1532','field_2220');
@@ -3161,7 +3187,7 @@ $(document).on('knack-scene-render.scene_753', function(event, scene) {
  
 });
 
-function recursivecallscene_753(){
+/*function recursivecallscene_753(){
  setTimeout(function () { if($("#view_2298").is(":visible")==true){ Knack.views["view_2298"].model.fetch();recursivecallscene_753();} }, 300000);
 }
 
@@ -3170,7 +3196,7 @@ $(document).on('knack-scene-render.scene_761', function(event, scene) {
  recursivecallscene_761();
  console.log('sceneRefresh_761');
  
-});
+});*/
 
 function recursivecallscene_761(){
  setTimeout(function () { if($("#view_2246").is(":visible")==true){ Knack.views["view_2246"].model.fetch();recursivecallscene_761();} }, 300000);
