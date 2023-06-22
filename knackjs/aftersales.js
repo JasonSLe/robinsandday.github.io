@@ -3148,6 +3148,13 @@ function recursivecallscene_755(){
  setTimeout(function () { if($("#view_2478").is(":visible")==true){ Knack.views["view_2478"].model.fetch();recursivecallscene_755();} }, 300000);
 }
 
+$(document).on('knack-view-render.view_2523', function (event, view, data) {
+  embedLicencePhotoApp();
+  $('div[id="view_2523"] img').on("click",function(){
+    showlicencePhotoApp(this);
+  });
+}); 
+
 var licencePhotoAppHTML = '';
 function embedLicencePhotoApp(){
   let licencePhotoApp = document.getElementById('licencePhotoApp');
