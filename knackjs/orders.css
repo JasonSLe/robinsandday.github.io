@@ -1947,6 +1947,26 @@ color: #FFFFFF;
   	font-weight: bold;
 }
 
+/*** Invoiced Deals - Handover Appointment Elapsed NO Handover Checklist Complete ***/
+
+#view_4627 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4627 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_4627 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /* Center Headings*/
 
 #view_4060 th span
@@ -3171,6 +3191,7 @@ color: #FFFFFF;
 }
 
 /* Edit Profit & Loss Links to Buttons */
+
 /* Edit Vehicle Income */
 #view_3947 > section > div > div > div > div > div > div > span > a > span {
   color: #FFFFFF;
@@ -3240,7 +3261,8 @@ color: #FFFFFF;
 }
 
 /* Add DEALER Support Claim (P&L Completion Stage) */
-#view_4535 > section > div > div > div > div > div > div > span > a {
+
+#view_4676 > section > div > div > div > div > div > div > span > a > span {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #FFA100;
@@ -3248,7 +3270,7 @@ color: #FFFFFF;
   display: inline-block;
 }
 
-#view_4535 > section > div > div > div > div > div > div > span > a {
+#view_4676 > section > div > div > div > div > div > div > span > a > span {
   color: #FFFFFF;
   font-weight: bold;
   background-color: #D18400;
@@ -3256,7 +3278,8 @@ color: #FFFFFF;
   display: inline-block;
 }
 
-/* Add Support Claim */
+/* Add Discrepancy Support Claim */
+
 #view_4533 > section > div > div > div > div > div > div > span > a > span {
   color: #FFFFFF;
   font-weight: bold;

@@ -1566,6 +1566,28 @@ $(document).on('knack-scene-render.scene_20', function(event, scene) {
  });
 
 
+
+//Refresh Virtual Reception on Job's on site (workshop controller)    
+
+$(document).on('knack-scene-render.scene_761', function(event, scene) {
+  refreshWithData('2403', 'TITLE', 'TEXT $field_351', 'field_1518');
+ });
+
+ $(document).on('knack-view-render.view_2403', function(event, view) {
+  if (Notification.permission !== 'granted') {
+    const para = document.createElement("p");
+    para.classList.add('label');
+    para.classList.add('kn-label');
+    para.style = 'color:red;';
+    para.setAttribute("id", "enableDesktopNotif");
+    para.innerHTML = "To enable Desktop Pop-Up Notifications when new VR Messages appear, please go to your Account Settings and click “Allow” Notifications";
+
+    const element = document.querySelector("div[id='view_2403']");
+    element.appendChild(para);
+  }
+ });
+
+
 // Refresh Virtual Reception table on Vehicle Checkout Page        
 
 $(document).on('knack-scene-render.scene_95', function(event, scene) {
@@ -2811,97 +2833,7 @@ $(document).on('knack-view-render.view_1916', function(event, view) {
     }
 	});
 
-//DOCUMENT SCAN APP
-var scanAppHTML = '';
-function embedScanApp(){
-  let scanApp = document.getElementById('scanApp');
-  if (!scanApp){
-    if (scanAppHTML===''){
-      scanAppHTML = $.ajax({
-          type: "GET",
-          url: 'https://robinsandday.github.io/photoTakeApp/documentPart.html',
-          cache: false,
-          async: false
-      }).responseText;
-    }
-    scanApp = document.createElement('div');
-    scanApp.innerHTML = scanAppHTML;
-    scanApp.id = 'scanApp';
-    scanApp.style="display: none;"
-    document.body.appendChild(scanApp);
-  } else {
-    scanApp.innerHTML = scanAppHTML;
-  }
-
-  var nowS = Date.now().toString();
-
-  if ($('#scanAppCss').length===0){
-    var style = document.createElement('link');
-    style.id = "scanAppCss";
-    style.rel = 'stylesheet';
-    style.type = 'text/css';
-    style.href = 'https://robinsandday.github.io/knackjs/document.css?'+nowS;
-    document.getElementsByTagName( 'head' )[0].appendChild( style )
-  }
-
-  function emptyCallback() { }
-
-  function loadScript(src, id,  callback){
-    var script, scriptTag;
-    script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.id = id;
-    script.src = src;
-    script.onload = script.onreadystatechange = function() {
-      if (!this.readyState || this.readyState == 'complete' ){ callback(); }
-    };
-    scriptTag = document.getElementsByTagName('script')[0];
-    scriptTag.parentNode.insertBefore(script, scriptTag);
-  }
-  if ($('#scanAppJS').length===0){
-    loadScript("https://robinsandday.github.io/knackjs/document.js?"+nowS,'scanAppJS', emptyCallback);
-  }
-  if ($('#jsPDF').length===0){
-    loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js','jsPDF', emptyCallback)
-  }
-}
-
-function showScanApp(button){
-  afterLoad(button.getAttribute('data-app_id'), button.getAttribute('data-pdfassetfield'));
-  $('#scanApp').show();
-  $('.kn-content').hide();
-}
-
-function hideScanApp(){
-  $('#scanApp').hide();
-  $('.kn-content').show();
-}
-
-function fillDataToKnack(message){
-  hideScanApp();
-  $('input[name="'+message.pdfAssetField+'"]').val(message.pdfAssetId);
-  $('div[id="kn-input-'+message.pdfAssetField+'"] div[class="kn-asset-current"]').html(message.fileName);
-  $('#'+message.pdfAssetField+'_upload').hide();
-  $('.kn-file-upload').html('File uploaded successfully.');
-}
-
-//THIS IS ARRAY OF scenes with document scan
-var scanDocsSceneNames = ["scene_560"];
-scanDocsSceneNames.forEach(scanDocsLinkFunction);
-function scanDocsLinkFunction(selector_view){
-  $(document).on("knack-scene-render." + selector_view, function(event, view, data) {
-    embedScanApp();
-    if ($('button[id="scanDocument"]').length>0){
-      for (let i = 0;i<$('button[id="scanDocument"]').length;i++){
-        $('button[id="scanDocument"]').eq(i).on("click",function(){
-          showScanApp(this);
-        });
-      }
-    }
-  });
-}  
-
-//Workshop Controller all in one table (all jobs)
+/*Workshop Controller all in one table (all jobs)
 $(document).on('knack-view-render.view_2298', function (event, view, data) {
     tooltipsTable('753','2298','field_2240','field_2220');
     tooltipsTable('753','2298','field_1537','field_2212');
@@ -2912,12 +2844,12 @@ $(document).on('knack-view-render.view_2298', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-}); 
-//Workshop Controller all in one table (onsite jobs)
-$(document).on('knack-view-render.view_2246', function (event, view, data) {
-    tooltipsTable('761','2246','field_2240','field_2220');
-    tooltipsTable('761','2246','field_1537','field_2212');
-	tooltipsTable('761','2246','field_1532','field_2213');
+});*/
+//Workshop Controller all Jobs in one table (ALL Jobs)
+$(document).on('knack-view-render.view_2443', function (event, view, data) {
+    tooltipsTable('753','2443','field_1532','field_2220');
+	tooltipsTable('753','2443','field_1537','field_2213');
+	tooltipsTable('753','2443','field_2298','field_2272');
 	     $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
     $('th[class="field_1537"]').hide();
@@ -2926,7 +2858,33 @@ $(document).on('knack-view-render.view_2246', function (event, view, data) {
     $('td[class*="field_1532"]').hide(); 
 }); 
 
-//Workshop Controller all in one table (OFFsite jobs)
+
+
+// ------------ Refresh ALL jobs in ONE Table (workshop/CA view)-----------------------//
+$(document).on('knack-scene-render.scene_753', function(event, scene) {
+ recursivecallscene_753();
+ console.log('sceneRefresh_753');
+ 
+});
+
+function recursivecallscene_753(){
+ setTimeout(function () { if($("#view_2443").is(":visible")==true){ Knack.views["view_2443"].model.fetch();recursivecallscene_753();} }, 300000);
+}
+
+//Workshop Controller all in one table (onsite jobs)
+$(document).on('knack-view-render.view_2246', function (event, view, data) {
+    tooltipsTable('761','2246','field_1532','field_2220');
+	tooltipsTable('761','2246','field_1537','field_2213');
+	tooltipsTable('761','2246','field_2298','field_2272');
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	  $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+}); 
+
+/*Workshop Controller all in one table (OFFsite jobs)
 $(document).on('knack-view-render.view_2249', function (event, view, data) {
     tooltipsTable('755','2249','field_2240','field_2220');
     tooltipsTable('755','2249','field_1537','field_2212');
@@ -2938,7 +2896,7 @@ $(document).on('knack-view-render.view_2249', function (event, view, data) {
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
 }); 
-
+*/
 //trigger Create Service Wash From Job card v2
 $(document).on('knack-form-submit.view_2362', function(event, view, data) { 
     
@@ -3139,8 +3097,55 @@ $(document).on('knack-scene-render.scene_753', function(event, scene) {
  
 });
 
-function recursivecallscene_753(){
+/*function recursivecallscene_753(){
  setTimeout(function () { if($("#view_2298").is(":visible")==true){ Knack.views["view_2298"].model.fetch();recursivecallscene_753();} }, 300000);
+}
+
+// ------------ Refresh ONSITE jobs in ONE Table (workshop/CA view)-----------------------//
+$(document).on('knack-scene-render.scene_761', function(event, scene) {
+ recursivecallscene_761();
+ console.log('sceneRefresh_761');
+ 
+});*/
+
+function recursivecallscene_761(){
+ setTimeout(function () { if($("#view_2246").is(":visible")==true){ Knack.views["view_2246"].model.fetch();recursivecallscene_761();} }, 300000);
+}
+
+/*// ------------ Refresh OFF-Site jobs in ONE Table (workshop/CA view)-----------------------//
+$(document).on('knack-scene-render.scene_755', function(event, scene) {
+ recursivecallscene_755();
+ console.log('sceneRefresh_755');
+ 
+});
+
+function recursivecallscene_755(){
+ setTimeout(function () { if($("#view_2249").is(":visible")==true){ Knack.views["view_2249"].model.fetch();recursivecallscene_755();} }, 300000);
+}
+*/
+
+//Workshop Controller all Jobs in one table (OFF-site Jobs)
+$(document).on('knack-view-render.view_2478', function (event, view, data) {
+    tooltipsTable('755','2478','field_1532','field_2220');
+	tooltipsTable('755','2478','field_1537','field_2213');
+	tooltipsTable('755','2478','field_2298','field_2272');
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	  $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+}); 
+
+// ------------ Refresh Off-site jobs in ONE Table (workshop/CA view)-----------------------//
+$(document).on('knack-scene-render.scene_755', function(event, scene) {
+ recursivecallscene_755();
+ console.log('sceneRefresh_755');
+ 
+});
+
+function recursivecallscene_755(){
+ setTimeout(function () { if($("#view_2478").is(":visible")==true){ Knack.views["view_2478"].model.fetch();recursivecallscene_755();} }, 300000);
 }
 
 var licencePhotoAppHTML = '';

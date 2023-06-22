@@ -269,28 +269,8 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	font-weight: bold;
 }
 
-
-/**** Digital Adoption Historic Data Button ****/
-
-#view_1370 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	box-shadow:         3px 3px #ccc;
-}
-
-#view_1370 > div > a:hover.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #D18400;
-  	color: #FFFFFF;
-  	font-weight: bold;
-  	transition-property: color;
-  	transition-duration: .3s;
-  	border-width: 2px;
-  	border-color: #FFFFFF;
-  	box-shadow:         3px 3px #ccc;
-}
-
 /* TOOLTIP CSS*/
+
 [data-tooltip] {
 	position: relative;
   }
@@ -2006,6 +1986,24 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	border-color: #FFFFFF;
 }
 	
+/* Aftersales Worksghop controller change colours of menu */
+
+#view_2248 > div > nav > ul > li:nth-child(9) > a {
+	background-color: #2ab27b;!important
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_2248 > div > nav > ul > a:hover.li:nth-child(9) {
+	background-color: #308965;
+  	color: #FFFFFF;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+}
+
 
 /* Aftersales PAets Cash and Credit Account Application Status overview */
 
@@ -3023,3 +3021,14 @@ div.tooltipDiv th {
 div.tooltipDiv {
 	padding: 25px;
 }
+
+/****** All jobs in one table (workshop/CA view) *******/
+
+#view_2298 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li,
+#view_2246 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li,
+#view_2249 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li {
+  background-color: #C9D7F8;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
