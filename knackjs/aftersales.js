@@ -3155,6 +3155,21 @@ $(document).on('knack-view-render.view_2523', function (event, view, data) {
   });
 }); 
 
+function loadScript(src, id,  callback){
+  var script, scriptTag;
+  script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.id = id;
+  script.src = src;
+  script.onload = script.onreadystatechange = function() {
+    if (!this.readyState || this.readyState == 'complete' ){ callback(); }
+  };
+  scriptTag = document.getElementsByTagName('script')[0];
+  scriptTag.parentNode.insertBefore(script, scriptTag);
+}
+
+function emptyCallback() { }
+
 var licencePhotoAppHTML = '';
 function embedLicencePhotoApp(){
   let licencePhotoApp = document.getElementById('licencePhotoApp');
