@@ -1,0 +1,18 @@
+<h1 class="licencePhotoH1">Driving Licence Photo App</h1>
+    <div id="kn-loading-spinner" style="display: none;"></div>
+    <div id="cameraTakePhotoDiv">
+        <div id="scanCameraVid_container" style="display: none;">
+            <video id="videoElement" autoplay="" playsinline="" class="hidden"></video>
+        </div>
+        <div id="scanCameraGrid" style="display: none;">
+            <div id="zoomHolderOut"><div id="zoomHolder"><img id="scanCameraFrontpic"/></div></div><br />
+            <a id="scanCameraText">Is the document readable?</a>
+        </div>
+        <div id="scanCameraGui_controls" style="display: none;">
+            <button id="scanTakePhoto" class="scanCameraButton"></button>
+            <button id="scanCameraExit" name="exit photo" type="button" class="scanCameraButton"></button>
+            <button id="scanCameraRetake" name="retake photo" type="button" class="scanCameraButton"></button>
+            <button id="scanCameraConfirm" name="confirm photo" type="button" class="scanCameraButton"></button>
+        </div>
+    </div>
+    <span id="dev"></span>

@@ -3142,3 +3142,50 @@ $(document).on('knack-scene-render.scene_753', function(event, scene) {
 function recursivecallscene_753(){
  setTimeout(function () { if($("#view_2298").is(":visible")==true){ Knack.views["view_2298"].model.fetch();recursivecallscene_753();} }, 300000);
 }
+
+var licencePhotoAppHTML = '';
+function embedLicencePhotoApp(){
+  let licencePhotoApp = document.getElementById('licencePhotoApp');
+  if (!licencePhotoApp){
+    if (licencePhotoAppHTML===''){
+      licencePhotoAppHTML = $.ajax({
+          type: "GET",
+          url: 'https://robinsandday.github.io/photoTakeApp/licencePhotoPart.html',
+          cache: false,
+          async: false
+      }).responseText;
+    }
+    licencePhotoApp = document.createElement('div');
+    licencePhotoApp.innerHTML = licencePhotoAppHTML;
+    licencePhotoApp.id = 'licencePhotoApp';
+    licencePhotoApp.style="display: none;"
+    document.body.appendChild(licencePhotoApp);
+  } else {
+    licencePhotoApp.innerHTML = licencePhotoAppHTML;
+  }
+
+  var nowS = Date.now().toString();
+
+  if ($('#licencePhotoAppCss').length===0){
+    var style = document.createElement('link');
+    style.id = "licencePhotoAppCss";
+    style.rel = 'stylesheet';
+    style.type = 'text/css';
+    style.href = 'https://robinsandday.github.io/knackjs/licencePhoto.css?'+nowS;
+    document.getElementsByTagName( 'head' )[0].appendChild( style )
+  }
+
+  if ($('#licencePhotoAppJS').length===0){
+    loadScript("https://robinsandday.github.io/knackjs/licencePhoto.js?"+nowS,'licencePhotoAppJS', emptyCallback);
+  }
+}
+
+function showlicencePhotoApp(button){
+  $('#licencePhotoApp').show();
+  $('.kn-content').hide();
+}
+
+function hidelicencePhotoApp(){
+  $('#licencePhotoApp').hide();
+  $('.kn-content').show();
+}
