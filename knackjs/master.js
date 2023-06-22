@@ -1179,7 +1179,7 @@ $(document).on('knack-scene-render.scene_1736', function(event, scene) {
  });
 
 $(document).on('knack-scene-render.scene_1773', function (event, view, data) {
-	$('[class="kn-container"]').hide();
+	$('[class="kn-view.kn-back-link"]').hide();
 	$('[class="kn-info kn-container"]').hide();
 });
 // ----------  hide blank Enquiry Max table on New Vehicle P/X appraisal    ----------
