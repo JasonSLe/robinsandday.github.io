@@ -2555,7 +2555,7 @@ $(document).on('knack-view-render.view_2191', function (event, view, data) {
   };
 
   let shownTooltipIdT = null;
-  function tooltipsTable(sceneId, viewId, tooltipFieldId, showTooltipFieldId){
+  function tooltipsTable(sceneId, viewId, tooltipFieldId, showTooltipFieldId, tooltipTitle = ''){
     $('th[class="'+tooltipFieldId+'"]').hide();
     $('td[class*="'+tooltipFieldId+'"]').hide();
 
@@ -2588,7 +2588,7 @@ $(document).on('knack-view-render.view_2191', function (event, view, data) {
           //console.log('tdUnderMouse right column',tdUnderMouse);
           //console.log('tdUn id',tdUnderMouse.parentElement.id);
           //console.log('HTML to show',tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML)
-          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').html(modifyTooltipHTML(tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML));
+          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').html(tooltipTitle + modifyTooltipHTML(tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML));
           $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').show();
           $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').offset({ left: e.pageX+10, top: e.pageY });
         } else {
