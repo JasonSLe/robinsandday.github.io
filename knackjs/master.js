@@ -373,6 +373,12 @@ $(document).on('knack-view-render.view_6288', function(event, view, data) {
   $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/digital-orders?token='+encodeURIComponent(token) + '#fleet-vehicle-administration/fleet-master-doc/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+//tech view 2 est
+$(document).on('knack-view-render.view_6320', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales#tech-view2?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 var aftersalesConnectView = [{view:'view_6320',url:'#tech-view2/'},
 {view:'view_5733',url:'#after-sales-vehicle-lookup/'},
 {view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
