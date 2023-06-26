@@ -3026,7 +3026,7 @@ div.tooltipDiv {
 
 #view_2298 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li,
 /* #view_2246 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li,*/ 
-#view_2246 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n),
+#view_2246 > div:nth-child(1) > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li,
 #view_2249 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li {
   background-color: #495057;
   color: #ffffff !important;
