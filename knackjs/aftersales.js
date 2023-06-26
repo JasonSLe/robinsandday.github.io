@@ -3236,3 +3236,24 @@ $(document).on('knack-view-render.view_2686', function (event, view, data) {
 function recursivecallscene_753(){
  setTimeout(function () { if($("#view_2686").is(":visible")==true){ Knack.views["view_2686"].model.fetch();recursivecallscene_753();} }, 300000);
 }
+
+//Workshop Controller all in one table (Off-site jobs)
+$(document).on('knack-view-render.view_2722', function (event, view, data) {
+    tooltipsTable('755','2722','field_1532','field_2220');
+	tooltipsTable('755','2722','field_1537','field_2213');
+	tooltipsTable('755','2722','field_2298','field_2272');
+	tooltipsTable('755','2722','field_1118','field_2278','Bay No: ');
+	
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	  $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	 $('th[class="field_1118"]').hide();
+    $('td[class*="field_1118"]').hide(); 
+}); 
+
+function recursivecallscene_755(){
+ setTimeout(function () { if($("#view_2722").is(":visible")==true){ Knack.views["view_2722"].model.fetch();recursivecallscene_755();} }, 300000);
+}
