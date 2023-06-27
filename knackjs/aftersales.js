@@ -1533,6 +1533,12 @@ $(document).on('knack-form-submit.view_1261', function(event, view, data) {
   callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
 });
 
+//Trigger failed Quality check (QC) emails to workshop controller/ manager within TECH VIEW
+
+$(document).on('knack-form-submit.view_2725', function(event, view, data) {
+  callPostHttpRequest("https://hook.integromat.com/2tfc5ujqwtit3x3r60it41o6vmczrd0t", {"Record ID":data.id},"Failed Quality Check (QC)")
+});
+
 // Trigger Update To VR (Virtual Reception) Status
 
 $(document).on('knack-form-submit.view_1177', function(event, view, data) {
