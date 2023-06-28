@@ -3227,7 +3227,7 @@ $(document).on('knack-view-render.view_2686', function (event, view, data) {
     tooltipsTable('753','2686','field_1532','field_2220');
 	tooltipsTable('753','2686','field_1537','field_2213');
 	tooltipsTable('753','2686','field_2298','field_2272');
-	tooltipsTable('753','2686','field_1118','field_2278','Bay No: ');
+	tooltipsTable('753','2686','field_2278','field_1118','Bay No: ');
 	
 	     $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
@@ -3235,8 +3235,8 @@ $(document).on('knack-view-render.view_2686', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_1118"]').hide();
-    $('td[class*="field_1118"]').hide(); 
+	 $('th[class="field_2278"]').hide();
+    $('td[class*="field_2278"]').hide(); 
 }); 
 
 function recursivecallscene_753(){
@@ -3248,7 +3248,7 @@ $(document).on('knack-view-render.view_2722', function (event, view, data) {
     tooltipsTable('755','2722','field_1532','field_2220');
 	tooltipsTable('755','2722','field_1537','field_2213');
 	tooltipsTable('755','2722','field_2298','field_2272');
-	tooltipsTable('755','2722','field_1118','field_2278','Bay No: ');
+	tooltipsTable('755','2722','field_2278','field_1118','Bay No: ');
 	
 	     $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
@@ -3256,8 +3256,8 @@ $(document).on('knack-view-render.view_2722', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_1118"]').hide();
-    $('td[class*="field_1118"]').hide(); 
+	 $('th[class="field_2278"]').hide();
+    $('td[class*="field_2278"]').hide(); 
 }); 
 
 function recursivecallscene_755(){
