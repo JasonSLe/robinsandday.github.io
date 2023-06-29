@@ -1404,11 +1404,11 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
 
 //Recall Recheck Spinner on Vehicle Checkin
 
-$(document).on("knack-scene-render.scene_267", function(event, scene, data) {
+$(document).on("knack-scene-render.scene_769", function(event, scene, data) {
     let refreshData = [
       {
           mainField : 'field_1189', //recall-recheck
-          views:['905']
+          views:['2359']
       }
     ]
     sceneRefresh(refreshData);
