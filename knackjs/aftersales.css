@@ -3042,13 +3042,13 @@ div.tooltipDiv {
 }
 
 /* Making New digital job card menu reporting buttons green for service operations and sub menus*/
-#view_2685 > div > nav > ul > li:nth-child(8)
-#view_2856 > div > nav > ul > li:nth-child(9),
-#view_2857 > div > nav > ul > li:nth-child(9),
-#view_2859 > div > nav > ul > li:nth-child(9),
-#view_2860 > div > nav > ul > li:nth-child(9),
-#view_2861 > div > nav > ul > li:nth-child(9),
-#view_2865 > div > nav > ul > li:nth-child(7) {
+#view_2685 > div > nav > ul > li:nth-child(8) > a,
+#view_2856 > div > nav > ul > li:nth-child(9) > a,
+#view_2857 > div > nav > ul > li:nth-child(9) > a,
+#view_2859 > div > nav > ul > li:nth-child(9) > a,
+#view_2860 > div > nav > ul > li:nth-child(9) > a,
+#view_2861 > div > nav > ul > li:nth-child(9) > a,
+#view_2865 > div > nav > ul > li:nth-child(7) > a {
 	background-color: #2ab27b;
   	color: #FFFFFF;
   	font-weight: bold;
