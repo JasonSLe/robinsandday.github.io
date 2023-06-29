@@ -19,8 +19,6 @@ const deleteEmpty = (objectA) => {
 return objectA
 }
 
-
-
 //HIDE THE LOGO AND logged in user in all pages
 $(document).on('knack-view-render.any', function (event, view, data) {
 	$('[class="kn-container"]').hide();
@@ -362,8 +360,6 @@ function generateTyres1(){
     console.log('Error Generating tyres',e);
   }
 }
-
-
 
 function tyreRowColor(stockCount, SORCount){
   if (SORCount>=4){
