@@ -1404,11 +1404,11 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
 
 //Recall Recheck Spinner on Vehicle Checkin
 
-$(document).on("knack-scene-render.scene_267", function(event, scene, data) {
+$(document).on("knack-scene-render.scene_769", function(event, scene, data) {
     let refreshData = [
       {
           mainField : 'field_1189', //recall-recheck
-          views:['905']
+          views:['2359']
       }
     ]
     sceneRefresh(refreshData);
@@ -2861,18 +2861,6 @@ $(document).on('knack-view-render.view_2443', function (event, view, data) {
 }); 
 
 
-
-// ------------ Refresh ALL jobs in ONE Table (workshop/CA view)-----------------------//
-$(document).on('knack-scene-render.scene_753', function(event, scene) {
- recursivecallscene_753();
- console.log('sceneRefresh_753');
- 
-});
-
-function recursivecallscene_753(){
- setTimeout(function () { if($("#view_2443").is(":visible")==true){ Knack.views["view_2443"].model.fetch();recursivecallscene_753();} }, 300000);
-}
-
 //Workshop Controller all in one table (onsite jobs)
 $(document).on('knack-view-render.view_2246', function (event, view, data) {
     tooltipsTable('761','2246','field_1532','field_2220');
@@ -3096,34 +3084,24 @@ $(document).on('knack-view-render.view_2367', function (event, view, data) {
     $('td[class*="field_443"]').hide();
 }); 
 
-
-
-/*function recursivecallscene_753(){
- setTimeout(function () { if($("#view_2298").is(":visible")==true){ Knack.views["view_2298"].model.fetch();recursivecallscene_753();} }, 300000);
-}
+//Job card v2 Check out MARK TO FOLLOW UP, pos
+$(document).on('knack-view-render.view_2881', function (event, view, data) {
+	     $('th[class="field_720"]').hide();
+    $('td[class*="field_720"]').hide();
+	     $('th[class="field_719"]').hide();
+    $('td[class*="field_719"]').hide();
+}); 
 
 // ------------ Refresh ONSITE jobs in ONE Table (workshop/CA view)-----------------------//
 $(document).on('knack-scene-render.scene_761', function(event, scene) {
  recursivecallscene_761();
  console.log('sceneRefresh_761');
  
-});*/
+});
 
 function recursivecallscene_761(){
  setTimeout(function () { if($("#view_2246").is(":visible")==true){ Knack.views["view_2246"].model.fetch();recursivecallscene_761();} }, 300000);
 }
-
-/*// ------------ Refresh OFF-Site jobs in ONE Table (workshop/CA view)-----------------------//
-$(document).on('knack-scene-render.scene_755', function(event, scene) {
- recursivecallscene_755();
- console.log('sceneRefresh_755');
- 
-});
-
-function recursivecallscene_755(){
- setTimeout(function () { if($("#view_2249").is(":visible")==true){ Knack.views["view_2249"].model.fetch();recursivecallscene_755();} }, 300000);
-}
-*/
 
 //Workshop Controller all Jobs in one table (OFF-site Jobs)
 $(document).on('knack-view-render.view_2478', function (event, view, data) {
@@ -3235,8 +3213,13 @@ $(document).on('knack-view-render.view_2686', function (event, view, data) {
     $('td[class*="field_2278"]').hide(); 
 }); 
 
+$(document).on('knack-scene-render.scene_753', function(event, scene) {
+ recursivecallscene_753();
+});
+
 function recursivecallscene_753(){
- setTimeout(function () { if($("#view_2686").is(":visible")==true){ Knack.views["view_2686"].model.fetch();recursivecallscene_753();} }, 300000);
+ setTimeout(function () { if($("#view_2686").is(":visible")==true){ Knack.views["view_2686"].model.fetch();recursivecallscene_753();} }, 3000000);
+	 console.log('753 recursive');
 }
 
 //Workshop Controller all in one table (Off-site jobs)
@@ -3255,6 +3238,10 @@ $(document).on('knack-view-render.view_2722', function (event, view, data) {
 	 $('th[class="field_2278"]').hide();
     $('td[class*="field_2278"]').hide(); 
 }); 
+
+$(document).on('knack-scene-render.scene_755', function(event, scene) {
+ recursivecallscene_755();
+});
 
 function recursivecallscene_755(){
  setTimeout(function () { if($("#view_2722").is(":visible")==true){ Knack.views["view_2722"].model.fetch();recursivecallscene_755();} }, 300000);
