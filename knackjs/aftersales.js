@@ -3259,3 +3259,8 @@ $(document).on('knack-view-render.view_2722', function (event, view, data) {
 function recursivecallscene_755(){
  setTimeout(function () { if($("#view_2722").is(":visible")==true){ Knack.views["view_2722"].model.fetch();recursivecallscene_755();} }, 300000);
 }
+
+
+$(document).on("knack-scene-render.scene_769", function(event, scene, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":data.id},"Webhook from scene 769")
+});
