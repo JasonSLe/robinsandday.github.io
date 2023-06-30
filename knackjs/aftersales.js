@@ -3235,6 +3235,10 @@ $(document).on('knack-view-render.view_2686', function (event, view, data) {
     $('td[class*="field_2278"]').hide(); 
 }); 
 
+$(document).on('knack-scene-render.scene_753', function(event, scene) {
+ recursivecallscene_753();
+});
+
 function recursivecallscene_753(){
  setTimeout(function () { if($("#view_2686").is(":visible")==true){ Knack.views["view_2686"].model.fetch();recursivecallscene_753();} }, 300000);
 }
@@ -3255,6 +3259,10 @@ $(document).on('knack-view-render.view_2722', function (event, view, data) {
 	 $('th[class="field_2278"]').hide();
     $('td[class*="field_2278"]').hide(); 
 }); 
+
+$(document).on('knack-scene-render.scene_755', function(event, scene) {
+ recursivecallscene_755();
+});
 
 function recursivecallscene_755(){
  setTimeout(function () { if($("#view_2722").is(":visible")==true){ Knack.views["view_2722"].model.fetch();recursivecallscene_755();} }, 300000);
