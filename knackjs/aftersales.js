@@ -1405,6 +1405,8 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
 //Recall Recheck Spinner on Vehicle Checkin
 
 $(document).on("knack-scene-render.scene_769", function(event, scene, data) {
+  console.log('send webhook')
+    callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":data.id},"Webhook from scene 769")
     let refreshData = [
       {
           mainField : 'field_1189', //recall-recheck
@@ -3246,8 +3248,3 @@ $(document).on('knack-scene-render.scene_755', function(event, scene) {
 function recursivecallscene_755(){
  setTimeout(function () { if($("#view_2722").is(":visible")==true){ Knack.views["view_2722"].model.fetch();recursivecallscene_755();} }, 300000);
 }
-
-
-$(document).on("knack-scene-render.scene_769", function(event, scene, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":data.id},"Webhook from scene 769")
-});
