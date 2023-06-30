@@ -2861,18 +2861,6 @@ $(document).on('knack-view-render.view_2443', function (event, view, data) {
 }); 
 
 
-
-// ------------ Refresh ALL jobs in ONE Table (workshop/CA view)-----------------------//
-$(document).on('knack-scene-render.scene_753', function(event, scene) {
- recursivecallscene_753();
- console.log('sceneRefresh_753');
- 
-});
-
-function recursivecallscene_753(){
- setTimeout(function () { if($("#view_2686").is(":visible")==true){ Knack.views["view_2686"].model.fetch();recursivecallscene_753();} }, 300000);
-}
-
 //Workshop Controller all in one table (onsite jobs)
 $(document).on('knack-view-render.view_2246', function (event, view, data) {
     tooltipsTable('761','2246','field_1532','field_2220');
@@ -3097,33 +3085,16 @@ $(document).on('knack-view-render.view_2367', function (event, view, data) {
 }); 
 
 
-
-/*function recursivecallscene_753(){
- setTimeout(function () { if($("#view_2298").is(":visible")==true){ Knack.views["view_2298"].model.fetch();recursivecallscene_753();} }, 300000);
-}
-
 // ------------ Refresh ONSITE jobs in ONE Table (workshop/CA view)-----------------------//
 $(document).on('knack-scene-render.scene_761', function(event, scene) {
  recursivecallscene_761();
  console.log('sceneRefresh_761');
  
-});*/
+});
 
 function recursivecallscene_761(){
  setTimeout(function () { if($("#view_2246").is(":visible")==true){ Knack.views["view_2246"].model.fetch();recursivecallscene_761();} }, 300000);
 }
-
-/*// ------------ Refresh OFF-Site jobs in ONE Table (workshop/CA view)-----------------------//
-$(document).on('knack-scene-render.scene_755', function(event, scene) {
- recursivecallscene_755();
- console.log('sceneRefresh_755');
- 
-});
-
-function recursivecallscene_755(){
- setTimeout(function () { if($("#view_2249").is(":visible")==true){ Knack.views["view_2249"].model.fetch();recursivecallscene_755();} }, 300000);
-}
-*/
 
 //Workshop Controller all Jobs in one table (OFF-site Jobs)
 $(document).on('knack-view-render.view_2478', function (event, view, data) {
