@@ -455,12 +455,38 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
-    var imgToSave = document.getElementById(imgToSaveName);
-    imgToSave.src =  img.src;
-    imgToSave.setAttribute('data-fullImageSrc',imageBeforeResize.src);
-    imgToSave.setAttribute('data-cameraImageUploaded', 'NOT')
-    imgToSave.classList.remove('photoGrid');
-    imgToSave.classList.add('photoGridTaken');
+    var finalImgUrl = $('#cameraFrontpic').attr('src');
+    switch (appSettings.uploadMethod){
+      case 'make':
+        var form = new FormData();
+        fetch(finalImgUrl)
+        .then(function(response) {
+          return response.blob();
+        })
+        .then(function(blob) {
+          form.append('files', blob, "fileimage.jpg");
+  
+          var rData = $.ajax({
+            url: appSettings.uploadWebhook,
+            type: 'POST',
+            processData: false,
+            contentType: false,
+            mimeType: 'multipart/form-data',
+            data: form,
+            async: false
+          }).responseText;
+  
+          try {
+            alert(rData)
+          } catch (e) {
+            alert('uploadFail_2:'+e.toString());
+            alert(rData);
+            return {'status': 'fail'};
+          }
+        });
+        break;
+    }
+
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
 
@@ -612,7 +638,7 @@ function setLayout(takingPhotoI){
     //HIDE VIDEO & OVERLAY ELEMENT
     $('video').hide();
     $("#cameraOverlayCanvas").hide()
-    
+
     if (appSettings.imageOverlayEffect){
       $(stop);
     }
@@ -662,7 +688,9 @@ var appSettings = {
   imageOverlayOpacity : null,
   allowLandscape : true,
   allowPortrait : true,
-  actionAfterPhoto : 'none' // none, readable, compare
+  actionAfterPhoto : 'none', // none, readable, compare,
+  uploadMethod : 'make', //knack, make
+  uploadWebhook : 'https://hook.eu1.make.celonis.com/ju8r6s2kw3diyncgut5b37ik8ffd8dg9'
 }
 var returnData = {};
 function takePhotoAppStart(app_id, pdfAssetField){
