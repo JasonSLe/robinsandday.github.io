@@ -3153,12 +3153,13 @@ function emptyCallback() { }
 
 var photoAppHTML = '';
 function embedPhotoApp(){
+  var nowS = Date.now().toString();
   let photoApp = document.getElementById('photoApp');
   if (!photoApp){
     if (photoAppHTML===''){
       photoAppHTML = $.ajax({
           type: "GET",
-          url: 'https://robinsandday.github.io/photoTakeApp/takePhotoPart.html',
+          url: 'https://robinsandday.github.io/photoTakeApp/takePhotoPart.html?'+nowS,
           cache: false,
           async: false
       }).responseText;
@@ -3171,8 +3172,6 @@ function embedPhotoApp(){
   } else {
     photoApp.innerHTML = photoAppHTML;
   }
-
-  var nowS = Date.now().toString();
 
   if ($('#photoAppCss').length===0){
     var style = document.createElement('link');
