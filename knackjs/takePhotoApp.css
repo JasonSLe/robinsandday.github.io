@@ -4,6 +4,15 @@ body {
   overscroll-behavior-y: contain;
 }
 
+.photoH1{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size:20px;
+  padding:8px;
+  margin: auto;
+  text-align: center;
+}
+
 .photoGrid{
   width: 25%;
   margin:2%;

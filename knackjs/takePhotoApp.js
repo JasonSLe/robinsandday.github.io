@@ -611,6 +611,8 @@ function setLayout(takingPhotoI){
   } else {
     //HIDE VIDEO & OVERLAY ELEMENT
     $('video').hide();
+    $("#cameraOverlayCanvas").hide()
+    
     if (appSettings.imageOverlayEffect){
       $(stop);
     }
