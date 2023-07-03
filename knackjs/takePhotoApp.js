@@ -210,7 +210,6 @@ const constraints = {
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
 
 function drawPhotoRect(){
-  alert('resize');
   ctxBox.beginPath();
   ctxBox.lineWidth = "6";
   ctxBox.strokeStyle = "red";
@@ -232,7 +231,7 @@ drawPhotoRect();
  image.onload = drawImageActualSize;
  //image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebg.png?token=AK2DHPRJXE5E2DFU5EXYCXS7Y6ROW';
  image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv3.png';
- image.src = $('#'+imgToSaveName).attr('src').replace('.jpg','_bg.png');
+ //image.src = $('#'+imgToSaveName).attr('src').replace('.jpg','_bg.png');
 
    //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
