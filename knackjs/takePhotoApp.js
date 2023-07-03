@@ -591,13 +591,6 @@ takePhotoButton.onclick = takePhoto;
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
 
   exitButton.onclick = function() {
-    //REDIRECT USER BACK TO HOME PAGE
-    /*setTimeout(function() {
-      window.location = backUrl;
-    }, 100);
-    */
-    prepareFileView()
-
     //EXIT FULL SCREEN MODE
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -612,6 +605,7 @@ takePhotoButton.onclick = takePhoto;
     //STOP TRACK WHEN USER EXIT THE APP
     video.srcObject.getVideoTracks().forEach(track => track.stop());
 
+    hidePhotoApp();
   }  
 }
 
@@ -702,7 +696,7 @@ function uploadImages(infoText){
 }
 
 var returnData = {};
-function takePhotoAppStart(app_id, pdfAssetField){
+function takePhotoAppStart(backUrlT, app_id, pdfAssetField){
   console.log('takePhotoAppStart')
   returnData.app_id = app_id;
   returnData.pdfAssetField = pdfAssetField;
