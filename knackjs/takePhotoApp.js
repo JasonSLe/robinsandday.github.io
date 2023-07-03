@@ -447,7 +447,7 @@ takePhotoButton.onclick = takePhoto;
 
     if (OperatingSystem.iOS()) {
       var c = document.createElement('canvas');
-       c.width = video.videoWidth;
+      c.width = video.videoWidth;
       c.height = video.videoHeight;
       var ctx = c.getContext('2d');
       ctx.drawImage(video, 0, 0);
@@ -468,7 +468,7 @@ takePhotoButton.onclick = takePhoto;
         console.log('takePhoto() error: ', error);
       });
     } 
-    
+
     //HIDE VIDEO & OVERLAY ELEMENT
     $('video').hide();
     if (appSettings.imageOverlayEffect){
