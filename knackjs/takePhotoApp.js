@@ -251,11 +251,14 @@ canvasBox.onresize = drawPhotoRect;
 drawPhotoRect();
 */
 
+let canvas = null;
+let ctx = null;
+let image = null;
 if (appSettings.imageOverlay){
-  const canvas = document.getElementById('cameraOverlayCanvas');  
-  const ctx = canvas.getContext('2d');
+  canvas = document.getElementById('cameraOverlayCanvas');  
+  ctx = canvas.getContext('2d');
  
-  const image = new Image('naturalWidth', 'naturalHeight');
+  image = new Image('naturalWidth', 'naturalHeight');
   image.onload = drawImageActualSize;
   image.src = appSettings.imageOverlay;
 } else {
