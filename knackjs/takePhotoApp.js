@@ -447,27 +447,7 @@ takePhotoButton.onclick = takePhoto;
       });
     } 
 
-    //HIDE VIDEO & OVERLAY ELEMENT
-    $('video').hide();
-    if (appSettings.imageOverlayEffect){
-      $(stop);
-    }
-
-   //SHOW RETAKLE AND CONFIORM BUTTON
-    $("#cameraRetake").show();
-    $("#cameraConfirm").show();
-
-    //HIDE EXIT BUTTON
-    $("#cameraExit").hide();
-
-    //HIDE LEVEL LINE
-    $("#cameraLine").hide();
-    $("#cameraSpiritCircle").hide();
-
-    // DISABLE TAKEPHOTO BUTTON
-    //$("#takePhoto").attr("disabled", true);
-    $("#takePhoto").hide();
-    takingPhoto = false;
+    setLayout(false);
   }
 
 
@@ -495,8 +475,6 @@ takePhotoButton.onclick = takePhoto;
         } else if (document.msExitFullscreen) {
           document.msExitFullscreen();
         }
-    
-    prepareFileView()
   };
 
 
@@ -591,20 +569,20 @@ function setLayout(takingPhotoI){
       isLandscape = true;
     }
 
-  //IF THE USER CHANGES SCREEN ORIENTATION
+    //IF THE USER CHANGES SCREEN ORIENTATION
 
-  $(window).on("orientationchange",function(){
-    if(window.orientation == 0 || window.orientation == 180){ //Portrait
-      setLayoutInPortrait()
-      isLandscape = false;
+    $(window).on("orientationchange",function(){
+      if(window.orientation == 0 || window.orientation == 180){ //Portrait
+        setLayoutInPortrait()
+        isLandscape = false;
 
-    }
-    else if(window.orientation == 90 || window.orientation == 270) // Landscape
-    {
-      setLayoutInLandscape();
-      isLandscape = true;
-    }
-  });
+      }
+      else if(window.orientation == 90 || window.orientation == 270) // Landscape
+      {
+        setLayoutInLandscape();
+        isLandscape = true;
+      }
+    });
 
     //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
     $('video').show();
@@ -625,7 +603,25 @@ function setLayout(takingPhotoI){
     // ACTIVATE TAKEPHOTO BUTTON
 	  $("#takePhoto").show(); 
   } else {
+    //HIDE VIDEO & OVERLAY ELEMENT
+    $('video').hide();
+    if (appSettings.imageOverlayEffect){
+      $(stop);
+    }
 
+    //SHOW RETAKLE AND CONFIORM BUTTON
+    $("#cameraRetake").show();
+    $("#cameraConfirm").show();
+
+    //HIDE EXIT BUTTON
+    $("#cameraExit").hide();
+
+    //HIDE LEVEL LINE
+    //$("#cameraLine").hide();
+    //$("#cameraSpiritCircle").hide();
+
+    // DISABLE TAKEPHOTO BUTTON
+    $("#takePhoto").hide();
   }
   $('#kn-loading-spinner').hide();
 }
