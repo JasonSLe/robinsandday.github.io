@@ -427,76 +427,9 @@ setTimeout(function() {
   $("#cameraRetake").hide();
   $("#cameraConfirm").hide();
 
-
-  //HIDE THE COMPARISION PICTURE AND TEXT
-  $("#cameraCompare").hide();
-  $("#cameraText").hide();
-
   //WE ARE STARTING WITH HIDDEN LINE
   $("#cameraLine").hide();
   $("#cameraSpiritCircle").hide();
-
-
-//**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
-
-
-  //DETECT WHICH ORIENTATION THE USEER IS IN
-  var isLandscape = false;
-  if(window.innerHeight > window.innerWidth){
-
-    // if portrait
-       $("#cameraLine").hide();
-       $("#cameraSpiritCircle").hide();
-       $("#takePhoto").hide();
-       $("#cameraRotate").show();
-       $("#cameraOverlayCanvas").hide();
-       isLandscape = false;
-       //$(stop);
-  }
-
-
-if(window.innerWidth > window.innerHeight){
-
-  // if landscape
-    //$("#cameraLine").show();
-  	$("#takePhoto").show();
-  	$("#cameraRotate").hide();
-    $("#cameraOverlayCanvas").hide();
-    if (appSettings.imageOverlayEffect){
-      $(go);
-    }
-    
-    isLandscape = true;
-}
-
-
-  //IF THE USER CHANGES SCREEN ORIENTATION
-
-$(window).on("orientationchange",function(){
-  if(window.orientation == 0 || window.orientation == 180)
-    // Portrait
-  {
-    if (appSettings.imageOverlayEffect){
-      $(stop);
-    }
-    $("#cameraLine").hide();
-    $("#cameraSpiritCircle").hide();
-    $("#takePhoto").hide();
-    $("#cameraRotate").show();
-    isLandscape = false;
-
-  }
-  else if(window.orientation == 90 || window.orientation == 270) // Landscape
-  {
-    $("#takePhoto").show();
-    //$("#cameraLine").show();
-    $("#cameraRotate").hide();
-    if (appSettings.imageOverlayEffect){
-      $(go);
-    }
-    isLandscape = true;
-  }
-});
 
 
 //************************************* TAKE A PICTURE AND CROP*****************************************
@@ -544,11 +477,6 @@ takePhotoButton.onclick = takePhoto;
     if (appSettings.imageOverlayEffect){
       $(stop);
     }
-
-    //DISPLAY COMPARISION CONTENT
-    $('#cameraGrid').show();
-    $("#cameraCompare").show();
-    $("#cameraText").show();
 
    //SHOW RETAKLE AND CONFIORM BUTTON
     $("#cameraRetake").show();
@@ -602,35 +530,11 @@ takePhotoButton.onclick = takePhoto;
   retakeButton.onclick = function() {
     //CLEAR TAKEN PHOTO
     img.src = '';
-        if (OperatingSystem.iOS()) {
-          // on iOS devices it should hide the img tag when user agent clicks retake.
-          img.style.visibility = 'hidden';
-
-        }      
-    
-    //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
-    $('video').show();
-    $("#cameraCompare").show();
-    $("#cameraText").show();
-    if (appSettings.imageOverlayEffect){
-      $(go);
-    }
-    takingPhoto = true;
-
-    // HIDE RETAKE AND CONFIRM BUTTON
-    $("#cameraRetake").hide();
-    $("#cameraConfirm").hide();
-
-    // SHOW EXIT BUTTON
-    $("#cameraExit").show();
-
-    // SHOW LEVEL LINE
-    //$("#cameraLine").show();
-
-    // ACTIVATE TAKEPHOTO BUTTON
-    //$("#takePhoto").removeAttr('disabled');
-	  $("#takePhoto").show();
-
+    if (OperatingSystem.iOS()) {
+      // on iOS devices it should hide the img tag when user agent clicks retake.
+      img.style.visibility = 'hidden';
+    }      
+    setLayout(true);
   }
 
 
@@ -655,88 +559,95 @@ takePhotoButton.onclick = takePhoto;
   }  
 }
 
+function setLayoutInPortrait(){
+  //$("#cameraLine").hide();
+       //$("#cameraSpiritCircle").hide();
+       if (!appSettings.allowPortrait){
+        $("#takePhoto").hide();
+        $("#cameraRotate").show();
+        if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").hide()};
+       } else {
+        $("#takePhoto").show();
+        $("#cameraRotate").hide();
+        if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").show()};
+       }
+       if (appSettings.imageOverlayEffect){
+        $(go);
+      }
+}
+
+function setLayoutInLandscape(){
+//$("#cameraLine").show();
+if (!appSettings.allowLandscape){
+  $("#takePhoto").hide();
+  $("#cameraRotate").show();
+  if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").hide()};
+ } else {
+  $("#takePhoto").show();
+  $("#cameraRotate").hide();
+  if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").show()};
+ }
+if (appSettings.imageOverlayEffect){
+  $(go);
+}
+}
+
+function setLayout(takingPhotoI){
+  takingPhoto = takingPhotoI;
+  if (takingPhoto){
+    //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
+    //DETECT WHICH ORIENTATION THE USEER IS IN
+    let isLandscape = false;
+    if(window.innerHeight > window.innerWidth){
+      setLayoutInPortrait();
+       isLandscape = false;
+       //$(stop);
+    }
+    if(window.innerWidth > window.innerHeight){
+      setLayoutInLandscape();
+      isLandscape = true;
+    }
+
+  //IF THE USER CHANGES SCREEN ORIENTATION
+
+  $(window).on("orientationchange",function(){
+    if(window.orientation == 0 || window.orientation == 180){ //Portrait
+      setLayoutInPortrait()
+      isLandscape = false;
+
+    }
+    else if(window.orientation == 90 || window.orientation == 270) // Landscape
+    {
+      setLayoutInLandscape();
+      isLandscape = true;
+    }
+  });
+
+    //SHOW CAMERA AND CANVAS ELEMENT WHEN THE USER CLICKS RETAKE
+    $('video').show();
+    if (appSettings.imageOverlayEffect){
+      $(go);
+    }
+
+    // HIDE RETAKE AND CONFIRM BUTTON
+    $("#cameraRetake").hide();
+    $("#cameraConfirm").hide();
+
+    // SHOW EXIT BUTTON
+    $("#cameraExit").show();
+
+    // SHOW LEVEL LINE
+    //$("#cameraLine").show();
+
+    // ACTIVATE TAKEPHOTO BUTTON
+	  $("#takePhoto").show(); 
+  } else {
+
+  }
+  $('#kn-loading-spinner').hide();
+}
+
 var takingPhoto = false;
-/*
-function prepareFileView(){
-  $('#cameraLine').hide();
-  $('#cameraVid_container').hide();
-  $('#cameraGrid').hide();
-  $('#cameraGui_controls').hide();
-
-  if ($('#cameraUploadBackground').attr('checked')){
-    uploadImages('cameraUploadInfo')
-  }
-  document.getElementById('cameraUploadBackground').onchange = function(){
-    if (this.checked){
-      $('#cameraUploadOnce').hide();
-    } else {
-      $('#cameraUploadOnce').show();
-    }
-  }
-  document.getElementById('cameraUploadOnce').onclick = function(){
-    uploadImages('cameraUploadInfo');
-  }
-}
-
-function prepareFileViewOnce(){
-  for (let i =1;i<10;i++){
-    $('#cameraImg'+i).attr('src','https://robinsandday.github.io/guideImages/2008_'+i+'.jpg');
-  }
-
-  for (let i = 1;i<10;i++){
-    let tmpImg = document.getElementById('cameraImg'+i);
-    tmpImg.onclick = function() {
-        prepareCameraView('cameraImg'+i);
-    }
-  }
-}
-*/
-function uploadImages(infoText){
-  var token = getTokenFromApify('apiaccount');
-  if (token === '') {
-    alert('Authorizing problem.');
-    return;
-  }
-  var updatingRecordId = getRecordIdFromHref(location.href);
-
-  var imagesToUpload = {
-    app : "5f6de40a07e72b0018484802",
-    images : [
-      {
-        name:'cameraImgFront34',
-        scene: 'scene_15/views/view_39',
-        field : 'field_22'
-      },
-      {
-        name:'cameraImgRear34',
-        scene: 'scene_15/views/view_39',
-        field : 'field_147'
-      },
-    ]
-  }
-
-  $('#'+infoText).text('Checking if some image needs upload');
-
-  for (var i =0;i<imagesToUpload.images.length;i++){
-    //checking if the image is set to some photo
-    if ($('#'+imagesToUpload.images[i].name).attr('src') && $('#'+imagesToUpload.images[i].name).attr('src')!==''){
-      //checking if the image was already uploaded
-      if ($('#'+imagesToUpload.images[i].name).attr('data-cameraImageUploaded')==='YES'){
-        //alert('already uploaded');
-        continue;
-      };
-      $('#'+infoText).text('Uploading image');
-      //alert('beforeUpload');
-      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('data-fullImageSrc'), imagesToUpload.images[i], infoText).then(function(resp){
-        //alert('now');
-      });
-      uploadImage(token, updatingRecordId, imagesToUpload.app, $('#'+imagesToUpload.images[i].name).attr('src'), imagesToUpload.images[1], infoText).then(function(resp){
-        //alert('now');
-      });
-      //alert('aaa');
-    }
-  }
-}
 
 var appSettings = {
   spiritLine : false,
