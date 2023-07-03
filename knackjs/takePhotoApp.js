@@ -656,7 +656,7 @@ var appSettings = {
 var returnData = {};
 function takePhotoAppStart(app_id, pdfAssetField){
   console.log('takePhotoAppStart')
-  appSettings.imageOverlay = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv3.png';
+  //appSettings.imageOverlay = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv3.png';
   //appSettings.imageOverlayEffect = true;
   returnData.app_id = app_id;
   returnData.pdfAssetField = pdfAssetField;
