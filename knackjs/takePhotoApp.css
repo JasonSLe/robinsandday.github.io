@@ -273,8 +273,9 @@ body {
        so we will fill it in completely in portrait mode
     */
   #cameraVid_container {
-    width: 100%;
+    width: auto;
     height: 80%;
+    top: 0%
   }
 
   #cameraVideo_overlay {
@@ -283,14 +284,14 @@ body {
   }
 
   #cameraGui_controls {
-    top: 0;
+    top: 80%;
     width: 100%;
     height: 20%;
     left: 0;
   }
 
   #cameraConfirm {
-    left: calc(20% - 32px);
+    left: calc(80% - 32px);
     top: calc(50% - 32px);
   }
 
