@@ -118,14 +118,14 @@ body {
 /**Mobile first. Any mobile with viewport width of 640px or less apply the following to canvas**/
 #cameraOverlayCanvas {
   position: absolute;
-  max-width: 70%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
+  max-width: 100%;
+  top: 0%;
+  left: 0%;
+  /*-webkit-transform: translate(-100%, -100%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  transform: translate(-100%, -100%);*/
 }
 
 #cameraBoxCanvas {
