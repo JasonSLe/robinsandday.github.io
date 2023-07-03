@@ -3250,11 +3250,11 @@ function recursivecallscene_755(){
 }
 
 //Workshop Controller all in one table (MY jobs)
-$(document).on('knack-view-render.view_2888', function (event, view, data) {
-    tooltipsTable('932','2888','field_1532','field_2220');
-	tooltipsTable('932','2888','field_1537','field_2213');
-	tooltipsTable('932','2888','field_2298','field_2272');
-	tooltipsTable('932','2888','field_2278','field_1118','Tag No: ');
+$(document).on('knack-view-render.view_2892', function (event, view, data) {
+    tooltipsTable('934','2892','field_1532','field_2220');
+	tooltipsTable('934','2892','field_1537','field_2213');
+	tooltipsTable('934','2892','field_2298','field_2272');
+	tooltipsTable('934','2892','field_2278','field_1118','Tag No: ');
 	
 	     $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
@@ -3266,11 +3266,11 @@ $(document).on('knack-view-render.view_2888', function (event, view, data) {
     $('td[class*="field_2278"]').hide(); 
 }); 
 
-$(document).on('knack-scene-render.scene_932', function(event, scene) {
- recursivecallscene_932();
+$(document).on('knack-scene-render.scene_934', function(event, scene) {
+ recursivecallscene_934();
 });
 
-function recursivecallscene_932(){
- setTimeout(function () { if($("#view_2888").is(":visible")==true){ Knack.views["view_2888"].model.fetch();recursivecallscene_932();} }, 3000000);
-	 console.log('932 recursive');
+function recursivecallscene_934(){
+ setTimeout(function () { if($("#view_2892").is(":visible")==true){ Knack.views["view_2892"].model.fetch();recursivecallscene_934();} }, 3000000);
+	 console.log('934 recursive');
 }
