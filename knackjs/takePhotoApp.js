@@ -203,7 +203,7 @@ const constraints = {
       imageCapture = new ImageCapture(track);
 
     })
-    .catch(error => ChromeSamples.log('Argh!', error.name || error));
+    .catch(error => console.log(error));
 
 
 
