@@ -618,7 +618,7 @@ takePhotoButton.onclick = takePhoto;
 
 var CameraView = false;
 var takingPhoto = false;
-
+/*
 function prepareFileView(){
   CameraView = false;
   $('#cameraPictureGallery').show();
@@ -654,7 +654,7 @@ function prepareFileViewOnce(){
     }
   }
 }
-
+*/
 function uploadImages(infoText){
   var token = getTokenFromApify('apiaccount');
   if (token === '') {
@@ -702,13 +702,10 @@ function uploadImages(infoText){
   }
 }
 
-function afterLoad(){
-  prepareFileViewOnce();
-  prepareFileView();
+var returnData = {};
+function takePhotoAppStart(app_id, pdfAssetField){
+  returnData.app_id = app_id;
+  returnData.pdfAssetField = pdfAssetField;
+  prepareCameraView('cameraImg1');
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  prepareFileViewOnce();
-  prepareFileView();
-}, false);
 

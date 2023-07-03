@@ -3191,6 +3191,7 @@ function embedPhotoApp(){
 function showPhotoApp(button){
   $('#photoApp').show();
   $('.kn-content').hide();
+  takePhotoAppStart('afterslales','field_X');
 }
 
 function hidePhotoApp(){
