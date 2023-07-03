@@ -448,6 +448,8 @@ takePhotoButton.onclick = takePhoto;
     } 
 
     setLayout(false);
+
+
   }
 
 
@@ -548,6 +550,10 @@ if (!appSettings.allowLandscape){
 function setLayout(takingPhotoI){
   takingPhoto = takingPhotoI;
   if (takingPhoto){
+    //DISPLAY COMPARISION CONTENT
+    $('#cameraGrid').hide();
+    $("#cameraText").hide();
+
     $('#cameraVid_container').show();
     $('#cameraGui_controls').show();
     $("#cameraExit").show();
@@ -609,12 +615,31 @@ function setLayout(takingPhotoI){
       $(stop);
     }
 
-    //SHOW RETAKLE AND CONFIORM BUTTON
-    $("#cameraRetake").show();
-    $("#cameraConfirm").show();
+    switch (appSettings.actionAfterPhoto){
+      case 'none':
+        
+        break;
+      case 'readable':
+        //SHOW RETAKLE AND CONFIORM BUTTON
+        $("#cameraRetake").show();
+        $("#cameraConfirm").show();
 
-    //HIDE EXIT BUTTON
-    $("#cameraExit").hide();
+        //HIDE EXIT BUTTON
+        $("#cameraExit").hide();
+
+        //DISPLAY COMPARISION CONTENT
+        $('#cameraGrid').show();
+        $("#cameraText").show();
+        break;
+      case 'compare':
+        //SHOW RETAKLE AND CONFIORM BUTTON
+        $("#cameraRetake").show();
+        $("#cameraConfirm").show();
+        
+        //HIDE EXIT BUTTON
+        $("#cameraExit").hide();
+        break;
+    }
 
     //HIDE LEVEL LINE
     //$("#cameraLine").hide();
@@ -634,7 +659,8 @@ var appSettings = {
   imageOverlayEffect : false,
   imageOverlayOpacity : null,
   allowLandscape : true,
-  allowPortrait : true
+  allowPortrait : true,
+  actionAfterPhoto : 'none' // none, readable, compare
 }
 var returnData = {};
 function takePhotoAppStart(app_id, pdfAssetField){
