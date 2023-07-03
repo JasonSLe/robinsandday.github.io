@@ -669,6 +669,7 @@ function takePhotoAppStart(app_id, pdfAssetField){
   //appSettings.imageOverlayEffect = true;
   appSettings.imageOverlayOpacity = 0.5;
   appSettings.allowLandscape = false;
+  appSettings.actionAfterPhoto = 'readable';
   returnData.app_id = app_id;
   returnData.pdfAssetField = pdfAssetField;
   prepareCameraView('cameraImg1');
