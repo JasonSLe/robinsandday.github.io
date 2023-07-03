@@ -384,7 +384,7 @@ var aftersalesConnectView = [{view:'view_6320',url:'#tech-view2/'},
 {view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
 {view:'view_5735',url:'#after-sales-vehicle-lookup/check-in/'},
 /*{view:'view_5736',url:'#after-sales-vehicle-lookup/vehicle-onsite/'},*/
-{view:'view_5736',url:'#after-sales-vehicle-lookup/all-jobs-in-one-table/'},
+{view:'view_5736',url:'#after-sales-vehicle-lookup/all-jobs/'},
 {view:'view_5737',url:'#after-sales-vehicle-lookup/check-out/'},
 {view:'view_5738',url:'#after-sales-vehicle-lookup/post-visit/'},
 {view:'view_5739',url:'#aftersales-service-reporting/'},
