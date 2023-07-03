@@ -704,6 +704,7 @@ function uploadImages(infoText){
 
 var returnData = {};
 function takePhotoAppStart(app_id, pdfAssetField){
+  console.log('takePhotoAppStart')
   returnData.app_id = app_id;
   returnData.pdfAssetField = pdfAssetField;
   prepareCameraView('cameraImg1');
