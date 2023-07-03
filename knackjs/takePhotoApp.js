@@ -591,6 +591,8 @@ takePhotoButton.onclick = takePhoto;
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
 
   exitButton.onclick = function() {
+    hidePhotoApp();
+    
     //EXIT FULL SCREEN MODE
     if (document.exitFullscreen) {
       document.exitFullscreen();
@@ -604,8 +606,6 @@ takePhotoButton.onclick = takePhoto;
 
     //STOP TRACK WHEN USER EXIT THE APP
     video.srcObject.getVideoTracks().forEach(track => track.stop());
-
-    hidePhotoApp();
   }  
 }
 
