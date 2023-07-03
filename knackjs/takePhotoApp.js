@@ -119,14 +119,6 @@ function prepareCameraView(imgToSaveName){
 // *****************************************************************************************************************************
   takingPhoto = true;
 
-  $('#cameraLine').hide();
-  $('#cameraVid_container').show();
-  $('#cameraGui_controls').show();
-  $("#cameraConfirm").attr("disabled", false);
-  $("#cameraExit").show();
-  $('video').show();
-  $('#cameraZoom').hide();
-
   var imageCapture;
 
   var img = document.querySelector("#cameraFrontpic");
@@ -592,6 +584,10 @@ if (appSettings.imageOverlayEffect){
 function setLayout(takingPhotoI){
   takingPhoto = takingPhotoI;
   if (takingPhoto){
+    $('#cameraVid_container').show();
+    $('#cameraGui_controls').show();
+    $("#cameraExit").show();
+
     //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
     //DETECT WHICH ORIENTATION THE USEER IS IN
     let isLandscape = false;
@@ -661,5 +657,6 @@ function takePhotoAppStart(app_id, pdfAssetField){
   returnData.app_id = app_id;
   returnData.pdfAssetField = pdfAssetField;
   prepareCameraView('cameraImg1');
+  setLayout(true);
 }
 
