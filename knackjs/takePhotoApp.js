@@ -112,13 +112,29 @@
     }
   }
 
+  //************************************* OPERATING SYSTEM DETECTION *****************************************   
+var OperatingSystem = {
+  Android: function() {
+      return navigator.userAgent.match(/Android/i);
+   },
+
+   iOS: function() {
+ if(navigator.vendor.match(/google/i)) {
+   return false;
+         //browserName = 'chrome/blink';
+     }
+     else if(navigator.vendor.match(/apple/i)) {
+   return true;
+         //browserName = 'safari/webkit';
+     }
+      //return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+   }
+};
 
 function prepareCameraView(imgToSaveName){
 // ***************************************************************************************************************************
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
 // *****************************************************************************************************************************
-  takingPhoto = true;
-
   var imageCapture;
 
   var img = document.querySelector("#cameraFrontpic");
@@ -135,25 +151,6 @@ function prepareCameraView(imgToSaveName){
   var acceptButton = document.querySelector('#cameraAccept');
 
   img.style.visibility = 'hidden';
-
-//************************************* OPERATING SYSTEM DETECTION *****************************************   
-var OperatingSystem = {
-   Android: function() {
-       return navigator.userAgent.match(/Android/i);
-    },
-
-    iOS: function() {
-	if(navigator.vendor.match(/google/i)) {
-		return false;
-        	//browserName = 'chrome/blink';
-    	}
-    	else if(navigator.vendor.match(/apple/i)) {
-		return true;
-        	//browserName = 'safari/webkit';
-    	}
-       //return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    }
-};
 
 
 //************************************* GO INTO FULLSCREEN (ONLY ANDRIOD DEVICE WORK) *****************************************
@@ -413,17 +410,6 @@ setTimeout(function() {
   }
 }, 2000);
 
- //************************************* LAYOUT *****************************************
-
-  //HIDE RETAKE AND CONFIRM BUTTONS
-  $("#cameraRetake").hide();
-  $("#cameraConfirm").hide();
-
-  //WE ARE STARTING WITH HIDDEN LINE
-  $("#cameraLine").hide();
-  $("#cameraSpiritCircle").hide();
-
-
 //************************************* TAKE A PICTURE AND CROP*****************************************
 //var sndCameraTakePhoto = new Audio("https://www.soundjay.com/mechanical/camera-shutter-click-01.wav");
 var sndCameraTakePhoto = document.createElement('audio');  
@@ -550,19 +536,19 @@ takePhotoButton.onclick = takePhoto;
 
 function setLayoutInPortrait(){
   //$("#cameraLine").hide();
-       //$("#cameraSpiritCircle").hide();
-       if (!appSettings.allowPortrait){
-        $("#takePhoto").hide();
-        $("#cameraRotate").show();
-        if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").hide()};
-       } else {
-        $("#takePhoto").show();
-        $("#cameraRotate").hide();
-        if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").show()};
-       }
-       if (appSettings.imageOverlayEffect){
-        $(go);
-      }
+  //$("#cameraSpiritCircle").hide();
+  if (!appSettings.allowPortrait){
+    $("#takePhoto").hide();
+    $("#cameraRotate").show();
+    if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").hide()};
+  } else {
+    $("#takePhoto").show();
+    $("#cameraRotate").hide();
+    if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").show()};
+    if (appSettings.imageOverlayEffect){
+      $(go);
+    }
+  }
 }
 
 function setLayoutInLandscape(){
@@ -575,10 +561,10 @@ if (!appSettings.allowLandscape){
   $("#takePhoto").show();
   $("#cameraRotate").hide();
   if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").show()};
+  if (appSettings.imageOverlayEffect){
+    $(go);
+  }
  }
-if (appSettings.imageOverlayEffect){
-  $(go);
-}
 }
 
 function setLayout(takingPhotoI){
