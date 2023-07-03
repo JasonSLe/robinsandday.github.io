@@ -588,6 +588,10 @@ function setLayout(takingPhotoI){
     $('#cameraGui_controls').show();
     $("#cameraExit").show();
 
+    if (appSettings.imageOverlay && appSettings.imageOverlayOpacity){
+      $('#cameraOverlayCanvas').css({ opacity: appSettings.imageOverlayOpacity })
+    }
+
     //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
     //DETECT WHICH ORIENTATION THE USEER IS IN
     let isLandscape = false;
@@ -646,6 +650,7 @@ var appSettings = {
   spiritLine : false,
   imageOverlay: null,
   imageOverlayEffect : false,
+  imageOverlayOpacity : null,
   allowLandscape : true,
   allowPortrait : true
 }
@@ -654,6 +659,7 @@ function takePhotoAppStart(app_id, pdfAssetField){
   console.log('takePhotoAppStart')
   appSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay.png';
   //appSettings.imageOverlayEffect = true;
+  appSettings.imageOverlayOpacity = 0.5;
   appSettings.allowLandscape = false;
   returnData.app_id = app_id;
   returnData.pdfAssetField = pdfAssetField;
