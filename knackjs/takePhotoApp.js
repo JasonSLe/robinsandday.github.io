@@ -80,8 +80,6 @@
     return token;
   }
 
-
-
   function saveImageLinkToKnack(fieldName, imageId, app_id, token, updatingRecordId, knackSceneView) {
     var dataF = '{"' + fieldName + '": "' + imageId + '"}'
 
@@ -119,10 +117,8 @@ function prepareCameraView(imgToSaveName){
 // ***************************************************************************************************************************
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
 // *****************************************************************************************************************************
-  CameraView = true;
   takingPhoto = true;
 
-  $('#cameraPictureGallery').hide();
   $('#cameraLine').hide();
   $('#cameraVid_container').show();
   $('#cameraGui_controls').show();
@@ -240,7 +236,7 @@ if (OperatingSystem.Android()) {
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
 
-function drawPhotoRect(){
+/*function drawPhotoRect(){
   ctxBox.beginPath();
   ctxBox.lineWidth = "6";
   ctxBox.strokeStyle = "red";
@@ -252,19 +248,23 @@ const ctxBox = canvasBox.getContext('2d');
 video.onresize = drawPhotoRect;
 canvasBox.onresize = drawPhotoRect;
 drawPhotoRect();
+*/
 
- const canvas = document.getElementById('cameraOverlayCanvas');  
- const ctx = canvas.getContext('2d');
- let interval = 0;
- const effect = $('#cameraOverlayCanvas');
+if (appSettings.imageOverlay){
+  const canvas = document.getElementById('cameraOverlayCanvas');  
+  const ctx = canvas.getContext('2d');
+ 
+  const image = new Image('naturalWidth', 'naturalHeight');
+  image.onload = drawImageActualSize;
+  image.src = appSettings.imageOverlay;
+} else {
+  $("#cameraOverlayCanvas").hide();
+}
 
- const image = new Image('naturalWidth', 'naturalHeight');
- image.onload = drawImageActualSize;
- //image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebg.png?token=AK2DHPRJXE5E2DFU5EXYCXS7Y6ROW';
- image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv3.png';
- //image.src = $('#'+imgToSaveName).attr('src').replace('.jpg','_bg.png');
+let interval = 0;
+const effect = $('#cameraOverlayCanvas');
 
-   //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
+//this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
 
 imageBeforeResize.onload = () => {
@@ -330,8 +330,8 @@ var canTakePhoto = false;
 
   if (beta===null && gamma===null) return;
 
-  if (isLandscape && beta && CameraView && takingPhoto) $("#cameraLine").show();
-  if (isLandscape && gamma && CameraView && takingPhoto) circle.style.display = 'inline';
+  if (isLandscape && beta && takingPhoto) $("#cameraLine").show();
+  if (isLandscape && gamma && takingPhoto) circle.style.display = 'inline';
   //$('#dev').text(gamma)
 
   function getGammaDev(gamma){
@@ -354,12 +354,12 @@ var canTakePhoto = false;
   if(beta <=1 && beta >= -1 && getGammaDev(gamma) < 10){
     $("#takePhoto").removeAttr('disabled');
     //$('#dev').text('enabl5x'+canTakePhoto);
-    if (!OperatingSystem.iOS() && !canTakePhoto && CameraView && takingPhoto) window.navigator.vibrate(50);
+    if (!OperatingSystem.iOS() && !canTakePhoto && takingPhoto) window.navigator.vibrate(50);
     canTakePhoto = true;
   } else {
     $("#takePhoto").attr("disabled", true);
     //$('#dev').text('disabl5x'+canTakePhoto);
-    if (!OperatingSystem.iOS() && canTakePhoto && CameraView && takingPhoto) window.navigator.vibrate(50);
+    if (!OperatingSystem.iOS() && canTakePhoto && takingPhoto) window.navigator.vibrate(50);
     canTakePhoto = false;
   }
   line.style.transform = 'rotate(' + (-beta).toString() + 'deg)';
@@ -458,7 +458,10 @@ if(window.innerWidth > window.innerHeight){
   	$("#takePhoto").show();
   	$("#cameraRotate").hide();
     $("#cameraOverlayCanvas").hide();
-    $(go);
+    if (appSettings.imageOverlayEffect){
+      $(go);
+    }
+    
     isLandscape = true;
 }
 
@@ -469,7 +472,9 @@ $(window).on("orientationchange",function(){
   if(window.orientation == 0 || window.orientation == 180)
     // Portrait
   {
-    $(stop);
+    if (appSettings.imageOverlayEffect){
+      $(stop);
+    }
     $("#cameraLine").hide();
     $("#cameraSpiritCircle").hide();
     $("#takePhoto").hide();
@@ -482,7 +487,9 @@ $(window).on("orientationchange",function(){
     $("#takePhoto").show();
     //$("#cameraLine").show();
     $("#cameraRotate").hide();
-    $(go);
+    if (appSettings.imageOverlayEffect){
+      $(go);
+    }
     isLandscape = true;
   }
 });
@@ -530,7 +537,9 @@ takePhotoButton.onclick = takePhoto;
     }
     //HIDE VIDEO & OVERLAY ELEMENT
     $('video').hide();
-    $(stop);
+    if (appSettings.imageOverlayEffect){
+      $(stop);
+    }
 
     //DISPLAY COMPARISION CONTENT
     $('#cameraGrid').show();
@@ -599,7 +608,9 @@ takePhotoButton.onclick = takePhoto;
     $('video').show();
     $("#cameraCompare").show();
     $("#cameraText").show();
-    $(go);
+    if (appSettings.imageOverlayEffect){
+      $(go);
+    }
     takingPhoto = true;
 
     // HIDE RETAKE AND CONFIRM BUTTON
@@ -640,12 +651,9 @@ takePhotoButton.onclick = takePhoto;
   }  
 }
 
-var CameraView = false;
 var takingPhoto = false;
 /*
 function prepareFileView(){
-  CameraView = false;
-  $('#cameraPictureGallery').show();
   $('#cameraLine').hide();
   $('#cameraVid_container').hide();
   $('#cameraGrid').hide();
@@ -726,9 +734,18 @@ function uploadImages(infoText){
   }
 }
 
+var appSettings = {
+  spiritLine : false,
+  imageOverlay: null,
+  imageOverlayEffect : false,
+  allowLandscape : true,
+  allowPortrait : true
+}
 var returnData = {};
-function takePhotoAppStart(backUrlT, app_id, pdfAssetField){
+function takePhotoAppStart(app_id, pdfAssetField){
   console.log('takePhotoAppStart')
+  appSettings.imageOverlay = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv3.png';
+  appSettings.imageOverlayEffect = true;
   returnData.app_id = app_id;
   returnData.pdfAssetField = pdfAssetField;
   prepareCameraView('cameraImg1');
