@@ -6,6 +6,12 @@
             <canvas id="cameraBoxCanvas"></canvas>
             <video id="videoElement" autoplay="" playsinline="" class="hidden"></video>
         </div>
+        <p id="cameraModal" style="display: none;">
+            <a id="cameraModal_header">Please enable Device Motion on your device</a>
+            <br>
+            <a id="cameraModal_txt">This app requires you to enable the Device Motion event on your device.</a>
+            <button id="cameraAccept" name="confirm request" type="button" class="cameraButton">Enable</button>
+        </p>
         <div id="cameraGrid" style="display: none;">
             <div id="zoomHolderOut"><div id="zoomHolder"><img id="cameraFrontpic"/></div></div><br />
             <a id="cameraText">Is the document readable?</a>
