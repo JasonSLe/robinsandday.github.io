@@ -94,14 +94,26 @@ body {
   text-align:center;
 }
 
-#cameraText {
-  font-family: sans-serif;
-  font-style: normal;
-  font-size: 16.5px;
-  color: #fafafa;
-  text-decoration: none;
-  padding: 0px;
+#zoomHolder {
+  position:relative;
+  overflow:hidden;
+  width:100%;
+  height:100%;
 }
+
+#zoomHolderOut {
+ width: 100%;
+ height: 90%;
+}
+ 
+#cameraText {
+   font-family: sans-serif;
+   font-style: normal;
+   font-size: 16.5px;
+   color: #fafafa;
+   text-decoration: none;
+   padding: 0px;
+ }
 
 #cameraCompare {
   max-width: 100%;
