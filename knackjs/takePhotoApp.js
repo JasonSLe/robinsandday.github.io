@@ -186,6 +186,7 @@ const constraints = {
   };
 
 function openCamera(getUserMediaC, constraints){
+  console.log(constraints);
     navigator.mediaDevices.getUserMedia(getUserMediaC).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
   
