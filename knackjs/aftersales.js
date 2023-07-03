@@ -1404,9 +1404,11 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
 
 //Recall Recheck Spinner on Vehicle Checkin
 
-$(document).on("knack-scene-render.scene_769", function(event, scene, data) {
+$(document).on("knack-scene-render.scene_769", function(event, scene) {
   console.log('send webhook')
-    callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":data.id},"Webhook from scene 769")
+  console.log(scene);
+    //setTimeout(function () { callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":data.id},"Webhook from scene 769") }, 1000);
+    
     let refreshData = [
       {
           mainField : 'field_1189', //recall-recheck
