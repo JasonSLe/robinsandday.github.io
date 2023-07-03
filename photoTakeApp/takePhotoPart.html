@@ -1,18 +1,22 @@
-<h1 class="licencePhotoH1">Driving Licence Photo App</h1>
+<h1 class="licencePhotoH1">Photo App</h1>
     <div id="kn-loading-spinner" style="display: none;"></div>
     <div id="cameraTakePhotoDiv">
-        <div id="scanCameraVid_container" style="display: none;">
+        <div id="cameraVid_container" style="display: none;">
+            <canvas id="cameraOverlayCanvas"></canvas>
+            <canvas id="cameraBoxCanvas"></canvas>
             <video id="videoElement" autoplay="" playsinline="" class="hidden"></video>
         </div>
-        <div id="scanCameraGrid" style="display: none;">
-            <div id="zoomHolderOut"><div id="zoomHolder"><img id="scanCameraFrontpic"/></div></div><br />
-            <a id="scanCameraText">Is the document readable?</a>
+        <div id="cameraGrid" style="display: none;">
+            <div id="zoomHolderOut"><div id="zoomHolder"><img id="cameraFrontpic"/></div></div><br />
+            <a id="cameraText">Is the document readable?</a>
         </div>
-        <div id="scanCameraGui_controls" style="display: none;">
-            <button id="scanTakePhoto" class="scanCameraButton"></button>
-            <button id="scanCameraExit" name="exit photo" type="button" class="scanCameraButton"></button>
-            <button id="scanCameraRetake" name="retake photo" type="button" class="scanCameraButton"></button>
-            <button id="scanCameraConfirm" name="confirm photo" type="button" class="scanCameraButton"></button>
+        <div id="cameraGui_controls" style="display: none;">
+            <button id="cameraSpiritCircle" type="button" class="cameraButton"></button>
+            <button id="takePhoto" class="cameraButton"></button>
+            <button id="cameraExit" name="exit photo" type="button" class="cameraButton"></button>
+            <button id="cameraRotate" name="rotate camera" type="button" class="cameraButton"></button>
+            <button id="cameraRetake" name="retake photo" type="button" class="cameraButton"></button>
+            <button id="cameraConfirm" name="confirm photo" type="button" class="cameraButton"></button>
         </div>
     </div>
     <span id="dev"></span>
