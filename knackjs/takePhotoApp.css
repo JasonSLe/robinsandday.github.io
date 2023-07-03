@@ -67,7 +67,7 @@ body {
   max-width: 100%;
 }
 
-#cameraGrid {
+#cameraGridCompare {
   position: relative;
   display: grid;
   grid-template-columns: 40% 40%;
@@ -76,6 +76,11 @@ body {
   align-items: center;
 }
 
+#cameraGrid {
+width: 100%;
+height: 80%;
+top: 0;
+}
 
 #cameraText {
   font-family: sans-serif;
