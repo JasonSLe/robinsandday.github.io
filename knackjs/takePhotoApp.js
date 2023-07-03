@@ -183,28 +183,59 @@ var OperatingSystem = {
 //************************************* OPEN THE CAMERA BY ASKING USER PERMISSION(APPLE DEVICE) AND APPLY VIDEO STREAM SETTINGS*****************************************
 
 const constraints = {
-    width: { min: 1440, ideal: 1280, max: 3984 },
-    height: { min: 1080, ideal: 720, max: 2988 },
-    aspectRatio: 4/3,
-    frameRate:{max: 30},
-    //advanced: [{zoom:2.0}]
+  width: { min: 1440, ideal: 1280, max: 3984 },
+  height: { min: 1080, ideal: 720, max: 2988 },
+  aspectRatio: 4/3,
+  frameRate:{max: 30}
   };
 
-  navigator.mediaDevices.getUserMedia({video: {pan: true, zoom: true, facingMode: {exact: "environment"}}
- }).then(mediaStream => {
+function openCamera(getUserMediaC, constraints){
+    navigator.mediaDevices.getUserMedia(getUserMediaC).then(mediaStream => {
       document.querySelector('video').srcObject = mediaStream;
-
+  
       const track = mediaStream.getVideoTracks()[0];
-
+  
       track.applyConstraints(constraints);
-
-      //$('#dev').text(JSON.stringify(track.getCapabilities()));
-
-      imageCapture = new ImageCapture(track);
-
+  
+      if (!OperatingSystem.iOS()) {
+        imageCapture = new ImageCapture(track);
+      }
+  
     })
-    .catch(error => console.log(error));
+    .catch(error =>{
+      if (error.toString().includes('Permission denied')){
+        alert('This application needs your permission to camera. If you have accidentally Blocked the camera access you need to unblock it in your browser settings.')
+      } else {
+        alert('Error starting camera. Please report this error to admin.'+ error)
+      }
+    });
+}
 
+if (OperatingSystem.Android()) {
+  navigator.mediaDevices.enumerateDevices()
+  .then(function(devices) {
+    let deviceId = '';
+    let countOfBackCameras = 0;
+    devices.forEach(function(device) {
+      if (device.label.toLowerCase().includes('back')){
+          countOfBackCameras += 1;
+          deviceId = device.deviceId;
+      }
+    });
+
+    if (countOfBackCameras<=1){
+      openCamera({video: {facingMode: {exact: "environment"}}},constraints);
+    } else {
+      openCamera({video: {deviceId: {exact: deviceId}}},constraints);
+    }
+  })
+  .catch(function(err) {
+    alert('error enumeration devices, contact support')
+    alert(err.name + ": " + err.message);
+  });
+} else {
+  openCamera({video: {facingMode: {exact: "environment"}}},constraints);
+}
 
 
 //**************************** APPLY PICTURE OVERLAY WHICH IS DRAWN ONTO THE CANVAS. WITH THE OVERLAY EFFECT*****************************************
@@ -592,7 +623,7 @@ takePhotoButton.onclick = takePhoto;
 
   exitButton.onclick = function() {
     hidePhotoApp();
-    
+
     //EXIT FULL SCREEN MODE
     if (document.exitFullscreen) {
       document.exitFullscreen();
