@@ -690,7 +690,7 @@ var appSettings = {
   allowPortrait : true,
   actionAfterPhoto : 'none', // none, readable, compare,
   uploadMethod : 'make', //knack, make
-  uploadWebhook : 'https://hook.eu1.make.celonis.com/ju8r6s2kw3diyncgut5b37ik8ffd8dg9'
+  uploadWebhook : 'https://hook.eu1.make.celonis.com/p4gio6jc7vcc4eodu410nigv9adlw4qi'
 }
 var returnData = {};
 function takePhotoAppStart(app_id, pdfAssetField){
