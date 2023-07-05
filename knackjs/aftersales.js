@@ -3185,7 +3185,7 @@ $(document).on('knack-scene-render.scene_753', function(event, scene) {
 });
 
 function recursivecallscene_753(){
- setTimeout(function () { if($("#view_2686").is(":visible")==true){ Knack.views["view_2686"].model.fetch();recursivecallscene_753();} }, 3000000);
+ setTimeout(function () { if($("#view_2686").is(":visible")==true){ Knack.views["view_2686"].model.fetch();recursivecallscene_753();} }, 300000);
 	 console.log('753 recursive');
 }
 
@@ -3236,6 +3236,6 @@ $(document).on('knack-scene-render.scene_934', function(event, scene) {
 });
 
 function recursivecallscene_934(){
- setTimeout(function () { if($("#view_2892").is(":visible")==true){ Knack.views["view_2892"].model.fetch();recursivecallscene_934();} }, 3000000);
+ setTimeout(function () { if($("#view_2892").is(":visible")==true){ Knack.views["view_2892"].model.fetch();recursivecallscene_934();} }, 300000);
 	 console.log('934 recursive');
 }
