@@ -2838,30 +2838,6 @@ $(document).on('knack-view-render.view_1916', function(event, view) {
     }
 	});
 
-/*Workshop Controller all in one table (all jobs)
-$(document).on('knack-view-render.view_2298', function (event, view, data) {
-    tooltipsTable('753','2298','field_2240','field_2220');
-    tooltipsTable('753','2298','field_1537','field_2212');
-	tooltipsTable('753','2298','field_1532','field_2213');
-	     $('th[class="field_2240"]').hide();
-    $('td[class*="field_2240"]').hide();
-    $('th[class="field_1537"]').hide();
-    $('td[class*="field_1537"]').hide(); 
-	  $('th[class="field_1532"]').hide();
-    $('td[class*="field_1532"]').hide(); 
-});*/
-//Workshop Controller all Jobs in one table (ALL Jobs)
-$(document).on('knack-view-render.view_2443', function (event, view, data) {
-    tooltipsTable('753','2443','field_1532','field_2220');
-	tooltipsTable('753','2443','field_1537','field_2213');
-	tooltipsTable('753','2443','field_2298','field_2272');
-	     $('th[class="field_2240"]').hide();
-    $('td[class*="field_2240"]').hide();
-    $('th[class="field_1537"]').hide();
-    $('td[class*="field_1537"]').hide(); 
-	  $('th[class="field_1532"]').hide();
-    $('td[class*="field_1532"]').hide(); 
-}); 
 
 
 //Workshop Controller all in one table (onsite jobs)
@@ -2881,19 +2857,7 @@ $(document).on('knack-view-render.view_2246', function (event, view, data) {
     $('td[class*="field_2278"]').hide(); 
 }); 
 
-/*Workshop Controller all in one table (OFFsite jobs)
-$(document).on('knack-view-render.view_2249', function (event, view, data) {
-    tooltipsTable('755','2249','field_2240','field_2220');
-    tooltipsTable('755','2249','field_1537','field_2212');
-	tooltipsTable('755','2249','field_1532','field_2213');
-	     $('th[class="field_2240"]').hide();
-    $('td[class*="field_2240"]').hide();
-    $('th[class="field_1537"]').hide();
-    $('td[class*="field_1537"]').hide(); 
-	  $('th[class="field_1532"]').hide();
-    $('td[class*="field_1532"]').hide(); 
-}); 
-*/
+
 //trigger Create Service Wash From Job card v2
 $(document).on('knack-form-submit.view_2362', function(event, view, data) { 
     
