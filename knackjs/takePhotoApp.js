@@ -459,6 +459,7 @@ takePhotoButton.onclick = takePhoto;
     switch (appSettings.uploadMethod){
       case 'make':
         var form = new FormData();
+        form.append('Record Id',getRecordIdFromHref(location.href))
         fetch(finalImgUrl)
         .then(function(response) {
           return response.blob();
