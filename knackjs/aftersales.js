@@ -1406,6 +1406,7 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
 
 $(document).on("knack-scene-render.scene_769", function(event, scene) {
   console.log('send webhook')
+    $(this).find('.kn-modal').addClass('Modal_for_' + Knack.router.current_scene_key)
     callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":scene.scene_id},"Webhook from scene 769");
     
     let refreshData = [
