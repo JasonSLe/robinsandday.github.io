@@ -3254,7 +3254,7 @@ $(document).on('knack-form-submit.view_2510', function(event, view, data) {
 });
 
 $(document).on('knack-form-submit.view_2940', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/29itpkl6v5kuresnu0gywccrcyjv7ht3", {"Record ID":data.id,"Courtesy Car Agreement Record ID":data.field_2318_raw,"Name":data.field_2319,"Date Of Birth":data.field_2325,"First Line Of Address":data.field_2312,"Postcode":data.field_2314,"Email Address":data.field_2315_raw,"Driving Licence Number":data.field_2316},"Customer and Driver NOT Same Person + Manually Entering Driving Licence Details")
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/29itpkl6v5kuresnu0gywccrcyjv7ht3", {"Record ID":data.id,"Courtesy Car Agreement Record ID":data.field_2318_raw,"Forename":data.field_2461,"Surname":data.field_2462,"Date Of Birth":data.field_2325,"First Line Of Address":data.field_2312,"Postcode":data.field_2314,"Email Address":data.field_2315_raw,"Driving Licence Number":data.field_2316},"Customer and Driver NOT Same Person + Manually Entering Driving Licence Details")
 });
 
 
