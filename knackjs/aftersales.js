@@ -3246,3 +3246,17 @@ function recursivecallscene_934(){
  setTimeout(function () { if($("#view_2892").is(":visible")==true){ Knack.views["view_2892"].model.fetch();recursivecallscene_934();} }, 300000);
 	 console.log('934 recursive');
 }
+
+// Trigger Licence Link - Customer Manually Enters Driving Licence
+
+$(document).on('knack-form-submit.view_2510', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/29itpkl6v5kuresnu0gywccrcyjv7ht3", {"Record ID":data.id},"Customer and Driver Same Person + Manually Entering Driving Licence Details")
+});
+
+$(document).on('knack-form-submit.view_2940', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/29itpkl6v5kuresnu0gywccrcyjv7ht3", {"Record ID":data.id},"Customer and Driver NOT Same Person + Manually Entering Driving Licence Details")
+});
+
+
+
+
