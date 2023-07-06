@@ -172,6 +172,7 @@ const constraints = {
   height: { min: 1080, ideal: 720, max: 2988 },
   //aspectRatio: 4/3,
   //frameRate:{max: 30}
+  advanced: [{ zoom: 1 }]
   };
 
 function openCamera(getUserMediaC, constraints){
