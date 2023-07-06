@@ -1402,11 +1402,17 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
   refreshWithData('1188', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
 
-//Recall Recheck Spinner on Vehicle Checkin
+//Recall Recheck Spinner on Vehicle Checkin and to expand the modal pop up so it is wider
 
 $(document).on("knack-scene-render.scene_769", function(event, scene) {
   console.log('send webhook')
     $(this).find('.kn-modal').addClass('Modal_for_' + Knack.router.current_scene_key)
+	//line above is related to the modal pop up - please look at aftersales css Lines 3062-3065 or copy the below and adjust scene as necessary
+/*.Modal_for_scene_769 {
+    width: 90%;
+    height: 90vh;
+}*/
+
     callPostHttpRequest("https://hook.eu1.make.celonis.com/a5dm1fsf5mjyar2wjno8qjb2grjuj1nf", {"Record ID":scene.scene_id},"Webhook from scene 769");
     
     let refreshData = [
@@ -3240,3 +3246,16 @@ function recursivecallscene_934(){
  setTimeout(function () { if($("#view_2892").is(":visible")==true){ Knack.views["view_2892"].model.fetch();recursivecallscene_934();} }, 300000);
 	 console.log('934 recursive');
 }
+
+// Trigger Licence Link - Customer Manually Enters Driving Licence
+
+$(document).on('knack-form-submit.view_2510', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/29itpkl6v5kuresnu0gywccrcyjv7ht3", {"Record ID":data.id,"Courtesy Car Agreement Record ID":data.field_2318_raw,"Date Of Birth":data.field_2325,"Driving Licence Number":data.field_2316},"Customer and Driver Same Person + Manually Entering Driving Licence Details")
+});
+
+$(document).on('knack-form-submit.view_2940', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/29itpkl6v5kuresnu0gywccrcyjv7ht3", {"Record ID":data.id,"Courtesy Car Agreement Record ID":data.field_2318_raw,"Forename":data.field_2461,"Surname":data.field_2462,"Date Of Birth":data.field_2325,"First Line Of Address":data.field_2312,"Postcode":data.field_2314,"Email Address":data.field_2315_raw,"Driving Licence Number":data.field_2316},"Customer and Driver NOT Same Person + Manually Entering Driving Licence Details")
+});
+
+
+
