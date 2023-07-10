@@ -1402,10 +1402,13 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
   refreshWithData('1188', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
 
+$(document).on("knack-scene-render.scene_762", function(event, scene) {
+  $(this).find('.kn-modal').addClass('Modal_for_' + Knack.router.current_scene_key)
+});
+
 //Recall Recheck Spinner on Vehicle Checkin and to expand the modal pop up so it is wider
 
 $(document).on("knack-scene-render.scene_769", function(event, scene) {
-  console.log('send webhook')
     $(this).find('.kn-modal').addClass('Modal_for_' + Knack.router.current_scene_key)
 	//line above is related to the modal pop up - please look at aftersales css Lines 3062-3065 or copy the below and adjust scene as necessary
 /*.Modal_for_scene_769 {
