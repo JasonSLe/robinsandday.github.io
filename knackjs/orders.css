@@ -3751,10 +3751,6 @@ color: #FFFFFF;
 /* Customer P/X 3 Appraisal */
 #view_3655 > section > div > div:nth-child(7) > div:nth-child(1) > div > div.kn-detail.field_6248 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
-/* Latest Order Form */
-
-#view_3655 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.field_7754 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
-
 /* Satisfaction Survey Completed */
 #view_3974 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6616 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
@@ -3838,6 +3834,10 @@ color: #FFFFFF;
 
 /* GAP/TLC Registration */
 #view_3655 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6537 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
+
+/* Latest Order Form */
+
+#view_3655 > section > div > div:nth-child(14) > div:nth-child(1) > div > div.kn-detail.field_7754 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
 
 /* Links to New Deal File Admin Audit */
 
