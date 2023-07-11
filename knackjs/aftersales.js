@@ -3260,5 +3260,14 @@ $(document).on('knack-form-submit.view_2940', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/29itpkl6v5kuresnu0gywccrcyjv7ht3", {"Record ID":data.id,"Courtesy Car Agreement Record ID":data.field_2318_raw,"Forename":data.field_2461,"Surname":data.field_2462,"Date Of Birth":data.field_2325,"First Line Of Address":data.field_2312,"Postcode":data.field_2314,"Email Address":data.field_2315_raw,"Driving Licence Number":data.field_2316},"Customer and Driver NOT Same Person + Manually Entering Driving Licence Details")
 });
 
+//trigger bot for exit survey (job card v2 - Check out via tablet)
+$(document).on('knack-form-submit.view_2364', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_2223, "WIP":data.field_719, "DemoTransactionNumber":data.field_1332, "POS":data.field_720, "Source": "View_2364 - Satisfaction check(tablet)"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+});
+
+//trigger bot for exit survey (job card v2 - Check out via tablet (mark for follow up)
+$(document).on('knack-form-submit.view_2881', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_2223, "WIP":data.field_719, "DemoTransactionNumber":data.field_1332, "POS":data.field_720, "Source": "View_2881 - Satisfaction check(tablet)"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+});
 
 
