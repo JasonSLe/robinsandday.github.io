@@ -3269,4 +3269,14 @@ $(document).on('knack-form-submit.view_2881', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_2223, "WIP":data.field_719, "DemoTransactionNumber":data.field_2476, "POS":data.field_720, "Source": "View_2881 - Satisfaction check(tablet)"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
 });
 
+//****************** Upon Courtesy Car Agreement Completion - Reload Scene to Display Check Out buttons ****************//
+
+$(document).on('knack-record-update.view_2979', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
 
