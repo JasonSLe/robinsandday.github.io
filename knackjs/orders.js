@@ -2761,6 +2761,27 @@ function callPostHttpRequest(url, payloadObject, callName){
   }
 }
 
+//ultility functions for webhooks data
+
+//function to prevent error when indexing an undefined object
+const handlAll = (valueA, fieldName) => (valueA? valueA[fieldName]:null)
+
+//function to handel data if img src is undefined
+const handlSRC  = valueC => (valueC? "<img src=" + "\"" + valueC + "\"" + " />": null)
+
+//function to handle indexing and searching for a key in a undefined object
+const handlIndex = (valueA, indexA, fieldName) => (valueA? valueA[indexA][fieldName]:"")
+
+//function to iterate through object and delete empty keys
+const deleteEmpty = (objectA) => {
+  Object.entries(objectA).forEach(([key, value]) => {
+    if(!value || value === ""){
+      delete objectA[key];
+    }     
+});
+return objectA
+}
+
 function showHideMoreServiceVisits(){
   let newV = (document.querySelector('.more').style.display==="none"?"":"none");
   document.querySelectorAll('.more').forEach(function(el) {
