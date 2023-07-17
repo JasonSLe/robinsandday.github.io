@@ -2731,7 +2731,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 
   //Monitor search
   if ($('form[class="table-keyword-search"]').length>0){
-    console.log('keyworsearch in this scene', scene);
+    console.log('keyworsearch in this scene', scene.key);
     $('form[class="table-keyword-search"] a[class="kn-button search"]').on("click", function() {
       logSearch(scene);
     })
@@ -2739,7 +2739,26 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 });
 
 function logSearch(scene){
-  console.log('searchFill',scene,$('form[class="table-keyword-search"]').serialize());
+  console.log('searchFill',scene.key,$('form[class="table-keyword-search"]').serialize());
+  callPostHttpRequest('https://hook.eu1.make.celonis.com/fm8xq9lecoyd61vlicbywpi6vy8jezpa',{'sceneKey':scene.key,'search':$('form[class="table-keyword-search"]').serialize()},'')
+}
+
+// function to create the weeb hooks for knack
+function callPostHttpRequest(url, payloadObject, callName){
+  try{
+    let commandURL = url ;
+    let dataToSend = JSON.stringify(deleteEmpty(payloadObject)) ;
+    var rData = $.ajax({
+      url: commandURL,
+      type: 'POST',
+      contentType: 'application/json',
+      data: dataToSend,
+      async: false
+    }).responseText;
+    return rData;
+  } catch(exception) {
+    sendErrorToIntegromat(exception, callName);
+  }
 }
 
 function showHideMoreServiceVisits(){
