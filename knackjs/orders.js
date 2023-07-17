@@ -44,6 +44,10 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
     
 });
 
+$(document).on('knack-form-submit.view_2157', function(event, view, record) {
+  console.log('knack-form-submit.view_2157')
+});
+
 
 //HIDE THE LOGO AND logged in user in all pages
 $(document).on('knack-view-render.any', function (event, view, data) {
