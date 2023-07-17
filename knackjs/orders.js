@@ -60,8 +60,8 @@ $(document).on('knack-view-render.any', function (event, view, data) {
 });
 
 function logSearch(view){
-  console.log('searchFill',view.key,$('div[id="'+view.key+'"] form[class="table-keyword-search"]').serialize());
-  callPostHttpRequest('https://hook.eu1.make.celonis.com/fm8xq9lecoyd61vlicbywpi6vy8jezpa',{'viewKey':view.key,'search':$('div[id="'+view.key+'"] form[class="table-keyword-search"]').serialize()},'')
+  console.log('searchFill',view.key,view.scene.key,$('div[id="'+view.key+'"] form[class="table-keyword-search"]').serialize());
+  callPostHttpRequest('https://hook.eu1.make.celonis.com/fm8xq9lecoyd61vlicbywpi6vy8jezpa',{'sceneKey':view.scene.key,'viewKey':view.key,'search':$('div[id="'+view.key+'"] form[class="table-keyword-search"]').serialize()},'')
 }
 
 hashCode = function(elem) {
