@@ -2730,16 +2730,16 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   }
 
   //Monitor search
-  if ($('form[class="kn-search_form"]').length>0){
-    console.log('search in this scene', scene);
-    $('form[class="kn-search_form"] button[type="submit"]').on("click", function() {
+  if ($('form[class="table-keyword-search"]').length>0){
+    console.log('keyworsearch in this scene', scene);
+    $('form[class="table-keyword-search"] a[class="kn-button search"]').on("click", function() {
       logSearch(scene);
     })
   }
 });
 
 function logSearch(scene){
-  console.log('searchFill',$('form[class="kn-search_form"]').serialize());
+  console.log('searchFill',scene,$('form[class="table-keyword-search"]').serialize());
 }
 
 function showHideMoreServiceVisits(){
