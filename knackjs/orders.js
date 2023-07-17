@@ -50,8 +50,19 @@ $(document).on('knack-view-render.any', function (event, view, data) {
 	$('[class="kn-container"]').hide();
 	$('[class="kn-info kn-container"]').hide();
   submitUserLoginForm();
-
+  //Monitor search
+  if ($('form[class="table-keyword-search"]').length>0){
+    console.log('keyworsearch in this view', view);
+    $('form[class="table-keyword-search"] a[class="kn-button search"]').on("click", function() {
+      logSearch(view);
+    })
+  }
 });
+
+function logSearch(view){
+  console.log('searchFill',view.key,$('form[class="table-keyword-search"]').serialize());
+  callPostHttpRequest('https://hook.eu1.make.celonis.com/fm8xq9lecoyd61vlicbywpi6vy8jezpa',{'viewKey':view.key,'search':$('form[class="table-keyword-search"]').serialize()},'')
+}
 
 hashCode = function(elem) {
   var hash = 0, i, chr;
@@ -2728,20 +2739,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       window.location.reload(false);
     }
   }
-
-  //Monitor search
-  if ($('form[class="table-keyword-search"]').length>0){
-    console.log('keyworsearch in this scene', scene.key);
-    $('form[class="table-keyword-search"] a[class="kn-button search"]').on("click", function() {
-      logSearch(scene);
-    })
-  }
 });
-
-function logSearch(scene){
-  console.log('searchFill',scene.key,$('form[class="table-keyword-search"]').serialize());
-  callPostHttpRequest('https://hook.eu1.make.celonis.com/fm8xq9lecoyd61vlicbywpi6vy8jezpa',{'sceneKey':scene.key,'search':$('form[class="table-keyword-search"]').serialize()},'')
-}
 
 // function to create the weeb hooks for knack
 function callPostHttpRequest(url, payloadObject, callName){
