@@ -44,16 +44,13 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
     
 });
 
-$(document).on('knack-form-submit.view_2157', function(event, view, record) {
-  console.log('knack-form-submit.view_2157')
-});
-
 
 //HIDE THE LOGO AND logged in user in all pages
 $(document).on('knack-view-render.any', function (event, view, data) {
 	$('[class="kn-container"]').hide();
 	$('[class="kn-info kn-container"]').hide();
   submitUserLoginForm();
+
 });
 
 hashCode = function(elem) {
@@ -68,7 +65,7 @@ hashCode = function(elem) {
 };
 
 var submitUserLoginForm = function() {
-  console.log('submitUserForm');
+  //console.log('submitUserForm');
   if ($('[id="email"]').length===0){ 
     return;
   }
@@ -2731,7 +2728,19 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       window.location.reload(false);
     }
   }
+
+  //Monitor search
+  if ($('form[class="kn-search_form"]').length>0){
+    console.log('search in this scene', scene);
+    $('form[class="kn-search_form"] button[type="submit"]').on("click", function() {
+      logSearch(scene);
+    })
+  }
 });
+
+function logSearch(scene){
+  console.log('searchFill',$('form[class="kn-search_form"]').serialize());
+}
 
 function showHideMoreServiceVisits(){
   let newV = (document.querySelector('.more').style.display==="none"?"":"none");
