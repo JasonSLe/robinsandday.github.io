@@ -905,8 +905,8 @@ $(document).on('knack-view-render.view_3633', function(event, view, data) {
 //
 //
 //**Function that will trigger a javascript error in integromat
-function sendErrorToIntegromat(exception, name){
-  console.log("error");
+function sendErrorToIntegromat(exception, name, data){
+  console.log("error", exception);
   const today = new Date();
   const date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
   const time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
@@ -2757,7 +2757,7 @@ function callPostHttpRequest(url, payloadObject, callName){
     }).responseText;
     return rData;
   } catch(exception) {
-    sendErrorToIntegromat(exception, callName);
+    sendErrorToIntegromat(exception, callName, payloadObject);
   }
 }
 
