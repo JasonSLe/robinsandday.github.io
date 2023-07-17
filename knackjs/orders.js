@@ -51,17 +51,17 @@ $(document).on('knack-view-render.any', function (event, view, data) {
 	$('[class="kn-info kn-container"]').hide();
   submitUserLoginForm();
   //Monitor search
-  if ($('form[class="table-keyword-search"]').length>0){
-    console.log('keyworsearch in this view', view);
-    $('form[class="table-keyword-search"] a[class="kn-button search"]').on("click", function() {
+  if ($('div[id="'+view.key+'"] form[class="table-keyword-search"]').length>0){
+    console.log('keyworsearch in this view', view.key);
+    $('div[id="'+view.key+'"] form[class="table-keyword-search"] a[class="kn-button search"]').on("click", function() {
       logSearch(view);
     })
   }
 });
 
 function logSearch(view){
-  console.log('searchFill',view.key,$('form[class="table-keyword-search"]').serialize());
-  callPostHttpRequest('https://hook.eu1.make.celonis.com/fm8xq9lecoyd61vlicbywpi6vy8jezpa',{'viewKey':view.key,'search':$('form[class="table-keyword-search"]').serialize()},'')
+  console.log('searchFill',view.key,$('div[id="'+view.key+'"] form[class="table-keyword-search"]').serialize());
+  callPostHttpRequest('https://hook.eu1.make.celonis.com/fm8xq9lecoyd61vlicbywpi6vy8jezpa',{'viewKey':view.key,'search':$('div[id="'+view.key+'"] form[class="table-keyword-search"]').serialize()},'')
 }
 
 hashCode = function(elem) {
