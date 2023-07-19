@@ -8,7 +8,20 @@ $(document).on('knack-view-render.any', function (event, view, data) {
       window.location.href = location.href.replace('http://','https://');
     }, 500);
   }
+
+  //Monitor search
+  if ($('div[id="'+view.key+'"] form[class="table-keyword-search"]').length>0){
+    console.log('keyworsearch in this view', view.key);
+    $('div[id="'+view.key+'"] form[class="table-keyword-search"] a[class="kn-button search"]').on("click", function() {
+      logSearch(view);
+    })
+  }
 });
+
+function logSearch(view){
+  console.log('searchFill',view.key,view.scene.key,$('div[id="'+view.key+'"] form[class="table-keyword-search"]').serialize());
+  callPostHttpRequest('https://hook.eu1.make.celonis.com/fm8xq9lecoyd61vlicbywpi6vy8jezpa',{'app':'Master App','sceneKey':view.scene.key,'viewKey':view.key,'search':$('div[id="'+view.key+'"] form[class="table-keyword-search"]').serialize()},'')
+}
 
 $(document).on('knack-view-render.any', function (event, view, data) {
   //  ---------Auto Capitalise Regestration input-------------
