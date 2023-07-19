@@ -3879,6 +3879,7 @@ $(document).on('knack-view-render.any', function (event, view, data) {
       this.value = this.value.toUpperCase();
       $(this).css("font-weight", "bold", "important");		// bolder
       $(this).css("text-align", "center", "important");		// centre
+      $(this).css("fontSize", "18px", "important");         // bigger
   });
 });
 
