@@ -3873,6 +3873,15 @@ $(document).on('knack-form-submit.view_6188', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/tux5b28q8gphbl328a7bq3tlx1quqqx6", {"Record ID":data.id},"Purchase Orders - Approved Manually by Dealership Accountant");  
 });
 
+$(document).on('knack-view-render.any', function (event, view, data) {
+  //  ---------Auto Capitalise Registration/VIN Input-------------
+  $('input#field_8400').keyup(function() {
+      this.value = this.value.toUpperCase();
+      $(this).css("font-weight", "bold", "important");		// bolder
+      $(this).css("text-align", "center", "important");		// centre
+  });
+});
+
 //NOTIFICATIONS CODE //
 
 $(document).on('knack-scene-render.scene_1694', function(event, scene) {
