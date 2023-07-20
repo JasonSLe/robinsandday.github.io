@@ -685,7 +685,7 @@ var appSettings = {
   allowPortrait : true,
   actionAfterPhoto : 'none', // none, readable, compare,
   uploadMethod : 'make', //knack, make
-  uploadWebhook : 'https://hook.eu1.make.celonis.com/p4gio6jc7vcc4eodu410nigv9adlw4qi',
+  uploadWebhook : 'https://hook.eu1.make.celonis.com/ouosl7cqftin4d5xk4ybco0q96t5bwk2',
   resizeImageHeight : null,
   resizeImageWidth : null
 }
