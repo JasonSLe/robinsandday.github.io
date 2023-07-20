@@ -410,6 +410,9 @@ var aftersalesConnectView = [{view:'view_6320',url:'#tech-view2/'},
 {view:'view_5746',url:'#aftersales-service-reporting/virtual-reception/'},
 {view:'view_5747',url:'#aftersales-service-reporting/regional-aftersales-reporting/'},
 {view:'view_6169',url:'#after-sales-vehicle-lookup/manager-tours/'},
+/*onsite*/ {view:'view_6341',url:'#after-sales-vehicle-lookup/onsite-jobs/'},
+/*offsite*/{view:'view_6342',url:'#after-sales-vehicle-lookup/checked-out-jobs/'},
+/*myjobs*/{view:'view_6343',url:'#after-sales-vehicle-lookup/my-jobs2/'},
 {view:'view_6170',url:'#aftersales-service-reporting/manager-tour-reporting/'}]; ///add scene numbers as necessary
 
 aftersalesConnectView.forEach(aftersalesConnectViewFunction);
