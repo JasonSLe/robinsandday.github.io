@@ -329,7 +329,6 @@ var canTakePhoto = false;
   }
   circle.style.top = 'calc(50% - '+(40+getGammaDev(gamma))+'px)';
   
-  
   if(beta <=1 && beta >= -1)
   {
     line.style.backgroundColor = 'green';
