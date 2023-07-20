@@ -413,6 +413,7 @@ var aftersalesConnectView = [{view:'view_6320',url:'#tech-view2/'},
 /*onsite*/ {view:'view_6341',url:'#after-sales-vehicle-lookup/onsite-jobs/'},
 /*offsite*/{view:'view_6342',url:'#after-sales-vehicle-lookup/checked-out-jobs/'},
 /*myjobs*/{view:'view_6343',url:'#after-sales-vehicle-lookup/my-jobs2/'},
+/*WarrantyAdmin*/{view:'view_6344',url:'#after-sales-vehicle-lookup/warranty-administration/'},
 {view:'view_6170',url:'#aftersales-service-reporting/manager-tour-reporting/'}]; ///add scene numbers as necessary
 
 aftersalesConnectView.forEach(aftersalesConnectViewFunction);
