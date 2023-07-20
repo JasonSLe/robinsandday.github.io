@@ -263,8 +263,8 @@ var imageBeforeResize = document.createElement('img');
 
 imageBeforeResize.onload = () => {
    const elem = document.createElement('canvas');
-   elem.width = imageBeforeResize.width;
-   elem.height = imageBeforeResize.height;
+   elem.width = (appSettings.resizeImageWidth?resizeImageWidth: imageBeforeResize.width);
+   elem.height = (appSettings.resizeImageHeight?resizeImageHeight: imageBeforeResize.height);
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
 
