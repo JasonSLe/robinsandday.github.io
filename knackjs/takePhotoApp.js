@@ -261,8 +261,10 @@ const effect = $('#cameraOverlayCanvas');
 //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
 
-/*
+
 imageBeforeResize.onload = () => {
+  img.style.visibility = 'visible';
+  /*
    const elem = document.createElement('canvas');
    elem.width = (appSettings.resizeImageWidth?resizeImageWidth: imageBeforeResize.width);
    elem.height = (appSettings.resizeImageHeight?resizeImageHeight: imageBeforeResize.height);
@@ -277,8 +279,8 @@ imageBeforeResize.onload = () => {
    ctx.canvas.toBlob((blob) => {
       img.src = URL.createObjectURL(blob);
       img.style.visibility = 'visible';
-  }, 'image/jpeg', 1);
-}*/
+  }, 'image/jpeg', 1);*/
+}
 
  function drawImageActualSize() {
    canvas.width = this.naturalWidth;
