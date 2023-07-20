@@ -280,6 +280,7 @@ imageBeforeResize.onload = () => {
       img.src = URL.createObjectURL(blob);
       img.style.visibility = 'visible';
   }, 'image/jpeg', 1);*/
+  
 }
 
  function drawImageActualSize() {
