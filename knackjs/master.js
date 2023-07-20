@@ -410,6 +410,10 @@ var aftersalesConnectView = [{view:'view_6320',url:'#tech-view2/'},
 {view:'view_5746',url:'#aftersales-service-reporting/virtual-reception/'},
 {view:'view_5747',url:'#aftersales-service-reporting/regional-aftersales-reporting/'},
 {view:'view_6169',url:'#after-sales-vehicle-lookup/manager-tours/'},
+/*onsite*/ {view:'view_6341',url:'#after-sales-vehicle-lookup/onsite-jobs/'},
+/*offsite*/{view:'view_6342',url:'#after-sales-vehicle-lookup/checked-out-jobs/'},
+/*myjobs*/{view:'view_6343',url:'#after-sales-vehicle-lookup/my-jobs2/'},
+/*WarrantyAdmin*/{view:'view_6344',url:'#after-sales-vehicle-lookup/warranty-administration/'},
 {view:'view_6170',url:'#aftersales-service-reporting/manager-tour-reporting/'}]; ///add scene numbers as necessary
 
 aftersalesConnectView.forEach(aftersalesConnectViewFunction);
@@ -3871,6 +3875,16 @@ $(document).on('knack-form-submit.view_6187', function(event, view, data) {
 //Purchase Orders - Approved Manually by Dealership Accountant
 $(document).on('knack-form-submit.view_6188', function(event, view, data) { 
   callPostHttpRequest("https://hook.eu1.make.celonis.com/tux5b28q8gphbl328a7bq3tlx1quqqx6", {"Record ID":data.id},"Purchase Orders - Approved Manually by Dealership Accountant");  
+});
+
+$(document).on('knack-view-render.any', function (event, view, data) {
+  //  ---------Auto Capitalise Registration/VIN Input-------------
+  $('input#field_8400').keyup(function() {
+      this.value = this.value.toUpperCase();
+      $(this).css("font-weight", "bold", "important");		// bolder
+      $(this).css("text-align", "center", "important");		// centre
+      $(this).css("fontSize", "18px", "important");         // bigger
+  });
 });
 
 //NOTIFICATIONS CODE //
