@@ -263,24 +263,23 @@ var imageBeforeResize = document.createElement('img');
 
 
 imageBeforeResize.onload = () => {
-  img.style.visibility = 'visible';
-  /*
+  
    const elem = document.createElement('canvas');
-   elem.width = (appSettings.resizeImageWidth?resizeImageWidth: imageBeforeResize.width);
-   elem.height = (appSettings.resizeImageHeight?resizeImageHeight: imageBeforeResize.height);
+   elem.width = (appSettings.resizeImageWidth?appSettings.resizeImageWidth: imageBeforeResize.width);
+   elem.height = (appSettings.resizeImageHeight?appSettings.resizeImageHeight: imageBeforeResize.height);
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
 
   
  //ONE STEP RESIZE
-    ctx.drawImage(imageBeforeResize, imageBeforeResize.width * (1-percentOfPicture)/2, imageBeforeResize.height * (1-percentOfPicture)/2, imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
+    ctx.drawImage(imageBeforeResize,0,0);//, imageBeforeResize.width * (1-percentOfPicture)/2, imageBeforeResize.height * (1-percentOfPicture)/2, imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
   
    //save the resized image to the shown img
    ctx.canvas.toBlob((blob) => {
       img.src = URL.createObjectURL(blob);
       img.style.visibility = 'visible';
-  }, 'image/jpeg', 1);*/
-  
+  }, 'image/jpeg', 1);
+
 }
 
  function drawImageActualSize() {
