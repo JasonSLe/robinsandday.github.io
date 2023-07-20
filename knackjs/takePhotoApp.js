@@ -263,8 +263,8 @@ var imageBeforeResize = document.createElement('img');
 
 imageBeforeResize.onload = () => {
    const elem = document.createElement('canvas');
-   //elem.width = 768;
-   //elem.height = 576;
+   elem.width = imageBeforeResize.width;
+   elem.height = imageBeforeResize.height;
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
 
@@ -692,7 +692,9 @@ var appSettings = {
   allowPortrait : true,
   actionAfterPhoto : 'none', // none, readable, compare,
   uploadMethod : 'make', //knack, make
-  uploadWebhook : 'https://hook.eu1.make.celonis.com/p4gio6jc7vcc4eodu410nigv9adlw4qi'
+  uploadWebhook : 'https://hook.eu1.make.celonis.com/p4gio6jc7vcc4eodu410nigv9adlw4qi',
+  resizeImageHeight : null,
+  resizeImageWidth : null
 }
 var returnData = {};
 function takePhotoAppStart(app_id, pdfAssetField){
