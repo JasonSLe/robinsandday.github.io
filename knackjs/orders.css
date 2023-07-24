@@ -2,6 +2,10 @@
 This removes white spaces from all table headers*/
 .kn-table th {white-space: inherit;}
 
+body {
+	overscroll-behavior-y: contain;
+	overscroll-behavior: contain;
+  }
   
 #knack-logo {
   display: none;

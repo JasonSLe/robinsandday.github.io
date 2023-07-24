@@ -1,6 +1,11 @@
 /* Force all table data to show in the screen*/
 .kn-table th {white-space: inherit;}
 
+body {
+	overscroll-behavior-y: contain;
+	overscroll-behavior: contain;
+  }
+
 #knack-logo {
 	display: none;
   }
