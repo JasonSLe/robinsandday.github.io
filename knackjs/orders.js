@@ -145,6 +145,13 @@ $(document).on('knack-scene-render.scene_917', function(event, scene) {
   $("input[name='keyword']").attr("placeholder", "Dealer Address, Reg, Stock No.")
 });
 
+//Hover Customer MAGIC Number when hover over Customer Name on Deal Files page 
+$(document).on('knack-view-render.view_2665', function (event, view, data) {
+    tooltipsTable('917','2665','field_8008','field_6159');
+    //scene, view, field to have hover, hover info
+         $('th[class="field_8008"]').hide();
+    $('td[class*="field_8008"]').hide();
+});
 
 //HANDOVER APPOINTMENT PAGE
 //Restrict Available Times for Handover Appointment to 8am - 7pm
