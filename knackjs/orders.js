@@ -136,7 +136,53 @@ $(document).on('knack-view-render.view_2605', function(event, view, data) {
   checkUser(data);
 });
 
+// THIS CODE ALLOWS THE HOVER TOOL TIPS FUNCTION IN THIS APP
 
+function tooltipsTable(sceneId, viewId, tooltipFieldId, showTooltipFieldId, tooltipTitle = ''){
+    $('th[class="'+tooltipFieldId+'"]').hide();
+    $('td[class*="'+tooltipFieldId+'"]').hide();
+
+    let tooltipDiv = document.createElement('div');
+    tooltipDiv.setAttribute("id", "tooltipDiv_"+viewId+'_'+tooltipFieldId);
+    tooltipDiv.setAttribute("class", "tooltipDiv");
+    tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
+    //console.log('view div',document.querySelector('div[id="kn-scene_'+sceneId+'"]'));
+    //document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
+    console.log(document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv));
+    
+    $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
+      //console.log('HIDE AFTER LEAVE')
+      $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').hide();
+    });
+    
+
+    $('div[id="view_'+viewId+'"]').on("mousemove", function (e) {
+        //console.log('on move');
+        let partOfTable = document.elementFromPoint(e.pageX, e.pageY - document.documentElement.scrollTop);
+        let tdUnderMouse = null;
+        if (partOfTable){
+          if (partOfTable.nodeName==='TD'){
+            tdUnderMouse = partOfTable;
+          } else if (partOfTable.parentElement && partOfTable.parentElement.nodeName==='TD') {
+            tdUnderMouse = partOfTable.parentElement;
+          }
+        }
+        if (tdUnderMouse && tdUnderMouse.getAttribute('data-field-key')===showTooltipFieldId){
+          //console.log('tdUnderMouse right column',tdUnderMouse);
+          //console.log('tdUn id',tdUnderMouse.parentElement.id);
+          //console.log('HTML to show',tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML)
+          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').html(tooltipTitle + modifyTooltipHTML(tdUnderMouse.parentElement.querySelector('td[data-field-key="'+tooltipFieldId+'"]').innerHTML));
+          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').show();
+          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').offset({ left: e.pageX+10, top: e.pageY });
+        } else {
+          $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').hide();
+        }
+    });
+  }
+
+function modifyTooltipHTML(html){
+  return html.replace(new RegExp('class="','g'),'data-class="');
+}
 
 //************************************* NEW VEHICLE DEAL FILE *****************************************
 
@@ -145,7 +191,7 @@ $(document).on('knack-scene-render.scene_917', function(event, scene) {
   $("input[name='keyword']").attr("placeholder", "Dealer Address, Reg, Stock No.")
 });
 
-//Hover Customer MAGIC Number when hover over Customer Name on Deal Files page 
+//Hover Customer MAGIC Number when hover over Customer Name on Deal Files page - in conjunction with the ToolTips Functions above 
 $(document).on('knack-view-render.view_2665', function (event, view, data) {
     tooltipsTable('917','2665','field_8008','field_6159');
     //scene, view, field to have hover, hover info
