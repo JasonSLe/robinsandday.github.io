@@ -3247,7 +3247,7 @@ $(document).on('knack-scene-render.scene_934', function(event, scene) {
 function recursivecallscene_934(){
  setTimeout(function () { if($("#view_2892").is(":visible")==true){ Knack.views["view_2892"].model.fetch();recursivecallscene_934();} }, 300000);
 	 console.log('934 recursive');
-}
+});
 
 // Trigger Licence Link - Customer Manually Enters Driving Licence
 
@@ -3283,6 +3283,7 @@ $(document).on('knack-record-update.view_2979', function(event, view, data) {
 function recursivecallscene_935(){
  setTimeout(function () { if($("#view_2900").is(":visible")==true){ Knack.views["view_2900"].model.fetch();recursivecallscene_935();} }, 5000);
 	 console.log('935 recursive');
-}
+});
+
 
 
