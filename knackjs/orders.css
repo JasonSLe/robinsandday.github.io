@@ -6157,6 +6157,18 @@ font-size:12px;
 	visibility: visible;
 	opacity: 1;
   }
-  
+
+div.tooltipDiv table, th, td, tr {
+	border: 1px solid;
+}
+
+div.tooltipDiv th {
+	background-color: #B2BEB5;
+}
+
+div.tooltipDiv {
+	padding: 25px;
+}
+
   /*TOOLTIP CSS END*/
 
