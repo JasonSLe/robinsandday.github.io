@@ -10,12 +10,12 @@ $(document).on('knack-view-render.any', function (event, view, data) {
   }
 
   //Monitor search
-  if ($('div[id="'+view.key+'"] form[class="table-keyword-search"]').length>0){
+  /*if ($('div[id="'+view.key+'"] form[class="table-keyword-search"]').length>0){
     console.log('keyworsearch in this view', view.key);
     $('div[id="'+view.key+'"] form[class="table-keyword-search"] a[class="kn-button search"]').on("click", function() {
       logSearch(view);
     })
-  }
+  }*/
 });
 
 function logSearch(view){
