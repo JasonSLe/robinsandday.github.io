@@ -3247,7 +3247,7 @@ $(document).on('knack-scene-render.scene_934', function(event, scene) {
 function recursivecallscene_934(){
  setTimeout(function () { if($("#view_2892").is(":visible")==true){ Knack.views["view_2892"].model.fetch();recursivecallscene_934();} }, 300000);
 	 console.log('934 recursive');
-});
+}
 
 // Trigger Licence Link - Customer Manually Enters Driving Licence
 
