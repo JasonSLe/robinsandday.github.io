@@ -2922,7 +2922,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	box-shadow:         3px 3px #ccc;
 }
 
-/* Two Way Messaging For Virtual Reception Messages */
+/* Two Way Messaging */
 
 p.speech-bubble-outbound {
   position: relative;
@@ -2982,6 +2982,26 @@ p.speech-bubble-inbound:before {
 #view_1176 th span {
   margin: auto !important;
 		
+}
+
+/* Conversation Outstanding Messages Table Filters */
+
+#view_1168 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1168 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_1168 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
 }
 
 /* Group/Region Aftersales Reporting Filters */
