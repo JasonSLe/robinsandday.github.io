@@ -3279,4 +3279,10 @@ $(document).on('knack-record-update.view_2979', function(event, view, data) {
   
 });
 
+//refresh tech page every 5 seconds
+function recursivecallscene_935(){
+ setTimeout(function () { if($("#view_2900").is(":visible")==true){ Knack.views["view_2900"].model.fetch();recursivecallscene_935();} }, 5000);
+	 console.log('935 recursive');
+}
+
 
