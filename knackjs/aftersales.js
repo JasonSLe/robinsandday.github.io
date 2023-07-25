@@ -3242,7 +3242,7 @@ $(document).on('knack-view-render.view_2892', function (event, view, data) {
 
 $(document).on('knack-scene-render.scene_934', function(event, scene) {
  recursivecallscene_934();
-});
+}
 
 function recursivecallscene_934(){
  setTimeout(function () { if($("#view_2892").is(":visible")==true){ Knack.views["view_2892"].model.fetch();recursivecallscene_934();} }, 300000);
@@ -3283,7 +3283,7 @@ $(document).on('knack-record-update.view_2979', function(event, view, data) {
 function recursivecallscene_935(){
  setTimeout(function () { if($("#view_2900").is(":visible")==true){ Knack.views["view_2900"].model.fetch();recursivecallscene_935();} }, 5000);
 	 console.log('935 recursive');
-});
+}
 
 
 
