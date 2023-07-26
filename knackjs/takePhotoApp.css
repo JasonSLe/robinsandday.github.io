@@ -290,6 +290,12 @@ body {
   background-color: #fafafa;
 }
 
+#videoElement {
+  width:100%;
+  height:auto;
+  max-height:100%
+}
+
 @media screen and (orientation: portrait) {
 
   /* portrait-specific styles */
@@ -303,7 +309,7 @@ body {
   }
 
   #cameraVideo_overlay {
-    width: 100%;
+    max-width: 100%;
     height: 80%;
   }
 
