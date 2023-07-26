@@ -193,10 +193,10 @@ $(document).on('knack-scene-render.scene_917', function(event, scene) {
 
 //Hover Customer MAGIC Number when hover over Customer Name on Deal Files page - in conjunction with the ToolTips Functions above 
 $(document).on('knack-view-render.view_2665', function (event, view, data) {
-    tooltipsTable('917','2665','field_8008','field_6159');
+    tooltipsTable('917','2665','field_8098','field_6159');
     //scene, view, field to have hover, hover info
-         $('th[class="field_8008"]').hide();
-    $('td[class*="field_8008"]').hide();
+         $('th[class="field_8098"]').hide();
+    $('td[class*="field_8098"]').hide();
 });
 
 //HANDOVER APPOINTMENT PAGE
