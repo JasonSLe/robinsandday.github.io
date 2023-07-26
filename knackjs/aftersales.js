@@ -3260,7 +3260,7 @@ $(document).on('knack-form-submit.view_2940', function(event, view, data) {
 });
 
 $(document).on('knack-form-submit.view_2999', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/ouosl7cqftin4d5xk4ybco0q96t5bwk2", {"Driving Licence Record ID":data.id,"Job Card Record ID":data.field_2505_raw,"Forename":data.field_2461,"Surname":data.field_2462,"Date Of Birth":data.field_2325,"First Line Of Address":data.field_2312,"Postcode":data.field_2314,"Email Address":data.field_2315_raw,"Driving Licence Number":data.field_2316},"Customer Manually Entering Driving Licence Details")
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/ouosl7cqftin4d5xk4ybco0q96t5bwk2", {"Driving Licence Record ID":data.id,"Job Card Record ID":data.field_2505_raw,"Method of Licence Input":data.field_2317,"Forename":data.field_2461,"Surname":data.field_2462,"Date Of Birth":data.field_2325,"First Line Of Address":data.field_2312,"Postcode":data.field_2314,"Email Address":data.field_2315_raw,"Driving Licence Number":data.field_2316},"Customer Submitting Driving Licence")
 });
 
 //trigger bot for exit survey (job card v2 - Check out via tablet)
