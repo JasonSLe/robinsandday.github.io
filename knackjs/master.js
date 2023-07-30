@@ -3290,6 +3290,18 @@ function bindToUpdate1(selector_view_name){
   });
 });
 
+// USED DEAL FILE TOOLTIP HOVER FOR CUSTOMER MAGIC No.
+
+  $(document).on('knack-view-render.view_2955', function (event, view, data) {
+
+    $('th[class="field_8992"]').hide();
+    $('td[class*="field_8992"]').hide();
+    $('div[id="view_2955"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_5402"]').attr('data-tooltip',getFieldForRowID('view_2955','field_8992',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_5402"]').addClass('tooltip-bottom');
+  });
+});
+
 
 
 //**Used Deal Files - Submit Additional Product Certificates Uploaded
