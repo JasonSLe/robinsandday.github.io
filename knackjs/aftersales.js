@@ -3103,9 +3103,9 @@ function recursivecallscene_755(){
  setTimeout(function () { if($("#view_2478").is(":visible")==true){ Knack.views["view_2478"].model.fetch();recursivecallscene_755();} }, 300000);
 }
 
-$(document).on('knack-view-render.view_2525', function (event, view, data) {
+$(document).on('knack-view-render.view_3008', function (event, view, data) {
   embedPhotoApp();
-  $('div[id="view_2525"] img').on("click",function(){
+  $('div[id="view_3008"] img').on("click",function(){
     showPhotoApp(this);
   });
 }); 
