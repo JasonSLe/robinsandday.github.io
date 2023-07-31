@@ -3300,5 +3300,31 @@ function recursivecallscene_935(){
 	 console.log('935 recursive');
 }
 
+// Code to wait following Form Submission while Licence Is Being Checked in Make
 
+$(document).on('knack-form-submit.view_4099', function(event, view, data) { 
+
+
+	setTimeout(function(){ 
+
+    	Knack.showSpinner();
+
+    }, 0); 
+
+  
+
+	commandURL = "https://hook.eu1.make.celonis.com/ouosl7cqftin4d5xk4ybco0q96t5bwk2?recordid=" + data.id ;
+
+
+ 	$.get(commandURL, function(data, status){
+
+
+      Knack.hideSpinner();
+
+      $(".kn-message.success").html("<b>" + data + "</b>");
+
+
+    });
+
+});
 
