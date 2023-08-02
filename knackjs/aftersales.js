@@ -3060,8 +3060,8 @@ $(document).on('knack-view-render.view_2364', function (event, view, data) {
 $(document).on('knack-view-render.view_2367', function (event, view, data) {
 	     $('th[class="field_441"]').hide();
     $('td[class*="field_441"]').hide();
-	     $('th[class="kn-input-field_443"]').hide();
-    $('td[class*="kn-input-field_443"]').hide();
+	     $('th[class="field_443"]').hide();
+    $('td[class*="field_443"]').hide();
 	     $('th[class="field_1332"]').hide();
     $('td[class*="field_1332"]').hide();
 	     $('th[class="field_2482"]').hide();
