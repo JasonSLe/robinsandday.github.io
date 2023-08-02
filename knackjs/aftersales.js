@@ -3068,6 +3068,12 @@ $(document).on('knack-view-render.view_2367', function (event, view, data) {
 	
 }); 
 
+//Job card v2 Check out via sms
+$(document).on('knack-view-render.view_2365', function (event, view, data) {
+	$("#kn-input-field_1332").hide();
+	}); 
+
+
 //Job card v2 Check out MARK TO FOLLOW UP, pos
 $(document).on('knack-view-render.view_2881', function (event, view, data) {
 	     $('th[class="field_720"]').hide();
