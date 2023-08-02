@@ -3041,7 +3041,7 @@ $(document).on('knack-form-submit.view_2365', function(event, view, data) {
 
 //check out job card v2 no survey
 $(document).on('knack-form-submit.view_2367', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_2223,"DemoTransactionNumber":data.field_1332, "WIP":data.field_719, "POS":data.field_720, "Date Courtesy Car Agreement Completed":data.field_2482, "Source": "View_2367 - Satisfaction check job card v2 no survey"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno", {"Record ID":data.field_1601,"DemoTransactionNumber":data.field_1332, "WIP":data.field_719, "POS":data.field_720, "Date Courtesy Car Agreement Completed":data.field_2482, "Source": "View_2367 - Satisfaction check job card v2 no survey"},"Aftersales - customer satisfaction exit survey to trigger bot autoline check out")
 });
 
 //Job card v2 Check out via tablet hide wip, pos
@@ -3052,6 +3052,9 @@ $(document).on('knack-view-render.view_2364', function (event, view, data) {
     $('td[class*="field_719"]').hide();
 	     $('th[class="field_2547"]').hide();
     $('td[class*="field_2547"]').hide();
+     $('th[class="field_1601"]').hide();
+    $('td[class*="field_1601"]').hide();
+	
 }); 
 
 //Job card v2 Check out no survey hide wip, pos
