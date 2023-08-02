@@ -3071,6 +3071,7 @@ $(document).on('knack-view-render.view_2367', function (event, view, data) {
 //Job card v2 Check out via sms
 $(document).on('knack-view-render.view_2365', function (event, view, data) {
 	$("#kn-input-field_1332").hide();
+	$("#kn-input-field_769").hide();
 	}); 
 
 
