@@ -3054,6 +3054,7 @@ $(document).on('knack-view-render.view_2364', function (event, view, data) {
     $('td[class*="field_2547"]').hide();
      $('th[class="field_1601"]').hide();
     $('td[class*="field_1601"]').hide();
+	$("#kn-input-field_2547").hide();
 }); 
 
 //Job card v2 Check out no survey hide wip, pos
