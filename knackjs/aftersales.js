@@ -3054,7 +3054,6 @@ $(document).on('knack-view-render.view_2364', function (event, view, data) {
     $('td[class*="field_2547"]').hide();
      $('th[class="field_1601"]').hide();
     $('td[class*="field_1601"]').hide();
-	
 }); 
 
 //Job card v2 Check out no survey hide wip, pos
@@ -3065,6 +3064,9 @@ $(document).on('knack-view-render.view_2367', function (event, view, data) {
     $('td[class*="field_443"]').hide();
 	     $('th[class="field_2482"]').hide();
     $('td[class*="field_2482"]').hide();
+		     $('th[class="field_1601"]').hide();
+    $('td[class*="field_1601"]').hide();
+	
 }); 
 
 //Job card v2 Check out MARK TO FOLLOW UP, pos
