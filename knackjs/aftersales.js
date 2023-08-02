@@ -3060,15 +3060,11 @@ $(document).on('knack-view-render.view_2364', function (event, view, data) {
 $(document).on('knack-view-render.view_2367', function (event, view, data) {
 	     $('th[class="field_441"]').hide();
     $('td[class*="field_441"]').hide();
-	     $('th[class="field_443"]').hide();
-    $('td[class*="field_443"]').hide();
 	     $('th[class="field_1332"]').hide();
     $('td[class*="field_1332"]').hide();
-	     $('th[class="field_2482"]').hide();
-    $('td[class*="field_2482"]').hide();
-     $('th[class="field_1601"]').hide();
-    $('td[class*="field_1601"]').hide();
 	$("#kn-input-field_443").hide();
+	$("#kn-input-field_2482").hide();
+	$("#kn-input-field_1601").hide();
 	
 }); 
 
