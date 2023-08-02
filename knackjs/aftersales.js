@@ -3078,12 +3078,11 @@ $(document).on('knack-view-render.view_2365', function (event, view, data) {
 
 //Job card v2 Check out MARK TO FOLLOW UP, pos
 $(document).on('knack-view-render.view_2881', function (event, view, data) {
-	     $('th[class="field_720"]').hide();
-    $('td[class*="field_720"]').hide();
-	     $('th[class="field_719"]').hide();
-    $('td[class*="field_719"]').hide();
-	     $('th[class="field_2547"]').hide();
-    $('td[class*="field_2547"]').hide();
+	 
+	$("#kn-input-field_720").hide();
+	$("#kn-input-field_719").hide();
+	$("#kn-input-field_2547").hide();
+	
 }); 
 
 // ------------ Refresh ONSITE jobs in ONE Table (workshop/CA view)-----------------------//
