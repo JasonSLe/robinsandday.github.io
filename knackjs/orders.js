@@ -798,6 +798,11 @@ $(document).on('knack-view-render.view_4582', function(event, view, data) {
   Knack.fn.hideExpand("view_4582");
 });
 
+$(document).on('knack-view-render.view_4548', function(event, view, data) {
+  console.log('view4548');
+  Knack.fn.hideExpand("view_4548");
+});
+
 
 // MANAGER VIEWS
 $(document).on('knack-view-render.view_3810', function(event, view, data) {
