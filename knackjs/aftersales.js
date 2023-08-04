@@ -3338,7 +3338,7 @@ $(document).on('knack-form-submit.view_2999', function(event, view, data) {
 
 // Code to wait following Form Submission while Licence Is Being Checked in Make - Customer Advisor View
 
-$(document).on('knack-form-submit.view_3036', function(event, view, data) { 
+$(document).on('knack-form-submit.view_3044', function(event, view, data) { 
 
 
 	setTimeout(function(){ 
