@@ -3296,6 +3296,16 @@ $(document).on('knack-record-update.view_2979', function(event, view, data) {
   
 });
 
+//****************** Courtesy Car Agreement Created Manually - Reload Scene to Commence Agreement ****************//
+
+$(document).on('knack-record-update.view_3054', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
+});
+
 //refresh tech page every 5 seconds
 
 $(document).on('knack-scene-render.scene_935', function(event, scene) {
