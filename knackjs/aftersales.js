@@ -1402,7 +1402,20 @@ $(document).on('knack-scene-render.scene_91', function(event, scene) {
   refreshWithData('1188', 'TITLE', 'TEXT $field_351', 'field_1518');
 });
 
+// CODE Required to set a Modal Pop Up to Max Width
+
+// Job Card V2 View
 $(document).on("knack-scene-render.scene_762", function(event, scene) {
+  $(this).find('.kn-modal').addClass('Modal_for_' + Knack.router.current_scene_key)
+});
+
+// Commence Courtesy Car Agreement Page
+$(document).on("knack-scene-render.scene_779", function(event, scene) {
+  $(this).find('.kn-modal').addClass('Modal_for_' + Knack.router.current_scene_key)
+});
+
+// Complete Courtesy Car Agreement Page
+$(document).on("knack-scene-render.scene_963", function(event, scene) {
   $(this).find('.kn-modal').addClass('Modal_for_' + Knack.router.current_scene_key)
 });
 
