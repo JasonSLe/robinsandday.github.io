@@ -1245,10 +1245,6 @@ function recursivecallscene_224(){
 // Trigger Customer Incident Form
 
 $(document).on('knack-form-submit.view_781', function(event, view, data) {
-  callPostHttpRequest("https://hook.integromat.com/gmtkedwe7nxktiqm6qi4rg5apeno73an", {"Record ID":data.id},"Send Pre Visit Digital Customer Incident Form")
-});
-
-$(document).on('knack-form-submit.view_781', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/fbuumn73d29ycs7o5ell2c4kflbnkhfb", {"Record ID":data.id},"Send Pre Visit Digital Customer Incident Form V2")
 });
 
