@@ -2480,6 +2480,18 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 	margin: auto !important;
 }
 
+/*Centre Table Headers In Outstanding Messages Heading*/
+
+#view_1168 th span,
+#view_1188 th span,
+#view_1600 th span,
+#view_1599 th span,
+#view_1189 th span,
+#view_1190 th span {
+        text-align: center;
+	margin: auto !important;
+}
+
 #view_1169 > div.kn-table-wrapper > table > thead > tr > th.field_1657 > span > a > span > i {
 	font-weight: normal; 
 }
