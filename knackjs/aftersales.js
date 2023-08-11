@@ -2272,13 +2272,6 @@ $(document).on('knack-form-submit.view_318', function(event, view, data) {
    // $('th[class="field_381"]').addClass('tooltip-bottom')
   }); 
 
-// Trigger DVLA License Check Scenario When Customer Advisor Completes Pre Call
-
-$(document).on('knack-form-submit.view_341', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/y3bgw1dxy2ntnysos7usd6gxbsnmcaeg", {"Record ID":data.id,"Courtesy Car Required?":data.field_1137},"Customer Advisor Completed Pre Call")
-});
-
-
 //hover field for Service On-site Workshop control view
   $(document).on('knack-view-render.view_1880', function (event, view, data) {
     //This part is for tooltip of another field above field in list
