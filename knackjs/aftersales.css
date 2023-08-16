@@ -3014,7 +3014,7 @@ p.speech-bubble-inbound-1link {
   position: relative;
   background: #b356c2;
   border-radius: .4em;
-  width:40%;
+  width:60%;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -3036,6 +3036,7 @@ p.speech-bubble-inbound-1link:before {
   border-bottom: 10px solid transparent;
   left: -19px;
   top: 6px;
+ text-wrap: wrap !important;
 }
 
 /* Conversation Outstanding Messages Table Filters */
