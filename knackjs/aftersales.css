@@ -3022,6 +3022,7 @@ p.speech-bubble-inbound-1link {
   padding:1%;
   margin:1px !important;
   text-wrap: wrap !important;
+  display: inline-block!important;
 } 
 
 p.speech-bubble-inbound-1link:before {
