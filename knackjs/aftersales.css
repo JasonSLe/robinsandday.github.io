@@ -3012,6 +3012,7 @@ p.speech-bubble-inbound:before {
 
 p.speech-bubble-inbound-1link {
   position: relative;
+  text-wrap: wrap;
   background: #b356c2;
   border-radius: .4em;
   width:40%;
@@ -3026,6 +3027,7 @@ p.speech-bubble-inbound-1link {
 p.speech-bubble-inbound-1link:before {
   content: "";
   width: 0px;
+  text-wrap: wrap;
   height: 0px;
   position: absolute;
   border-left: 10px solid transparent;
