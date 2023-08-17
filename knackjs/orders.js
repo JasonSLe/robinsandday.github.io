@@ -753,6 +753,11 @@ $(document).on('knack-view-render.view_3989', function(event, view, data) {
   Knack.fn.hideExpand("view_3989");
 });
 
+$(document).on('knack-view-render.view_4690', function(event, view, data) {
+  console.log('view4690');
+  Knack.fn.hideExpand("view_4690");
+});
+
 $(document).on('knack-view-render.view_4038', function(event, view, data) {
   console.log('view4038');
   Knack.fn.hideExpand("view_4038");
