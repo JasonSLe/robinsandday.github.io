@@ -255,23 +255,23 @@ function stopLoading(viewID){
   });
 }
 
-function saveStats(stats){
-  console.log('saveStats');
-  let commandURL = "https://hook.integromat.com/cqqou5f36rhra151jzixw3mmhm5fxf1a" ;
-  let textFromStats = 'Duration: '+stats.duration.toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 0 });
-  for (let i = 0;i<stats.log.length;i++){
-    textFromStats += ', ' + stats.log[i].one + ': '+stats.log[i].duration.toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 0 });
-  }
-  let dataToSend = {"knackId":recordId,"stats":stats, 'statsText':textFromStats}; 
-  console.log(dataToSend);
-  $.ajax({
-    url: commandURL,
-    type: 'POST',
-    contentType: 'application/json',
-    data: JSON.stringify(dataToSend),
-    async: true
-  })
-}
+//function saveStats(stats){
+  //console.log('saveStats');
+  //let commandURL = "https://hook.integromat.com/cqqou5f36rhra151jzixw3mmhm5fxf1a" ;
+  //let textFromStats = 'Duration: '+stats.duration.toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 0 });
+  //for (let i = 0;i<stats.log.length;i++){
+    //textFromStats += ', ' + stats.log[i].one + ': '+stats.log[i].duration.toLocaleString("en-GB", { maximumFractionDigits: 1, minimumFractionDigits: 0 });
+  //}
+  //let dataToSend = {"knackId":recordId,"stats":stats, 'statsText':textFromStats}; 
+  //console.log(dataToSend);
+  //$.ajax({
+    //url: commandURL,
+    //type: 'POST',
+    //contentType: 'application/json',
+    //data: JSON.stringify(dataToSend),
+    //async: true
+  //})
+//}
 
 function generateTyres(){
   try {
