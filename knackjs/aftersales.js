@@ -1353,7 +1353,6 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
         }
       }
     }
-    
 
     //move icons
     if ($('div[class="kn-table kn-view view_596"]')){
@@ -1633,7 +1632,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
  const vinNumber = $(".col-5").text().trim()
  //send a http request with the vin an record id
 
- const triggerRecord = (event2) => {
+ /*const triggerRecord = (event2) => {
   console.log(event2.taget);
   console.log("Test106")
    console.log(event2.view.app_id)
@@ -1648,12 +1647,12 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
    callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"Record ID":event2.view.app_id, "VIN": vinNumber, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
  }
     //add an event listner to the arrow table element
-    $(".fa-search").on("click", triggerRecord);
+    $(".fa-search").on("click", triggerRecord);*/
 
  
  // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
 
-/*    if ($('div[class="kn-view kn-table view_1223"]')){
+    if ($('div[class="kn-view kn-table view_1223"]')){
       let rows = $('div[class="kn-view kn-table view_1223"] table tr');
       for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
@@ -1668,7 +1667,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
       }
     }
 	});
-*/
+
 
 //hide record id from vehicle look up table 
  $(document).on('knack-view-render.view_1223', function (event, view, data) {
@@ -1685,7 +1684,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
     $('td[class*="field_1601"]').hide();
 	
   //get the vin value from the table
- const vinNumber = $(".col-8").text().trim()
+/* const vinNumber = $(".col-8").text().trim()
  
      if ($('div[class="kn-view kn-table view_1169"]')){
       let rows = $('div[class="kn-view kn-table view_1169"] table tr');
@@ -1701,7 +1700,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
         currentRow.children[5].onclick = createClickHandler(currentRow);
       }
     }
-    
+    */
 	});
  
 
@@ -1727,7 +1726,6 @@ $(document).on('knack-form-submit.view_1229', function(event, view, data) {
     }
 });
 
-	
 //WIP Refresh Spinner upon search
 
 $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
@@ -1741,7 +1739,7 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
   });
 
 //trigger update live wip from wip management reminders table
- $(document).on('knack-view-render.view_1212', function (event, view, data) {
+$(document).on('knack-view-render.view_1212', function (event, view, data) {
 
 	    if ($('div[class="kn-view kn-table view_1212"]')){
       let rows = $('div[class="kn-view kn-table view_1212"] table tr');
@@ -3377,6 +3375,3 @@ $(document).on('knack-form-submit.view_3047', function(event, view, data) {
     });
 
 });
-
-
-
