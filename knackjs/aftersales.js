@@ -1336,7 +1336,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
 	  $('th[class="field_1111"]').attr('title','No of Days Since Checked In');
 
-    if ($('div[class="kn-table kn-view view_596"]')){
+ /*   if ($('div[class="kn-table kn-view view_596"]')){
       let rows = $('div[class="kn-table kn-view view_596"] table tr');
       console.log('rows',rows.length);
       for (i = 1; i < rows.length; i++) {
@@ -1353,6 +1353,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
         }
       }
     }
+    */
 
     //move icons
     if ($('div[class="kn-table kn-view view_596"]')){
@@ -1652,7 +1653,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
  
  // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
 
-    if ($('div[class="kn-view kn-table view_1223"]')){
+/*    if ($('div[class="kn-view kn-table view_1223"]')){
       let rows = $('div[class="kn-view kn-table view_1223"] table tr');
       for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
@@ -1667,7 +1668,7 @@ $(document).on('knack-view-render.view_1223', function(event, view) {
       }
     }
 	});
-
+*/
 
 //hide record id from vehicle look up table 
  $(document).on('knack-view-render.view_1223', function (event, view, data) {
@@ -1706,7 +1707,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
 
 
 //trigger update live wip from VR 
-$(document).on('knack-form-submit.view_1229', function(event, view, data) { 
+/*$(document).on('knack-form-submit.view_1229', function(event, view, data) { 
     
     try{
         
@@ -1725,7 +1726,8 @@ $(document).on('knack-form-submit.view_1229', function(event, view, data) {
         sendErrorToIntegromat(exception, "Aftersales - trigger update live wip from VR");
     }
 });
-
+*/
+	
 //WIP Refresh Spinner upon search
 
 $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
@@ -1739,7 +1741,7 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
   });
 
 //trigger update live wip from wip management reminders table
-$(document).on('knack-view-render.view_1212', function (event, view, data) {
+/* $(document).on('knack-view-render.view_1212', function (event, view, data) {
 
 	    if ($('div[class="kn-view kn-table view_1212"]')){
       let rows = $('div[class="kn-view kn-table view_1212"] table tr');
@@ -1756,7 +1758,7 @@ $(document).on('knack-view-render.view_1212', function (event, view, data) {
       }
     }
 	});
-
+*/
 //refresh MOT Details in VR piece
 $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
     let refreshData = [
@@ -1966,7 +1968,7 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
           return function() {
             var cell = row.id;
             console.log('cell',cell);
-            callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"recordId":cell, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
+          //  callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"recordId":cell, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
           };
         };
         const createClickHandler2 = function(row) {
@@ -2006,7 +2008,7 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
 	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
 	  $('th[class="field_1111"]').attr('title','No of Days Since Checked In');
 
-    if ($('div[class="kn-table kn-view view_1506"]')){
+/*    if ($('div[class="kn-table kn-view view_1506"]')){
       let rows = $('div[class="kn-table kn-view view_1506"] table tr');
       console.log('rows',rows.length);
       for (i = 1; i < rows.length; i++) {
@@ -2023,7 +2025,7 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
         }
       }
     }
-
+*/
     //move icons
     if ($('div[class="kn-table kn-view view_1506"]')){
       let rows = $('div[class="kn-table kn-view view_1506"] table>tbody>tr[id]');
