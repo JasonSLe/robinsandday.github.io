@@ -1962,12 +1962,12 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
       console.log('rows',rows.length);
       for (i = 1; i < rows.length; i++) {
         let currentRow = rows[i];
-        /*const createClickHandler = function(row) {
+        const createClickHandler = function(row) {
           return function() {
             var cell = row.id;
             console.log('cell',cell);
             callPostHttpRequest("https://hook.eu1.make.celonis.com/a61ljkqf5jw5d643274gixjtqdx5hgo8", {"recordId":cell, "Scenario":"vehicle customer look up" },"Aftersales- update individual LIVE WIPS 'touched today' and UPDATE Parts & Labour v4");
-          };*/
+          };
         };
         const createClickHandler2 = function(row) {
           return function() {
@@ -1977,7 +1977,7 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
           };
         };
         if (currentRow.id!==''){
-        //  currentRow.children[4].onclick = createClickHandler(currentRow);
+          currentRow.children[4].onclick = createClickHandler(currentRow);
           currentRow.children[3].onclick = createClickHandler2(currentRow);
         }
       }
