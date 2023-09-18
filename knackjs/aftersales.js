@@ -1705,7 +1705,7 @@ $(document).on('knack-view-render.view_1169', function(event, view) {
  
 
 
-//trigger update live wip from VR 
+/*trigger update live wip from VR 
 $(document).on('knack-form-submit.view_1229', function(event, view, data) { 
     
     try{
@@ -1725,7 +1725,7 @@ $(document).on('knack-form-submit.view_1229', function(event, view, data) {
         sendErrorToIntegromat(exception, "Aftersales - trigger update live wip from VR");
     }
 });
-
+*/
 //WIP Refresh Spinner upon search
 
 $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
