@@ -1336,7 +1336,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
 	   $('th[class="field_1021"]').attr('title','Time Taken For Jobs NOT completed');
 	  $('th[class="field_1111"]').attr('title','No of Days Since Checked In');
 
-    if ($('div[class="kn-table kn-view view_596"]')){
+  /*  if ($('div[class="kn-table kn-view view_596"]')){
       let rows = $('div[class="kn-table kn-view view_596"] table tr');
       console.log('rows',rows.length);
       for (i = 1; i < rows.length; i++) {
@@ -1352,7 +1352,7 @@ $(document).on('knack-form-submit.view_736', function(event, view, data) {
           currentRow.children[0].onclick = createClickHandler(currentRow);
         }
       }
-    }
+    }*/
 
     //move icons
     if ($('div[class="kn-table kn-view view_596"]')){
