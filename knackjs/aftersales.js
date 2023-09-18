@@ -1738,7 +1738,7 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
     sceneRefresh(refreshData);
   });
 
-//trigger update live wip from wip management reminders table
+/*trigger update live wip from wip management reminders table
 $(document).on('knack-view-render.view_1212', function (event, view, data) {
 
 	    if ($('div[class="kn-view kn-table view_1212"]')){
@@ -1756,7 +1756,7 @@ $(document).on('knack-view-render.view_1212', function (event, view, data) {
       }
     }
 	});
-
+*/
 //refresh MOT Details in VR piece
 $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
     let refreshData = [
