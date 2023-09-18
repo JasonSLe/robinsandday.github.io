@@ -1128,7 +1128,7 @@ $(document).on('knack-form-submit.view_1106', function(event, view, data) {
 
 try{
 
-    let commandURL = "https://hook.integromat.com/fjr9e2gme5skt4qael5h5f63kupx1kfg";
+    let commandURL = "https://hook.eu1.make.celonis.com/auyd5lsbizh311g5uzi5pat3ir7bra3w";
     let dataToSend = JSON.stringify({"Record ID":data.id});
 
     var rData = $.ajax({
