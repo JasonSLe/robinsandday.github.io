@@ -3375,3 +3375,23 @@ $(document).on('knack-form-submit.view_3047', function(event, view, data) {
     });
 
 });
+
+//Commence courtesy car agreement to trigger part 2 of Digital check in
+$(document).on('knack-form-submit.view_2352', function(event, view, data) { 
+    
+    try{
+        let commandURL = "https://hook.eu1.make.celonis.com/ursfgeixws3xf5cl2j9d1bozxizq7air";
+        let dataToSend = JSON.stringify({"RecordID from Jobcard":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Aftersales - Create service wash from Job card v2");
+    }
+});
+
