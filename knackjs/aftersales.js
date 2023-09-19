@@ -3380,8 +3380,9 @@ $(document).on('knack-form-submit.view_3047', function(event, view, data) {
 $(document).on('knack-form-submit.view_2352', function(event, view, data) { 
     
     try{
+	    console.log('JS code applied');
         let commandURL = "https://hook.eu1.make.celonis.com/ursfgeixws3xf5cl2j9d1bozxizq7air";
-        let dataToSend = JSON.stringify({"RecordID from Jobcard":data.id});
+        let dataToSend = JSON.stringify({"RecordID":data.id});
 
         var rData = $.ajax({
             url: commandURL,
