@@ -1429,7 +1429,7 @@ $(document).on("knack-scene-render.scene_769", function(event, scene) {
     
     let refreshData = [
       {
-          mainField : 'field_1189', //recall-recheck
+          mainField : 'field_1189', //recall-recheck - field must be empty for refresh to occur
           views:['3116']
       }
     ]
