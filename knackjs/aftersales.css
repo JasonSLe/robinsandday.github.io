@@ -3040,6 +3040,7 @@ p.speech-bubble-inbound-1link {
   margin:1px !important;
   text-wrap: wrap !important;
   display: inline-block!important;
+  left: 20px;
 } 
 
 p.speech-bubble-inbound-1link:before {
@@ -3049,8 +3050,8 @@ p.speech-bubble-inbound-1link:before {
   height: 0px;
   position: absolute;
   border-left: 10px solid transparent;
-  border-right: 10px solid #00aabb;
-  border-top: 10px solid #00aabb;
+  border-right: 10px solid #b356c2;
+  border-top: 10px solid #b356c2;
   border-bottom: 10px solid transparent;
   left: -19px;
   top: 6px;
