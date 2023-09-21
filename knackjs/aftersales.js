@@ -3400,8 +3400,8 @@ $(document).on('knack-form-submit.view_2353', function(event, view, data) {
   $(document).on("knack-scene-render.scene_778", function(event, scene, data) {
   let refreshData = [
     {
-        mainField : 'field_2599', //Service Schedule
-        views:['2352']
+        mainField : 'field_2599', //Warning message
+        views:['2352'] //table view of agreements
     }
   ]
   sceneRefresh(refreshData);
