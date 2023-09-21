@@ -3396,13 +3396,12 @@ $(document).on('knack-form-submit.view_2353', function(event, view, data) {
     }
 });
 
-//refresh Courtesy car Agreement table when warning message shows
-  $(document).on("knack-scene-render.scene_778", function(event, scene, data) {
-  let refreshData = [
-    {
-        mainField : 'field_2599', //Warning message
-        views:['2352'] //table view of agreements
-    }
-  ]
-  sceneRefresh(refreshData);
+// ----------  refresh Enquiry Max Table every 5 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_778', function(event, scene) {
+ recursivecallscene_778();
 });
+
+function recursivecallscene_778(){
+ setTimeout(function () { if($("#view_2352").is(":visible")==true){ Knack.views["view_2352"].model.fetch();recursivecallscene_778();} }, 5000);
+}
