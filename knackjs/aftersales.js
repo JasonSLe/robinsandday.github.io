@@ -3396,3 +3396,13 @@ $(document).on('knack-form-submit.view_2353', function(event, view, data) {
     }
 });
 
+//refresh Courtesy car Agreement table when warning message shows
+  $(document).on("knack-scene-render.scene_778", function(event, scene, data) {
+  let refreshData = [
+    {
+        mainField : 'field_2599', //Service Schedule
+        views:['2352']
+    }
+  ]
+  sceneRefresh(refreshData);
+});
