@@ -3006,7 +3006,7 @@ p.speech-bubble-inbound {
   color:white;
   padding:1%;
   margin:1px !important;
-  right: 19px;
+  right: 1px;
 } 
 
 p.speech-bubble-inbound:before {
