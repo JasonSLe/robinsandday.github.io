@@ -3173,7 +3173,7 @@ div.tooltipDiv {
   background-color: transparent;
 }
 
-/* warranty table to lock headers*/
+/* warranty table to lock headers - JS code needed Ref: line 3413*/
 #view_wrap_3014 {
   overflow: auto !important;
   height: 800px !important;
