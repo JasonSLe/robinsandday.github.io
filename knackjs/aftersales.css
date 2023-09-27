@@ -3173,9 +3173,3 @@ div.tooltipDiv {
   background-color: transparent;
 }
 
-/* Lock warranty Table header*/
-#view_3014 > div.kn-table-wrapper > table > thead {
-position:sticky;
-top: 0px;
-z-index: 5;
-}
