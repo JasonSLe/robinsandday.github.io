@@ -3408,7 +3408,7 @@ function recursivecallscene_778(){
 }
 
 
-/* Sticky Headers on Warranty admin table - this code locks the Table Header */
+/* Sticky Headers on Warranty admin table - this code locks the Table Header - CSS code is needed ref: line 3174*/
 
 $(document).on("knack-view-render.view_3014", function (event, view, data) {
 
