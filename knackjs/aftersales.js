@@ -3406,3 +3406,29 @@ function recursivecallscene_778(){
  setTimeout(function () { if($("#view_2352").is(":visible")==true){ Knack.views["view_2352"].model.fetch();recursivecallscene_778();} }, 1000);
 	 console.log('778 recursive');
 }
+
+
+/* Sticky Headers on Warranty admin table */
+
+$(document).on("knack-view-render.view_3014", function (event, view, data) {
+
+  var v = document.getElementById("view_3014");
+  var w = v.getElementsByClassName("kn-table-wrapper")[0];
+  var t = v.getElementsByTagName("table")[0];
+
+
+  $(w).attr('id', 'view_wrap_3014');
+
+  $(t).attr('id', 'view_table_3014');
+
+  document.getElementById("view_wrap_3014").addEventListener("scroll", function(){
+
+    var translate = "translate(0,"+this.scrollTop+"px)";
+    var myElements = this.querySelectorAll("th");
+
+    for (var i = 0; i < myElements.length; i++) {
+
+      myElements[i].style.transform=translate;
+    }
+  });
+});
