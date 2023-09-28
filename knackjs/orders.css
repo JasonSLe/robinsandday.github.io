@@ -3707,12 +3707,6 @@ color: #FFFFFF;
 /* TCF Pre Sale Pack NOT Required */
 #view_3655 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-detail.field_6505 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
-/* TCF Post Sale Pack */
-#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6418 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
-
-/* TCF Post Sale Pack NOT Required */
-#view_3655 > section > div > div:nth-child(3) > div:nth-child(1) > div > div.kn-detail.field_6764 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
-
 /* Receipt of Deposit */
 #view_3655 > section > div > div:nth-child(4) > div:nth-child(1) > div > div.kn-detail.field_6266 > div.kn-detail-label {border-left: 10px solid #32a1ce;}
 
@@ -3829,6 +3823,12 @@ color: #FFFFFF;
 
 
 /*** ADMIN & MANAGER TO REVIEW ***/
+
+/* TCF Post Sale Pack */
+#view_3655 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6418 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
+
+/* TCF Post Sale Pack NOT Required */
+#view_3655 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6764 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
 
 /* Handover Checklist */
 #view_3973 > section > div > div > div:nth-child(1) > div > div.kn-detail.field_6615 > div.kn-detail-label {border-right: 10px solid #DE3163; border-left: 10px solid #32a1ce;}
