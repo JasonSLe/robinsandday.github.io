@@ -2040,12 +2040,6 @@ $(document).on('knack-form-submit.view_1530', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/0b8ieu2989jnwrdjsvb8r77l499o4cyd", {"Record ID":data.id},"Send Outbound Virtual Reception Text Message")
 });
 
-// Trigger Update To VR (Virtual Reception) Status From SMS Messaging Form
-
-$(document).on('knack-form-submit.view_1530', function(event, view, data) {
-  callPostHttpRequest("https://hook.integromat.com/3b7aqxlblay6r5egi5rev56ql8qiy4g2", {"Record ID":data.id,"SMS Message Sent To Customer":data.field_2123},"Aftersales VR Update SMS Two Way")
-});
-
 //Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564
 $(document).on('knack-form-submit.view_1564', function(event, view, data) { 
     
