@@ -432,18 +432,6 @@ function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
 	
-//Technician Job card Service Hover
-let shownTooltipId = null;
-function serviceVisitsTooltipsTechjobcard(viewId = '3147', fieldId = '325'){
-  //console.log('serviceVisitsTooltips');
-  $('div[id*="tooltip"]').each(function(){
-    $(this).attr("style","background: white; position: fixed; display:none;");
-  });
-  $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
-    //console.log('HIDE AFTER LEAVE')
-    $('div[id="tooltip_'+shownTooltipId+'"]').hide();
-  });
-	
   //console.log('table',$('table[id="serviceVisitsTable"]'));
   //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
   $('div[id="view_'+viewId+'"]').on("mousemove", function (e) {
@@ -520,7 +508,7 @@ function refreshScene24(){
       name : 'Autoline - service visits',
       mainField : 'field_325', //Autoline - service visits tooltips
       views:['3148'],
-      runAfter : serviceVisitsTooltipsTechJobcard
+      runAfter : serviceVisitsTooltips
     },
 	  {	    
       name : 'Recalls',
