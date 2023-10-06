@@ -504,7 +504,13 @@ function refreshScene24(){
       mainField : 'field_325', //Autoline - service visits tooltips
       views:['380'],
       runAfter : serviceVisitsTooltips
-    },{	    
+    },{
+      name : 'Autoline - service visits',
+      mainField : 'field_325', //Autoline - service visits tooltips
+      views:['3148'],
+      runAfter : serviceVisitsTooltips
+    },
+	  {	    
       name : 'Recalls',
       mainField : 'field_70', //Recalls and service shedule check Completed
       views:['329','332']
