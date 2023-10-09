@@ -420,7 +420,7 @@ function formatScene24(){
   //Hide service tooltips field
   $('div[class="field_325"]').hide();
 }
-//Pre-visit job card Hover for service
+
 let shownTooltipId = null;
 function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
   //console.log('serviceVisitsTooltips');
@@ -431,7 +431,7 @@ function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
     //console.log('HIDE AFTER LEAVE')
     $('div[id="tooltip_'+shownTooltipId+'"]').hide();
   });
-	
+
   //console.log('table',$('table[id="serviceVisitsTable"]'));
   //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
   $('div[id="view_'+viewId+'"]').on("mousemove", function (e) {
@@ -467,8 +467,6 @@ $(document).on("knack-scene-render.scene_105", function(event, scene, data) {
     refreshScene24();
   }, 100);
 });
-
-
 
 function refreshScene24(){
   let refreshData = [
@@ -506,13 +504,7 @@ function refreshScene24(){
       mainField : 'field_325', //Autoline - service visits tooltips
       views:['380'],
       runAfter : serviceVisitsTooltips
-    },{
-      name : 'Autoline - service visits',
-      mainField : 'field_325', //Autoline - service visits tooltips
-      views:['3148'],
-      runAfter : serviceVisitsTooltipsTechJobcard
-    },
-	  {	    
+    },{	    
       name : 'Recalls',
       mainField : 'field_70', //Recalls and service shedule check Completed
       views:['329','332']
