@@ -2992,7 +2992,7 @@ $( document ).ready(function() {
 $(".kn-form.kn-view.view_2351 form #field_2338")
 .after( "<p class='typed-chars'>0 out of 400 Characters</p>" );
 
-$(".kn-form.kn-view.view_2351 form #field_1766").on('input',function(e){
+$(".kn-form.kn-view.view_2351 form #field_2388").on('input',function(e){
 var $input = $(this);
 $input.siblings('.typed-chars').text($input.val().length + " out of 400 Characters");
 });
