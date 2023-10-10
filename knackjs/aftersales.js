@@ -3464,5 +3464,5 @@ $(document).on('knack-scene-render.scene_935', function(event, scene) {
 });
 
 function recursivecallscene_935(){
- setTimeout(function () { if($("#view_3126").is(":visible")==true){ Knack.views["view_3126"].model.fetch();recursivecallscene_935();} }, 93500);
+ setTimeout(function () { if($("#view_3126").is(":visible")==true){ Knack.views["view_3126"].model.fetch();recursivecallscene_935();} }, 6000);
 }
