@@ -2037,7 +2037,11 @@ $(document).on('knack-view-render.view_1512', function (event, view, data) {
 // Send Outbound Virtual Reception Text Message
 
 $(document).on('knack-form-submit.view_1530', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/0b8ieu2989jnwrdjsvb8r77l499o4cyd", {"Record ID":data.id},"Send Outbound Virtual Reception Text Message")
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/0b8ieu2989jnwrdjsvb8r77l499o4cyd", {"Record ID":data.id},"Send Outbound Text Message")
+});
+
+$(document).on('knack-form-submit.view_1120', function(event, view, data) {
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/0b8ieu2989jnwrdjsvb8r77l499o4cyd", {"Record ID":data.field_2223, "Source": "View_1120 - Customer Incident Form Outbound Message"},"Send Outbound Message From Customer Incident Form")
 });
 
 //Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564
