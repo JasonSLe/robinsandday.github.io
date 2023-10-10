@@ -3443,3 +3443,15 @@ $(document).on("knack-view-render.view_3014", function (event, view, data) {
     }
   });
 });
+
+
+
+// ----------  Refresh technician MY jobs but not the page itself  ---------- //
+
+$(document).on('knack-scene-render.scene_981', function(event, scene) {
+ recursivecallscene_981();
+});
+
+function recursivecallscene_981(){
+ setTimeout(function () { if($("#view_3086").is(":visible")==true){ Knack.views["view_3086"].model.fetch();recursivecallscene_981();} }, 6000);
+}
