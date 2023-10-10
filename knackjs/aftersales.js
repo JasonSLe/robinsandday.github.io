@@ -3445,24 +3445,3 @@ $(document).on("knack-view-render.view_3014", function (event, view, data) {
 });
 
 
-
-// ----------  Refresh technician v3 MY jobs but not the page itself  ---------- //
-
-$(document).on('knack-scene-render.scene_981', function(event, scene) {
- recursivecallscene_981();
-});
-
-function recursivecallscene_981(){
- setTimeout(function () { if($("#view_3086").is(":visible")==true){ Knack.views["view_3086"].model.fetch();recursivecallscene_981();} }, 6000);
-}
-
-
-// ----------  Refresh technician v2 MY jobs but not the page itself  ---------- //
-
-$(document).on('knack-scene-render.scene_935', function(event, scene) {
- recursivecallscene_935();
-});
-
-function recursivecallscene_935(){
- setTimeout(function () { if($("#view_3126").is(":visible")==true){ Knack.views["view_3126"].model.fetch();recursivecallscene_935();} }, 6000);
-}
