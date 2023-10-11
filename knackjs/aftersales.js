@@ -3444,14 +3444,4 @@ $(document).on("knack-view-render.view_3014", function (event, view, data) {
   });
 });
 
-//refresh tech view v3
 
-$(document).on("knack-scene-render.scene_935", function(event, scene, data) {
-  let refreshData = [
-    {
-        mainField : 'field_2278', //key tag or section
-        views:['3126','2900']
-    }
-  ]
-  sceneRefresh(refreshData);
-});
