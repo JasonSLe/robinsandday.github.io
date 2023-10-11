@@ -3450,7 +3450,7 @@ $(document).on("knack-scene-render.scene_935", function(event, scene, data) {
   let refreshData = [
     {
         mainField : 'field_2278', //key tag or section
-        views:['3126']
+        views:['3126','2900']
     }
   ]
   sceneRefresh(refreshData);
