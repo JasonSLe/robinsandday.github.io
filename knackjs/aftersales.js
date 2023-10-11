@@ -3449,8 +3449,8 @@ $(document).on("knack-view-render.view_3014", function (event, view, data) {
 $(document).on("knack-scene-render.scene_935", function(event, scene, data) {
   let refreshData = [
     {
-        mainField : 'field_72', //Service Schedule
-        views:['2278']
+        mainField : 'field_2278', //key tag or section
+        views:['3126']
     }
   ]
   sceneRefresh(refreshData);
