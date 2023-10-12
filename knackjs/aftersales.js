@@ -3454,17 +3454,6 @@ $(document).on("knack-view-render.view_3014", function (event, view, data) {
 });
 
 
-
-function serviceVisitsTooltips1(viewId = '324', fieldId = '325'){
-	let shownTooltipId = null;
-  //console.log('serviceVisitsTooltips1');
-  $('div[id*="tooltip"]').each(function(){
-    $(this).attr("style","background: black; position: sticky; display:none;");
-  });
-  $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
-    //console.log('HIDE AFTER LEAVE')
-    $('div[id="tooltip_'+shownTooltipId+'"]').hide();
-  });
 	
 //hover for service details for tech view jobcard
 $(document).on('knack-view-render.view_3147', function (event, view, data) {
@@ -3473,6 +3462,6 @@ $(document).on('knack-view-render.view_3147', function (event, view, data) {
     showHideMoreServiceVisits();
   }
   $('div[class="field_325"]').hide();
-  serviceVisitsTooltips1('3147','325');
+  serviceVisitsTooltips('3147','325');
 });
 
