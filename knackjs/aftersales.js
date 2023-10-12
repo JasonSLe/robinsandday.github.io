@@ -3464,7 +3464,7 @@ $(document).on('knack-view-render.view_3147', function (event, view, data) {
 });
 
 function serviceVisitsTooltips1(viewId = '324', fieldId = '325'){
-  //console.log('serviceVisitsTooltips');
+  //console.log('serviceVisitsTooltips1');
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: sticky; display:none;");
   });
