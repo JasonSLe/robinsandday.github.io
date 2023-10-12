@@ -1541,7 +1541,23 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #kn-report-view_3057-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
 #kn-report-view_3057-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
 #kn-report-view_1206-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li.is-active,
-#kn-report-view_1206-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
+#kn-report-view_1206-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_3156 > section > div > div > div:nth-child(1) > div > div.kn-label-top.field_2214 > div,
+#view_3156 > section > div > div > div:nth-child(2) > div > div.kn-label-top.field_1117,
+#view_3139 > section > div > div:nth-child(1) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_2278 > div.kn-detail-label,
+#view_3139 > section > div > div:nth-child(1) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_1118 > div.kn-detail-label,
+#view_3139 > section > div > div:nth-child(1) > div:nth-child(1) > div > div.kn-detail.kn-label-left.field_1121 > div.kn-detail-label,
+#view_3139 > section > div > div:nth-child(1) > div:nth-child(2) > div > div.kn-detail.kn-label-undefined.field_1136 > div.kn-detail-label,
+#view_3139 > section > div > div:nth-child(1) > div:nth-child(2) > div > div.kn-detail.kn-label-undefined.field_1139 > div.kn-detail-label,
+#view_3139 > section > div > div:nth-child(1) > div:nth-child(1) > div > div.kn-detail.kn-label-undefined.field_1368 > div.kn-detail-label,
+#view_3139 > section > div > div:nth-child(2) > div:nth-child(1) > div > div.kn-label-top.field_888 > div,
+#view_3139 > section > div > div:nth-child(2) > div:nth-child(2) > div > div.kn-label-top.field_897 > div,
+#view_3147 > section > div.kn-details-column.first.column.is-horizontal > div > div > div > div.kn-detail.field_303 > div.kn-detail-label,
+#view_3145 > section > div > div:nth-child(1) > div > div > div.kn-detail.field_2047 > div.kn-detail-label,
+#view_3145 > section > div > div:nth-child(2) > div > div > div.kn-label-top.field_1532 > div,
+#view_3145 > section > div > div:nth-child(2) > div > div > div.kn-detail.field_1042 > div.kn-detail-label,
+#view_3145 > section > div > div:nth-child(2) > div > div > div.kn-detail.field_1041 > div.kn-detail-label,
+{
 	background-color: #FFA100;
   	color: #FFFFFF;
   	font-weight: bold;
