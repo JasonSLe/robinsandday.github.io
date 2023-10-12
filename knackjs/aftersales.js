@@ -3454,8 +3454,9 @@ $(document).on("knack-view-render.view_3014", function (event, view, data) {
 });
 
 
-let shownTooltipId = null;
+
 function serviceVisitsTooltips1(viewId = '324', fieldId = '325'){
+	let shownTooltipId = null;
   //console.log('serviceVisitsTooltips1');
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: black; position: sticky; display:none;");
