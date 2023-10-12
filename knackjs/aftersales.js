@@ -3452,20 +3452,33 @@ $(document).on("knack-view-render.view_3014", function (event, view, data) {
     }
   });
 });
-//hover for service table on Tech view job card
-$(document).on('knack-view-render.view_3147', function (event, view, data) {
-  if (document.getElementById("showHideMoreServiceVisits")){
-    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
-    showHideMoreServiceVisits();
-  }
-  $('div[class="field_325"]').hide();
-  serviceVisitsTooltips('3147','325');
-});
 
-  $(document).on('knack-view-render.view_3147', function (event, view, data) {
+
+//hover for service table on Tech view job card
+
+function serviceVisitsTooltips1(viewId = '3147', fieldId = '325'){
+  //console.log('serviceVisitsTooltips');
+  $('div[id*="tooltip"]').each(function(){
+    $(this).attr("style","background: white; position: fixed; display:none;");
+  });
+  $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
+    //console.log('HIDE AFTER LEAVE')
+    $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+  });
+  
+    $(document).on('knack-view-render.view_3147', function (event, view, data) {
     if (document.getElementById("showHideMoreServiceVisits")){
       document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
       showHideMoreServiceVisits();
     }
   });
+  
+   $(document).on('knack-view-render.view_3147', function (event, view, data) {
+  if (document.getElementById("showHideMoreServiceVisits")){
+    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
+    showHideMoreServiceVisits();
+  }
+  $('div[class="field_325"]').hide();
+  serviceVisitsTooltips1('3147','325');
+});
 
