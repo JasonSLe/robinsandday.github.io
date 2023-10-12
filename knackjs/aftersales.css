@@ -66,6 +66,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	text-align: center;
 }
 
+/*Make Reg Number look like reg in technician job card view*/
+
+#view_3156 > section > div > div > div:nth-child(1) > div > div.field_31 > div > span > h2 > strong > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 24px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
 
 
 /* Make Reg number look like REG in David's test layout page*/
