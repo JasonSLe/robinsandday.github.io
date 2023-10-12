@@ -3461,3 +3461,11 @@ $(document).on('knack-view-render.view_3147', function (event, view, data) {
   $('div[class="field_325"]').hide();
   serviceVisitsTooltips('3147','325');
 });
+
+  $(document).on('knack-view-render.view_3147', function (event, view, data) {
+    if (document.getElementById("showHideMoreServiceVisits")){
+      document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
+      showHideMoreServiceVisits();
+    }
+  });
+
