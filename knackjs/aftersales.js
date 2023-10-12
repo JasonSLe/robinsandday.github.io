@@ -3454,9 +3454,10 @@ $(document).on("knack-view-render.view_3014", function (event, view, data) {
 });
 
 //hover for service details for tech view jobcard
-    $(document).on('knack-view-render.view_3147', function (event, view, data) {
-    if (document.getElementById("showHideMoreServiceVisits")){
-      document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
-      showHideMoreServiceVisits();
-    }
-  });
+ $(document).on('knack-view-render.view_3147', function (event, view, data) {
+  if (document.getElementById("showHideMoreServiceVisits")){
+    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
+    showHideMoreServiceVisits();
+  }
+  serviceVisitsTooltips('3147','325');
+});
