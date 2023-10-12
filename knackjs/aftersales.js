@@ -3460,6 +3460,6 @@ $(document).on('knack-view-render.view_3147', function (event, view, data) {
     showHideMoreServiceVisits();
   }
   $('div[class="field_325"]').hide();
-  serviceVisitsTooltips1('3147','325');
+  serviceVisitsTooltips('3147','325');
 });
 
