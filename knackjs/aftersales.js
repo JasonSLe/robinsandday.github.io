@@ -2865,6 +2865,10 @@ $(document).on('knack-view-render.view_2246', function (event, view, data) {
     $('td[class*="field_1532"]').hide(); 
 	 $('th[class="field_2278"]').hide();
     $('td[class*="field_2278"]').hide(); 
+
+	//hide allocate tech
+	$('th[class="field_2411"]').hide();
+    $('td[class*="field_2411"]').hide();
 }); 
 
 
