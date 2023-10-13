@@ -3466,3 +3466,28 @@ $(document).on('knack-view-render.view_3147', function (event, view, data) {
 });
 
 
+//completed by not invoiced jobs - all jobs view
+$(document).on('knack-view-render.view_3168', function (event, view, data) {
+    tooltipsTable('1017','3168','field_1532','field_2220');
+	tooltipsTable('1017','3168','field_1537','field_2213');
+	tooltipsTable('1017','3168','field_2298','field_2272');
+	tooltipsTable('1017','3168','field_2278','field_1118','Tag No: ');
+	
+	     $('th[class="field_2240"]').hide();
+    $('td[class*="field_2240"]').hide();
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide(); 
+	  $('th[class="field_1532"]').hide();
+    $('td[class*="field_1532"]').hide(); 
+	 $('th[class="field_2278"]').hide();
+    $('td[class*="field_2278"]').hide(); 
+}); 
+
+$(document).on('knack-scene-render.scene_1017', function(event, scene) {
+ recursivecallscene_1017();
+});
+
+function recursivecallscene_1017(){
+ setTimeout(function () { if($("#view_3168").is(":visible")==true){ Knack.views["view_3168"].model.fetch();recursivecallscene_1017();} }, 300000);
+	 console.log('1017 recursive');
+}
