@@ -405,7 +405,7 @@ $(document).on('knack-view-render.view_6388', function(event, view, data) {
 });
 
 
-var aftersalesConnectView = [{view:'view_6320',url:'#tech-view2/'},
+var aftersalesConnectView = [{view:'view_6320',url:'#technician-view-my-jobs-v2'},
 {view:'view_5733',url:'#after-sales-vehicle-lookup/'},
 {view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
 {view:'view_5735',url:'#after-sales-vehicle-lookup/check-in/'},
