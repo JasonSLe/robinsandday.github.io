@@ -3934,33 +3934,35 @@ $(document).on('knack-view-render.any', function (event, view, data) {
 });
 
 // Purchase Orders BULK Add Vehicles and Costs to PO
-
 // Code to wait following Form Submission to create vehicles and costs and then refresh the page
 
 $(document).on('knack-form-submit.view_6417', function(event, view, data) { 
-
-
 	setTimeout(function(){ 
 
     	Knack.showSpinner();
 
     }, 0); 
 
-  
-
 	commandURL = "https://hook.eu1.make.celonis.com/p9n26bzq66ow91lzj0yavwghqq3k1cuc?recordid=" + data.id ;
 
-
  	$.get(commandURL, function(data, status){
-
 
       Knack.hideSpinner();
 
       $(".kn-message.success").html("<b>" + data + "</b>");
 
-
     });
 
+});
+
+//****************** Refresh PO Details Scene when Nominal Account Code Mapping Form Submitted ****************//
+
+$(document).on('knack-record-create.view_6418', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 1000);
+
+  Knack.showSpinner();
+  
 });
 
 //NOTIFICATIONS CODE //
