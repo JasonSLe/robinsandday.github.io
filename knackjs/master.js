@@ -3924,6 +3924,45 @@ $(document).on('knack-view-render.any', function (event, view, data) {
   });
 });
 
+$(document).on('knack-view-render.any', function (event, view, data) {
+  //  ---------Auto Capitalise Registration/VIN Input on BULK Vehicles-------------
+  $('input#field_9120').keyup(function() {
+      this.value = this.value.toUpperCase();
+      $(this).css("font-weight", "bold", "important");		// bolder
+      $(this).css("fontSize", "14px", "important");         // bigger
+  });
+});
+
+// Purchase Orders BULK Add Vehicles and Costs to PO
+
+// Code to wait following Form Submission to create vehicles and costs and then refresh the page
+
+$(document).on('knack-form-submit.view_6417', function(event, view, data) { 
+
+
+	setTimeout(function(){ 
+
+    	Knack.showSpinner();
+
+    }, 0); 
+
+  
+
+	commandURL = "https://hook.eu1.make.celonis.com/p9n26bzq66ow91lzj0yavwghqq3k1cuc?recordid=" + data.id ;
+
+
+ 	$.get(commandURL, function(data, status){
+
+
+      Knack.hideSpinner();
+
+      $(".kn-message.success").html("<b>" + data + "</b>");
+
+
+    });
+
+});
+
 //NOTIFICATIONS CODE //
 
 $(document).on('knack-scene-render.scene_1694', function(event, scene) {
