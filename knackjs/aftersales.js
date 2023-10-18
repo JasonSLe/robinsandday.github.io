@@ -2998,7 +2998,7 @@ $(document).on('knack-view-render.view_596', function (event, view, data) {
     $('td[class*="field_2240"]').hide();
 }); 
 
-//Submit form for Vehicle Check-in JOBCARD V2
+/*Submit form for Vehicle Check-in JOBCARD V2 now using form submission in make
 $(document).on('knack-form-submit.view_2351', function(event, view, data) { 
 
   callPostHttpRequest("https://hook.eu1.make.celonis.com/jcvomnieu3i0k2a5bkce88csho75et9s", {"Record ID":data.id, "Summary Of Work That Has Been Booked In": data.field_1116_raw,
@@ -3008,7 +3008,7 @@ $(document).on('knack-form-submit.view_2351', function(event, view, data) {
   "Use Autoline - Customer Phone 1":data.field_782_raw, "Use Autoline - Customer Phone 2":data.field_783_raw, "Use Autoline - Customer Phone 3":data.field_784_raw, "Use Autoline - Customer Phone 3":data.field_785_raw},"Submit form for Vehicle Check-in")
 
 });
-
+*/
 //******* Live Character Count on Aftersales Vehicle Check In for WIP Notes Tab JOB CARD V2 *******
 $(document).on("knack-view-render.view_2351", function(event, view, data) {
 $( document ).ready(function() {
