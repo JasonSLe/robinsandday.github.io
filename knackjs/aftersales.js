@@ -1885,7 +1885,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       	createCookie('RDDigitalAftersalesVersion',appVersionID,365);
     }
     
-   	if (!versionTimeCheck || (Date.now()-versionTimeCheck)>600000){ 
+   if (!versionTimeCheck || (Date.now()-versionTimeCheck)>600000){ 
       createCookie('RDDigitalAftersalesVersionTime',Date.now(),365);
       console.log('check version');
       var appVersionID = getVersionFromApify();
@@ -1897,6 +1897,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     }
   
   //version check every day
+  /*
   var versionRefreshTime = readCookie('RDDigitalAftersalesVersionRefreshTime');
   if (!versionRefreshTime){
     createCookie('RDDigitalAftersalesVersionRefreshTime',Date.now(),1);
@@ -1910,7 +1911,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       createCookie('RDDigitalAftersalesVersionRefreshTime',Date.now(),1);
       window.location.reload(false);
     }
-  }
+  }*/
 });
 
 //HIDE DATA FROM TYRE LOOK UP 

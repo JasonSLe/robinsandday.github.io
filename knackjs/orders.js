@@ -2793,7 +2793,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
     }
   
   //version check every day
-  var versionRefreshTime = readCookie('RDDigitalOrdersVersionRefreshTime');
+  /*var versionRefreshTime = readCookie('RDDigitalOrdersVersionRefreshTime');
   if (!versionRefreshTime){
     createCookie('RDDigitalOrdersVersionRefreshTime',Date.now(),1);
   } else {
@@ -2806,7 +2806,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
       createCookie('RDDigitalOrdersVersionRefreshTime',Date.now(),1);
       window.location.reload(false);
     }
-  }
+  }*/
 });
 
 // function to create the weeb hooks for knack
