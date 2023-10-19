@@ -20,9 +20,11 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
           console.log('orderNumber',orderNumber);
           let carImageUrl = $(this).find('td[data-field-key="field_5063"] img').attr('src');
           let franchise = '';
-          if (carImageUrl.includes('peugeot')) franchise = 'Peugeot';
-          if (carImageUrl.includes('citroen')) franchise = 'Citroen';
-          if (carImageUrl.includes('vauxhall')) franchise = 'Vauxhall';
+          if (carImageUrl){
+            if (carImageUrl.includes('peugeot')) franchise = 'Peugeot';
+            if (carImageUrl.includes('citroen')) franchise = 'Citroen';
+            if (carImageUrl.includes('vauxhall')) franchise = 'Vauxhall';
+          }
           console.log('franchise', franchise);
           if($(this).find('div[id="dodp"]').length){
               //This is fixed URL of Apify storage, where the Actors are pushing dates when records are checked, we only add Order number parsed from App webpage for given row
