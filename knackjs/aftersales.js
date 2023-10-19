@@ -2868,8 +2868,8 @@ $(document).on('knack-view-render.view_2246', function (event, view, data) {
 
 	/*hide allocate tech
 	$('th[class="field_2411"]').hide();
-    $('td[class*="field_2411"]').hide();
-}); */
+    $('td[class*="field_2411"]').hide();*/
+}); 
 
 
 //completed by not invoiced jobs - all jobs view
@@ -3253,8 +3253,8 @@ $(document).on('knack-view-render.view_2686', function (event, view, data) {
 		 $('th[class="field_2411"]').hide();
     $('td[class*="field_2411"]').hide(); 
 
-	
-});*/ 
+*/	
+});
 
 $(document).on('knack-scene-render.scene_753', function(event, scene) {
  recursivecallscene_753();
@@ -3282,8 +3282,8 @@ $(document).on('knack-view-render.view_2722', function (event, view, data) {
     $('td[class*="field_2278"]').hide(); 
 	/*hide allocate tech
 	$('th[class="field_2411"]').hide();
-    $('td[class*="field_2411"]').hide(); 
-}); */
+    $('td[class*="field_2411"]').hide(); */
+}); 
 
 $(document).on('knack-scene-render.scene_755', function(event, scene) {
  recursivecallscene_755();
@@ -3310,8 +3310,8 @@ $(document).on('knack-view-render.view_2892', function (event, view, data) {
     $('td[class*="field_2278"]').hide(); 
 	/*hide allocate tech
 	$('th[class="field_2411"]').hide();
-    $('td[class*="field_2411"]').hide();
-}); */
+    $('td[class*="field_2411"]').hide();*/
+}); 
 
 $(document).on('knack-scene-render.scene_934', function(event, scene) {
  recursivecallscene_934();
