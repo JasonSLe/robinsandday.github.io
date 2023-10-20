@@ -499,8 +499,6 @@ var toggleHeaderVisibility = function(toWhatState = null) {
 
 var dateTimeOfFirstRun = null;
 
-console.log('TEST SOMETHING');
-
 $(document).on('knack-scene-render.any', function(event, scene) {
   console.log('knack-scene-render.any')
 
