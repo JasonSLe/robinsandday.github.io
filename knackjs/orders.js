@@ -2770,6 +2770,8 @@ function getVersionFromApify(){
   }
 }
 
+var dateTimeOfFirstRun = null;
+
 $(document).on('knack-scene-render.any', function(event, scene) {
    //**************************************************************************************************************
 //****** Hynek's Code to check version on user Browser with what is stored in Apify. If version is different, 
@@ -2794,7 +2796,19 @@ $(document).on('knack-scene-render.any', function(event, scene) {
           window.location.reload(false);
       }
     }
-  
+    
+  //version check every day
+  if (!dateTimeOfFirstRun){
+    dateTimeOfFirstRun = new Date();
+  }
+  console.log('dateTimeOfFirstRun',dateTimeOfFirstRun);
+  let today = new Date();
+  let isToday = (today.toDateString() == dateTimeOfFirstRun.toDateString());
+  if (!isToday){
+    dateTimeOfFirstRun = new Date();
+    window.location.reload(false);
+  }
+
   //version check every day
   /*var versionRefreshTime = readCookie('RDDigitalOrdersVersionRefreshTime');
   if (!versionRefreshTime){
