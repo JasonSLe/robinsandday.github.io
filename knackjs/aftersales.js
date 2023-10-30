@@ -2597,6 +2597,9 @@ $(document).on('knack-view-render.view_2191', function (event, view, data) {
     //document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
 	  console.log("akif");
 	  console.log(sceneId);
+	  sceneId="105";
+	  
+	  console.log(sceneId);
 	  console.log(tooltipDiv);
     console.log(document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv));
     
