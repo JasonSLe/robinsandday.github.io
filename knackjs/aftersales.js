@@ -423,7 +423,7 @@ function formatScene24(){
 
 let shownTooltipId = null;
 function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
-  //console.log('serviceVisitsTooltips');
+  console.log('serviceVisitsTooltips');
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: fixed; display:none;");
   });
