@@ -2595,7 +2595,7 @@ $(document).on('knack-view-render.view_2191', function (event, view, data) {
     tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
     //console.log('view div',document.querySelector('div[id="kn-scene_'+sceneId+'"]'));
     //document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
-	  console.log("akif");
+	  /*console.log("akif");
 	  console.log(sceneId);
 	  // sceneId="105";
 	  
@@ -2606,7 +2606,7 @@ $(document).on('knack-view-render.view_2191', function (event, view, data) {
 	  console.log(tooltipDiv);
 	  
     console.log(document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv));
-    
+    */
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
       //console.log('HIDE AFTER LEAVE')
       $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').hide();
