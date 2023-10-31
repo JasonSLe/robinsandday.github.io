@@ -2604,8 +2604,8 @@ $(document).on('knack-view-render.view_2191', function (event, view, data) {
 	  console.log("tooltipFieldId: "+tooltipFieldId);
 	  
 	  console.log(tooltipDiv);*/
-	  
-    console.log(document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv));
+	  console.log(sceneId);
+    document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv)
 
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
       //console.log('HIDE AFTER LEAVE')
