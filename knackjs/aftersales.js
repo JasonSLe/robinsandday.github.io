@@ -3556,6 +3556,6 @@ $(document).on('knack-form-submit.view_3088', function(event, view, data) {
             async: false
         }).responseText;
     }catch(exception){
-        sendErrorToIntegromat(exception, "Aftersales - Create service wash from Job card v2");
+        sendErrorToIntegromat(exception, "Technician to remove from list and send to service wash");
     }
 });
