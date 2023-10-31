@@ -3546,7 +3546,7 @@ $(document).on('knack-form-submit.view_3088', function(event, view, data) {
     try{
 
         let commandURL = "https://hook.eu1.make.celonis.com/go73sbo0qfmia3ky1vs7wz2nh8e82wwa";
-        let dataToSend = JSON.stringify({"RecordID":data.id});
+        let dataToSend = JSON.stringify({"RecordID":data.id, "UID":data.field_2190, "Service Wash Required?":data.field_2703});
 
         var rData = $.ajax({
             url: commandURL,
