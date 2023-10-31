@@ -2608,7 +2608,9 @@ $(document).on('knack-view-render.view_2191', function (event, view, data) {
     if ($('div[id="kn-scene_'+sceneId+'"]').length!==0){
       document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv)
     } else {
+      console.log('scene',sceneId,'not found');
       let currentScene = $('div[id*="kn-scene_"]').eq(0).attr('id');
+      console.log('currentScene',currentScene);
       document.querySelector('div[id="'+currentScene+'"]').appendChild(tooltipDiv)
     }
     
