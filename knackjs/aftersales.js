@@ -2605,8 +2605,13 @@ $(document).on('knack-view-render.view_2191', function (event, view, data) {
 	  
 	  console.log(tooltipDiv);*/
 	  console.log(sceneId);
-    document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv)
-
+    if ($('div[id="kn-scene_'+sceneId+'"]').length!==0){
+      document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv)
+    } else {
+      let currentScene = $('div[id*="kn-scene_"]').eq(0).attr('id');
+      document.querySelector('div[id="'+currentScene+'"]').appendChild(tooltipDiv)
+    }
+    
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
       //console.log('HIDE AFTER LEAVE')
       $('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').hide();
