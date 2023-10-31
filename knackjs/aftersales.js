@@ -3540,4 +3540,22 @@ $(document).on('knack-view-render.view_3147', function (event, view, data) {
   serviceVisitsTooltips('3147','325');
 });
 
+  //technician to unlink from jobcard and send to valet
+$(document).on('knack-form-submit.view_3088', function(event, view, data) { 
+    
+    try{
 
+        let commandURL = "https://hook.eu1.make.celonis.com/ursfgeixws3xf5cl2j9d1bozxizq7air";
+        let dataToSend = JSON.stringify({"RecordID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Aftersales - Create service wash from Job card v2");
+    }
+});
