@@ -196,7 +196,7 @@ function sceneRefresh(refreshData, startTime = null, runCounter = 1, stats = nul
           stats.finishTime = new Date();
           stats.duration = (stats.finishTime - stats.startTime)/1000;
           console.log('stats', stats);
-          saveStats(stats);
+          //saveStats(stats);
           for (one of refreshData){
             if (!one.runAfterDone){
               for (oneView of one.views){
