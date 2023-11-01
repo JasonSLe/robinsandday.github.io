@@ -3564,7 +3564,10 @@ $(document).on('knack-form-submit.view_3088', function(event, view, data) {
 $(document).on('knack-view-render.view_3188', function (event, view, data) {
   var formSubmit = document.querySelector('div[class="kn-submit"]>button');
 
+  console.log(formSubmit);
+
   formSubmit.onsubmit = function() {
+    console.log('submited')
     return false;
   }
 })
