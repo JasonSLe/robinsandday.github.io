@@ -3577,9 +3577,3 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
 
   }
 });
-
-
-//trigger bot for exit survey (job card v2 - Check out via tablet)
-$(document).on('knack-form-submit.view_2364', function(event, view, data) {
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/l033812xruob5c383h0qlfz59oebzwak", {"Record ID":data.id, "Source": "View_2364 - Satisfaction check(tablet)"},"Aftersales - customer satisfaction exit survey to trigger customer satisfaction check email to manager if below 8")
-
