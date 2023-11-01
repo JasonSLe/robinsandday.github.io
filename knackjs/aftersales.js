@@ -3560,20 +3560,20 @@ $(document).on('knack-form-submit.view_3088', function(event, view, data) {
     }
 });
 
+ //PROPERTY AND EVENTS FOR ONLINE/OFFLINE DETECTION
+ var isOnline = true;
+ window.addEventListener('online', () => isOnline = true);
+ window.addEventListener('offline', () => isOnline = false);
+
 //offline form testing
 $(document).on('knack-view-render.view_3188', function (event, view, data) {
-  var formSubmit = document.querySelector('div[id="view_3188"]>form');//'div[class="kn-submit"]>button');
-
-  console.log(formSubmit);
-
-  formSubmit.onsubmit = function() {
-    console.log('submited')
-    return false;
-  }
-
   var formButton = document.querySelector('div[class="kn-submit"]>button');
   formButton.onclick = function() {
     console.log('clicked')
-    return false;
+    if (!isOnline){
+      alert('You are offline, please go online before submiting the form.');
+      return false;
+    }
+
   }
 })
