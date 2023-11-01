@@ -3570,4 +3570,10 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     console.log('submited')
     return false;
   }
+
+  var formButton = document.querySelector('div[class="kn-submit"]>button');
+  formButton.onclick = function() {
+    console.log('clicked')
+    return false;
+  }
 })
