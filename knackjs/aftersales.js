@@ -3559,3 +3559,12 @@ $(document).on('knack-form-submit.view_3088', function(event, view, data) {
         sendErrorToIntegromat(exception, "Technician to remove from list and send to service wash");
     }
 });
+
+//offline form testing
+$(document).on('knack-view-render.view_3188', function (event, view, data) {
+  var formSubmit = document.querySelector('div[class="kn-submit"]>button');
+
+  formSubmit.onsubmit = function() {
+    return false;
+  }
+})
