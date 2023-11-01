@@ -3577,3 +3577,24 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
 
   }
 });
+
+//*Trigger Aftersales - Exit Survey Email From Insecure (Customer Phone) from Jobcard v2
+$(document).on('knack-form-submit.view_2364', function(event, view, data) { 
+    
+    try{
+        
+
+        let commandURL = "https://hook.eu1.make.celonis.com/l033812xruob5c383h0qlfz59oebzwak";
+        let dataToSend = JSON.stringify({"Record ID":data.id});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Aftersales - Exit Survey Email from Insecure (customer phone)");
+    }
+});
