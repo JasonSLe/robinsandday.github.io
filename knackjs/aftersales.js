@@ -453,7 +453,7 @@ function serviceVisitsTooltips(viewId = '324', fieldId = '325', tooltipPlace = '
         //body.offsetWidth
         let tooltipLeft = document.getElementById('serviceVisitsTable').getBoundingClientRect().left-250;
         let tooltipTop = document.documentElement.scrollTop + 50;
-        if (tooltipLeft<document.documentElement.scrollTop + 50) tooltipLeft = document.documentElement.scrollTop + 50;
+        if (tooltipLeft<50) tooltipLeft = 50;
         if (tooltipPlace==='rightBottomOnMouse'){
           tooltipLeft = e.pageX - $('div[id="tooltip_'+trUnderMouse.id+'"]').width();
           console.log('tooltipLeft',tooltipLeft);
