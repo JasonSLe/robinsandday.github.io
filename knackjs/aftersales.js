@@ -422,7 +422,7 @@ function formatScene24(){
 }
 
 let shownTooltipId = null;
-function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
+function serviceVisitsTooltips(viewId = '324', fieldId = '325', tooltipPlace = 'asBefore'){
   console.log('serviceVisitsTooltips');
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: fixed; display:none;");
@@ -449,7 +449,11 @@ function serviceVisitsTooltips(viewId = '324', fieldId = '325'){
       if (trUnderMouse && trUnderMouse.id){
         $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
         //$('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
-        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: document.getElementById('serviceVisitsTable').getBoundingClientRect().left-250, top: 50 + document.documentElement.scrollTop });
+        let tooltipLeft = document.getElementById('serviceVisitsTable').getBoundingClientRect().left-250;
+        let tooltipTop = document.documentElement.scrollTop + 50;
+        if (tooltipLeft<50) tooltipLeft = 50;
+        console.log('tooltipWidth',$('div[id="tooltip_'+trUnderMouse.id+'"]').width);
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: tooltipLeft, top: tooltipTop});
         if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
             $('div[id="tooltip_'+shownTooltipId+'"]').hide();
         }
