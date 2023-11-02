@@ -456,8 +456,10 @@ function serviceVisitsTooltips(viewId = '324', fieldId = '325', tooltipPlace = '
         if (tooltipLeft<document.documentElement.scrollTop + 50) tooltipLeft = document.documentElement.scrollTop + 50;
         if (tooltipPlace==='rightBottomOnMouse'){
           tooltipLeft = e.pageX - $('div[id="tooltip_'+trUnderMouse.id+'"]').width();
-          if (tooltipLeft<document.documentElement.scrollTop + 10) tooltipLeft = document.documentElement.scrollTop + 10;
+          console.log('tooltipLeft',tooltipLeft);
+          if (tooltipLeft<10) tooltipLeft = 10;
           tooltipTop = e.pageY - $('div[id="tooltip_'+trUnderMouse.id+'"]').height();
+          console.log('tooltipTop',tooltipTop);
           if (tooltipTop<document.documentElement.scrollTop + 10) tooltipTop = document.documentElement.scrollTop + 10;
         }
         //console.log('tooltipWidth',$('div[id="tooltip_'+trUnderMouse.id+'"]').width());
