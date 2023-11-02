@@ -449,9 +449,17 @@ function serviceVisitsTooltips(viewId = '324', fieldId = '325', tooltipPlace = '
       if (trUnderMouse && trUnderMouse.id){
         $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
         //$('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
+        //const body = document.querySelector("body");
+        //body.offsetWidth
         let tooltipLeft = document.getElementById('serviceVisitsTable').getBoundingClientRect().left-250;
         let tooltipTop = document.documentElement.scrollTop + 50;
         if (tooltipLeft<50) tooltipLeft = 50;
+        if (tooltipPlace==='rightBottomOnMouse'){
+          tooltipLeft = e.pageX - $('div[id="tooltip_'+trUnderMouse.id+'"]').width();
+          if (tooltipLeft<10) tooltipLeft = 10;
+          tooltipTop = e.pageY - $('div[id="tooltip_'+trUnderMouse.id+'"]').height();
+          if (tooltipTop<10) tooltipTop = 10;
+        }
         console.log('tooltipWidth',$('div[id="tooltip_'+trUnderMouse.id+'"]').width());
         $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: tooltipLeft, top: tooltipTop});
         if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
@@ -3541,7 +3549,7 @@ $(document).on('knack-view-render.view_3147', function (event, view, data) {
     showHideMoreServiceVisits();
   }
   $('div[class="field_325"]').hide();
-  serviceVisitsTooltips('3147','325');
+  serviceVisitsTooltips('3147','325','rightBottomOnMouse');
 });
 
   //technician to unlink from jobcard and send to valet
