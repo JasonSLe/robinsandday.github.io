@@ -3649,6 +3649,26 @@ $(document).on('knack-form-submit.view_2364', function(event, view, data) {
     }
 });
 
+ //technician to unlink from jobcard and send to valet
+$(document).on('knack-form-submit.view_3216', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.eu1.make.celonis.com/go73sbo0qfmia3ky1vs7wz2nh8e82wwa";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "UID":data.field_2190, "Service Wash Required?":data.field_2703});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Technician to remove from list and send to service wash");
+    }
+});
+
 
 //*Trigger Aftersales - Exit Survey Email From FOLLOW UP from Jobcard v2
 $(document).on('knack-form-submit.view_2881', function(event, view, data) { 
