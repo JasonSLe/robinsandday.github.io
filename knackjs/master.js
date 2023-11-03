@@ -417,7 +417,7 @@ $(document).on('knack-view-render.view_6449', function(event, view, data) {
 });
 
 //Collection/ Delivery Driver Page
-$(document).on('knack-view-render.view_6379', function(event, view, data) {
+$(document).on('knack-view-render.view_6462', function(event, view, data) {
   var token = Knack.getUserAttributes().values["field_6440"];
  $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales#cd-check-in/?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
@@ -446,7 +446,7 @@ var aftersalesConnectView = [{view:'view_6320',url:'#technician-view-my-jobs-v2'
 /*WarrantyAdmin*/{view:'view_6344',url:'#after-sales-vehicle-lookup/warranty-administration/'},
 /*TECH V3*/{view:'view_6379',url:'#after-sales-vehicle-lookup/technician-view-my-jobs-v2/'},
 /*Daily activity snapshot*/{view:'view_6388',url:'#aftersales-service-reporting/activity-snapshot/'},		
-/*Colection/Delivery Driver*/ {view:'view_6379',url:'#cd-check-in/'},
+/*Colection/Delivery Driver*/ {view:'view_6462',url:'#cd-check-in/'},
 {view:'view_6170',url:'#aftersales-service-reporting/manager-tour-reporting/'}]; ///add scene numbers as necessary
 
 aftersalesConnectView.forEach(aftersalesConnectViewFunction);
