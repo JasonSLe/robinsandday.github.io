@@ -416,6 +416,12 @@ $(document).on('knack-view-render.view_6449', function(event, view, data) {
   $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/digital-orders?token='+encodeURIComponent(token) + '#unsold-stock-reporting/" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+//Collection/ Delivery Driver Page
+$(document).on('knack-view-render.view_6379', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+ $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales#cd-check-in/?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 var aftersalesConnectView = [{view:'view_6320',url:'#technician-view-my-jobs-v2'},
 {view:'view_5733',url:'#after-sales-vehicle-lookup/'},
 {view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
@@ -439,7 +445,8 @@ var aftersalesConnectView = [{view:'view_6320',url:'#technician-view-my-jobs-v2'
 /*myjobs*/{view:'view_6343',url:'#after-sales-vehicle-lookup/my-jobs2/'},
 /*WarrantyAdmin*/{view:'view_6344',url:'#after-sales-vehicle-lookup/warranty-administration/'},
 /*TECH V3*/{view:'view_6379',url:'#after-sales-vehicle-lookup/technician-view-my-jobs-v2/'},
-/*Daily activity snapshot*/{view:'view_6388',url:'#aftersales-service-reporting/activity-snapshot/'},		    
+/*Daily activity snapshot*/{view:'view_6388',url:'#aftersales-service-reporting/activity-snapshot/'},		
+/*Colection/Delivery Driver*/ {view:'view_6379',url:'#cd-check-in/'},
 {view:'view_6170',url:'#aftersales-service-reporting/manager-tour-reporting/'}]; ///add scene numbers as necessary
 
 aftersalesConnectView.forEach(aftersalesConnectViewFunction);
