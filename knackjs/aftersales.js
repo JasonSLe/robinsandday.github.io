@@ -68,10 +68,9 @@ var submitUserLoginForm = function() {
     console.log('different user',$('a[class="kn-log-out"]').length);
 
     setTimeout(function () { console.log('different user T',$('a[class="kn-log-out"]').length); $('a[class="kn-log-out"]').eq(0).click(); }, 1000);
-    
   }
 
-  if ($('[id="email"]').length===0){ 
+  if ($('[id="email"]').length===0){
     return;
   }
     
