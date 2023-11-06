@@ -56,6 +56,7 @@ var submitUserLoginForm = function() {
     return;
   }
 
+  console.log('token',token);
   token = atob(token);
   if (!token.includes('#')){
     console.log('Wrong token');
