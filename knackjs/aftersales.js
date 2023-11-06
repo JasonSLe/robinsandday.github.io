@@ -66,7 +66,7 @@ var submitUserLoginForm = function() {
 
   if (Knack.session.user && userName2!==Knack.session.user.values.email.email){
     console.log('different user');
-    setTimeout(function () { $('a[class="kn-log-out"]').eq(0).click(); setTimeout(function () { document.location = url; }, 1000);}, 1000);
+    setTimeout(function () { $('a[class="kn-log-out"]').eq(0).click(); setTimeout(function () { console.log('navigate',url); document.location = url; }, 1000);}, 1000);
   }
 
   if ($('[id="email"]').length===0){
