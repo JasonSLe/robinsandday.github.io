@@ -56,7 +56,6 @@ var submitUserLoginForm = function() {
     return;
   }
 
-  console.log('token',token);
   token = atob(token);
   if (!token.includes('#')){
     console.log('Wrong token');
@@ -65,6 +64,7 @@ var submitUserLoginForm = function() {
   let userName2 = token.split('#')[0];
   let password = token.split('#')[1];
   console.log('userName2',userName2)
+  console.log('userKnack',Knack.session.user.values.email.email)
 
   if ($('[id="email"]').length===0){ 
     return;
