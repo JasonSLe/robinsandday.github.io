@@ -65,9 +65,8 @@ var submitUserLoginForm = function() {
   let password = token.split('#')[1];
 
   if (Knack.session.user && userName2!==Knack.session.user.values.email.email){
-    console.log('different user',$('a[class="kn-log-out"]').length);
-
-    setTimeout(function () { console.log('different user T',$('a[class="kn-log-out"]').length); $('a[class="kn-log-out"]').eq(0).click(); }, 1000);
+    console.log('different user');
+    setTimeout(function () { $('a[class="kn-log-out"]').eq(0).click(); setTimeout(function () { document.location = url; }, 1000);}, 1000);
   }
 
   if ($('[id="email"]').length===0){
