@@ -63,8 +63,11 @@ var submitUserLoginForm = function() {
   }
   let userName2 = token.split('#')[0];
   let password = token.split('#')[1];
-  console.log('userName2',userName2)
-  console.log('userKnack',Knack.session.user.values.email.email)
+
+  if (userName2!==Knack.session.user.values.email.email){
+    console.log('different user');
+    $('a[class="kn-log-out"]').eq(0).click()
+  }
 
   if ($('[id="email"]').length===0){ 
     return;
