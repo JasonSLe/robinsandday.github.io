@@ -1222,7 +1222,7 @@ $(document).on('knack-form-submit.view_654', function(event, view, data) {
 try{
 
     let commandURL = "https://hook.integromat.com/s8j9klwniouvc81742i1hy8yxtc822ut";
-    let dataToSend = JSON.stringify({"Record ID":data.id, "Manager's Notes":data.field_1015_raw, "userName": Knack.getUserAttributes().name, "NOM_WIP_REG":data.field_978_raw, "Nom_wip":data.field_558_raw});
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Manager's Notes":data.field_1015_raw, "userName": Knack.getUserAttributes().name, "NOM_WIP_REG":data.field_2190_raw, "Nom_wip":data.field_558_raw});
 
     var rData = $.ajax({
         url: commandURL,
@@ -1249,8 +1249,44 @@ try{
        async: false
     }).responseText;
 }
-});
+});  
+  
+      
+//trigger aftersales update notes triggered from C/D Driver where customer signs work 
 
+$(document).on('knack-form-submit.view_3221', function(event, view, data) {
+
+try{
+
+    let commandURL = "https://hook.integromat.com/s8j9klwniouvc81742i1hy8yxtc822ut";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Manager's Notes":data.field_1015_raw, "userName": Knack.getUserAttributes().name, "NOM_WIP_REG":data.field_2190_raw, "Nom_wip":data.field_558_raw});
+
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;    
+}catch(exception){
+    console.log("error");
+    var today = new Date();
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
+    let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+    let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Scenario DESCRIPTION what for the error webhook",
+    "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+    var rData = $.ajax({
+       url: commandURL,
+       type: 'POST',
+       contentType: 'application/json',
+       data: dataToSend,
+       async: false
+    }).responseText;
+}
+});  
 
 // ----------  refresh status of tarot upload ----------
 
@@ -3619,6 +3655,26 @@ $(document).on('knack-form-submit.view_2364', function(event, view, data) {
     }
 });
 
+ //technician to unlink from jobcard and send to valet
+$(document).on('knack-form-submit.view_3216', function(event, view, data) { 
+    
+    try{
+
+        let commandURL = "https://hook.eu1.make.celonis.com/go73sbo0qfmia3ky1vs7wz2nh8e82wwa";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "UID":data.field_2190, "Service Wash Required?":data.field_2703});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Technician to remove from list and send to service wash");
+    }
+});
+
 
 //*Trigger Aftersales - Exit Survey Email From FOLLOW UP from Jobcard v2
 $(document).on('knack-form-submit.view_2881', function(event, view, data) { 
@@ -3640,3 +3696,18 @@ $(document).on('knack-form-submit.view_2881', function(event, view, data) {
         sendErrorToIntegromat(exception, "Aftersales - Exit Survey Email from Insecure (customer phone)");
     }
 });
+
+  //refresh  new tech page every 5 seconds
+
+$(document).on('knack-scene-render.scene_981', function(event, scene) {
+ recursivecallscene_981();
+ recursivecallscene_981a();
+});
+
+function recursivecallscene_981(){
+ setTimeout(function () { if($("#view_3223").is(":visible")==true){ Knack.views["view_3223"].model.fetch();recursivecallscene_981();} }, 300000);
+}
+
+function recursivecallscene_981a(){
+ setTimeout(function () { if($("#view_3086").is(":visible")==true){ Knack.views["view_3086"].model.fetch();recursivecallscene_981a();} }, 300000);
+}
