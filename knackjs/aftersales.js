@@ -53,23 +53,21 @@ var submitUserLoginForm = function() {
   const token = getTokenFromURL(url);
 
   if (!token){
-    console.log('token not in url')
     return;
   }
+
+  token = atob(token);
+  if (!token.includes('#')){
+    console.log('Wrong token');
+    return;
+  }
+  let userName2 = token.split('#')[0];
+  let password = token.split('#')[1];
+  console.log('userName2',userName2)
 
   if ($('[id="email"]').length===0){ 
     return;
   }
-    
-    console.log('token', token, 'url',url);
-    
-    token = atob(token);
-    if (!token.includes('#')){
-      console.log('Wrong token');
-      return;
-    }
-    let userName2 = token.split('#')[0];
-    let password = token.split('#')[1];
     
     //type userName from url, my secret password and click login
     //if auth successfully then it shows the app, otherwise login screen
