@@ -48,13 +48,19 @@ function getTokenFromURL(url){
 }
 
 var submitUserLoginForm = function() {
+  let url = window.location.href;
+    
+  const token = getTokenFromURL(url);
+
+  if (!token){
+    console.log('token not in url')
+    return;
+  }
+
   if ($('[id="email"]').length===0){ 
     return;
   }
-    var url = window.location.href;
     
-    var token = getTokenFromURL(url);
-
     console.log('token', token, 'url',url);
     
     token = atob(token);
