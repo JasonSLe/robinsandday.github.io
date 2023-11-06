@@ -3690,3 +3690,20 @@ $(document).on('knack-form-submit.view_2881', function(event, view, data) {
         sendErrorToIntegromat(exception, "Aftersales - Exit Survey Email from Insecure (customer phone)");
     }
 });
+
+  //refresh  new tech page every 5 seconds
+
+$(document).on('knack-scene-render.scene_981', function(event, scene) {
+ recursivecallscene_981();
+ recursivecallscene_981a();
+});
+
+function recursivecallscene_981(){
+ setTimeout(function () { if($("#view_3223").is(":visible")==true){ Knack.views["view_3223"].model.fetch();recursivecallscene_981();} }, 300000);
+	 console.log('981 recursive');
+}
+
+function recursivecallscene_981a(){
+ setTimeout(function () { if($("#view_3086").is(":visible")==true){ Knack.views["view_3086"].model.fetch();recursivecallscene_981a();} }, 300000);
+	 console.log('981a recursive');
+}
