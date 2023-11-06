@@ -50,7 +50,7 @@ function getTokenFromURL(url){
 var submitUserLoginForm = function() {
   let url = window.location.href;
     
-  const token = getTokenFromURL(url);
+  let token = getTokenFromURL(url);
 
   if (!token){
     return;
