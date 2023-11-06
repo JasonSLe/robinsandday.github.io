@@ -65,8 +65,8 @@ var submitUserLoginForm = function() {
   let password = token.split('#')[1];
 
   if (Knack.session.user && userName2!==Knack.session.user.values.email.email){
-    console.log('different user');
-    $('a[class="kn-log-out"]').eq(0).click()
+    console.log('different user',$('a[class="kn-log-out"]').length);
+    $('a[class="kn-log-out"]').eq(0).click();
   }
 
   if ($('[id="email"]').length===0){ 
