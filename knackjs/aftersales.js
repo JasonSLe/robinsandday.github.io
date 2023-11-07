@@ -529,7 +529,7 @@ function refreshScene24(){
     },{	    
       name : 'Recalls',
       mainField : 'field_70', //Recalls and service shedule check Completed
-      views:['329','332']
+      views:['329','332','3276']
     }
   ]
   sceneRefresh(refreshData);
