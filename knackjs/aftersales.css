@@ -1570,6 +1570,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 /*live job card making fields transparent*/
+#view_3278 > section > div > div > div > div > div.kn-detail.field_303 > div.kn-detail-label,
 #view_1225 > section > div > div > div > div > div.kn-label-top.field_897 > div,
 #view_1225 > section > div > div > div > div > div.kn-detail.field_441 > div.kn-detail-label,
 #view_1225 > section > div > div > div > div > div.kn-detail.field_985 > div.kn-detail-label,
