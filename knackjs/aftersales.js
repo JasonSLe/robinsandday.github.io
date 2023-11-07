@@ -3723,5 +3723,5 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
     showHideMoreServiceVisits();
   }
   $('div[class="field_325"]').hide();
-  serviceVisitsTooltips('3278','325','rightBottomOnMouse');
+  serviceVisitsTooltips('3278','325');
 });
