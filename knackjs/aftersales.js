@@ -524,7 +524,7 @@ function refreshScene24(){
     },{
       name : 'Autoline - service visits',
       mainField : 'field_325', //Autoline - service visits tooltips
-      views:['380'],
+      views:['380','3279'],
       runAfter : serviceVisitsTooltips
     },{	    
       name : 'Recalls',
