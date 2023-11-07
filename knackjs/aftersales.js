@@ -499,7 +499,7 @@ function refreshScene24(){
     },{
       name : 'Autoline - Vehicle summary',
       mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
-      views:['325','375','324','327','3274'],
+      views:['325','375','324','327','3274','3275'],
     },{
       name : 'EMAC Service plan',
       mainField : 'field_312', //EMAC - service plan Summary = Service plan
