@@ -516,7 +516,7 @@ function refreshScene24(){
     },{
       name : 'VHC',
       mainField : 'field_302', //VHC - exists = VHC
-      views:['328']
+      views:['328','3280']
     },{
       name : 'Autoline - email valid',
       mainField : 'field_316', //Autoline - is email valid - last Autoline save
