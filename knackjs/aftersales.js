@@ -3767,7 +3767,7 @@ function serviceVisitsTooltips(viewId = '3278', fieldId = '325', tooltipPlace = 
   setTimeout(function(){
     $('div[class="field_'+fieldId+'"]').show();
   }, 100);
-}
+});
 //for prepick job view (show/hide more service
  $(document).on('knack-view-render.view_3278', function (event, view, data) {
     if (document.getElementById("showHideMoreServiceVisits")){
