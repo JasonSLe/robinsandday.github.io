@@ -3716,7 +3716,8 @@ function recursivecallscene_981a(){
 
 //for Pre-pick job view hover function on service 
 function serviceVisitsTooltips(viewId = '3278', fieldId = '325', tooltipPlace = 'asBefore'){
-  console.log('serviceVisitsTooltips',tooltipPlace);
+  console.log("servicevisists code applied")
+	console.log('serviceVisitsTooltips',tooltipPlace);
   $('div[id*="tooltip"]').each(function(){
     $(this).attr("style","background: white; position: fixed; display:none;");
   });
