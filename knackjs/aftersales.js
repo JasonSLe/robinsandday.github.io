@@ -2117,7 +2117,7 @@ $(document).on('knack-form-submit.view_1120', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/0b8ieu2989jnwrdjsvb8r77l499o4cyd", {"Customer Incident Form Record ID":data.id, "Outbound Message":data.field_2682, "Origin": "View_1120 - Customer Incident Form"},"Send Outbound Message From Customer Incident Form")
 });
 
-//Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564
+/*Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564
 $(document).on('knack-form-submit.view_1564', function(event, view, data) { 
     
  if (data.field_2042 === "No")	 {
@@ -2138,9 +2138,9 @@ $(document).on('knack-form-submit.view_1564', function(event, view, data) {
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564");
     }}
 });
-
+*/
 //Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556
-$(document).on('knack-form-submit.view_1556', function(event, view, data)  { 
+/*$(document).on('knack-form-submit.view_1556', function(event, view, data)  { 
     
  if (data.field_2042 === "No")	
  { try{
@@ -2160,9 +2160,9 @@ $(document).on('knack-form-submit.view_1556', function(event, view, data)  {
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556 ");
     }}
 });
-
+*/
 //Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_1516
-$(document).on('knack-form-submit.view_1516', function(event, view, data) { 
+/*$(document).on('knack-form-submit.view_1516', function(event, view, data) { 
     
  if (data.field_2042 === "No")	
  { try{
@@ -2182,7 +2182,7 @@ $(document).on('knack-form-submit.view_1516', function(event, view, data) {
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_1516");
     }}
 });
-
+*/
 
 /*Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654
 $(document).on('knack-form-submit.view_654', function(event, view, data) { 
@@ -3045,7 +3045,7 @@ try{
 }
 
 
- if (data.field_2042 === "No")	
+/* if (data.field_2042 === "No")	
  { try{
         let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
         let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042, "Source": "View_2361 - triggered from manager's note"});
@@ -3059,7 +3059,7 @@ try{
         }).responseText;
     }catch(exception){
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersalses job card v2- View_2361");
-    }}
+    }}*/
 
 });
 
