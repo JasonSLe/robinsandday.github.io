@@ -3726,8 +3726,7 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
   serviceVisitsTooltips('3278','325','tooltipTop');
 });
 
-/*Prevents clicking off a Popup Modal
-$(document).on(‘knack-scene-render.scene_753’, function(event, scene) {
-$(’.kn-modal-bg’).off(‘click’);
+ //Prevents clicking off a Popup Modal
+$(document).on(‘knack-scene-render.scene_769’, function(event, scene) {
+('.kn-modal-bg').off(‘click’);
 });
-*/
