@@ -3727,6 +3727,6 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
 });
 
 //Prevents clicking off a Popup Modal
-$(document).on(‘knack-scene-render.scene_769’, function(event, scene) {
+$(document).on(‘knack-scene-render.scene_753’, function(event, scene) {
 $(’.kn-modal-bg’).off(‘click’);
 });
