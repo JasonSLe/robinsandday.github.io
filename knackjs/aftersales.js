@@ -2184,7 +2184,7 @@ $(document).on('knack-form-submit.view_1516', function(event, view, data) {
 });
 
 
-//Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654
+/*Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654
 $(document).on('knack-form-submit.view_654', function(event, view, data) { 
     
  if (data.field_2042 === "No")	
@@ -2204,7 +2204,7 @@ $(document).on('knack-form-submit.view_654', function(event, view, data) {
     }catch(exception){
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654");
     }}
-});
+});*/
 
 /*trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button
 $(document).on('knack-view-render.view_1512', function (event, view, data) {
