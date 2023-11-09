@@ -495,11 +495,11 @@ function refreshScene24(){
     {
       name : 'Autoline - Owner',
       mainField : 'field_278', //Autoline - type of bussines - first Autoline save
-      views:['377','326','344']
+      views:['377','326','344','3273']
     },{
       name : 'Autoline - Vehicle summary',
       mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
-      views:['325','375','324','327'],
+      views:['325','375','324','327','3274','3275'],
     },{
       name : 'EMAC Service plan',
       mainField : 'field_312', //EMAC - service plan Summary = Service plan
@@ -516,7 +516,7 @@ function refreshScene24(){
     },{
       name : 'VHC',
       mainField : 'field_302', //VHC - exists = VHC
-      views:['328']
+      views:['328','3280']
     },{
       name : 'Autoline - email valid',
       mainField : 'field_316', //Autoline - is email valid - last Autoline save
@@ -524,12 +524,12 @@ function refreshScene24(){
     },{
       name : 'Autoline - service visits',
       mainField : 'field_325', //Autoline - service visits tooltips
-      views:['380'],
+      views:['380','3279'],
       runAfter : serviceVisitsTooltips
     },{	    
       name : 'Recalls',
       mainField : 'field_70', //Recalls and service shedule check Completed
-      views:['329','332']
+      views:['329','332','3276','3277']
     }
   ]
   sceneRefresh(refreshData);
@@ -2117,7 +2117,7 @@ $(document).on('knack-form-submit.view_1120', function(event, view, data) {
   callPostHttpRequest("https://hook.eu1.make.celonis.com/0b8ieu2989jnwrdjsvb8r77l499o4cyd", {"Customer Incident Form Record ID":data.id, "Outbound Message":data.field_2682, "Origin": "View_1120 - Customer Incident Form"},"Send Outbound Message From Customer Incident Form")
 });
 
-//Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564
+/*Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564
 $(document).on('knack-form-submit.view_1564', function(event, view, data) { 
     
  if (data.field_2042 === "No")	 {
@@ -2138,9 +2138,9 @@ $(document).on('knack-form-submit.view_1564', function(event, view, data) {
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1564");
     }}
 });
-
+*/
 //Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556
-$(document).on('knack-form-submit.view_1556', function(event, view, data)  { 
+/*$(document).on('knack-form-submit.view_1556', function(event, view, data)  { 
     
  if (data.field_2042 === "No")	
  { try{
@@ -2160,9 +2160,9 @@ $(document).on('knack-form-submit.view_1556', function(event, view, data)  {
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales - View_1556 ");
     }}
 });
-
+*/
 //Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_1516
-$(document).on('knack-form-submit.view_1516', function(event, view, data) { 
+/*$(document).on('knack-form-submit.view_1516', function(event, view, data) { 
     
  if (data.field_2042 === "No")	
  { try{
@@ -2182,9 +2182,9 @@ $(document).on('knack-form-submit.view_1516', function(event, view, data) {
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_1516");
     }}
 });
+*/
 
-
-//Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654
+/*Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654
 $(document).on('knack-form-submit.view_654', function(event, view, data) { 
     
  if (data.field_2042 === "No")	
@@ -2204,7 +2204,7 @@ $(document).on('knack-form-submit.view_654', function(event, view, data) {
     }catch(exception){
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales managers notes Vehicle on-site - View_654");
     }}
-});
+});*/
 
 /*trigger to Send Data When Vehicle Is Checked Out From Digital Aftersales Wip on site check out button
 $(document).on('knack-view-render.view_1512', function (event, view, data) {
@@ -3045,7 +3045,7 @@ try{
 }
 
 
- if (data.field_2042 === "No")	
+/* if (data.field_2042 === "No")	
  { try{
         let commandURL = "https://hook.eu1.make.celonis.com/e8f4buzy7rhplrdf1rgmclqkudy2mcno";
         let dataToSend = JSON.stringify({"Record ID":data.id, "WIP":data.field_441, "POS":data.field_443, "Onsite":data.field_2042, "Source": "View_2361 - triggered from manager's note"});
@@ -3059,7 +3059,7 @@ try{
         }).responseText;
     }catch(exception){
         sendErrorToIntegromat(exception, "Trigger to Send Data When Vehicle Is Checked Out From Digital Aftersalses job card v2- View_2361");
-    }}
+    }}*/
 
 });
 
@@ -3713,3 +3713,16 @@ function recursivecallscene_981(){
 function recursivecallscene_981a(){
  setTimeout(function () { if($("#view_3086").is(":visible")==true){ Knack.views["view_3086"].model.fetch();recursivecallscene_981a();} }, 300000);
 }
+
+
+  //hover for service details for pre-pick job view
+$(document).on('knack-view-render.view_3278', function (event, view, data) {
+	console.log("hover active")
+  if (document.getElementById("showHideMoreServiceVisits")){
+    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
+    showHideMoreServiceVisits();
+  }
+  $('div[class="field_325"]').hide();
+  serviceVisitsTooltips('3278','325','tooltipTop');
+});
+

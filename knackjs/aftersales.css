@@ -611,6 +611,16 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	text-align: center;
 }
 
+#view_3273 > section > div > div > div > div > div > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 24px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
 #view_1563 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div > div > span > h2 > span {
 	background-color: #FFE74C;
   	border-radius: 10px;
@@ -1560,6 +1570,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 }
 
 /*live job card making fields transparent*/
+#view_3278 > section > div > div > div > div > div.kn-detail.field_303 > div.kn-detail-label,
 #view_1225 > section > div > div > div > div > div.kn-label-top.field_897 > div,
 #view_1225 > section > div > div > div > div > div.kn-detail.field_441 > div.kn-detail-label,
 #view_1225 > section > div > div > div > div > div.kn-detail.field_985 > div.kn-detail-label,
@@ -2174,23 +2185,23 @@ div.tooltipDiv {
 }
  
 .Modal_for_scene_769 {
-    width: 90%;
-    height: 90vh;
+    width: 99%;
+    height: 99vh;
 }
 
 .Modal_for_scene_762 {
-    width: 90%;
-    height: 90vh;
+    width: 99%;
+    height: 99vh;
 }
 
 .Modal_for_scene_779 {
-    width: 90%;
-    height: 90vh;
+    width: 99%;
+    height: 99vh;
 }
 
 .Modal_for_scene_963 {
-    width: 90%;
-    height: 90vh;
+    width: 99%;
+    height: 99vh;
 }
 
 /*Formatting For Licence Verification Page*/
