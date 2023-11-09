@@ -38,6 +38,10 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
               }, async:true, context:this, cache: false, timeout: 15000});
               
           };
+
+          if ($(this).find('div[id="doGEFCO"]').text()!==''){
+            
+          }
       }
     } catch (e){
       console.log(e);
