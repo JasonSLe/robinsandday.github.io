@@ -2910,7 +2910,6 @@ $(document).on('knack-view-render.view_1904', function (event, view, data) {
 $(document).on('knack-view-render.view_1906', function(event, view, data) {
   
   setTimeout(function () { location.hash = location.hash + "#"; }, 300000);
- console.log('sceneRefresh_1906');
   Knack.showSpinner();
   
 });
@@ -2919,7 +2918,7 @@ $(document).on('knack-view-render.view_1906', function(event, view, data) {
 $(document).on('knack-view-render.view_1916', function(event, view) {
   //get the vin value from the table
  const UID = $(".col-4").text().trim()
-  console.log('Webhook applied5');
+ // console.log('Webhook applied5');
  // trigger a webhook from a action link - Aftersales - update live individual wip from Reg & Status Lookup for Vehicles Onsite
 
     if ($('div[class="kn-view kn-table view_1916"]')){
@@ -2985,7 +2984,6 @@ $(document).on('knack-scene-render.scene_1017', function(event, scene) {
 
 function recursivecallscene_1017(){
  setTimeout(function () { if($("#view_3168").is(":visible")==true){ Knack.views["view_3168"].model.fetch();recursivecallscene_1017();} }, 300000);
-	 console.log('1017 recursive');
 }
 
 
@@ -3246,7 +3244,6 @@ $(document).on('knack-view-render.view_2478', function (event, view, data) {
 // ------------ Refresh Off-site jobs in ONE Table (workshop/CA view)-----------------------//
 $(document).on('knack-scene-render.scene_755', function(event, scene) {
  recursivecallscene_755();
- console.log('sceneRefresh_755');
  
 });
 
@@ -3351,7 +3348,7 @@ $(document).on('knack-scene-render.scene_753', function(event, scene) {
 
 function recursivecallscene_753(){
  setTimeout(function () { if($("#view_2686").is(":visible")==true){ Knack.views["view_2686"].model.fetch();recursivecallscene_753();} }, 300000);
-	 console.log('753 recursive');
+	 
 }
 
 //Workshop Controller all in one table (Off-site jobs)
@@ -3408,7 +3405,7 @@ $(document).on('knack-scene-render.scene_934', function(event, scene) {
 
 function recursivecallscene_934(){
  setTimeout(function () { if($("#view_2892").is(":visible")==true){ Knack.views["view_2892"].model.fetch();recursivecallscene_934();} }, 300000);
-	 console.log('934 recursive');
+	
 }
 
 // Trigger Licence Link - Customer Manually Enters Driving Licence
@@ -3459,7 +3456,6 @@ $(document).on('knack-scene-render.scene_935', function(event, scene) {
 
 function recursivecallscene_935(){
  setTimeout(function () { if($("#view_2900").is(":visible")==true){ Knack.views["view_2900"].model.fetch();recursivecallscene_935();} }, 5000);
-	 console.log('935 recursive');
 }
 
 $(document).on('knack-scene-render.scene_935', function(event, scene) {
@@ -3532,7 +3528,7 @@ $(document).on('knack-form-submit.view_3047', function(event, view, data) {
 $(document).on('knack-form-submit.view_2353', function(event, view, data) { 
     
     try{
-	    console.log('JS code applied');
+	    
         let commandURL = "https://hook.eu1.make.celonis.com/ursfgeixws3xf5cl2j9d1bozxizq7air";
         let dataToSend = JSON.stringify({"RecordID":data.id});
 
@@ -3556,7 +3552,6 @@ $(document).on('knack-scene-render.scene_778', function(event, scene) {
 
 function recursivecallscene_778(){
  setTimeout(function () { if($("#view_2352").is(":visible")==true){ Knack.views["view_2352"].model.fetch();recursivecallscene_778();} }, 1000);
-	 console.log('778 recursive');
 }
 
 
