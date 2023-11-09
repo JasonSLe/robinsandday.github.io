@@ -3223,7 +3223,6 @@ $(document).on('knack-view-render.view_2881', function (event, view, data) {
 // ------------ Refresh ONSITE jobs in ONE Table (workshop/CA view)-----------------------//
 $(document).on('knack-scene-render.scene_761', function(event, scene) {
  recursivecallscene_761();
- console.log('sceneRefresh_761');
  
 });
 
