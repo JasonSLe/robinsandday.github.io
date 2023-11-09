@@ -3720,3 +3720,25 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
   serviceVisitsTooltips('3278','325','tooltipTop');
 });
 
+
+//trigger service wash off trigger an action for Today's jobs
+$(document).on('knack-view-render.view_3293', function (event, view, data) { 
+console.log("trigger is on")
+ if ($('div[class="kn-table kn-view view_3293"]')){
+      let rows = $('div[class="kn-table kn-view view_3293"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/4w3cn2lcxhem6tp9l7dfbtc9r1sc8h6g", {"recordId":cell, "Scenario":"https://eu1.make.celonis.com/186/scenarios/21062/edit" },"https://eu1.make.celonis.com/186/scenarios/21062/edit");
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[3].onclick = createClickHandler(currentRow);
+        }
+      }
+    });
+});
