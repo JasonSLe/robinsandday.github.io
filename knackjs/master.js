@@ -3531,9 +3531,9 @@ $(document).on('knack-form-submit.view_3280', function(event, view, data) {
 });
 
 // Used Stock Management - Auto Price Settings Updated - Update Advert Price
-//$(document).on('knack-form-submit.view_5354', function(event, view, data) { 
-//  callPostHttpRequest("https://hook.integromat.com/bn722cnc3pyfuhbfxug1v8hbyozs2rzd", {"Record ID":data.id},"Used Stock Management - Auto Price Settings Updated - Update Advert Price")
-//});
+$(document).on('knack-form-submit.view_5354', function(event, view, data) { 
+  callPostHttpRequest("https://hook.integromat.com/bn722cnc3pyfuhbfxug1v8hbyozs2rzd", {"Record ID":data.id},"Used Stock Management - Auto Price Settings Updated - Update Advert Price")
+});
 
 
 /***** THIRD PARTY PURCHASING TOOL *****/
