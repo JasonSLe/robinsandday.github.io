@@ -643,14 +643,14 @@ body {
 }
 
 #view_2875 > div > a.kn-link.kn-link-6.kn-button {
-	background-color: #FFA100;
+	background-color: #228B22;
   	color: #FFFFFF;
   	font-weight: bold;
   	box-shadow:         3px 3px #ccc;
 }
 
 #view_2875 > div > a:hover.kn-link.kn-link-6.kn-button {
-	background-color: #D18400;
+	background-color: #0e800e;
   	color: #FFFFFF;
   	font-weight: bold;
   	transition-property: color;
