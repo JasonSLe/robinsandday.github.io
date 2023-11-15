@@ -5,6 +5,9 @@ function pad(n) {return n < 10 ? "0"+n : n;}
 function dateToGB(dateobj){
   return pad(dateobj.getDate())+"/"+pad(dateobj.getMonth()+1)+"/"+dateobj.getFullYear();
 }
+function dateTimeToGB(dateobj){
+  return pad(dateobj.getDate())+"/"+pad(dateobj.getMonth()+1)+"/"+dateobj.getFullYear()+' '+dateobj.toLocaleTimeString("en-GB");
+}
 
 // Listen for the list page view
 $(document).on('knack-records-render.view_2157', function(event, view, records) {
@@ -59,7 +62,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
           if ($(this).find('div[id="doGEFCO"]').text()!==''){
             let r = obtCarsJ.find(el => el.orderNumber === orderNumber);
             if (r){
-              $(this).find('div[id="doGEFCO"]').parent().append('<b>OBT Checked:</b><br />'+dateToGB(new Date(r.obtChecked)))
+              $(this).find('div[id="doGEFCO"]').parent().append('<b>OBT Checked:</b><br />'+dateTimeToGB(new Date(r.obtChecked)))
               console.log(orderNumber,r);
             }
           }
