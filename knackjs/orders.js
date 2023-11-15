@@ -2,6 +2,10 @@
 // Apify dates of data checking download Added by HH on 01052019***********************************************************************************
 // ************************************************************************************************************************************************
 
+function dateToGB(dateobj){
+  return pad(dateobj.getDate())+"/"+pad(dateobj.getMonth()+1)+"/"+dateobj.getFullYear();
+}
+
 // Listen for the list page view
 $(document).on('knack-records-render.view_2157', function(event, view, records) {
   // Do something after the records render
@@ -55,7 +59,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
           if ($(this).find('div[id="doGEFCO"]').text()!==''){
             let r = obtCarsJ.find(el => el.orderNumber === orderNumber);
             if (r){
-              $(this).find('div[id="doGEFCO"]').parent().append('<b>OBT Checked:</b><br />'+r.obtChecked)
+              $(this).find('div[id="doGEFCO"]').parent().append('<b>OBT Checked:</b><br />'+dateToGB(new Date(r.obtChecked)))
               console.log(orderNumber,r);
             }
           }
