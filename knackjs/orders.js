@@ -55,6 +55,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
           if ($(this).find('div[id="doGEFCO"]').text()!==''){
             let r = obtCarsJ.find(el => el.orderNumber === orderNumber);
             if (r){
+              $(this).find('div[id="doGEFCO"]').parent().append('<b>OBT Checked:</b><br />'+r.obtChecked)
               console.log(orderNumber,r);
             }
           }
