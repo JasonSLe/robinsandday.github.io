@@ -8,7 +8,20 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
   //2console.log(records.length);
   //alert('listener for records, # of records is: ' + records.length);
   //Go through all rows
-  
+  var obtCarsUrl = 'https://api.apify.com/v2/key-value-stores/QL8ARHwdiFEykNjg9/records/carsChecked';
+  var obtCars = $.ajax({
+    type: "GET",
+    url: obtCarsUrl,
+    cache: false,
+    async: false
+  }).responseText;
+  var obtCarsJ = null;
+  try {
+    obtCarsJ = JSON.parse(obtCars);
+  } catch (ex){
+    console.log('obtCarsJ not loaded')
+  }
+
   $('tbody tr').each(function(){ 
       //Check if the row has field for the date - it should be by all when it is updated
       try {
@@ -40,7 +53,10 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
           };
 
           if ($(this).find('div[id="doGEFCO"]').text()!==''){
-            
+            let r = obtCarsJ.find(el => el.orderNumber === orderNumber);
+            if (r){
+              console.log(orderNumber,r);
+            }
           }
       }
     } catch (e){
