@@ -429,7 +429,7 @@ $(document).on('knack-view-render.view_6483', function(event, view, data) {
 });
 
 var aftersalesConnectView = [{view:'view_6320',url:'#technician-view-my-jobs-v2'},
-{view:'view_6483',url:'#all-jobs/workshop-control/'},
+{view:'view_6483',url:'#workshop-control/'},
 {view:'view_5733',url:'#after-sales-vehicle-lookup/'},
 {view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
 {view:'view_5735',url:'#after-sales-vehicle-lookup/check-in/'},
