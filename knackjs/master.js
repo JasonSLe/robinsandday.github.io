@@ -422,7 +422,14 @@ $(document).on('knack-view-render.view_6462', function(event, view, data) {
  $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales#cd-check-in/?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });
 
+//Workshop controller page
+$(document).on('knack-view-render.view_6483', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+ $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales#workshop-controller/?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 var aftersalesConnectView = [{view:'view_6320',url:'#technician-view-my-jobs-v2'},
+{view:'view_6483',url:'#workshop-controller'},
 {view:'view_5733',url:'#after-sales-vehicle-lookup/'},
 {view:'view_5734',url:'#after-sales-vehicle-lookup/pre-visit/'},
 {view:'view_5735',url:'#after-sales-vehicle-lookup/check-in/'},
