@@ -3720,3 +3720,68 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
   serviceVisitsTooltips('3278','325','tooltipTop');
 });
 
+//TEST
+
+$(document).on("knack-scene-render.scene_762", function (event, scene) {
+  Knack.fn.hideExpand("view_2321"); //VIEWID YOU WANT TO COLLAPSE
+});
+
+//PLUGIN - DONT CHANGE THIS CODE
+
+Knack.fn = Knack.fn || {};
+Knack.fn.hideExpand = (viewKey) => {
+  Knack.$(`#${viewKey} .expandBtn`).remove();
+  Knack.$(`#${viewKey} .kn-title`).prepend(
+    '<i class="fa fa-plus toggleBtn hidden"></i>'
+  );
+  Knack.$(`#${viewKey} section`).hide();
+  Knack.$(`#${viewKey} .kn-table-wrapper`).hide();
+  Knack.$(`#${viewKey} .kn-records-nav`).hide();
+  Knack.$(`#${viewKey} .toggleBtn`).on("click", function () {
+    let classes = Knack.$(this).attr("class").split(/\s+/);
+    if (classes.indexOf("hidden") === -1) {
+      //hide it
+      const $section = Knack.$(this).parent().parent().siblings("section");
+      const $table = Knack.$(this)
+        .parent()
+        .parent()
+        .siblings(".kn-table-wrapper");
+      if ($section.length) {
+        $section.hide();
+      } else if ($table.length) {
+        const $navFilters = Knack.$(this)
+          .parent()
+          .parent()
+          .siblings(".kn-records-nav");
+        $table.hide();
+        $navFilters.hide();
+      }
+      Knack.$(this).addClass("hidden");
+      Knack.$(this).removeClass("fa-minus");
+      Knack.$(this).addClass("fa-plus");
+    } else {
+      //show it
+      const $section = Knack.$(this).parent().parent().siblings("section");
+      const $table = Knack.$(this)
+        .parent()
+        .parent()
+        .siblings(".kn-table-wrapper");
+      if ($section.length) {
+        $section.show();
+      } else if ($table.length) {
+        const $navFilters = Knack.$(this)
+          .parent()
+          .parent()
+          .siblings(".kn-records-nav");
+        $table.show();
+        $navFilters.show();
+      }
+      Knack.$(this).removeClass("hidden");
+      Knack.$(this).removeClass("fa-plus");
+      Knack.$(this).addClass("fa-minus");
+    }
+  });
+};
+
+//END CODE
+
