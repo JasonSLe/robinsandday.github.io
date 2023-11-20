@@ -1939,7 +1939,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   	//version check on Apify
   	var versionTimeCheck = readCookie('RDDigitalAftersalesVersionTime');
   	var versionC = readCookie('RDDigitalAftersalesVersion');
-  	console.log('versionC',versionC);
+  	//console.log('versionC',versionC);
     if (!versionC){
       	console.log('set cookie');
       	createCookie('RDDigitalAftersalesVersion',appVersionID,365);
@@ -1960,7 +1960,7 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   if (!dateTimeOfFirstRun){
     dateTimeOfFirstRun = new Date();
   }
-  console.log('dateTimeOfFirstRun',dateTimeOfFirstRun);
+  //console.log('dateTimeOfFirstRun',dateTimeOfFirstRun);
   let today = new Date();
   let isToday = (today.toDateString() == dateTimeOfFirstRun.toDateString());
   if (!isToday){
@@ -2647,29 +2647,20 @@ $(document).on('knack-view-render.view_2191', function (event, view, data) {
     $('th[class="'+tooltipFieldId+'"]').hide();
     $('td[class*="'+tooltipFieldId+'"]').hide();
 
-    let tooltipDiv = document.createElement('div');
-    tooltipDiv.setAttribute("id", "tooltipDiv_"+viewId+'_'+tooltipFieldId);
-    tooltipDiv.setAttribute("class", "tooltipDiv");
-    tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
-    //console.log('view div',document.querySelector('div[id="kn-scene_'+sceneId+'"]'));
-    //document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
-	  /*console.log("akif");
-	  console.log(sceneId);
-	  // sceneId="105";
-	  
-	  console.log(sceneId);
-	  console.log("viewId: "+viewId);
-	  console.log("tooltipFieldId: "+tooltipFieldId);
-	  
-	  console.log(tooltipDiv);*/
-	  console.log(sceneId);
-    if ($('div[id="kn-scene_'+sceneId+'"]').length!==0){
-      document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv)
-    } else {
-      console.log('scene',sceneId,'not found');
-      let currentScene = $('div[id*="kn-scene_"]').eq(0).attr('id');
-      console.log('currentScene',currentScene);
-      document.querySelector('div[id="'+currentScene+'"]').appendChild(tooltipDiv)
+    if ($('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').length===0){
+      let tooltipDiv = document.createElement('div');
+      tooltipDiv.setAttribute("id", "tooltipDiv_"+viewId+'_'+tooltipFieldId);
+      tooltipDiv.setAttribute("class", "tooltipDiv");
+      tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
+  
+      if ($('div[id="kn-scene_'+sceneId+'"]').length!==0){
+        document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv)
+      } else {
+        console.log('scene',sceneId,'not found');
+        let currentScene = $('div[id*="kn-scene_"]').eq(0).attr('id');
+        console.log('currentScene',currentScene);
+        document.querySelector('div[id="'+currentScene+'"]').appendChild(tooltipDiv)
+      }
     }
     
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
@@ -3322,12 +3313,12 @@ function hidePhotoApp(){
 
 //Workshop Controller all in one table (all jobs)
 $(document).on('knack-view-render.view_2686', function (event, view, data) {
-    tooltipsTable('753','2686','field_1532','field_2220');
+  tooltipsTable('753','2686','field_1532','field_2220');
 	tooltipsTable('753','2686','field_1537','field_2213');
 	tooltipsTable('753','2686','field_2298','field_2272');
 	tooltipsTable('753','2686','field_2278','field_1118','Tag No: ');
 	
-	     $('th[class="field_2240"]').hide();
+	  $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide(); 
