@@ -4440,14 +4440,14 @@ $(document).on('knack-form-submit.view_3447', function(event, view, data) {
 
 // ----------  refresh Valet worklist Table every 60 seconds but not the page itself  ----------
 
-$(document).on('knack-scene-render.scene_1387', function(event, scene) {
+/*$(document).on('knack-scene-render.scene_1387', function(event, scene) {
  recursivecallscene_1387();
 });
 
 function recursivecallscene_1387(){
  setTimeout(function () { if($("#view_4515").is(":visible")==true){ Knack.views["view_4515"].model.fetch();recursivecallscene_1387();} }, 100000);
 }
-
+*/
 //Send Data When Valet is started for service wash
 $(document).on('knack-form-submit.view_4706', function(event, view, data) { 
 	
