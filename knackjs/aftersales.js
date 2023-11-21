@@ -3699,6 +3699,15 @@ function recursivecallscene_981a(){
  setTimeout(function () { if($("#view_3086").is(":visible")==true){ Knack.views["view_3086"].model.fetch();recursivecallscene_981a();} }, 300000);
 }
 
+// refresh workshop table v1
+$(document).on('knack-scene-render.scene_1050', function(event, scene) {
+ recursivecallscene_1050();
+});
+
+function recursivecallscene_1050(){
+ setTimeout(function () { if($("#view_3307").is(":visible")==true){ Knack.views["view_3307"].model.fetch();recursivecallscene_1050();} }, 300000);
+	 
+}
 
   //hover for service details for pre-pick job view
 $(document).on('knack-view-render.view_3278', function (event, view, data) {
@@ -3710,3 +3719,5 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
   $('div[class="field_325"]').hide();
   serviceVisitsTooltips('3278','325','tooltipTop');
 });
+
+
