@@ -3800,10 +3800,10 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide();
    	
-	  
-    $('div[id="view_3474"] table>tbody>tr').each(function(){
-      $(this).find('td[data-field-key="field_2213"]').attr('data-tooltip',getFieldForRowID('view_3474','field_1537',$(this).attr('id')));
-      $(this).find('td[data-field-key="field_2213"]').addClass('tooltip-top');
+	tooltipsTable('1098','3474','field_1537','field_2213');  
+//    $('div[id="view_3474"] table>tbody>tr').each(function(){
+  //    $(this).find('td[data-field-key="field_2213"]').attr('data-tooltip',getFieldForRowID('view_3474','field_1537',$(this).attr('id')));
+    //  $(this).find('td[data-field-key="field_2213"]').addClass('tooltip-top');
 	    
     });
 	
