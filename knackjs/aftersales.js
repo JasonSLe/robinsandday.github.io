@@ -3791,3 +3791,20 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
   serviceVisitsTooltips('3278','325','tooltipTop');
 });
 
+//hover for labour details on workshop POT (MOT Table)
+   $(document).on('knack-view-render.view_3474', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	  
+    $('div[id="view_3474"] table>tbody>tr').each(function(){
+      $(this).find('td[data-field-key="field_2213"]').attr('data-tooltip',getFieldForRowID('view_3474','field_1537',$(this).attr('id')));
+      $(this).find('td[data-field-key="field_2213"]').addClass('tooltip-top');
+	    
+    });
+	
+	});
