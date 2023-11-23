@@ -3817,4 +3817,8 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
 
 	    
     });
-	
+	//auto refresh for C/D Driver pick up and return table
+function recursivecallscene_1031(){
+ setTimeout(function () { if($("#view_3218").is(":visible")==true){ Knack.views["view_3218"].model.fetch();recursivecallscene_1031();} }, 30000);
+ setTimeout(function () { if($("#view_3269").is(":visible")==true){ Knack.views["view_3269"].model.fetch();recursivecallscene_1031();} }, 30000);
+}
