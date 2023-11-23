@@ -4517,3 +4517,9 @@ function recursivecallscene_1387(){
  setTimeout(function () { if($("#view_6466").is(":visible")==true){ Knack.views["view_6466"].model.fetch();recursivecallscene_1387();} }, 30000);
 }
 
+//refresh other washes every 5 minutes
+function recursivecallscene_2021(){
+ setTimeout(function () { if($("#view_6364").is(":visible")==true){ Knack.views["view_6364"].model.fetch();recursivecallscene_2021();} }, 30000);
+ setTimeout(function () { if($("#view_6361").is(":visible")==true){ Knack.views["view_6361"].model.fetch();recursivecallscene_2021();} }, 30000);
+}
+
