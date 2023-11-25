@@ -3711,6 +3711,7 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
             return response.blob();
           })
           .then(function(blob) {
+            alert(blob);
             let fileId = uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg');
             alert(fileId);
             $('input[imageToSaveUrl]').eq(i).val(fileId);
