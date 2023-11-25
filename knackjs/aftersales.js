@@ -3313,6 +3313,13 @@ function recursivecallscene_755(){
  setTimeout(function () { if($("#view_2478").is(":visible")==true){ Knack.views["view_2478"].model.fetch();recursivecallscene_755();} }, 300000);
 }
 
+$(document).on('knack-view-render.view_3188', function (event, view, data) {
+  embedPhotoApp();
+  $('div[id="view_3188"] h3').on("click",function(){
+    showPhotoApp(this);
+  });
+}); 
+
 $(document).on('knack-view-render.view_3008', function (event, view, data) {
   embedPhotoApp();
   $('div[id="view_3008"] img').on("click",function(){
