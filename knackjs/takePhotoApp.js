@@ -445,6 +445,7 @@ takePhotoButton.onclick = takePhoto;
 
     switch (appSettings.actionAfterPhoto){
       case 'none':
+        alert('here am I')
         afterConfirmPhoto()
         break;
       case 'readable':
