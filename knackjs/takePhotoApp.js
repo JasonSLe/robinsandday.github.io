@@ -449,6 +449,7 @@ takePhotoButton.onclick = takePhoto;
 
     switch (appSettings.actionAfterPhoto){
       case 'none':
+        $("#cameraFrontpic").show();
         setTimeout(function (){
           alert(srcSet);
           alert(img.src);
