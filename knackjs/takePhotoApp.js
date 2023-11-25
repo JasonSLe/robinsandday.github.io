@@ -445,6 +445,7 @@ takePhotoButton.onclick = takePhoto;
 
     switch (appSettings.actionAfterPhoto){
       case 'none':
+        alert(img.src);
         setTimeout(function (){
           afterConfirmPhoto()
         }, 1000);
