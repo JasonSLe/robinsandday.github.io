@@ -443,6 +443,10 @@ takePhotoButton.onclick = takePhoto;
       });
     } 
 
+    //HIDE EXIT BUTTON
+    $("#cameraExit").hide();
+    setLayout(false);
+
     switch (appSettings.actionAfterPhoto){
       case 'none':
         alert(srcSet);
@@ -460,28 +464,19 @@ takePhotoButton.onclick = takePhoto;
         }, 2000);
         break;
       case 'readable':
-        setLayout(false);
-
         //SHOW RETAKLE AND CONFIORM BUTTON
         $("#cameraRetake").show();
         $("#cameraConfirm").show();
-
-        //HIDE EXIT BUTTON
-        $("#cameraExit").hide();
 
         //DISPLAY COMPARISION CONTENT
         $('#cameraGrid').show();
         $("#cameraText").show();
         break;
       case 'compare':
-        setLayout(false);
-
         //SHOW RETAKLE AND CONFIORM BUTTON
         $("#cameraRetake").show();
         $("#cameraConfirm").show();
         
-        //HIDE EXIT BUTTON
-        $("#cameraExit").hide();
         break;
     }
   }
