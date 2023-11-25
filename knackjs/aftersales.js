@@ -3322,7 +3322,7 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     imageOverlayOpacity : null,
     allowLandscape : true,
     allowPortrait : true,
-    actionAfterPhoto : 'readable', // none, readable, compare,
+    actionAfterPhoto : 'none', // none, readable, compare,
     uploadMethod : 'none', //knack, make
     resizeImageHeight : null,
     resizeImageWidth : null
