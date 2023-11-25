@@ -3713,12 +3713,13 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
           })
           .then(function(blob) {
             alert(blob);
-            let fileId = uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg');
-            alert(fileId);
-            $('input[imageToSaveUrl]').eq(i).val(fileId);
-            $('div[id="kn-input-'+$('input[imageToSaveUrl]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
-            $('#'+$('input[imageToSaveUrl]').attr('name')+'_upload').hide();
-            $('.kn-file-upload').html('File uploaded successfully.');
+            uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg').then(function(fileId){
+              alert(fileId);
+              $('input[imageToSaveUrl]').eq(i).val(fileId);
+              $('div[id="kn-input-'+$('input[imageToSaveUrl]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
+              $('#'+$('input[imageToSaveUrl]').attr('name')+'_upload').hide();
+              $('.kn-file-upload').html('File uploaded successfully.');
+            })
           });
         }
       }
