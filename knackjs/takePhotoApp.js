@@ -449,63 +449,6 @@ takePhotoButton.onclick = takePhoto;
     afterConfirmPhoto();
   };
 
-  function afterConfirmPhoto(){
-    var finalImgUrl = $('#cameraFrontpic').attr('src');
-    switch (appSettings.uploadMethod){
-      case 'make':
-        var form = new FormData();
-        form.append('Record Id',getRecordIdFromHref(location.href))
-        fetch(finalImgUrl)
-        .then(function(response) {
-          return response.blob();
-        })
-        .then(function(blob) {
-          form.append('files', blob, "fileimage.jpg");
-  
-          var rData = $.ajax({
-            url: appSettings.uploadWebhook,
-            type: 'POST',
-            processData: false,
-            contentType: false,
-            mimeType: 'multipart/form-data',
-            data: form,
-            async: false
-          }).responseText;
-  
-          try {
-            alert(rData)
-          } catch (e) {
-            alert('uploadFail_2:'+e.toString());
-            alert(rData);
-            return {'status': 'fail'};
-          }
-        });
-        break;
-      case 'none':
-        alert('Photo taken do nothing')
-        break;
-    }
-
-    // DISABLE SAVE BUTTON
-    $("#cameraConfirm").attr("disabled", true);
-
-    //STOP TRACK WHEN USER SAVES IMAGE
-    video.srcObject.getVideoTracks().forEach(track => track.stop());
-
-        //EXIT FULL SCREEN MODE
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen();
-        } else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-        }
-
-        hidePhotoAppI();
-  }
-
 
 //*************************************RETAKE BUTTON, THIS WILL DELETE THE PHOTO TAKEN*****************************************
 
@@ -539,6 +482,63 @@ takePhotoButton.onclick = takePhoto;
     //STOP TRACK WHEN USER EXIT THE APP
     video.srcObject.getVideoTracks().forEach(track => track.stop());
   }  
+}
+
+function afterConfirmPhoto(){
+  var finalImgUrl = $('#cameraFrontpic').attr('src');
+  switch (appSettings.uploadMethod){
+    case 'make':
+      var form = new FormData();
+      form.append('Record Id',getRecordIdFromHref(location.href))
+      fetch(finalImgUrl)
+      .then(function(response) {
+        return response.blob();
+      })
+      .then(function(blob) {
+        form.append('files', blob, "fileimage.jpg");
+
+        var rData = $.ajax({
+          url: appSettings.uploadWebhook,
+          type: 'POST',
+          processData: false,
+          contentType: false,
+          mimeType: 'multipart/form-data',
+          data: form,
+          async: false
+        }).responseText;
+
+        try {
+          alert(rData)
+        } catch (e) {
+          alert('uploadFail_2:'+e.toString());
+          alert(rData);
+          return {'status': 'fail'};
+        }
+      });
+      break;
+    case 'none':
+      alert('Photo taken do nothing')
+      break;
+  }
+
+  // DISABLE SAVE BUTTON
+  $("#cameraConfirm").attr("disabled", true);
+
+  //STOP TRACK WHEN USER SAVES IMAGE
+  video.srcObject.getVideoTracks().forEach(track => track.stop());
+
+      //EXIT FULL SCREEN MODE
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+
+      hidePhotoAppI();
 }
 
 function setLayoutInPortrait(){
