@@ -3322,7 +3322,8 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     imageOverlayOpacity : null,
     allowLandscape : true,
     allowPortrait : true,
-    actionAfterPhoto : 'none', // none, readable, compare,
+    actionAfterPhoto : 'readable', // none, readable, compare,
+    actionAfterPhotoReadableText : 'Is the photo OK?',
     uploadMethod : 'field', //knack, make, field
     uploadField : 'field_2699',
     resizeImageHeight : null,

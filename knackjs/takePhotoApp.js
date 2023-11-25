@@ -517,6 +517,10 @@ takePhotoButton.onclick = takePhoto;
         //DISPLAY COMPARISION CONTENT
         $('#cameraGrid').show();
         $("#cameraText").show();
+
+        if (appSettings.actionAfterPhotoReadableText){
+          $('a[id="cameraText"]').text(appSettings.actionAfterPhotoReadableText);
+        }
         break;
       case 'compare':
         //SHOW RETAKLE AND CONFIORM BUTTON
