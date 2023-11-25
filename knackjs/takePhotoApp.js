@@ -691,19 +691,21 @@ function showPhotoAppI(){
 }
 
 function hidePhotoAppI(){
-  //STOP TRACK WHEN USER EXIT THE APP
-  video.srcObject.getVideoTracks().forEach(track => track.stop());
+  try {
+    //STOP TRACK WHEN USER EXIT THE APP
+    video.srcObject.getVideoTracks().forEach(track => track.stop());
 
-  //EXIT FULL SCREEN MODE
-  if (document.exitFullscreen) {
-    document.exitFullscreen();
-  } else if (document.webkitExitFullscreen) {
-    document.webkitExitFullscreen();
-  } else if (document.mozCancelFullScreen) {
-    document.mozCancelFullScreen();
-  } else if (document.msExitFullscreen) {
-    document.msExitFullscreen();
-  }
+    //EXIT FULL SCREEN MODE
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    }
+  } catch (ex){}
 
   $('#photoApp').hide();
   $('.kn-content').show();
