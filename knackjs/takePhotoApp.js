@@ -449,15 +449,7 @@ takePhotoButton.onclick = takePhoto;
 
     switch (appSettings.actionAfterPhoto){
       case 'none':
-        alert(srcSet);
-        /*while (!srcSet) {
-    
-        }*/
-        alert(srcSet);
-        alert(img.src);
-        alert(imageBeforeResize.src);
         setTimeout(function (){
-          setLayout(false);
           alert(srcSet);
           alert(img.src);
           afterConfirmPhoto()
