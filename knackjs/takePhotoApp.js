@@ -10,6 +10,7 @@
   //Uploads given fileBlob to given app_id file store
   //and then calls the fillDataToKnack of master.js to fill coresponding data
   async function uploadFileOnlyPhotoApp(app_id, fileBlob, fileName, infoElementId) {
+    alert('uploadFileOnlyPhotoApp')
     var url = 'https://api.rd.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
     var headers = {
