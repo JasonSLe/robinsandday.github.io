@@ -3702,8 +3702,13 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     if (!isOnline){
       alert('You are offline, please go online before submiting the form.');
       return false;
+    } else {
+      if ($('input[imageToSaveUrl]').length>0){
+        for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
+          alert($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'));
+        }
+      }
     }
-
   }
 });
 
