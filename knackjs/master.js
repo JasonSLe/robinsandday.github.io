@@ -4508,3 +4508,18 @@ $(document).on('knack-form-submit.view_6420', function(event, view, data) {
 $(document).on('knack-form-submit.view_6421', function(event, view, data) { 
   callPostHttpRequest("https://hook.integromat.com/j5s5ksuxtqjd4jcwh41qm5gy2afujni3", {"Record ID":data.id,"TypeOfWash":data.field_6778, "AftersalesRecordID":data.field_6787},"Valeting check in out (Master App)")
 });
+//refresh service wash table every 5 minutes
+	$(document).on('knack-scene-render.scene_1387', function(event, scene) {
+ recursivecallscene_1387();
+});
+
+function recursivecallscene_1387(){
+ setTimeout(function () { if($("#view_6466").is(":visible")==true){ Knack.views["view_6466"].model.fetch();recursivecallscene_1387();} }, 30000);
+}
+
+//refresh other washes every 5 minutes
+function recursivecallscene_2021(){
+ setTimeout(function () { if($("#view_6364").is(":visible")==true){ Knack.views["view_6364"].model.fetch();recursivecallscene_2021();} }, 30000);
+ setTimeout(function () { if($("#view_6361").is(":visible")==true){ Knack.views["view_6361"].model.fetch();recursivecallscene_2021();} }, 30000);
+}
+

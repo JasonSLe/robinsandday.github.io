@@ -1252,7 +1252,77 @@ try{
     }).responseText;
 }
 });  
-  
+
+//trigger aftersales - admin to uploadcase/warranty evidence and update notes
+
+$(document).on('knack-form-submit.view_3471', function(event, view, data) {
+
+try{
+
+    let commandURL = "https://hook.eu1.make.celonis.com/sopmgf4kiapu7epd6dsulrawendsamtd";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Manager's Notes":data.field_1015_raw, "userName": Knack.getUserAttributes().name, "NOM_WIP_REG":data.field_2190_raw, "Nom_wip":data.field_558_raw});
+
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;    
+}catch(exception){
+    console.log("error");
+    var today = new Date();
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
+    let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+    let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Scenario DESCRIPTION what for the error webhook",
+    "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+    var rData = $.ajax({
+       url: commandURL,
+       type: 'POST',
+       contentType: 'application/json',
+       data: dataToSend,
+       async: false
+    }).responseText;
+}
+});  
+//trigger aftersales - admin to uploadcase/warranty evidence and update notes
+
+$(document).on('knack-form-submit.view_3472', function(event, view, data) {
+
+try{
+
+    let commandURL = "https://hook.eu1.make.celonis.com/sopmgf4kiapu7epd6dsulrawendsamtd";
+    let dataToSend = JSON.stringify({"Record ID":data.id, "Manager's Notes":data.field_1015_raw, "userName": Knack.getUserAttributes().name, "NOM_WIP_REG":data.field_2190_raw, "Nom_wip":data.field_558_raw});
+
+    var rData = $.ajax({
+        url: commandURL,
+        type: 'POST',
+        contentType: 'application/json',
+        data: dataToSend,
+        async: false
+    }).responseText;    
+}catch(exception){
+    console.log("error");
+    var today = new Date();
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
+    let commandURL = "https://hook.integromat.com/bxfn25wkj67pptq9bniqmpvvjg868toi";
+    let dataToSend = JSON.stringify({"Source":"Javascript error", "Function": "Scenario DESCRIPTION what for the error webhook",
+    "Payload": data, "userName": Knack.getUserAttributes().name, "userEmail": Knack.getUserAttributes().email, "Exception": exception.message, "dateTime": dateTime});
+    var rData = $.ajax({
+       url: commandURL,
+       type: 'POST',
+       contentType: 'application/json',
+       data: dataToSend,
+       async: false
+    }).responseText;
+}
+});  
       
 //trigger aftersales update notes triggered from C/D Driver where customer signs work 
 
@@ -1289,6 +1359,7 @@ try{
     }).responseText;
 }
 });  
+
 
 // ----------  refresh status of tarot upload ----------
 
@@ -3699,6 +3770,15 @@ function recursivecallscene_981a(){
  setTimeout(function () { if($("#view_3086").is(":visible")==true){ Knack.views["view_3086"].model.fetch();recursivecallscene_981a();} }, 300000);
 }
 
+// refresh workshop table v1
+$(document).on('knack-scene-render.scene_1050', function(event, scene) {
+ recursivecallscene_1050();
+});
+
+function recursivecallscene_1050(){
+ setTimeout(function () { if($("#view_3307").is(":visible")==true){ Knack.views["view_3307"].model.fetch();recursivecallscene_1050();} }, 300000);
+	 
+}
 
   //hover for service details for pre-pick job view
 $(document).on('knack-view-render.view_3278', function (event, view, data) {
@@ -3710,3 +3790,35 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
   $('div[class="field_325"]').hide();
   serviceVisitsTooltips('3278','325','tooltipTop');
 });
+
+	//hover for labour details on workshop POT (MOT Table)
+   $(document).on('knack-view-render.view_3474', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3474','field_1537','field_2213');  
+	    
+    });
+
+	//hover for labour details on workshop POT (service Table)
+   $(document).on('knack-view-render.view_3476', function (event, view, data) {
+    //This part is for tooltip of another field above field in list
+    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
+    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
+    //start
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3476','field_1537','field_2213');  
+
+	    
+    });
+	//auto refresh for C/D Driver pick up and return table
+function recursivecallscene_1031(){
+ setTimeout(function () { if($("#view_3218").is(":visible")==true){ Knack.views["view_3218"].model.fetch();recursivecallscene_1031();} }, 30000);
+ setTimeout(function () { if($("#view_3269").is(":visible")==true){ Knack.views["view_3269"].model.fetch();recursivecallscene_1031();} }, 30000);
+}
