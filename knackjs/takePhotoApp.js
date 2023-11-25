@@ -446,9 +446,9 @@ takePhotoButton.onclick = takePhoto;
     switch (appSettings.actionAfterPhoto){
       case 'none':
         alert(srcSet);
-        while (!srcSet) {
+        /*while (!srcSet) {
     
-        }
+        }*/
         alert(srcSet);
         alert(img.src);
         alert(imageBeforeResize.src);
