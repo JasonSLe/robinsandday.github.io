@@ -446,6 +446,7 @@ takePhotoButton.onclick = takePhoto;
     switch (appSettings.actionAfterPhoto){
       case 'none':
         alert(img.src);
+        alert(imageBeforeResize.src);
         setTimeout(function (){
           afterConfirmPhoto()
         }, 1000);
