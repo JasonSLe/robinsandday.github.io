@@ -3391,6 +3391,7 @@ function embedPhotoApp(){
 }
 
 function showPhotoApp(appSettings, button){
+  console.log('showPhotoApp',appSettings)
   takePhotoAppStart('aftersales',appSettings,'field_X');
 }
 
