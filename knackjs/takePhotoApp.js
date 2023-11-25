@@ -591,7 +591,7 @@ function afterConfirmPhoto(){
       break;
     case 'field':
       $('input[name="'+appSettings.uploadField+'"]').attr('imageToSaveUrl',finalImgUrl);
-      $('label[for="field_2699"]').text(finalImgUrl)
+      //$('label[for="field_2699"]').text(finalImgUrl)
       break;
   }
 
