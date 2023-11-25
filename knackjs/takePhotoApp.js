@@ -692,6 +692,7 @@ function showPhotoAppI(){
 
 function hidePhotoAppI(){
   try {
+    var video = document.querySelector('video');
     //STOP TRACK WHEN USER EXIT THE APP
     video.srcObject.getVideoTracks().forEach(track => track.stop());
 
