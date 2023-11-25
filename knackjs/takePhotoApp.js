@@ -446,6 +446,10 @@ takePhotoButton.onclick = takePhoto;
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
+    afterConfirmPhoto();
+  };
+
+  function afterConfirmPhoto(){
     var finalImgUrl = $('#cameraFrontpic').attr('src');
     switch (appSettings.uploadMethod){
       case 'make':
@@ -478,7 +482,8 @@ takePhotoButton.onclick = takePhoto;
         });
         break;
       case 'none':
-
+        alert('Photo taken do nothing')
+        break;
     }
 
     // DISABLE SAVE BUTTON
@@ -497,7 +502,9 @@ takePhotoButton.onclick = takePhoto;
         } else if (document.msExitFullscreen) {
           document.msExitFullscreen();
         }
-  };
+
+        hidePhotoApp();
+  }
 
 
 //*************************************RETAKE BUTTON, THIS WILL DELETE THE PHOTO TAKEN*****************************************
@@ -639,7 +646,7 @@ function setLayout(takingPhotoI){
 
     switch (appSettings.actionAfterPhoto){
       case 'none':
-        
+        afterConfirmPhoto()
         break;
       case 'readable':
         //SHOW RETAKLE AND CONFIORM BUTTON
@@ -700,7 +707,17 @@ function takePhotoAppStart(app_id, appSettings=null, pdfAssetField=null){
     returnData.app_id = app_id;
     returnData.pdfAssetField = pdfAssetField;
   }
+  showPhotoApp();
   prepareCameraView('cameraImg1');
   setLayout(true);
 }
 
+function showPhotoApp(){
+  $('#photoApp').show();
+  $('.kn-content').hide();
+}
+
+function hidePhotoApp(){
+  $('#photoApp').hide();
+  $('.kn-content').show();
+}

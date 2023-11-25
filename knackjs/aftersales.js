@@ -3391,15 +3391,9 @@ function embedPhotoApp(){
 }
 
 function showPhotoApp(appSettings, button){
-  $('#photoApp').show();
-  $('.kn-content').hide();
-  takePhotoAppStart('afterslales',appSettings,'field_X');
+  takePhotoAppStart('aftersales',appSettings,'field_X');
 }
 
-function hidePhotoApp(){
-  $('#photoApp').hide();
-  $('.kn-content').show();
-}
 
 //Workshop Controller all in one table (all jobs)
 $(document).on('knack-view-render.view_2686', function (event, view, data) {
