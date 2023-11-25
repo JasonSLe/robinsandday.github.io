@@ -670,9 +670,9 @@ var appSettings = {
   resizeImageWidth : null
 }
 var returnData = {};
-function takePhotoAppStart(app_id, appSettings=null, pdfAssetField=null){
+function takePhotoAppStart(app_id, appSettingsI=null, pdfAssetField=null){
   console.log('takePhotoAppStart')
-  if (!appSettings){
+  if (!appSettingsI){
     appSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
     //appSettings.imageOverlayEffect = true;
     appSettings.imageOverlayOpacity = 0.5;
@@ -680,7 +680,10 @@ function takePhotoAppStart(app_id, appSettings=null, pdfAssetField=null){
     appSettings.actionAfterPhoto = 'readable';
     returnData.app_id = app_id;
     returnData.pdfAssetField = pdfAssetField;
+  } else {
+    appSettings = appSettingsI;
   }
+  
   showPhotoAppI();
   prepareCameraView('cameraImg1');
   setLayout(true);
