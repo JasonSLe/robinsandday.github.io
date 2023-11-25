@@ -503,7 +503,7 @@ takePhotoButton.onclick = takePhoto;
           document.msExitFullscreen();
         }
 
-        hidePhotoApp();
+        hidePhotoAppI();
   }
 
 
@@ -523,7 +523,7 @@ takePhotoButton.onclick = takePhoto;
  //*************************************EXIT BUTTON TAKE USER BACK TO HOME PAGE*****************************************
 
   exitButton.onclick = function() {
-    hidePhotoApp();
+    hidePhotoAppI();
 
     //EXIT FULL SCREEN MODE
     if (document.exitFullscreen) {
@@ -707,17 +707,17 @@ function takePhotoAppStart(app_id, appSettings=null, pdfAssetField=null){
     returnData.app_id = app_id;
     returnData.pdfAssetField = pdfAssetField;
   }
-  showPhotoApp();
+  showPhotoAppI();
   prepareCameraView('cameraImg1');
   setLayout(true);
 }
 
-function showPhotoApp(){
+function showPhotoAppI(){
   $('#photoApp').show();
   $('.kn-content').hide();
 }
 
-function hidePhotoApp(){
+function hidePhotoAppI(){
   $('#photoApp').hide();
   $('.kn-content').show();
 }
