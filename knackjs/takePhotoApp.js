@@ -440,12 +440,42 @@ takePhotoButton.onclick = takePhoto;
         console.log('takePhoto() error: ', error);
       });
     } 
+    
     setLayout(false);
+
+    switch (appSettings.actionAfterPhoto){
+      case 'none':
+        afterConfirmPhoto()
+        break;
+      case 'readable':
+        //SHOW RETAKLE AND CONFIORM BUTTON
+        $("#cameraRetake").show();
+        $("#cameraConfirm").show();
+
+        //HIDE EXIT BUTTON
+        $("#cameraExit").hide();
+
+        //DISPLAY COMPARISION CONTENT
+        $('#cameraGrid').show();
+        $("#cameraText").show();
+        break;
+      case 'compare':
+        //SHOW RETAKLE AND CONFIORM BUTTON
+        $("#cameraRetake").show();
+        $("#cameraConfirm").show();
+        
+        //HIDE EXIT BUTTON
+        $("#cameraExit").hide();
+        break;
+    }
   }
 
 
   //CONFIRM BUTTON, WILL SAVE THE PHOTO TO KNACK//
   confirmButton.onclick = function() {
+    // DISABLE SAVE BUTTON
+    $("#cameraConfirm").attr("disabled", true);
+
     afterConfirmPhoto();
   };
 
@@ -467,20 +497,6 @@ takePhotoButton.onclick = takePhoto;
 
   exitButton.onclick = function() {
     hidePhotoAppI();
-
-    //EXIT FULL SCREEN MODE
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen();
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen();
-    }
-
-    //STOP TRACK WHEN USER EXIT THE APP
-    video.srcObject.getVideoTracks().forEach(track => track.stop());
   }  
 }
 
@@ -521,24 +537,7 @@ function afterConfirmPhoto(){
       break;
   }
 
-  // DISABLE SAVE BUTTON
-  $("#cameraConfirm").attr("disabled", true);
-
-  //STOP TRACK WHEN USER SAVES IMAGE
-  video.srcObject.getVideoTracks().forEach(track => track.stop());
-
-      //EXIT FULL SCREEN MODE
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen();
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen();
-      }
-
-      hidePhotoAppI();
+  hidePhotoAppI();
 }
 
 function setLayoutInPortrait(){
@@ -643,33 +642,6 @@ function setLayout(takingPhotoI){
     if (appSettings.imageOverlayEffect){
       $(stop);
     }
-
-    switch (appSettings.actionAfterPhoto){
-      case 'none':
-        afterConfirmPhoto()
-        break;
-      case 'readable':
-        //SHOW RETAKLE AND CONFIORM BUTTON
-        $("#cameraRetake").show();
-        $("#cameraConfirm").show();
-
-        //HIDE EXIT BUTTON
-        $("#cameraExit").hide();
-
-        //DISPLAY COMPARISION CONTENT
-        $('#cameraGrid').show();
-        $("#cameraText").show();
-        break;
-      case 'compare':
-        //SHOW RETAKLE AND CONFIORM BUTTON
-        $("#cameraRetake").show();
-        $("#cameraConfirm").show();
-        
-        //HIDE EXIT BUTTON
-        $("#cameraExit").hide();
-        break;
-    }
-
     //HIDE LEVEL LINE
     //$("#cameraLine").hide();
     //$("#cameraSpiritCircle").hide();
@@ -718,6 +690,20 @@ function showPhotoAppI(){
 }
 
 function hidePhotoAppI(){
+  //STOP TRACK WHEN USER EXIT THE APP
+  video.srcObject.getVideoTracks().forEach(track => track.stop());
+
+  //EXIT FULL SCREEN MODE
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+
   $('#photoApp').hide();
   $('.kn-content').show();
 }
