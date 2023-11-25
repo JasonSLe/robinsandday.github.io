@@ -3315,8 +3315,20 @@ function recursivecallscene_755(){
 
 $(document).on('knack-view-render.view_3188', function (event, view, data) {
   embedPhotoApp();
+  let appSettings = {
+    spiritLine : false,
+    imageOverlay: null,
+    imageOverlayEffect : false,
+    imageOverlayOpacity : null,
+    allowLandscape : true,
+    allowPortrait : true,
+    actionAfterPhoto : 'none', // none, readable, compare,
+    uploadMethod : 'none', //knack, make
+    resizeImageHeight : null,
+    resizeImageWidth : null
+  }
   $('div[id="view_3188"] h3').on("click",function(){
-    showPhotoApp(this);
+    showPhotoApp(appSettings, this);
   });
 }); 
 
@@ -3378,10 +3390,10 @@ function embedPhotoApp(){
   }
 }
 
-function showPhotoApp(button){
+function showPhotoApp(appSettings, button){
   $('#photoApp').show();
   $('.kn-content').hide();
-  takePhotoAppStart('afterslales','field_X');
+  takePhotoAppStart('afterslales',appSettings,'field_X');
 }
 
 function hidePhotoApp(){

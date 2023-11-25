@@ -440,10 +440,7 @@ takePhotoButton.onclick = takePhoto;
         console.log('takePhoto() error: ', error);
       });
     } 
-
     setLayout(false);
-
-
   }
 
 
@@ -480,6 +477,8 @@ takePhotoButton.onclick = takePhoto;
           }
         });
         break;
+      case 'none':
+
     }
 
     // DISABLE SAVE BUTTON
@@ -690,15 +689,17 @@ var appSettings = {
   resizeImageWidth : null
 }
 var returnData = {};
-function takePhotoAppStart(app_id, pdfAssetField){
+function takePhotoAppStart(app_id, appSettings=null, pdfAssetField=null){
   console.log('takePhotoAppStart')
-  appSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
-  //appSettings.imageOverlayEffect = true;
-  appSettings.imageOverlayOpacity = 0.5;
-  appSettings.allowLandscape = false;
-  appSettings.actionAfterPhoto = 'readable';
-  returnData.app_id = app_id;
-  returnData.pdfAssetField = pdfAssetField;
+  if (appSettings){
+    appSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
+    //appSettings.imageOverlayEffect = true;
+    appSettings.imageOverlayOpacity = 0.5;
+    appSettings.allowLandscape = false;
+    appSettings.actionAfterPhoto = 'readable';
+    returnData.app_id = app_id;
+    returnData.pdfAssetField = pdfAssetField;
+  }
   prepareCameraView('cameraImg1');
   setLayout(true);
 }
