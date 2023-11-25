@@ -445,7 +445,6 @@ takePhotoButton.onclick = takePhoto;
 
     switch (appSettings.actionAfterPhoto){
       case 'none':
-        alert('here am I')
         afterConfirmPhoto()
         break;
       case 'readable':
@@ -503,6 +502,8 @@ takePhotoButton.onclick = takePhoto;
 
 function afterConfirmPhoto(){
   var finalImgUrl = $('#cameraFrontpic').attr('src');
+  alert(finalImgUrl);
+  alert(appSettings.uploadMethod)
   switch (appSettings.uploadMethod){
     case 'make':
       var form = new FormData();
