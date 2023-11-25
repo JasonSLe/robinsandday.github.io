@@ -445,7 +445,9 @@ takePhotoButton.onclick = takePhoto;
 
     switch (appSettings.actionAfterPhoto){
       case 'none':
-        afterConfirmPhoto()
+        setTimeout(function (){
+          afterConfirmPhoto()
+        }, 1000);
         break;
       case 'readable':
         //SHOW RETAKLE AND CONFIORM BUTTON
