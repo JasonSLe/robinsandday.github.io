@@ -3706,6 +3706,18 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
       if ($('input[imageToSaveUrl]').length>0){
         for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
           alert($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'));
+          fetch($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'))
+          .then(function(response) {
+            return response.blob();
+          })
+          .then(function(blob) {
+            let fileId = uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg');
+            alert(fileId);
+            $('input[imageToSaveUrl]').eq(i).val(fileId);
+            $('div[id="kn-input-'+$('input[imageToSaveUrl]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
+            $('#'+$('input[imageToSaveUrl]').attr('name')+'_upload').hide();
+            $('.kn-file-upload').html('File uploaded successfully.');
+          });
         }
       }
     }
