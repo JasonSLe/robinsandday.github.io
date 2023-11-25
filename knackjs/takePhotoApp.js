@@ -671,7 +671,7 @@ var appSettings = {
 var returnData = {};
 function takePhotoAppStart(app_id, appSettings=null, pdfAssetField=null){
   console.log('takePhotoAppStart')
-  if (appSettings){
+  if (!appSettings){
     appSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
     //appSettings.imageOverlayEffect = true;
     appSettings.imageOverlayOpacity = 0.5;
