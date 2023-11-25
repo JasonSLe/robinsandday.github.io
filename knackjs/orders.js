@@ -173,13 +173,21 @@ function tooltipsTable(sceneId, viewId, tooltipFieldId, showTooltipFieldId, tool
     $('th[class="'+tooltipFieldId+'"]').hide();
     $('td[class*="'+tooltipFieldId+'"]').hide();
 
-    let tooltipDiv = document.createElement('div');
-    tooltipDiv.setAttribute("id", "tooltipDiv_"+viewId+'_'+tooltipFieldId);
-    tooltipDiv.setAttribute("class", "tooltipDiv");
-    tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
-    //console.log('view div',document.querySelector('div[id="kn-scene_'+sceneId+'"]'));
-    //document.querySelector('div[id="view_'+viewId+'"]').appendChild(tooltipDiv);
-    console.log(document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv));
+    if ($('div[id="tooltipDiv_'+viewId+'_'+tooltipFieldId+'"]').length===0){
+      let tooltipDiv = document.createElement('div');
+      tooltipDiv.setAttribute("id", "tooltipDiv_"+viewId+'_'+tooltipFieldId);
+      tooltipDiv.setAttribute("class", "tooltipDiv");
+      tooltipDiv.setAttribute("style","background-color:white; background: white; position: fixed; display:none;");
+  
+      if ($('div[id="kn-scene_'+sceneId+'"]').length!==0){
+        document.querySelector('div[id="kn-scene_'+sceneId+'"]').appendChild(tooltipDiv)
+      } else {
+        console.log('scene',sceneId,'not found');
+        let currentScene = $('div[id*="kn-scene_"]').eq(0).attr('id');
+        console.log('currentScene',currentScene);
+        document.querySelector('div[id="'+currentScene+'"]').appendChild(tooltipDiv)
+      }
+    }
     
     $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
       //console.log('HIDE AFTER LEAVE')
