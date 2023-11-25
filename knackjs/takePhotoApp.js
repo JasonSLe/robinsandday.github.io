@@ -506,8 +506,6 @@ takePhotoButton.onclick = takePhoto;
 
 function afterConfirmPhoto(){
   var finalImgUrl = $('#cameraFrontpic').attr('src');
-  alert(finalImgUrl);
-  alert(appSettings.uploadMethod)
   switch (appSettings.uploadMethod){
     case 'make':
       var form = new FormData();
@@ -538,8 +536,8 @@ function afterConfirmPhoto(){
         }
       });
       break;
-    case 'none':
-      alert('Photo taken do nothing')
+    case 'field':
+      $('input[name="'+appSettings.uploadField+'"]').attr('imageToSaveUrl',finalImgUrl);
       break;
   }
 
@@ -668,13 +666,13 @@ var appSettings = {
   allowLandscape : true,
   allowPortrait : true,
   actionAfterPhoto : 'none', // none, readable, compare,
-  uploadMethod : 'make', //knack, make
+  uploadMethod : 'make', //knack, make, field
   uploadWebhook : 'https://hook.eu1.make.celonis.com/ouosl7cqftin4d5xk4ybco0q96t5bwk2',
   resizeImageHeight : null,
   resizeImageWidth : null
 }
 var returnData = {};
-function takePhotoAppStart(app_id, appSettingsI=null, pdfAssetField=null){
+function takePhotoAppStart(app_id, appSettingsI=null){
   console.log('takePhotoAppStart')
   if (!appSettingsI){
     appSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
@@ -683,7 +681,7 @@ function takePhotoAppStart(app_id, appSettingsI=null, pdfAssetField=null){
     appSettings.allowLandscape = false;
     appSettings.actionAfterPhoto = 'readable';
     returnData.app_id = app_id;
-    returnData.pdfAssetField = pdfAssetField;
+  
   } else {
     appSettings = appSettingsI;
   }

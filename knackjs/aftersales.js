@@ -3323,7 +3323,8 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     allowLandscape : true,
     allowPortrait : true,
     actionAfterPhoto : 'none', // none, readable, compare,
-    uploadMethod : 'none', //knack, make
+    uploadMethod : 'field', //knack, make, field
+    uploadField : 'field_2699',
     resizeImageHeight : null,
     resizeImageWidth : null
   }
