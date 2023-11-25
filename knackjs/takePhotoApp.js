@@ -47,7 +47,7 @@
           if (typeof rData === 'string'){ rData = JSON.parse(rData);};
           $('#'+infoElementId).text('Upload succesfull, returning to app.');
           $('#kn-loading-spinner').hide();
-          
+          alert(rData.id)
           return rData.id;
         } catch (e) {
           alert('File upload was not succesfull.')
