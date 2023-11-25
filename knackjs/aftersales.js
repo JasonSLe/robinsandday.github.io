@@ -3718,7 +3718,7 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
               $('input[imageToSaveUrl]').eq(i).val(fileId);
               $('div[id="kn-input-'+$('input[imageToSaveUrl]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
               $('#'+$('input[imageToSaveUrl]').attr('name')+'_upload').hide();
-              $('.kn-file-upload').html('File uploaded successfully.');
+              $('div[id="kn-input-'+$('input[imageToSaveUrl]').attr('name')+' .kn-file-upload').html('File uploaded successfully.');
             })
           });
         }
