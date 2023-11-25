@@ -416,6 +416,7 @@ takePhotoButton.onclick = takePhoto;
   function takePhoto() {
     sndCameraTakePhoto.play();
     //sndCameraTakePhoto.currentTime=0;
+    let srcSet = false;
 
     if (OperatingSystem.iOS()) {
       var c = document.createElement('canvas');
@@ -436,22 +437,31 @@ takePhotoButton.onclick = takePhoto;
         img.classList.remove('hidden');
         img.src = URL.createObjectURL(blob);
         imageBeforeResize.src = img.src; 
+        srcSet = true;
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
       });
     } 
-    
-    setLayout(false);
 
     switch (appSettings.actionAfterPhoto){
       case 'none':
+        alert(srcSet);
+        while (!srcSet) {
+    
+        }
+        alert(srcSet);
         alert(img.src);
         alert(imageBeforeResize.src);
         setTimeout(function (){
+          setLayout(false);
+          alert(srcSet);
+          alert(img.src);
           afterConfirmPhoto()
-        }, 1000);
+        }, 2000);
         break;
       case 'readable':
+        setLayout(false);
+
         //SHOW RETAKLE AND CONFIORM BUTTON
         $("#cameraRetake").show();
         $("#cameraConfirm").show();
@@ -464,6 +474,8 @@ takePhotoButton.onclick = takePhoto;
         $("#cameraText").show();
         break;
       case 'compare':
+        setLayout(false);
+
         //SHOW RETAKLE AND CONFIORM BUTTON
         $("#cameraRetake").show();
         $("#cameraConfirm").show();
