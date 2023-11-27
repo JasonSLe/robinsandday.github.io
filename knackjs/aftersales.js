@@ -3828,9 +3828,6 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
 
 	//hover for labour details on workshop POT (MOT Table)
    $(document).on('knack-view-render.view_3474', function (event, view, data) {
-    //This part is for tooltip of another field above field in list
-    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
-    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
     //start
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide();
@@ -3841,9 +3838,6 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
 
 	//hover for labour details on workshop POT (service Table)
    $(document).on('knack-view-render.view_3476', function (event, view, data) {
-    //This part is for tooltip of another field above field in list
-    //This part of code hides field_330 from the list and then adds it as mouse over to field 380
-    //It needs function "getFieldForRowID", also the field_330 NEEDS to be included in the list
     //start
     $('th[class="field_1537"]').hide();
     $('td[class*="field_1537"]').hide();
@@ -3852,6 +3846,34 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
 
 	    
     });
+	//hover for labour details on workshop POT (Predictable work)
+   $(document).on('knack-view-render.view_3483', function (event, view, data) {
+    //start
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3483','field_1537','field_2213');  
+ });
+	
+		//hover for labour details on workshop POT (diag/inv/recall)
+   $(document).on('knack-view-render.view_3482', function (event, view, data) {
+    //start
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3482','field_1537','field_2213');  	    
+    });
+	
+		//hover for labour details on workshop POT (Internal)
+   $(document).on('knack-view-render.view_3477', function (event, view, data) {
+    //start
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3477','field_1537','field_2213');  
+    });
+
+
 	//auto refresh for C/D Driver pick up and return table
 function recursivecallscene_1031(){
  setTimeout(function () { if($("#view_3218").is(":visible")==true){ Knack.views["view_3218"].model.fetch();recursivecallscene_1031();} }, 30000);
