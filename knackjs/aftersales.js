@@ -545,7 +545,7 @@ $(document).on("knack-scene-render.scene_118", function(event, scene, data) {
   sceneRefresh(refreshData);
 });
 
-  $(document).on("knack-scene-render.scene_118", function(event, scene, data) {
+  $(document).on("knack-scene-render.scene_1102", function(event, scene, data) {
   let refreshData = [
     {
         mainField : 'field_72', //Service Schedule
