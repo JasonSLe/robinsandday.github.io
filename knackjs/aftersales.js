@@ -3898,7 +3898,7 @@ $(document).on('knack-view-render.view_3500', function (event, view, data) {
     showHideMoreServiceVisits();
   }
   $('div[class="field_325"]').hide();
-  serviceVisitsTooltips('3500','325','tooltipTop');
+  serviceVisitsTooltips('3497','325','tooltipTop');
 });
 
   //hover for service details for pre-pick job view
