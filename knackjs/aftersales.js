@@ -2120,6 +2120,23 @@ $(document).on('knack-scene-render.any', function(event, scene) {
 	  
 	  });
 
+//HIDE DATA FROM TYRE LOOK UP  within previsit jobcard
+  $(document).on('knack-view-render.view_3515', function (event, view, data) {
+
+	  //hide REG from table
+	    $('#kn-input-field_31').hide();
+    $('#kn-input-field_31').hide();
+
+	  //hide pos from table
+    $('#kn-input-field_443').hide();
+    $('#kn-input-field_443').hide();
+	  
+	      //hide connected dealer
+	      $('#kn-input-field_411').hide();
+    $('#kn-input-field_411').hide();
+	  
+	  });
+
 $(document).on("knack-scene-render.scene_508", function(event, scene, data) {
     let refreshData = [
       {
