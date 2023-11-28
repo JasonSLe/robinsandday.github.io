@@ -3889,6 +3889,18 @@ function recursivecallscene_1050(){
 	 
 }
 
+
+    //hover for service details for pre-visit jobcard
+$(document).on('knack-view-render.view_3500', function (event, view, data) {
+	console.log("hover active")
+  if (document.getElementById("showHideMoreServiceVisits")){
+    document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
+    showHideMoreServiceVisits();
+  }
+  $('div[class="field_325"]').hide();
+  serviceVisitsTooltips('3500','325','tooltipLeft');
+});
+
   //hover for service details for pre-pick job view
 $(document).on('knack-view-render.view_3278', function (event, view, data) {
 	console.log("hover active")
