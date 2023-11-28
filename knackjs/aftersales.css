@@ -616,6 +616,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
     #kn-scene_1049 > div.view-group.view-group-3 > div:nth-child(1) {
 	border: 1px solid #CCCCCC;
 	border-radius: 10px;
+	    width: 30%;
   }
   
  
