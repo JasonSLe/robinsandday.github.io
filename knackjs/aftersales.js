@@ -3954,4 +3954,109 @@ function recursivecallscene_1031(){
  setTimeout(function () { if($("#view_3269").is(":visible")==true){ Knack.views["view_3269"].model.fetch();recursivecallscene_1031();} }, 30000);
 }
 
+ 
+  //trigger get tyres and prices for a selected dealer from modal view
+$(document).on('knack-form-submit.view_3519', function(event, view, data) { 
+    
+    try{
+        
 
+        let commandURL = "https://hook.eu1.make.celonis.com/osrisywv6fufmcdbf7ih8bc1yfrlvpq8";
+        let dataToSend = JSON.stringify({"Record ID":data.id, "Selected Dealer":data.field_411});
+	    
+//   let refreshData = [
+ //     {
+ //         mainField : 'field_575', //Autoline Tyre Stock For Dealer
+  //   views:['1475']
+   //   }
+  //  ]
+    
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Trigger get selected dealer tyres");
+    }
+});
+  
+  //auto reload Clear tyres in customer & vehicle look up /precalls
+$(document).on('knack-record-update.view_3519', function(event, view, data) {
+  
+  setTimeout(function () { location.hash = location.hash + "#"; }, 100);
+
+  Knack.showSpinner();
+  
+});
+  
+  //refresh tyres stock on previsit jobcard
+  $(document).on("knack-scene-render.scene_1103", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_575', //Autoline Tyre Stock For Dealer
+          views:['3516']
+      }
+    ]
+    sceneRefresh(refreshData);
+  });
+  
+
+  
+  function generateTyres2(){
+  try {
+    console.log('generateTyres2');
+    let tyresJSON = JSON.parse(Knack.views['view_3518'].model.attributes['field_250']);
+    tyresJSON = tyresJSON.filter(function(el){
+      return el['a:StockPolicy'][0] === 'ACTIVE' && el['a:Winter'][0] === 'N'
+    })
+    console.log('tyresJSON.length filtered',tyresJSON.length);
+    tyresJSON = tyresJSON.sort(function(a,b){
+      return (a['a:TotalFittedRetailPriceIncVAT'][0] > b['a:TotalFittedRetailPriceIncVAT'][0]?1:(a['a:TotalFittedRetailPriceIncVAT'][0] < b['a:TotalFittedRetailPriceIncVAT'][0]?-1:0));
+    })
+    let outputTables = [{name:'Budget'},{name:'Medium'},{name:'Premium'}];
+    let recordsPerTableWhole = Math.floor(tyresJSON.length/outputTables.length);
+    let remainderOfRecords = tyresJSON.length % outputTables.length;
+    for (let i = 0;i<outputTables.length;i++){
+      outputTables[i].count = recordsPerTableWhole;
+      if (remainderOfRecords>0) {
+        outputTables[i].count += 1;
+        remainderOfRecords = remainderOfRecords - 1;
+      }
+    }	  
+	  
+    let jsonPosition = 0;
+    for (let i = 0;i<outputTables.length;i++){
+      outputTables[i].text = '<table><tr><th>Manufacturer type</th><th>Price</th></tr>';
+      for (let j = jsonPosition;j<jsonPosition + (outputTables[i].count<5?outputTables[i].count:5);j++){
+        outputTables[i].text += '<tr title="Available: '+tyresJSON[j]['a:AvailableQuantity'][0]+'; SOR: '+tyresJSON[j]['a:SORQuantity'][0]+'; Delivery date: '+formatDateGB(new Date(tyresJSON[j]['a:DeliveryDate'][0]))+'"><td bgcolor="'+tyreRowColor(tyresJSON[j]['a:AvailableQuantity'][0],tyresJSON[j]['a:SORQuantity'][0])+'">'+tyresJSON[j]['a:ManufacturerName'][0]+' '+tyresJSON[j]['a:StockDesc'][0]+'</td><td>£'+tyresJSON[j]['a:TotalFittedRetailPriceIncVAT'][0]+'</td></tr>';
+      }
+      jsonPosition += outputTables[i].count;
+      outputTables[i].text += '</table>';
+    }
+    let output = '<table><tr>';
+    for (let i =0;i<outputTables.length;i++){
+      output += '<td>' + outputTables[i].name + '<br />'+outputTables[i].text+'</td>';
+    }
+    output += '</tr></table>';
+
+    $('div[class*="field_250"]').html(output);
+    $('div[class*="field_250"]').show();
+  } catch (e){
+    console.log('Error Generating tyres',e);
+  }
+}
+  
+  $(document).on("knack-scene-render.scene_1103", function(event, scene, data) {
+    let refreshData = [
+      {
+          mainField : 'field_250', //Tyres
+          views:['3516'],
+          runAfter : generateTyres2 
+      }
+    ]
+    sceneRefresh(refreshData);
+});
+  
