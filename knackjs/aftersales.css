@@ -611,6 +611,18 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	text-align: center;
 }
 
+
+#view_3496 > section > div > div > div > div > div > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 24px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
+
 #view_3273 > section > div > div > div > div > div > div > span > span {
 	background-color: #FFE74C;
   	border-radius: 10px;
