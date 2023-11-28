@@ -495,41 +495,41 @@ function refreshScene24(){
     {
       name : 'Autoline - Owner',
       mainField : 'field_278', //Autoline - type of bussines - first Autoline save
-      views:['377','326','344','3273']
+      views:['377','326','344','3273','3495','3501','3496']
     },{
       name : 'Autoline - Vehicle summary',
       mainField : 'field_318', //Autoline - vehicle summary - second Autoline save
-      views:['325','375','324','327','3274','3275'],
+      views:['325','375','324','327','3274','3275','3502','3499','3497'],
     },{
       name : 'EMAC Service plan',
       mainField : 'field_312', //EMAC - service plan Summary = Service plan
-      views:['376']
+      views:['376','3503']
     },{
       name : 'EMAC Service plan - offer',
       mainField : 'field_348', //EMAC - service plan Summary = Service plan
-      views:['378']
+      views:['378','3504']
     },{
       name : 'Tyres',
       mainField : 'field_247', //Tyres - Front = Stapletons
-      views:['330'],
+      views:['330','3509'],
       //runAfter : generateTyres
     },{
       name : 'VHC',
       mainField : 'field_302', //VHC - exists = VHC
-      views:['328','3280']
+      views:['328','3280','3511']
     },{
       name : 'Autoline - email valid',
       mainField : 'field_316', //Autoline - is email valid - last Autoline save
-      views:['379']   
+      views:['379','3498']   
     },{
       name : 'Autoline - service visits',
       mainField : 'field_325', //Autoline - service visits tooltips
-      views:['380','3279'],
+      views:['380','3279','3279','3500'],
       runAfter : serviceVisitsTooltips
     },{	    
       name : 'Recalls',
       mainField : 'field_70', //Recalls and service shedule check Completed
-      views:['329','332','3276','3277']
+      views:['329','332','3276','3277','3507','3508']
     }
   ]
   sceneRefresh(refreshData);
@@ -1441,6 +1441,30 @@ $(document).on('knack-view-render.view_375', function(event, view, data) {
     
     })
 });
+
+	//change the text color based on the input value (PRE-VISIT JOBCARD)
+$(document).on('knack-view-render.view_3502', function(event, view, data) {
+
+  $("#view_3502 .kn-details-group.column-2.columns .kn-detail-body span span").each(function() {
+	      //green color style
+        const greenStyle = {
+          color: "#228B22",
+          textShadow: "0 0 7px #fff,  0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa"
+        }
+        //red color style
+        const redStyle = {
+          color: "#cc0000",
+          textShadow: "0 0 7px #fff,  0 0 10px #fff, 0 0 21px #fff, 0 0 42px #ffcccc, 0 0 82px #ffcccc, 0 0 92px #ffcccc, 0 0 102px #ffcccc, 0 0 151px #ffcccc"
+        }
+    //choose color style based on input
+    let textColor = ($(this).text().trim() === "No") ? redStyle : greenStyle;
+	  //apply the css changes
+    $(this).css(textColor);
+    
+    })
+});
+
+
 
 //Submit form for Vehicle Check-in
 $(document).on('knack-form-submit.view_736', function(event, view, data) { 
@@ -3878,4 +3902,68 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
 function recursivecallscene_1031(){
  setTimeout(function () { if($("#view_3218").is(":visible")==true){ Knack.views["view_3218"].model.fetch();recursivecallscene_1031();} }, 30000);
  setTimeout(function () { if($("#view_3269").is(":visible")==true){ Knack.views["view_3269"].model.fetch();recursivecallscene_1031();} }, 30000);
+}
+
+
+
+//PRE-VISIT jobcard hover fields
+  $(document).on('knack-view-render.view_3497', function (event, view, data) {
+    if (document.getElementById("showHideMoreServiceVisits")){
+      document.getElementById("showHideMoreServiceVisits").onclick = showHideMoreServiceVisits;
+      showHideMoreServiceVisits();
+    }
+  });
+  
+
+  function serviceVisitsTooltips(viewId = '3497', fieldId = '325', tooltipPlace = 'asBefore'){
+  console.log('serviceVisitsTooltips',tooltipPlace);
+  $('div[id*="tooltip"]').each(function(){
+    $(this).attr("style","background: white; position: fixed; display:none;");
+  });
+  $('div[id="view_'+viewId+'"]').on("mouseleave", function (e) {
+    //console.log('HIDE AFTER LEAVE')
+    $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+  });
+
+  //console.log('table',$('table[id="serviceVisitsTable"]'));
+  //$('table[id="serviceVisitsTable"]').on("mousemove", function (e) {
+  $('div[id="view_'+viewId+'"]').on("mousemove", function (e) {
+      //console.log('on move');
+      let partOfTable = document.elementFromPoint(e.pageX, e.pageY - document.documentElement.scrollTop);
+      let trUnderMouse = null;
+      if (partOfTable){
+        if (partOfTable.nodeName==='TD'){
+          trUnderMouse = partOfTable.parentElement;
+        }
+        if (partOfTable.nodeName==='TR'){
+          trUnderMouse = partOfTable;
+        }
+      }
+      if (trUnderMouse && trUnderMouse.id){
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').show();
+        //$('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: e.pageX+10, top: e.pageY });
+        //const body = document.querySelector("body");
+        //body.offsetWidth
+        let tooltipLeft = document.getElementById('serviceVisitsTable').getBoundingClientRect().left-250;
+        let tooltipTop = document.documentElement.scrollTop + 50;
+        if (tooltipLeft<50) tooltipLeft = 50;
+        if (tooltipPlace==='rightBottomOnMouse'){
+          tooltipLeft = e.pageX - $('div[id="tooltip_'+trUnderMouse.id+'"]').width();
+          console.log('tooltipLeft',tooltipLeft);
+          if (tooltipLeft<10) tooltipLeft = 10;
+          tooltipTop = e.pageY - $('div[id="tooltip_'+trUnderMouse.id+'"]').height();
+          console.log('tooltipTop',tooltipTop);
+          if (tooltipTop<document.documentElement.scrollTop + 10) tooltipTop = document.documentElement.scrollTop + 10;
+        }
+        //console.log('tooltipWidth',$('div[id="tooltip_'+trUnderMouse.id+'"]').width());
+        $('div[id="tooltip_'+trUnderMouse.id+'"]').offset({ left: tooltipLeft, top: tooltipTop});
+        if (shownTooltipId !== trUnderMouse.id && shownTooltipId !== null){
+            $('div[id="tooltip_'+shownTooltipId+'"]').hide();
+        }
+        shownTooltipId = trUnderMouse.id;
+      }
+  });
+  setTimeout(function(){
+    $('div[class="field_'+fieldId+'"]').show();
+  }, 100);
 }
