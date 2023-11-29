@@ -614,7 +614,8 @@ $(document).on('knack-scene-render.any', function(event, scene) {
   let isToday = (today.toDateString() == dateTimeOfFirstRun.toDateString());
   if (!isToday){
     dateTimeOfFirstRun = new Date();
-    window.location.reload(false);
+    //window.location.reload(false);
+    setTimeout(function () { $('a[class="kn-log-out"]').eq(0).click(); setTimeout(function () { document.location = url; }, 1000);}, 1000);
   }
   /*
   var versionRefreshTime = readCookie('RDDigitalVersionRefreshTime');
