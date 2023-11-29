@@ -3780,7 +3780,8 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     } else {
       if ($('input[imageToSaveUrl]').length>0){
         $('div[id="view_3188"] button[type="submit"]').prop('disabled', true);
-        $('#submitingFormModal').show();
+        createFormModal('fMImageUpload','Images are being uploaded, then the form will be submitted ...');
+        $('#fMImageUpload').show();
         for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
           fetch($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'))
           .then(function(response) {
@@ -3803,6 +3804,15 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     }
   }
 });
+
+function createFormModal(id, htmlContent){
+  let fM = document.createElement("div");
+  fM.setAttribute("id", id);
+  fM.setAttribute("class", "formModal");
+  fM.setAttribute("style","display:none;");
+  fM.innerHTML = htmlContent;
+  document.body.appendChild(fM)
+}
 
 //*Trigger Aftersales - Exit Survey Email From TABLET from Jobcard v2
 $(document).on('knack-form-submit.view_2364', function(event, view, data) { 
