@@ -3445,9 +3445,9 @@ function embedPhotoApp(){
   }
 }
 
-function showPhotoApp(appSettings, button){
+function showPhotoApp(appSettings){
   console.log('showPhotoApp',appSettings)
-  takePhotoAppStart('aftersales',appSettings,'field_X');
+  takePhotoAppStart('aftersales',appSettings);
 }
 
 
@@ -3771,7 +3771,9 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     fM.setAttribute("id", 'takePhoto_'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id'));
     fM.innerText = 'Take photo';
     fM.onclick = function(){
-      showPhotoApp(appSettings, this);
+      let mAppSettings = new Object({},appSettings);
+      mAppSettings.uploadField = $('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id');
+      showPhotoApp(appSettings);
     }
     document.querySelector('div[id="kn-input-'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
   }
