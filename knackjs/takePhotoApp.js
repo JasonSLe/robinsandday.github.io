@@ -515,6 +515,7 @@ takePhotoButton.onclick = takePhoto;
         //SHOW RETAKLE AND CONFIORM BUTTON
         $("#cameraRetake").show();
         $("#cameraConfirm").show();
+        $("#cameraConfirm").removeAttr("disabled");
 
         //DISPLAY COMPARISION CONTENT
         $('#cameraGrid').show();
