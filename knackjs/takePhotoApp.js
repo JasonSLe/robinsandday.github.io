@@ -596,7 +596,7 @@ function afterConfirmPhoto(){
       break;
     case 'field':
       $('input[name="'+appSettings.uploadField+'"]').attr('imageToSaveUrl',finalImgUrl);
-      //$('label[for="field_2699"]').text(finalImgUrl)
+      $('div[id="kn-input-'+appSettings.uploadField+'"]>div[class="kn-file-upload"]').html('<img src="'+finalImgUrl+'" width="100"></img>')
       break;
   }
 
