@@ -9,8 +9,8 @@
 
   //Uploads given fileBlob to given app_id file store
   //and then calls the fillDataToKnack of master.js to fill coresponding data
-  async function uploadFileOnlyPhotoApp(app_id, fileBlob, fileName, infoElementId) {
-    alert('uploadFileOnlyPhotoApp')
+  async function uploadFileOnlyPhotoApp(app_id, fileBlob, fileName, infoElementId, fieldName, myCallback) {
+    //alert('uploadFileOnlyPhotoApp')
     var url = 'https://api.rd.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
     var headers = {
@@ -48,7 +48,8 @@
           if (typeof rData === 'string'){ rData = JSON.parse(rData);};
           $('#'+infoElementId).text('Upload succesfull, returning to app.');
           $('#kn-loading-spinner').hide();
-          alert(rData.id)
+          //alert(rData.id)
+          myCallback(fieldName, rData.id)
           return rData.id;
         } catch (e) {
           alert('File upload was not succesfull.')

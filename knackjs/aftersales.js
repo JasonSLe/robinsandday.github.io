@@ -3788,17 +3788,7 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
             return response.blob();
           })
           .then(function(blob) {
-            uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg').then(function(fileId){
-              alert(fileId);
-              $('input[imageToSaveUrl]').eq(i).val(fileId);
-              $('div[id="kn-input-'+$('input[imageToSaveUrl]').eq(i).attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
-              $('#'+$('input[imageToSaveUrl]').eq(i).attr('name')+'_upload').hide();
-              $('div[id="kn-input-'+$('input[imageToSaveUrl]').eq(i).attr('name')+' .kn-file-upload').html('File uploaded successfully.');
-              $('#fMImageUpload').hide();
-              $('input[imageToSaveUrl]').eq(i).removeAttr('imageToSaveUrl');
-              $('div[id="view_3188"] button[type="submit"]').removeAttr('disabled');
-              $('form').submit()
-            })
+            uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg','',$('input[imageToSaveUrl]').eq(i).attr('name'),imageUploadedSuccesfully);
           });
         }
         return false;
@@ -3806,6 +3796,19 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     }
   }
 });
+
+function imageUploadedSuccesfully(fieldName, fileId){
+  alert(fieldName);
+  alert(fileId);
+  $('input[name="'+fieldName+'"]').val(fileId);
+  $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
+  $('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
+  $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+' .kn-file-upload').html('File uploaded successfully.');
+  $('#fMImageUpload').hide();
+  $('input[name="'+fieldName+'"]').removeAttr('imageToSaveUrl');
+  $('button[type="submit"]').removeAttr('disabled');
+  $('form').submit()
+}
 
 function createFormModal(id, htmlContent){
   let fM = document.createElement("div");
