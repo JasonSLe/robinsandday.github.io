@@ -3803,7 +3803,6 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
             uploadImageOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg','infoText',$('input[imageToSaveUrl]').eq(i).attr('name'),imageUploadedSuccesfully);
           });
         }
-        alert(uploadImagesList);
         return false;
       }
     }
