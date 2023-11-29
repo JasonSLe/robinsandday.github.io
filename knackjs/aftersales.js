@@ -3387,27 +3387,6 @@ function recursivecallscene_755(){
  setTimeout(function () { if($("#view_2478").is(":visible")==true){ Knack.views["view_2478"].model.fetch();recursivecallscene_755();} }, 300000);
 }
 
-$(document).on('knack-view-render.view_3188', function (event, view, data) {
-  embedPhotoApp();
-  let appSettings = {
-    spiritLine : false,
-    imageOverlay: null,
-    imageOverlayEffect : false,
-    imageOverlayOpacity : null,
-    allowLandscape : true,
-    allowPortrait : true,
-    actionAfterPhoto : 'readable', // none, readable, compare,
-    actionAfterPhotoReadableText : 'Is the photo OK?',
-    uploadMethod : 'field', //knack, make, field
-    uploadField : 'field_2699',
-    resizeImageHeight : null,
-    resizeImageWidth : null
-  }
-  $('div[id="view_3188"] h3').on("click",function(){
-    showPhotoApp(appSettings, this);
-  });
-}); 
-
 $(document).on('knack-view-render.view_3008', function (event, view, data) {
   embedPhotoApp();
   $('div[id="view_3008"] img').on("click",function(){
@@ -3771,6 +3750,32 @@ $(document).on('knack-form-submit.view_3088', function(event, view, data) {
 
 //offline form testing
 $(document).on('knack-view-render.view_3188', function (event, view, data) {
+  embedPhotoApp();
+  let appSettings = {
+    spiritLine : false,
+    imageOverlay: null,
+    imageOverlayEffect : false,
+    imageOverlayOpacity : null,
+    allowLandscape : true,
+    allowPortrait : true,
+    actionAfterPhoto : 'readable', // none, readable, compare,
+    actionAfterPhotoReadableText : 'Is the photo OK?',
+    uploadMethod : 'field', //knack, make, field
+    uploadField : 'field_2699',
+    resizeImageHeight : null,
+    resizeImageWidth : null
+  }
+  for (let i = 0;i<$('div[class="kn-input kn-input-image control"]').length;i++){
+    $('div[class="kn-input kn-input-image control"]').eq(i).find('input').hide();
+    let fM = document.createElement("p");
+    fM.setAttribute("id", 'takePhoto_'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id'));
+    fM.innerText = 'Take photo';
+    fM.onclick = function(){
+      showPhotoApp(appSettings, this);
+    }
+    document.querySelector('div[id="kn-input-'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id')+'"]>div[class="kn-file-upload"]').appendChild(fM) 
+  }
+
   var formButton = document.querySelector('div[class="kn-submit"]>button');
   formButton.onclick = function() {
     console.log('clicked')
