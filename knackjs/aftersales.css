@@ -599,6 +599,7 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 	padding-top: 20px;
   }
 
+
 /* Make Reg number look like REG*/
 
 #view_344 > section > div > div > div > div > div > div > span > span {
@@ -610,6 +611,18 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	padding-right: 20px;
   	text-align: center;
 }
+
+
+#view_3496 > section > div > div > div > div > div > div > span > span {
+	background-color: #FFE74C;
+  	border-radius: 10px;
+  	font-size: 24px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	padding-right: 20px;
+  	text-align: center;
+}
+
 
 #view_3273 > section > div > div > div > div > div > div > span > span {
 	background-color: #FFE74C;
@@ -1602,7 +1615,16 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 #view_3145 > section > div > div:nth-child(2) > div > div > div.kn-label-top.field_1532 > div,
 #view_3145 > section > div > div:nth-child(2) > div > div > div.kn-detail.field_1042 > div.kn-detail-label,
 #view_3145 > section > div > div:nth-child(2) > div > div > div.kn-detail.field_2047 > div.kn-detail-label,
-#view_3145 > section > div > div:nth-child(2) > div > div > div.kn-detail.field_1041 > div.kn-detail-label {
+#view_3145 > section > div > div:nth-child(2) > div > div > div.kn-detail.field_1041 > div.kn-detail-label,
+#view_3484 > section > div > div > div > div > div > div.kn-detail-label,
+#view_3490 > section > div > div.kn-details-group.column-2.columns > div:nth-child(1) > div > div:nth-child(1) > div,
+#view_3490 > section > div > div.kn-details-group.column-2.columns > div:nth-child(2) > div > div:nth-child(1) > div,
+#view_3490 > section > div > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > div,
+#view_3490 > section > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(1) > div,
+#view_3490 > section > div > div:nth-child(2) > div:nth-child(3) > div > div:nth-child(1) > div,
+#view_3490 > section > div > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(3) > div,
+#view_3490 > section > div > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(3) > div,
+#view_3490 > section > div > div.kn-details-group.column-1.columns > div > div > div:nth-child(1) > div {
   background-color: transparent;
 }
 
@@ -2002,6 +2024,25 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
   	box-shadow:         3px 3px #ccc;
 }
 
+
+/*Make tyres & prices green*/
+#view_3515 > form > div > button {
+	background-color: #00CC66 !important;
+  	color: #FFFFFF !important;
+  	font-weight: bold;
+  	box-shadow:         3px 3px #ccc;
+}
+
+#view_3515 > form > div > a:hover.button  {
+	background-color: #32936F !important;
+  	color: #FFFFFF !important;
+  	font-weight: bold;
+  	transition-property: color;
+  	transition-duration: .3s;
+  	border-width: 2px;
+  	border-color: #FFFFFF;
+  	box-shadow:         3px 3px #ccc;
+}
 /* Two Way Messaging */
 
 p.speech-bubble-outbound {
