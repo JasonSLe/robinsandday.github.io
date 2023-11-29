@@ -3771,9 +3771,9 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     fM.setAttribute("id", 'takePhoto_'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id'));
     fM.innerText = 'Take photo';
     fM.onclick = function(){
-      //let mAppSettings = new Object({},appSettings);
-      //mAppSettings.uploadField = $('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id');
-      showPhotoApp(appSettings);
+      let mAppSettings = Object.assign({},appSettings);
+      mAppSettings.uploadField = $('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id');
+      showPhotoApp(mAppSettings);
     }
     document.querySelector('div[id="kn-input-'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
   }
