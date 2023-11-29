@@ -539,7 +539,6 @@ takePhotoButton.onclick = takePhoto;
   confirmButton.onclick = function() {
     // DISABLE SAVE BUTTON
     $("#cameraConfirm").attr("disabled", true);
-    alert('confimr clicked')
     afterConfirmPhoto();
   };
 
