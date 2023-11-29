@@ -9,6 +9,10 @@ function dateTimeToGB(dateobj){
   return pad(dateobj.getDate())+"/"+pad(dateobj.getMonth()+1)+"/"+dateobj.getFullYear()+' '+dateobj.toLocaleTimeString("en-GB");
 }
 
+function dateTimeToGBWithoutSeconds(dateobj){
+  return pad(dateobj.getDate())+"/"+pad(dateobj.getMonth()+1)+"/"+dateobj.getFullYear()+' '+dateobj.toLocaleTimeString("en-GB").substring(0,5);
+}
+
 // Listen for the list page view
 $(document).on('knack-records-render.view_2157', function(event, view, records) {
   // Do something after the records render
@@ -51,7 +55,8 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
             var url = 'https://api.apify.com/v2/key-value-stores/MGAH5Tr9TFctDnMTD/records/cronosAllCheck_'+franchise+'?disableRedirect=true';
           //AJAX Get for the URL - response is now just the date, so we will only print it to html page
               $.ajax({url:url, success: function(data){
-                  $(this).find('div[id="dodp"]').text(data);
+                let dataWithoutSec = data.substring(0, data.length-3)
+                  $(this).find('div[id="dodp"]').text(dataWithoutSec);
               },
               error: function(jqXHR, textStatus, errorThrown) {
                   console.log("error. textStatus: %s  errorThrown: %s", textStatus, errorThrown);
@@ -62,7 +67,7 @@ $(document).on('knack-records-render.view_2157', function(event, view, records) 
           if ($(this).find('div[id="doGEFCO"]').text()!==''){
             let r = obtCarsJ.find(el => el.orderNumber === orderNumber);
             if (r){
-              $(this).find('div[id="doGEFCO"]').parent().append('<b>OBT Checked:</b><br />'+dateTimeToGB(new Date(r.obtChecked)))
+              $(this).find('div[id="doGEFCO"]').parent().append('<b>OBT Checked:</b><br />'+dateTimeToGBWithoutSeconds(new Date(r.obtChecked)))
               console.log(orderNumber,r);
             }
           }
