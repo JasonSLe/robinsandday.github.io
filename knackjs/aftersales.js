@@ -3796,6 +3796,8 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
               $('div[id="kn-input-'+$('input[imageToSaveUrl]').eq(i).attr('name')+' .kn-file-upload').html('File uploaded successfully.');
               $('#fMImageUpload').hide();
               $('input[imageToSaveUrl]').eq(i).removeAttr('imageToSaveUrl');
+              $('div[id="view_3188"] button[type="submit"]').removeAttr('disabled');
+              $('form').submit()
             })
           });
         }
