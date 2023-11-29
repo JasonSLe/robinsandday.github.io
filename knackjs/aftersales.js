@@ -3791,7 +3791,7 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
       if ($('input[imageToSaveUrl]').length>0){
         uploadImagesList = [];
         $('div[id="view_3188"] button[type="submit"]').prop('disabled', true);
-        createFormModal('fMImageUpload','<h3>Images are being uploaded, then the form will be submitted ...<h3><p id="infoText"></p>');
+        createFormModal('fMImageUpload','<h3>Images are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>');
         $('#fMImageUpload').show();
         for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
           uploadImagesList.push({field:$('input[imageToSaveUrl]').eq(i).attr('name')})
