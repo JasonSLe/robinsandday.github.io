@@ -3443,6 +3443,16 @@ function embedPhotoApp(){
   if ($('#photoAppJS').length===0){
     loadScript("https://robinsandday.github.io/knackjs/takePhotoApp.js?"+nowS,'photoAppJS', emptyCallback);
   }
+
+  preload(["https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/camera-4-48.png","https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/icons8-exit-26%20(1).png"])
+}
+
+var images = [];
+function preload(input) {
+  for (var i = 0; i < input.length; i++) {
+      images[i] = new Image();
+      images[i].src = input[i];
+  }
 }
 
 function showPhotoApp(appSettings){
