@@ -3748,6 +3748,9 @@ $(document).on('knack-form-submit.view_3088', function(event, view, data) {
  window.addEventListener('online', () => isOnline = true);
  window.addEventListener('offline', () => isOnline = false);
 
+
+var uploadImagesList = [];
+
 //offline form testing
 $(document).on('knack-view-render.view_3188', function (event, view, data) {
   embedPhotoApp();
@@ -3786,18 +3789,21 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
       return false;
     } else {
       if ($('input[imageToSaveUrl]').length>0){
+        uploadImagesList = [];
         $('div[id="view_3188"] button[type="submit"]').prop('disabled', true);
-        createFormModal('fMImageUpload','Images are being uploaded, then the form will be submitted ...');
+        createFormModal('fMImageUpload','<h3>Images are being uploaded, then the form will be submitted ...<h3><p id="infoText"></p>');
         $('#fMImageUpload').show();
         for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
+          uploadImagesList.push({field:$('input[imageToSaveUrl]').eq(i).attr('name')})
           fetch($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'))
           .then(function(response) {
             return response.blob();
           })
           .then(function(blob) {
-            uploadImageOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg','infoElement',$('input[imageToSaveUrl]').eq(i).attr('name'),imageUploadedSuccesfully);
+            uploadImageOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg','#infoText',$('input[imageToSaveUrl]').eq(i).attr('name'),imageUploadedSuccesfully);
           });
         }
+        alert(uploadImagesList);
         return false;
       }
     }
@@ -3813,8 +3819,15 @@ function imageUploadedSuccesfully(fieldName, fileId){
   $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+' .kn-file-upload').html('File uploaded successfully.');
   $('#fMImageUpload').hide();
   $('input[name="'+fieldName+'"]').removeAttr('imageToSaveUrl');
-  $('button[type="submit"]').removeAttr('disabled');
-  $('form').submit()
+  let f = uploadImagesList.find(el => el.field === fieldName);
+  if (f){
+    f.uploaded = true;
+  }
+  let notUploaded = uploadImagesList.filter(el => el.uploaded);
+  if (notUploaded.length===0){
+    $('button[type="submit"]').removeAttr('disabled');
+    $('form').submit();
+  }
 }
 
 function createFormModal(id, htmlContent){
