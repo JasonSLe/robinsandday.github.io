@@ -3800,7 +3800,7 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
             return response.blob();
           })
           .then(function(blob) {
-            uploadImageOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg','#infoText',$('input[imageToSaveUrl]').eq(i).attr('name'),imageUploadedSuccesfully);
+            uploadImageOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg','infoText',$('input[imageToSaveUrl]').eq(i).attr('name'),imageUploadedSuccesfully);
           });
         }
         alert(uploadImagesList);
