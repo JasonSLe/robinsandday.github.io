@@ -3773,7 +3773,7 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     fM.onclick = function(){
       showPhotoApp(appSettings, this);
     }
-    document.querySelector('div[id="kn-input-'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id')+'"]>div[class="kn-file-upload"]').appendChild(fM) 
+    document.querySelector('div[id="kn-input-'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
   }
 
   var formButton = document.querySelector('div[class="kn-submit"]>button');
