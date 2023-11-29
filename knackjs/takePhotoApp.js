@@ -607,6 +607,7 @@ function afterConfirmPhoto(){
 function setLayoutInPortrait(){
   //$("#cameraLine").hide();
   //$("#cameraSpiritCircle").hide();
+  console.log('setLayoutInPortrait')
   if (!appSettings.allowPortrait){
     $("#takePhoto").hide();
     $("#cameraRotate").show();
@@ -623,6 +624,7 @@ function setLayoutInPortrait(){
 
 function setLayoutInLandscape(){
 //$("#cameraLine").show();
+console.log('setLayoutInLandscape')
 if (!appSettings.allowLandscape){
   $("#takePhoto").hide();
   $("#cameraRotate").show();
