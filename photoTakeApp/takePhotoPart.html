@@ -1,5 +1,8 @@
 <h1 class="photoH1">Processing your photo ...</h1>
     <div id="kn-loading-spinner" style="display: none;"></div>
+    <p id="submitingFormModal" style="display: none;">
+        Photos are uploaded and then will be the form submited ...
+    </p>
     <div id="cameraTakePhotoDiv">
         <div id="cameraVid_container" style="display: none;">
             <canvas id="cameraOverlayCanvas"></canvas>
@@ -11,9 +14,6 @@
             <br>
             <a id="cameraModal_txt">This app requires you to enable the Device Motion event on your device.</a>
             <button id="cameraAccept" name="confirm request" type="button" class="cameraButton">Enable</button>
-        </p>
-        <p id="submitingFormModal" style="display: none;">
-            Photos are uploaded and then will be the form submited ...
         </p>
         <div id="cameraGrid" style="display: none;">
             <div id="zoomHolderOut"><div id="zoomHolder"><img id="cameraFrontpic"/></div></div><br />

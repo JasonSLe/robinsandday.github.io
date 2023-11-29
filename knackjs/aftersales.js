@@ -3782,13 +3782,11 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
         $('div[id="view_3188"] button[type="submit"]').prop('disabled', true);
         $('#submitingFormModal').show();
         for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
-          alert($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'));
           fetch($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'))
           .then(function(response) {
             return response.blob();
           })
           .then(function(blob) {
-            alert(blob);
             uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg').then(function(fileId){
               alert(fileId);
               $('input[imageToSaveUrl]').eq(i).val(fileId);
