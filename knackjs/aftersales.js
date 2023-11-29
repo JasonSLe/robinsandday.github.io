@@ -3779,6 +3779,8 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
       return false;
     } else {
       if ($('input[imageToSaveUrl]').length>0){
+        $('div[id="view_3188"] button[type="submit"]').prop('disabled', true);
+        $('#submitingFormModal').show();
         for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
           alert($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'));
           fetch($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'))
@@ -3790,12 +3792,15 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
             uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg').then(function(fileId){
               alert(fileId);
               $('input[imageToSaveUrl]').eq(i).val(fileId);
-              $('div[id="kn-input-'+$('input[imageToSaveUrl]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
-              $('#'+$('input[imageToSaveUrl]').attr('name')+'_upload').hide();
-              $('div[id="kn-input-'+$('input[imageToSaveUrl]').attr('name')+' .kn-file-upload').html('File uploaded successfully.');
+              $('div[id="kn-input-'+$('input[imageToSaveUrl]').eq(i).attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
+              $('#'+$('input[imageToSaveUrl]').eq(i).attr('name')+'_upload').hide();
+              $('div[id="kn-input-'+$('input[imageToSaveUrl]').eq(i).attr('name')+' .kn-file-upload').html('File uploaded successfully.');
+              $('#submitingFormModal').hide();
+              $('input[imageToSaveUrl]').eq(i).removeAttr('imageToSaveUrl');
             })
           });
         }
+        return false;
       }
     }
   }
