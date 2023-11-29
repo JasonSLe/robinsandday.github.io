@@ -3817,15 +3817,15 @@ function imageUploadedSuccesfully(fieldName, fileId){
   $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
   $('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
   $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+' .kn-file-upload').html('File uploaded successfully.');
-  $('#fMImageUpload').hide();
   $('input[name="'+fieldName+'"]').removeAttr('imageToSaveUrl');
   let f = uploadImagesList.find(el => el.field === fieldName);
   if (f){
     f.uploaded = true;
   }
-  let notUploaded = uploadImagesList.filter(el => el.uploaded);
+  let notUploaded = uploadImagesList.filter(el => !el.uploaded);
   alert(notUploaded.length)
   if (notUploaded.length===0){
+    $('#fMImageUpload').hide();
     $('button[type="submit"]').removeAttr('disabled');
     $('form').submit();
   }
