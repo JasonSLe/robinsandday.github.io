@@ -3800,7 +3800,6 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
             return response.blob();
           })
           .then(function(blob) {
-            alert('upload'+$('input[imageToSaveUrl]').eq(i).attr('name'))
             uploadImageOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg','infoText',$('input[imageToSaveUrl]').eq(i).attr('name'),imageUploadedSuccesfully);
           });
         }
@@ -3811,7 +3810,7 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
 });
 
 function imageUploadedSuccesfully(fieldName, fileId){
-  alert(fieldName);
+  //alert(fieldName);
   //alert(fileId);
   $('input[name="'+fieldName+'"]').val(fileId);
   $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
@@ -3823,7 +3822,6 @@ function imageUploadedSuccesfully(fieldName, fileId){
     f.uploaded = true;
   }
   let notUploaded = uploadImagesList.filter(el => !el.uploaded);
-  alert(notUploaded.length)
   if (notUploaded.length===0){
     $('#fMImageUpload').hide();
     $('button[type="submit"]').removeAttr('disabled');
