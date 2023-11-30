@@ -315,17 +315,14 @@ const effect = $('#cameraOverlayCanvas');
 
 //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
-
-
 imageBeforeResize.onload = () => {
-  
+  alert('prep resize')
    const elem = document.createElement('canvas');
    elem.width = (appSettings.resizeImageWidth?appSettings.resizeImageWidth: imageBeforeResize.width);
    elem.height = (appSettings.resizeImageHeight?appSettings.resizeImageHeight: imageBeforeResize.height);
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
 
-  
  //ONE STEP RESIZE
     ctx.drawImage(imageBeforeResize,0,0);//, imageBeforeResize.width * (1-percentOfPicture)/2, imageBeforeResize.height * (1-percentOfPicture)/2, imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
   
@@ -333,6 +330,7 @@ imageBeforeResize.onload = () => {
    ctx.canvas.toBlob((blob) => {
       img.src = URL.createObjectURL(blob);
       img.style.visibility = 'visible';
+      alert('resized')
   }, 'image/jpeg', 1);
 
 }
