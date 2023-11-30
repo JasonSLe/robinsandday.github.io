@@ -621,7 +621,7 @@ function setLayoutInPortrait(){
 
 function setLayoutInLandscape(){
 //$("#cameraLine").show();
-console.log('setLayoutInLandscape')
+console.log('setLayoutInLandscape',appSettings.allowLandscape)
 if (!appSettings.allowLandscape){
   $("#takePhoto").hide();
   $("#cameraRotate").show();
@@ -696,7 +696,7 @@ function setLayout(takingPhotoI){
     //$("#cameraLine").show();
 
     // ACTIVATE TAKEPHOTO BUTTON
-	  $("#takePhoto").show(); 
+	  //$("#takePhoto").show(); 
   } else {
     //HIDE VIDEO & OVERLAY ELEMENT
     $('video').hide();
