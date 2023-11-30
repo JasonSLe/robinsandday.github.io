@@ -594,7 +594,7 @@ function afterConfirmPhoto(){
       break;
     case 'field':
       $('input[name="'+appSettings.uploadField+'"]').attr('imageToSaveUrl',finalImgUrl);
-      $('div[id="kn-input-'+appSettings.uploadField+'"]>div[class="kn-file-upload"]').html('<img src="'+finalImgUrl+'" width="200" height="200"></img>')
+      $('div[id="kn-input-'+appSettings.uploadField+'"]>div[class="kn-file-upload"]').html('<img src="'+finalImgUrl+'" style="max-width:200px;max-height:200px;"></img>')
       break;
   }
 
