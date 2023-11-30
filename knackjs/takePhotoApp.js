@@ -316,10 +316,10 @@ const effect = $('#cameraOverlayCanvas');
 //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
 imageBeforeResize.onload = () => {
-  alert(appSettings.resizeImageWidth)
+  alert(vimageBeforeResize.width+'*'+imageBeforeResize.height)
    const elem = document.createElement('canvas');
-   elem.width = (appSettings.resizeImageWidth?appSettings.resizeImageWidth: imageBeforeResize.width);
-   elem.height = (appSettings.resizeImageHeight?appSettings.resizeImageHeight: imageBeforeResize.height);
+   elem.width = (appSettings.resizeImageMaxWidth?appSettings.resizeImageMaxWidth: imageBeforeResize.width);
+   elem.height = (appSettings.resizeImageMaxHeight?appSettings.resizeImageMaxHeight: imageBeforeResize.height);
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
 

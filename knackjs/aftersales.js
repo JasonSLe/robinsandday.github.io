@@ -3775,8 +3775,8 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     actionAfterPhotoReadableText : 'Is the photo OK?',
     uploadMethod : 'field', //knack, make, field
     uploadField : 'field_2699',
-    resizeImageHeight : 1000,
-    resizeImageWidth : 1000
+    resizeImageMaxHeight : 1000,
+    resizeImageMaxWidth : 1000
   }
   for (let i = 0;i<$('div[class="kn-input kn-input-image control"]').length;i++){
     $('div[class="kn-input kn-input-image control"]').eq(i).find('input').hide();
