@@ -3786,6 +3786,12 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
     fM.onclick = function(){
       let mAppSettings = Object.assign({},appSettings);
       mAppSettings.uploadField = $('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id');
+      if (i===0){
+        mAppSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
+        //appSettings.imageOverlayEffect = true;
+        mAppSettings.imageOverlayOpacity = 0.5;
+        mAppSettings.allowLandscape = false;
+      }
       showPhotoApp(mAppSettings);
     }
     document.querySelector('div[id="kn-input-'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
