@@ -316,7 +316,7 @@ const effect = $('#cameraOverlayCanvas');
 //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
 imageBeforeResize.onload = () => {
-  alert(vimageBeforeResize.width+'*'+imageBeforeResize.height)
+  alert(imageBeforeResize.width+'*'+imageBeforeResize.height)
    const elem = document.createElement('canvas');
    elem.width = (appSettings.resizeImageMaxWidth?appSettings.resizeImageMaxWidth: imageBeforeResize.width);
    elem.height = (appSettings.resizeImageMaxHeight?appSettings.resizeImageMaxHeight: imageBeforeResize.height);
