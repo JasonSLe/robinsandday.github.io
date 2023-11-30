@@ -323,7 +323,6 @@ imageBeforeResize.onload = () => {
    elem.height = (appSettings.resizeImageMaxHeight?(imageRatio>=1?appSettings.resizeImageMaxHeight*(1/imageRatio):appSettings.resizeImageMaxHeight): imageBeforeResize.height);
    const ctx = elem.getContext('2d');
   //check if the resolution of the image is 4:3
-  alert(imageBeforeResize.width+'*'+imageBeforeResize.height+'&'+elem.width+'*'+elem.height);
  //ONE STEP RESIZE
     ctx.drawImage(imageBeforeResize,0,0,elem.width,elem.height);//, imageBeforeResize.width * (1-percentOfPicture)/2, imageBeforeResize.height * (1-percentOfPicture)/2, imageBeforeResize.width * percentOfPicture,imageBeforeResize.height * percentOfPicture, 0, 0, 768, 576);
   
@@ -331,7 +330,6 @@ imageBeforeResize.onload = () => {
    ctx.canvas.toBlob((blob) => {
       img.src = URL.createObjectURL(blob);
       img.style.visibility = 'visible';
-      alert(img.src)
   }, 'image/jpeg', 1);
 
 }
