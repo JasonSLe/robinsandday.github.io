@@ -1,0 +1,18 @@
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $("img").click(function(e){
+                var pos = $(this).position();
+                //The following are the x/y coordinates of the mouse click relative to image.
+                var x = e.pageX - pos.left;
+                var y = e.pageY - pos.top;
+                alert(x,y)
+            });
+        </script>
+
+    </head>
+    <body>
+        <img src="http://www.hruska.cz/test.jpg" id="image"/>
+    </body>
+</html>
