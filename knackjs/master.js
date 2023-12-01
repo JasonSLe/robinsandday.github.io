@@ -856,10 +856,10 @@ $(document).on('knack-view-render.view_3280', function(event, view) {
     let timestamp = (new Date()).getTime();
     let filename = $('input[name="id"]').attr('value')+"_"+timestamp.toString();
     let fittedOptions = '';
-    for (let i = 0;i<$('div[id="connection-picker-checkbox-field_7464"] input:checked').length;i++){
-      fittedOptions += (fittedOptions!==''?',':'') + $('div[id="connection-picker-checkbox-field_7464"] input:checked').eq(i).next().text();
+    for (let i = 0;i<$('div[id="connection-picker-checkbox-field_7561"] input:checked').length;i++){
+      fittedOptions += (fittedOptions!==''?',':'') + $('div[id="connection-picker-checkbox-field_7561"] input:checked').eq(i).next().text();
     }
-    console.log(serviceHistory,fittedOptions);
+    console.log(fittedOptions);
     callPostHttpRequest("https://hook.eu1.make.celonis.com/h9kk9xuetv43pd3h0t7cj11qagwuaz96", {"RecordID":$('input[name="id"]').attr('value'), "View":"2303","filename":filename,"fittedOptions":fittedOptions },"Make Webhook Chate GPT generation");
     button0.innerHTML = 'Please wait ... working ...';
      button0.disabled = true
