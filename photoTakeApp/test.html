@@ -38,7 +38,14 @@
                     case 5:
                         touchPoint2 = param;
                         console.log(diamPoint1,diamPoint2,touchPoint1,touchPoint2)
+                        console.log('diametr',distance(diamPoint1,diamPoint2),'part',distance(touchPoint1,touchPoint2))
                 }
+            }
+
+            function distance(p1,p2){
+                let a = p1.x - p2.x;
+                let b = p1.y - p2.y;
+                return Math.sqrt( a*a + b*b );
             }
         </script>
     </body>
