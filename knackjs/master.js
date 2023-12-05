@@ -860,7 +860,7 @@ $(document).on('knack-view-render.view_3280', function(event, view) {
       fittedOptions += (fittedOptions!==''?',':'') + $('div[id="connection-picker-checkbox-field_7561"] input:checked').eq(i).next().text();
     }
     console.log(fittedOptions);
-    callPostHttpRequest("https://hook.eu1.make.celonis.com/h9kk9xuetv43pd3h0t7cj11qagwuaz96", {"RecordID":$('input[name="id"]').attr('value'), "View":"2303","filename":filename,"fittedOptions":fittedOptions },"Make Webhook Chate GPT generation");
+    callPostHttpRequest("https://hook.eu1.make.celonis.com/h9kk9xuetv43pd3h0t7cj11qagwuaz96", {"RecordID":$('input[name="id"]').attr('value'), "View":"3280","filename":filename,"fittedOptions":fittedOptions },"Make Webhook Chate GPT generation");
     button0.innerHTML = 'Please wait ... working ...';
      button0.disabled = true
      setTimeout(function() {
