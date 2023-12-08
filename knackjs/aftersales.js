@@ -4238,7 +4238,7 @@ function scanDocsLinkFunction(selector_view){
           return function() {
             var cell = row.id;
             console.log('cell',cell);
-            callPostHttpRequest("https://hook.eu1.make.celonis.com/sxuvqusgluh7rwst89mk4sm38w5632r2", {"recordId":cell, "Scenario":"Aftersakes - Send Courtesy to wash/valet" },"Aftersales - Send Courtesy to wash/valet");
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/sxuvqusgluh7rwst89mk4sm38w5632r2", {"recordId":cell, "userName": Knack.getUserAttributes().name, "Scenario":"Aftersakes - Send Courtesy to wash/valet" },"Aftersales - Send Courtesy to wash/valet");
           };
         };
         if (currentRow.id!==''){
