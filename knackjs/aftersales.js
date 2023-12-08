@@ -4219,3 +4219,32 @@ function scanDocsLinkFunction(selector_view){
     }
   });
 }  
+
+
+
+ //Aftersales - Trigger Manual Courtesy service wash/valet
+  $(document).on('knack-view-render.view_2943', function (event, view, data) {
+	  
+    //This part is for column headers
+    //Column header
+
+
+    if ($('div[class="kn-table kn-view view_2943"]')){
+      let rows = $('div[class="kn-table kn-view view_2943"] table tr');
+      console.log('rows',rows.length);
+      for (i = 1; i < rows.length; i++) {
+        let currentRow = rows[i];
+        const createClickHandler = function(row) {
+          return function() {
+            var cell = row.id;
+            console.log('cell',cell);
+            callPostHttpRequest("https://hook.eu1.make.celonis.com/sxuvqusgluh7rwst89mk4sm38w5632r2", {"recordId":cell, "Scenario":"Aftersakes - Send Courtesy to wash/valet" },"Aftersales - Send Courtesy to wash/valet");
+          };
+        };
+        if (currentRow.id!==''){
+          currentRow.children[1].onclick = createClickHandler(currentRow);
+        }
+      }
+    }
+
+  });
