@@ -3685,6 +3685,26 @@ $(document).on('knack-form-submit.view_2353', function(event, view, data) {
     }
 });
 
+ //Commence courtesy car agreement to trigger part 2 of Digital check in from inspection page
+$(document).on('knack-form-submit.view_2353', function(event, view, data) { 
+    
+    try{
+	    
+        let commandURL = "https://hook.eu1.make.celonis.com/ursfgeixws3xf5cl2j9d1bozxizq7air";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "from":"Courtesy Inspection Page"});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Commence courtesy car agreement to trigger checin in from inspection page");
+    }
+});
+
 // ----------  refresh Enquiry Max Table every 5 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_778', function(event, scene) {
