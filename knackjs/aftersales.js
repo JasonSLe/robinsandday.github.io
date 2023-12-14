@@ -3690,7 +3690,7 @@ $(document).on('knack-form-submit.view_2353', function(event, view, data) {
     
     try{
 	    
-        let commandURL = "https://hook.eu1.make.celonis.com/ursfgeixws3xf5cl2j9d1bozxizq7air";
+        let commandURL = "https://hook.eu1.make.celonis.com/1v52b45xmqgp25kqsocwmoab3cu88ikf";
         let dataToSend = JSON.stringify({"RecordID":data.id, "from":"Courtesy Inspection Page"});
 
         var rData = $.ajax({
