@@ -3670,8 +3670,8 @@ $(document).on('knack-form-submit.view_3592', function(event, view, data) {
     
     try{
 	    
-        let commandURL = "https://hook.eu1.make.celonis.com/ursfgeixws3xf5cl2j9d1bozxizq7air";
-        let dataToSend = JSON.stringify({"RecordID":data.id, "source": "Original Courtesy commence"});
+        let commandURL = "https://hook.eu1.make.celonis.com/1v52b45xmqgp25kqsocwmoab3cu88ikf,";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "source": "Courtesy Inspection Page"});
 
         var rData = $.ajax({
             url: commandURL,
@@ -3690,8 +3690,8 @@ $(document).on('knack-form-submit.view_2353', function(event, view, data) {
     
     try{
 	    
-        let commandURL = "https://hook.eu1.make.celonis.com/1v52b45xmqgp25kqsocwmoab3cu88ikf";
-        let dataToSend = JSON.stringify({"RecordID":data.id, "from":"Courtesy Inspection Page"});
+        let commandURL = "https://hook.eu1.make.celonis.com/ursfgeixws3xf5cl2j9d1bozxizq7air";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "from":"Original Courtesy commence"});
 
         var rData = $.ajax({
             url: commandURL,
