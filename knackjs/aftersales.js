@@ -1591,6 +1591,11 @@ $(document).on("knack-scene-render.scene_762", function(event, scene) {
   $(this).find('.kn-modal').addClass('Modal_for_' + Knack.router.current_scene_key)
 });
 
+// Send Message View
+$(document).on("knack-scene-render.scene_420", function(event, scene) {
+  $(this).find('.kn-modal').addClass('Modal_for_' + Knack.router.current_scene_key)
+});
+
 // Commence Courtesy Car Agreement Page
 $(document).on("knack-scene-render.scene_779", function(event, scene) {
   $(this).find('.kn-modal').addClass('Modal_for_' + Knack.router.current_scene_key)
