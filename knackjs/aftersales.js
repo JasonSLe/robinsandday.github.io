@@ -3710,6 +3710,45 @@ $(document).on('knack-form-submit.view_2353', function(event, view, data) {
     }
 });
 
+//Trigger aftersales check in from jobcard inspection page
+$(document).on('knack-form-submit.view_3566', function(event, view, data) { 
+    
+    try{
+	    
+        let commandURL = "https://hook.eu1.make.celonis.com/4fgvpdfd1uc67sr8our7b7wy5ikd84uu";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "from":"Job card Inspection Page"});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Commence checkin in from jobcard inspection page");
+    }
+});
+
+//Trigger aftersales check in from courtesy car inspection page
+$(document).on('knack-form-submit.view_3592', function(event, view, data) { 
+    
+    try{
+	    
+        let commandURL = "https://hook.eu1.make.celonis.com/4fgvpdfd1uc67sr8our7b7wy5ikd84uu";
+        let dataToSend = JSON.stringify({"RecordID":data.id, "from":"Courtesy Car Inspection Page"});
+
+        var rData = $.ajax({
+            url: commandURL,
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataToSend,
+            async: false
+        }).responseText;
+    }catch(exception){
+        sendErrorToIntegromat(exception, "Commence courtesy car agreement to trigger checin in from inspection page");
+    }
+});
 // ----------  refresh Enquiry Max Table every 5 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_778', function(event, scene) {
