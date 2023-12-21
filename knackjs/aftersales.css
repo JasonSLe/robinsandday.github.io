@@ -2278,3 +2278,15 @@ div.tooltipDiv {
   overflow: auto !important;
   height: 800px !important;
 }
+
+/* Make scan buttons look like buttons*/
+#view_3471,
+#view_3602,
+#view_3603,
+#view_3138,
+#view_3162,
+#view_3135,
+#view_2866 > div > p {
+  margin: -30px;
+  padding-bottom: 20px;
+}
