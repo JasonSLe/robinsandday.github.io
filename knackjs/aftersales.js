@@ -3817,6 +3817,44 @@ $(document).on('knack-form-submit.view_3088', function(event, view, data) {
     }
 });
 
+$(document).on('knack-view-render.view_3566', function (event, view, data) {
+  embedPhotoApp();
+  let appSettings = {
+    spiritLine : false,
+    imageOverlay: null,
+    imageOverlayEffect : false,
+    imageOverlayOpacity : null,
+    allowLandscape : true,
+    allowPortrait : true,
+    actionAfterPhoto : 'readable', // none, readable, compare,
+    actionAfterPhotoReadableText : 'Is the photo OK?',
+    uploadMethod : 'field', //knack, make, field
+    uploadField : 'field_2699',
+    resizeImageMaxHeight : 1000,
+    resizeImageMaxWidth : 1000
+  }
+  /*or (let i = 0;i<$('div[class="kn-input kn-input-image control"]').length;i++){
+    $('div[class="kn-input kn-input-image control"]').eq(i).find('input').hide();
+    let fM = document.createElement("p");
+    fM.setAttribute("id", 'takePhoto_'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id'));
+    fM.innerText = 'Take photo';
+    fM.onclick = function(){
+      let mAppSettings = Object.assign({},appSettings);
+      mAppSettings.uploadField = $('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id');
+      if (i===0){
+        mAppSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
+        //appSettings.imageOverlayEffect = true;
+        mAppSettings.imageOverlayOpacity = 0.5;
+        mAppSettings.allowLandscape = false;
+      }
+      showPhotoApp(mAppSettings);
+    }
+    document.querySelector('div[id="kn-input-'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
+  }*/
+
+  
+});
+
  //PROPERTY AND EVENTS FOR ONLINE/OFFLINE DETECTION
  var isOnline = true;
  window.addEventListener('online', () => isOnline = true);
