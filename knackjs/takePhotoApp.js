@@ -186,6 +186,25 @@ var OperatingSystem = {
    }
 };
 
+var go = () => {
+  effect.show();
+  if(!interval) { // if `interval` is equal to 0     
+   interval = setInterval(function () {
+      effect.fadeIn(1500, function () {
+        effect.fadeOut(1500);
+      });
+    }, 3000);
+}
+}
+
+var stop = () => {
+  effect.hide();
+  if(interval) {
+    clearInterval(interval);
+    interval = 0; 
+  }
+}
+
 function prepareCameraView(imgToSaveName){
 // ***************************************************************************************************************************
 // ****************************************CAMERA APP WITH PICTURE OVERLAY******************************************************
@@ -338,25 +357,6 @@ imageBeforeResize.onload = () => {
    canvas.width = this.naturalWidth;
    canvas.height = this.naturalHeight;
    ctx.drawImage(this, 0, 0);
- }
-
- var go = () => {
-   effect.show();
-   if(!interval) { // if `interval` is equal to 0     
-    interval = setInterval(function () {
-       effect.fadeIn(1500, function () {
-         effect.fadeOut(1500);
-       });
-     }, 3000);
- }
- }
-
- var stop = () => {
-   effect.hide();
-   if(interval) {
-     clearInterval(interval);
-     interval = 0; 
-   }
  }
 
  circle.style.display = 'none';
