@@ -3821,8 +3821,8 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
   embedPhotoApp();
   let appSettings = {
     spiritLine : false,
-    imageOverlay: null,
-    imageOverlayEffect : false,
+    imageOverlay: 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-background-v2.png',
+    imageOverlayEffect : true,
     imageOverlayOpacity : null,
     allowLandscape : true,
     allowPortrait : false,
