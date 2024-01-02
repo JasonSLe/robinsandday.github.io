@@ -3829,28 +3829,21 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
     actionAfterPhoto : 'readable', // none, readable, compare,
     actionAfterPhotoReadableText : 'Is the photo OK?',
     uploadMethod : 'field', //knack, make, field
-    uploadField : 'field_2699',
+    uploadField : 'field_2718',
     resizeImageMaxHeight : 1000,
     resizeImageMaxWidth : 1000
   }
-  /*or (let i = 0;i<$('div[class="kn-input kn-input-image control"]').length;i++){
-    $('div[class="kn-input kn-input-image control"]').eq(i).find('input').hide();
+  $('div[id="kn-input-field_2718"]').find('input').hide();
     let fM = document.createElement("p");
-    fM.setAttribute("id", 'takePhoto_'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id'));
+    fM.setAttribute("id", 'takePhoto_'+$('div[id="kn-input-field_2718"]').attr('data-input-id'));
     fM.innerText = 'Take photo';
     fM.onclick = function(){
       let mAppSettings = Object.assign({},appSettings);
-      mAppSettings.uploadField = $('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id');
-      if (i===0){
-        mAppSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
-        //appSettings.imageOverlayEffect = true;
-        mAppSettings.imageOverlayOpacity = 0.5;
-        mAppSettings.allowLandscape = false;
-      }
+      mAppSettings.uploadField = $('div[id="kn-input-field_2718"]').attr('data-input-id');
       showPhotoApp(mAppSettings);
     }
-    document.querySelector('div[id="kn-input-'+$('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
-  }*/
+    document.querySelector('div[id="kn-input-'+$('div[id="kn-input-field_2718"]').attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
+
 
   
 });
