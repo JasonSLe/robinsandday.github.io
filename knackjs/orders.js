@@ -2070,7 +2070,15 @@ $(document).on('knack-form-submit.view_2757', function(event, view, data) {
     }
 });
 
+// New Deal File - Enquiry Max TRIGGER INTEGROMAT to get insurance documents from Handover Checklist
+$(document).on('knack-form-submit.view_2757', function(event, view, data) { 
+	callPostHttpRequest("https://hook.eu1.make.celonis.com/6362il4kj9nelrnl4itsohyhumqs1hce",{"Record ID":data.id,"Form":"Handover checklist","Source Of Payload": "knack direct"},"Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Handover Checklist signed at Dealer OR to be signed remotely {(Deal File)");  
+});
 
+// New Deal File - Enquiry Max TRIGGER INTEGROMAT to get insurance documents from Handover Pack (single sign)
+$(document).on('knack-form-submit.view_4396', function(event, view, data) { 
+	callPostHttpRequest("https://hook.eu1.make.celonis.com/6362il4kj9nelrnl4itsohyhumqs1hce",{"Record ID":data.id,"Form":"Handover checklist","Source Of Payload": "knack direct"},"Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Handover Checklist signed at Dealer OR to be signed remotely {(Deal File)");  
+});
 
 // New Deal File - Capture PDFs – **New Deal File PDF - New Vehicle handover checklist signed online by Customer {(Deal File) New Vehicle Handover Checklist} Slave App - Replaces https://zapier.com/app/editor/116189095?redirect=true
 $(document).on('knack-form-submit.view_3693', function(event, view, data) { 

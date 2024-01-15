@@ -763,9 +763,13 @@ body {
 #view_5886 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a,
 #view_5886 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a,
 #view_5886 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a,
+#view_5886 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a,
+#view_5886 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a,
 #kn-report-view_5891-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a,
 #kn-report-view_5891-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(2) > a,
 #kn-report-view_5891-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(3) > a,
+#kn-report-view_5891-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(5) > a,
+#kn-report-view_5891-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(6) > a,
 #view_5935 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
 #view_5938 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
 #kn-report-view_5891-1 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(4) > a {
@@ -3742,6 +3746,14 @@ display: none;
   font-size: 1.05em;
   font: "Calibri", sans-serif;		
   background-color: #ffa100 !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+#view_5641 > div.control > a.kn-link.kn-link-15.kn-link-page.kn-button {
+  font-size: 1.05em;
+  font: "Calibri", sans-serif;		
+  background-color: #2ab27b !important;
   color: white !important;
   font-weight: bold !important;
 }

@@ -2928,6 +2928,16 @@ $(document).on('knack-form-submit.view_2568', function(event, view, data) {
 	callPostHttpRequest("https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v",{"Record ID":data.id,"Form":"Handover checklist","Source Of Payload": "knack direct"},"Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Handover Checklist signed at Dealer OR to be signed remotely {(Deal File)");  
 });
 
+// Used Deal File - EnquiryMax get documents + update appointment TRIGGER INTEGROMAT UPON – Handover Checklist signed at Dealer OR to be signed remotely
+$(document).on('knack-form-submit.view_2568', function(event, view, data) { 
+	callPostHttpRequest("https://hook.eu1.make.celonis.com/86jzntw2pkcddas2q1pil4ywcdztsddm",{"Record ID":data.id,"Form":"Handover checklist","Source Of Payload": "knack direct"},"Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Handover Checklist signed at Dealer OR to be signed remotely {(Deal File)");  
+});
+
+// Used Deal File -EnquiryMax get documents + update appointment TRIGGER INTEGROMAT UPON – Handover Checklist signed at Dealer OR to be signed remotely
+$(document).on('knack-form-submit.view_4650', function(event, view, data) { 
+	callPostHttpRequest("https://hook.eu1.make.celonis.com/86jzntw2pkcddas2q1pil4ywcdztsddm",{"Record ID":data.id,"Form":"Handover checklist","Source Of Payload": "knack direct"},"Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Handover Checklist signed at Dealer OR to be signed remotely {(Deal File)");  
+});
+
 // Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Handover Checklist signed online by Customer {(Deal File) Handover Checklist} Replaces https://zapier.com/app/editor/113719265?redirect=true
 $(document).on('knack-form-submit.view_4146', function(event, view, data) { 
 	callPostHttpRequest("https://hook.integromat.com/95plblxsob2nkputlodx6htsykvfmi7v",{"Record ID":data.id,"Form":"Handover checklist","Source Of Payload" : "knack direct"},"Used Deal File - Capture PDFs TRIGGER INTEGROMAT UPON – *Used Deal File PDF - Handover Checklist signed online by Customer {(Deal File) Handover Checklist}");  
