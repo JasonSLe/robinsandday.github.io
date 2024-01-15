@@ -3845,6 +3845,33 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
       showPhotoApp(mAppSettings);
     }
     document.querySelector('div[id="kn-input-'+$('div[id="kn-input-field_2718"]').attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
+
+    var formButton = document.querySelector('div[class="kn-submit"]>button');
+  formButton.onclick = function() {
+    console.log('clicked')
+    if (!isOnline){
+      alert('You are offline, please go online before submiting the form.');
+      return false;
+    } else {
+      if ($('input[imageToSaveUrl]').length>0){
+        uploadImagesList = [];
+        $('div[id="view_3566"] button[type="submit"]').prop('disabled', true);
+        createFormModal('fMImageUpload','<h3>Images are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>');
+        $('#fMImageUpload').show();
+        for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
+          uploadImagesList.push({field:$('input[imageToSaveUrl]').eq(i).attr('name')})
+          fetch($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'))
+          .then(function(response) {
+            return response.blob();
+          })
+          .then(function(blob) {
+            uploadImageOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg','infoText',$('input[imageToSaveUrl]').eq(i).attr('name'),imageUploadedSuccesfully);
+          });
+        }
+        return false;
+      }
+    }
+  }
 });
 
  //PROPERTY AND EVENTS FOR ONLINE/OFFLINE DETECTION
