@@ -190,6 +190,10 @@ let interval = 0;
 const effect = $('#cameraOverlayCanvas');
 
 var go = () => {
+  if (!effect){
+    setTimeout(function(){ $(go)},1000);
+    return;
+  }
   effect.show();
   if(!interval) { // if `interval` is equal to 0     
    interval = setInterval(function () {
