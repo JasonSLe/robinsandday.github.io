@@ -521,6 +521,7 @@ takePhotoButton.onclick = takePhoto;
         //DISPLAY COMPARISION CONTENT
         $('#cameraGrid').show();
         $("#cameraText").show();
+        $('#cameraCompare').hide();
 
         if (appSettings.actionAfterPhotoReadableText){
           $('a[id="cameraText"]').text(appSettings.actionAfterPhotoReadableText);
@@ -530,7 +531,17 @@ takePhotoButton.onclick = takePhoto;
         //SHOW RETAKLE AND CONFIORM BUTTON
         $("#cameraRetake").show();
         $("#cameraConfirm").show();
+        $("#cameraConfirm").removeAttr("disabled");
+
+        //DISPLAY COMPARISION CONTENT
+        $('#cameraGrid').show();
+        $("#cameraText").show();
+        $('#cameraCompare').show();
         
+        if (appSettings.actionAfterPhotoReadableText){
+          $('a[id="cameraText"]').text(appSettings.actionAfterPhotoReadableText);
+        }
+
         break;
     }
   }

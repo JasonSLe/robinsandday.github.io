@@ -3827,8 +3827,8 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
     allowLandscape : true,
     allowPortrait : false,
     actionAfterPhoto : 'compare', // none, readable, compare,
-    actionAfterPhotoReadableText : 'Is the photo OK?',
-    uploadMethod : 'field', //knack, make, field
+    actionAfterPhotoReadableText : 'Does the photo match the template?',
+    uploadMethod : 'knack', //knack, make, field
     uploadField : 'field_2718',
     resizeImageMaxHeight : 1000,
     resizeImageMaxWidth : 1000
@@ -3846,7 +3846,7 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
   }
   document.querySelector('div[id="kn-input-'+$('div[id="kn-input-field_2718"]').attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
 
-  var formButton = document.querySelector('div[class="kn-submit"]>button');
+  /*var formButton = document.querySelector('div[class="kn-submit"]>button');
   formButton.onclick = function() {
     console.log('clicked')
     if (!isOnline){
@@ -3871,7 +3871,7 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
         return false;
       }
     }
-  }
+  }*/
 });
 
  //PROPERTY AND EVENTS FOR ONLINE/OFFLINE DETECTION
