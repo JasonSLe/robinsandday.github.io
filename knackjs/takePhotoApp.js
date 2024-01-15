@@ -186,6 +186,9 @@ var OperatingSystem = {
    }
 };
 
+let interval = 0;
+const effect = $('#cameraOverlayCanvas');
+
 var go = () => {
   effect.show();
   if(!interval) { // if `interval` is equal to 0     
@@ -328,9 +331,6 @@ if (appSettings.imageOverlay){
 } else {
   $("#cameraOverlayCanvas").hide();
 }
-
-let interval = 0;
-const effect = $('#cameraOverlayCanvas');
 
 //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
