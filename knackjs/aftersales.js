@@ -3838,7 +3838,7 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
     fM.setAttribute("id", 'takePhoto_'+$('div[id="kn-input-field_2718"]').attr('data-input-id'));
     fM.setAttribute("class", 'kn-detail-body');
     fM.setAttribute('style','padding: 0.375em 0;');
-    fM.innerHTML = '<span><span class="knViewLink__icon knViewLink__icon--isLeft icon is-left"><i class="fa fa-camera"></i></span> <span class="knViewLink__label"><strong><span class="">Capture Front 3/4 Photo</span></strong></span> <!----></span>'
+    fM.innerHTML = '<span><span class="knViewLink__icon knViewLink__icon--isLeft icon is-left"><i class="fa fa-camera"></i></span> <span class="knViewLink__label"><strong><span class="">Capture Photo</span></strong></span> <!----></span>'
     fM.onclick = function(){
       let mAppSettings = Object.assign({},appSettings);
       mAppSettings.uploadField = $('div[id="kn-input-field_2718"]').attr('data-input-id');
