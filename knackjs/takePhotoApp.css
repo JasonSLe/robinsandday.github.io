@@ -151,28 +151,6 @@ body {
 }
 
 /**Mobile first. Any mobile with viewport width of 640px or less apply the following to canvas**/
-/*#cameraOverlayCanvas {
-  position: fixed;
-  display: none;
-  max-width: 100%;
-  height: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}*/
-
-#cameraOverlayCanvas {
-  position: absolute;
-  max-width: 70%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
 
 #cameraBoxCanvas {
   position: absolute;
@@ -345,6 +323,17 @@ body {
   #cameraExit {
     left: calc(20% - 32px);
     top: calc(50% - 32px);
+  }
+
+  #cameraOverlayCanvas {
+    position: fixed;
+    display: none;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: calc(80% - 32px);
+    bottom: 0;
   }
 }
 
