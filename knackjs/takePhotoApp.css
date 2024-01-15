@@ -379,7 +379,7 @@ body {
   #cameraOverlayCanvas {
     position: fixed;
     display: none;
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     top: 0;
     left: 0;
