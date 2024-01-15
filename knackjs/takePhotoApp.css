@@ -332,8 +332,8 @@ body {
     height: auto;
     top: 0;
     left: 0;
-    right: calc(80% - 32px);
-    bottom: 0;
+    right: 0;
+    bottom: 80%;
   }
 }
 
@@ -374,6 +374,17 @@ body {
   #cameraExit {
     left: calc(50% - 32px);
     top: calc(82% - 32px);
+  }
+
+  #cameraOverlayCanvas {
+    position: fixed;
+    display: none;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    right: calc(80% - 32px);
+    bottom: 0;
   }
 }
 
