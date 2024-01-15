@@ -611,6 +611,39 @@ function afterConfirmPhoto(){
       $('input[name="'+appSettings.uploadField+'"]').attr('imageToSaveUrl',finalImgUrl);
       $('div[id="kn-input-'+appSettings.uploadField+'"]>div[class="kn-file-upload"]').html('<img src="'+finalImgUrl+'" style="max-width:200px;max-height:200px;"></img>')
       break;
+    case 'knack':
+      /*
+      setTimeout(function(){
+        uploadImage(appSettings.app_id, finalImgUrl)
+        .then(function(resp) {
+          if (!resp || resp.status !== 'ok') {
+            alert('Upload of image failed.');
+            return;
+          }
+          var imageId = resp.id;
+          var token = getTokenFromApify();
+          if (token === '') {
+            alert('Authorizing problem.');
+            return;
+          }
+          var updatingRecordId = getRecordIdFromHref(location.href);
+          var resp2 = saveImageLinkToKnack(imageFieldOnKnack, imageId, app_id, token, updatingRecordId, imageViewOnKnack)
+          if (resp2.status !== 'ok') {
+            alert('IMAGE NOT SAVED.');
+          } 
+
+          //EXIT FULL SCREEN MODE
+          exitFullscreen();
+
+          Knack.hideSpinner();
+
+          setTimeout(function() {
+            window.location = backUrl;
+          }, 100);
+
+        });
+      }, 100);
+      */
   }
 
   hidePhotoAppI();
@@ -743,7 +776,8 @@ var appSettings = {
   uploadMethod : 'make', //knack, make, field
   uploadWebhook : 'https://hook.eu1.make.celonis.com/ouosl7cqftin4d5xk4ybco0q96t5bwk2',
   resizeImageHeight : null,
-  resizeImageWidth : null
+  resizeImageWidth : null,
+  app_id : null
 }
 var returnData = {};
 function takePhotoAppStart(app_id, appSettingsI=null){

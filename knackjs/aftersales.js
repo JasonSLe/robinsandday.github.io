@@ -3831,7 +3831,8 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
     uploadMethod : 'knack', //knack, make, field
     uploadField : 'field_2718',
     resizeImageMaxHeight : 1000,
-    resizeImageMaxWidth : 1000
+    resizeImageMaxWidth : 1000,
+    app_id : '591eae59e0d2123f23235769'
   }
   $('div[id="kn-input-field_2718"]').find('input').hide();
   let fM = document.createElement("div");
