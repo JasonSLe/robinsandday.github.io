@@ -3819,7 +3819,7 @@ $(document).on('knack-form-submit.view_3088', function(event, view, data) {
 
 $(document).on('knack-view-render.view_3566', function (event, view, data) {
   embedPhotoApp();
-  let appSettings = {
+  let appSettings2718 = {
     spiritLine : false,
     imageOverlay: 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-background-v2.png',
     imageOverlayEffect : true,
@@ -3834,17 +3834,19 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
     resizeImageMaxWidth : 1000,
     app_id : '591eae59e0d2123f23235769'
   }
-  createPhotoButton(appSettings,'2718');
-  let appSettings2 = {
-    actionAfterPhoto : 'readable', // none, readable, compare,
-    actionAfterPhotoReadableText : 'Is photo OK?',
+  createPhotoButton(appSettings2718,'2718');
+  let appSettings1914 = {
     uploadMethod : 'field', //knack, make, field
     uploadField : 'field_1914',
-    resizeImageMaxHeight : 1000,
-    resizeImageMaxWidth : 1000,
     app_id : '591eae59e0d2123f23235769'
   }
-  createPhotoButton(appSettings2,'1914');
+  createPhotoButton(appSettings1914,'1914');
+  let appSettings2477 = {
+    uploadMethod : 'field', //knack, make, field
+    uploadField : 'field_2477',
+    app_id : '591eae59e0d2123f23235769'
+  }
+  createPhotoButton(appSettings2477,'2477');
   
   var formButton = document.querySelector('div[class="kn-submit"]>button');
   formButton.onclick = function() {

@@ -783,6 +783,20 @@ var appSettings = {
 var returnData = {};
 function takePhotoAppStart(app_id, appSettingsI=null){
   console.log('takePhotoAppStart')
+  let appSettingsDefault = {
+    spiritLine : false,
+    imageOverlay: null,
+    imageOverlayEffect : false,
+    imageOverlayOpacity : null,
+    allowLandscape : true,
+    allowPortrait : true,
+    actionAfterPhoto : 'readable', // none, readable, compare,
+    actionAfterPhotoReadableText : 'Is the photo OK?',
+    uploadMethod : null, //knack, make, field
+    uploadField : null,
+    resizeImageMaxHeight : 1000,
+    resizeImageMaxWidth : 1000,
+  }
   if (!appSettingsI){
     appSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
     //appSettings.imageOverlayEffect = true;
@@ -790,9 +804,8 @@ function takePhotoAppStart(app_id, appSettingsI=null){
     appSettings.allowLandscape = false;
     appSettings.actionAfterPhoto = 'readable';
     returnData.app_id = app_id;
-  
   } else {
-    appSettings = appSettingsI;
+    appSettings = Object.assign(appSettingsDefault,appSettingsI);
   }
   
   showPhotoAppI();
