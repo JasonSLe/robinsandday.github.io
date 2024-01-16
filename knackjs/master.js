@@ -4570,3 +4570,7 @@ function recursivecallscene_2021(){
  setTimeout(function () { if($("#view_6361").is(":visible")==true){ Knack.views["view_6361"].model.fetch();recursivecallscene_2021();} }, 30000);
 }
 
+// Prep center confirmed work completed and email Dealer to complete work on their side
+$(document).on('knack-form-submit.view_5967', function(event, view, data) { 
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/y3teyngw54nztmlvmb5jjjtywybm79te", {"Record ID":data.id},"Prep Centre to email Dealer of work to be carried out")
+});
