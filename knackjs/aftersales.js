@@ -3835,19 +3835,17 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
     app_id : '591eae59e0d2123f23235769'
   }
   createPhotoButton(appSettings,'2718');
-  $('div[id="kn-input-field_2718"]').find('input').hide();
-  /*let fM = document.createElement("div");
-  fM.setAttribute("id", 'takePhoto_'+$('div[id="kn-input-field_2718"]').attr('data-input-id'));
-  fM.setAttribute("class", 'kn-detail-body');
-  fM.setAttribute('style','padding: 0.375em 0; cursor: pointer');
-  fM.innerHTML = '<span><span class="knViewLink__icon knViewLink__icon--isLeft icon is-left"><i class="fa fa-camera"></i></span> <span class="knViewLink__label"><strong><span class="">Capture Photo</span></strong></span> <!----></span>'
-  fM.onclick = function(){
-    let mAppSettings = Object.assign({},appSettings);
-    mAppSettings.uploadField = $('div[id="kn-input-field_2718"]').attr('data-input-id');
-    showPhotoApp(mAppSettings);
+  let appSettings2 = {
+    actionAfterPhoto : 'readable', // none, readable, compare,
+    actionAfterPhotoReadableText : 'Is photo OK?',
+    uploadMethod : 'field', //knack, make, field
+    uploadField : 'field_1914',
+    resizeImageMaxHeight : 1000,
+    resizeImageMaxWidth : 1000,
+    app_id : '591eae59e0d2123f23235769'
   }
-  document.querySelector('div[id="kn-input-'+$('div[id="kn-input-field_2718"]').attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
-*/
+  createPhotoButton(appSettings2,'1914');
+  
   var formButton = document.querySelector('div[class="kn-submit"]>button');
   formButton.onclick = function() {
     console.log('clicked')
