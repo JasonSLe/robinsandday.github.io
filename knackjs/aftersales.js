@@ -3828,7 +3828,7 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
     allowPortrait : false,
     actionAfterPhoto : 'compare', // none, readable, compare,
     actionAfterPhotoReadableText : 'Does the photo match the template?',
-    uploadMethod : 'knack', //knack, make, field
+    uploadMethod : 'field', //knack, make, field
     uploadField : 'field_2718',
     resizeImageMaxHeight : 1000,
     resizeImageMaxWidth : 1000,
