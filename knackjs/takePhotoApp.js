@@ -610,6 +610,7 @@ function afterConfirmPhoto(){
     case 'field':
       $('input[name="'+appSettings.uploadField+'"]').attr('imageToSaveUrl',finalImgUrl);
       $('div[id="kn-input-'+appSettings.uploadField+'"]>div[class="kn-file-upload"]').html('<img src="'+finalImgUrl+'" style="max-width:200px;max-height:200px;"></img>')
+      $('div[id="kn-input-'+appSettings.uploadField+'"] div[class="image--remove"]').remove();
       break;
     case 'knack':
       /*
