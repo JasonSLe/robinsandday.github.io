@@ -3846,7 +3846,6 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
   
   var formButton = document.querySelector('div[class="kn-submit"]>button');
   formButton.onclick = function() {
-    console.log('clicked')
     if (!isOnline){
       alert('You are offline, please go online before submiting the form.');
       return false;
