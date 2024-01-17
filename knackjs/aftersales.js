@@ -3868,14 +3868,14 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
         }
         for (let i =0;i< $('input[id*="offline"]').length;i++){
           if ($('input[id*="offline"]').eq(i).prop('files')[0]){
-            uploadList.push({field:$('input[id*="offline"]').eq(i).attr('name')});
+            uploadList.push({field:$('input[id*="offline"]').eq(i).attr('fieldName')});
             let fU = URL.createObjectURL( $('input[id*="offline"]').eq(i).prop('files')[0]);
             fetch(fU)
             .then(function(response) {
               return response.blob();
             })
             .then(function(blob) {
-              uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,$('input[id*="offline"]').eq(i).prop('files')[0].name,'infoText',$('input[id*="offline"]').eq(i).attr('name'),fileUploadedSuccesfully);
+              uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,$('input[id*="offline"]').eq(i).prop('files')[0].name,'infoText',$('input[id*="offline"]').eq(i).attr('fieldName'),fileUploadedSuccesfully);
             });
           }
         }
@@ -3887,7 +3887,7 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
 
 function makeFileUploadOffline(field){
   $('div[id="kn-input-'+field+'"] div[class="kn-file-upload"]').hide();
-  $('<input type="file" name="'+field+'" id="'+field+'_offlinefile" class="input is-file">').insertBefore($('div[id="kn-input-'+field+'"]>div[class="control"]'));
+  $('<input type="file" fieldName="'+field+'" id="'+field+'_offlinefile" class="input is-file">').insertBefore($('div[id="kn-input-'+field+'"]>div[class="control"]'));
 }
 
 function createPhotoButton(appSettings, fieldNumber, buttonText = 'Capture Photo'){
