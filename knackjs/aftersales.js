@@ -3883,6 +3883,7 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
             });
           }
         }
+        testSubmitOfflineForm();
         return false;
       }
     }
@@ -3992,6 +3993,15 @@ function imageUploadedSuccesfully(fieldName, fileId){
   if (f){
     f.uploaded = true;
   }
+  let notUploaded = uploadList.filter(el => !el.uploaded);
+  if (notUploaded.length===0){
+    $('#fMImageUpload').hide();
+    $('button[type="submit"]').removeAttr('disabled');
+    $('form').submit();
+  }
+}
+
+function testSubmitOfflineForm(){
   let notUploaded = uploadList.filter(el => !el.uploaded);
   if (notUploaded.length===0){
     $('#fMImageUpload').hide();
