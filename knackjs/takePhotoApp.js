@@ -71,6 +71,8 @@
       'X-Knack-REST-API-Key': 'knack',
     };
 
+    fileName = fileName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+
     form.append('files', fileBlob, fileName);
 
     try {
