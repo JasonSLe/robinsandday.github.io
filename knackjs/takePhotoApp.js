@@ -566,9 +566,15 @@ takePhotoButton.onclick = takePhoto;
       case 'none':
         $("#cameraFrontpic").show();
         setTimeout(function (){
-          alert(srcSet);
-          alert(img.src);
-          afterConfirmPhoto()
+          //alert(srcSet);
+          //alert(img.src);
+          if (img.src && img.src.substr(0,5)==='blob:'){
+            afterConfirmPhoto();
+          } else {
+            setTimeout(function (){
+                afterConfirmPhoto();
+            }, 2000);
+          }
         }, 2000);
         break;
       case 'readable':
