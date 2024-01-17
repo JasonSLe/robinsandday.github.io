@@ -575,7 +575,7 @@ takePhotoButton.onclick = takePhoto;
                 afterConfirmPhoto();
             }, 2000);
           }
-        }, 2000);
+        }, 1000);
         break;
       case 'readable':
         //SHOW RETAKLE AND CONFIORM BUTTON
