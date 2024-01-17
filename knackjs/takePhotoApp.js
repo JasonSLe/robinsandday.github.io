@@ -62,7 +62,7 @@
     }
   }
 
-  async function uploadFileeOnlyPhotoApp(app_id, fileBlob, fileName, infoElementId, fieldName, myCallback) {
+  async function uploadFileOnlyPhotoApp(app_id, fileBlob, fileName, infoElementId, fieldName, myCallback) {
     //alert('uploadFileOnlyPhotoApp')
     var url = 'https://api.rd.knack.com/v1/applications/'+app_id+'/assets/file/upload';
     var form = new FormData();
