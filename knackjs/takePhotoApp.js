@@ -102,7 +102,7 @@
           $('#'+infoElementId).text('Upload succesfull, returning to app.');
           $('#kn-loading-spinner').hide();
           //alert(rData.id)
-          myCallback(fieldName, rData.id)
+          myCallback(fieldName, rData.id,fileName)
           return rData.id;
         } catch (e) {
           alert('File upload was not succesfull.')
