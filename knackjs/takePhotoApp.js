@@ -567,7 +567,7 @@ takePhotoButton.onclick = takePhoto;
         $("#cameraFrontpic").show();
         setTimeout(function (){
           //alert(srcSet);
-          alert($('#cameraFrontpic').attr('src'));
+          //alert($('#cameraFrontpic').attr('src'));
           if ($('#cameraFrontpic').attr('src') && $('#cameraFrontpic').attr('src').substr(0,5)==='blob:'){
             afterConfirmPhoto();
           } else {
