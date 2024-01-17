@@ -3843,6 +3843,10 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
   createPhotoButton(appSettings2478,'2478');
   let appSettings2479 = {uploadMethod : 'field', uploadField : 'field_2479', app_id : '591eae59e0d2123f23235769'}
   createPhotoButton(appSettings2479,'2479');
+
+  if (Knack.user.id === '6079ce7212c6d9001b7309a4'){
+    makeFileUploadOffline('field_2332');
+  }
   
   var formButton = document.querySelector('div[class="kn-submit"]>button');
   formButton.onclick = function() {
