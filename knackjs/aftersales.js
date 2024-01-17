@@ -3854,7 +3854,7 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
         uploadList = [];
         $('div[id="view_3566"] button[type="submit"]').prop('disabled', true);
         $('<h3>Images are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>').insertBefore($('div[id="view_3566"] button[type="submit"]'))
-        createFormModal('fMImageUpload','<h3>Images are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>');
+        createFormModal('fMImageUpload','<h3>Images and files are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>');
         $('#fMImageUpload').show();
         for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
           uploadList.push({field:$('input[imageToSaveUrl]').eq(i).attr('name')})
@@ -4015,7 +4015,7 @@ function fileUploadedSuccesfully(fieldName, fileId, filename){
   if (notUploaded.length===0){
     $('#fMImageUpload').hide();
     $('button[type="submit"]').removeAttr('disabled');
-    //$('form').submit();
+    $('form').submit();
   }
 }
 
