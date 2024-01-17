@@ -3997,8 +3997,8 @@ function imageUploadedSuccesfully(fieldName, fileId){
 }
 
 function fileUploadedSuccesfully(fieldName, fileId){
-  //alert(fieldName);
-  //alert(fileId);
+  alert(fieldName);
+  alert(fileId);
   $('input[name="'+fieldName+'"]').val(fileId);
   //$('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
   //$('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
