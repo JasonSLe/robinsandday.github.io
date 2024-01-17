@@ -62,6 +62,59 @@
     }
   }
 
+  async function uploadFileeOnlyPhotoApp(app_id, fileBlob, fileName, infoElementId, fieldName, myCallback) {
+    //alert('uploadFileOnlyPhotoApp')
+    var url = 'https://api.rd.knack.com/v1/applications/'+app_id+'/assets/file/upload';
+    var form = new FormData();
+    var headers = {
+      'X-Knack-Application-ID': app_id,
+      'X-Knack-REST-API-Key': 'knack',
+    };
+
+    form.append('files', fileBlob, fileName);
+
+    try {
+      $('#'+infoElementId).text('File upload started.');
+      $.ajax({
+        //this takes care about the progress reporting on infoElementId
+        xhr: function() {
+          var xhr = new window.XMLHttpRequest();
+          xhr.upload.addEventListener("progress", function(evt) {
+              if (evt.lengthComputable) {
+                  var percentComplete = (evt.loaded / evt.total) * 100;
+                  //Do something with upload progress here
+                  $('#'+infoElementId).text('File upload progress: ' + parseInt(percentComplete)+'%');
+              }
+         }, false);
+         return xhr;
+        },
+        url: url,
+        type: 'POST',
+        headers: headers,
+        processData: false,
+        contentType: false,
+        mimeType: 'multipart/form-data',
+        data: form
+      }).then(rData => {
+        $('#'+infoElementId).text('File upload finished.');
+        try {
+          if (typeof rData === 'string'){ rData = JSON.parse(rData);};
+          $('#'+infoElementId).text('Upload succesfull, returning to app.');
+          $('#kn-loading-spinner').hide();
+          //alert(rData.id)
+          myCallback(fieldName, rData.id)
+          return rData.id;
+        } catch (e) {
+          alert('File upload was not succesfull.')
+          alert(e);
+        }
+      })
+    } catch (ex){
+      alert('File upload was not succesfull.')
+      alert(ex);
+    }
+  }
+
   async function uploadImage(token, updatingRecordId , app_id, imgUrl, imageObject, infoText) {
     var url = `https://api.rd.knack.com/v1/applications/${app_id}/assets/image/upload`;
 

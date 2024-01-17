@@ -3867,10 +3867,17 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
           });
         }
         for (let i =0;i< $('input[id*="offline"]').length;i++){
-          uploadList.push({field:$('input[id*="offline"]').eq(i).attr('name')});
-          console.log($('input[id*="offline"]').eq(i).prop('files')[0])
-          let fC = getFileContent($('input[id*="offline"]').eq(i).prop('files')[0]);
-          console.log('fC',fC);
+          if ($('input[id*="offline"]').eq(i).prop('files')[0]){
+            uploadList.push({field:$('input[id*="offline"]').eq(i).attr('name')});
+            let fU = URL.createObjectURL( $('input[id*="offline"]').eq(i).prop('files')[0]);
+            fetch(fU)
+            .then(function(response) {
+              return response.blob();
+            })
+            .then(function(blob) {
+              uploadFileOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,$('input[id*="offline"]').eq(i).prop('files')[0].name,'infoText',$('input[id*="offline"]').eq(i).attr('name'),fileUploadedSuccesfully);
+            });
+          }
         }
         return false;
       }
@@ -3881,18 +3888,6 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
 function makeFileUploadOffline(field){
   $('div[id="kn-input-'+field+'"] div[class="kn-file-upload"]').hide();
   $('<input type="file" name="'+field+'" id="'+field+'_offlinefile" class="input is-file">').insertBefore($('div[id="kn-input-'+field+'"]>div[class="control"]'));
-}
-
-function getFileContent(file){
-  //$('input[id*="offline"]').prop('files')[0]
-  console.log(file);
-  let fileReader = new FileReader();
-  fileReader.onload = function () {
-    let data = fileReader.result;  // data <-- in this var you have the file data in Base64 format
-    console.log('ddd',data)
-    return data;
-  };
-  fileReader.readAsDataURL(file);
 }
 
 function createPhotoButton(appSettings, fieldNumber, buttonText = 'Capture Photo'){
@@ -3989,6 +3984,25 @@ function imageUploadedSuccesfully(fieldName, fileId){
   $('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
   $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+' .kn-file-upload').html('File uploaded successfully.');
   $('input[name="'+fieldName+'"]').removeAttr('imageToSaveUrl');
+  let f = uploadList.find(el => el.field === fieldName);
+  if (f){
+    f.uploaded = true;
+  }
+  let notUploaded = uploadList.filter(el => !el.uploaded);
+  if (notUploaded.length===0){
+    $('#fMImageUpload').hide();
+    $('button[type="submit"]').removeAttr('disabled');
+    $('form').submit();
+  }
+}
+
+function fileUploadedSuccesfully(fieldName, fileId){
+  //alert(fieldName);
+  //alert(fileId);
+  $('input[name="'+fieldName+'"]').val(fileId);
+  //$('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
+  //$('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
+  $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+' .kn-file-upload').html('File uploaded successfully.');
   let f = uploadList.find(el => el.field === fieldName);
   if (f){
     f.uploaded = true;
