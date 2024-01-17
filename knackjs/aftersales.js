@@ -4000,6 +4000,7 @@ function fileUploadedSuccesfully(fieldName, fileId){
   alert(fieldName);
   alert(fileId);
   $('input[name="'+fieldName+'"]').val(fileId);
+  $('input[name="'+fieldName+'"]').removeAttr('disabled');
   //$('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
   //$('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
   $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+' .kn-file-upload').html('File uploaded successfully.');
