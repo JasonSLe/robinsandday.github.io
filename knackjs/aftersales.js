@@ -4436,3 +4436,16 @@ function scanDocsLinkFunction(selector_view){
     }
 
   });
+
+//auto refresh for workshop controller pots
+function recursivecallscene_1098(){
+ setTimeout(function () { if($("#view_3474").is(":visible")==true){ Knack.views["view_3474"].model.fetch();recursivecallscene_1098();} }, 30000);
+ setTimeout(function () { if($("#view_3476").is(":visible")==true){ Knack.views["view_3476"].model.fetch();recursivecallscene_1098();} }, 30000);
+ setTimeout(function () { if($("#view_3483").is(":visible")==true){ Knack.views["view_3483"].model.fetch();recursivecallscene_1098();} }, 30000);
+ setTimeout(function () { if($("#view_3482").is(":visible")==true){ Knack.views["view_3482"].model.fetch();recursivecallscene_1098();} }, 30000);
+ setTimeout(function () { if($("#view_3477").is(":visible")==true){ Knack.views["view_3477"].model.fetch();recursivecallscene_1098();} }, 30000);
+}
+
+$(document).on('knack-scene-render.scene_1098', function(event, scene) {
+ recursivecallscene_1098();
+});
