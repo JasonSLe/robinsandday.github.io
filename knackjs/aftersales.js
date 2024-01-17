@@ -3850,14 +3850,14 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
       alert('You are offline, please go online before submiting the form.');
       return false;
     } else {
-      if ($('input[imageToSaveUrl]').length>0){
-        uploadImagesList = [];
+      if ($('input[imageToSaveUrl]').length>0 || $('input[id*="offline"]').length>0){
+        uploadList = [];
         $('div[id="view_3566"] button[type="submit"]').prop('disabled', true);
         $('<h3>Images are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>').insertBefore($('div[id="view_3566"] button[type="submit"]'))
         createFormModal('fMImageUpload','<h3>Images are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>');
         $('#fMImageUpload').show();
         for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
-          uploadImagesList.push({field:$('input[imageToSaveUrl]').eq(i).attr('name')})
+          uploadList.push({field:$('input[imageToSaveUrl]').eq(i).attr('name')})
           fetch($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'))
           .then(function(response) {
             return response.blob();
@@ -3865,6 +3865,11 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
           .then(function(blob) {
             uploadImageOnlyPhotoApp('6040dd9a301633001bca5b4e',blob,'photoImg.jpg','infoText',$('input[imageToSaveUrl]').eq(i).attr('name'),imageUploadedSuccesfully);
           });
+        }
+        for (let i =0;i< $('input[id*="offline"]').length;i++){
+          uploadList.push({field:$('input[id*="offline"]').eq(i).attr('name')});
+          let fC = getFileContent($('input[id*="offline"]').eq(i).prop('files')[0]);
+          console.log('fC',fC);
         }
         return false;
       }
@@ -3874,7 +3879,17 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
 
 function makeFileUploadOffline(field){
   $('div[id="kn-input-'+field+'"] div[class="kn-file-upload"]').hide();
-  $('div[id="kn-input-'+field+'"] div[class="file"]').attr('type','file');
+  $('<input type="file" name="'+field+'" id="'+field+'_offlinefile" class="input is-file">').insertBefore($('div[id="kn-input-'+field+'"]>div[class="control"]'));
+}
+
+function getFileContent(file){
+  //$('input[id*="offline"]').prop('files')[0]
+  let fileReader = new FileReader();
+  fileReader.onload = function () {
+    let data = fileReader.result;  // data <-- in this var you have the file data in Base64 format
+    return data;
+  };
+  fileReader.readAsDataURL(file);
 }
 
 function createPhotoButton(appSettings, fieldNumber, buttonText = 'Capture Photo'){
@@ -3897,8 +3912,7 @@ function createPhotoButton(appSettings, fieldNumber, buttonText = 'Capture Photo
  window.addEventListener('online', () => isOnline = true);
  window.addEventListener('offline', () => isOnline = false);
 
-
-var uploadImagesList = [];
+ var uploadList = [];
 
 //offline form testing
 $(document).on('knack-view-render.view_3188', function (event, view, data) {
@@ -3944,12 +3958,12 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
       return false;
     } else {
       if ($('input[imageToSaveUrl]').length>0){
-        uploadImagesList = [];
+        uploadList = [];
         $('div[id="view_3188"] button[type="submit"]').prop('disabled', true);
         createFormModal('fMImageUpload','<h3>Images are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>');
         $('#fMImageUpload').show();
         for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
-          uploadImagesList.push({field:$('input[imageToSaveUrl]').eq(i).attr('name')})
+          uploadList.push({field:$('input[imageToSaveUrl]').eq(i).attr('name')})
           fetch($('input[imageToSaveUrl]').eq(i).attr('imageToSaveUrl'))
           .then(function(response) {
             return response.blob();
@@ -3972,11 +3986,11 @@ function imageUploadedSuccesfully(fieldName, fileId){
   $('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
   $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+' .kn-file-upload').html('File uploaded successfully.');
   $('input[name="'+fieldName+'"]').removeAttr('imageToSaveUrl');
-  let f = uploadImagesList.find(el => el.field === fieldName);
+  let f = uploadList.find(el => el.field === fieldName);
   if (f){
     f.uploaded = true;
   }
-  let notUploaded = uploadImagesList.filter(el => !el.uploaded);
+  let notUploaded = uploadList.filter(el => !el.uploaded);
   if (notUploaded.length===0){
     $('#fMImageUpload').hide();
     $('button[type="submit"]').removeAttr('disabled');
