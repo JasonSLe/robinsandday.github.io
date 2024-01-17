@@ -3868,6 +3868,7 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
         }
         for (let i =0;i< $('input[id*="offline"]').length;i++){
           uploadList.push({field:$('input[id*="offline"]').eq(i).attr('name')});
+          console.log($('input[id*="offline"]').eq(i).prop('files')[0])
           let fC = getFileContent($('input[id*="offline"]').eq(i).prop('files')[0]);
           console.log('fC',fC);
         }
@@ -3884,9 +3885,11 @@ function makeFileUploadOffline(field){
 
 function getFileContent(file){
   //$('input[id*="offline"]').prop('files')[0]
+  console.log(file);
   let fileReader = new FileReader();
   fileReader.onload = function () {
     let data = fileReader.result;  // data <-- in this var you have the file data in Base64 format
+    console.log('ddd',data)
     return data;
   };
   fileReader.readAsDataURL(file);
