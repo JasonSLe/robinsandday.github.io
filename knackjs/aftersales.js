@@ -4014,7 +4014,7 @@ function fileUploadedSuccesfully(fieldName, fileId, filename){
   if (notUploaded.length===0){
     $('#fMImageUpload').hide();
     $('button[type="submit"]').removeAttr('disabled');
-    $('form').submit();
+    //$('form').submit();
   }
 }
 
