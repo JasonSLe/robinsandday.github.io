@@ -3872,6 +3872,11 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
   }
 });
 
+function makeFileUploadOffline(field){
+  $('div[id="kn-input-'+field+'"] div[class="kn-file-upload"]').hide();
+  $('div[id="kn-input-'+field+'"] div[class="file"]').attr('type','file');
+}
+
 function createPhotoButton(appSettings, fieldNumber, buttonText = 'Capture Photo'){
   $('div[id="kn-input-field_'+fieldNumber+'"]').find('input').hide();
   let fM = document.createElement("div");
