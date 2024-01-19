@@ -1282,6 +1282,17 @@ content: url(https://github.com/robinsandday/robinsandday.github.io/raw/main/ima
 	
 }
 
+/* Aftersales Post Visit Operations - Customer Follow Up Call List */
+
+#view_632 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+#view_738 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a,
+{
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+
 
 /* Aftersales Post Visit Reporting - Follow up call button */
 
@@ -2291,8 +2302,3 @@ div.tooltipDiv {
   padding-bottom: 20px;
 }*/
 
-#view_632 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(n) > a {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
