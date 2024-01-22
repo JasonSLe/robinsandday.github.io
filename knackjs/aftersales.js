@@ -3913,8 +3913,8 @@ $(document).on('knack-view-render.view_3592', function (event, view, data) {
     } else {
       if ($('input[imageToSaveUrl]').length>0 || $('input[id*="offline"]').length>0){
         uploadList = [];
-        $('div[id="view_3566"] button[type="submit"]').prop('disabled', true);
-        $('<h3>Images are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>').insertBefore($('div[id="view_3566"] button[type="submit"]'))
+        $('div[id="view_3592"] button[type="submit"]').prop('disabled', true);
+        $('<h3>Images are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>').insertBefore($('div[id="view_3592"] button[type="submit"]'))
         createFormModal('fMImageUpload','<h3>Images and files are being uploaded, then the form will be submitted ...</h3><p id="infoText"></p>');
         $('#fMImageUpload').show();
         for (let i =0;i<$('input[imageToSaveUrl]').length;i++){
