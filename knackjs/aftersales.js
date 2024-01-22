@@ -3851,7 +3851,7 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
   var formButton = document.querySelector('div[class="kn-submit"]>button');
   formButton.onclick = function() {
     if (!isOnline){
-      alert('You are offline, please go online before submiting the form.');
+      alert('You are unable to submit the Vehicle Inspection as the device is not connected to a network. Please move within range/reconnect to a network to submit the Vehicle Inspection.');
       return false;
     } else {
       if ($('input[imageToSaveUrl]').length>0 || $('input[id*="offline"]').length>0){
