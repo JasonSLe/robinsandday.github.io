@@ -44,10 +44,15 @@
     </head>
     <body>
         <p id="text">Draw line over full diameter.</p>
-        <canvas src="https://robinsandday.github.io/test.jpg" id="image">
+        <img src="https://robinsandday.github.io/test.jpg" id="image" style="visibility: hidden;">
+        <canvas id="canvas">
             <script>
-                const canvasEle = document.getElementById('image');
+                const canvasEle = document.getElementById('canvas');
+                const image = document.getElementById('image');
                 const context = canvasEle.getContext('2d');
+                canvasEle.width = image.naturalWidth;
+                canvasEle.height = image.naturalHeight;
+                context.drawImage(image,0,0)
                 let startPosition = {x: 0, y: 0};
                 let lineCoordinates = {x: 0, y: 0};
                 let isDrawStart = false;
