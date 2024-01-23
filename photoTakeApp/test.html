@@ -14,10 +14,10 @@
             }
 
             const drawLine = () => {
-            context.beginPath();
-            context.moveTo(startPosition.x, startPosition.y);
-            context.lineTo(lineCoordinates.x, lineCoordinates.y);
-            context.stroke();
+                context.beginPath();
+                context.moveTo(startPosition.x, startPosition.y);
+                context.lineTo(lineCoordinates.x, lineCoordinates.y);
+                context.stroke();
             }
 
             const mouseDownListener = (event) => {
@@ -31,10 +31,11 @@
                 lineCoordinates = getClientOffset(event);
                 clearCanvas();
                 drawLine();
-                }
+            }
 
             const mouseupListener = (event) => {
                 isDrawStart = false;
+                processIt(phaseS,startPosition,lineCoordinates)
             }
 
             const clearCanvas = () => {
@@ -45,6 +46,12 @@
                 canvasEle.width = this.naturalWidth;
                 canvasEle.height = this.naturalHeight;
                 context.drawImage(this, 0, 0);
+            }
+
+            function distance(p1,p2){
+                let a = p1.x - p2.x;
+                let b = p1.y - p2.y;
+                return Math.sqrt( a*a + b*b );
             }
         </script>
     </head>
@@ -63,68 +70,29 @@
                 let startPosition = {x: 0, y: 0};
                 let lineCoordinates = {x: 0, y: 0};
                 let isDrawStart = false;
-
                 
                 canvasEle.addEventListener('mousedown', mouseDownListener);
                 canvasEle.addEventListener('mousemove', mouseMoveListener);
                 canvasEle.addEventListener('mouseup', mouseupListener);
 
-                canvasEle.addEventListener('touchstart', mouseDownListener);
-                canvasEle.addEventListener('touchmove', mouseMoveListener);
-                canvasEle.addEventListener('touchend', mouseupListener);
-            </script>
+                var phaseS = null;
 
-        <script>
-            var phaseS = null;
-            $('img[id="image"]').click(function(e){
-                var pos = $(this).position();
-                //The following are the x/y coordinates of the mouse click relative to image.
-                var x = e.pageX - pos.left;
-                var y = e.pageY - pos.top;
-                console.log(x,y)
-                processIt(phaseS,{x:x,y:y});
-            });
-            var touchPoint1 = null;
-            var touchPoint2 = null;
-            var diamPoint1 = null;
-            var diamPoint2 = null;
-            function processIt(phase = 1, param = null){
+                function processIt(phase = 1, param1 = null, param2 = null){
                 switch (phase){
                     case 1:
-                        alert('Click one point in full diameter.');
+                        diamPoint1 = param1;
+                        diamPoint2 = param2;
                         phaseS = 2;
                         break;
                     case 2:
-                        diamPoint1 = param;
-                        alert('Click second point in full diameter.');
-                        phaseS = 3;
-                        break;
-                    case 3:
-                        diamPoint2 = param;
-                        alert('Click first point in part diameter.');
-                        phaseS = 4;
-                        break;
-                    case 4:
-                        touchPoint1 = param;
-                        alert('Click second point in part diameter.');
-                        phaseS = 5;
-                        break;
-                    case 5:
-                        touchPoint2 = param;
+                        touchPoint1 = param1;
+                        touchPoint2 = param2;
                         console.log(diamPoint1,diamPoint2,touchPoint1,touchPoint2)
                         console.log('diametr',distance(diamPoint1,diamPoint2),'part',distance(touchPoint1,touchPoint2))
                         alert(25.91*(1-(distance(touchPoint1,touchPoint2)/distance(diamPoint1,diamPoint2))));
                         break;
                 }
             }
-
-            function distance(p1,p2){
-                let a = p1.x - p2.x;
-                let b = p1.y - p2.y;
-                return Math.sqrt( a*a + b*b );
-            }
-
-            //processIt(1);
-        </script>
+            </script>
     </body>
 </html>
