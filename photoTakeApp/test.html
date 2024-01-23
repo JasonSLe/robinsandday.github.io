@@ -50,8 +50,8 @@
                 const canvasEle = document.getElementById('canvas');
                 const image = document.getElementById('image');
                 const context = canvasEle.getContext('2d');
-                canvasEle.width = image.naturalWidth;
-                canvasEle.height = image.naturalHeight;
+                canvasEle.width = image.width;
+                canvasEle.height = image.height;
                 context.drawImage(image,0,0)
                 let startPosition = {x: 0, y: 0};
                 let lineCoordinates = {x: 0, y: 0};
