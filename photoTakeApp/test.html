@@ -57,14 +57,14 @@
     </head>
     <body>
         <p id="text">Draw line over full diameter.</p>
-        <form><input type="text" id="depth"><input type="submit"></form>
+        <form method="POST" action="https://7rhnwcwqj9ap.runs.apify.net/solveImage"><input type="hidden" name="knackId" value="$knackId$"><input type="text" id="depth"><input type="submit"></form>
         <canvas id="canvas"></canvas>
             <script>
                 const canvasEle = document.getElementById('canvas');
                 const context = canvasEle.getContext('2d');
                 const image = new Image('naturalWidth', 'naturalHeight');
                 image.onload = drawImageActualSize;
-                image.src = "https://robinsandday.github.io/test.jpg";
+                image.src = "$imageUrl$";//"https://robinsandday.github.io/test.jpg";
                 canvasEle.width = image.width;
                 canvasEle.height = image.height;
                 context.drawImage(image,0,0)
