@@ -3835,11 +3835,11 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
     app_id : '591eae59e0d2123f23235769'
   }
   createPhotoButton(appSettings2718,'2718');
-  let appSettings1914 = {uploadMethod : 'field', uploadField : 'field_1914',app_id : '591eae59e0d2123f23235769'}
+  let appSettings1914 = {uploadMethod : 'field', uploadField : 'field_1914',app_id : '591eae59e0d2123f23235769',actionAfterPhoto : 'none'}
   createPhotoButton(appSettings1914,'1914');
-  let appSettings2477 = {uploadMethod : 'field', uploadField : 'field_2477', app_id : '591eae59e0d2123f23235769'}
+  let appSettings2477 = {uploadMethod : 'field', uploadField : 'field_2477', app_id : '591eae59e0d2123f23235769',actionAfterPhoto : 'none'}
   createPhotoButton(appSettings2477,'2477');
-  let appSettings2478 = {uploadMethod : 'field', uploadField : 'field_2478', app_id : '591eae59e0d2123f23235769'}
+  let appSettings2478 = {uploadMethod : 'field', uploadField : 'field_2478', app_id : '591eae59e0d2123f23235769',actionAfterPhoto : 'none'}
   createPhotoButton(appSettings2478,'2478');
   let appSettings2479 = {uploadMethod : 'field', uploadField : 'field_2479', app_id : '591eae59e0d2123f23235769',actionAfterPhoto : 'none'}
   createPhotoButton(appSettings2479,'2479');
@@ -3892,11 +3892,11 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
 
 $(document).on('knack-view-render.view_3592', function (event, view, data) {
   embedPhotoApp();
-  let appSettings1914 = {uploadMethod : 'field', uploadField : 'field_1914',app_id : '591eae59e0d2123f23235769'}
+  let appSettings1914 = {uploadMethod : 'field', uploadField : 'field_1914',app_id : '591eae59e0d2123f23235769',actionAfterPhoto : 'none'}
   createPhotoButton(appSettings1914,'1914');
-  let appSettings2477 = {uploadMethod : 'field', uploadField : 'field_2477', app_id : '591eae59e0d2123f23235769'}
+  let appSettings2477 = {uploadMethod : 'field', uploadField : 'field_2477', app_id : '591eae59e0d2123f23235769',actionAfterPhoto : 'none'}
   createPhotoButton(appSettings2477,'2477');
-  let appSettings2478 = {uploadMethod : 'field', uploadField : 'field_2478', app_id : '591eae59e0d2123f23235769'}
+  let appSettings2478 = {uploadMethod : 'field', uploadField : 'field_2478', app_id : '591eae59e0d2123f23235769',actionAfterPhoto : 'none'}
   createPhotoButton(appSettings2478,'2478');
   let appSettings2479 = {uploadMethod : 'field', uploadField : 'field_2479', app_id : '591eae59e0d2123f23235769',actionAfterPhoto : 'none'}
   createPhotoButton(appSettings2479,'2479');
