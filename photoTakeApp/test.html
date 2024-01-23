@@ -27,24 +27,24 @@
             }
 
             const mouseDownListener = (event) => {
-            startPosition = getClientOffset(event);
-            isDrawStart = true;
+                startPosition = getClientOffset(event);
+                isDrawStart = true;
             }
 
             const mouseMoveListener = (event) => {
-            if(!isDrawStart) return;
-            
-            lineCoordinates = getClientOffset(event);
-            clearCanvas();
-            drawLine();
-            }
+                if(!isDrawStart) return;
+                
+                lineCoordinates = getClientOffset(event);
+                clearCanvas();
+                drawLine();
+                }
 
             const mouseupListener = (event) => {
-            isDrawStart = false;
+                isDrawStart = false;
             }
 
             const clearCanvas = () => {
-            context.clearRect(0, 0, canvasEle.width, canvasEle.height);
+                context.clearRect(0, 0, canvasEle.width, canvasEle.height);
             }
 
             canvasEle.addEventListener('mousedown', mouseDownListener);
