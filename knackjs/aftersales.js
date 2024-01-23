@@ -4099,32 +4099,6 @@ function createFormModal(id, htmlContent){
   document.body.appendChild(fM)
 }
 
-$(document).on('knack-form-submit.view_6583', function(event, view, data) { 
-  try{
-    if ($('input[class="image"][name="field_9281"]').attr('value')!==''){
-      console.log('image there');
-      sendImageToCheck($('input[class="image"][name="field_9281"]').attr('value'),$('input[id="field_9281_upload"]').prop('files')[0].name,'field_9281',$('input[name="id"]').attr('value'))
-    }
-  }catch(exception){
-      console.log(expection)
-  }
-});
-
-function sendImageToCheck(assetId, fileName,knackField,knackId){
-  let dataToSend = {
-    knackField:knackField,
-    knackId:knackId,
-    imageUrl : 'https://s3.eu-central-1.amazonaws.com/kn-custom-rd/assets/591eae59e0d2123f23235769/'+assetId+'/original/'+fileName
-  }
-  $.ajax({
-    url: 'https://7rhnwcwqj9ap.runs.apify.net/addImageToCheck',
-    type: 'POST',
-    contentType: 'application/json',
-    data: dataToSend,
-    async: true
-  })
-}
-
 //*Trigger Aftersales - Exit Survey Email From TABLET from Jobcard v2
 $(document).on('knack-form-submit.view_2364', function(event, view, data) { 
     
