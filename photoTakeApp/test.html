@@ -41,16 +41,22 @@
                 context.clearRect(0, 0, canvasEle.width, canvasEle.height);
                 context.drawImage(image,0,0);
             }
+            function drawImageActualSize() {
+                canvasEle.width = this.naturalWidth;
+                canvasEle.height = this.naturalHeight;
+                context.drawImage(this, 0, 0);
+            }
         </script>
     </head>
     <body>
         <p id="text">Draw line over full diameter.</p>
-        <img src="https://robinsandday.github.io/test.jpg" id="image" style="visibility: hidden;">
         <canvas id="canvas">
             <script>
                 const canvasEle = document.getElementById('canvas');
-                const image = document.getElementById('image');
                 const context = canvasEle.getContext('2d');
+                const image = new Image('naturalWidth', 'naturalHeight');
+                image.onload = drawImageActualSize;
+                image.src = "https://robinsandday.github.io/test.jpg";
                 canvasEle.width = image.width;
                 canvasEle.height = image.height;
                 context.drawImage(image,0,0)
