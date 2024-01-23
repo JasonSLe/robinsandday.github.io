@@ -4586,7 +4586,7 @@ function sendImageToCheck(assetId, fileName,knackField,knackId){
     url: 'https://7rhnwcwqj9ap.runs.apify.net/addImageToCheck',
     type: 'POST',
     contentType: 'application/json',
-    data: dataToSend,
+    data: JSON.stringify(dataToSend),
     async: true
   })
 }
