@@ -4578,7 +4578,7 @@ $(document).on('knack-form-submit.view_5967', function(event, view, data) {
 
 function sendImageToCheck(assetId, fileName,knackField,knackId){
   let dataToSend = {
-    process:coinMeasurement,
+    process:'coinMeasurement',
     knackField:knackField,
     knackId:knackId,
     imageUrl : 'https://s3.eu-central-1.amazonaws.com/kn-custom-rd/assets/591eae59e0d2123f23235769/'+assetId+'/original/'+fileName
