@@ -40,14 +40,6 @@
             const clearCanvas = () => {
                 context.clearRect(0, 0, canvasEle.width, canvasEle.height);
             }
-
-            canvasEle.addEventListener('mousedown', mouseDownListener);
-            canvasEle.addEventListener('mousemove', mouseMoveListener);
-            canvasEle.addEventListener('mouseup', mouseupListener);
-
-            canvasEle.addEventListener('touchstart', mouseDownListener);
-            canvasEle.addEventListener('touchmove', mouseMoveListener);
-            canvasEle.addEventListener('touchend', mouseupListener);
         </script>
     </head>
     <body>
@@ -59,6 +51,15 @@
                 let startPosition = {x: 0, y: 0};
                 let lineCoordinates = {x: 0, y: 0};
                 let isDrawStart = false;
+
+                
+                canvasEle.addEventListener('mousedown', mouseDownListener);
+                canvasEle.addEventListener('mousemove', mouseMoveListener);
+                canvasEle.addEventListener('mouseup', mouseupListener);
+
+                canvasEle.addEventListener('touchstart', mouseDownListener);
+                canvasEle.addEventListener('touchmove', mouseMoveListener);
+                canvasEle.addEventListener('touchend', mouseupListener);
             </script>
 
         <script>
