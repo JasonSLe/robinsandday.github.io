@@ -2,12 +2,6 @@
     <head>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script>
-            const canvasEle = document.getElementById('image');
-            const context = canvasEle.getContext('2d');
-            let startPosition = {x: 0, y: 0};
-            let lineCoordinates = {x: 0, y: 0};
-            let isDrawStart = false;
-
             const getClientOffset = (event) => {
                 const {pageX, pageY} = event.touches ? event.touches[0] : event;
                 const x = pageX - canvasEle.offsetLeft;
@@ -59,6 +53,14 @@
     <body>
         <p id="text">Draw line over full diameter.</p>
         <canvas src="https://robinsandday.github.io/test.jpg" id="image">
+            <script>
+                const canvasEle = document.getElementById('image');
+                const context = canvasEle.getContext('2d');
+                let startPosition = {x: 0, y: 0};
+                let lineCoordinates = {x: 0, y: 0};
+                let isDrawStart = false;
+            </script>
+
         <script>
             var phaseS = null;
             $('img[id="image"]').click(function(e){
