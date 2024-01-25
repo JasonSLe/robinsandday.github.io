@@ -3093,8 +3093,8 @@ $(document).on('knack-view-render.view_2246', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_2278"]').hide();
-    $('td[class*="field_2278"]').hide(); 
+	// $('th[class="field_2278"]').hide();
+    //$('td[class*="field_2278"]').hide(); 
 
 	/*hide allocate tech
 	$('th[class="field_2411"]').hide();
@@ -3115,8 +3115,8 @@ $(document).on('knack-view-render.view_3168', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_2278"]').hide();
-    $('td[class*="field_2278"]').hide(); 
+//	 $('th[class="field_2278"]').hide();
+ //   $('td[class*="field_2278"]').hide(); 
 }); 
 
 $(document).on('knack-scene-render.scene_1017', function(event, scene) {
@@ -3479,8 +3479,8 @@ $(document).on('knack-view-render.view_2686', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_2278"]').hide();
-    $('td[class*="field_2278"]').hide(); 
+	// $('th[class="field_2278"]').hide();
+   // $('td[class*="field_2278"]').hide(); 
 /*allocate tech to hide
 		 $('th[class="field_2411"]').hide();
     $('td[class*="field_2411"]').hide(); 
@@ -3510,8 +3510,8 @@ $(document).on('knack-view-render.view_2722', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_2278"]').hide();
-    $('td[class*="field_2278"]').hide(); 
+//	 $('th[class="field_2278"]').hide();
+  //  $('td[class*="field_2278"]').hide(); 
 	/*hide allocate tech
 	$('th[class="field_2411"]').hide();
     $('td[class*="field_2411"]').hide(); */
@@ -3538,8 +3538,8 @@ $(document).on('knack-view-render.view_2892', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_2278"]').hide();
-    $('td[class*="field_2278"]').hide(); 
+//	 $('th[class="field_2278"]').hide();
+//    $('td[class*="field_2278"]').hide(); 
 	/*hide allocate tech
 	$('th[class="field_2411"]').hide();
     $('td[class*="field_2411"]').hide();*/
