@@ -4599,7 +4599,6 @@ function sendImageToCheck(assetId, fileName,knackField,knackId){
     data: JSON.stringify(dataToSend),
     async: true
   })
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/ucpq6a44cvfw31dfodvgimefyyqzj5uy",dataToSend,"Image added to solve coin")
 }
 
 $(document).on('knack-form-submit.view_6583', function(event, view, data) { 
