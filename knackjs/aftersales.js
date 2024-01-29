@@ -3085,7 +3085,7 @@ $(document).on('knack-view-render.view_2246', function (event, view, data) {
     tooltipsTable('761','2246','field_1532','field_2220');
 	tooltipsTable('761','2246','field_1537','field_2213');
 	tooltipsTable('761','2246','field_2298','field_2272');
-	tooltipsTable('761','2246','field_2278','field_1118','Tag No: ');
+	//tooltipsTable('761','2246','field_2278','field_1118','Tag No: ');
 	
 	     $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
@@ -3093,8 +3093,8 @@ $(document).on('knack-view-render.view_2246', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_2278"]').hide();
-    $('td[class*="field_2278"]').hide(); 
+	// $('th[class="field_2278"]').hide();
+    //$('td[class*="field_2278"]').hide(); 
 
 	/*hide allocate tech
 	$('th[class="field_2411"]').hide();
@@ -3107,7 +3107,7 @@ $(document).on('knack-view-render.view_3168', function (event, view, data) {
     tooltipsTable('1017','3168','field_1532','field_2220');
 	tooltipsTable('1017','3168','field_1537','field_2213');
 	tooltipsTable('1017','3168','field_2298','field_2272');
-	tooltipsTable('1017','3168','field_2278','field_1118','Tag No: ');
+	//tooltipsTable('1017','3168','field_2278','field_1118','Tag No: ');
 	
 	     $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
@@ -3115,8 +3115,8 @@ $(document).on('knack-view-render.view_3168', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_2278"]').hide();
-    $('td[class*="field_2278"]').hide(); 
+//	 $('th[class="field_2278"]').hide();
+ //   $('td[class*="field_2278"]').hide(); 
 }); 
 
 $(document).on('knack-scene-render.scene_1017', function(event, scene) {
@@ -3471,7 +3471,7 @@ $(document).on('knack-view-render.view_2686', function (event, view, data) {
   tooltipsTable('753','2686','field_1532','field_2220');
 	tooltipsTable('753','2686','field_1537','field_2213');
 	tooltipsTable('753','2686','field_2298','field_2272');
-	tooltipsTable('753','2686','field_2278','field_1118','Tag No: ');
+	//tooltipsTable('753','2686','field_2278','field_1118','Tag No: ');
 	
 	  $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
@@ -3479,8 +3479,8 @@ $(document).on('knack-view-render.view_2686', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_2278"]').hide();
-    $('td[class*="field_2278"]').hide(); 
+	// $('th[class="field_2278"]').hide();
+   // $('td[class*="field_2278"]').hide(); 
 /*allocate tech to hide
 		 $('th[class="field_2411"]').hide();
     $('td[class*="field_2411"]').hide(); 
@@ -3502,7 +3502,7 @@ $(document).on('knack-view-render.view_2722', function (event, view, data) {
     tooltipsTable('755','2722','field_1532','field_2220');
 	tooltipsTable('755','2722','field_1537','field_2213');
 	tooltipsTable('755','2722','field_2298','field_2272');
-	tooltipsTable('755','2722','field_2278','field_1118','Tag No: ');
+//	tooltipsTable('755','2722','field_2278','field_1118','Tag No: ');
 	
 	     $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
@@ -3510,8 +3510,8 @@ $(document).on('knack-view-render.view_2722', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_2278"]').hide();
-    $('td[class*="field_2278"]').hide(); 
+//	 $('th[class="field_2278"]').hide();
+  //  $('td[class*="field_2278"]').hide(); 
 	/*hide allocate tech
 	$('th[class="field_2411"]').hide();
     $('td[class*="field_2411"]').hide(); */
@@ -3530,7 +3530,7 @@ $(document).on('knack-view-render.view_2892', function (event, view, data) {
     tooltipsTable('934','2892','field_1532','field_2220');
 	tooltipsTable('934','2892','field_1537','field_2213');
 	tooltipsTable('934','2892','field_2298','field_2272');
-	tooltipsTable('934','2892','field_2278','field_1118','Tag No: ');
+	//tooltipsTable('934','2892','field_2278','field_1118','Tag No: ');
 	
 	     $('th[class="field_2240"]').hide();
     $('td[class*="field_2240"]').hide();
@@ -3538,8 +3538,8 @@ $(document).on('knack-view-render.view_2892', function (event, view, data) {
     $('td[class*="field_1537"]').hide(); 
 	  $('th[class="field_1532"]').hide();
     $('td[class*="field_1532"]').hide(); 
-	 $('th[class="field_2278"]').hide();
-    $('td[class*="field_2278"]').hide(); 
+//	 $('th[class="field_2278"]').hide();
+//    $('td[class*="field_2278"]').hide(); 
 	/*hide allocate tech
 	$('th[class="field_2411"]').hide();
     $('td[class*="field_2411"]').hide();*/
