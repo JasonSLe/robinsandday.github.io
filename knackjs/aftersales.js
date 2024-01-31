@@ -4055,7 +4055,7 @@ function imageUploadedSuccesfully(fieldName, fileId){
     console.log('Motab Photo');
     let dataToSend = {
       recordId:getRecordIdFromHref(location.href),
-      imageUrl : 'https://s3.eu-central-1.amazonaws.com/kn-custom-rd/assets/6040dd9a301633001bca5b4e/'+fileId+'/original/photoImg.jpg'
+      imageUrl : 'https://s3.eu-central-1.amazonaws.com/kn-custom-rd/assets/6040dd9a301633001bca5b4e/'+fileId+'/original/photoimg.jpg'
     }
     $.ajax({
       url: 'https://7rhnwcwqj9ap.runs.apify.net/photoCheckMotability',
