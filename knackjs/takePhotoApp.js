@@ -274,6 +274,7 @@ function prepareCameraView(imgToSaveName){
   var imageCapture;
 
   var img = document.querySelector("#cameraFrontpic");
+  var imgCompare = document.querySelector("#cameraFrontpicCompare");
   var video = document.querySelector('video');
   var takePhotoButton = document.querySelector('button#takePhoto');
   var confirmButton = document.querySelector('#cameraConfirm');
@@ -408,6 +409,7 @@ imageBeforeResize.onload = () => {
    ctx.canvas.toBlob((blob) => {
       img.src = URL.createObjectURL(blob);
       img.style.visibility = 'visible';
+      imgCompare.src = img.src;
   }, 'image/jpeg', 1);
 
 }
@@ -543,6 +545,7 @@ takePhotoButton.onclick = takePhoto;
         img.style.visibility = 'visible';
         img.src = URL.createObjectURL(blob);
         imageBeforeResize.src = img.src; //c.toDataURL('image/webp');
+        imgCompare.src = img.src;
       }, 'image/jpeg', 1);
     } else /*if (OperatingSystem.Android()) */{
       imageCapture.takePhoto().then(function(blob) {
@@ -552,6 +555,7 @@ takePhotoButton.onclick = takePhoto;
         img.classList.remove('hidden');
         img.src = URL.createObjectURL(blob);
         imageBeforeResize.src = img.src; 
+        imgCompare.src = img.src;
         srcSet = true;
       }).catch(function(error) {
         console.log('takePhoto() error: ', error);
@@ -596,9 +600,6 @@ takePhotoButton.onclick = takePhoto;
         $("#cameraRetake").show();
         $("#cameraConfirm").show();
         $("#cameraConfirm").removeAttr("disabled");
-
-        alert(img.src)
-        $('#cameraFrontpicCompare').attr("src",img.src);
 
         //DISPLAY COMPARISION CONTENT
         $('#cameraGridCompare').show();
