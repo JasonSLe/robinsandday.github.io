@@ -131,6 +131,11 @@ body {
   max-height: 100%;
 }
 
+#cameraFrontpicCompare {
+  max-width: 80%;
+  height: auto;
+}
+
 /**Line canvas**/
 #cameraLine {
   max-width:80%;
