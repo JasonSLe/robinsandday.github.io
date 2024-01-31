@@ -4038,6 +4038,11 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
   }
 });
 
+function getRecordIdFromHref(ur) {
+  var ur = ur.substr(0, ur.length - 1);
+  return ur.substr(ur.lastIndexOf('/') + 1)
+}
+
 function imageUploadedSuccesfully(fieldName, fileId){
   //alert(fieldName);
   //alert(fileId);
@@ -4046,6 +4051,20 @@ function imageUploadedSuccesfully(fieldName, fileId){
   $('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
   $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+' .kn-file-upload').html('File uploaded successfully.');
   $('input[name="'+fieldName+'"]').removeAttr('imageToSaveUrl');
+  if (fieldName === 'field_2718'){
+    console.log('Motab Photo');
+    let dataToSend = {
+      recordId:getRecordIdFromHref(location.href),
+      imageUrl : 'https://s3.eu-central-1.amazonaws.com/kn-custom-rd/assets/6040dd9a301633001bca5b4e/'+fileId+'/original/photoImg.jpg'
+    }
+    $.ajax({
+      url: 'https://7rhnwcwqj9ap.runs.apify.net/photoCheckMotability',
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(dataToSend),
+      async: true
+    })
+  }
   let f = uploadList.find(el => el.field === fieldName);
   if (f){
     f.uploaded = true;
