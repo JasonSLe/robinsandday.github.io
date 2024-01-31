@@ -586,7 +586,6 @@ takePhotoButton.onclick = takePhoto;
         //DISPLAY COMPARISION CONTENT
         $('#cameraGrid').show();
         $("#cameraText").show();
-        $('#cameraCompare').hide();
 
         if (appSettings.actionAfterPhotoReadableText){
           $('a[id="cameraText"]').text(appSettings.actionAfterPhotoReadableText);
@@ -599,9 +598,8 @@ takePhotoButton.onclick = takePhoto;
         $("#cameraConfirm").removeAttr("disabled");
 
         //DISPLAY COMPARISION CONTENT
-        $('#cameraGrid').show();
+        $('#cameraGridCompare').show();
         $("#cameraText").show();
-        $('#cameraCompare').show();
         
         if (appSettings.actionAfterPhotoReadableText){
           $('a[id="cameraText"]').text(appSettings.actionAfterPhotoReadableText);
@@ -755,6 +753,7 @@ function setLayout(takingPhotoI){
   if (takingPhoto){
     //DISPLAY COMPARISION CONTENT
     $('#cameraGrid').hide();
+    $('#cameraGridCompare').hide();
     $("#cameraText").hide();
 
     $('#cameraVid_container').show();
