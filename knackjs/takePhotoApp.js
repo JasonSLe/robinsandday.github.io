@@ -597,6 +597,8 @@ takePhotoButton.onclick = takePhoto;
         $("#cameraConfirm").show();
         $("#cameraConfirm").removeAttr("disabled");
 
+        $('#cameraFrontpicCompare').attr("src",img.src);
+
         //DISPLAY COMPARISION CONTENT
         $('#cameraGridCompare').show();
         $("#cameraText").show();
