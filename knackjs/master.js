@@ -1493,18 +1493,14 @@ $(document).on('knack-view-render.view_6267', function(event, view, data) {
 // ----------  refresh Prep Centre driver pickup table every 60 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_1152', function(event, scene) {
-  recursivecallscene_1152_1();
-  recursivecallscene_1152_2();
+  recursivecallscene_1152();
 });
 
-function recursivecallscene_1152_1(){
- setTimeout(function () { if($("#view_3435").is(":visible")==true){ Knack.views["view_3435"].model.fetch();recursivecallscene_1152_1();} }, 100000);
-}
-
-// ----------  refresh Prep Centre driver drop off Table every 60 seconds but not the page itself  ----------
-
-function recursivecallscene_1152_2(){
- setTimeout(function () { if($("#view_3437").is(":visible")==true){ Knack.views["view_3437"].model.fetch();recursivecallscene_1152_2l();} }, 100000);
+function recursivecallscene_1152(){
+ setTimeout(function () { 
+  if($("#view_3435").is(":visible")==true){ Knack.views["view_3435"].model.fetch()};
+  if($("#view_3437").is(":visible")==true){ Knack.views["view_3437"].model.fetch()};
+  recursivecallscene_1152(); }, 100000);
 }
 
 // ----------  refresh Prep Centre Table every 60 seconds but not the page itself  ----------
@@ -4580,8 +4576,10 @@ function recursivecallscene_1387(){
 
 //refresh other washes every 5 minutes
 function recursivecallscene_2021(){
- setTimeout(function () { if($("#view_6364").is(":visible")==true){ Knack.views["view_6364"].model.fetch();recursivecallscene_2021();} }, 30000);
- setTimeout(function () { if($("#view_6361").is(":visible")==true){ Knack.views["view_6361"].model.fetch();recursivecallscene_2021();} }, 30000);
+ setTimeout(function () { 
+  if($("#view_6364").is(":visible")==true){ Knack.views["view_6364"].model.fetch();}
+  if($("#view_6361").is(":visible")==true){ Knack.views["view_6361"].model.fetch();}
+  recursivecallscene_2021(); }, 30000);
 }
 
 // Prep center confirmed work completed and email Dealer to complete work on their side
