@@ -2869,21 +2869,7 @@ $(document).on('knack-form-submit.view_1899', function(event, view, data) {
         sendErrorToIntegromat(exception, "Aftersales - trigger service wash from Manager's Note");
     }
 });
-//Workshop controller table refresh
-/*$(document).on('knack-scene-render.scene_540', function(event, scene) {
- recursivecallscene_540();
-	  console.log('refresh applied');
-});
 
-function recursivecallscene_540(){
- setTimeout(function () { if($("#view_1880").is(":visible")==true){ Knack.views["view_1880"].model.fetch();recursivecallscene_540();} }, 60000);//1 min
- //setTimeout(function () { if($("#view_1888").is(":visible")==true){ Knack.views["view_1888"].model.fetch();recursivecallscene_540();} }, 30000);
- setTimeout(function () { if($("#view_1559").is(":visible")==true){ Knack.views["view_1559"].model.fetch();recursivecallscene_540();} }, 30000);//30 secs
- //setTimeout(function () { if($("#view_1558").is(":visible")==true){ Knack.views["view_1558"].model.fetch();recursivecallscene_540();} }, 30000);
- //setTimeout(function () { if($("#view_1560").is(":visible")==true){ Knack.views["view_1560"].model.fetch();recursivecallscene_540();} }, 30000);
-// setTimeout(function () { if($("#view_1898").is(":visible")==true){ Knack.views["view_1898"].model.fetch();recursivecallscene_540();} }, 30000);
-}
-*/
 // --- manual delete service wash from Workshop controller view
 $(document).on('knack-view-render.view_1898', function(event, view) {
   //get the vin value from the table
@@ -4279,8 +4265,10 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
 
 	//auto refresh for C/D Driver pick up and return table
 function recursivecallscene_1031(){
- setTimeout(function () { if($("#view_3218").is(":visible")==true){ Knack.views["view_3218"].model.fetch();recursivecallscene_1031();} }, 30000);
- setTimeout(function () { if($("#view_3269").is(":visible")==true){ Knack.views["view_3269"].model.fetch();recursivecallscene_1031();} }, 30000);
+ setTimeout(function () { 
+  if($("#view_3218").is(":visible")==true){ Knack.views["view_3218"].model.fetch()};
+  if($("#view_3269").is(":visible")==true){ Knack.views["view_3269"].model.fetch()};
+  recursivecallscene_1031(); }, 30000);
 }
 
  
@@ -4515,11 +4503,14 @@ function scanDocsLinkFunction(selector_view){
 
 //auto refresh for workshop controller pots
 function recursivecallscene_1098(){
- setTimeout(function () { if($("#view_3474").is(":visible")==true){ Knack.views["view_3474"].model.fetch();recursivecallscene_1098();} }, 30000);
- setTimeout(function () { if($("#view_3476").is(":visible")==true){ Knack.views["view_3476"].model.fetch();recursivecallscene_1098();} }, 30000);
- setTimeout(function () { if($("#view_3483").is(":visible")==true){ Knack.views["view_3483"].model.fetch();recursivecallscene_1098();} }, 30000);
- setTimeout(function () { if($("#view_3482").is(":visible")==true){ Knack.views["view_3482"].model.fetch();recursivecallscene_1098();} }, 30000);
- setTimeout(function () { if($("#view_3477").is(":visible")==true){ Knack.views["view_3477"].model.fetch();recursivecallscene_1098();} }, 30000);
+ setTimeout(function () { 
+  if($("#view_3474").is(":visible")==true) Knack.views["view_3474"].model.fetch();
+  if($("#view_3476").is(":visible")==true) Knack.views["view_3476"].model.fetch();
+  if($("#view_3483").is(":visible")==true) Knack.views["view_3483"].model.fetch();
+  if($("#view_3482").is(":visible")==true) Knack.views["view_3482"].model.fetch();
+  if($("#view_3477").is(":visible")==true) Knack.views["view_3477"].model.fetch();
+  recursivecallscene_1098();
+  }, 30000);
 }
 
 $(document).on('knack-scene-render.scene_1098', function(event, scene) {
