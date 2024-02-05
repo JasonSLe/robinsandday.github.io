@@ -3375,7 +3375,11 @@ $(document).on('knack-scene-render.scene_755', function(event, scene) {
 });
 
 function recursivecallscene_755(){
- setTimeout(function () { if($("#view_2478").is(":visible")==true){ Knack.views["view_2478"].model.fetch();recursivecallscene_755();} }, 300000);
+ setTimeout(function () { 
+  if($("#view_2478").is(":visible")==true) Knack.views["view_2478"].model.fetch();
+  if($("#view_2722").is(":visible")==true) Knack.views["view_2722"].model.fetch();
+  recursivecallscene_755();
+  }, 30000);
 }
 
 $(document).on('knack-view-render.view_3008', function (event, view, data) {
@@ -3503,13 +3507,6 @@ $(document).on('knack-view-render.view_2722', function (event, view, data) {
     $('td[class*="field_2411"]').hide(); */
 }); 
 
-$(document).on('knack-scene-render.scene_755', function(event, scene) {
- recursivecallscene_755();
-});
-
-function recursivecallscene_755(){
- setTimeout(function () { if($("#view_2722").is(":visible")==true){ Knack.views["view_2722"].model.fetch();recursivecallscene_755();} }, 300000);
-}
 
 //Workshop Controller all in one table (MY jobs)
 $(document).on('knack-view-render.view_2892', function (event, view, data) {
