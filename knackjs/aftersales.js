@@ -4147,7 +4147,9 @@ $(document).on('knack-form-submit.view_2881', function(event, view, data) {
 });
 
   //refresh  new tech page every 5 seconds
-
+$(document).on('knack-scene-render.scene_935', function(event, scene) {
+ recursivecallscene_935();
+});
 function recursivecallscene_935(){
  setTimeout(function () { 
   if($("#view_2900").is(":visible")==true) Knack.views["view_2900"].model.fetch();
@@ -4156,6 +4158,9 @@ function recursivecallscene_935(){
   }, 30000);
 }
 
+$(document).on('knack-scene-render.scene_981', function(event, scene) {
+ recursivecallscene_981();
+});
 function recursivecallscene_981(){
  setTimeout(function () { 
   if($("#view_3223").is(":visible")==true) Knack.views["view_3223"].model.fetch();
