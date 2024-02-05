@@ -3580,24 +3580,6 @@ $(document).on('knack-record-update.view_3054', function(event, view, data) {
   
 });
 
-//refresh tech page every 5 seconds
-
-$(document).on('knack-scene-render.scene_935', function(event, scene) {
- recursivecallscene_935();
-});
-
-function recursivecallscene_935(){
- setTimeout(function () { if($("#view_2900").is(":visible")==true){ Knack.views["view_2900"].model.fetch();recursivecallscene_935();} }, 5000);
-}
-
-$(document).on('knack-scene-render.scene_935', function(event, scene) {
- recursivecallscene_935a();
-});
-
-function recursivecallscene_935a(){
- setTimeout(function () { if($("#view_3126").is(":visible")==true){ Knack.views["view_3126"].model.fetch();}if($("#view_3126").is(":visible")==true){ Knack.views["view_3126"].model.fetch();}recursivecallscene_935a(); }, 5000);
-}
-
 
 // Code to wait following Form Submission while Licence Is Being Checked in Make - Customer View
 
@@ -4169,18 +4151,22 @@ $(document).on('knack-form-submit.view_2881', function(event, view, data) {
 
   //refresh  new tech page every 5 seconds
 
-$(document).on('knack-scene-render.scene_981', function(event, scene) {
- recursivecallscene_981();
- recursivecallscene_981a();
-});
+function recursivecallscene_935(){
+ setTimeout(function () { 
+  if($("#view_2900").is(":visible")==true) Knack.views["view_2900"].model.fetch();
+  if($("#view_3126").is(":visible")==true) Knack.views["view_3126"].model.fetch();
+  recursivecallscene_935();
+  }, 30000);
+}
 
 function recursivecallscene_981(){
- setTimeout(function () { if($("#view_3223").is(":visible")==true){ Knack.views["view_3223"].model.fetch();recursivecallscene_981();} }, 300000);
+ setTimeout(function () { 
+  if($("#view_3223").is(":visible")==true) Knack.views["view_3223"].model.fetch();
+  if($("#view_3086").is(":visible")==true) Knack.views["view_3086"].model.fetch();
+  recursivecallscene_981();
+  }, 30000);
 }
 
-function recursivecallscene_981a(){
- setTimeout(function () { if($("#view_3086").is(":visible")==true){ Knack.views["view_3086"].model.fetch();recursivecallscene_981a();} }, 300000);
-}
 
 // refresh workshop table v1
 $(document).on('knack-scene-render.scene_1050', function(event, scene) {
