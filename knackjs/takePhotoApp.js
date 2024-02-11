@@ -497,7 +497,7 @@ if ( window.DeviceMotionEvent && typeof window.DeviceMotionEvent.requestPermissi
   window.addEventListener("deviceorientation", handleOrientation, true);
 }
 
-if (appSettings.spiritLine && !permissionForOrientationGranted){
+if (/*appSettings.spiritLine && */!permissionForOrientationGranted){
   setTimeout(function() {
     if (permissionForOrientation==='need'){
       $('#cameraModal').show(); // show dialog asking user to enable motion sensor
