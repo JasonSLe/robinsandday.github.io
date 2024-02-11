@@ -2117,6 +2117,18 @@ color: #FFFFFF;
   	font-weight: bold;
 }
 
+#view_3962 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(11) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
+#view_3962 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(12) > a {
+	background-color: #FFA100;
+  	color: #FFFFFF;
+  	font-weight: bold;
+}
+
 /*** Deal File Manager List of Deal Files to Audit ***/
 
 #view_3816 > div.kn-records-nav > div.js-filter-menu.tabs.is-toggle.is-flush > ul > li:nth-child(1) > a {
@@ -3411,6 +3423,8 @@ color: #FFFFFF;
 #view_4013 .kn-detail-label {background-color: transparent;}
 
 #view_4014 .kn-detail-label {background-color: transparent;}
+
+#view_4783 .kn-detail-label {background-color: transparent;}
 
 /* Vehicle Tax Confirmation - Admin Confirm Handover */
 
