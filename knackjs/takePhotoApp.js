@@ -424,6 +424,7 @@ imageBeforeResize.onload = () => {
 //**************************** SPIRIT LEVEL *****************************************
 var canTakePhoto = false;
  function handleOrientation(event) {
+  permissionForOrientationGranted = true
   var absolute = event.absolute;
   var alpha    = event.alpha;
   var beta     = event.beta;
@@ -518,7 +519,7 @@ if (/*appSettings.spiritLine && */!permissionForOrientationGranted){
   .catch(console.error)
     }
     }
-  }, 2000);
+  }, 4000);
 }
 
 //************************************* TAKE A PICTURE AND CROP*****************************************
