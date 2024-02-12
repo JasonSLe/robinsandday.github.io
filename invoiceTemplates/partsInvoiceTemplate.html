@@ -39,7 +39,6 @@ width: 100%;
 font-family: arial,serif;
 border-collapse: collapse;
 padding:4px;
-display:block;
 margin-bottom: 0px;
 margin-top: 0px;
 }
@@ -56,9 +55,6 @@ border-bottom: 1px solid black;
  font-family: CourierNew,Bold;
 font-weight: bold; 
 padding:2px;
-}
-
-table.table2 tr:last-child {  
 }
 
 table.table2 td { 
@@ -152,7 +148,7 @@ margin-bottom: 0;
 div.footer{ 
        position: fixed;     
        text-align: center;    
-       bottom: 10px; 
+       bottom: 0px; 
        width: 100%;
    }  
 
@@ -198,7 +194,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
                                                 </tbody></table>
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V6   </h3>
+<h3> {{Invoice.CategoryText}} V7   </h3>
 
 
 <font size = "1.2">
@@ -375,10 +371,11 @@ Owing <br>
 
 <table class="table5">
 <tr>
-<th><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-family:&quot;Encode Sans&quot;;font-style:normal">www.stellantisandyou.co.uk</th> 
+<th><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:top;font-size:4pt;font-family:&quot;Encode Sans&quot;;font-style:normal">www.stellantisandyou.co.uk</th> 
 
-<th style="width:85%"> <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
+<th style="width:85%"> <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:4pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
 
+ <font size="0.2">
 {{Dealer.BankDetailsAndSmallPrint}}
 </span>
  </font>
@@ -386,13 +383,8 @@ Owing <br>
 </tr>
 </table>
 
-<br>
-
 </div>
 
-<p style="page-break-after: always; break-after: page;"> </p>
-
-<span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
 
 
 </body>
