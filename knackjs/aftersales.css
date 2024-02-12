@@ -2303,6 +2303,5 @@ div.tooltipDiv {
 }*/
 
 #view_3174 {
-  height: auto !important; /* Set your desired height */
-  overflow: hidden;
+  overflow: visible;
 }
