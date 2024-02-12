@@ -167,7 +167,7 @@ div.footer{
                                                             <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:100px None #9c9c9c;display:inline-block; " cellspacing="0" cellpadding="0" border="0"><div><img width="180" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float: left;max-width:180px;display:block;" class="rnb-logo-img" src="https://i.postimg.cc/sfcPrhRs/top-left-logos.png"></div></div></td>
 <td style="width:25%;"></td>
                                                         <td valign="right" align="left" style="line-height: 1px;">
-                                                            <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:100px None #9c9c9c;display:inline-block; " cellspacing="0" cellpadding="0" border="0"><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float: left;max-width:250px;display:block;" class="rnb-logo-img" src="{{Organization.LogoForEmail}}"></div></div></td>
+                                                            <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:100px None #9c9c9c;display:inline-block; " cellspacing="0" cellpadding="0" border="0"><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float: right;max-width:250px;display:block;" class="rnb-logo-img" src="{{Organization.LogoForEmail}}"></div></div></td>
                                                     </tr>
 
 <tr><td></td><td></td>
@@ -200,9 +200,9 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 <table class="table3";width:100%;>
 <tr style="height:10px;">
 <th style="width:5%;"> </th>
-<th style="padding:1pt 1pt 1pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:solid;border-right-style:solid;border-right-width:1pt;" bgcolor="#cccccc"> Invoice Name & Address </th> 
+<th style="padding:1pt 1pt 1pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;solid;border-right-style:solid;border-right-width:1pt;" bgcolor="#cccccc"> Invoice Name & Address </th> 
 <th style="width:10%"> </th>
-<th style="padding:1pt 1pt 1pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:solid;border-right-style:solid;border-right-width:1pt;" bgcolor="#cccccc"> Customer Name & Address </th>
+<th style="padding:1pt 1pt 1pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;solid;border-right-style:solid;border-right-width:1pt;" bgcolor="#cccccc"> Customer Name & Address </th>
 <th style="width:5%;">
 
 </tr>
@@ -293,28 +293,20 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 {{Parts.HTMLTableTemplateStart}}
 <tr>    
-  <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;">    {{Part.PartNumberPacked}}    </td>
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    {{Part.Description}}    </td>
-  <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;">   {{Part.OrderQuantity}}    </td>
-  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">      {{Part.SellingPrice}}     </td>
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    {{Part.DiscountPrintingText}}    </td>
-  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">     {{Part.ExtendedPrice}}    </td>
-  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    {{Part.VATCodeText}}    </td>
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    {{Part.CustomerOrderNoText}} </td>    
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    {{Part.WIPNumber}}    </td>    </tr>
+  <td>    {{Part.PartNumberPacked}}    </td>
+  <td>    {{Part.Description}}    </td>
+  <td>   {{Part.OrderQuantity}}    </td>
+  <td>      {{Part.SellingPrice}}     </td>
+  <td >    {{Part.DiscountPrintingText}}    </td>
+  <td>     {{Part.ExtendedPrice}}    </td>
+  <td>    {{Part.VATCodeText}}    </td>
+  <td >    {{Part.CustomerOrderNoText}} </td>    
+  <td >    {{Part.WIPNumber}}    </td>    </tr>
 {{Parts.HTMLTableTemplateEnd}}
 
 <tr>
 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
+<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
 </tr>
 </table>
 
