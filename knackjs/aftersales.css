@@ -2303,5 +2303,5 @@ div.tooltipDiv {
 }*/
 
 #view_3174 {
-  overflow: hidden;
+  overflow: auto !important;
 }
