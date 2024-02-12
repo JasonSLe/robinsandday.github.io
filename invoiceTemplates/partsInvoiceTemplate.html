@@ -63,6 +63,15 @@ background-color: #cccccc;
 padding: 4px;
 }
 
+        td, th {
+            border: 1px solid black; /* Add border to all sides by default */
+            padding: 8px;
+        }
+        /* Apply specific borders to columns */
+        .border-right th,
+        .border-right td {
+            border-right: 2px solid red;
+ 
 table.table3 {
  width:100%;
  font-family: Arial; 
@@ -184,7 +193,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
                                                 </tbody></table>
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V16   </h3>
+<h3> {{Invoice.CategoryText}} V17   </h3>
 
 <font size = "1.2">
 <table class="table3" style="width:100%;">
@@ -270,7 +279,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 <tr> 
 
-  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>
+  <th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>
 <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:27%"> Description</th>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> Qty </th>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;"> Unit Price </th>
