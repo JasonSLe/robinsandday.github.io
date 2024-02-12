@@ -301,6 +301,18 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.CustomerOrderNoText}} </td>    
  <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">     {{Part.WIPNumber}}    </td>    </tr>
 {{Parts.HTMLTableTemplateEnd}}
+{{Parts.SurchargeHTMLTableTemplateStart}}
+<tr>    
+  <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;"></td>
+  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    &nbsp;&nbsp; Surcharge on above    </td>
+  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    </td>
+  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    &nbsp;&nbsp;{{Part.OrderQuantity}}    </td>
+  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">     {{Part.Surcharge}}  </td>
+  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">     </td>
+  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    &nbsp;&nbsp;&nbsp;&nbsp;{{Part.SurchargeTotalText}}    </td>
+  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    </td>    
+</tr>
+{{Parts.SurchargeHTMLTableTemplateEnd}}
 
 <tr>
 
