@@ -76,7 +76,7 @@ table.table3 {
  font-family: Arial; 
 border-collapse: collapse; 
 margin-top:5px;
-border-spacing: 1;}
+}
 
 table.table3 tr {
 height: 10px;
@@ -152,11 +152,10 @@ margin-bottom: 0;
 div.footer{ 
        position: fixed;     
        text-align: center;    
-       bottom: 0px; 
+       bottom: 10px; 
        width: 100%;
    }  
 
-p { margin:0 }
 
  </style>
 
@@ -199,7 +198,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
                                                 </tbody></table>
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V4   </h3>
+<h3> {{Invoice.CategoryText}} V5   </h3>
 
 
 <font size = "1.2">
@@ -208,7 +207,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 <th style="width:5%;"> </th>
 <th style="padding:1pt 1pt 1pt 7.2pt;border-top-width:1pt;border-right-width:1pt;border-left-width:1pt;border-bottom-width:1pt;width:35%;" bgcolor="#cccccc"> Invoice Name & Address </th> 
 <th style="width:10%"> </th>
-<th style="padding:1pt 1pt 1pt 7.2pt;border-top-width:1pt;border-right-width:1pt;border-left-width:1pt;border-bottom-width:0pt;width:35%;" bgcolor="#cccccc"> Customer Name & Address </th>
+<th style="padding:1pt 1pt 1pt 7.2pt;border-top-width:1pt;border-right-width:1pt;border-left-width:1pt;border-bottom-width:1pt;width:35%;" bgcolor="#cccccc"> Customer Name & Address </th>
 <th style="width:5%;">
 
 </tr>
@@ -287,7 +286,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 <tr> 
 
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>
-<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> Description</th>
+<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:27%"> Description</th>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> Qty </th>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;"> Unit Price </th>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:8%;"> Disc. </th>
@@ -327,7 +326,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 <div class="footer">
 <table class="table2", style="width:100%">
 <tr>
-<th rowspan="2" style="border-right-style:solid;padding:7.2pt 25pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:25%"  bgcolor="white">  
+<th rowspan="2" style="border-right-style:solid;padding:7.2pt 25pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:25%"  bgcolor="white">  
 <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:8pt;font-family:&quot;Courier&quot;;font-style:normal;text-align:right">Parts: {{PartsTotal}}<br>
 Surcharge: {{SurchargeTotal}}<br>
 Labour: 0.00 <br>
@@ -372,13 +371,8 @@ Owing <br>
 
 </table>
 
+ <font size = "0.2">
 
-
-<br>
-
-<font size = "0.2">
-
-<div class="footer">
 <table class="table5">
 <tr>
 <th><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-family:&quot;Encode Sans&quot;;font-style:normal">www.stellantisandyou.co.uk</th> 
@@ -390,6 +384,8 @@ Owing <br>
 </th>
 </tr>
 </table>
+
+<br>
 
 </div>
 
