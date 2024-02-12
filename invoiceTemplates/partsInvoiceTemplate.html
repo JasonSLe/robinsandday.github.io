@@ -306,7 +306,18 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;"> W.I.P. </th>
 </tr> 
 
-{{Parts.HTMLTable}}
+{{Parts.HTMLTablePatterStart}}
+<tr>    
+  <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;">    {{Part.PartNumberPacked}}    </td>
+  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    {{Part.Description}}    </td>
+  <td>    {{Part.OrderQuantity}}    </td>
+  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">      {{Part.SellingPrice}}     </td>
+  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    {{Part.DiscountPrintingText}}    </td>
+  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">     {{Part.ExtendedPrice}}    </td>
+  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    {{Part.VATCodeText}}    </td>
+  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    {{Part.CustomerOrderNoText}} </td>    
+  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;">    {{Part.WIPNumber}}    </td>    </tr>
+{{Parts.HTMLTablePatterEnd}}
 
 <tr>
 
