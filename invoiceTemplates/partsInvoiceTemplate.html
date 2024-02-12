@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+
+<style>  
+
+table.table1 {
+ font-family: CourierNew,Bold;
+font-weight: bold; 
+border-collapse: collapse; 
+border-spacing: 0;}
+
+p { margin:0;
+text-align: left;
+ }
+
+table.table1 tr {
+height: 10px;
+border: 0px;
+} 
+
+table.table1 td { 
+border:0px; 
+text-align: left; 
+padding: 1px; 
+} 
+
+table.table1 th{ 
+border: 0px;
+font-family: arial; 
+font-weight: bold; 
+ padding: 1px;
+height:14px; 
+}
+
+table.table1 tr:first-child{
+  background-color: #cccccc;
+  position:fixed;
+}
+
+table.table2 {
+width: 100%;
+font-family: arial,serif;
+border-collapse: collapse;
+padding:4px;
+display:block;
+margin-bottom: -15px;
+margin-top: -15px;
+}
+
+table.table2 th{
+font-family: Arial;
+font-weight : bold;
+height: 10px;
+text-align: center;
+ } 
+
+table.table2 tr{
+border-bottom: 1px solid black;
+ font-family: CourierNew,Bold;
+font-weight: bold; 
+padding:2px;
+}
+
+table.table2 tr:last-child {  
+border: 0;
+}
+
+table.table2 td { 
+text-align: center; 
+padding: 4px; 
+}
+
+table.table2 tr:first-child{
+background-color: #cccccc;
+padding: 4px;
+}
+
+table.table3 {
+ font-family: Arial; 
+border-collapse: collapse; 
+margin-top:0px;
+border-spacing: 1;}
+
+table.table3 tr {
+border: 0px;
+height: 10px;
+font-weight: bold;
+} 
+
+table.table3 td { 
+border:0px; 
+text-align: left; 
+padding: 6px; 
+} 
+
+table.table3 th{
+ border:0px; 
+font-weight: bold;
+ padding: 2px;
+height:14px; 
+}
+
+table.table2 {
+width: 100%;
+ font-family: arial,serif;
+border-collapse: collapse;
+padding:4px;
+display:block;
+margin-bottom: -15px;
+margin-top: -15px;
+}
+
+table.table4{
+width:100%;
+font-family: EncodeSansLight; 
+}
+
+table.table4 th{
+text-align: right;
+font-size: 50px;
+font-weight: normal;
+ }
+
+table.table4 tr{
+text-align: right; 
+font-size: 1.5pt;
+}
+
+table.table5{
+width:100%;
+font-family: EncodeSansLight; 
+}
+
+table.table5 th{
+text-align: left;
+font-size: 50px;
+font-weight: normal;
+ }
+
+table.table5 tr{
+text-align: left; 
+font-size: 1.5pt;
+}
+
+h3{
+text-align:center;}
+
+h4{
+font-family: CourierNew,Bold;
+}
+h5{
+text-align: left;
+padding:0px;
+margin-top: 0;
+margin-bottom: 0;
+}
+
+div.footer{ 
+       position: fixed;     
+       text-align: center;    
+       bottom: 0px; 
+       width: 100%;
+   }  
+
+p { margin:0 }
+
+ </style>
+
+
+
+</head>
+<body class="doc-content" style="background-color:#ffffff;padding:20pt 20pt 20pt 20pt;max-width:468pt">
+<font size = "0.9">
+
+ <table class="table4" cellpadding="0" border="0" align="right" cellspacing="0" class="logo-img-center" style="text-align:right;"> 
+                                                    <tbody><tr>
+<td valign="right" align="center" style="line-height: 1px;">
+                                                            <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:100px None #9c9c9c;display:inline-block; " cellspacing="0" cellpadding="0" border="0"><div><img width="180" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float: left;max-width:180px;display:block;" class="rnb-logo-img" src="https://i.postimg.cc/sfcPrhRs/top-left-logos.png"></div></div></td>
+<td style="width:25%;"></td>
+                                                        <td valign="right" align="left" style="line-height: 1px;">
+                                                            <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:100px None #9c9c9c;display:inline-block; " cellspacing="0" cellpadding="0" border="0"><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float: left;max-width:250px;display:block;" class="rnb-logo-img" src="{{Organization.LogoForEmail}}"></div></div></td>
+                                                    </tr>
+
+<tr><td></td><td></td>
+
+<td> <span style="color:#000000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:9pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
+Stellantis &You {{Dealer.name}} 
+</td><tr><td></td><td></td><td>
+<span style="color:#000000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:6pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
+{{Dealer.street}}, 
+{{Dealer.street2}}, 
+{{Dealer.city}} <br>
+{{Dealer.state}}, 
+{{Dealer.country}} 
+{{Dealer.zip}}
+
+
+<br>
+Tel: {{Dealer.PhoneFormatted}} <br>
+{{Dealer.email}}
+
+
+
+</td> </tr>
+                                                </tbody></table>
+
+<font size = "2.7">
+<h3> {{Invoice.CategoryText}}    </h3>
+
+
+<font size = "1.2">
+<table class="table3">
+<tr style="height:10px;">
+<th style="width:5%;"> </th>
+<th style="padding:1pt 1pt 1pt 7.2pt;border-top-width:1pt;border-right-width:1pt;border-left-width:1pt;border-bottom-width:0pt;" bgcolor="#cccccc"> Invoice Name & Address </th> 
+<th style="width:10%"> </th>
+<th style="padding:1pt 1pt 1pt 7.2pt;border-top-width:1pt;border-right-width:1pt;border-left-width:1pt;border-bottom-width:0pt" bgcolor="#cccccc"> Customer Name & Address </th>
+<th style="width:5%;">
+
+</tr>
+<tr><td></td> <td style="padding:7.2pt 7.2pt 7.2pt 7.2pt;border-top-width:1pt;border-right-width:1pt;vertical-align:top;border-left-width:1pt;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt" style="width:20%" bgcolor="white" style="font-family: CourierNew,Bold;" >{{Account.CustomerSName}}<br>
+{{Account.AddressLine1}} <br>
+ {{Account.AddressLine2}}<br>
+{{Account.AddressLine3}}  <br>
+{{Account.AddressLine4}} <br>
+{{Account.AddressLine5}} <br>
+
+
+</td> <td> </td>
+<td style="padding:7.2pt 7.2pt 7.2pt 7.2pt;border-top-width:1pt;border-right-width:1pt;vertical-align:top;border-right-color:#000000;border-left-width:1pt;background-color:#ffffff;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000" style="width:20%" bgcolor="white" style="font-family: CourierNew,Bold;">{{Customer.CustomerName}} <br>
+ {{Customer.CustomerAddress001}}<br>
+{{Customer.CustomerAddress002}}<br>
+{{Customer.CustomerAddress003}}<br>
+{{Customer.CustomerAddress004}}<br>
+
+</td>
+<td></td>
+
+</tr>
+<tr> <td> </td>
+<td style="border-right-style:solid;padding:1pt 1pt 1pt 35pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid" style="width:20%" bgcolor="white" style="font-family: CourierNew,Bold;"> {{Account.Postcode}}</td>
+<td> </td>
+<td style="border-right-style:solid;padding:1pt 1pt 1pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid" style="width:20%" bgcolor="white" style="font-family: CourierNew,Bold;"> {{Customer.CustomerAddress005}}</td>
+<td> </td>
+</tr>
+<tr> <td> </td>
+<td style="border-right-style:solid;padding:1pt 1pt 1pt 1pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid" style="width:20%" bgcolor="white" style="font-family: CourierNew,Bold;"> {{Account.ContactName}}</td>
+<td> </td>
+<td style="border-right-style:solid;padding:1pt 1pt 1pt 1pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid" style="width:20%" bgcolor="white" style="font-family: CourierNew,Bold;"> </td>
+<td> </td>
+</tr>
+</table>
+
+<table class="table3" style="height:20px">
+<tr> <th style="width:5%;"> </th>
+<th> Job invoiced by: {{OperatorName}}</th>
+<th> Job raised by: {{Customer.CustomerContact}} </th>
+<th> Van Route {{Customer.Route}} </th>
+<th style="width:5%;"></th>
+</tr>
+</table>
+
+
+<font size="1.4">
+<table class="table2">
+<tr>
+<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"> Account No </th>
+<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:20%;"> Document Number </th>
+<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:25%;"> Date </th>
+<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;"> Ref No. </th>
+<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;"> Job No. </th>
+<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;"> Page </th>
+
+</tr> <tr>
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"> {{Customer.AccountNo)}}</td>
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"> <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:&quot;Courier&quot;;font-style:normal"> {{Invoice.InvoiceCreditNo001}} </td>
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"> {{Invoice.DateTimeCreatedText}} </td>
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"> {{Invoice.Contact}}</td>
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"> {{Invoice.JobNumber}} </td>
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"> 1 </td>
+</tr>
+</table>
+
+
+
+<h4 style="font-family:CourierNew,Bold", style="width: 70%;">
+{{Dealer.NoticeForPartsInvoices}}
+</h4>
+
+<font size="1.4">
+<table class="table1",width="100%">
+
+<tr> 
+
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>
+<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> Description</th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> Qty </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;"> Unit Price </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:8%;"> Disc. </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:12%;">  </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:5%;"> VAT </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:11%;"> Order No. </th>
+ <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;"> W.I.P. </th>
+</tr> 
+
+{{Parts.HTMLTable}}
+
+<tr>
+
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
+</tr>
+</table>
+
+<div class="footer">
+<table class="table2", style="width:100%">
+<tr>
+<th rowspan="2" style="border-right-style:solid;padding:7.2pt 25pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:25%"  bgcolor="white">  
+<span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:8pt;font-family:&quot;Courier&quot;;font-style:normal;text-align:right">Parts: {{PartsTotal}}<br>
+Surcharge: {{SurchargeTotal}}<br>
+Labour: 0.00 <br>
+Sublet: 0.00 <br>
+Menus: 0.00 
+<th style="width:5%;"> V </th>
+<th style="width:10%;"> Rate </th>
+<th> Service/Goods </th>
+<th style="width:10%"> VAT </th>
+<th rowspan="2"  bgcolor="white"style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid"style="width:10%"> 
+<span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:&quot;Courier&quot;;font-style:normal;text-align:right;">
+Net <br>
+V.A.T. <br>
+Total <br>
+Paid <br>
+Owing <br> 
+</th>
+<th rowspan="2" style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid; width:25%" bgcolor="white" style="font-family: CourierNew,Bold;">
+<span style="color:#000000;font-weight:800;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:&quot;Courier&quot;;font-style:normal;text-align:right;">
+{{NETTotal}} 
+<br>
+{{GrossTotalMinusNETTotal}} 
+ <br>
+{{GrossTotal}}
+<br>
+{{PaidByCashText}}
+<br>
+{{GrossTotalMinusPaidByCashText}} <br>
+
+</tr>
+{{SVATTotalText}}
+
+{{sVATTotalText}}
+
+{{ZVATTotalText}}
+
+{{EVATTotalText}}
+
+{{HVATTotalText}}
+
+{{OVATTotalText}}
+
+</table>
+
+
+
+<br>
+
+<font size = "0.2">
+
+<div class="footer">
+<table class="table5" border="0">
+<tr>
+<th><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-family:&quot;Encode Sans&quot;;font-style:normal">www.stellantisandyou.co.uk</th> 
+
+<th style="width:85%"> <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
+
+{{Dealer.BankDetailsAndSmallPrint}}
+
+</th>
+</tr>
+</table>
+
+</div>
+
+<p style="page-break-after: always; break-after: page;"> </p>
+
+<span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
+
+
+</body>
+</html>
