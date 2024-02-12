@@ -119,7 +119,8 @@ font-size: 1.5pt;
 }
 
 h3{
-text-align:center;}
+text-align:center;
+font-family:Arial}
 
 h4{
 font-family: CourierNew,Bold;
@@ -180,7 +181,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
                                                 </tbody></table>
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V13   </h3>
+<h3> {{Invoice.CategoryText}} V14   </h3>
 
 <font size = "1.2">
 <table class="table3";width:100%;>
@@ -309,11 +310,18 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 <table class="table2", style="width:95%">
 <tr>
 <th rowspan="2" style="font-family:Courier New;border-right-style:solid;text-align:right;padding:7.2pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:25%"  bgcolor="white">  
-<span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:8pt;font-family:Courier New;font-style:normal;text-align:right">Parts: {{PartsTotal}}<br>
-Surcharge: {{SurchargeTotal}}<br>
-Labour: 0.00 <br>
-Sublet: 0.00 <br>
-Menus: 0.00 
+<span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:8pt;font-family:Courier New;font-style:normal;text-align:right">Parts:<br>
+Surcharge: <br>
+Labour: <br>
+Sublet: <br>
+Menus: </span></th>
+<th rowspan="2" style="font-family:Courier New;border-right-style:solid;text-align:right;padding:7.2pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:25%"  bgcolor="white">  
+<span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:8pt;font-family:Courier New;font-style:normal;text-align:right">{{PartsTotal}}<br>
+ {{SurchargeTotal}}<br>
+ 0.00 <br>
+ 0.00 <br>
+ 0.00 </span></th>
+ 
 <th style="width:5%;border-top-width:1pt;border-style:solid;border-width:1pt;"> V </th>
 <th style="width:10%;border-style:solid;border-width:1pt;"> Rate </th>
 <th style="border-style:solid;border-width:1pt;"> Service/Goods </th>
@@ -327,7 +335,7 @@ Paid <br>
 Owing <br> 
 </th>
 <th rowspan="2" style="font-family:Courier New;text-align:right;border-right-style:solid;padding:7.2pt 15.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:2pt;border-right-width:2pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:2pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid; width:25%" bgcolor="white" style="font-family: CourierNew,Bold;">
-<span style="color:#000000;font-weight:800;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:Courier New;font-style:normal;text-align:right;">
+<span style="color:#000000;font-weight:800;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:CourierNew;font-style:normal;text-align:right;">
 {{NETTotal}} 
 <br>
 {{GrossTotalMinusNETTotal}} 
