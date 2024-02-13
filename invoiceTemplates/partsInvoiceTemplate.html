@@ -176,7 +176,9 @@ div.content {
 </head>
 <body class="doc-content" style="background-color:#ffffff;padding:20pt 20pt 20pt 20pt;max-width:600pt">
 
-<div class="content">
+ 
+ <div id="content">
+  <div id="pageFooter">Page </div>
 
 <font size = "0.9">
 
@@ -324,7 +326,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 {{Parts.HTMLTableTemplateEnd}}
 {{Parts.SurchargeHTMLTableTemplateStart}}
 <tr>    
-  <td colspan="2" style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    &nbsp;&nbsp; Surcharge on above    </td>
+  <td colspan="2" style="border-top-width:0pt;border-right-width:1pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    &nbsp;&nbsp; Surcharge on above    </td>
   <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    &nbsp;&nbsp;{{Part.OrderQuantity}}    </td>
   <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">     {{Part.Surcharge}}  </td>
   <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">     </td>
@@ -373,7 +375,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 </tr>
 </table>
 
-</div>
+
 
 
 
@@ -463,8 +465,6 @@ Owing <br>
 
 </div>
  
- <div id="content">
-  <div id="pageFooter">Page </div>
   multi-page content here...
 </div>
 
