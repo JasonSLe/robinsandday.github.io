@@ -38,6 +38,7 @@ table.table2 {
 width: 100%;
 border-collapse: collapse;
 padding:4px;
+ border-bottom: 1px solid black;
 }
 
 table.table2 th{
@@ -63,14 +64,11 @@ background-color: #cccccc;
 padding: 4px;
 }
 
-
-   
-        /* Apply specific borders to columns */
-        .border-right th,
-        .border-right td {
-            border-right: 2px solid red;
+thead {
+display: table-header-group; /* Ensure headers are repeated on each page */
         }
- 
+   
+
 table.table3 {
  width:100%;
  font-family: Arial; 
