@@ -6,33 +6,7 @@
 
 <style>  
 
-table.table1 {
- width:100%;
- font-family: CourierNew,Bold;
-font-weight: bold; 
-border-collapse: collapse; 
-}
-
-table.table1 tr {
-height: 10px;
-} 
-
-table.table1 td { 
-text-align: left; 
-padding: 1px; 
-} 
-
-table.table1 th{ 
-font-family: arial; 
-font-weight: bold; 
- padding: 1px;
-height:14px; 
-}
-
-table.table1 tr:first-child{
-  background-color: #cccccc;
-  position:fixed;
-}
+/* TABLE2 - for document number bar, parts table and bottom totals */
 
 table.table2 {
 width: 100%;
@@ -40,17 +14,17 @@ border-collapse: collapse;
 padding:4px;
 }
 
-table.table2 th{
-font-family: Arial;
-height: 10px;
-text-align: center;
- } 
-
 table.table2 tr{
  font-family: Courier New;
 font-weight: bold; 
 padding:2px;
 }
+ 
+table.table2 th{
+font-family: Arial;
+height: 10px;
+text-align: center;
+ } 
 
 table.table2 td { 
 text-align: center; 
@@ -63,10 +37,7 @@ background-color: #cccccc;
 padding: 4px;
 }
 
-thead {
-display: table-header-group; /* Ensure headers are repeated on each page */
-        }
-   
+/* TABLE3 - for top addresses and operator name line */
 
 table.table3 {
  width:100%;
@@ -80,16 +51,18 @@ height: 10px;
 font-weight: bold;
 } 
 
+ table.table3 th{
+font-weight: bold;
+ padding: 2px;
+height:14px; 
+}
+
 table.table3 td { 
 text-align: left; 
 padding: 6px; 
 } 
 
-table.table3 th{
-font-weight: bold;
- padding: 2px;
-height:14px; 
-}
+/* TABLE4 - for logos at top */
 
 table.table4{
 width:100%;
@@ -110,6 +83,8 @@ font-size: 1.5pt;
  table.table4 td{
   text-align:right;}
 
+/* TABLE5 - for small print */
+
 table.table5{
 width:100%;
 font-family: EncodeSansLight; 
@@ -126,13 +101,24 @@ text-align: left;
 font-size: 1.5pt;
 }
 
+/* HEADINGS */ 
+ 
+/* Terms and conditions title */
+  h2{
+  font-size:15px;
+ }
+
+/* Invoice title (ACCOUNT INVOICE normally) */
 h3{
 text-align:center;
 font-family:Arial}
 
+ /* Invoice Messages */
 h4{
 font-family: Courier New;
 }
+
+/* Terms and conditions headings */
 h5{
 text-align: left;
 font-size: 5px;
@@ -140,14 +126,14 @@ padding:0px;
 margin-top: 0;
 margin-bottom: 0;
 }
+
+ /* Changing paragraph font size for terms and conditions */
 p{
  font-size:7px;
 }
 
- h2{
-  font-size:15px;
- }
 
+/* OLD FOOTER CODE
 div.footer{ 
        position: fixed;     
        text-align: center;    
@@ -157,12 +143,14 @@ div.footer{
    .no-footer {
          display: none;
    }
-
+ 
 
 div.content {
-        margin-bottom: 400px; /* Adjust this value to accommodate the footer height */
+        margin-bottom: 400px; 
     }
+*/
 
+/* OLD PAGE NUMBER ATTEMPTS 
  #content {
     display: table;
 }
@@ -181,6 +169,10 @@ div.content {
     content: counter(page) " of " counter(pages);
   }
 }
+
+ */
+
+ /* Remove padding */
 body{
    margin: 0px;
   padding: 0px;
@@ -200,17 +192,21 @@ body{
 
 <font size = "0.9">
 
+ <! -- TOP LOGOS -->
+
  <table class="table4" cellpadding="0" align="right" cellspacing="0" style="text-align:right;width:100%;"> 
                                                     <tbody><tr>
 <td valign="right" align="center" style="line-height: 1px;">
                                                             <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:100px None #9c9c9c;display:inline-block; " cellspacing="0" cellpadding="0" border="0"><div><img width="180" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float: left;max-width:180px;display:block;" class="rnb-logo-img" src="https://i.postimg.cc/sfcPrhRs/top-left-logos.png"></div></div></td>
 <td style="width:45%;"></td>
                                                         <td valign="right" align="right" style="line-height: 1px;">
-                                                            <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:250px;display:block;" class="rnb-logo-img" src="{{Organization.LogoForEmail}}"></div></div></td>
-                                                       <!--     <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:250px;display:block;" class="rnb-logo-img" src="https://i.postimg.cc/bN7SjLhL/backgroundtotestinvoices.png"></div></div></td> -->
-                                                    </tr>
+                                                        <!--      <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:250px;display:block;" class="rnb-logo-img" src="{{Organization.LogoForEmail}}"></div></div></td>  -->
+                                                   
+                                                          <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:250px;display:block;" class="rnb-logo-img" src="https://i.postimg.cc/bN7SjLhL/backgroundtotestinvoices.png"></div></div></td>
 
 <tr><td></td><td></td>
+
+ <! -- PARTS HUB ADDRESS -->
 
 <td> <span style="color:#000000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:9pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
 Stellantis &You {{Dealer.name}} 
@@ -233,8 +229,12 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 </td> </tr>
                                                 </tbody></table>
 
+ <!-- HEADING -->
+
 <font size = "2.7">
 <h3> {{Invoice.CategoryText}} V24 logo  </h3>
+
+ <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
 
 <font size = "1.2">
 <table class="table3" style="width:100%;">
@@ -279,6 +279,8 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 </tr>
 </table>
 
+ <!-- OPERATOR/RAISED BY/ROUTE LINE -->
+
 <table class="table3" style="height:20px">
 <th> Job invoiced by: {{OperatorName}}</th>
 <th> Job raised by: {{Customer.CustomerContact}} </th>
@@ -287,6 +289,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 </tr>
 </table>
 
+ <!-- DOCUMENT NUMBER ETC STRIP -->
 
 <font size="1.4">
 <table class="table2" style="width:100%;">
@@ -309,13 +312,19 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 </table>
 
 
-
+<!-- INVOICE MESSAGE -->
+ 
 <h4 style="font-family:Courier New;width:70%;">
 {{Dealer.NoticeForPartsInvoices}}
 </h4>
 
+ <!-- PARTS TABLE -->
+
 <font size="1.4">
 <table class="table2" style="width:100%">
+
+ <!-- HEADINGS -->
+ 
 <tr> 
 
   <th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>
@@ -328,6 +337,9 @@ Tel: {{Dealer.PhoneFormatted}} <br>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:11%;"> Order No. </th>
  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;"> W.I.P. </th>
 </tr> 
+
+<! -- PARTS ROWS -->
+ 
 {{Parts.HTMLTableTemplateStart}}
 <tr>    
  <td style="text-align:left;font-family:Courier New;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.PartNumberPacked}}    </td>
@@ -340,6 +352,9 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <td style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.CustomerOrderNoText}} </td>    
  <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">     {{Part.WIPNumber}}    </td>    </tr>
 {{Parts.HTMLTableTemplateEnd}}
+
+<!-- SURCHARGE ROWS -->
+ 
 {{Parts.SurchargeHTMLTableTemplateStart}}
 <tr>    
   <td colspan="2" style="border-top-width:0pt;border-right-width:1pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    &nbsp;&nbsp; Surcharge on above    </td>
@@ -352,6 +367,9 @@ Tel: {{Dealer.PhoneFormatted}} <br>
    <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    </td>    
 </tr>
 {{Parts.SurchargeHTMLTableTemplateEnd}}
+
+<!-- NOTES ROWS -->
+ 
 {{Parts.NotesHTMLTableTemplateStart}}
 <tr>    
   <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    NOTES    </td>
@@ -377,6 +395,8 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 </tr>
 {{Parts.NotesHTMLTableTemplateEnd}}
 
+<!-- BOTTOM OF TABLE (just for border etc) -->
+ 
 <tr>
 
 <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
@@ -393,12 +413,13 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 
 
-
-
-
+<!-- BOTTOM TOTALS -->
 
 <table class="table2" style="width:100%">
 <tr>
+
+<!-- LEFT parts/surcharge/labour/sublet/menus -->
+ 
 <th rowspan="20" style="font-family:Courier New;border-right-style:solid;text-align:right;padding:7.2pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:10%"  bgcolor="white">  
 <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:8pt;font-style:normal;text-align:right">Parts:<br>
 Surcharge: <br>
@@ -411,11 +432,16 @@ Menus: </span></th>
  0.00 <br>
  0.00 <br>
  0.00 </span></th>
+
+ <!-- MIDDLE VAT TABLE HEADINGS -->
  
 <th style="width:5%;border-top-width:1pt;border-style:solid;border-width:1pt;"> V </th>
 <th style="width:10%;border-style:solid;border-width:1pt;"> Rate </th>
 <th style="border-style:solid;border-width:1pt;"> Service/Goods </th>
 <th style="width:10%;border-style:solid;border-width:1pt;"> VAT </th>
+
+<!-- RIGHT SECTION - TOTALS -->
+ 
 <th rowspan="20"  bgcolor="white" style="font-family:Courier New;text-align:left;border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 27.2pt;border-bottom-color:#000000;border-top-width:2pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:2pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:2pt;width:10%;border-top-color:#000000;border-bottom-style:solid"> 
 <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:Courier;font-style:normal;text-align:right;">
 Net <br>
@@ -437,6 +463,9 @@ Owing <br>
 {{GrossTotalMinusPaidByCashText}} <br>
 
 </tr>
+
+<!-- ROWS OF MIDDLE VAT TABLE -->
+ 
 {{SVATTotalText}}
 
 {{sVATTotalText}}
@@ -449,6 +478,8 @@ Owing <br>
 
 {{OVATTotalText}}
 
+ <!-- Borders at bottom of VAT table -->
+
  <tr><td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
  <td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
   <td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
@@ -456,8 +487,11 @@ Owing <br>
   </tr>
 
 </table>
+ 
+ 
 
-
+<!-- SMALL PRINT -->
+ 
 <table class="table5">
 <tr>
 <th><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:top;font-size:5pt;font-family:Encode Sans;">www.stellantisandyou.co.uk</span></th>
@@ -472,6 +506,10 @@ Owing <br>
 </th>
 </tr>
 </table>
+
+ 
+
+ <!-- TERMS AND CONDITIONS -->
 
 <div class="page-break" style="font-size: 28px; page-break-before: always !important">
 
