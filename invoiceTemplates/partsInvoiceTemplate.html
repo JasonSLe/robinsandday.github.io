@@ -187,11 +187,11 @@ div.content {
 
 
 </head>
-<body class="doc-content" style="background-color:#ffffff;padding:10pt 10pt 10pt 10pt;max-width:600pt">
+<body class="doc-content" style="background-color:#ffffff;padding:0pt 0pt 0pt 0pt;max-width:600pt">
 
  
  <div id="content">
-  <div id="pageFooter">Page test </div>
+ 
 
 <font size = "0.9">
 
@@ -200,8 +200,8 @@ div.content {
 <td valign="right" align="center" style="line-height: 1px;">
                                                             <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:100px None #9c9c9c;display:inline-block; " cellspacing="0" cellpadding="0" border="0"><div><img width="180" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float: left;max-width:180px;display:block;" class="rnb-logo-img" src="https://i.postimg.cc/sfcPrhRs/top-left-logos.png"></div></div></td>
 <td style="width:45%;"></td>
-                                                        <td valign="right" align="right" style="line-height: 1px;">
-                                                            <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:300px None #9c9c9c;display:inline-block; " cellspacing="0" cellpadding="0" border="0"><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" align="right" style="float:left;max-width:250px;display:block;" class="rnb-logo-img" src="{{Organization.LogoForEmail}}"></div></div></td>
+                                                        <td valign="right" align:"right" style="line-height: 1px;">
+                                                            <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:250px;display:block;" class="rnb-logo-img" src="{{Organization.LogoForEmail}}"></div></div></td>
                                                     </tr>
 
 <tr><td></td><td></td>
@@ -228,7 +228,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
                                                 </tbody></table>
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V22   </h3>
+<h3> {{Invoice.CategoryText}} V24   </h3>
 
 <font size = "1.2">
 <table class="table3" style="width:100%;">
@@ -274,7 +274,6 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 </table>
 
 <table class="table3" style="height:20px">
-<tr> <th style="width:5%;"> </th>
 <th> Job invoiced by: {{OperatorName}}</th>
 <th> Job raised by: {{Customer.CustomerContact}} </th>
 <th> Van Route {{Customer.Route}} </th>
