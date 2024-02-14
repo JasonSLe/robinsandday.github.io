@@ -32,10 +32,10 @@ padding: 4px;
  font-family: Courier New;
 }
 
-table.table2 tr:first-child{
+/*table.table2 tr:first-child{
 background-color: #cccccc;
 padding: 4px;
-}
+}*/
 
 /* TABLE3 - for top addresses and operator name line */
 
@@ -130,8 +130,8 @@ margin-bottom: 0;
  /* Changing paragraph font size for terms and conditions */
 p{
  font-size:7px;
- margin-top:0;
- margin-bottom:0;
+ margin-top:0.5em;
+ margin-bottom:0.5em;
 }
 
 
@@ -416,6 +416,33 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  </tbody>
 </table>
 
+<!-- TEST TABLE HEADERS -->
+ 
+ <table>
+  <thead style="display: table-header-group;">
+   <tr>
+      <th>Month</th>
+      <th>Savings</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+      <td>January 2009</td>
+      <td>$100</td>
+   </tr>
+   <tr>
+      <td>February 2009</td>
+      <td>$80</td>
+   </tr>
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+   <!--// ..... many table rows that will split over several pages ...... -->
+
+   <tr>
+      <td>February 2015</td>
+      <td>$200</td>
+   </tr>
+  </tbody>
+</table>
 
 
 <!-- BOTTOM TOTALS -->
