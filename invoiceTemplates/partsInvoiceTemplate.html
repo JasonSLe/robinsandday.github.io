@@ -121,7 +121,7 @@ font-family: Courier New;
 
 /* Terms and conditions headings */
 h5{
-text-align: center;
+text-align: left;
 font-size: 5px;
 padding:0px;
 margin-top: 0;
@@ -181,6 +181,36 @@ body{
   padding: 0px;
 }
 
+/* TRYING TO ADD FONTS */
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+ .courier-prime-regular {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.courier-prime-bold {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.courier-prime-regular-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.courier-prime-bold-italic {
+  font-family: "Courier Prime", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
  
  </style>
 
@@ -236,6 +266,10 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 <font size = "2.7">
 <h3> {{Invoice.CategoryText}} V25  </h3>
+
+<h3 class="courier-prime-bold"> using class="courier-prime-bold"</h3>
+ <h3 style="font-family:"Courier Prime";>using font family </h3>
+ 
 
  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
 
@@ -1104,8 +1138,8 @@ through with someone on 0300 123 9123 or 0800 023 4567.
  
 
 </p>
-<h5 rel="text-align: center;"
-style="margin-bottom: 0.5em;font-size:8px;">
+<h5 
+style="text-align:center;margin-bottom: 0.5em;font-size:8px;">
 
 NOTHING SET OUT HEREIN
 AFFECTS THE STATUTORY RIGHTS OF A CONSUMER
