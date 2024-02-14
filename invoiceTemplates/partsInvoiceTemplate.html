@@ -121,7 +121,7 @@ font-family: Courier New;
 
 /* Terms and conditions headings */
 h5{
-text-align: left;
+text-align: center;
 font-size: 5px;
 padding:0px;
 margin-top: 0;
@@ -130,7 +130,7 @@ margin-bottom: 0;
 
  /* Changing paragraph font size for terms and conditions */
 p{
- font-size:7px;
+ font-size:7.5px;
  margin-top:0.7em;
  margin-bottom:0.7em;
 }
@@ -367,7 +367,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
   <td  style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">   {{Part.OrderQuantity}}    </td>
   <td style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">      {{Part.Surcharge}} </td>
   <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    </td>   
-   <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">   {{Part.SurchargeTotalText}}  </td>    
+   <td style="text-align:right;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">   {{Part.SurchargeTotalText}}  </td>    
    <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    </td>    
 </tr>
 {{Parts.SurchargeHTMLTableTemplateEnd}}
@@ -387,8 +387,8 @@ Tel: {{Dealer.PhoneFormatted}} <br>
    <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    </td>    
 </tr>    
 <tr>    
-  <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">&nbsp;&nbsp;       </td>
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    {{Parts.Notes}}    </td>
+  <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">      </td>
+  <td style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">   &nbsp &nbsp {{Parts.Notes}}    </td>
   <td  style="border-top-width:0pt;border-right-width:0pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">        </td>
   <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">        </td>
   <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">         </td>
@@ -426,13 +426,13 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 <!-- LEFT parts/surcharge/labour/sublet/menus -->
  
-<th rowspan="20" style="font-family:Courier New;border-right-style:solid;text-align:right;padding:7.2pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:10%"  bgcolor="white">  
+<th rowspan="20" style="font-family:Courier New;border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:10%"  bgcolor="white">  
 <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:8pt;font-style:normal;text-align:right">Parts:<br>
 Surcharge: <br>
 Labour: <br>
 Sublet: <br>
 Menus: </span></th>
-<th rowspan="20" style="font-family:Courier New;border-right-style:solid;text-align:right;padding:7.2pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:15%"  bgcolor="white">  
+<th rowspan="20" style="font-family:Courier New;border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:15%"  bgcolor="white">  
 <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:8pt;font-family:Courier New;font-style:normal;text-align:right">{{PartsTotal}}<br>
  {{SurchargeTotal}}<br>
  0.00 <br>
