@@ -130,6 +130,8 @@ margin-bottom: 0;
  /* Changing paragraph font size for terms and conditions */
 p{
  font-size:7px;
+ margin-top:0;
+ margin-bottom:0;
 }
 
 
@@ -202,7 +204,7 @@ body{
                                                         <td valign="right" align="right" style="line-height: 1px;">
                                                         <!--   OLD LOGO PULLED FROM MAKE FUNCTION   <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:250px;display:block;" class="rnb-logo-img" src="{{Organization.LogoForEmail}}"></div></div></td>  -->
                                                    <!-- NEW LOGO - cropped so it aligns -->
-                                                          <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:250px;display:block;" class="rnb-logo-img" src="https://i.postimg.cc/FFqcmrrm/stellantislogo.jpg"></div></div></td>
+                                                          <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:200px;display:block;" class="rnb-logo-img" src="https://i.postimg.cc/FFqcmrrm/stellantislogo.jpg"></div></div></td>
 
 <tr><td></td><td></td>
 
@@ -324,7 +326,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 <table class="table2" style="width:100%">
 
  <!-- HEADINGS -->
- 
+  <thead style="display: table-header-group;">
 <tr> 
 
   <th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>
@@ -337,7 +339,8 @@ Tel: {{Dealer.PhoneFormatted}} <br>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:11%;"> Order No. </th>
  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;"> W.I.P. </th>
 </tr> 
-
+  </thead>
+<tbody>
 <! -- PARTS ROWS -->
  
 {{Parts.HTMLTableTemplateStart}}
@@ -409,6 +412,8 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
 <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
 </tr>
+
+ </tbody>
 </table>
 
 
@@ -1099,8 +1104,7 @@ through with someone on 0300 123 9123 or 0800 023 4567.
 
 </p>
 <h5 rel="text-align: center;"
-style="margin-bottom: 0.5em;">
-
+style="margin-bottom: 0.5em;font-size:8px;">
 
 NOTHING SET OUT HEREIN
 AFFECTS THE STATUTORY RIGHTS OF A CONSUMER
