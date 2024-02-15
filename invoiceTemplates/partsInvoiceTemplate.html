@@ -33,19 +33,24 @@ padding:4px;
 }
 
 table.table2 tr{
-padding:1px;
+padding:0px;
 }
  
 table.table2 th{
-font-family: Arial;
 height: 10px;
 text-align: center;
  background-color: #cccccc;
+   font-family: "Encode Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
  } 
 
 table.table2 td { 
 text-align: center; 
-padding: 4px; 
+padding: 2px; 
 }
 
    .table2 thead {
@@ -62,7 +67,6 @@ padding: 4px;
 
 table.table3 {
  width:100%;
- font-family: Arial; 
 margin-top:5px;
  border-collapse: collapse;
 }
@@ -87,7 +91,6 @@ padding: 6px;
 
 table.table4{
 width:100%;
-font-family: EncodeSansLight; 
 }
 
 table.table4 th{
@@ -108,18 +111,29 @@ font-size: 1.5pt;
 
 table.table5{
 width:100%;
-font-family: EncodeSansLight; 
 }
 
 table.table5 th{
 text-align: left;
 font-size: 50px;
 font-weight: normal;
+   font-family: "Encode Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
  }
 
 table.table5 tr{
 text-align: left; 
 font-size: 1.5pt;
+   font-family: "Encode Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 /* HEADINGS */ 
@@ -229,7 +243,7 @@ body{
 }
 
 
-.encode-sans {
+.encode-sans-main {
   font-family: "Encode Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -243,6 +257,9 @@ table.table1 td {
 text-align: center; 
 padding: 4px;
  font-family:"Courier Prime", monospace;
+   font-weight: 700;
+  font-style: normal;
+ font-size:9pt;
 }
  
  </style>
@@ -274,10 +291,10 @@ padding: 4px;
 
  <!-- PARTS HUB ADDRESS -->
 
-<td> <span style="color:#000000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:9pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
+<td> <span style="color:#000000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:9pt;">
 Stellantis &You {{Dealer.name}} 
 </td><tr><td></td><td></td><td>
-<span style="color:#000000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:6pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
+<span style="color:#000000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:6pt;">
 {{Dealer.street}}, 
 {{Dealer.street2}}, 
 {{Dealer.city}} <br>
@@ -298,7 +315,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <!-- HEADING -->
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V31  </h3>
+<h3> {{Invoice.CategoryText}} V32  </h3>
  
 
  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
@@ -313,7 +330,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 <th style="width:5%;">
 
 </tr>
-<tr class="encode-sans"><td></td> <td style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%"bgcolor="white" >{{Account.CustomerSName}}<br>
+<tr class="encode-sans-main"><td></td> <td style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%"bgcolor="white" >{{Account.CustomerSName}}<br>
 {{Account.AddressLine1}} <br>
  {{Account.AddressLine2}}<br>
 {{Account.AddressLine3}}  <br>
@@ -565,9 +582,9 @@ Owing <br>
  
 <table class="table5">
 <tr>
-<th><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:top;font-size:5pt;font-family:Encode Sans;">www.stellantisandyou.co.uk</span></th>
+<th><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:top;font-size:5pt;">www.stellantisandyou.co.uk</span></th>
 
-<th style="width:85%"> <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
+<th style="width:85%"> <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-style:normal">
 
 {{Dealer.BankDetailsAndSmallPrint}}
  
