@@ -6,7 +6,30 @@
 
 <style>  
 
-/* TABLE2 - for document number bar, parts table and bottom totals */
+/* TABLE 1  - for bottom tables */
+table.table1 {
+width: 100%;
+border-collapse: collapse;
+padding:4px;
+}
+
+table.table1 tr{
+padding:2px;
+}
+ 
+table.table1 th{
+height: 10px;
+text-align: center;
+ background-color: #cccccc;
+ } 
+
+table.table1 td { 
+text-align: center; 
+padding: 4px; 
+}
+ 
+
+/* TABLE2 - for document number bar, parts table */
 
 table.table2 {
 width: 100%;
@@ -263,7 +286,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <!-- HEADING -->
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V29  </h3>
+<h3> {{Invoice.CategoryText}} V30  </h3>
  
 
  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
@@ -465,7 +488,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 <!-- BOTTOM TOTALS -->
 
-<table class="table2" style="width:100%">
+<table class="table1" style="width:100%">
 <tr>
 
 <!-- LEFT parts/surcharge/labour/sublet/menus -->
