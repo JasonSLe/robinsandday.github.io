@@ -30,9 +30,10 @@ text-align: center;
 padding: 4px; 
 }
 
-.table 2 thead { 
- display: table-header-group; 
-}
+   .table2 thead {
+       display: table-header-group !important;
+    }
+
 
 /*table.table2 tr:first-child{
 background-color: #cccccc;
@@ -222,7 +223,7 @@ body{
 
 <font size = "0.9">
 
- <! -- TOP LOGOS -->
+ <!-- TOP LOGOS -->
 
  <table class="table4" cellpadding="0" align="right" cellspacing="0" style="text-align:right;width:100%;"> 
                                                     <tbody><tr>
@@ -236,7 +237,7 @@ body{
 
 <tr><td></td><td></td>
 
- <! -- PARTS HUB ADDRESS -->
+ <!-- PARTS HUB ADDRESS -->
 
 <td> <span style="color:#000000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:9pt;font-family:&quot;Encode Sans&quot;;font-style:normal">
 Stellantis &You {{Dealer.name}} 
@@ -262,7 +263,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <!-- HEADING -->
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V27  </h3>
+<h3> {{Invoice.CategoryText}} V28  </h3>
  
 
  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
@@ -352,10 +353,10 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <!-- PARTS TABLE -->
 
 <font size="1.4">
-<table class="table2" style="width:100%;display:table-header-group;">
+<table class="table2" style="width:100%;">
 
  <!-- HEADINGS -->
-  <thead>
+  <thead style="display: table-header-group !important;">
 <tr> 
 
   <th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>
@@ -370,7 +371,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 </tr> 
   </thead>
 <tbody class="courier-prime-bold">
-<! -- PARTS ROWS -->
+<!-- PARTS ROWS -->
  
 {{Parts.HTMLTableTemplateStart}}
 <tr>    
