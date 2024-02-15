@@ -261,6 +261,22 @@ padding: 4px;
   font-style: normal;
  font-size:9pt;
 }
+
+ /* TRYING TO ADD AS A HEADER*/
+
+
+ header {
+  width: 100%;
+  background-color: #ccc;
+  padding: 10px;
+}
+
+/* Hide header for section 2 */
+.header1 {
+}
+ .header2{
+    display: none;
+ }
  
  </style>
 
@@ -269,7 +285,7 @@ padding: 4px;
 </head>
 <body class="doc-content" style="background-color:#ffffff;padding:0pt 0pt 0pt 0pt;max-width:600pt">
 
- 
+ <div class="section1">
  <div id="content">
  
 
@@ -402,10 +418,32 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 {{Dealer.NoticeForPartsInvoices}}
 </h4>
 
+<header class="header1">
+ 
+ <table class="table2" style="width:100%;">
+
+<tr> 
+
+  <th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>
+<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:27%"> Description</th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> Qty </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;"> Unit Price </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;"> Disc. </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:12%;">  </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:3%;"> VAT </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:15%;"> Order No. </th>
+ <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> W.I.P. </th>
+</tr> </table>
+</header>
+
+ <div class="parts">
+
  <!-- PARTS TABLE -->
 
 <font size="1.4">
 <table class="table2" style="width:100%;">
+
+
 
  <!-- HEADINGS -->
   <thead style="display: table-header-group !important;">
@@ -499,7 +537,13 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  </tbody>
 </table>
 
+ </div>
 
+  <header class="header2">
+    Header for Section 2
+  </header>
+
+ <div class="afterparts">
 
 <!-- BOTTOM TOTALS -->
 
