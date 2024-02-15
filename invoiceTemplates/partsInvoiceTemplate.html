@@ -19,8 +19,8 @@ padding:2px;
  
 table.table1 th{
 height: 10px;
-text-align: center;
- background-color: #cccccc;
+ font-size: 9pt;
+  background-color: #cccccc;
  } 
  
 
@@ -40,12 +40,10 @@ table.table2 th{
 height: 10px;
 text-align: center;
  background-color: #cccccc;
-   font-family: "Encode Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
+   font-family: Arial,Bold,Serif;
+ font-weight: 600;
+ font-size: 9pt;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
  } 
 
 table.table2 td { 
@@ -69,15 +67,17 @@ table.table3 {
  width:100%;
 margin-top:5px;
  border-collapse: collapse;
+ font-family:Arial,Bold,Serif;
+ font-size:10px;
+ 
 }
 
 table.table3 tr {
 height: 10px;
-font-weight: bold;
 } 
 
  table.table3 th{
-font-weight: bold;
+font-size:9pt;
  padding: 2px;
 height:14px; 
 }
@@ -85,6 +85,7 @@ height:14px;
 table.table3 td { 
 text-align: left; 
 padding: 6px; 
+ font-weight:500;
 } 
 
 /* TABLE4 - for logos at top */
@@ -241,12 +242,20 @@ body{
 .encode-sans-main {
   font-family: "Encode Sans", sans-serif;
   font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+ 
+.encode-sans-light {
+  font-family: "Encode Sans", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
 }
-
 
 table.table1 td { 
 text-align: center; 
@@ -267,10 +276,7 @@ padding: 4px;
 <body class="doc-content" style="background-color:#ffffff;padding:0pt 0pt 0pt 0pt;max-width:600pt">
 
 
- <div id="content">
  
-
-<font size = "0.9">
 
  <!-- TOP LOGOS -->
 
@@ -288,10 +294,9 @@ padding: 4px;
 
  <!-- PARTS HUB ADDRESS -->
 
-<td> <span style="color:#000000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:9pt;">
+<td class="encode-sans-main" style="font-size:9pt;">
 Stellantis &You {{Dealer.name}} 
-</td><tr><td></td><td></td><td>
-<span style="color:#000000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:6pt;">
+</td><tr><td></td><td></td><td class="encode-sans-light" style="font-size:6pt;">
 {{Dealer.street}}, 
 {{Dealer.street2}}, 
 {{Dealer.city}} <br>
@@ -311,13 +316,13 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
  <!-- HEADING -->
 
-<font size = "2.7">
 <h3> {{Invoice.CategoryText}} </h3>
+
  
 
  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
 
-<font size = "1.2">
+
 <table class="table3" style="width:100%;">
 <tr style="height:10px;">
 <th style="width:5%;"> </th>
@@ -327,7 +332,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 <th style="width:5%;">
 
 </tr>
-<tr class="encode-sans-main"><td></td> <td style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%"bgcolor="white" >{{Account.CustomerSName}}<br>
+<tr ><td></td> <td style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%"bgcolor="white" >{{Account.CustomerSName}}<br>
 {{Account.AddressLine1}} <br>
  {{Account.AddressLine2}}<br>
 {{Account.AddressLine3}}  <br>
@@ -336,7 +341,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 
 </td> <td> </td>
-<td style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%" bgcolor="white" style="font-family: CourierNew,Bold;">{{Customer.CustomerName}} <br>
+<td style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%" bgcolor="white" >{{Customer.CustomerName}} <br>
  {{Customer.CustomerAddress001}}<br>
 {{Customer.CustomerAddress002}}<br>
 {{Customer.CustomerAddress003}}<br>
@@ -347,22 +352,24 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 </tr>
 <tr> <td> </td>
-<td style="border-right-style:solid;padding:1pt 1pt 1pt 35pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white" style="font-family: CourierNew,Bold;"> {{Account.Postcode}}</td>
+<td style="border-right-style:solid;padding:1pt 1pt 1pt 35pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white"> {{Account.Postcode}}</td>
 <td> </td>
-<td style="border-right-style:solid;padding:1pt 1pt 1pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white" style="font-family: CourierNew,Bold;"> {{Customer.CustomerAddress005}}</td>
+<td style="border-right-style:solid;padding:1pt 1pt 1pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white""> {{Customer.CustomerAddress005}}</td>
 <td> </td>
 </tr>
 <tr> <td> </td>
-<td style="border-right-style:solid;padding:1pt 1pt 1pt 1pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white" style="font-family: CourierNew,Bold;"> {{Account.ContactName}}</td>
+<td style="border-right-style:solid;padding:1pt 1pt 1pt 1pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white"> {{Account.ContactName}}</td>
 <td> </td>
-<td style="border-right-style:solid;padding:1pt 1pt 1pt 1pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white" style="font-family: CourierNew,Bold;"> </td>
+<td style="border-right-style:solid;padding:1pt 1pt 1pt 1pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white""> </td>
 <td> </td>
 </tr>
 </table>
 
+
+
  <!-- OPERATOR/RAISED BY/ROUTE LINE -->
 
-<table class="table3" style="height:20px">
+<table class="table3" style="height:20px;font-size:10pt;">
 <th> Job invoiced by: {{OperatorName}}</th>
 <th> Job raised by: {{Customer.CustomerContact}} </th>
 <th> Van Route {{Customer.Route}} </th>
@@ -370,9 +377,9 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 </tr>
 </table>
 
+
  <!-- DOCUMENT NUMBER ETC STRIP -->
 
-<font size="1.4">
 <table class="table2" style="width:100%;">
 <tr>
 <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"> Account No </th>
@@ -405,15 +412,13 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
  <!-- PARTS TABLE -->
 
-<font size="1.4">
 <table class="table2" style="width:100%;">
 
 
 
  <!-- HEADINGS -->
-  <thead style="display: table-header-group !important;">
+  <thead>
 <tr> 
-
   <th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>
 <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:27%"> Description</th>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> Qty </th>
@@ -511,7 +516,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 <!-- LEFT parts/surcharge/labour/sublet/menus -->
  
-<th rowspan="20" class="courier-prime-bold" style="border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:10%"  bgcolor="white">  
+<th rowspan="20" class="courier-prime-bold !important" style="border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:10%"  bgcolor="white">  
 Parts:<br>
 Surcharge: <br>
 Labour: <br>
@@ -526,10 +531,10 @@ Menus:</th>
 
  <!-- MIDDLE VAT TABLE HEADINGS -->
  
-<th style="font-family:Arial;width:3%;border-top-width:1pt;border-style:solid;border-width:1pt;"> V </th>
-<th style="font-family:Arial;width:8%;border-style:solid;border-width:1pt;"> Rate </th>
-<th style="font-family:Arial;border-style:solid;border-width:1pt;"> Service/Goods </th>
-<th style="font-family:Arial;width:10%;border-style:solid;border-width:1pt;"> VAT </th>
+<th style="font-family: Arial,Bold,Serif;font-weight: 600;width:3%;border-top-width:1pt;border-style:solid;border-width:1pt;"> V </th>
+<th style="font-family: Arial,Bold,Serif;font-weight: 600;width:8%;border-style:solid;border-width:1pt;"> Rate </th>
+<th style="font-family: Arial,Bold,Serif;font-weight: 600;border-style:solid;border-width:1pt;"> Service/Goods </th>
+<th style="font-family: Arial,Bold,Serif;font-weight: 600;width:10%;border-style:solid;border-width:1pt;"> VAT </th>
 
 <!-- RIGHT SECTION - TOTALS -->
  
@@ -592,7 +597,6 @@ Owing <br>
 {{Dealer.BankDetailsAndSmallPrint}}
  
 </span>
-</font>
 
 </th>
 </tr>
@@ -602,9 +606,8 @@ Owing <br>
 
  <!-- TERMS AND CONDITIONS -->
 
-<div class="page-break" style="font-size: 28px; page-break-before: always !important">
+<div class="page-break" page-break-before: always !important">
 
-<font-size:0.2pt>
 <h2 rel="text-align: center;"
 style="text-align: left;">CONDITIONS OF CONTRACT</h2>
 
@@ -1190,13 +1193,12 @@ through with someone on 0300 123 9123 or 0800 023 4567.
 
 </p>
 <h5 
-style="text-align:center;margin-bottom: 0.5em;font-size:8px;">
+style="text-align:center;margin-bottom: 0.5em;">
 
 NOTHING SET OUT HEREIN
 AFFECTS THE STATUTORY RIGHTS OF A CONSUMER
 
 </h5>
-</font-size:0.2>
  
 </div>
  
