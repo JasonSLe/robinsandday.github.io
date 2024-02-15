@@ -22,12 +22,6 @@ height: 10px;
 text-align: center;
  background-color: #cccccc;
  } 
-
-table.table1 td { 
-text-align: center; 
-padding: 4px; 
- class:"courier-prime-bold";
-}
  
 
 /* TABLE2 - for document number bar, parts table */
@@ -203,11 +197,11 @@ body{
   padding: 0px;
 }
 
-/* TRYING TO ADD FONTS */
+/* FONTS */
 
- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
 
  .courier-prime-regular {
   font-family: "Courier Prime", monospace;
@@ -219,6 +213,7 @@ body{
   font-family: "Courier Prime", monospace;
   font-weight: 700;
   font-style: normal;
+ font-size:9pt;
 }
 
 .courier-prime-regular-italic {
@@ -233,6 +228,22 @@ body{
   font-style: italic;
 }
 
+
+.encode-sans {
+  font-family: "Encode Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+table.table1 td { 
+text-align: center; 
+padding: 4px;
+ font-family:"Courier Prime", monospace;
+}
  
  </style>
 
@@ -287,7 +298,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <!-- HEADING -->
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V30  </h3>
+<h3> {{Invoice.CategoryText}} V31  </h3>
  
 
  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
@@ -302,7 +313,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 <th style="width:5%;">
 
 </tr>
-<tr><td></td> <td style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%"bgcolor="white" >{{Account.CustomerSName}}<br>
+<tr class="encode-sans"><td></td> <td style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%"bgcolor="white" >{{Account.CustomerSName}}<br>
 {{Account.AddressLine1}} <br>
  {{Account.AddressLine2}}<br>
 {{Account.AddressLine3}}  <br>
