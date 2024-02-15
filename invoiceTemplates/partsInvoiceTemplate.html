@@ -15,8 +15,6 @@ padding:4px;
 }
 
 table.table2 tr{
- font-family: Courier New;
-font-weight: bold; 
 padding:2px;
 }
  
@@ -30,10 +28,9 @@ text-align: center;
 table.table2 td { 
 text-align: center; 
 padding: 4px; 
- font-family: Courier New;
 }
 
-table.table 2 thead { 
+.table 2 thead { 
  display: table-header-group; 
 }
 
@@ -118,10 +115,10 @@ h3{
 text-align:center;
 font-family:Arial}
 
- /* Invoice Messages */
+ /* Invoice Messages 
 h4{
 font-family: Courier New;
-}
+}*/
 
 /* Terms and conditions headings */
 h5{
@@ -269,10 +266,9 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <!-- HEADING -->
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V25  </h3>
+<h3> {{Invoice.CategoryText}} V26  </h3>
  
 <h3 class="courier-prime-bold"> using class="courier-prime-bold"</h3>
- <h3 style="font-family:"Courier Prime";>using font family </h3>
  
 
  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
@@ -355,7 +351,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 <!-- INVOICE MESSAGE -->
  
-<h4 class="courier-prime-bold" style="font-family:Courier New;width:70%;">
+<h4 class="courier-prime-bold" style="width:70%;">
 {{Dealer.NoticeForPartsInvoices}}
 </h4>
 
