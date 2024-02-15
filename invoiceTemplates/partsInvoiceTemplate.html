@@ -166,22 +166,19 @@ p{
 }
 
 
-/* OLD FOOTER CODE
-div.footer{ 
+/* OLD FOOTER CODE*/
+div.header{ 
        position: fixed;     
        text-align: center;    
        bottom: 0px; 
        width: 100%;
    }  
-   .no-footer {
+   .no-header {
          display: none;
    }
  
 
-div.content {
-        margin-bottom: 400px; 
-    }
-*/
+
 
 /* OLD PAGE NUMBER ATTEMPTS 
  #content {
@@ -262,7 +259,6 @@ padding: 4px;
  font-size:9pt;
 }
 
- /* TRYING TO ADD AS A HEADER*/
 
 
  </style>
@@ -318,7 +314,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <!-- HEADING -->
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V32  </h3>
+<h3> {{Invoice.CategoryText}} V32 header 1  </h3>
  
 
  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
@@ -407,7 +403,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 
 
-<header class="header-parts">
+<div class="header">
  
  <table class="table2" style="width:100%;">
 
@@ -423,9 +419,8 @@ Tel: {{Dealer.PhoneFormatted}} <br>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:15%;"> Order No. </th>
  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> W.I.P. </th>
 </tr> </table>
-</header>
 
-
+</div>
 
  <!-- PARTS TABLE -->
 
