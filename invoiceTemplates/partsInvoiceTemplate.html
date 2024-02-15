@@ -33,6 +33,10 @@ padding: 4px;
  font-family: Courier New;
 }
 
+table.table 2 thead { 
+ display: table-header-group; 
+}
+
 /*table.table2 tr:first-child{
 background-color: #cccccc;
 padding: 4px;
@@ -122,7 +126,7 @@ font-family: Courier New;
 /* Terms and conditions headings */
 h5{
 text-align: left;
-font-size: 5px;
+font-size: 6px;
 padding:0px;
 margin-top: 0;
 margin-bottom: 0;
@@ -130,7 +134,7 @@ margin-bottom: 0;
 
  /* Changing paragraph font size for terms and conditions */
 p{
- font-size:7.2px;
+ font-size:7.0px;
  margin-top:0.7em;
  margin-bottom:0.7em;
 }
@@ -266,6 +270,9 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 <font size = "2.7">
 <h3> {{Invoice.CategoryText}} V25  </h3>
+ 
+<h3 class="courier-prime-bold"> using class="courier-prime-bold"</h3>
+ <h3 style="font-family:"Courier Prime";>using font family </h3>
  
 
  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
