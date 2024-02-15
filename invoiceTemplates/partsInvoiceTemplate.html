@@ -115,15 +115,11 @@ h3{
 text-align:center;
 font-family:Arial}
 
- /* Invoice Messages 
-h4{
-font-family: Courier New;
-}*/
 
 /* Terms and conditions headings */
 h5{
 text-align: left;
-font-size: 6px;
+font-size: 7px;
 padding:0px;
 margin-top: 0;
 margin-bottom: 0;
@@ -266,9 +262,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <!-- HEADING -->
 
 <font size = "2.7">
-<h3> {{Invoice.CategoryText}} V26  </h3>
- 
-<h3 class="courier-prime-bold"> using class="courier-prime-bold"</h3>
+<h3> {{Invoice.CategoryText}} V27  </h3>
  
 
  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
@@ -340,7 +334,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 </tr> <tr class="courier-prime-bold">
 <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid" class="courier-prime-bold"> {{Customer.AccountNo)}}</td>
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid" class="courier-prime-bold"> <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:&quot;Courier&quot;;font-style:normal"> {{Invoice.InvoiceCreditNo001}} </span> </td>
+<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid" class="courier-prime-bold"> <span style="color:#000000;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"> {{Invoice.InvoiceCreditNo001}} </span> </td>
 <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid" class="courier-prime-bold"> {{Invoice.DateTimeCreatedText}} </td>
 <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"class="courier-prime-bold"> {{Invoice.Contact}}</td>
 <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"class="courier-prime-bold"> {{Invoice.JobNumber}} </td>
@@ -358,21 +352,21 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  <!-- PARTS TABLE -->
 
 <font size="1.4">
-<table class="table2" style="width:100%">
+<table class="table2" style="width:100%;display:table-header-group;">
 
  <!-- HEADINGS -->
-  <thead style="display: table-header-group;">
+  <thead style="display: table-header-group; !important">
 <tr> 
 
   <th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>
 <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:27%"> Description</th>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> Qty </th>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;"> Unit Price </th>
-  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:8%;"> Disc. </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;"> Disc. </th>
   <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:12%;">  </th>
-  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:5%;"> VAT </th>
-  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:11%;"> Order No. </th>
- <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;"> W.I.P. </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:3%;"> VAT </th>
+  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:15%;"> Order No. </th>
+ <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> W.I.P. </th>
 </tr> 
   </thead>
 <tbody class="courier-prime-bold">
@@ -380,7 +374,7 @@ Tel: {{Dealer.PhoneFormatted}} <br>
  
 {{Parts.HTMLTableTemplateStart}}
 <tr>    
- <td style="text-align:left;font-family:Courier New;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.PartNumberPacked}}    </td>
+ <td style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.PartNumberPacked}}    </td>
  <td style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.Description}}    </td>
  <td style="text-align:right;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">  {{Part.OrderQuantity}}    </td>
  <td style="text-align:right;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">      {{Part.SellingPrice}}     </td>
@@ -460,18 +454,18 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
 <!-- LEFT parts/surcharge/labour/sublet/menus -->
  
-<th rowspan="20" style="font-family:Courier New;border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:10%"  bgcolor="white">  
-<span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:8pt;font-style:normal;text-align:right">Parts:<br>
+<th rowspan="20" class="courier-prime-bold" style="border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:10%"  bgcolor="white">  
+Parts:<br>
 Surcharge: <br>
 Labour: <br>
 Sublet: <br>
-Menus: </span></th>
-<th rowspan="20" style="font-family:Courier New;border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:15%"  bgcolor="white">  
-<span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:8pt;font-family:Courier New;font-style:normal;text-align:right">{{PartsTotal}}<br>
+Menus:</th>
+<th rowspan="20" class="courier-prime-bold" style="border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:15%"  bgcolor="white">  
+{{PartsTotal}}<br>
  {{SurchargeTotal}}<br>
  0.00 <br>
  0.00 <br>
- 0.00 </span></th>
+ 0.00 </th>
 
  <!-- MIDDLE VAT TABLE HEADINGS -->
  
@@ -482,16 +476,16 @@ Menus: </span></th>
 
 <!-- RIGHT SECTION - TOTALS -->
  
-<th rowspan="20"  bgcolor="white" style="font-family:Courier New;text-align:left;border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 27.2pt;border-bottom-color:#000000;border-top-width:2pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:2pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:2pt;width:10%;border-top-color:#000000;border-bottom-style:solid"> 
-<span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:Courier;font-style:normal;text-align:right;">
+<th rowspan="20" class="courier-prime-bold" bgcolor="white" style="text-align:left;border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 27.2pt;border-bottom-color:#000000;border-top-width:2pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:2pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:2pt;width:10%;border-top-color:#000000;border-bottom-style:solid"> 
+
 Net <br>
 V.A.T. <br>
 Total <br>
 Paid <br>
 Owing <br> 
 </th>
-<th rowspan="20" style="font-family:Courier New;text-align:right;border-right-style:solid;padding:7.2pt 15.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:2pt;border-right-width:2pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:2pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid; width:25%" bgcolor="white">
-<span style="color:#000000;font-weight:800;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:CourierNew;font-style:normal;text-align:right;">
+<th rowspan="20" class="courier-prime-bold" style="text-align:right;border-right-style:solid;padding:7.2pt 15.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:2pt;border-right-width:2pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:2pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid; width:25%" bgcolor="white">
+
 {{NETTotal}} 
 <br>
 {{GrossTotalMinusNETTotal}} 
