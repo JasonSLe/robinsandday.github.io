@@ -2,375 +2,148 @@
 
 
 <html>
+
 <head>
 
-<style>  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Encode+Sans:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-/* TABLE 1  - for bottom tables */
-table.table1 {
-width: 100%;
-border-collapse: collapse;
-padding:4px;
-}
-
-table.table1 tr{
-padding:2px;
-}
- 
-table.table1 th{
-height: 10px;
- font-size: 9pt;
-  background-color: #cccccc;
- } 
- 
-
-/* TABLE2 - for document number bar, parts table */
-
-table.table2 {
-width: 100%;
-border-collapse: collapse;
-padding:4px;
-}
-
-table.table2 tr{
-padding:0px;
-}
- 
-table.table2 th{
-height: 10px;
-text-align: center;
- background-color: #cccccc;
-   font-family: Arial,Bold,Serif;
- font-weight: 600;
- font-size: 8pt;
-  font-style: normal;
- } 
-
-table.table2 td { 
-text-align: center; 
-padding: 2px; 
-}
-
-
-/*table.table2 tr:first-child{
-background-color: #cccccc;
-padding: 4px;
-}*/
-
-/* TABLE3 - for top addresses and operator name line */
-
-table.table3 {
- width:100%;
-margin-top:5px;
- border-collapse: collapse;
- font-family:Arial,Bold,Serif;
- font-size:10px;
- 
-}
-
-table.table3 tr {
-height: 10px;
-} 
-
- table.table3 th{
-font-size:7pt;
- padding: 2px;
-height:14px; 
-}
-
-table.table3 td { 
-text-align: left; 
-padding: 6px; 
- font-weight:600;
-} 
-
-/* TABLE4 - for logos at top */
-
-table.table4{
-width:100%;
-}
-
-table.table4 th{
-text-align: right;
-font-size: 50px;
- font-weight: normal;
-   font-family: "Encode Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
- }
-
-table.table4 tr{
-text-align: right; 
-font-size: 1.5pt;
-}
-
- table.table4 td{
-  text-align:right;
-  font-weight: normal;
-   font-family: "Encode Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
- }
-
-/* TABLE5 - for small print */
-
-table.table5{
-width:100%;
-}
-
-table.table5 th{
-text-align: left;
-font-size: 50px;
-font-weight: normal;
-   font-family: "Encode Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
- }
-
-table.table5 tr{
-text-align: left; 
-font-size: 1.5pt;
-   font-family: "Encode Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
-/* HEADINGS */ 
- 
-/* Terms and conditions title */
-  h2{
-  font-size:15px;
- }
-
-/* Invoice title (ACCOUNT INVOICE normally) */
-h3{
-text-align:center;
-font-family:Arial}
-
-
-/* Terms and conditions headings */
-h5{
-text-align: left;
-font-size: 7px;
-padding:0px;
-margin-top: 0;
-margin-bottom: 0;
-}
-
- /* Changing paragraph font size for terms and conditions */
-p{
- font-size:7.0px;
- margin-top:0.5em;
- margin-bottom:0.7em;
-}
-
-
-/* OLD FOOTER CODE*/
-div.header{    
-       text-align: center;    
-       width: 100%;
-   }  
-   .no-header {
-         display: none;
-   }
- 
-
-
-
-/* OLD PAGE NUMBER ATTEMPTS 
- #content {
-    display: table;
-}
-
-#pageFooter {
-    display: table-footer-group;
-}
-
-#pageFooter:after {
-    counter-increment: page;
-    content: counter(page);
-}
-
-@page {
-  @bottom-right {
-    content: counter(page) " of " counter(pages);
-  }
-}
-
- */
-
- /* Remove padding */
-body{
-   margin: 0px;
-  padding: 0px;
-}
-
-/* FONTS */
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Encode+Sans:wght@100..900&display=swap" rel="stylesheet">
-
- .courier-prime-regular {
-  font-family: "Courier Prime", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.courier-prime-bold {
-  font-family: "Courier Prime", monospace;
-  font-weight: 700;
-  font-style: normal;
- font-size:9pt;
-}
-
-.courier-prime-regular-italic {
-  font-family: "Courier Prime", monospace;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.courier-prime-bold-italic {
-  font-family: "Courier Prime", monospace;
-  font-weight: 700;
-  font-style: italic;
-}
-
-
-.encode-sans-main {
-  font-family: "Encode Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
- 
-.encode-sans-light {
-  font-family: "Encode Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
-
-table.table1 td { 
-text-align: center; 
-padding: 4px;
- font-family:"Courier Prime", monospace;
-   font-weight: 700;
-  font-style: normal;
- font-size:9pt;
-}
-
-
-
- </style>
-
-
+<link href="./style.css" rel="stylesheet"> 
 
 </head>
+
 <body class="doc-content" style="background-color:#ffffff;padding:0pt 0pt 0pt 0pt;max-width:600pt">
 
 
- 
-
- <!-- TOP LOGOS -->
-
- <table class="table4" cellpadding="0" align="right" cellspacing="0" style="text-align:right;width:100%;"> 
-                                                    <tbody><tr>
-<td valign="right" align="center" style="line-height: 1px;">
-                                                            <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:100px None #9c9c9c;display:inline-block; " cellspacing="0" cellpadding="0" border="0"><div><img width="180" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float: left;max-width:180px;display:block;" class="rnb-logo-img" src="https://i.postimg.cc/sfcPrhRs/top-left-logos.png"></div></div></td>
-<td style="width:35%;"></td>
-                                                        <td valign="right" align="right" style="line-height: 1px;">
-                                                        <!--   OLD LOGO PULLED FROM MAKE FUNCTION   <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:250px;display:block;" class="rnb-logo-img" src="{{Organization.LogoForEmail}}"></div></div></td>  -->
-                                                   <!-- NEW LOGO - cropped so it aligns -->
-                                                          <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:200px;display:block;" class="rnb-logo-img" src="https://i.postimg.cc/FFqcmrrm/stellantislogo.jpg"></div></div></td>
-
-<tr><td></td><td></td>
-
- <!-- PARTS HUB ADDRESS -->
-
-<td class="encode-sans-main" style="font-size:10pt;">
-Stellantis &You {{Dealer.name}} 
-</td><tr><td></td><td></td><td class="encode-sans-light" style="font-size:6pt;">
-{{Dealer.street}}, 
-{{Dealer.street2}}, <br>
-{{Dealer.city}} 
-{{Dealer.state}}, 
-{{Dealer.country}} 
-{{Dealer.zip}}
 
 
-<br>
-Tel: {{Dealer.PhoneFormatted}} <br>
-{{Dealer.email}}
+  <!-- TOP LOGOS -->
+
+  <table class="table4" cellpadding="0" align="right" cellspacing="0" style="text-align:right;width:100%;">
+    <tbody>
+      <tr>
+        <td valign="right" align="center" style="line-height: 1px;">
+          <div
+            style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;border-left:100px None #9c9c9c;display:inline-block; "
+            cellspacing="0" cellpadding="0" border="0">
+            <div><img width="180" vspace="0" hspace="0" border="0" alt="Robins & Day"
+                style="float: left;max-width:180px;display:block;" class="rnb-logo-img"
+                src="https://i.postimg.cc/sfcPrhRs/top-left-logos.png"></div>
+          </div>
+        </td>
+        <td style="width:35%;"></td>
+        <td valign="right" align="right" style="line-height: 1px;">
+          <!--   OLD LOGO PULLED FROM MAKE FUNCTION   <div style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c; None #9c9c9c;display:inline-block;text-align: right;" cellspacing="0" cellpadding="0" border="0" ><div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day" style="float:left;max-width:250px;display:block;" class="rnb-logo-img" src="{{Organization.LogoForEmail}}"></div></div></td>  -->
+          <!-- NEW LOGO - cropped so it aligns -->
+          <div
+            style="border-top:0px None #9c9c9c;border-right:0px None #9c9c9c;border-bottom:0px None #9c9c9c;display:inline-block;text-align: right;"
+            cellspacing="0" cellpadding="0" border="0">
+            <div><img width="250" vspace="0" hspace="0" border="0" alt="Robins & Day"
+                style="float:left;max-width:200px;display:block;" class="rnb-logo-img"
+                src="https://i.postimg.cc/FFqcmrrm/stellantislogo.jpg"></div>
+          </div>
+        </td>
+
+      <tr>
+        <td></td>
+        <td></td>
+
+        <!-- PARTS HUB ADDRESS -->
+
+        <td class="encode-sans-main" style="font-size:10pt;">
+          Stellantis &You {{Dealer.name}}
+        </td>
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="encode-sans-light" style="font-size:6pt;">
+          {{Dealer.street}},
+          {{Dealer.street2}}, <br>
+          {{Dealer.city}}
+          {{Dealer.state}},
+          {{Dealer.country}}
+          {{Dealer.zip}}
+
+
+          <br>
+          Tel: {{Dealer.PhoneFormatted}} <br>
+          {{Dealer.email}}
 
 
 
-</td> </tr>
-                                                </tbody></table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
- <!-- HEADING -->
+  <!-- HEADING -->
 
-<h3> {{Invoice.CategoryText}} </h3>
-
- 
-
- <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
+  <h3> {{Invoice.CategoryText}} </h3>
 
 
-<table class="table3" style="width:100%;">
-<tr style="height:10px;">
-<th style="width:5%;"> </th>
-<th style="padding:1pt 1pt 1pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;solid;border-right-style:solid;border-right-width:1pt;" bgcolor="#cccccc"> Invoice Name & Address </th> 
-<th style="width:10%"> </th>
-<th style="padding:1pt 1pt 1pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;solid;border-right-style:solid;border-right-width:1pt;" bgcolor="#cccccc"> Customer Name & Address </th>
-<th style="width:5%;">
 
-</tr>
-<tr ><td></td> <td style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%"bgcolor="white" >{{Account.CustomerSName}}<br>
-{{Account.AddressLine1}} <br>
- {{Account.AddressLine2}}<br>
-{{Account.AddressLine3}}  <br>
-{{Account.AddressLine4}} <br>
-{{Account.AddressLine5}} <br>
+  <!-- CUSTOMER ADDRESS AND INVOICE ADDRESS -->
 
 
-</td> <td> </td>
-<td style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%" bgcolor="white" >{{Customer.CustomerName}} <br>
- {{Customer.CustomerAddress001}}<br>
-{{Customer.CustomerAddress002}}<br>
-{{Customer.CustomerAddress003}}<br>
-{{Customer.CustomerAddress004}}<br>
+  <table class="table3" style="width:100%;">
+    <tr style="height:10px;">
+      <th style="width:5%;"> </th>
+      <th
+        style="padding:1pt 1pt 1pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;"
+        bgcolor="#cccccc"> Invoice Name & Address </th>
+      <th style="width:10%"> </th>
+      <th
+        style="padding:1pt 1pt 1pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;"
+        bgcolor="#cccccc"> Customer Name & Address </th>
+      <th style="width:5%;">
 
-</td>
-<td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td
+        style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%"
+        bgcolor="white">{{Account.CustomerSName}}<br>
+        {{Account.AddressLine1}} <br>
+        {{Account.AddressLine2}}<br>
+        {{Account.AddressLine3}} <br>
+        {{Account.AddressLine4}} <br>
+        {{Account.AddressLine5}} <br>
 
+
+      </td>
+      <td> </td>
+      <td
+        style="border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;width:20%"
+        bgcolor="white">{{Customer.CustomerName}} <br>
+        {{Customer.CustomerAddress001}}<br>
+        {{Customer.CustomerAddress002}}<br>
+        {{Customer.CustomerAddress003}}<br>
+        {{Customer.CustomerAddress004}}<br>
+
+      </td>
+      <td></td>
+
+    </tr>
+    <tr>
+      <td> </td>
+      <td
+        style="border-right-style:solid;padding:1pt 1pt 1pt 35pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid"
+        bgcolor="white"> {{Account.Postcode}}</td>
+      <td> </td>
+      <td
+        style="border-right-style:solid;padding:1pt 1pt 1pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid"
+        bgcolor="white""> {{Customer.CustomerAddress005}}</td>
+<td> </td>
 </tr>
 <tr> <td> </td>
-<td style="border-right-style:solid;padding:1pt 1pt 1pt 35pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white"> {{Account.Postcode}}</td>
-<td> </td>
-<td style="border-right-style:solid;padding:1pt 1pt 1pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white""> {{Customer.CustomerAddress005}}</td>
-<td> </td>
-</tr>
-<tr> <td> </td>
-<td style="border-right-style:solid;padding:1pt 1pt 1pt 1pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white"> {{Account.ContactName}}</td>
-<td> </td>
-<td style="border-right-style:solid;padding:1pt 1pt 1pt 1pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid" bgcolor="white""> </td>
+<td style=" border-right-style:solid;padding:1pt 1pt 1pt
+        1pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid"
+        bgcolor="white"> {{Account.ContactName}}</td>
+      <td> </td>
+      <td
+        style="border-right-style:solid;padding:1pt 1pt 1pt 1pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:1pt;width:20%;border-top-color:#000000;border-bottom-style:solid"
+        bgcolor="white""> </td>
 <td> </td>
 </tr>
 </table>
@@ -379,842 +152,937 @@ Tel: {{Dealer.PhoneFormatted}} <br>
 
  <!-- OPERATOR/RAISED BY/ROUTE LINE -->
 
-<table class="table3" style="text-align:left;height:20px;font-size:10pt !important;">
-<th> Job invoiced by: {{OperatorName}}</th>
-<th> Job raised by: {{Customer.CustomerContact}} </th>
-<th> Van Route {{Customer.Route}} </th>
-<th style="width:5%;"></th>
-</tr>
-</table>
-
-
- <!-- DOCUMENT NUMBER ETC STRIP -->
-
-<table class="table2" style="width:100%;">
-<tr>
-<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"> Account No </th>
-<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:20%;"> Document Number </th>
-<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:25%;"> Date </th>
-<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;"> Ref No. </th>
-<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;"> Job No. </th>
-<th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;"> Page </th>
-
-</tr> <tr class="courier-prime-bold">
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid" class="courier-prime-bold"> {{Customer.AccountNo)}}</td>
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid" class="courier-prime-bold"> <span style="color:#000000;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"> {{Invoice.InvoiceCreditNo001}} </span> </td>
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid" class="courier-prime-bold"> {{Invoice.DateTimeCreatedText}} </td>
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"class="courier-prime-bold"> {{Invoice.Contact}}</td>
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"class="courier-prime-bold"> {{Invoice.JobNumber}} </td>
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"class="courier-prime-bold"> 1 </td>
-</tr>
-</table>
-
-
-<!-- INVOICE MESSAGE -->
- 
-<h4 class="courier-prime-bold" style="width:70%;">
-{{Dealer.NoticeForPartsInvoices}}
-</h4>
-
-
-
-
-
- <!-- PARTS TABLE -->
-
-<table class="table2" style="width:100%;">
-
-
-
- <!-- HEADINGS -->
-  <thead>
-<tr> 
-  <!--<th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>-->
-<th colspan="2" style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:41%"> &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp Description of Goods/Services</th>
-  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> Qty </th>
-  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;"> Unit Price </th>
-  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;"> Disc. </th>
-  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:12%;">  </th>
-  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:3%;"> VAT </th>
-  <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:15%;"> Order No. </th>
- <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;"> W.I.P. </th>
-</tr> 
-  </thead>
-<tbody class="courier-prime-bold">
-<!-- PARTS ROWS -->
- 
-{{Parts.HTMLTableTemplateStart}}
-<tr>    
- <td style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.PartNumberPacked}}    </td>
- <td style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.Description}}    </td>
- <td style="text-align:right;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">  {{Part.OrderQuantity}}    </td>
- <td style="text-align:right;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">      {{Part.SellingPrice}}     </td>
- <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.DiscountPrintingText}}    </td>
- <td style="text-align:right;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">      {{Part.ExtendedPrice}}    </td>
- <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.VATCodeText}}    </td>
- <td style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">    {{Part.CustomerOrderNoText}} </td>    
- <td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">     {{Part.WIPNumber}}    </td>    </tr>
-{{Parts.HTMLTableTemplateEnd}}
-
-<!-- SURCHARGE ROWS -->
- 
-{{Parts.SurchargeHTMLTableTemplateStart}}
-<tr>    
-  <td colspan="2" style="border-top-width:0pt;border-right-width:1pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    &nbsp;&nbsp; Surcharge on above    </td>
-  <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">     </td>
-  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">      </td>
-  <td  style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">   {{Part.OrderQuantity}}    </td>
-  <td style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">      {{Part.Surcharge}} </td>
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    </td>   
-   <td style="text-align:right;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">   {{Part.SurchargeTotalText}}  </td>    
-   <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    </td>    
-</tr>
-{{Parts.SurchargeHTMLTableTemplateEnd}}
-
-<!-- NOTES ROWS -->
- 
-{{Parts.NotesHTMLTableTemplateStart}}
-<tr>    
-  <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    NOTES    </td>
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">        </td>
-  <td  style="border-top-width:0pt;border-right-width:0pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">         </td> 
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">       </td>
-  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">       </td>
-  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">     </td>
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">        </td>    
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    </td>
-   <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    </td>    
-</tr>    
-<tr>    
-  <td style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">      </td>
-  <td style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">   &nbsp &nbsp {{Parts.Notes}}    </td>
-  <td  style="border-top-width:0pt;border-right-width:0pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">        </td>
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">        </td>
-  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">         </td>
-  <td  style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">        </td>
-  <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">       </td>    
-  <td style="text-align:right;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">  0.00  </td>  
-   <td style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">    </td>    
-</tr>
-{{Parts.NotesHTMLTableTemplateEnd}}
- 
- 
-<!-- BOTTOM OF TABLE (just for border etc) -->
- 
-<tr>
-
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> <br><br><br> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-<td style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;"> </td> 
-</tr>
-
- </tbody>
-</table>
-
-
-
-<!-- BOTTOM TOTALS -->
-
-<table class="table1" style="width:100%">
-<tr>
-
-<!-- LEFT parts/surcharge/labour/sublet/menus -->
- 
-<th rowspan="20" class="courier-prime-bold !important" style="border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:10%"  bgcolor="white">  
-Parts:<br>
-Surcharge: <br>
-Labour: <br>
-Sublet: <br>
-Menus:</th>
-<th rowspan="20" class="courier-prime-bold" style="border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:15%"  bgcolor="white">  
-{{PartsTotal}}<br>
- {{SurchargeTotal}}<br>
- 0.00 <br>
- 0.00 <br>
- 0.00 </th>
-
- <!-- MIDDLE VAT TABLE HEADINGS -->
- 
-<th style="font-family: Arial,Bold,Serif;font-weight: 600;width:3%;border-top-width:1pt;border-style:solid;border-width:1pt;"> V </th>
-<th style="font-family: Arial,Bold,Serif;font-weight: 600;width:8%;border-style:solid;border-width:1pt;"> Rate </th>
-<th style="font-family: Arial,Bold,Serif;font-weight: 600;border-style:solid;border-width:1pt;"> Service/Goods </th>
-<th style="font-family: Arial,Bold,Serif;font-weight: 600;width:10%;border-style:solid;border-width:1pt;"> VAT </th>
-
-<!-- RIGHT SECTION - TOTALS -->
- 
-<th rowspan="20" class="courier-prime-bold" bgcolor="white" style="text-align:left;border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 27.2pt;border-bottom-color:#000000;border-top-width:2pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:2pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:2pt;width:10%;border-top-color:#000000;border-bottom-style:solid"> 
-
-Net <br>
-V.A.T. <br>
-Total <br>
-Paid <br>
-Owing <br> 
-</th>
-<th rowspan="20" class="courier-prime-bold" style="text-align:right;border-right-style:solid;padding:7.2pt 15.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:2pt;border-right-width:2pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:2pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid; width:25%" bgcolor="white">
-
-{{NETTotal}} 
-<br>
-{{GrossTotalMinusNETTotal}} 
- <br>
-{{GrossTotal}}
-<br>
-{{PaidByCashText}}
-<br>
-{{GrossTotalMinusPaidByCashText}} <br>
-
-</tr>
-
-<!-- ROWS OF MIDDLE VAT TABLE -->
- 
-{{SVATTotalText}}
-
-{{sVATTotalText}}
-
-{{ZVATTotalText}}
-
-{{EVATTotalText}}
-
-{{HVATTotalText}}
-
-{{OVATTotalText}}
-
- <!-- Borders at bottom of VAT table -->
-
- <tr><td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
- <td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
-  <td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
-  <td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
-  </tr>
-
-</table>
- 
- 
+<table class=" table3" style="text-align:left;height:20px;font-size:10pt !important;">
+      <th> Job invoiced by: {{OperatorName}}</th>
+      <th> Job raised by: {{Customer.CustomerContact}} </th>
+      <th> Van Route {{Customer.Route}} </th>
+      <th style="width:5%;"></th>
+    </tr>
+  </table>
+
+
+  <!-- DOCUMENT NUMBER ETC STRIP -->
+
+  <table class="table2" style="width:100%;">
+    <tr>
+      <th
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid">
+        Account No </th>
+      <th
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:20%;">
+        Document Number </th>
+      <th
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:25%;">
+        Date </th>
+      <th
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;">
+        Ref No. </th>
+      <th
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;">
+        Job No. </th>
+      <th
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;">
+        Page </th>
+
+    </tr>
+    <tr class="courier-prime-bold">
+      <td
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"
+        class="courier-prime-bold"> {{Customer.AccountNo)}}</td>
+      <td
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"
+        class="courier-prime-bold"> <span
+          style="color:#000000;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">
+          {{Invoice.InvoiceCreditNo001}} </span> </td>
+      <td
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"
+        class="courier-prime-bold"> {{Invoice.DateTimeCreatedText}} </td>
+      <td
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"
+        class="courier-prime-bold"> {{Invoice.Contact}}</td>
+      <td
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"
+        class="courier-prime-bold"> {{Invoice.JobNumber}} </td>
+      <td
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid"
+        class="courier-prime-bold"> 1 </td>
+    </tr>
+  </table>
+
+
+  <!-- INVOICE MESSAGE -->
+
+  <h4 class="courier-prime-bold" style="width:70%;">
+    {{Dealer.NoticeForPartsInvoices}}
+  </h4>
+
+
+
+
+
+  <!-- PARTS TABLE -->
+
+  <table class="table2" style="width:100%;">
+
+
+
+    <!-- HEADINGS -->
+    <thead>
+      <tr>
+        <!--<th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>-->
+        <th colspan="2"
+          style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:41%">
+          &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp Description of Goods/Services</th>
+        <th
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;">
+          Qty </th>
+        <th
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:10%;">
+          Unit Price </th>
+        <th
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:7%;">
+          Disc. </th>
+        <th
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:12%;">
+        </th>
+        <th
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:3%;">
+          VAT </th>
+        <th
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:15%;">
+          Order No. </th>
+        <th
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;">
+          W.I.P. </th>
+      </tr>
+    </thead>
+    <tbody class="courier-prime-bold">
+      <!-- PARTS ROWS -->
+
+      {{Parts.HTMLTableTemplateStart}}
+      <tr>
+        <td
+          style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
+          {{Part.PartNumberPacked}} </td>
+        <td
+          style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
+          {{Part.Description}} </td>
+        <td
+          style="text-align:right;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
+          {{Part.OrderQuantity}} </td>
+        <td
+          style="text-align:right;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
+          {{Part.SellingPrice}} </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
+          {{Part.DiscountPrintingText}} </td>
+        <td
+          style="text-align:right;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
+          {{Part.ExtendedPrice}} </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
+          {{Part.VATCodeText}} </td>
+        <td
+          style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
+          {{Part.CustomerOrderNoText}} </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
+          {{Part.WIPNumber}} </td>
+      </tr>
+      {{Parts.HTMLTableTemplateEnd}}
+
+      <!-- SURCHARGE ROWS -->
+
+      {{Parts.SurchargeHTMLTableTemplateStart}}
+      <tr>
+        <td colspan="2"
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+          &nbsp;&nbsp; Surcharge on above </td>
+        <td
+          style="border-top-width:0pt;border-right-width:0pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+          {{Part.OrderQuantity}} </td>
+        <td
+          style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+          {{Part.Surcharge}} </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="text-align:right;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+          {{Part.SurchargeTotalText}} </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+      </tr>
+      {{Parts.SurchargeHTMLTableTemplateEnd}}
+
+      <!-- NOTES ROWS -->
+
+      {{Parts.NotesHTMLTableTemplateStart}}
+      <tr>
+        <td
+          style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+          NOTES </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:0pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+          &nbsp &nbsp {{Parts.Notes}} </td>
+        <td
+          style="border-top-width:0pt;border-right-width:0pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
+          style="text-align:right;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+          0.00 </td>
+        <td
+          style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+      </tr>
+      {{Parts.NotesHTMLTableTemplateEnd}}
+
+
+      <!-- BOTTOM OF TABLE (just for border etc) -->
+
+      <tr>
+
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
+          <br><br><br>
+        </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
+        </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
+        </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
+        </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
+        </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
+        </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
+        </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
+        </td>
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+  <!-- BOTTOM TOTALS -->
+
+  <table class="table1" style="width:100%">
+    <tr>
+
+      <!-- LEFT parts/surcharge/labour/sublet/menus -->
+
+      <th rowspan="20" class="courier-prime-bold !important"
+        style="border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:10%"
+        bgcolor="white">
+        Parts:<br>
+        Surcharge: <br>
+        Labour: <br>
+        Sublet: <br>
+        Menus:</th>
+      <th rowspan="20" class="courier-prime-bold"
+        style="border-right-style:solid;text-align:right;padding:13pt 30pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:0pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid;width:15%"
+        bgcolor="white">
+        {{PartsTotal}}<br>
+        {{SurchargeTotal}}<br>
+        0.00 <br>
+        0.00 <br>
+        0.00 </th>
+
+      <!-- MIDDLE VAT TABLE HEADINGS -->
+
+      <th
+        style="font-family: Arial,Bold,Serif;font-weight: 600;width:3%;border-top-width:1pt;border-style:solid;border-width:1pt;">
+        V </th>
+      <th style="font-family: Arial,Bold,Serif;font-weight: 600;width:8%;border-style:solid;border-width:1pt;"> Rate
+      </th>
+      <th style="font-family: Arial,Bold,Serif;font-weight: 600;border-style:solid;border-width:1pt;"> Service/Goods
+      </th>
+      <th style="font-family: Arial,Bold,Serif;font-weight: 600;width:10%;border-style:solid;border-width:1pt;"> VAT
+      </th>
+
+      <!-- RIGHT SECTION - TOTALS -->
+
+      <th rowspan="20" class="courier-prime-bold" bgcolor="white"
+        style="text-align:left;border-right-style:solid;padding:7.2pt 7.2pt 7.2pt 27.2pt;border-bottom-color:#000000;border-top-width:2pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:2pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:2pt;width:10%;border-top-color:#000000;border-bottom-style:solid">
+
+        Net <br>
+        V.A.T. <br>
+        Total <br>
+        Paid <br>
+        Owing <br>
+      </th>
+      <th rowspan="20" class="courier-prime-bold"
+        style="text-align:right;border-right-style:solid;padding:7.2pt 15.2pt 7.2pt 7.2pt;border-bottom-color:#000000;border-top-width:2pt;border-right-width:2pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;background-color:#ffffff;border-left-style:solid;border-bottom-width:2pt;width:51.8pt;border-top-color:#000000;border-bottom-style:solid; width:25%"
+        bgcolor="white">
+
+        {{NETTotal}}
+        <br>
+        {{GrossTotalMinusNETTotal}}
+        <br>
+        {{GrossTotal}}
+        <br>
+        {{PaidByCashText}}
+        <br>
+        {{GrossTotalMinusPaidByCashText}} <br>
+
+    </tr>
+
+    <!-- ROWS OF MIDDLE VAT TABLE -->
+
+    {{SVATTotalText}}
+
+    {{sVATTotalText}}
+
+    {{ZVATTotalText}}
+
+    {{EVATTotalText}}
+
+    {{HVATTotalText}}
+
+    {{OVATTotalText}}
+
+    <!-- Borders at bottom of VAT table -->
+
+    <tr>
+      <td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
+      <td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
+      <td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
+      <td style="border-bottom-width:1pt;border-bottom-style:solid"></td>
+    </tr>
+
+  </table>
+
+
+
+  <!-- SMALL PRINT -->
+
+  <table class="table5">
+    <tr>
+      <th><span
+          style="color:#000000;font-weight:400;text-decoration:none;vertical-align:top;font-size:5pt;">www.stellantisandyou.co.uk</span>
+      </th>
+
+      <th style="width:85%"> <span
+          style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-style:normal">
+
+          {{Dealer.BankDetailsAndSmallPrint}}
+
+        </span>
+
+      </th>
+    </tr>
+  </table>
 
-<!-- SMALL PRINT -->
- 
-<table class="table5">
-<tr>
-<th><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:top;font-size:5pt;">www.stellantisandyou.co.uk</span></th>
 
-<th style="width:85%"> <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:5pt;font-style:normal">
 
-{{Dealer.BankDetailsAndSmallPrint}}
- 
-</span>
+  <!-- TERMS AND CONDITIONS -->
 
-</th>
-</tr>
-</table>
+  <div class="page-break" style="page-break-before: always !important">
 
- 
+    <h2 rel="text-align: center;" style="text-align: left;">CONDITIONS OF CONTRACT</h2>
 
- <!-- TERMS AND CONDITIONS -->
+    <h5 rel="text-align:left;" style="margin-bottom: 0.0em;">1. The Company</h5>
 
-<div class="page-break" style="page-break-before: always !important">
 
-<h2 rel="text-align: center;"
-style="text-align: left;">CONDITIONS OF CONTRACT</h2>
 
-<h5 rel="text-align:left;"
-style="margin-bottom: 0.0em;">1. The Company</h5>
+    <p rel="text-align: left;" style="margin-left: 5px;"> "The Company" means
+      the company detailed overleaf and all customers hereby agree to be bound by
+      these terms on their own behalf and (where applicable) on behalf of their
+      principals.
 
- 
+    </p>
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> "The Company" means
-the company detailed overleaf and all customers hereby agree to be bound by
-these terms on their own behalf and (where applicable) on behalf of their
-principals.
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">2. Sub Contracting</h5>
 
-</p>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">2. Sub Contracting</h5>
 
- 
+    <p rel="text-align: left;" style="margin-left: 5px;"> The Company is entitled at all
+      times and without giving notice to the customer to sub-contract all or any part
+      of the servicing repair or other maintenance work the subject of this contract
+      to a specialist or other repairer.
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> The Company is entitled at all
-times and without giving notice to the customer to sub-contract all or any part
-of the servicing repair or other maintenance work the subject of this contract
-to a specialist or other repairer.
 
- 
 
-</p>
+    </p>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">3. Driving of Vehicles by the Company’s
-Servants</h5>
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">3. Driving of Vehicles by the Company’s
+      Servants</h5>
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> Vehicles are driven by the
-Company's servants or agents and the customer duly authorised them to do so.
 
- 
+    <p rel="text-align: left;" style="margin-left: 5px;"> Vehicles are driven by the
+      Company's servants or agents and the customer duly authorised them to do so.
 
-</p>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;"> 4.  Loss and Damage </h5>
 
- 
+    </p>
 
-<p rel="text-align: left;"
-style="margin-left: 10px;"> (i) The Company will afford
-vehicles and their contents reasonable protection from theft and kindred
-offences whilst in the possession of the Company and on the Company's premises
-but the customer's attention is drawn to the fact that articles fitted to or
-left in vehicles are always at risk and customers are advised to remove all
-valuable items from the vehicle. 
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;"> 4. Loss and Damage </h5>
 
- 
 
-</p>
 
-<p rel="text-align: left;"
-style="margin-left: 10px;"> (ii) In the event that the
-customer requests the Company to leave the vehicle on the public highway or any
-other place outside the Company's premises for the customer's collection after
+    <p rel="text-align: left;" style="margin-left: 10px;"> (i) The Company will afford
+      vehicles and their contents reasonable protection from theft and kindred
+      offences whilst in the possession of the Company and on the Company's premises
+      but the customer's attention is drawn to the fact that articles fitted to or
+      left in vehicles are always at risk and customers are advised to remove all
+      valuable items from the vehicle.
 
-completion of the work, the Company shall not be liable in
-respect of any loss or damage to the vehicle or its contents.
 
- 
 
-</p>
+    </p>
 
- 
+    <p rel="text-align: left;" style="margin-left: 10px;"> (ii) In the event that the
+      customer requests the Company to leave the vehicle on the public highway or any
+      other place outside the Company's premises for the customer's collection after
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;"> 5.   Faulty
-Parts or Materials
+      completion of the work, the Company shall not be liable in
+      respect of any loss or damage to the vehicle or its contents.
 
-</h5>
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> Subject to the terms of the
-relevant manufacturer's guarantee or warranty (if any) the Company will at its
-option either repair or replace any part or material which it has supplied and
-which was defective at the time of supply.
+    </p>
 
- 
 
-</p>
 
- 
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;"> 5. Faulty
+      Parts or Materials
 
- 
+    </h5>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;"> 6.   Defective
-Workmanship
 
- 
 
-</h5>
+    <p rel="text-align: left;" style="margin-left: 5px;"> Subject to the terms of the
+      relevant manufacturer's guarantee or warranty (if any) the Company will at its
+      option either repair or replace any part or material which it has supplied and
+      which was defective at the time of supply.
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 10px;"> (i) The Company will take
-reasonable care to ensure that all work on vehicles in the Company's possession
-is carried out by employees or (where applicable) by contractors with
-reasonable care and skill.
 
- 
+    </p>
 
- 
 
-</p>
 
-<p rel="text-align: left;"
-style="margin-left: 10px;"> (ii) Except where liability
-for consequential loss is included in liability arising in the circumstances
-set out in Section 2(1) of the Unfair Contract Terms Act 1977 the Company shall
-not in any circumstances be liable for consequential loss arising from a
-failure to take care referred to in sub Clause (i) hereof.
 
- 
 
- 
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;"> 6. Defective
+      Workmanship
 
- 
 
-</p>
 
- 
+    </h5>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;"> 7. Completion Date
 
- 
 
-</h5>
+    <p rel="text-align: left;" style="margin-left: 10px;"> (i) The Company will take
+      reasonable care to ensure that all work on vehicles in the Company's possession
+      is carried out by employees or (where applicable) by contractors with
+      reasonable care and skill.
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> While the Company will use its
-best endeavours to comply with any completion date suggested or stipulated the
-Company will not be bound to complete within any specified time and the mention
-of any date shall be construed as no more than a guide or estimate and without
-prejudice to the generality of the foregoing no responsibility can be accepted
-for any delays caused by the late supply of parts when caused by factors beyond
-the Company's direct control.
 
- 
 
- 
 
-</p>
+    </p>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;"> 8. Force Majeure
+    <p rel="text-align: left;" style="margin-left: 10px;"> (ii) Except where liability
+      for consequential loss is included in liability arising in the circumstances
+      set out in Section 2(1) of the Unfair Contract Terms Act 1977 the Company shall
+      not in any circumstances be liable for consequential loss arising from a
+      failure to take care referred to in sub Clause (i) hereof.
 
- 
 
-</h5>
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> If the Company's work is
-stopped, delayed or impeded by fire, explosion, strike, lock out or industrial
-action, war hostilities, civil disturbances, government demands, regulation or
-prohibition, failure or delay on the part of any other supplier or suppliers or
-any direct cause beyond the control of the Company, an order may be modified or
-cancelled by the Company as regards such part thereof as has not been executed
-by deliver to, or performance by the Company of goods or services specified. In
-such event no liability shall attach to the Company by reason of such
-modification or cancellation.
 
- 
 
- 
 
-</p>
+    </p>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">9. Estimates
-of Cost </h5>
 
-<p rel="text-align: left;"
-style="margin-left: 10px;">(i)  Verbal. A verbal estimate does not constitute
-an offer to do the work at the price quoted and is not to be taken as legally
-binding in any way but only as an approximate guide to the cost of work
-undertaken.
 
- 
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;"> 7. Completion Date
 
-</p>
 
-<p rel="text-align: left;"
-style="margin-left: 10px;">  (ii) Written.
 
-A written estimate does constitute an offer to do the work at
-the price quoted subject to the following exceptions:
+    </h5>
 
- 
 
-</p>
 
-<p rel="text-align: left;"
-style="margin-left: 15px;">(a) The price of a part or
-component is either itself specified in the estimate or for which allowance has
-been made as being in the Company's opinion a necessary or reasonably
-incidental element in the work specified in the estimate is subject to any
-changes in the price of that part or component appearing in the manufacturer's
-catalogue before the date when the work is completed.
+    <p rel="text-align: left;" style="margin-left: 5px;"> While the Company will use its
+      best endeavours to comply with any completion date suggested or stipulated the
+      Company will not be bound to complete within any specified time and the mention
+      of any date shall be construed as no more than a guide or estimate and without
+      prejudice to the generality of the foregoing no responsibility can be accepted
+      for any delays caused by the late supply of parts when caused by factors beyond
+      the Company's direct control.
 
- 
 
-</p>
 
-<p rel="text-align: left;"
-style="margin-left: 15px;">b) The estimate is based upon the
-information of which the Company is actually aware at the time of the estimate
-and any price quoted is subject to revision if it later appears to the Company
-that other work or parts are reasonably necessary (subject to the provisions of
-Clause 10 hereof).
 
- 
 
-</p>
+    </p>
 
-<p rel="text-align: left;"
-style="margin-left: 15px;"> c) The estimate may be
-withdrawn or revised at any time before the customer accepts it and in any case
-it will automatically lapse six weeks from the date appearing on its face.
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;"> 8. Force Majeure
 
- 
 
-</p>
 
- 
+    </h5>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">10. Additional Work </h5>
 
-<p rel="text-align: left;"
-style="margin-left: 10px;"> (i) If it shall appear to the
-company at any time after the customer's order is placed that any additional work
-or part(s) is or may be required the Company will make very reasonable effort
-to contact the customer for instructions and will not proceed with any such
-additional work or with the supply or installation of any such additional
-part(s) without the express permission (either verbally or in writing) of the
-customer except in the following circumstances:
 
- 
+    <p rel="text-align: left;" style="margin-left: 5px;"> If the Company's work is
+      stopped, delayed or impeded by fire, explosion, strike, lock out or industrial
+      action, war hostilities, civil disturbances, government demands, regulation or
+      prohibition, failure or delay on the part of any other supplier or suppliers or
+      any direct cause beyond the control of the Company, an order may be modified or
+      cancelled by the Company as regards such part thereof as has not been executed
+      by deliver to, or performance by the Company of goods or services specified. In
+      such event no liability shall attach to the Company by reason of such
+      modification or cancellation.
 
-</p>
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 15px;"> (i)
 
-Where the provisions of the additional work or part(s) is
-incidental to the carrying out of the customer's existing order and seems
-reasonably necessary to the Company.
 
- 
+    </p>
 
-</p>
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">9. Estimates
+      of Cost </h5>
 
-<p rel="text-align: left;"
-style="margin-left: 15px;"> (ii) Where the Company
-considers the additional work or the provision of the additional part(s) to be
-necessary to put the vehicle into a roadworthy condition and the additional
-cost to be small compared to the cost of carrying out the customer's existing
-order.
+    <p rel="text-align: left;" style="margin-left: 10px;">(i) Verbal. A verbal estimate does not constitute
+      an offer to do the work at the price quoted and is not to be taken as legally
+      binding in any way but only as an approximate guide to the cost of work
+      undertaken.
 
- 
 
-</p>
 
-<p rel="text-align: left;"
-style="margin-left: 15px;"> (iii) Where the customer has
-expressly or implicitly authorised (either verbally or in writing) such work or
-the provision of such part(s) as may be reasonably necessary to put the vehicle
-into a specified condition or has otherwise left the extent or nature of the
-work to the Company's discretion.
+    </p>
 
- 
+    <p rel="text-align: left;" style="margin-left: 10px;"> (ii) Written.
 
-</p>
+      A written estimate does constitute an offer to do the work at
+      the price quoted subject to the following exceptions:
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> Any variation agreed between
-the Company and the customer in the work to be carried out by the Company shall
-be deemed to be an amendment to this contract and shall not constitute a new
-contract.
 
- 
 
-</p>
+    </p>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">11. Routine Servicing and
-Other Specified Works
+    <p rel="text-align: left;" style="margin-left: 15px;">(a) The price of a part or
+      component is either itself specified in the estimate or for which allowance has
+      been made as being in the Company's opinion a necessary or reasonably
+      incidental element in the work specified in the estimate is subject to any
+      changes in the price of that part or component appearing in the manufacturer's
+      catalogue before the date when the work is completed.
 
-</h5>
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> The Company's obligations
-during a routine service is limited to carrying out the works specified in the
-manufacturer's service list or other service schedule and in carrying out works
-specified by the customer the company's obligation is limited to carrying out
-the customer's specifications. Neither during a routine service nor in carrying
-out work or supplying any part(s) specified by the customer does the Company
-undertake to check generally the road-worthiness or safety of the vehicle or
-its compliance with any legal requirement.
+    </p>
 
- 
+    <p rel="text-align: left;" style="margin-left: 15px;">b) The estimate is based upon the
+      information of which the Company is actually aware at the time of the estimate
+      and any price quoted is subject to revision if it later appears to the Company
+      that other work or parts are reasonably necessary (subject to the provisions of
+      Clause 10 hereof).
 
-</p>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">12. Terms of Payment
 
-</h5>
+    </p>
 
- 
+    <p rel="text-align: left;" style="margin-left: 15px;"> c) The estimate may be
+      withdrawn or revised at any time before the customer accepts it and in any case
+      it will automatically lapse six weeks from the date appearing on its face.
 
-<p rel="text-align: left;"
-style="margin-left: 10px;"> (i) Unless any other
-arrangement has previously been made with the customer all charges due to the
-Company shall be payable either before or at the time the vehicle is released
-to the customer. Payment by cheque will only be accepted if accompanied by a
-current banker’s card and the amount of the cheque is less than the maximum sum
-guaranteed by the said banker’s card. Otherwise such payment will not be
-accepted unless the cheque is cleared before the vehicle is released to the
-customer or unless the Company consented to such payment before the work
-commenced or the part(s) were supplied. In respect of all goods supplied by the
-Company on credit or upon payment by cheque (save for fuel oils), the legal
-title to such goods shall remain in the Company until payment has been made in
-full and/or such cheques have been paid and have cleared.
 
- 
 
-</p>
+    </p>
 
-<p rel="text-align: left;"
-style="margin-left: 10px;"> (ii) If for any reason the
-work requested by the customer is not carried out in full the Company will
-charge a reasonable amount for the work actually carried out.
 
- 
 
- 
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">10. Additional Work </h5>
 
-</p>
+    <p rel="text-align: left;" style="margin-left: 10px;"> (i) If it shall appear to the
+      company at any time after the customer's order is placed that any additional work
+      or part(s) is or may be required the Company will make very reasonable effort
+      to contact the customer for instructions and will not proceed with any such
+      additional work or with the supply or installation of any such additional
+      part(s) without the express permission (either verbally or in writing) of the
+      customer except in the following circumstances:
 
- 
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">13. Arbitration
 
-</h5>
+    </p>
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> Should a customer dispute any
-charge made by the Company in respect of work carried out or part(s) or
-material(s) supplied then that dispute shall be determined by an arbitrator
-appointed by the Institute of Arbitrators.
 
- 
+    <p rel="text-align: left;" style="margin-left: 15px;"> (i)
 
-</p>
+      Where the provisions of the additional work or part(s) is
+      incidental to the carrying out of the customer's existing order and seems
+      reasonably necessary to the Company.
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">14. Lien
 
-</h5>
 
- 
+    </p>
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> The Company shall have a
-general lien over all property of the customer lawfully in its possession of
-the indebtedness of the customer to the Company and the Company shall also have
-a right of sale by public auction without reserve over all such property if
-such indebtedness is not paid within three months of being notified by letter
-sent by Recorded Delivery to the customer's last known address (or in the case
-of a company to its registered office). Following such a sale the Company will,
-after deducting all sums due, pay the balance (if any) of the proceeds of sale
-to the customer.
+    <p rel="text-align: left;" style="margin-left: 15px;"> (ii) Where the Company
+      considers the additional work or the provision of the additional part(s) to be
+      necessary to put the vehicle into a roadworthy condition and the additional
+      cost to be small compared to the cost of carrying out the customer's existing
+      order.
 
- 
 
- 
 
-</p>
+    </p>
 
- 
+    <p rel="text-align: left;" style="margin-left: 15px;"> (iii) Where the customer has
+      expressly or implicitly authorised (either verbally or in writing) such work or
+      the provision of such part(s) as may be reasonably necessary to put the vehicle
+      into a specified condition or has otherwise left the extent or nature of the
+      work to the Company's discretion.
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">15. Disposal of Uncollected
-Vehicles
 
- 
 
-</h5>
+    </p>
 
- 
+    <p rel="text-align: left;" style="margin-left: 5px;"> Any variation agreed between
+      the Company and the customer in the work to be carried out by the Company shall
+      be deemed to be an amendment to this contract and shall not constitute a new
+      contract.
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> Subject to Clause 14 above,
-the Company shall have the right to sell any vehicle by public auction without
-reserve if the customer fails to collect it within three months of being
-notified by letter sent by Recorded Delivery to his last known address (or in
-the case of a company to its registered office) of the completion of the work.
-Following such a sale the Company will, after deducting all sums due, pay the
-balance (if any) of the proceeds of sale to the customer.
 
- 
 
- 
+    </p>
 
-</p>
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">11. Routine Servicing and
+      Other Specified Works
 
- 
+    </h5>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">16. Parking and Storage
-Charges
 
- 
 
-</h5>
+    <p rel="text-align: left;" style="margin-left: 5px;"> The Company's obligations
+      during a routine service is limited to carrying out the works specified in the
+      manufacturer's service list or other service schedule and in carrying out works
+      specified by the customer the company's obligation is limited to carrying out
+      the customer's specifications. Neither during a routine service nor in carrying
+      out work or supplying any part(s) specified by the customer does the Company
+      undertake to check generally the road-worthiness or safety of the vehicle or
+      its compliance with any legal requirement.
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 5px;"> The Company may charge the
-customer for parking of vehicles and for the storage of any part(s) should the
-customer fail to collect the same within two weeks of being notified at his
-last known address that the work has been completed or within two weeks of the
-estimated completion date (if any) whichever is the later. The customer shall
-be deemed to have been notified if the Company has posted to his last known
-address e written notification of completion of the work.
 
- 
+    </p>
 
- 
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">12. Terms of Payment
 
- 
+    </h5>
 
-</p>
 
- 
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">17. Disposal of Parts
-Removed
+    <p rel="text-align: left;" style="margin-left: 10px;"> (i) Unless any other
+      arrangement has previously been made with the customer all charges due to the
+      Company shall be payable either before or at the time the vehicle is released
+      to the customer. Payment by cheque will only be accepted if accompanied by a
+      current banker’s card and the amount of the cheque is less than the maximum sum
+      guaranteed by the said banker’s card. Otherwise such payment will not be
+      accepted unless the cheque is cleared before the vehicle is released to the
+      customer or unless the Company consented to such payment before the work
+      commenced or the part(s) were supplied. In respect of all goods supplied by the
+      Company on credit or upon payment by cheque (save for fuel oils), the legal
+      title to such goods shall remain in the Company until payment has been made in
+      full and/or such cheques have been paid and have cleared.
 
- 
 
-</h5>
 
- 
+    </p>
 
-<p rel="text-align: left;"
-style="margin-left: 10px;">(i) Customers wishing to have
-returned to them parts or components replaced during service or repair work
-(other than warranty work or items supplied on an exchange basis) when the
-vehicle is collected should ask at the time the vehicle is left for repair or
-service and if they do not the property in the parts replaced shall forthwith
-pass to the Company.
+    <p rel="text-align: left;" style="margin-left: 10px;"> (ii) If for any reason the
+      work requested by the customer is not carried out in full the Company will
+      charge a reasonable amount for the work actually carried out.
 
- 
 
-</p>
 
-<p rel="text-align: left;"
-style="margin-left: 10px;"> (ii) Where the parts or
-components are replaced under warranty or are exchanged the property therein
-shall pass to the manufacturer or other person or company entitled thereto.
 
- 
 
-</p>
+    </p>
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">18. The Law Governing the
-Contract
 
- 
 
- 
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">13. Arbitration
 
-</h5>
+    </h5>
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 10px;">(i)  The Law governing the
-contract shall be the Law of England.
 
- 
+    <p rel="text-align: left;" style="margin-left: 5px;"> Should a customer dispute any
+      charge made by the Company in respect of work carried out or part(s) or
+      material(s) supplied then that dispute shall be determined by an arbitrator
+      appointed by the Institute of Arbitrators.
 
-</p>
 
-<p rel="text-align: left;"
-style="margin-left: 10px;"> (ii) In so far as the contract
-may be one to which the Supply of Goods and Services Act 1982 applies then any
-rights, duties or liabilities implied by the said Act as term of the contract
-shall be excluded from the contract to the extent permitted by the Unfair
-Contract Terms Act 1977.
 
- 
+    </p>
 
- 
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">14. Lien
 
-</p>
+    </h5>
 
- 
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;">19. Variation and
-representation
 
- 
+    <p rel="text-align: left;" style="margin-left: 5px;"> The Company shall have a
+      general lien over all property of the customer lawfully in its possession of
+      the indebtedness of the customer to the Company and the Company shall also have
+      a right of sale by public auction without reserve over all such property if
+      such indebtedness is not paid within three months of being notified by letter
+      sent by Recorded Delivery to the customer's last known address (or in the case
+      of a company to its registered office). Following such a sale the Company will,
+      after deducting all sums due, pay the balance (if any) of the proceeds of sale
+      to the customer.
 
- 
 
-</h5>
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 5px;">
 
-The contract between the Company and the customer is contained
-exclusively in this form and no servant or agent of the Company has any
-authority to add to, vary, or contradict these Conditions of Contract whether
-orally or in writing and the Company shall not be liable for any representation
-which any servant or agent shall purport to give on its behalf.
+    </p>
 
- 
 
-</p>
 
- 
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">15. Disposal of Uncollected
+      Vehicles
 
-<h5 rel="text-align: left;"
-style="margin-bottom: 0.0em;"> 20. Alternative Dispute
-Resolution
-</h5>
 
- 
 
-<p rel="text-align: left;"
-style="margin-left: 5px;">
+    </h5>
 
-ADR stands for
-Alternative Dispute Resolution and is a process where an independent and
-impartial third party considers the evidence in a dispute and makes a decision,
-offers a view or helps all parties reach an agreement.
 
-Motor Codes is a CTSI certified ADR provider that can offer this
-ADR service. Further details can be found at adr.motorcodes.co.uk or
-alternatively you may wish to contact their advice line on 0800 692 0825. As
-detailed in legislation, should the dispute relate to any financial services,
-then the Financial Ombudsman Service (FOS) offers this ADR facility. Further
-details can be found at financial-ombudsman.org.uk or you may prefer to talk it
-through with someone on 0300 123 9123 or 0800 023 4567.
 
- 
+    <p rel="text-align: left;" style="margin-left: 5px;"> Subject to Clause 14 above,
+      the Company shall have the right to sell any vehicle by public auction without
+      reserve if the customer fails to collect it within three months of being
+      notified by letter sent by Recorded Delivery to his last known address (or in
+      the case of a company to its registered office) of the completion of the work.
+      Following such a sale the Company will, after deducting all sums due, pay the
+      balance (if any) of the proceeds of sale to the customer.
 
-</p>
-<h5 
-style="text-align:center;margin-bottom: 0.5em;">
 
-NOTHING SET OUT HEREIN
-AFFECTS THE STATUTORY RIGHTS OF A CONSUMER
 
-</h5>
- 
-</div>
- 
- 
 
-</div>
+
+    </p>
+
+
+
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">16. Parking and Storage
+      Charges
+
+
+
+    </h5>
+
+
+
+    <p rel="text-align: left;" style="margin-left: 5px;"> The Company may charge the
+      customer for parking of vehicles and for the storage of any part(s) should the
+      customer fail to collect the same within two weeks of being notified at his
+      last known address that the work has been completed or within two weeks of the
+      estimated completion date (if any) whichever is the later. The customer shall
+      be deemed to have been notified if the Company has posted to his last known
+      address e written notification of completion of the work.
+
+
+
+
+
+
+
+    </p>
+
+
+
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">17. Disposal of Parts
+      Removed
+
+
+
+    </h5>
+
+
+
+    <p rel="text-align: left;" style="margin-left: 10px;">(i) Customers wishing to have
+      returned to them parts or components replaced during service or repair work
+      (other than warranty work or items supplied on an exchange basis) when the
+      vehicle is collected should ask at the time the vehicle is left for repair or
+      service and if they do not the property in the parts replaced shall forthwith
+      pass to the Company.
+
+
+
+    </p>
+
+    <p rel="text-align: left;" style="margin-left: 10px;"> (ii) Where the parts or
+      components are replaced under warranty or are exchanged the property therein
+      shall pass to the manufacturer or other person or company entitled thereto.
+
+
+
+    </p>
+
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">18. The Law Governing the
+      Contract
+
+
+
+
+
+    </h5>
+
+
+
+    <p rel="text-align: left;" style="margin-left: 10px;">(i) The Law governing the
+      contract shall be the Law of England.
+
+
+
+    </p>
+
+    <p rel="text-align: left;" style="margin-left: 10px;"> (ii) In so far as the contract
+      may be one to which the Supply of Goods and Services Act 1982 applies then any
+      rights, duties or liabilities implied by the said Act as term of the contract
+      shall be excluded from the contract to the extent permitted by the Unfair
+      Contract Terms Act 1977.
+
+
+
+
+
+    </p>
+
+
+
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;">19. Variation and
+      representation
+
+
+
+
+
+    </h5>
+
+
+
+    <p rel="text-align: left;" style="margin-left: 5px;">
+
+      The contract between the Company and the customer is contained
+      exclusively in this form and no servant or agent of the Company has any
+      authority to add to, vary, or contradict these Conditions of Contract whether
+      orally or in writing and the Company shall not be liable for any representation
+      which any servant or agent shall purport to give on its behalf.
+
+
+
+    </p>
+
+
+
+    <h5 rel="text-align: left;" style="margin-bottom: 0.0em;"> 20. Alternative Dispute
+      Resolution
+    </h5>
+
+
+
+    <p rel="text-align: left;" style="margin-left: 5px;">
+
+      ADR stands for
+      Alternative Dispute Resolution and is a process where an independent and
+      impartial third party considers the evidence in a dispute and makes a decision,
+      offers a view or helps all parties reach an agreement.
+
+      Motor Codes is a CTSI certified ADR provider that can offer this
+      ADR service. Further details can be found at adr.motorcodes.co.uk or
+      alternatively you may wish to contact their advice line on 0800 692 0825. As
+      detailed in legislation, should the dispute relate to any financial services,
+      then the Financial Ombudsman Service (FOS) offers this ADR facility. Further
+      details can be found at financial-ombudsman.org.uk or you may prefer to talk it
+      through with someone on 0300 123 9123 or 0800 023 4567.
+
+
+
+    </p>
+    <h5 style="text-align:center;margin-bottom: 0.5em;">
+
+      NOTHING SET OUT HEREIN
+      AFFECTS THE STATUTORY RIGHTS OF A CONSUMER
+
+    </h5>
+
+  </div>
+
+
+
+  </div>
 
 </body>
+
 </html>
