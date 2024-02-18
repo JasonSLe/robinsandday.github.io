@@ -5032,34 +5032,6 @@ color: #19365e;
 
 
 
-
-
-/***************** NEW VEHICLE REPORTING *******************/
-
-#view_3615 > div > a.kn-link.kn-link-1.kn-link-page.kn-button {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_3615 > div > a.kn-link.kn-link-2.kn-link-page.kn-button {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_3615 > div > a.kn-link.kn-link-3.kn-link-page.kn-button {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
-#view_3615 > div > a.kn-link.kn-link-4.kn-link-page.kn-button {
-	background-color: #FFA100;
-  	color: #FFFFFF;
-  	font-weight: bold;
-}
-
 /**SCAN BUTTON STYLING**/
 #scanDocument {
 background-color: #EEEEEE;
