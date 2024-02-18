@@ -862,9 +862,7 @@ function takePhotoAppStart(app_id, appSettingsI=null){
     actionAfterPhoto : 'readable', // none, readable, compare,
     actionAfterPhotoReadableText : 'Is the photo OK?',
     uploadMethod : null, //knack, make, field
-    uploadField : null,
-    resizeImageMaxHeight : 1000,
-    resizeImageMaxWidth : 1000,
+    uploadField : null
   }
   if (!appSettingsI){
     appSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
