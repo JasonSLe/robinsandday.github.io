@@ -504,7 +504,7 @@ padding: 4px;
 
 
   <!-- INVOICE MESSAGE -->
-<div style="float:left;width:70%">
+<div style="padding: 0pt 0pt 0pt 0pt;float:left;width:70%">
   <h4 class="courier-prime-bold" style="width:70%;">
     {{Dealer.NoticeForPartsInvoices}}
   </h4>
@@ -514,8 +514,9 @@ padding: 4px;
 <div style="float:right;width:30%;">
 <table class="table2">
   <td class="courier-prime-bold" style="padding: 3pt 20pt 5pt 0pt;text-align:right; border-right-width:2pt;border-right-style:solid;border-left-width:2pt;border-left-style:solid;border-bottom-width:2pt;border-bottom-style:solid;border-top-width:1pt;border-top-style:solid;">
-    Net: <b>{{NETTotal}}</b><br>
-    Total: <b>{{GrossTotal}} </b>
+    Net: {{NETTotal}}<br>
+    V.A.T.: {{GrossTotalMinusNETTotal}} <br>
+    Total: {{GrossTotal}} 
   </td>
 </table>
 
