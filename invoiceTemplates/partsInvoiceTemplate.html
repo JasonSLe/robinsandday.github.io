@@ -62,9 +62,13 @@
 
   table.table2 td {
     text-align: center;
+    vertical-align:top;
     padding: 2px;
   }
 
+  thead { 
+    display: table-header-group; 
+  }
 
   /*table.table2 tr:first-child{
 background-color: #cccccc;
@@ -376,14 +380,14 @@ padding: 4px;
 
 
   <table class="table3" style="width:100%;">
-    <tr style="height:10px;">
+    <tr>
       <th style="width:5%;"> </th>
       <th
-        style="padding:1pt 1pt 1pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;"
+        style="padding:0pt 0pt 0pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;"
         bgcolor="#cccccc"> Invoice Name & Address </th>
       <th style="width:10%"> </th>
       <th
-        style="padding:1pt 1pt 1pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;"
+        style="padding:0pt 0pt 0pt 7.2pt;width:35%;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-right-style:solid;border-right-width:1pt;"
         bgcolor="#cccccc"> Customer Name & Address </th>
       <th style="width:5%;">
 
@@ -555,7 +559,7 @@ padding: 4px;
           {{Part.PartNumberPacked}} </td>
         <td
           style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
-          {{Part.Description}} </td>
+          {{Part.Description}} <br> new line </td>
         <td
           style="text-align:right;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
           {{Part.OrderQuantity}} </td>
