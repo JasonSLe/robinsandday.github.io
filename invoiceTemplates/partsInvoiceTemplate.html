@@ -52,7 +52,7 @@
 
   table.table2 th {
     height: 10px;
-    text-align: center;
+    text-align: center !important;
     background-color: #cccccc;
     font-family: Arial, Bold, Serif;
     font-weight: 600;
@@ -87,7 +87,7 @@ padding: 4px;
   }
 
   table.table3 th {
-    font-size: 7pt;
+    /* font-size: 7pt; */
     padding: 2px;
     height: 14px;
   }
@@ -289,6 +289,17 @@ padding: 4px;
 
 </head>
 
+
+
+
+
+
+<!-- ************************************************************** BODY ********************************************************************-->
+
+
+
+
+
 <body class="doc-content" style="background-color:#ffffff;padding:0pt 0pt 0pt 0pt;max-width:600pt">
 
 
@@ -357,7 +368,7 @@ padding: 4px;
 
   <!-- HEADING -->
 
-  <h3> {{Invoice.CategoryText}} v2 </h3>
+  <h3> {{Invoice.CategoryText}} </h3>
 
 
 
@@ -430,7 +441,7 @@ padding: 4px;
 
  <!-- OPERATOR/RAISED BY/ROUTE LINE -->
 
-<table class=" table3" style="text-align:left;height:20px;font-size:10pt !important;">
+<table class=" table3" style="text-align:left;height:20px;font-size:9pt;">
       <th> Job invoiced by: {{OperatorName}}</th>
       <th> Job raised by: {{Customer.CustomerContact}} </th>
       <th> Van Route {{Customer.Route}} </th>
@@ -510,7 +521,7 @@ padding: 4px;
         <!--<th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>-->
         <th colspan="2"
           style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:41%">
-          &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp Description of Goods/Services</th>
+           Description of Goods/Services</th>
         <th
           style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;">
           Qty </th>
