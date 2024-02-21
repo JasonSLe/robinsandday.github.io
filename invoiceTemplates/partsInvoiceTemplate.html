@@ -601,6 +601,7 @@ padding: 4px;
           style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
           {{Part.WIPNumber}} </td>
       </tr>
+
       {{Parts.HTMLTableTemplateEnd}}
 
       <!-- SURCHARGE ROWS -->
@@ -620,7 +621,7 @@ padding: 4px;
           style="border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
         </td>
         <td
-          style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+          style="text-align:right;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
           {{Part.OrderQuantity}} </td>
         <td
           style="text-align:left;border-top-width:0pt;border-right-width:1pt;border-left-width:0pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
@@ -705,9 +706,10 @@ padding: 4px;
         </td>
       </tr>
       {{Parts.NotesHTMLTableTemplateEnd}}
-
+    </tbody>
 
       <!-- BOTTOM OF TABLE (just for border etc) -->
+      <tfoot>
 
       <tr>
         <td
@@ -743,8 +745,9 @@ padding: 4px;
           style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
         </td>
       </tr>
+      </tfoot>
 
-    </tbody>
+
   </table>
 
 
