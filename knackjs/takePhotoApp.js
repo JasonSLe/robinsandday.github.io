@@ -865,7 +865,7 @@ function takePhotoAppStart(app_id, appSettingsI=null){
     uploadField : null
   }
   if (!appSettingsI){
-    appSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
+    appSettings.imageOverlay = 'https://robinsandday.github.io/imagesStore/licenceOverlay2.png';
     //appSettings.imageOverlayEffect = true;
     appSettings.imageOverlayOpacity = 0.5;
     appSettings.allowLandscape = false;

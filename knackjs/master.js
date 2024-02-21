@@ -3547,7 +3547,7 @@ return date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear();
 function fillLoading(viewID){
 $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
   if ($(this).text().trim()===''){
-    $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
+    $(this).html('<img src="https://robinsandday.github.io/imagesStore/loading.gif"> Loading...')
   }
 });
 }

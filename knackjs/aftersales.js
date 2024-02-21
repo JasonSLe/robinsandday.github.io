@@ -250,7 +250,7 @@ function formatDateGB(date){
 function fillLoading(viewID){
   $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
     if ($(this).text().trim()===''){
-      $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
+      $(this).html('<img src="https://robinsandday.github.io/imagesStore/loading.gif"> Loading...')
     }
   });
 }
@@ -3965,7 +3965,7 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
       let mAppSettings = Object.assign({},appSettings);
       mAppSettings.uploadField = $('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id');
       if (i===0){
-        mAppSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
+        mAppSettings.imageOverlay = 'https://robinsandday.github.io/imagesStore/licenceOverlay2.png';
         //appSettings.imageOverlayEffect = true;
         mAppSettings.imageOverlayOpacity = 0.5;
         mAppSettings.allowLandscape = false;
