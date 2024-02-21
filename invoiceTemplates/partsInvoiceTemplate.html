@@ -21,14 +21,9 @@
     padding: 4px;
   }
 
-  table.table1 {
-    width: 100%;
-    border-collapse: collapse;
-    padding: 4px;
-  }
-
   table.table1 tr {
     padding: 2px;
+    vertical-align:top;
   }
 
   table.table1 th {
@@ -286,6 +281,14 @@ padding: 4px;
     font-weight: 700;
     font-style: normal;
     font-size: 9pt;
+    border-left-style:solid;
+    border-left-width:1pt;
+    border-right-style:solid;
+    border-right-width:1pt;
+    border-top-style:solid;
+    border-top-width:0pt;
+    border-bottom-style:solid;
+    border-bottom-width:0pt;
   }
 
 
@@ -309,7 +312,7 @@ padding: 4px;
 
 
 
-  <!-- TOP LOGOS -->
+  <!-- TOP LOGOS  -->
 
   <table class="table4" cellpadding="0" cellspacing="0" style="text-align:right;width:100%;">
     <tbody>
@@ -505,7 +508,7 @@ padding: 4px;
 
   <!-- INVOICE MESSAGE -->
 <div style="padding: 0pt 0pt 0pt 0pt;float:left;width:70%">
-  <h4 class="courier-prime-bold" style="width:70%;">
+  <h4 class="courier-prime-bold" style="width:100%;">
     {{Dealer.NoticeForPartsInvoices}}
   </h4>
 
@@ -532,8 +535,10 @@ padding: 4px;
 
     <!-- HEADINGS -->
     <thead>
-      <tr>
+      <tr> 
         <!--<th class="border-right" style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:14%;">  </th>-->
+        <th style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;">
+        Line<br />of {{NumberOfLines}} </th>
         <th colspan="2"
           style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:41%">
            Description of Goods/Services</th>
@@ -558,9 +563,6 @@ padding: 4px;
         <th
           style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;">
           W.I.P. </th>
-        <th
-          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;width:6%;">
-          Line<br />of {{NumberOfLines}} </th>
       </tr>
     </thead>
     <tbody class="courier-prime-bold">
@@ -568,6 +570,9 @@ padding: 4px;
 
       {{Parts.HTMLTableTemplateStart}}
       <tr>
+        <td
+        style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
+        {{Part.LineNumber}} </td>
         <td
           style="text-align:left;border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
           {{Part.PartNumberPacked}} </td>
@@ -595,9 +600,6 @@ padding: 4px;
         <td
           style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
           {{Part.WIPNumber}} </td>
-        <td
-          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;border-top-color:#000000;border-bottom-style:solid;">
-          {{Part.LineNumber}} </td>
       </tr>
       {{Parts.HTMLTableTemplateEnd}}
 
@@ -605,6 +607,9 @@ padding: 4px;
 
       {{Parts.SurchargeHTMLTableTemplateStart}}
       <tr>
+        <td
+        style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+      </td>
         <td colspan="2"
           style="border-top-width:0pt;border-right-width:1pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
           &nbsp;&nbsp; Surcharge on above </td>
@@ -637,6 +642,9 @@ padding: 4px;
       {{Parts.NotesHTMLTableTemplateStart}}
       <tr>
         <td
+        style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+        </td>
+        <td
           style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
           NOTES </td>
         <td
@@ -665,6 +673,9 @@ padding: 4px;
         </td>
       </tr>
       <tr>
+        <td
+        style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
+      </td>
         <td
           style="border-top-width:0pt;border-right-width:0pt;border-left-width:1pt;border-bottom-width:0pt;border-top-style:solid;border-bottom-style:solid;border-left-style:solid;border-right-style:solid;">
         </td>
@@ -699,7 +710,10 @@ padding: 4px;
       <!-- BOTTOM OF TABLE (just for border etc) -->
 
       <tr>
-
+        <td
+          style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
+          <br><br><br>
+        </td>
         <td
           style="border-right-style:solid;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;border-top-color:#000000;border-bottom-style:solid;">
           <br><br><br>
