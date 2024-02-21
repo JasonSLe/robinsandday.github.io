@@ -434,6 +434,14 @@ $(document).on('knack-view-render.view_6483', function(event, view, data) {
  $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales#workshop-control/?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });*/
 
+//New vehicle invoice reporting
+$(document).on('knack-view-render.view_6742', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+  $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/digital-orders?token='+encodeURIComponent(token) + ' #new-vehicle-invoice-reporting" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
+
+
 var aftersalesConnectView = [{view:'view_6320',url:'#technician-view-my-jobs-v2'},
 //{view:'view_6483',url:'#workshop-control/'},
 			     {view:'view_6510',url:'#aftersales-key-tag-search'},
@@ -4583,8 +4591,8 @@ function recursivecallscene_2021(){
 }
 
 // Prep center confirmed work completed and email Dealer to complete work on their side
-$(document).on('knack-form-submit.view_5565', function(event, view, data) { 
-  callPostHttpRequest("https://hook.eu1.make.celonis.com/y3teyngw54nztmlvmb5jjjtywybm79te", {"Record ID":data.id},"Prep Centre to email Dealer of work to be carried out")
+$(document).on('knack-form-submit.view_3443', function(event, view, data) { 
+  callPostHttpRequest("https://hook.eu1.make.celonis.com/trczv626i072ohw51q1pxzxjkgct75xk", {"Record ID":data.id},"Prep Centre to email Dealer of work to be carried out")
 });
 
 
