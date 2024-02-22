@@ -4684,12 +4684,13 @@ $(document).on('knack-view-render.view_6583', function (event, view, data) {
   let appSettings9281 = {
     spiritLine : false,
     imageOverlay: 'https://robinsandday.github.io/imagesStore/tyre_coin.png',
-    imageOverlayEffect : true,
+    imageOverlayEffect : false,
     imageOverlayOpacity : null,
+    compareImage:'https://robinsandday.github.io/imagesStore/tyre_coin.png',
     allowLandscape : true,
     allowPortrait : false,
-    actionAfterPhoto : 'none', // none, readable, compare,
-    actionAfterPhotoReadableText : 'Does the photo match the template?',
+    actionAfterPhoto : 'compare', // none, readable, compare,
+    actionAfterPhotoReadableText : 'Is coin clearly visible ?',
     uploadMethod : 'knack', //knack, make, field
     uploadField : 'field_9281',
     resizeImageMaxHeight : 1000,

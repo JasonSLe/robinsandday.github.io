@@ -392,6 +392,10 @@ if (appSettings.imageOverlay){
   $("#cameraOverlayCanvasPA").hide();
 }
 
+if (appSettings.compareImage){
+  $('#cameraCompare').attr("src",appSettings.compareImage);
+}
+
 //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
 var imageBeforeResize = document.createElement('img');
 imageBeforeResize.onload = () => {
@@ -681,7 +685,6 @@ function afterConfirmPhoto(){
       $('div[id="kn-input-'+appSettings.uploadField+'"] div[class="image--remove"]').remove();
       break;
     case 'knack':
-      /*
       setTimeout(function(){
         uploadImage(appSettings.app_id, finalImgUrl)
         .then(function(resp) {
@@ -690,29 +693,9 @@ function afterConfirmPhoto(){
             return;
           }
           var imageId = resp.id;
-          var token = getTokenFromApify();
-          if (token === '') {
-            alert('Authorizing problem.');
-            return;
-          }
-          var updatingRecordId = getRecordIdFromHref(location.href);
-          var resp2 = saveImageLinkToKnack(imageFieldOnKnack, imageId, app_id, token, updatingRecordId, imageViewOnKnack)
-          if (resp2.status !== 'ok') {
-            alert('IMAGE NOT SAVED.');
-          } 
-
-          //EXIT FULL SCREEN MODE
-          exitFullscreen();
-
-          Knack.hideSpinner();
-
-          setTimeout(function() {
-            window.location = backUrl;
-          }, 100);
 
         });
       }, 100);
-      */
   }
 
   hidePhotoAppI();
