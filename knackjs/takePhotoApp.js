@@ -242,7 +242,7 @@ var OperatingSystem = {
 };
 
 let interval = 0;
-const effect = $('#cameraOverlayCanvas');
+const effect = $('#cameraOverlayCanvasPA');
 
 var go = () => {
   if (!effect){
@@ -382,14 +382,14 @@ let canvas = null;
 let ctx = null;
 let image = null;
 if (appSettings.imageOverlay){
-  canvas = document.getElementById('cameraOverlayCanvas');  
+  canvas = document.getElementById('cameraOverlayCanvasPA');  
   ctx = canvas.getContext('2d');
  
   image = new Image('naturalWidth', 'naturalHeight');
   image.onload = drawImageActualSize;
   image.src = appSettings.imageOverlay;
 } else {
-  $("#cameraOverlayCanvas").hide();
+  $("#cameraOverlayCanvasPA").hide();
 }
 
 //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
@@ -725,11 +725,11 @@ function setLayoutInPortrait(){
   if (!appSettings.allowPortrait){
     $("#takePhoto").hide();
     $("#cameraRotate").show();
-    if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").hide()};
+    if (appSettings.imageOverlay){ $("#cameraOverlayCanvasPA").hide()};
   } else {
     $("#takePhoto").show();
     $("#cameraRotate").hide();
-    if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").show()};
+    if (appSettings.imageOverlay){ $("#cameraOverlayCanvasPA").show()};
     if (appSettings.imageOverlayEffect){
       $(go);
     }
@@ -742,11 +742,11 @@ console.log('setLayoutInLandscape',appSettings.allowLandscape)
 if (!appSettings.allowLandscape){
   $("#takePhoto").hide();
   $("#cameraRotate").show();
-  if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").hide()};
+  if (appSettings.imageOverlay){ $("#cameraOverlayCanvasPA").hide()};
  } else {
   $("#takePhoto").show();
   $("#cameraRotate").hide();
-  if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").show()};
+  if (appSettings.imageOverlay){ $("#cameraOverlayCanvasPA").show()};
   if (appSettings.imageOverlayEffect){
     $(go);
   }
@@ -766,7 +766,7 @@ function setLayout(takingPhotoI){
     $("#cameraExit").show();
 
     if (appSettings.imageOverlay && appSettings.imageOverlayOpacity){
-      $('#cameraOverlayCanvas').css({ opacity: appSettings.imageOverlayOpacity })
+      $('#cameraOverlayCanvasPA').css({ opacity: appSettings.imageOverlayOpacity })
     }
 
     //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
@@ -818,7 +818,7 @@ function setLayout(takingPhotoI){
   } else {
     //HIDE VIDEO & OVERLAY ELEMENT
     $('video').hide();
-    $("#cameraOverlayCanvas").hide()
+    $("#cameraOverlayCanvasPA").hide()
 
     if (appSettings.imageOverlayEffect){
       $(stop);
