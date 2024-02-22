@@ -4683,7 +4683,7 @@ $(document).on('knack-view-render.view_6583', function (event, view, data) {
   embedPhotoApp();
   let appSettings9281 = {
     spiritLine : false,
-    imageOverlay: 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-background-v2.png',
+    imageOverlay: 'https://robinsandday.github.io/imagesStore/tyre_coin.png',
     imageOverlayEffect : true,
     imageOverlayOpacity : null,
     allowLandscape : true,
