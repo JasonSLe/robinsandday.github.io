@@ -4688,7 +4688,7 @@ $(document).on('knack-view-render.view_6583', function (event, view, data) {
     imageOverlayOpacity : null,
     compareImage:'https://robinsandday.github.io/imagesStore/tyre_coin.png',
     allowLandscape : true,
-    allowPortrait : false,
+    allowPortrait : true,
     actionAfterPhoto : 'compare', // none, readable, compare,
     actionAfterPhotoReadableText : 'Is coin clearly visible ?',
     uploadMethod : 'knack', //knack, make, field
