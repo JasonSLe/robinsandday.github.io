@@ -4686,7 +4686,7 @@ $(document).on('knack-view-render.view_6583', function (event, view, data) {
     imageOverlay: 'https://robinsandday.github.io/imagesStore/tyre_coin.png',
     imageOverlayEffect : false,
     imageOverlayOpacity : null,
-    compareImage:'https://robinsandday.github.io/imagesStore/coin_example.png',
+    compareImage:'https://robinsandday.github.io/imagesStore/coin_example.jpeg',
     allowLandscape : true,
     allowPortrait : true,
     actionAfterPhoto : 'compare', // none, readable, compare,
