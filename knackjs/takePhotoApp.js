@@ -649,8 +649,6 @@ takePhotoButton.onclick = takePhoto;
 
 function afterConfirmPhoto(){
   var finalImgUrl = $('#cameraFrontpic').attr('src');
-  alert('afterConfirmPhoto');
-  alert(appSettings.uploadMethod);
   switch (appSettings.uploadMethod){
     case 'make':
       var form = new FormData();
@@ -688,15 +686,15 @@ function afterConfirmPhoto(){
       break;
     case 'knack':
       setTimeout(function(){
-        alert(finalImgUrl);
         fetch(finalImgUrl)
         .then(function(response) {
-          alert('have blob');
           return response.blob();
         })
         .then(function(blob) {
           alert('goto upload');
           uploadImageOnlyPhotoApp(appSettings.app_id,blob,'photoImg.jpg','infoText','',emptyCallback).then(imageId => {
+            alert('uploaded')
+            alert(imageId)
             $('input[name="'+appSettings.uploadField+'"]').val(imageId);
             $('input[name="'+appSettings.uploadField+'"]').removeAttr('disabled');
             $('div[id="kn-input-'+$('input[name="'+appSettings.uploadField+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photo.jpg');
