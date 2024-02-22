@@ -4687,10 +4687,10 @@ $(document).on('knack-view-render.view_6583', function (event, view, data) {
     imageOverlayEffect : true,
     imageOverlayOpacity : null,
     allowLandscape : true,
-    allowPortrait : false,
+    allowPortrait : true,
     actionAfterPhoto : 'none', // none, readable, compare,
     actionAfterPhotoReadableText : 'Does the photo match the template?',
-    uploadMethod : 'field', //knack, make, field
+    uploadMethod : 'knack', //knack, make, field
     uploadField : 'field_9281',
     resizeImageMaxHeight : 1000,
     resizeImageMaxWidth : 1000,
