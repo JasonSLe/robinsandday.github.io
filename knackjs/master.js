@@ -4683,7 +4683,7 @@ $(document).on('knack-view-render.view_6583', function (event, view, data) {
   embedPhotoApp();
   let appSettings9281 = {
     spiritLine : false,
-    imageOverlay: 'https://robinsandday.github.io/imagesStore/tyre_coin.png',
+    imageOverlay: 'https://robinsandday.github.io/imagesStore/tyre_coin_portrait.png',
     imageOverlayEffect : false,
     imageOverlayOpacity : null,
     compareImage:'https://robinsandday.github.io/imagesStore/coin_example.jpeg',
