@@ -4687,7 +4687,7 @@ $(document).on('knack-view-render.view_6583', function (event, view, data) {
     imageOverlayEffect : true,
     imageOverlayOpacity : null,
     allowLandscape : true,
-    allowPortrait : true,
+    allowPortrait : false,
     actionAfterPhoto : 'none', // none, readable, compare,
     actionAfterPhotoReadableText : 'Does the photo match the template?',
     uploadMethod : 'knack', //knack, make, field
