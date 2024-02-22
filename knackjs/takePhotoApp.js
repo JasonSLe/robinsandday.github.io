@@ -701,14 +701,14 @@ function afterConfirmPhoto(){
 }
 
 function imageAfterKnackUpload(fieldName, imageId){
-  alert('uploaded')
+  alert('uploaded');
   alert(imageId)
-  $('input[name="'+appSettings.uploadField+'"]').val(imageId);
-  $('input[name="'+appSettings.uploadField+'"]').removeAttr('disabled');
-  $('div[id="kn-input-'+$('input[name="'+appSettings.uploadField+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photo.jpg');
-  //$('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
-  //$('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
-  $('div[id="kn-input-'+$('input[name="'+appSettings.uploadField+'"]').attr('name')+' .kn-file-upload').html('Image uploaded successfully.');
+  $('input[name="'+fieldName+'"]').val(imageId);
+  $('input[name="'+fieldName+'"]').removeAttr('disabled');
+  $('div[id="kn-input-'+fieldName+'"]>div>div[class="image--remove"]').remove()
+  $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
+  $('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
+  $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+' .kn-file-upload').html('Image uploaded successfully.');
 }
 
 function setLayoutInPortrait(){
