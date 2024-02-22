@@ -686,14 +686,19 @@ function afterConfirmPhoto(){
       break;
     case 'knack':
       setTimeout(function(){
-        uploadImage(appSettings.app_id, finalImgUrl)
-        .then(function(resp) {
-          if (!resp || resp.status !== 'ok') {
-            alert('Upload of image failed.');
-            return;
-          }
-          var imageId = resp.id;
-
+        fetch(finalImgUrl)
+        .then(function(response) {
+          return response.blob();
+        })
+        .then(function(blob) {
+          uploadImageOnlyPhotoApp(appSettings.app_id,blob,'photoImg.jpg','infoText','',emptyCallback).then(imageId => {
+            $('input[name="'+appSettings.uploadField+'"]').val(imageId);
+            $('input[name="'+appSettings.uploadField+'"]').removeAttr('disabled');
+            $('div[id="kn-input-'+$('input[name="'+appSettings.uploadField+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photo.jpg');
+            //$('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
+            //$('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
+            $('div[id="kn-input-'+$('input[name="'+appSettings.uploadField+'"]').attr('name')+' .kn-file-upload').html('Image uploaded successfully.');
+          });
         });
       }, 100);
   }
