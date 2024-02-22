@@ -4680,7 +4680,7 @@ function sendImageToCheck(assetId, fileName,knackField,knackId){
 }
 
 $(document).on('knack-view-render.view_6583', function (event, view, data) {
-  embedPhotoApp();
+  /*embedPhotoApp();
   let appSettings9281 = {
     spiritLine : false,
     imageOverlay: 'https://robinsandday.github.io/imagesStore/tyre_coin_portrait.png',
@@ -4697,7 +4697,7 @@ $(document).on('knack-view-render.view_6583', function (event, view, data) {
     resizeImageMaxWidth : 1000,
     app_id : '591eae59e0d2123f23235769'
   }
-  createPhotoButton(appSettings9281,'9281');
+  createPhotoButton(appSettings9281,'9281');*/
 });
 
 $(document).on('knack-form-submit.view_6583', function(event, view, data) { 
