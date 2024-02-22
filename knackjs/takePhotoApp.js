@@ -686,11 +686,14 @@ function afterConfirmPhoto(){
       break;
     case 'knack':
       setTimeout(function(){
+        alert(finalImgUrl);
         fetch(finalImgUrl)
         .then(function(response) {
+          alert('have blob');
           return response.blob();
         })
         .then(function(blob) {
+          alert('goto upload');
           uploadImageOnlyPhotoApp(appSettings.app_id,blob,'photoImg.jpg','infoText','',emptyCallback).then(imageId => {
             $('input[name="'+appSettings.uploadField+'"]').val(imageId);
             $('input[name="'+appSettings.uploadField+'"]').removeAttr('disabled');
