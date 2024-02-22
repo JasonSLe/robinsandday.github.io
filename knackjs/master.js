@@ -1691,6 +1691,58 @@ function fillDataToKnack(message){
 //END OF SCAN APP CODE
 //END
 
+var photoAppHTML = '';
+function embedPhotoApp(){
+  var nowS = Date.now().toString();
+  let photoApp = document.getElementById('photoApp');
+  if (!photoApp){
+    if (photoAppHTML===''){
+      photoAppHTML = $.ajax({
+          type: "GET",
+          url: 'https://robinsandday.github.io/photoTakeApp/takePhotoPart.html?'+nowS,
+          cache: false,
+          async: false
+      }).responseText;
+    }
+    photoApp = document.createElement('div');
+    photoApp.innerHTML = photoAppHTML;
+    photoApp.id = 'photoApp';
+    photoApp.style="display: none;"
+    document.body.appendChild(photoApp);
+  } else {
+    photoApp.innerHTML = photoAppHTML;
+  }
+
+  if ($('#photoAppCss').length===0){
+    var style = document.createElement('link');
+    style.id = "photoAppCss";
+    style.rel = 'stylesheet';
+    style.type = 'text/css';
+    style.href = 'https://robinsandday.github.io/knackjs/takePhotoApp.css?'+nowS;
+    document.getElementsByTagName( 'head' )[0].appendChild( style )
+  }
+
+  if ($('#photoAppJS').length===0){
+    loadScript("https://robinsandday.github.io/knackjs/takePhotoApp.js?"+nowS,'photoAppJS', emptyCallback);
+  }
+
+  preload(["https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/camera-4-48.png","https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/icons8-exit-26%20(1).png"])
+}
+
+var images = [];
+function preload(input) {
+  for (var i = 0; i < input.length; i++) {
+      images[i] = new Image();
+      images[i].src = input[i];
+  }
+}
+
+function showPhotoApp(appSettings){
+  console.log('showPhotoApp',appSettings)
+  takePhotoAppStart('master',appSettings);
+}
+
+
 //THIS IS ARRAY OF scenes with document scan
 var scanDocsSceneNames = ["scene_1133", "scene_1147", "scene_1135", "scene_1032", "scene_1164", "scene_1035", "scene_1035", "scene_1047", "scene_1031", "scene_1078",
 			 "scene_1134", "scene_1051", "scene_1130", "scene_1131", "scene_1050", "scene_993", "scene_1253", "scene_1138"];
@@ -4611,6 +4663,26 @@ function sendImageToCheck(assetId, fileName,knackField,knackId){
     async: true
   })
 }
+
+$(document).on('knack-view-render.view_6583', function (event, view, data) {
+  embedPhotoApp();
+  let appSettings9281 = {
+    spiritLine : false,
+    imageOverlay: 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-background-v2.png',
+    imageOverlayEffect : true,
+    imageOverlayOpacity : null,
+    allowLandscape : true,
+    allowPortrait : false,
+    actionAfterPhoto : 'none', // none, readable, compare,
+    actionAfterPhotoReadableText : 'Does the photo match the template?',
+    uploadMethod : 'field', //knack, make, field
+    uploadField : 'field_9281',
+    resizeImageMaxHeight : 1000,
+    resizeImageMaxWidth : 1000,
+    app_id : '591eae59e0d2123f23235769'
+  }
+  createPhotoButton(appSettings9281,'9281');
+});
 
 $(document).on('knack-form-submit.view_6583', function(event, view, data) { 
   try{
