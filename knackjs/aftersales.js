@@ -1780,7 +1780,11 @@ $(document).on('knack-scene-render.scene_20', function(event, scene) {
   }
  });
 
+//Refresh Outstanding Messages on ALL Job's on site page
 
+$(document).on('knack-scene-render.scene_753', function(event, scene) {
+  refreshWithData('2744', 'TITLE', 'TEXT $field_351', 'field_1518');
+ });
 
 //Refresh Virtual Reception on Job's on site (workshop controller)    
 
