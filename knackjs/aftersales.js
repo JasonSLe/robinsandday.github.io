@@ -4272,7 +4272,33 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
 	tooltipsTable('1098','3806','field_1537','field_2213');  
     });
 
-
+//hover for labour details on workshop table
+   $(document).on('knack-view-render.view_3307', function (event, view, data) {
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3307','field_1537','field_2213');  
+	    
+    });
+	
+//hover for labour details on workshop Today's jobs not checked in
+   $(document).on('knack-view-render.view_3595', function (event, view, data) {
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3595','field_1537','field_2213');  
+	    
+    });
+	
+//hover for labour details on workshop jobs planned in the future
+   $(document).on('knack-view-render.view_3805', function (event, view, data) {
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3805','field_1537','field_2213');  
+	    
+    });
+	
 
 	//auto refresh for C/D Driver pick up and return table
 function recursivecallscene_1031(){
