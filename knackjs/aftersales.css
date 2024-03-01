@@ -2313,9 +2313,9 @@ div.tooltipDiv {
 
 /*make Mark job as completed for workshop green*/
 #view_3289 > form > div > button	{
-background-color: #2ab27b;
+background-color: #2ab27b !important;
 }
 
 #view_3289 > form > div > button a:hover	{
-background-color: #2ab27b;
+background-color: #2ab27b !important;
 }
