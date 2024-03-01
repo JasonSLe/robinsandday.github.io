@@ -2310,3 +2310,12 @@ div.tooltipDiv {
 #view_3174 {
   overflow: visible;
 }
+
+/*make Mark job as completed for workshop green*/
+#view_3289 > form > div > button	{
+background-color: #2ab27b;
+}
+
+#view_3289 > form > div > button a:hover	{
+background-color: #2ab27b;
+}
