@@ -2312,10 +2312,10 @@ div.tooltipDiv {
 }
 
 /*make Mark job as completed for workshop green*/
-#view_3289 > form > div > button	{
+ #view_3289 > form > .kn-submit > .kn-button {
 background-color: #2ab27b !important;
 }
 
-#view_3289 > form > div > button a:hover	{
+ #view_3289 > form > .kn-submit > .kn-button:hover {
 background-color: #2ab27b !important;
 }
