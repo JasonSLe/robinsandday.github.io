@@ -2311,11 +2311,3 @@ div.tooltipDiv {
   overflow: visible;
 }
 
-/*make Mark job as completed for workshop green*/
- #view_3289 > form > .kn-submit > .kn-button is-primary {
-background-color: #2ab27b !important;
-}
-
- #view_3289 > form > .kn-submit > .kn-button is-primary a:hover{
-background-color: #2ab27b !important;
-}
