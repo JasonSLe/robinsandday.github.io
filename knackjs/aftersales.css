@@ -2316,6 +2316,6 @@ div.tooltipDiv {
 background-color: #2ab27b !important;
 }
 
- #view_3289 > form > .kn-submit > .kn-button is-primary {
+ #view_3289 > form > .kn-submit > .kn-button is-primary a:hover{
 background-color: #2ab27b !important;
 }
