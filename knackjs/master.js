@@ -1531,6 +1531,17 @@ function recursivecallscene_1145(){
  setTimeout(function () { if($("#view_3418").is(":visible")==true){ Knack.views["view_3418"].model.fetch();recursivecallscene_1145();} }, 100000);
 }
 
+// ----------  refresh Prep Centre Daily counters Table every 60 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_2097', function(event, scene) {
+ recursivecallscene_2097();
+});
+
+function recursivecallscene_2097(){
+ setTimeout(function () { if($("#view_6774").is(":visible")==true){ Knack.views["view_6774"].model.fetch();recursivecallscene_2097();} }, 60000);
+}
+
+
 // ----------  refresh Enquiry Max Table every 5 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_146', function(event, scene) {
