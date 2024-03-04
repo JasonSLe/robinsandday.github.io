@@ -250,7 +250,7 @@ function formatDateGB(date){
 function fillLoading(viewID){
   $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
     if ($(this).text().trim()===''){
-      $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
+      $(this).html('<img src="https://robinsandday.github.io/imagesStore/loading.gif"> Loading...')
     }
   });
 }
@@ -1780,7 +1780,11 @@ $(document).on('knack-scene-render.scene_20', function(event, scene) {
   }
  });
 
+//Refresh Outstanding Messages on ALL Job's on site page
 
+$(document).on('knack-scene-render.scene_753', function(event, scene) {
+  refreshWithData('2744', 'TITLE', 'TEXT $field_351', 'field_1518');
+ });
 
 //Refresh Virtual Reception on Job's on site (workshop controller)    
 
@@ -3965,7 +3969,7 @@ $(document).on('knack-view-render.view_3188', function (event, view, data) {
       let mAppSettings = Object.assign({},appSettings);
       mAppSettings.uploadField = $('div[class="kn-input kn-input-image control"]').eq(i).attr('data-input-id');
       if (i===0){
-        mAppSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
+        mAppSettings.imageOverlay = 'https://robinsandday.github.io/imagesStore/licenceOverlay2.png';
         //appSettings.imageOverlayEffect = true;
         mAppSettings.imageOverlayOpacity = 0.5;
         mAppSettings.allowLandscape = false;
@@ -4268,7 +4272,41 @@ $(document).on('knack-view-render.view_3278', function (event, view, data) {
 	tooltipsTable('1098','3806','field_1537','field_2213');  
     });
 
+//hover for labour details on workshop table
+   $(document).on('knack-view-render.view_3307', function (event, view, data) {
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3307','field_1537','field_2213');  
+	    
+    });
+	
+//hover for labour details on workshop Today's jobs not checked in
+   $(document).on('knack-view-render.view_3595', function (event, view, data) {
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3595','field_1537','field_2213');  
+	    
+    });
+	
+//hover for labour details on workshop jobs planned in the future
+   $(document).on('knack-view-render.view_3805', function (event, view, data) {
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3805','field_1537','field_2213');  
+	    
+    });
 
+//hover for labour details on workshop pots "completed work"
+   $(document).on('knack-view-render.view_3826', function (event, view, data) {
+    $('th[class="field_1537"]').hide();
+    $('td[class*="field_1537"]').hide();
+   	
+	tooltipsTable('1098','3826','field_1537','field_2213');  
+	    
+    });
 
 	//auto refresh for C/D Driver pick up and return table
 function recursivecallscene_1031(){

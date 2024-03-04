@@ -242,7 +242,7 @@ var OperatingSystem = {
 };
 
 let interval = 0;
-const effect = $('#cameraOverlayCanvas');
+const effect = $('#cameraOverlayCanvasPA');
 
 var go = () => {
   if (!effect){
@@ -382,14 +382,18 @@ let canvas = null;
 let ctx = null;
 let image = null;
 if (appSettings.imageOverlay){
-  canvas = document.getElementById('cameraOverlayCanvas');  
+  canvas = document.getElementById('cameraOverlayCanvasPA');  
   ctx = canvas.getContext('2d');
  
   image = new Image('naturalWidth', 'naturalHeight');
   image.onload = drawImageActualSize;
   image.src = appSettings.imageOverlay;
 } else {
-  $("#cameraOverlayCanvas").hide();
+  $("#cameraOverlayCanvasPA").hide();
+}
+
+if (appSettings.compareImage){
+  $('#cameraCompare').attr("src",appSettings.compareImage);
 }
 
 //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
@@ -681,41 +685,30 @@ function afterConfirmPhoto(){
       $('div[id="kn-input-'+appSettings.uploadField+'"] div[class="image--remove"]').remove();
       break;
     case 'knack':
-      /*
       setTimeout(function(){
-        uploadImage(appSettings.app_id, finalImgUrl)
-        .then(function(resp) {
-          if (!resp || resp.status !== 'ok') {
-            alert('Upload of image failed.');
-            return;
-          }
-          var imageId = resp.id;
-          var token = getTokenFromApify();
-          if (token === '') {
-            alert('Authorizing problem.');
-            return;
-          }
-          var updatingRecordId = getRecordIdFromHref(location.href);
-          var resp2 = saveImageLinkToKnack(imageFieldOnKnack, imageId, app_id, token, updatingRecordId, imageViewOnKnack)
-          if (resp2.status !== 'ok') {
-            alert('IMAGE NOT SAVED.');
-          } 
-
-          //EXIT FULL SCREEN MODE
-          exitFullscreen();
-
-          Knack.hideSpinner();
-
-          setTimeout(function() {
-            window.location = backUrl;
-          }, 100);
-
+        fetch(finalImgUrl)
+        .then(function(response) {
+          return response.blob();
+        })
+        .then(function(blob) {
+          uploadImageOnlyPhotoApp(appSettings.app_id,blob,'photoImg.jpg','infoText',appSettings.uploadField,imageAfterKnackUpload);
         });
       }, 100);
-      */
   }
 
   hidePhotoAppI();
+}
+
+function imageAfterKnackUpload(fieldName, imageId){
+  $('input[name="'+fieldName+'"]').val(imageId);
+  $('input[name="'+fieldName+'"]').removeAttr('disabled');
+  $('div[id="kn-input-'+fieldName+'"]>div>div[class="image--remove"]').remove()
+  $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').html('photoImg.jpg');
+  if ($('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+'"] div[class="kn-asset-current"]').length===0){
+    $('div[id="kn-input-'+fieldName+'"]').append('<div class="kn-asset-current">photoImg.jpg</div>');
+  }
+  $('#'+$('input[name="'+fieldName+'"]').attr('name')+'_upload').hide();
+  $('div[id="kn-input-'+$('input[name="'+fieldName+'"]').attr('name')+' .kn-file-upload').html('Image uploaded successfully.');
 }
 
 function setLayoutInPortrait(){
@@ -725,11 +718,11 @@ function setLayoutInPortrait(){
   if (!appSettings.allowPortrait){
     $("#takePhoto").hide();
     $("#cameraRotate").show();
-    if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").hide()};
+    if (appSettings.imageOverlay){ $("#cameraOverlayCanvasPA").hide()};
   } else {
     $("#takePhoto").show();
     $("#cameraRotate").hide();
-    if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").show()};
+    if (appSettings.imageOverlay){ $("#cameraOverlayCanvasPA").show()};
     if (appSettings.imageOverlayEffect){
       $(go);
     }
@@ -742,11 +735,11 @@ console.log('setLayoutInLandscape',appSettings.allowLandscape)
 if (!appSettings.allowLandscape){
   $("#takePhoto").hide();
   $("#cameraRotate").show();
-  if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").hide()};
+  if (appSettings.imageOverlay){ $("#cameraOverlayCanvasPA").hide()};
  } else {
   $("#takePhoto").show();
   $("#cameraRotate").hide();
-  if (appSettings.imageOverlay){ $("#cameraOverlayCanvas").show()};
+  if (appSettings.imageOverlay){ $("#cameraOverlayCanvasPA").show()};
   if (appSettings.imageOverlayEffect){
     $(go);
   }
@@ -766,7 +759,7 @@ function setLayout(takingPhotoI){
     $("#cameraExit").show();
 
     if (appSettings.imageOverlay && appSettings.imageOverlayOpacity){
-      $('#cameraOverlayCanvas').css({ opacity: appSettings.imageOverlayOpacity })
+      $('#cameraOverlayCanvasPA').css({ opacity: appSettings.imageOverlayOpacity })
     }
 
     //**************************** DETECT SCREEN ORIENTATION WHEN THE APP IS LOADED AND DETECT WHEN USER CHANGES SCREEN ORIENTATION*****************************************
@@ -818,7 +811,7 @@ function setLayout(takingPhotoI){
   } else {
     //HIDE VIDEO & OVERLAY ELEMENT
     $('video').hide();
-    $("#cameraOverlayCanvas").hide()
+    $("#cameraOverlayCanvasPA").hide()
 
     if (appSettings.imageOverlayEffect){
       $(stop);
@@ -865,7 +858,7 @@ function takePhotoAppStart(app_id, appSettingsI=null){
     uploadField : null
   }
   if (!appSettingsI){
-    appSettings.imageOverlay = 'https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/licenceOverlay2.png';
+    appSettings.imageOverlay = 'https://robinsandday.github.io/imagesStore/licenceOverlay2.png';
     //appSettings.imageOverlayEffect = true;
     appSettings.imageOverlayOpacity = 0.5;
     appSettings.allowLandscape = false;

@@ -1531,6 +1531,17 @@ function recursivecallscene_1145(){
  setTimeout(function () { if($("#view_3418").is(":visible")==true){ Knack.views["view_3418"].model.fetch();recursivecallscene_1145();} }, 100000);
 }
 
+// ----------  refresh Prep Centre Daily counters Table every 60 seconds but not the page itself  ----------
+
+$(document).on('knack-scene-render.scene_2097', function(event, scene) {
+ recursivecallscene_2097();
+});
+
+function recursivecallscene_2097(){
+ setTimeout(function () { if($("#view_6774").is(":visible")==true){ Knack.views["view_6774"].model.fetch();recursivecallscene_2097();} }, 60000);
+}
+
+
 // ----------  refresh Enquiry Max Table every 5 seconds but not the page itself  ----------
 
 $(document).on('knack-scene-render.scene_146', function(event, scene) {
@@ -1690,6 +1701,73 @@ function fillDataToKnack(message){
 
 //END OF SCAN APP CODE
 //END
+
+var photoAppHTML = '';
+function embedPhotoApp(){
+  var nowS = Date.now().toString();
+  let photoApp = document.getElementById('photoApp');
+  if (!photoApp){
+    if (photoAppHTML===''){
+      photoAppHTML = $.ajax({
+          type: "GET",
+          url: 'https://robinsandday.github.io/photoTakeApp/takePhotoPart.html?'+nowS,
+          cache: false,
+          async: false
+      }).responseText;
+    }
+    photoApp = document.createElement('div');
+    photoApp.innerHTML = photoAppHTML;
+    photoApp.id = 'photoApp';
+    photoApp.style="display: none;"
+    document.body.appendChild(photoApp);
+  } else {
+    photoApp.innerHTML = photoAppHTML;
+  }
+
+  if ($('#photoAppCss').length===0){
+    var style = document.createElement('link');
+    style.id = "photoAppCss";
+    style.rel = 'stylesheet';
+    style.type = 'text/css';
+    style.href = 'https://robinsandday.github.io/knackjs/takePhotoApp.css?'+nowS;
+    document.getElementsByTagName( 'head' )[0].appendChild( style )
+  }
+
+  if ($('#photoAppJS').length===0){
+    loadScript("https://robinsandday.github.io/knackjs/takePhotoApp.js?"+nowS,'photoAppJS', emptyCallback);
+  }
+
+  preload(["https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/camera-4-48.png","https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/icons8-exit-26%20(1).png"])
+}
+
+var images = [];
+function preload(input) {
+  for (var i = 0; i < input.length; i++) {
+      images[i] = new Image();
+      images[i].src = input[i];
+  }
+}
+
+function showPhotoApp(appSettings){
+  console.log('showPhotoApp',appSettings)
+  takePhotoAppStart('master',appSettings);
+}
+
+function createPhotoButton(appSettings, fieldNumber, buttonText = 'Capture Photo'){
+  $('div[id="kn-input-field_'+fieldNumber+'"]').find('input').hide();
+  let fM = document.createElement("div");
+  fM.setAttribute("id", 'takePhoto_'+$('div[id="kn-input-field_'+fieldNumber+'"]').attr('data-input-id'));
+  fM.setAttribute("class", 'kn-detail-body');
+  fM.setAttribute('style','padding: 0.375em 0; cursor: pointer');
+  fM.innerHTML = '<span><span class="knViewLink__icon knViewLink__icon--isLeft icon is-left"><i class="fa fa-camera"></i></span> <span class="knViewLink__label"><strong><span class="">'+buttonText+'</span></strong></span> <!----></span>'
+  fM.onclick = function(){
+    let mAppSettings = Object.assign({},appSettings);
+    mAppSettings.uploadField = $('div[id="kn-input-field_'+fieldNumber+'"]').attr('data-input-id');
+    showPhotoApp(mAppSettings);
+  }
+  document.querySelector('div[id="kn-input-'+$('div[id="kn-input-field_'+fieldNumber+'"]').attr('data-input-id')+'"]>div[class="kn-asset-current level"]').appendChild(fM) 
+}
+
 
 //THIS IS ARRAY OF scenes with document scan
 var scanDocsSceneNames = ["scene_1133", "scene_1147", "scene_1135", "scene_1032", "scene_1164", "scene_1035", "scene_1035", "scene_1047", "scene_1031", "scene_1078",
@@ -3547,7 +3625,7 @@ return date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear();
 function fillLoading(viewID){
 $('div[class*="view_'+viewID+'"] div[class*="field_"]>div[class="kn-detail-body"]').each(function(){
   if ($(this).text().trim()===''){
-    $(this).html('<img src="https://github.com/robinsandday/robinsandday.github.io/raw/main/imagesStore/loading.gif"> Loading...')
+    $(this).html('<img src="https://robinsandday.github.io/imagesStore/loading.gif"> Loading...')
   }
 });
 }
@@ -4611,6 +4689,27 @@ function sendImageToCheck(assetId, fileName,knackField,knackId){
     async: true
   })
 }
+
+$(document).on('knack-view-render.view_6583', function (event, view, data) {
+  /*embedPhotoApp();
+  let appSettings9281 = {
+    spiritLine : false,
+    imageOverlay: 'https://robinsandday.github.io/imagesStore/tyre_coin_portrait.png',
+    imageOverlayEffect : false,
+    imageOverlayOpacity : null,
+    compareImage:'https://robinsandday.github.io/imagesStore/coin_example.jpeg',
+    allowLandscape : true,
+    allowPortrait : true,
+    actionAfterPhoto : 'compare', // none, readable, compare,
+    actionAfterPhotoReadableText : 'Is coin clearly visible ?',
+    uploadMethod : 'knack', //knack, make, field
+    uploadField : 'field_9281',
+    resizeImageMaxHeight : 1000,
+    resizeImageMaxWidth : 1000,
+    app_id : '591eae59e0d2123f23235769'
+  }
+  createPhotoButton(appSettings9281,'9281');*/
+});
 
 $(document).on('knack-form-submit.view_6583', function(event, view, data) { 
   try{

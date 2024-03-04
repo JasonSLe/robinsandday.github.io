@@ -330,7 +330,7 @@ body {
     top: calc(50% - 32px);
   }
 
-  #cameraOverlayCanvas {
+  #cameraOverlayCanvasPA {
     position: fixed;
     display: none;
     max-width: 100%;
@@ -381,7 +381,7 @@ body {
     top: calc(82% - 32px);
   }
 
-  #cameraOverlayCanvas {
+  #cameraOverlayCanvasPA {
     position: fixed;
     display: none;
     max-width: 80%;
