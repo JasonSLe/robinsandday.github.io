@@ -3439,7 +3439,7 @@ function embedPhotoApp(){
     loadScript("https://robinsandday.github.io/knackjs/takePhotoApp.js?"+nowS,'photoAppJS', emptyCallback);
   }
 
-  preload(["https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/camera-4-48.png","https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/icons8-exit-26%20(1).png"])
+  preload(["https://robinsandday.github.io/imagesStore/camera-4-48.png","https://robinsandday.github.io/imagesStore/icons8-exit-26%20(1).png"])
 }
 
 var images = [];
@@ -3786,7 +3786,7 @@ $(document).on('knack-view-render.view_3566', function (event, view, data) {
   embedPhotoApp();
   let appSettings2718 = {
     spiritLine : false,
-    imageOverlay: 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-background-v2.png',
+    imageOverlay: 'https://robinsandday.github.io/imagesStore/car-background-v2.png',
     imageOverlayEffect : true,
     imageOverlayOpacity : null,
     allowLandscape : true,

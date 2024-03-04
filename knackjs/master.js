@@ -1726,7 +1726,7 @@ function embedPhotoApp(){
     loadScript("https://robinsandday.github.io/knackjs/takePhotoApp.js?"+nowS,'photoAppJS', emptyCallback);
   }
 
-  preload(["https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/camera-4-48.png","https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/icons8-exit-26%20(1).png"])
+  preload(["https://robinsandday.github.io/imagesStore/camera-4-48.png","https://robinsandday.github.io/imagesStore/icons8-exit-26%20(1).png"])
 }
 
 var images = [];
@@ -2126,12 +2126,12 @@ function prepareCameraView(backUrl,app_id,imageFieldOnKnack,imageViewOnKnack){
 
   const image = new Image('naturalWidth', 'naturalHeight');
   image.onload = drawImageActualSize;
-  //image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebg.png?token=AK2DHPRJXE5E2DFU5EXYCXS7Y6ROW';
+
   
   //if (Knack.getUserAttributes().email.includes('hynek') || Knack.getUserAttributes().email.includes('david.male') || Knack.getUserAttributes().email.includes('conor.power')){
-    image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-background-v2.png';
+    image.src = 'https://robinsandday.github.io/imagesStore/car-background-v2.png';
   //} else {
-  //  image.src = 'https://raw.githubusercontent.com/robinsandday/Camera_App-for-Image-Overlay/main/car-removebgv3.png';
+  //  image.src = 'https://robinsandday.github.io/imagesStore/car-removebgv3.png';
   //}
 
    //this image gets the captured photo and when it is loaded it resizes iteslf and saves the image to shown image
