@@ -434,6 +434,12 @@ $(document).on('knack-view-render.view_6483', function(event, view, data) {
  $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales#workshop-control/?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
 });*/
 
+//Service Sales Prospecting
+$(document).on('knack-view-render.view_7517', function(event, view, data) {
+  var token = Knack.getUserAttributes().values["field_6440"];
+ $('div[class*="field_3"]').html('<iframe src="https://www.stellantisandyou.co.uk/aftersales#service-sales-prospect/?token='+encodeURIComponent(token) + '" allow="camera" frameborder="0" width="100%" id="knack-iframe"></iframe>');
+});
+
 //New vehicle invoice reporting
 $(document).on('knack-view-render.view_6742', function(event, view, data) {
   var token = Knack.getUserAttributes().values["field_6440"];
@@ -470,7 +476,8 @@ var aftersalesConnectView = [{view:'view_6320',url:'#technician-view-my-jobs-v2'
 /*TECH V3*/{view:'view_6379',url:'#after-sales-vehicle-lookup/technician-view-my-jobs-v2/'},
 /*Daily activity snapshot*/{view:'view_6388',url:'#aftersales-service-reporting/activity-snapshot/'},		
 /*Colection/Delivery Driver*/ {view:'view_6462',url:'#cd-check-in/'},
-{view:'view_6170',url:'#aftersales-service-reporting/manager-tour-reporting/'}]; ///add scene numbers as necessary
+{view:'view_6170',url:'#aftersales-service-reporting/manager-tour-reporting/'},
+{view:'view_7517',url:'#aftersales/service-sales-prospect'}]; ///add scene numbers as necessary
 //to sync a page REPLACE "(VALUE)"              "{view:'view_(MASTER VIEW NUMBER HERE)',url:'#(AFTERSALES URL GOES HERE)/'},"
 aftersalesConnectView.forEach(aftersalesConnectViewFunction);
 
